@@ -17,15 +17,28 @@
 #include <google/protobuf/port_def.inc>
 
 extern PROTOBUF_INTERNAL_EXPORT_trading_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_TradingRoute_trading_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_trading_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_TradingAccount_trading_2eproto;
 namespace pb {
 class TradingRouteDefaultTypeInternal {
  public:
   ::google::protobuf::internal::ExplicitlyConstructed<TradingRoute> _instance;
 } _TradingRoute_default_instance_;
+class TradingRouteListDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<TradingRouteList> _instance;
+} _TradingRouteList_default_instance_;
 class TradingAccountDefaultTypeInternal {
  public:
   ::google::protobuf::internal::ExplicitlyConstructed<TradingAccount> _instance;
 } _TradingAccount_default_instance_;
+class TradingAccountListDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<TradingAccountList> _instance;
+} _TradingAccountList_default_instance_;
+class ReqDeleteTradingRouteDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<ReqDeleteTradingRoute> _instance;
+} _ReqDeleteTradingRoute_default_instance_;
 }  // namespace pb
 static void InitDefaultsTradingRoute_trading_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -40,6 +53,21 @@ static void InitDefaultsTradingRoute_trading_2eproto() {
 
 ::google::protobuf::internal::SCCInfo<0> scc_info_TradingRoute_trading_2eproto =
     {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsTradingRoute_trading_2eproto}, {}};
+
+static void InitDefaultsTradingRouteList_trading_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::pb::_TradingRouteList_default_instance_;
+    new (ptr) ::pb::TradingRouteList();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::pb::TradingRouteList::InitAsDefaultInstance();
+}
+
+::google::protobuf::internal::SCCInfo<1> scc_info_TradingRouteList_trading_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsTradingRouteList_trading_2eproto}, {
+      &scc_info_TradingRoute_trading_2eproto.base,}};
 
 static void InitDefaultsTradingAccount_trading_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -56,12 +84,44 @@ static void InitDefaultsTradingAccount_trading_2eproto() {
     {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsTradingAccount_trading_2eproto}, {
       &scc_info_TradingRoute_trading_2eproto.base,}};
 
-void InitDefaults_trading_2eproto() {
-  ::google::protobuf::internal::InitSCC(&scc_info_TradingRoute_trading_2eproto.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_TradingAccount_trading_2eproto.base);
+static void InitDefaultsTradingAccountList_trading_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::pb::_TradingAccountList_default_instance_;
+    new (ptr) ::pb::TradingAccountList();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::pb::TradingAccountList::InitAsDefaultInstance();
 }
 
-::google::protobuf::Metadata file_level_metadata_trading_2eproto[2];
+::google::protobuf::internal::SCCInfo<1> scc_info_TradingAccountList_trading_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsTradingAccountList_trading_2eproto}, {
+      &scc_info_TradingAccount_trading_2eproto.base,}};
+
+static void InitDefaultsReqDeleteTradingRoute_trading_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::pb::_ReqDeleteTradingRoute_default_instance_;
+    new (ptr) ::pb::ReqDeleteTradingRoute();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::pb::ReqDeleteTradingRoute::InitAsDefaultInstance();
+}
+
+::google::protobuf::internal::SCCInfo<0> scc_info_ReqDeleteTradingRoute_trading_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsReqDeleteTradingRoute_trading_2eproto}, {}};
+
+void InitDefaults_trading_2eproto() {
+  ::google::protobuf::internal::InitSCC(&scc_info_TradingRoute_trading_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_TradingRouteList_trading_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_TradingAccount_trading_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_TradingAccountList_trading_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_ReqDeleteTradingRoute_trading_2eproto.base);
+}
+
+::google::protobuf::Metadata file_level_metadata_trading_2eproto[5];
 const ::google::protobuf::EnumDescriptor* file_level_enum_descriptors_trading_2eproto[1];
 constexpr ::google::protobuf::ServiceDescriptor const** file_level_service_descriptors_trading_2eproto = nullptr;
 
@@ -82,6 +142,12 @@ const ::google::protobuf::uint32 TableStruct_trading_2eproto::offsets[] PROTOBUF
   PROTOBUF_FIELD_OFFSET(::pb::TradingRoute, auth_code_),
   PROTOBUF_FIELD_OFFSET(::pb::TradingRoute, user_),
   ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::pb::TradingRouteList, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::pb::TradingRouteList, list_),
+  ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::pb::TradingAccount, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
@@ -98,21 +164,39 @@ const ::google::protobuf::uint32 TableStruct_trading_2eproto::offsets[] PROTOBUF
   PROTOBUF_FIELD_OFFSET(::pb::TradingAccount, stock_option_position_limit_),
   PROTOBUF_FIELD_OFFSET(::pb::TradingAccount, cancel_limit_),
   PROTOBUF_FIELD_OFFSET(::pb::TradingAccount, user_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::pb::TradingAccountList, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::pb::TradingAccountList, list_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::pb::ReqDeleteTradingRoute, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::pb::ReqDeleteTradingRoute, id_),
 };
 static const ::google::protobuf::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::pb::TradingRoute)},
-  { 15, -1, sizeof(::pb::TradingAccount)},
+  { 15, -1, sizeof(::pb::TradingRouteList)},
+  { 21, -1, sizeof(::pb::TradingAccount)},
+  { 38, -1, sizeof(::pb::TradingAccountList)},
+  { 44, -1, sizeof(::pb::ReqDeleteTradingRoute)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
   reinterpret_cast<const ::google::protobuf::Message*>(&::pb::_TradingRoute_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::pb::_TradingRouteList_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::pb::_TradingAccount_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::pb::_TradingAccountList_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::pb::_ReqDeleteTradingRoute_default_instance_),
 };
 
 ::google::protobuf::internal::AssignDescriptorsTable assign_descriptors_table_trading_2eproto = {
   {}, AddDescriptors_trading_2eproto, "trading.proto", schemas,
   file_default_instances, TableStruct_trading_2eproto::offsets,
-  file_level_metadata_trading_2eproto, 2, file_level_enum_descriptors_trading_2eproto, file_level_service_descriptors_trading_2eproto,
+  file_level_metadata_trading_2eproto, 5, file_level_enum_descriptors_trading_2eproto, file_level_service_descriptors_trading_2eproto,
 };
 
 const char descriptor_table_protodef_trading_2eproto[] =
@@ -122,23 +206,26 @@ const char descriptor_table_protodef_trading_2eproto[] =
   ".pb.RouteType\022\032\n\022trading_front_list\030\006 \003("
   "\t\022\036\n\026market_data_front_list\030\007 \003(\t\022\031\n\021use"
   "r_product_info\030\010 \001(\t\022\021\n\tauth_code\030\t \001(\t\022"
-  "\014\n\004user\030\n \001(\t\"\225\002\n\016TradingAccount\022\n\n\002id\030\001"
-  " \001(\t\022\014\n\004name\030\002 \001(\t\022\017\n\007comment\030\003 \001(\t\022\'\n\rt"
-  "rading_route\030\004 \001(\0132\020.pb.TradingRoute\022\017\n\007"
-  "account\030\005 \001(\t\022\020\n\010password\030\006 \001(\t\022\021\n\tpassw"
-  "ord2\030\007 \001(\t\022\021\n\tpassword3\030\010 \001(\t\022\035\n\025prevent"
-  "_self_matching\030\t \001(\010\022#\n\033stock_option_pos"
-  "ition_limit\030\n \001(\005\022\024\n\014cancel_limit\030\013 \001(\005\022"
-  "\014\n\004user\030\014 \001(\t*\212\001\n\tRouteType\022\021\n\rRT_CTP_FU"
-  "TURE\020\000\022\020\n\014RT_CTP_STOCK\020\001\022\031\n\025RT_INTERACTI"
-  "VE_BROKER\020\002\022\n\n\006RT_LTS\020\003\022\013\n\007RT_CATS\020\004\022\027\n\023"
-  "RT_CTP_STOCK_OPTION\020\005\022\013\n\007RT_KSOP\020\007b\006prot"
-  "o3"
+  "\014\n\004user\030\n \001(\t\"2\n\020TradingRouteList\022\036\n\004lis"
+  "t\030\001 \003(\0132\020.pb.TradingRoute\"\225\002\n\016TradingAcc"
+  "ount\022\n\n\002id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\017\n\007commen"
+  "t\030\003 \001(\t\022\'\n\rtrading_route\030\004 \001(\0132\020.pb.Trad"
+  "ingRoute\022\017\n\007account\030\005 \001(\t\022\020\n\010password\030\006 "
+  "\001(\t\022\021\n\tpassword2\030\007 \001(\t\022\021\n\tpassword3\030\010 \001("
+  "\t\022\035\n\025prevent_self_matching\030\t \001(\010\022#\n\033stoc"
+  "k_option_position_limit\030\n \001(\005\022\024\n\014cancel_"
+  "limit\030\013 \001(\005\022\014\n\004user\030\014 \001(\t\"6\n\022TradingAcco"
+  "untList\022 \n\004list\030\001 \003(\0132\022.pb.TradingAccoun"
+  "t\"#\n\025ReqDeleteTradingRoute\022\n\n\002id\030\001 \001(\003*\212"
+  "\001\n\tRouteType\022\021\n\rRT_CTP_FUTURE\020\000\022\020\n\014RT_CT"
+  "P_STOCK\020\001\022\031\n\025RT_INTERACTIVE_BROKER\020\002\022\n\n\006"
+  "RT_LTS\020\003\022\013\n\007RT_CATS\020\004\022\027\n\023RT_CTP_STOCK_OP"
+  "TION\020\005\022\013\n\007RT_KSOP\020\007b\006proto3"
   ;
 ::google::protobuf::internal::DescriptorTable descriptor_table_trading_2eproto = {
   false, InitDefaults_trading_2eproto, 
   descriptor_table_protodef_trading_2eproto,
-  "trading.proto", &assign_descriptors_table_trading_2eproto, 682,
+  "trading.proto", &assign_descriptors_table_trading_2eproto, 827,
 };
 
 void AddDescriptors_trading_2eproto() {
@@ -1060,6 +1147,286 @@ void TradingRoute::InternalSwap(TradingRoute* other) {
 }
 
 ::google::protobuf::Metadata TradingRoute::GetMetadata() const {
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_trading_2eproto);
+  return ::file_level_metadata_trading_2eproto[kIndexInFileMessages];
+}
+
+
+// ===================================================================
+
+void TradingRouteList::InitAsDefaultInstance() {
+}
+class TradingRouteList::HasBitSetters {
+ public:
+};
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int TradingRouteList::kListFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+TradingRouteList::TradingRouteList()
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:pb.TradingRouteList)
+}
+TradingRouteList::TradingRouteList(const TradingRouteList& from)
+  : ::google::protobuf::Message(),
+      _internal_metadata_(nullptr),
+      list_(from.list_) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  // @@protoc_insertion_point(copy_constructor:pb.TradingRouteList)
+}
+
+void TradingRouteList::SharedCtor() {
+  ::google::protobuf::internal::InitSCC(
+      &scc_info_TradingRouteList_trading_2eproto.base);
+}
+
+TradingRouteList::~TradingRouteList() {
+  // @@protoc_insertion_point(destructor:pb.TradingRouteList)
+  SharedDtor();
+}
+
+void TradingRouteList::SharedDtor() {
+}
+
+void TradingRouteList::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const TradingRouteList& TradingRouteList::default_instance() {
+  ::google::protobuf::internal::InitSCC(&::scc_info_TradingRouteList_trading_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void TradingRouteList::Clear() {
+// @@protoc_insertion_point(message_clear_start:pb.TradingRouteList)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  list_.Clear();
+  _internal_metadata_.Clear();
+}
+
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* TradingRouteList::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<TradingRouteList*>(object);
+  ::google::protobuf::int32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+    switch (tag >> 3) {
+      // repeated .pb.TradingRoute list = 1;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
+        do {
+          ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+          GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+          parser_till_end = ::pb::TradingRoute::_InternalParse;
+          object = msg->add_list();
+          if (size > end - ptr) goto len_delim_till_end;
+          ptr += size;
+          GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+              {parser_till_end, object}, ptr - size, ptr));
+          if (ptr >= end) break;
+        } while ((::google::protobuf::io::UnalignedLoad<::google::protobuf::uint64>(ptr) & 255) == 10 && (ptr += 1));
+        break;
+      }
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->EndGroup(tag);
+          return ptr;
+        }
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        if (res.second) return ptr;
+      }
+    }  // switch
+  }  // while
+  return ptr;
+len_delim_till_end:
+  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
+                               {parser_till_end, object}, size);
+}
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool TradingRouteList::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:pb.TradingRouteList)
+  for (;;) {
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // repeated .pb.TradingRoute list = 1;
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+                input, add_list()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:pb.TradingRouteList)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:pb.TradingRouteList)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void TradingRouteList::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:pb.TradingRouteList)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // repeated .pb.TradingRoute list = 1;
+  for (unsigned int i = 0,
+      n = static_cast<unsigned int>(this->list_size()); i < n; i++) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1,
+      this->list(static_cast<int>(i)),
+      output);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:pb.TradingRouteList)
+}
+
+::google::protobuf::uint8* TradingRouteList::InternalSerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:pb.TradingRouteList)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // repeated .pb.TradingRoute list = 1;
+  for (unsigned int i = 0,
+      n = static_cast<unsigned int>(this->list_size()); i < n; i++) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        1, this->list(static_cast<int>(i)), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:pb.TradingRouteList)
+  return target;
+}
+
+size_t TradingRouteList::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:pb.TradingRouteList)
+  size_t total_size = 0;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // repeated .pb.TradingRoute list = 1;
+  {
+    unsigned int count = static_cast<unsigned int>(this->list_size());
+    total_size += 1UL * count;
+    for (unsigned int i = 0; i < count; i++) {
+      total_size +=
+        ::google::protobuf::internal::WireFormatLite::MessageSize(
+          this->list(static_cast<int>(i)));
+    }
+  }
+
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void TradingRouteList::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:pb.TradingRouteList)
+  GOOGLE_DCHECK_NE(&from, this);
+  const TradingRouteList* source =
+      ::google::protobuf::DynamicCastToGenerated<TradingRouteList>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:pb.TradingRouteList)
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:pb.TradingRouteList)
+    MergeFrom(*source);
+  }
+}
+
+void TradingRouteList::MergeFrom(const TradingRouteList& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:pb.TradingRouteList)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  list_.MergeFrom(from.list_);
+}
+
+void TradingRouteList::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:pb.TradingRouteList)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void TradingRouteList::CopyFrom(const TradingRouteList& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:pb.TradingRouteList)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool TradingRouteList::IsInitialized() const {
+  return true;
+}
+
+void TradingRouteList::Swap(TradingRouteList* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void TradingRouteList::InternalSwap(TradingRouteList* other) {
+  using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  CastToBase(&list_)->InternalSwap(CastToBase(&other->list_));
+}
+
+::google::protobuf::Metadata TradingRouteList::GetMetadata() const {
   ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_trading_2eproto);
   return ::file_level_metadata_trading_2eproto[kIndexInFileMessages];
 }
@@ -2072,6 +2439,546 @@ void TradingAccount::InternalSwap(TradingAccount* other) {
 }
 
 
+// ===================================================================
+
+void TradingAccountList::InitAsDefaultInstance() {
+}
+class TradingAccountList::HasBitSetters {
+ public:
+};
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int TradingAccountList::kListFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+TradingAccountList::TradingAccountList()
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:pb.TradingAccountList)
+}
+TradingAccountList::TradingAccountList(const TradingAccountList& from)
+  : ::google::protobuf::Message(),
+      _internal_metadata_(nullptr),
+      list_(from.list_) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  // @@protoc_insertion_point(copy_constructor:pb.TradingAccountList)
+}
+
+void TradingAccountList::SharedCtor() {
+  ::google::protobuf::internal::InitSCC(
+      &scc_info_TradingAccountList_trading_2eproto.base);
+}
+
+TradingAccountList::~TradingAccountList() {
+  // @@protoc_insertion_point(destructor:pb.TradingAccountList)
+  SharedDtor();
+}
+
+void TradingAccountList::SharedDtor() {
+}
+
+void TradingAccountList::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const TradingAccountList& TradingAccountList::default_instance() {
+  ::google::protobuf::internal::InitSCC(&::scc_info_TradingAccountList_trading_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void TradingAccountList::Clear() {
+// @@protoc_insertion_point(message_clear_start:pb.TradingAccountList)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  list_.Clear();
+  _internal_metadata_.Clear();
+}
+
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* TradingAccountList::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<TradingAccountList*>(object);
+  ::google::protobuf::int32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+    switch (tag >> 3) {
+      // repeated .pb.TradingAccount list = 1;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
+        do {
+          ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+          GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+          parser_till_end = ::pb::TradingAccount::_InternalParse;
+          object = msg->add_list();
+          if (size > end - ptr) goto len_delim_till_end;
+          ptr += size;
+          GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+              {parser_till_end, object}, ptr - size, ptr));
+          if (ptr >= end) break;
+        } while ((::google::protobuf::io::UnalignedLoad<::google::protobuf::uint64>(ptr) & 255) == 10 && (ptr += 1));
+        break;
+      }
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->EndGroup(tag);
+          return ptr;
+        }
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        if (res.second) return ptr;
+      }
+    }  // switch
+  }  // while
+  return ptr;
+len_delim_till_end:
+  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
+                               {parser_till_end, object}, size);
+}
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool TradingAccountList::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:pb.TradingAccountList)
+  for (;;) {
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // repeated .pb.TradingAccount list = 1;
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+                input, add_list()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:pb.TradingAccountList)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:pb.TradingAccountList)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void TradingAccountList::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:pb.TradingAccountList)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // repeated .pb.TradingAccount list = 1;
+  for (unsigned int i = 0,
+      n = static_cast<unsigned int>(this->list_size()); i < n; i++) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1,
+      this->list(static_cast<int>(i)),
+      output);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:pb.TradingAccountList)
+}
+
+::google::protobuf::uint8* TradingAccountList::InternalSerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:pb.TradingAccountList)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // repeated .pb.TradingAccount list = 1;
+  for (unsigned int i = 0,
+      n = static_cast<unsigned int>(this->list_size()); i < n; i++) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        1, this->list(static_cast<int>(i)), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:pb.TradingAccountList)
+  return target;
+}
+
+size_t TradingAccountList::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:pb.TradingAccountList)
+  size_t total_size = 0;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // repeated .pb.TradingAccount list = 1;
+  {
+    unsigned int count = static_cast<unsigned int>(this->list_size());
+    total_size += 1UL * count;
+    for (unsigned int i = 0; i < count; i++) {
+      total_size +=
+        ::google::protobuf::internal::WireFormatLite::MessageSize(
+          this->list(static_cast<int>(i)));
+    }
+  }
+
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void TradingAccountList::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:pb.TradingAccountList)
+  GOOGLE_DCHECK_NE(&from, this);
+  const TradingAccountList* source =
+      ::google::protobuf::DynamicCastToGenerated<TradingAccountList>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:pb.TradingAccountList)
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:pb.TradingAccountList)
+    MergeFrom(*source);
+  }
+}
+
+void TradingAccountList::MergeFrom(const TradingAccountList& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:pb.TradingAccountList)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  list_.MergeFrom(from.list_);
+}
+
+void TradingAccountList::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:pb.TradingAccountList)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void TradingAccountList::CopyFrom(const TradingAccountList& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:pb.TradingAccountList)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool TradingAccountList::IsInitialized() const {
+  return true;
+}
+
+void TradingAccountList::Swap(TradingAccountList* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void TradingAccountList::InternalSwap(TradingAccountList* other) {
+  using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  CastToBase(&list_)->InternalSwap(CastToBase(&other->list_));
+}
+
+::google::protobuf::Metadata TradingAccountList::GetMetadata() const {
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_trading_2eproto);
+  return ::file_level_metadata_trading_2eproto[kIndexInFileMessages];
+}
+
+
+// ===================================================================
+
+void ReqDeleteTradingRoute::InitAsDefaultInstance() {
+}
+class ReqDeleteTradingRoute::HasBitSetters {
+ public:
+};
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int ReqDeleteTradingRoute::kIdFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+ReqDeleteTradingRoute::ReqDeleteTradingRoute()
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:pb.ReqDeleteTradingRoute)
+}
+ReqDeleteTradingRoute::ReqDeleteTradingRoute(const ReqDeleteTradingRoute& from)
+  : ::google::protobuf::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  id_ = from.id_;
+  // @@protoc_insertion_point(copy_constructor:pb.ReqDeleteTradingRoute)
+}
+
+void ReqDeleteTradingRoute::SharedCtor() {
+  id_ = PROTOBUF_LONGLONG(0);
+}
+
+ReqDeleteTradingRoute::~ReqDeleteTradingRoute() {
+  // @@protoc_insertion_point(destructor:pb.ReqDeleteTradingRoute)
+  SharedDtor();
+}
+
+void ReqDeleteTradingRoute::SharedDtor() {
+}
+
+void ReqDeleteTradingRoute::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const ReqDeleteTradingRoute& ReqDeleteTradingRoute::default_instance() {
+  ::google::protobuf::internal::InitSCC(&::scc_info_ReqDeleteTradingRoute_trading_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void ReqDeleteTradingRoute::Clear() {
+// @@protoc_insertion_point(message_clear_start:pb.ReqDeleteTradingRoute)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  id_ = PROTOBUF_LONGLONG(0);
+  _internal_metadata_.Clear();
+}
+
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* ReqDeleteTradingRoute::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<ReqDeleteTradingRoute*>(object);
+  ::google::protobuf::int32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+    switch (tag >> 3) {
+      // int64 id = 1;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 8) goto handle_unusual;
+        msg->set_id(::google::protobuf::internal::ReadVarint(&ptr));
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        break;
+      }
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->EndGroup(tag);
+          return ptr;
+        }
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        if (res.second) return ptr;
+      }
+    }  // switch
+  }  // while
+  return ptr;
+}
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool ReqDeleteTradingRoute::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:pb.ReqDeleteTradingRoute)
+  for (;;) {
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // int64 id = 1;
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (8 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int64, ::google::protobuf::internal::WireFormatLite::TYPE_INT64>(
+                 input, &id_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:pb.ReqDeleteTradingRoute)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:pb.ReqDeleteTradingRoute)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void ReqDeleteTradingRoute::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:pb.ReqDeleteTradingRoute)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // int64 id = 1;
+  if (this->id() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt64(1, this->id(), output);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:pb.ReqDeleteTradingRoute)
+}
+
+::google::protobuf::uint8* ReqDeleteTradingRoute::InternalSerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:pb.ReqDeleteTradingRoute)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // int64 id = 1;
+  if (this->id() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(1, this->id(), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:pb.ReqDeleteTradingRoute)
+  return target;
+}
+
+size_t ReqDeleteTradingRoute::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:pb.ReqDeleteTradingRoute)
+  size_t total_size = 0;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // int64 id = 1;
+  if (this->id() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::Int64Size(
+        this->id());
+  }
+
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void ReqDeleteTradingRoute::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:pb.ReqDeleteTradingRoute)
+  GOOGLE_DCHECK_NE(&from, this);
+  const ReqDeleteTradingRoute* source =
+      ::google::protobuf::DynamicCastToGenerated<ReqDeleteTradingRoute>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:pb.ReqDeleteTradingRoute)
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:pb.ReqDeleteTradingRoute)
+    MergeFrom(*source);
+  }
+}
+
+void ReqDeleteTradingRoute::MergeFrom(const ReqDeleteTradingRoute& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:pb.ReqDeleteTradingRoute)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.id() != 0) {
+    set_id(from.id());
+  }
+}
+
+void ReqDeleteTradingRoute::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:pb.ReqDeleteTradingRoute)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void ReqDeleteTradingRoute::CopyFrom(const ReqDeleteTradingRoute& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:pb.ReqDeleteTradingRoute)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool ReqDeleteTradingRoute::IsInitialized() const {
+  return true;
+}
+
+void ReqDeleteTradingRoute::Swap(ReqDeleteTradingRoute* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void ReqDeleteTradingRoute::InternalSwap(ReqDeleteTradingRoute* other) {
+  using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(id_, other->id_);
+}
+
+::google::protobuf::Metadata ReqDeleteTradingRoute::GetMetadata() const {
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_trading_2eproto);
+  return ::file_level_metadata_trading_2eproto[kIndexInFileMessages];
+}
+
+
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace pb
 namespace google {
@@ -2079,8 +2986,17 @@ namespace protobuf {
 template<> PROTOBUF_NOINLINE ::pb::TradingRoute* Arena::CreateMaybeMessage< ::pb::TradingRoute >(Arena* arena) {
   return Arena::CreateInternal< ::pb::TradingRoute >(arena);
 }
+template<> PROTOBUF_NOINLINE ::pb::TradingRouteList* Arena::CreateMaybeMessage< ::pb::TradingRouteList >(Arena* arena) {
+  return Arena::CreateInternal< ::pb::TradingRouteList >(arena);
+}
 template<> PROTOBUF_NOINLINE ::pb::TradingAccount* Arena::CreateMaybeMessage< ::pb::TradingAccount >(Arena* arena) {
   return Arena::CreateInternal< ::pb::TradingAccount >(arena);
+}
+template<> PROTOBUF_NOINLINE ::pb::TradingAccountList* Arena::CreateMaybeMessage< ::pb::TradingAccountList >(Arena* arena) {
+  return Arena::CreateInternal< ::pb::TradingAccountList >(arena);
+}
+template<> PROTOBUF_NOINLINE ::pb::ReqDeleteTradingRoute* Arena::CreateMaybeMessage< ::pb::ReqDeleteTradingRoute >(Arena* arena) {
+  return Arena::CreateInternal< ::pb::ReqDeleteTradingRoute >(arena);
 }
 }  // namespace protobuf
 }  // namespace google

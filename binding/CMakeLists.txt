@@ -6,6 +6,7 @@ endif ()
 set(APP binding)
 
 if(WIN32)
+    include_directories(${PROJECT_SOURCE_DIR}/ext/include/windows/ctp6.3.11)
 	LINK_DIRECTORIES(${PROJECT_SOURCE_DIR}/ext/lib/windows/x64/ctp6.3.11)
 endif()
 

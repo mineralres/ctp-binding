@@ -42,7 +42,7 @@ struct TableStruct_common_2eproto {
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::google::protobuf::internal::AuxillaryParseTableField aux[]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
-  static const ::google::protobuf::internal::ParseTable schema[22]
+  static const ::google::protobuf::internal::ParseTable schema[23]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::google::protobuf::internal::FieldMetadata field_metadata[];
   static const ::google::protobuf::internal::SerializationTable serialization_table[];
@@ -110,6 +110,9 @@ extern SimpleTimePeriodDefaultTypeInternal _SimpleTimePeriod_default_instance_;
 class Symbol;
 class SymbolDefaultTypeInternal;
 extern SymbolDefaultTypeInternal _Symbol_default_instance_;
+class SymbolList;
+class SymbolListDefaultTypeInternal;
+extern SymbolListDefaultTypeInternal _SymbolList_default_instance_;
 class TradingInstrument;
 class TradingInstrumentDefaultTypeInternal;
 extern TradingInstrumentDefaultTypeInternal _TradingInstrument_default_instance_;
@@ -139,6 +142,7 @@ template<> ::pb::ReqUpdateTIOpenDateList* Arena::CreateMaybeMessage<::pb::ReqUpd
 template<> ::pb::SSEStockOption* Arena::CreateMaybeMessage<::pb::SSEStockOption>(Arena*);
 template<> ::pb::SimpleTimePeriod* Arena::CreateMaybeMessage<::pb::SimpleTimePeriod>(Arena*);
 template<> ::pb::Symbol* Arena::CreateMaybeMessage<::pb::Symbol>(Arena*);
+template<> ::pb::SymbolList* Arena::CreateMaybeMessage<::pb::SymbolList>(Arena*);
 template<> ::pb::TradingInstrument* Arena::CreateMaybeMessage<::pb::TradingInstrument>(Arena*);
 template<> ::pb::TradingInstrumentList* Arena::CreateMaybeMessage<::pb::TradingInstrumentList>(Arena*);
 }  // namespace protobuf
@@ -502,6 +506,124 @@ class Symbol :
 };
 // -------------------------------------------------------------------
 
+class SymbolList :
+    public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:pb.SymbolList) */ {
+ public:
+  SymbolList();
+  virtual ~SymbolList();
+
+  SymbolList(const SymbolList& from);
+
+  inline SymbolList& operator=(const SymbolList& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  SymbolList(SymbolList&& from) noexcept
+    : SymbolList() {
+    *this = ::std::move(from);
+  }
+
+  inline SymbolList& operator=(SymbolList&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return default_instance().GetDescriptor();
+  }
+  static const SymbolList& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const SymbolList* internal_default_instance() {
+    return reinterpret_cast<const SymbolList*>(
+               &_SymbolList_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    1;
+
+  void Swap(SymbolList* other);
+  friend void swap(SymbolList& a, SymbolList& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline SymbolList* New() const final {
+    return CreateMaybeMessage<SymbolList>(nullptr);
+  }
+
+  SymbolList* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<SymbolList>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const SymbolList& from);
+  void MergeFrom(const SymbolList& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  static const char* _InternalParse(const char* begin, const char* end, void* object, ::google::protobuf::internal::ParseContext* ctx);
+  ::google::protobuf::internal::ParseFunc _ParseFunc() const final { return _InternalParse; }
+  #else
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(SymbolList* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return nullptr;
+  }
+  inline void* MaybeArenaPtr() const {
+    return nullptr;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // repeated .pb.Symbol list = 1;
+  int list_size() const;
+  void clear_list();
+  static const int kListFieldNumber = 1;
+  ::pb::Symbol* mutable_list(int index);
+  ::google::protobuf::RepeatedPtrField< ::pb::Symbol >*
+      mutable_list();
+  const ::pb::Symbol& list(int index) const;
+  ::pb::Symbol* add_list();
+  const ::google::protobuf::RepeatedPtrField< ::pb::Symbol >&
+      list() const;
+
+  // @@protoc_insertion_point(class_scope:pb.SymbolList)
+ private:
+  class HasBitSetters;
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::RepeatedPtrField< ::pb::Symbol > list_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_common_2eproto;
+};
+// -------------------------------------------------------------------
+
 class ProductID :
     public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:pb.ProductID) */ {
  public:
@@ -540,7 +662,7 @@ class ProductID :
                &_ProductID_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    1;
+    2;
 
   void Swap(ProductID* other);
   friend void swap(ProductID& a, ProductID& b) {
@@ -667,7 +789,7 @@ class BrokerRoute :
                &_BrokerRoute_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    2;
+    3;
 
   void Swap(BrokerRoute* other);
   friend void swap(BrokerRoute& a, BrokerRoute& b) {
@@ -855,7 +977,7 @@ class BrokerRouteList :
                &_BrokerRouteList_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    3;
+    4;
 
   void Swap(BrokerRouteList* other);
   friend void swap(BrokerRouteList& a, BrokerRouteList& b) {
@@ -973,7 +1095,7 @@ class InstrumentInfo :
                &_InstrumentInfo_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    4;
+    5;
 
   void Swap(InstrumentInfo* other);
   friend void swap(InstrumentInfo& a, InstrumentInfo& b) {
@@ -1309,7 +1431,7 @@ class SimpleTimePeriod :
                &_SimpleTimePeriod_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    5;
+    6;
 
   void Swap(SimpleTimePeriod* other);
   friend void swap(SimpleTimePeriod& a, SimpleTimePeriod& b) {
@@ -1428,7 +1550,7 @@ class MarketTimeRule :
                &_MarketTimeRule_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    6;
+    7;
 
   void Swap(MarketTimeRule* other);
   friend void swap(MarketTimeRule& a, MarketTimeRule& b) {
@@ -1572,7 +1694,7 @@ class ProductInfo :
                &_ProductInfo_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    7;
+    8;
 
   void Swap(ProductInfo* other);
   friend void swap(ProductInfo& a, ProductInfo& b) {
@@ -1778,7 +1900,7 @@ class TradingInstrument :
                &_TradingInstrument_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    8;
+    9;
 
   void Swap(TradingInstrument* other);
   friend void swap(TradingInstrument& a, TradingInstrument& b) {
@@ -1913,7 +2035,7 @@ class TradingInstrumentList :
                &_TradingInstrumentList_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    9;
+    10;
 
   void Swap(TradingInstrumentList* other);
   friend void swap(TradingInstrumentList& a, TradingInstrumentList& b) {
@@ -2031,7 +2153,7 @@ class ProductInfoList :
                &_ProductInfoList_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    10;
+    11;
 
   void Swap(ProductInfoList* other);
   friend void swap(ProductInfoList& a, ProductInfoList& b) {
@@ -2149,7 +2271,7 @@ class ReqSetTradingInstrumentList :
                &_ReqSetTradingInstrumentList_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    11;
+    12;
 
   void Swap(ReqSetTradingInstrumentList* other);
   friend void swap(ReqSetTradingInstrumentList& a, ReqSetTradingInstrumentList& b) {
@@ -2289,7 +2411,7 @@ class ReqSetProductInfoList :
                &_ReqSetProductInfoList_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    12;
+    13;
 
   void Swap(ReqSetProductInfoList* other);
   friend void swap(ReqSetProductInfoList& a, ReqSetProductInfoList& b) {
@@ -2429,7 +2551,7 @@ class ReqUpdateTIOpenDate :
                &_ReqUpdateTIOpenDate_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    13;
+    14;
 
   void Swap(ReqUpdateTIOpenDate* other);
   friend void swap(ReqUpdateTIOpenDate& a, ReqUpdateTIOpenDate& b) {
@@ -2551,7 +2673,7 @@ class ReqUpdateTIOpenDateList :
                &_ReqUpdateTIOpenDateList_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    14;
+    15;
 
   void Swap(ReqUpdateTIOpenDateList* other);
   friend void swap(ReqUpdateTIOpenDateList& a, ReqUpdateTIOpenDateList& b) {
@@ -2691,7 +2813,7 @@ class AccountMoneySummary :
                &_AccountMoneySummary_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    15;
+    16;
 
   void Swap(AccountMoneySummary* other);
   friend void swap(AccountMoneySummary& a, AccountMoneySummary& b) {
@@ -3176,7 +3298,7 @@ class AccountMoneySummaryList :
                &_AccountMoneySummaryList_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    16;
+    17;
 
   void Swap(AccountMoneySummaryList* other);
   friend void swap(AccountMoneySummaryList& a, AccountMoneySummaryList& b) {
@@ -3294,7 +3416,7 @@ class MoneyTransferRecord :
                &_MoneyTransferRecord_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    17;
+    18;
 
   void Swap(MoneyTransferRecord* other);
   friend void swap(MoneyTransferRecord& a, MoneyTransferRecord& b) {
@@ -3707,7 +3829,7 @@ class MTRList :
                &_MTRList_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    18;
+    19;
 
   void Swap(MTRList* other);
   friend void swap(MTRList& a, MTRList& b) {
@@ -3825,7 +3947,7 @@ class SSEStockOption :
                &_SSEStockOption_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    19;
+    20;
 
   void Swap(SSEStockOption* other);
   friend void swap(SSEStockOption& a, SSEStockOption& b) {
@@ -4440,7 +4562,7 @@ class OptionMonth :
                &_OptionMonth_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    20;
+    21;
 
   void Swap(OptionMonth* other);
   friend void swap(OptionMonth& a, OptionMonth& b) {
@@ -4590,7 +4712,7 @@ class OptionMonthList :
                &_OptionMonthList_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    21;
+    22;
 
   void Swap(OptionMonthList* other);
   friend void swap(OptionMonthList& a, OptionMonthList& b) {
@@ -4744,6 +4866,40 @@ inline void Symbol::set_allocated_code(::std::string* code) {
   }
   code_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), code);
   // @@protoc_insertion_point(field_set_allocated:pb.Symbol.code)
+}
+
+// -------------------------------------------------------------------
+
+// SymbolList
+
+// repeated .pb.Symbol list = 1;
+inline int SymbolList::list_size() const {
+  return list_.size();
+}
+inline void SymbolList::clear_list() {
+  list_.Clear();
+}
+inline ::pb::Symbol* SymbolList::mutable_list(int index) {
+  // @@protoc_insertion_point(field_mutable:pb.SymbolList.list)
+  return list_.Mutable(index);
+}
+inline ::google::protobuf::RepeatedPtrField< ::pb::Symbol >*
+SymbolList::mutable_list() {
+  // @@protoc_insertion_point(field_mutable_list:pb.SymbolList.list)
+  return &list_;
+}
+inline const ::pb::Symbol& SymbolList::list(int index) const {
+  // @@protoc_insertion_point(field_get:pb.SymbolList.list)
+  return list_.Get(index);
+}
+inline ::pb::Symbol* SymbolList::add_list() {
+  // @@protoc_insertion_point(field_add:pb.SymbolList.list)
+  return list_.Add();
+}
+inline const ::google::protobuf::RepeatedPtrField< ::pb::Symbol >&
+SymbolList::list() const {
+  // @@protoc_insertion_point(field_list:pb.SymbolList.list)
+  return list_;
 }
 
 // -------------------------------------------------------------------
@@ -10535,6 +10691,8 @@ OptionMonthList::list() const {
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------

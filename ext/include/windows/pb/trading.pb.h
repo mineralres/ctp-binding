@@ -42,7 +42,7 @@ struct TableStruct_trading_2eproto {
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::google::protobuf::internal::AuxillaryParseTableField aux[]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
-  static const ::google::protobuf::internal::ParseTable schema[2]
+  static const ::google::protobuf::internal::ParseTable schema[5]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::google::protobuf::internal::FieldMetadata field_metadata[];
   static const ::google::protobuf::internal::SerializationTable serialization_table[];
@@ -50,17 +50,29 @@ struct TableStruct_trading_2eproto {
 };
 void AddDescriptors_trading_2eproto();
 namespace pb {
+class ReqDeleteTradingRoute;
+class ReqDeleteTradingRouteDefaultTypeInternal;
+extern ReqDeleteTradingRouteDefaultTypeInternal _ReqDeleteTradingRoute_default_instance_;
 class TradingAccount;
 class TradingAccountDefaultTypeInternal;
 extern TradingAccountDefaultTypeInternal _TradingAccount_default_instance_;
+class TradingAccountList;
+class TradingAccountListDefaultTypeInternal;
+extern TradingAccountListDefaultTypeInternal _TradingAccountList_default_instance_;
 class TradingRoute;
 class TradingRouteDefaultTypeInternal;
 extern TradingRouteDefaultTypeInternal _TradingRoute_default_instance_;
+class TradingRouteList;
+class TradingRouteListDefaultTypeInternal;
+extern TradingRouteListDefaultTypeInternal _TradingRouteList_default_instance_;
 }  // namespace pb
 namespace google {
 namespace protobuf {
+template<> ::pb::ReqDeleteTradingRoute* Arena::CreateMaybeMessage<::pb::ReqDeleteTradingRoute>(Arena*);
 template<> ::pb::TradingAccount* Arena::CreateMaybeMessage<::pb::TradingAccount>(Arena*);
+template<> ::pb::TradingAccountList* Arena::CreateMaybeMessage<::pb::TradingAccountList>(Arena*);
 template<> ::pb::TradingRoute* Arena::CreateMaybeMessage<::pb::TradingRoute>(Arena*);
+template<> ::pb::TradingRouteList* Arena::CreateMaybeMessage<::pb::TradingRouteList>(Arena*);
 }  // namespace protobuf
 }  // namespace google
 namespace pb {
@@ -348,6 +360,124 @@ class TradingRoute :
 };
 // -------------------------------------------------------------------
 
+class TradingRouteList :
+    public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:pb.TradingRouteList) */ {
+ public:
+  TradingRouteList();
+  virtual ~TradingRouteList();
+
+  TradingRouteList(const TradingRouteList& from);
+
+  inline TradingRouteList& operator=(const TradingRouteList& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  TradingRouteList(TradingRouteList&& from) noexcept
+    : TradingRouteList() {
+    *this = ::std::move(from);
+  }
+
+  inline TradingRouteList& operator=(TradingRouteList&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return default_instance().GetDescriptor();
+  }
+  static const TradingRouteList& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const TradingRouteList* internal_default_instance() {
+    return reinterpret_cast<const TradingRouteList*>(
+               &_TradingRouteList_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    1;
+
+  void Swap(TradingRouteList* other);
+  friend void swap(TradingRouteList& a, TradingRouteList& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline TradingRouteList* New() const final {
+    return CreateMaybeMessage<TradingRouteList>(nullptr);
+  }
+
+  TradingRouteList* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<TradingRouteList>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const TradingRouteList& from);
+  void MergeFrom(const TradingRouteList& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  static const char* _InternalParse(const char* begin, const char* end, void* object, ::google::protobuf::internal::ParseContext* ctx);
+  ::google::protobuf::internal::ParseFunc _ParseFunc() const final { return _InternalParse; }
+  #else
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(TradingRouteList* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return nullptr;
+  }
+  inline void* MaybeArenaPtr() const {
+    return nullptr;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // repeated .pb.TradingRoute list = 1;
+  int list_size() const;
+  void clear_list();
+  static const int kListFieldNumber = 1;
+  ::pb::TradingRoute* mutable_list(int index);
+  ::google::protobuf::RepeatedPtrField< ::pb::TradingRoute >*
+      mutable_list();
+  const ::pb::TradingRoute& list(int index) const;
+  ::pb::TradingRoute* add_list();
+  const ::google::protobuf::RepeatedPtrField< ::pb::TradingRoute >&
+      list() const;
+
+  // @@protoc_insertion_point(class_scope:pb.TradingRouteList)
+ private:
+  class HasBitSetters;
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::RepeatedPtrField< ::pb::TradingRoute > list_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_trading_2eproto;
+};
+// -------------------------------------------------------------------
+
 class TradingAccount :
     public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:pb.TradingAccount) */ {
  public:
@@ -386,7 +516,7 @@ class TradingAccount :
                &_TradingAccount_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    1;
+    2;
 
   void Swap(TradingAccount* other);
   friend void swap(TradingAccount& a, TradingAccount& b) {
@@ -599,6 +729,236 @@ class TradingAccount :
   bool prevent_self_matching_;
   ::google::protobuf::int32 stock_option_position_limit_;
   ::google::protobuf::int32 cancel_limit_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_trading_2eproto;
+};
+// -------------------------------------------------------------------
+
+class TradingAccountList :
+    public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:pb.TradingAccountList) */ {
+ public:
+  TradingAccountList();
+  virtual ~TradingAccountList();
+
+  TradingAccountList(const TradingAccountList& from);
+
+  inline TradingAccountList& operator=(const TradingAccountList& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  TradingAccountList(TradingAccountList&& from) noexcept
+    : TradingAccountList() {
+    *this = ::std::move(from);
+  }
+
+  inline TradingAccountList& operator=(TradingAccountList&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return default_instance().GetDescriptor();
+  }
+  static const TradingAccountList& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const TradingAccountList* internal_default_instance() {
+    return reinterpret_cast<const TradingAccountList*>(
+               &_TradingAccountList_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    3;
+
+  void Swap(TradingAccountList* other);
+  friend void swap(TradingAccountList& a, TradingAccountList& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline TradingAccountList* New() const final {
+    return CreateMaybeMessage<TradingAccountList>(nullptr);
+  }
+
+  TradingAccountList* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<TradingAccountList>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const TradingAccountList& from);
+  void MergeFrom(const TradingAccountList& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  static const char* _InternalParse(const char* begin, const char* end, void* object, ::google::protobuf::internal::ParseContext* ctx);
+  ::google::protobuf::internal::ParseFunc _ParseFunc() const final { return _InternalParse; }
+  #else
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(TradingAccountList* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return nullptr;
+  }
+  inline void* MaybeArenaPtr() const {
+    return nullptr;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // repeated .pb.TradingAccount list = 1;
+  int list_size() const;
+  void clear_list();
+  static const int kListFieldNumber = 1;
+  ::pb::TradingAccount* mutable_list(int index);
+  ::google::protobuf::RepeatedPtrField< ::pb::TradingAccount >*
+      mutable_list();
+  const ::pb::TradingAccount& list(int index) const;
+  ::pb::TradingAccount* add_list();
+  const ::google::protobuf::RepeatedPtrField< ::pb::TradingAccount >&
+      list() const;
+
+  // @@protoc_insertion_point(class_scope:pb.TradingAccountList)
+ private:
+  class HasBitSetters;
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::RepeatedPtrField< ::pb::TradingAccount > list_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_trading_2eproto;
+};
+// -------------------------------------------------------------------
+
+class ReqDeleteTradingRoute :
+    public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:pb.ReqDeleteTradingRoute) */ {
+ public:
+  ReqDeleteTradingRoute();
+  virtual ~ReqDeleteTradingRoute();
+
+  ReqDeleteTradingRoute(const ReqDeleteTradingRoute& from);
+
+  inline ReqDeleteTradingRoute& operator=(const ReqDeleteTradingRoute& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  ReqDeleteTradingRoute(ReqDeleteTradingRoute&& from) noexcept
+    : ReqDeleteTradingRoute() {
+    *this = ::std::move(from);
+  }
+
+  inline ReqDeleteTradingRoute& operator=(ReqDeleteTradingRoute&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return default_instance().GetDescriptor();
+  }
+  static const ReqDeleteTradingRoute& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const ReqDeleteTradingRoute* internal_default_instance() {
+    return reinterpret_cast<const ReqDeleteTradingRoute*>(
+               &_ReqDeleteTradingRoute_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    4;
+
+  void Swap(ReqDeleteTradingRoute* other);
+  friend void swap(ReqDeleteTradingRoute& a, ReqDeleteTradingRoute& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline ReqDeleteTradingRoute* New() const final {
+    return CreateMaybeMessage<ReqDeleteTradingRoute>(nullptr);
+  }
+
+  ReqDeleteTradingRoute* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<ReqDeleteTradingRoute>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const ReqDeleteTradingRoute& from);
+  void MergeFrom(const ReqDeleteTradingRoute& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  static const char* _InternalParse(const char* begin, const char* end, void* object, ::google::protobuf::internal::ParseContext* ctx);
+  ::google::protobuf::internal::ParseFunc _ParseFunc() const final { return _InternalParse; }
+  #else
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(ReqDeleteTradingRoute* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return nullptr;
+  }
+  inline void* MaybeArenaPtr() const {
+    return nullptr;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // int64 id = 1;
+  void clear_id();
+  static const int kIdFieldNumber = 1;
+  ::google::protobuf::int64 id() const;
+  void set_id(::google::protobuf::int64 value);
+
+  // @@protoc_insertion_point(class_scope:pb.ReqDeleteTradingRoute)
+ private:
+  class HasBitSetters;
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::int64 id_;
   mutable ::google::protobuf::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_trading_2eproto;
 };
@@ -1095,6 +1455,40 @@ inline void TradingRoute::set_allocated_user(::std::string* user) {
   }
   user_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), user);
   // @@protoc_insertion_point(field_set_allocated:pb.TradingRoute.user)
+}
+
+// -------------------------------------------------------------------
+
+// TradingRouteList
+
+// repeated .pb.TradingRoute list = 1;
+inline int TradingRouteList::list_size() const {
+  return list_.size();
+}
+inline void TradingRouteList::clear_list() {
+  list_.Clear();
+}
+inline ::pb::TradingRoute* TradingRouteList::mutable_list(int index) {
+  // @@protoc_insertion_point(field_mutable:pb.TradingRouteList.list)
+  return list_.Mutable(index);
+}
+inline ::google::protobuf::RepeatedPtrField< ::pb::TradingRoute >*
+TradingRouteList::mutable_list() {
+  // @@protoc_insertion_point(field_mutable_list:pb.TradingRouteList.list)
+  return &list_;
+}
+inline const ::pb::TradingRoute& TradingRouteList::list(int index) const {
+  // @@protoc_insertion_point(field_get:pb.TradingRouteList.list)
+  return list_.Get(index);
+}
+inline ::pb::TradingRoute* TradingRouteList::add_list() {
+  // @@protoc_insertion_point(field_add:pb.TradingRouteList.list)
+  return list_.Add();
+}
+inline const ::google::protobuf::RepeatedPtrField< ::pb::TradingRoute >&
+TradingRouteList::list() const {
+  // @@protoc_insertion_point(field_list:pb.TradingRouteList.list)
+  return list_;
 }
 
 // -------------------------------------------------------------------
@@ -1618,9 +2012,67 @@ inline void TradingAccount::set_allocated_user(::std::string* user) {
   // @@protoc_insertion_point(field_set_allocated:pb.TradingAccount.user)
 }
 
+// -------------------------------------------------------------------
+
+// TradingAccountList
+
+// repeated .pb.TradingAccount list = 1;
+inline int TradingAccountList::list_size() const {
+  return list_.size();
+}
+inline void TradingAccountList::clear_list() {
+  list_.Clear();
+}
+inline ::pb::TradingAccount* TradingAccountList::mutable_list(int index) {
+  // @@protoc_insertion_point(field_mutable:pb.TradingAccountList.list)
+  return list_.Mutable(index);
+}
+inline ::google::protobuf::RepeatedPtrField< ::pb::TradingAccount >*
+TradingAccountList::mutable_list() {
+  // @@protoc_insertion_point(field_mutable_list:pb.TradingAccountList.list)
+  return &list_;
+}
+inline const ::pb::TradingAccount& TradingAccountList::list(int index) const {
+  // @@protoc_insertion_point(field_get:pb.TradingAccountList.list)
+  return list_.Get(index);
+}
+inline ::pb::TradingAccount* TradingAccountList::add_list() {
+  // @@protoc_insertion_point(field_add:pb.TradingAccountList.list)
+  return list_.Add();
+}
+inline const ::google::protobuf::RepeatedPtrField< ::pb::TradingAccount >&
+TradingAccountList::list() const {
+  // @@protoc_insertion_point(field_list:pb.TradingAccountList.list)
+  return list_;
+}
+
+// -------------------------------------------------------------------
+
+// ReqDeleteTradingRoute
+
+// int64 id = 1;
+inline void ReqDeleteTradingRoute::clear_id() {
+  id_ = PROTOBUF_LONGLONG(0);
+}
+inline ::google::protobuf::int64 ReqDeleteTradingRoute::id() const {
+  // @@protoc_insertion_point(field_get:pb.ReqDeleteTradingRoute.id)
+  return id_;
+}
+inline void ReqDeleteTradingRoute::set_id(::google::protobuf::int64 value) {
+  
+  id_ = value;
+  // @@protoc_insertion_point(field_set:pb.ReqDeleteTradingRoute.id)
+}
+
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 

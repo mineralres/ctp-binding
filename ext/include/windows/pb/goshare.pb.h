@@ -35,6 +35,7 @@
 #include "market_data.pb.h"
 #include "google/api/annotations.pb.h"
 #include "strategy.pb.h"
+#include "trading.pb.h"
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 #define PROTOBUF_INTERNAL_EXPORT_goshare_2eproto

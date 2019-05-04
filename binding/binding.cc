@@ -9,120 +9,117 @@
 #include "binding/binding.h"
 #include <string>
 #include "ext/include/windows/pb/binding.pb.h"
+#include "binding/ctpmd.h"
+#include "pb/common.pb.h"
+#include "binding/ctp_trade_adapter.h"
 
 using namespace pb;
 
-int CTP_MD_Call(Session *s)
+int CTP_MD_Call(CallingSession *s)
 {
-    return 0;
-}
-
-int CTP_Trade_Call(Session *s)
-{
-    std::cout << "this is CTP_Call sizeof Session [" << sizeof(Session) << "]" << std::endl;
-    auto sz = sizeof(*s);
-    /*
+    std::cout << "this is CTP_MD_Call  [" << s->inType << "]" << std::endl;
     switch (s->inType)
     {
     case pb::CTP_CREATE_API:
     {
-        // 创建交易接口
-        auto spi = new tdspi(s->gospi);
-        auto trader = create_trade_adapter(pb::BrokerType(s->inParam1), spi);
-        s->cppapi = trader;
-        s->cppspi = spi;
+        // 创建行情接口
+        TradingRoute r;
+        if (r.ParseFromArray(s->inData, s->inDataLen))
+        {
+            s->cppapi = new ctpmd(&mdQueue, s->gospi, r);
+        }
     }
     break;
-    case pb::CTP_DELETE_API:
+    case pb::CTP_REQ_CALL_INIT:
     {
-        // 删除交易接口
-        usp_trade_adapter *trader = (usp_trade_adapter *)s->cppapi;
-        delete trader;
-        auto *spi = (tdspi *)s->cppspi;
-        delete spi;
+        ((ctpmd *)s->cppapi)->init();
     }
     break;
-    case pb::CTP_MD_CREATE_API:
+    case pb::CTP_REQ_USER_LOGIN:
+    {
+        // 登陆
+        pb::TradingAccount ta;
+        if (ta.ParseFromArray(s->inData, s->inDataLen))
+        {
+            ((ctpmd *)s->cppapi)->login(ta);
+        }
+    }
+    break;
+    case pb::CTP_REQ_SUBSCRIBE_MARKET_DATA:
+    {
+        // 订阅
+        pb::SymbolList l;
+        if (l.ParseFromArray(s->inData, s->inDataLen))
+        {
+            ((ctpmd *)s->cppapi)->subscribe(l);
+        }
+    }
+    break;
+    default:
+        break;
+    }
+    return 0;
+}
+
+int CTP_Trade_Call(CallingSession *s)
+{
+    std::cout << "this is CTP_Trade_Call [" << s->inType << "]" << std::endl;
+    switch (s->inType)
+    {
+    case pb::CTP_CREATE_API:
     {
         // 创建行情接口
-        auto spi = new mdspi(s->gospi);
-        auto mdapi = create_usp_mds_adapter(pb::BrokerType(s->inParam1), spi);
-        s->cppapi = mdapi;
-        s->cppspi = spi;
-    }
-    break;
-    case pb::CTP_MD_DELETE_API:
-    {
-        // 删除行情接口
-        usp_mds_adapter *mdapi = (usp_mds_adapter *)s->cppapi;
-        delete mdapi;
-        auto spi = (mdspi *)s->cppspi;
-        delete spi;
-    }
-    break;
-    case pb::CTP_USER_LOGIN:
-    {
-        usp_trade_adapter *trader = (usp_trade_adapter *)s->cppapi;
-        if (trader == NULL)
+        TradingRoute r;
+        if (r.ParseFromArray(s->inData, s->inDataLen))
         {
-            return -1;
-        }
-        pb::exchange_account ea;
-        if (ea.ParseFromArray(s->inData, s->inDataLen))
-        {
-            trader->startup(ea);
+            s->cppapi = new ctp_trade_adapter(&tradeQueue, s->gospi, r);
         }
     }
     break;
-    case pb::CTP_MD_USER_LOGIN:
+    case pb::CTP_REQ_CALL_INIT:
     {
-        usp_mds_adapter *api = (usp_mds_adapter *)s->cppapi;
-        if (api == NULL)
+        ((ctp_trade_adapter *)s->cppapi)->init();
+    }
+    break;
+    case pb::CTP_REQ_USER_LOGIN:
+    {
+        // 登陆
+        pb::TradingAccount ta;
+        if (ta.ParseFromArray(s->inData, s->inDataLen))
         {
-            return -1;
-        }
-        pb::exchange_account ea;
-        if (ea.ParseFromArray(s->inData, s->inDataLen))
-        {
-            api->startup(ea.broker(), ea.account_id(), ea.password(), "");
+            ((ctp_trade_adapter *)s->cppapi)->login(ta);
         }
     }
     break;
-    case pb::CTP_MD_SUBSCRIBE:
+    case pb::CTP_REQ_INSERT_ORDER:
     {
-        pb::symbol symbol;
-        if (symbol.ParseFromArray(s->inData, s->inDataLen))
-        {
-            usp_mds_adapter *api = (usp_mds_adapter *)s->cppapi;
-            if (api == NULL)
-            {
-                return -1;
-            }
-            api->subscribe(symbol);
-        }
-    }
-    break;
-    case pb::CTP_REQ_SEND_ORDER:
-    {
-        pb::order order;
+        pb::Order order;
         if (order.ParseFromArray(s->inData, s->inDataLen))
         {
-            usp_trade_adapter *trader = (usp_trade_adapter *)s->cppapi;
+            ctp_trade_adapter *trader = (ctp_trade_adapter *)s->cppapi;
             try
             {
-                trader->send_order(order);
+                trader->insert_order(order);
             }
             catch (std::exception &e)
             {
                 order.set_comment(e.what());
-                order.set_status(pb::CANCELED);
+                order.set_status(pb::OS_CANCELED);
                 order.set_volume_canceled(order.volume());
-                auto *spi = (tdspi *)s->cppspi;
-                spi->slot_on_rtn_order(order);
+                // auto *spi = (tdspi *)s->cppspi;
+                // spi->slot_on_rtn_order(order);
             }
         }
     }
     break;
+    default:
+        break;
+    }
+    return 0;
+
+    /*
+    switch (s->inType)
+    {
     case pb::CTP_REQ_CANCEL_ORDER:
     {
         pb::cancel_order_request req;
@@ -323,33 +320,16 @@ void tdspi::slot_on_log(const std::string &str)
 }
 */
 
-int CTP_Trade_PopMessage(Session *s)
+int CTP_Trade_PopMessage(CallingSession *s)
 {
-    std::cout << "this is CTP_TradeQueue_PopMessage" << std::endl;
+    // std::cout << "this is CTP_TradeQueue_PopMessage" << std::endl;
     return tradeQueue.pop(s);
 }
 
-int CTP_MD_PopMessage(Session *s)
+int CTP_MD_PopMessage(CallingSession *s)
 {
-    std::cout << "this is CTP_MD_Queue_PopMessage" << std::endl;
+    // std::cout << "this is CTP_MD_Queue_PopMessage" << std::endl;
     return mdQueue.pop(s);
-}
-
-int64_t PopupQueue::pop(Session *s)
-{
-    std::unique_lock<std::mutex> lk(tradeQueue.muBufferQueue);
-    tradeQueue.cvBufferQueue.wait(lk, [] { return !tradeQueue.bufferQueue.empty(); });
-    const PopupMessage &msg = tradeQueue.bufferQueue.front();
-    if (msg.data.size() > BufferSize)
-    {
-        std::cout << "OUT OUT OUT OUT of buffer" << std::endl;
-        return -1;
-    }
-    memcpy(s->outData, msg.data.data(), msg.data.size());
-    s->outType = msg.type;
-    s->outDataLen = msg.data.size();
-    s->gospi = msg.gospi;
-    bufferQueue.pop_front();
 }
 
 /*

@@ -33,6 +33,10 @@ class SymbolDefaultTypeInternal {
  public:
   ::google::protobuf::internal::ExplicitlyConstructed<Symbol> _instance;
 } _Symbol_default_instance_;
+class SymbolListDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<SymbolList> _instance;
+} _SymbolList_default_instance_;
 class ProductIDDefaultTypeInternal {
  public:
   ::google::protobuf::internal::ExplicitlyConstructed<ProductID> _instance;
@@ -131,6 +135,21 @@ static void InitDefaultsSymbol_common_2eproto() {
 
 ::google::protobuf::internal::SCCInfo<0> scc_info_Symbol_common_2eproto =
     {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsSymbol_common_2eproto}, {}};
+
+static void InitDefaultsSymbolList_common_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::pb::_SymbolList_default_instance_;
+    new (ptr) ::pb::SymbolList();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::pb::SymbolList::InitAsDefaultInstance();
+}
+
+::google::protobuf::internal::SCCInfo<1> scc_info_SymbolList_common_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsSymbolList_common_2eproto}, {
+      &scc_info_Symbol_common_2eproto.base,}};
 
 static void InitDefaultsProductID_common_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -445,6 +464,7 @@ static void InitDefaultsOptionMonthList_common_2eproto() {
 
 void InitDefaults_common_2eproto() {
   ::google::protobuf::internal::InitSCC(&scc_info_Symbol_common_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_SymbolList_common_2eproto.base);
   ::google::protobuf::internal::InitSCC(&scc_info_ProductID_common_2eproto.base);
   ::google::protobuf::internal::InitSCC(&scc_info_BrokerRoute_common_2eproto.base);
   ::google::protobuf::internal::InitSCC(&scc_info_BrokerRouteList_common_2eproto.base);
@@ -468,7 +488,7 @@ void InitDefaults_common_2eproto() {
   ::google::protobuf::internal::InitSCC(&scc_info_OptionMonthList_common_2eproto.base);
 }
 
-::google::protobuf::Metadata file_level_metadata_common_2eproto[22];
+::google::protobuf::Metadata file_level_metadata_common_2eproto[23];
 const ::google::protobuf::EnumDescriptor* file_level_enum_descriptors_common_2eproto[9];
 constexpr ::google::protobuf::ServiceDescriptor const** file_level_service_descriptors_common_2eproto = nullptr;
 
@@ -480,6 +500,12 @@ const ::google::protobuf::uint32 TableStruct_common_2eproto::offsets[] PROTOBUF_
   ~0u,  // no _weak_field_map_
   PROTOBUF_FIELD_OFFSET(::pb::Symbol, exchange_),
   PROTOBUF_FIELD_OFFSET(::pb::Symbol, code_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::pb::SymbolList, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::pb::SymbolList, list_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::pb::ProductID, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -780,31 +806,33 @@ const ::google::protobuf::uint32 TableStruct_common_2eproto::offsets[] PROTOBUF_
 };
 static const ::google::protobuf::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::pb::Symbol)},
-  { 7, -1, sizeof(::pb::ProductID)},
-  { 14, -1, sizeof(::pb::BrokerRoute)},
-  { 24, -1, sizeof(::pb::BrokerRouteList)},
-  { 30, -1, sizeof(::pb::InstrumentInfo)},
-  { 66, -1, sizeof(::pb::SimpleTimePeriod)},
-  { 73, -1, sizeof(::pb::MarketTimeRule)},
-  { 81, -1, sizeof(::pb::ProductInfo)},
-  { 98, -1, sizeof(::pb::TradingInstrument)},
-  { 106, -1, sizeof(::pb::TradingInstrumentList)},
-  { 112, -1, sizeof(::pb::ProductInfoList)},
-  { 118, -1, sizeof(::pb::ReqSetTradingInstrumentList)},
-  { 126, -1, sizeof(::pb::ReqSetProductInfoList)},
-  { 134, -1, sizeof(::pb::ReqUpdateTIOpenDate)},
-  { 141, -1, sizeof(::pb::ReqUpdateTIOpenDateList)},
-  { 149, -1, sizeof(::pb::AccountMoneySummary)},
-  { 206, -1, sizeof(::pb::AccountMoneySummaryList)},
-  { 212, -1, sizeof(::pb::MoneyTransferRecord)},
-  { 245, -1, sizeof(::pb::MTRList)},
-  { 251, -1, sizeof(::pb::SSEStockOption)},
-  { 290, -1, sizeof(::pb::OptionMonth)},
-  { 298, -1, sizeof(::pb::OptionMonthList)},
+  { 7, -1, sizeof(::pb::SymbolList)},
+  { 13, -1, sizeof(::pb::ProductID)},
+  { 20, -1, sizeof(::pb::BrokerRoute)},
+  { 30, -1, sizeof(::pb::BrokerRouteList)},
+  { 36, -1, sizeof(::pb::InstrumentInfo)},
+  { 72, -1, sizeof(::pb::SimpleTimePeriod)},
+  { 79, -1, sizeof(::pb::MarketTimeRule)},
+  { 87, -1, sizeof(::pb::ProductInfo)},
+  { 104, -1, sizeof(::pb::TradingInstrument)},
+  { 112, -1, sizeof(::pb::TradingInstrumentList)},
+  { 118, -1, sizeof(::pb::ProductInfoList)},
+  { 124, -1, sizeof(::pb::ReqSetTradingInstrumentList)},
+  { 132, -1, sizeof(::pb::ReqSetProductInfoList)},
+  { 140, -1, sizeof(::pb::ReqUpdateTIOpenDate)},
+  { 147, -1, sizeof(::pb::ReqUpdateTIOpenDateList)},
+  { 155, -1, sizeof(::pb::AccountMoneySummary)},
+  { 212, -1, sizeof(::pb::AccountMoneySummaryList)},
+  { 218, -1, sizeof(::pb::MoneyTransferRecord)},
+  { 251, -1, sizeof(::pb::MTRList)},
+  { 257, -1, sizeof(::pb::SSEStockOption)},
+  { 296, -1, sizeof(::pb::OptionMonth)},
+  { 304, -1, sizeof(::pb::OptionMonthList)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
   reinterpret_cast<const ::google::protobuf::Message*>(&::pb::_Symbol_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::pb::_SymbolList_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::pb::_ProductID_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::pb::_BrokerRoute_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::pb::_BrokerRouteList_default_instance_),
@@ -831,12 +859,13 @@ static ::google::protobuf::Message const * const file_default_instances[] = {
 ::google::protobuf::internal::AssignDescriptorsTable assign_descriptors_table_common_2eproto = {
   {}, AddDescriptors_common_2eproto, "common.proto", schemas,
   file_default_instances, TableStruct_common_2eproto::offsets,
-  file_level_metadata_common_2eproto, 22, file_level_enum_descriptors_common_2eproto, file_level_service_descriptors_common_2eproto,
+  file_level_metadata_common_2eproto, 23, file_level_enum_descriptors_common_2eproto, file_level_service_descriptors_common_2eproto,
 };
 
 const char descriptor_table_protodef_common_2eproto[] =
   "\n\014common.proto\022\002pb\":\n\006Symbol\022\"\n\010exchange"
-  "\030\001 \001(\0162\020.pb.ExchangeType\022\014\n\004code\030\002 \001(\t\"="
+  "\030\001 \001(\0162\020.pb.ExchangeType\022\014\n\004code\030\002 \001(\t\"&"
+  "\n\nSymbolList\022\030\n\004list\030\001 \003(\0132\n.pb.Symbol\"="
   "\n\tProductID\022\"\n\010exchange\030\001 \001(\0162\020.pb.Excha"
   "ngeType\022\014\n\004code\030\002 \001(\t\"f\n\013BrokerRoute\022\n\n\002"
   "id\030\001 \001(\t\022\014\n\004type\030\002 \001(\005\022\014\n\004name\030\003 \001(\t\022\025\n\r"
@@ -993,7 +1022,7 @@ const char descriptor_table_protodef_common_2eproto[] =
 ::google::protobuf::internal::DescriptorTable descriptor_table_common_2eproto = {
   false, InitDefaults_common_2eproto, 
   descriptor_table_protodef_common_2eproto,
-  "common.proto", &assign_descriptors_table_common_2eproto, 6134,
+  "common.proto", &assign_descriptors_table_common_2eproto, 6174,
 };
 
 void AddDescriptors_common_2eproto() {
@@ -1512,6 +1541,286 @@ void Symbol::InternalSwap(Symbol* other) {
 }
 
 ::google::protobuf::Metadata Symbol::GetMetadata() const {
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_common_2eproto);
+  return ::file_level_metadata_common_2eproto[kIndexInFileMessages];
+}
+
+
+// ===================================================================
+
+void SymbolList::InitAsDefaultInstance() {
+}
+class SymbolList::HasBitSetters {
+ public:
+};
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int SymbolList::kListFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+SymbolList::SymbolList()
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:pb.SymbolList)
+}
+SymbolList::SymbolList(const SymbolList& from)
+  : ::google::protobuf::Message(),
+      _internal_metadata_(nullptr),
+      list_(from.list_) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  // @@protoc_insertion_point(copy_constructor:pb.SymbolList)
+}
+
+void SymbolList::SharedCtor() {
+  ::google::protobuf::internal::InitSCC(
+      &scc_info_SymbolList_common_2eproto.base);
+}
+
+SymbolList::~SymbolList() {
+  // @@protoc_insertion_point(destructor:pb.SymbolList)
+  SharedDtor();
+}
+
+void SymbolList::SharedDtor() {
+}
+
+void SymbolList::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const SymbolList& SymbolList::default_instance() {
+  ::google::protobuf::internal::InitSCC(&::scc_info_SymbolList_common_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void SymbolList::Clear() {
+// @@protoc_insertion_point(message_clear_start:pb.SymbolList)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  list_.Clear();
+  _internal_metadata_.Clear();
+}
+
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* SymbolList::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<SymbolList*>(object);
+  ::google::protobuf::int32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+    switch (tag >> 3) {
+      // repeated .pb.Symbol list = 1;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
+        do {
+          ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+          GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+          parser_till_end = ::pb::Symbol::_InternalParse;
+          object = msg->add_list();
+          if (size > end - ptr) goto len_delim_till_end;
+          ptr += size;
+          GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+              {parser_till_end, object}, ptr - size, ptr));
+          if (ptr >= end) break;
+        } while ((::google::protobuf::io::UnalignedLoad<::google::protobuf::uint64>(ptr) & 255) == 10 && (ptr += 1));
+        break;
+      }
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->EndGroup(tag);
+          return ptr;
+        }
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        if (res.second) return ptr;
+      }
+    }  // switch
+  }  // while
+  return ptr;
+len_delim_till_end:
+  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
+                               {parser_till_end, object}, size);
+}
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool SymbolList::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:pb.SymbolList)
+  for (;;) {
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // repeated .pb.Symbol list = 1;
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+                input, add_list()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:pb.SymbolList)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:pb.SymbolList)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void SymbolList::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:pb.SymbolList)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // repeated .pb.Symbol list = 1;
+  for (unsigned int i = 0,
+      n = static_cast<unsigned int>(this->list_size()); i < n; i++) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1,
+      this->list(static_cast<int>(i)),
+      output);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:pb.SymbolList)
+}
+
+::google::protobuf::uint8* SymbolList::InternalSerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:pb.SymbolList)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // repeated .pb.Symbol list = 1;
+  for (unsigned int i = 0,
+      n = static_cast<unsigned int>(this->list_size()); i < n; i++) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        1, this->list(static_cast<int>(i)), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:pb.SymbolList)
+  return target;
+}
+
+size_t SymbolList::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:pb.SymbolList)
+  size_t total_size = 0;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // repeated .pb.Symbol list = 1;
+  {
+    unsigned int count = static_cast<unsigned int>(this->list_size());
+    total_size += 1UL * count;
+    for (unsigned int i = 0; i < count; i++) {
+      total_size +=
+        ::google::protobuf::internal::WireFormatLite::MessageSize(
+          this->list(static_cast<int>(i)));
+    }
+  }
+
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void SymbolList::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:pb.SymbolList)
+  GOOGLE_DCHECK_NE(&from, this);
+  const SymbolList* source =
+      ::google::protobuf::DynamicCastToGenerated<SymbolList>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:pb.SymbolList)
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:pb.SymbolList)
+    MergeFrom(*source);
+  }
+}
+
+void SymbolList::MergeFrom(const SymbolList& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:pb.SymbolList)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  list_.MergeFrom(from.list_);
+}
+
+void SymbolList::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:pb.SymbolList)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void SymbolList::CopyFrom(const SymbolList& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:pb.SymbolList)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool SymbolList::IsInitialized() const {
+  return true;
+}
+
+void SymbolList::Swap(SymbolList* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void SymbolList::InternalSwap(SymbolList* other) {
+  using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  CastToBase(&list_)->InternalSwap(CastToBase(&other->list_));
+}
+
+::google::protobuf::Metadata SymbolList::GetMetadata() const {
   ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_common_2eproto);
   return ::file_level_metadata_common_2eproto[kIndexInFileMessages];
 }
@@ -16587,6 +16896,9 @@ namespace google {
 namespace protobuf {
 template<> PROTOBUF_NOINLINE ::pb::Symbol* Arena::CreateMaybeMessage< ::pb::Symbol >(Arena* arena) {
   return Arena::CreateInternal< ::pb::Symbol >(arena);
+}
+template<> PROTOBUF_NOINLINE ::pb::SymbolList* Arena::CreateMaybeMessage< ::pb::SymbolList >(Arena* arena) {
+  return Arena::CreateInternal< ::pb::SymbolList >(arena);
 }
 template<> PROTOBUF_NOINLINE ::pb::ProductID* Arena::CreateMaybeMessage< ::pb::ProductID >(Arena* arena) {
   return Arena::CreateInternal< ::pb::ProductID >(arena);
