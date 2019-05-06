@@ -373,6 +373,34 @@ class MarketDataSnapshot :
   ::std::string* release_name();
   void set_allocated_name(::std::string* name);
 
+  // string time2 = 26;
+  void clear_time2();
+  static const int kTime2FieldNumber = 26;
+  const ::std::string& time2() const;
+  void set_time2(const ::std::string& value);
+  #if LANG_CXX11
+  void set_time2(::std::string&& value);
+  #endif
+  void set_time2(const char* value);
+  void set_time2(const char* value, size_t size);
+  ::std::string* mutable_time2();
+  ::std::string* release_time2();
+  void set_allocated_time2(::std::string* time2);
+
+  // string exchange = 27;
+  void clear_exchange();
+  static const int kExchangeFieldNumber = 27;
+  const ::std::string& exchange() const;
+  void set_exchange(const ::std::string& value);
+  #if LANG_CXX11
+  void set_exchange(::std::string&& value);
+  #endif
+  void set_exchange(const char* value);
+  void set_exchange(const char* value, size_t size);
+  ::std::string* mutable_exchange();
+  ::std::string* release_exchange();
+  void set_allocated_exchange(::std::string* exchange);
+
   // .pb.Symbol symbol = 1;
   bool has_symbol() const;
   void clear_symbol();
@@ -514,6 +542,12 @@ class MarketDataSnapshot :
   double volume_delta() const;
   void set_volume_delta(double value);
 
+  // int32 action_day = 28;
+  void clear_action_day();
+  static const int kActionDayFieldNumber = 28;
+  ::google::protobuf::int32 action_day() const;
+  void set_action_day(::google::protobuf::int32 value);
+
   // @@protoc_insertion_point(class_scope:pb.MarketDataSnapshot)
  private:
   class HasBitSetters;
@@ -521,6 +555,8 @@ class MarketDataSnapshot :
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::RepeatedPtrField< ::pb::OrderBook > order_book_list_;
   ::google::protobuf::internal::ArenaStringPtr name_;
+  ::google::protobuf::internal::ArenaStringPtr time2_;
+  ::google::protobuf::internal::ArenaStringPtr exchange_;
   ::pb::Symbol* symbol_;
   ::google::protobuf::int64 time_;
   double open_;
@@ -544,6 +580,7 @@ class MarketDataSnapshot :
   double average_price_;
   double exercise_price_;
   double volume_delta_;
+  ::google::protobuf::int32 action_day_;
   mutable ::google::protobuf::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_market_5fdata_2eproto;
 };
@@ -2814,6 +2851,126 @@ inline void MarketDataSnapshot::set_volume_delta(double value) {
   
   volume_delta_ = value;
   // @@protoc_insertion_point(field_set:pb.MarketDataSnapshot.volume_delta)
+}
+
+// string time2 = 26;
+inline void MarketDataSnapshot::clear_time2() {
+  time2_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& MarketDataSnapshot::time2() const {
+  // @@protoc_insertion_point(field_get:pb.MarketDataSnapshot.time2)
+  return time2_.GetNoArena();
+}
+inline void MarketDataSnapshot::set_time2(const ::std::string& value) {
+  
+  time2_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:pb.MarketDataSnapshot.time2)
+}
+#if LANG_CXX11
+inline void MarketDataSnapshot::set_time2(::std::string&& value) {
+  
+  time2_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:pb.MarketDataSnapshot.time2)
+}
+#endif
+inline void MarketDataSnapshot::set_time2(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  time2_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:pb.MarketDataSnapshot.time2)
+}
+inline void MarketDataSnapshot::set_time2(const char* value, size_t size) {
+  
+  time2_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:pb.MarketDataSnapshot.time2)
+}
+inline ::std::string* MarketDataSnapshot::mutable_time2() {
+  
+  // @@protoc_insertion_point(field_mutable:pb.MarketDataSnapshot.time2)
+  return time2_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* MarketDataSnapshot::release_time2() {
+  // @@protoc_insertion_point(field_release:pb.MarketDataSnapshot.time2)
+  
+  return time2_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void MarketDataSnapshot::set_allocated_time2(::std::string* time2) {
+  if (time2 != nullptr) {
+    
+  } else {
+    
+  }
+  time2_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), time2);
+  // @@protoc_insertion_point(field_set_allocated:pb.MarketDataSnapshot.time2)
+}
+
+// string exchange = 27;
+inline void MarketDataSnapshot::clear_exchange() {
+  exchange_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& MarketDataSnapshot::exchange() const {
+  // @@protoc_insertion_point(field_get:pb.MarketDataSnapshot.exchange)
+  return exchange_.GetNoArena();
+}
+inline void MarketDataSnapshot::set_exchange(const ::std::string& value) {
+  
+  exchange_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:pb.MarketDataSnapshot.exchange)
+}
+#if LANG_CXX11
+inline void MarketDataSnapshot::set_exchange(::std::string&& value) {
+  
+  exchange_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:pb.MarketDataSnapshot.exchange)
+}
+#endif
+inline void MarketDataSnapshot::set_exchange(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  exchange_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:pb.MarketDataSnapshot.exchange)
+}
+inline void MarketDataSnapshot::set_exchange(const char* value, size_t size) {
+  
+  exchange_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:pb.MarketDataSnapshot.exchange)
+}
+inline ::std::string* MarketDataSnapshot::mutable_exchange() {
+  
+  // @@protoc_insertion_point(field_mutable:pb.MarketDataSnapshot.exchange)
+  return exchange_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* MarketDataSnapshot::release_exchange() {
+  // @@protoc_insertion_point(field_release:pb.MarketDataSnapshot.exchange)
+  
+  return exchange_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void MarketDataSnapshot::set_allocated_exchange(::std::string* exchange) {
+  if (exchange != nullptr) {
+    
+  } else {
+    
+  }
+  exchange_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), exchange);
+  // @@protoc_insertion_point(field_set_allocated:pb.MarketDataSnapshot.exchange)
+}
+
+// int32 action_day = 28;
+inline void MarketDataSnapshot::clear_action_day() {
+  action_day_ = 0;
+}
+inline ::google::protobuf::int32 MarketDataSnapshot::action_day() const {
+  // @@protoc_insertion_point(field_get:pb.MarketDataSnapshot.action_day)
+  return action_day_;
+}
+inline void MarketDataSnapshot::set_action_day(::google::protobuf::int32 value) {
+  
+  action_day_ = value;
+  // @@protoc_insertion_point(field_set:pb.MarketDataSnapshot.action_day)
 }
 
 // -------------------------------------------------------------------

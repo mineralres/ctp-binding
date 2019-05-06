@@ -24,16 +24,16 @@ extern PROTOBUF_INTERNAL_EXPORT_ctp_2eproto ::google::protobuf::internal::SCCInf
 extern PROTOBUF_INTERNAL_EXPORT_ctp_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_CTPForceCloseTimeRule_ctp_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_ctp_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_CTPMarginItem_ctp_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_ctp_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_CTPMarginRate_ctp_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_ctp_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_CTPOrderField_ctp_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_ctp_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_CTPOrderID_ctp_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_ctp_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_CTPPositionSummation_ctp_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_ctp_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_CTPTradeField_ctp_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_ctp_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_CtpReqTransfer_ctp_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_ctp_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_MarginCheckRule_ctp_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_ctp_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_CTPCommissionRate_ctp_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_ctp_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_CTPOrderLink_ctp_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_ctp_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_SettlementUnitOption_ctp_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_ctp_2eproto ::google::protobuf::internal::SCCInfo<2> scc_info_CTPCloseTradeRecord_ctp_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_ctp_2eproto ::google::protobuf::internal::SCCInfo<2> scc_info_CTPTradeReport_ctp_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_ctp_2eproto ::google::protobuf::internal::SCCInfo<3> scc_info_CTPOrder_ctp_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_ctp_2eproto ::google::protobuf::internal::SCCInfo<3> scc_info_CTPPosition_ctp_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_ctp_2eproto ::google::protobuf::internal::SCCInfo<4> scc_info_CTPTradingAccount_ctp_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_ctp_2eproto ::google::protobuf::internal::SCCInfo<8> scc_info_CTPTradingUnit_ctp_2eproto;
@@ -42,10 +42,10 @@ class CTPOrderIDDefaultTypeInternal {
  public:
   ::google::protobuf::internal::ExplicitlyConstructed<CTPOrderID> _instance;
 } _CTPOrderID_default_instance_;
-class CTPOrderDefaultTypeInternal {
+class CTPOrderFieldDefaultTypeInternal {
  public:
-  ::google::protobuf::internal::ExplicitlyConstructed<CTPOrder> _instance;
-} _CTPOrder_default_instance_;
+  ::google::protobuf::internal::ExplicitlyConstructed<CTPOrderField> _instance;
+} _CTPOrderField_default_instance_;
 class CTPOrderListDefaultTypeInternal {
  public:
   ::google::protobuf::internal::ExplicitlyConstructed<CTPOrderList> _instance;
@@ -62,10 +62,10 @@ class CTPOnRtnCancelOrderDefaultTypeInternal {
  public:
   ::google::protobuf::internal::ExplicitlyConstructed<CTPOnRtnCancelOrder> _instance;
 } _CTPOnRtnCancelOrder_default_instance_;
-class CTPTradeReportDefaultTypeInternal {
+class CTPTradeFieldDefaultTypeInternal {
  public:
-  ::google::protobuf::internal::ExplicitlyConstructed<CTPTradeReport> _instance;
-} _CTPTradeReport_default_instance_;
+  ::google::protobuf::internal::ExplicitlyConstructed<CTPTradeField> _instance;
+} _CTPTradeField_default_instance_;
 class CTPTradeReportListDefaultTypeInternal {
  public:
   ::google::protobuf::internal::ExplicitlyConstructed<CTPTradeReportList> _instance;
@@ -241,22 +241,19 @@ static void InitDefaultsCTPOrderID_ctp_2eproto() {
 ::google::protobuf::internal::SCCInfo<0> scc_info_CTPOrderID_ctp_2eproto =
     {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsCTPOrderID_ctp_2eproto}, {}};
 
-static void InitDefaultsCTPOrder_ctp_2eproto() {
+static void InitDefaultsCTPOrderField_ctp_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::pb::_CTPOrder_default_instance_;
-    new (ptr) ::pb::CTPOrder();
+    void* ptr = &::pb::_CTPOrderField_default_instance_;
+    new (ptr) ::pb::CTPOrderField();
     ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::pb::CTPOrder::InitAsDefaultInstance();
+  ::pb::CTPOrderField::InitAsDefaultInstance();
 }
 
-::google::protobuf::internal::SCCInfo<3> scc_info_CTPOrder_ctp_2eproto =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 3, InitDefaultsCTPOrder_ctp_2eproto}, {
-      &scc_info_Symbol_common_2eproto.base,
-      &scc_info_CTPOrderID_ctp_2eproto.base,
-      &scc_info_ProductID_common_2eproto.base,}};
+::google::protobuf::internal::SCCInfo<0> scc_info_CTPOrderField_ctp_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsCTPOrderField_ctp_2eproto}, {}};
 
 static void InitDefaultsCTPOrderList_ctp_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -271,7 +268,7 @@ static void InitDefaultsCTPOrderList_ctp_2eproto() {
 
 ::google::protobuf::internal::SCCInfo<1> scc_info_CTPOrderList_ctp_2eproto =
     {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsCTPOrderList_ctp_2eproto}, {
-      &scc_info_CTPOrder_ctp_2eproto.base,}};
+      &scc_info_CTPOrderField_ctp_2eproto.base,}};
 
 static void InitDefaultsCTPOrderLink_ctp_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -286,7 +283,7 @@ static void InitDefaultsCTPOrderLink_ctp_2eproto() {
 
 ::google::protobuf::internal::SCCInfo<1> scc_info_CTPOrderLink_ctp_2eproto =
     {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsCTPOrderLink_ctp_2eproto}, {
-      &scc_info_CTPOrder_ctp_2eproto.base,}};
+      &scc_info_CTPOrderField_ctp_2eproto.base,}};
 
 static void InitDefaultsCTPCancelOrderRequest_ctp_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -320,21 +317,19 @@ static void InitDefaultsCTPOnRtnCancelOrder_ctp_2eproto() {
       &scc_info_CTPOrderID_ctp_2eproto.base,
       &scc_info_Symbol_common_2eproto.base,}};
 
-static void InitDefaultsCTPTradeReport_ctp_2eproto() {
+static void InitDefaultsCTPTradeField_ctp_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::pb::_CTPTradeReport_default_instance_;
-    new (ptr) ::pb::CTPTradeReport();
+    void* ptr = &::pb::_CTPTradeField_default_instance_;
+    new (ptr) ::pb::CTPTradeField();
     ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::pb::CTPTradeReport::InitAsDefaultInstance();
+  ::pb::CTPTradeField::InitAsDefaultInstance();
 }
 
-::google::protobuf::internal::SCCInfo<2> scc_info_CTPTradeReport_ctp_2eproto =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsCTPTradeReport_ctp_2eproto}, {
-      &scc_info_Symbol_common_2eproto.base,
-      &scc_info_CTPOrderID_ctp_2eproto.base,}};
+::google::protobuf::internal::SCCInfo<0> scc_info_CTPTradeField_ctp_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsCTPTradeField_ctp_2eproto}, {}};
 
 static void InitDefaultsCTPTradeReportList_ctp_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -349,7 +344,7 @@ static void InitDefaultsCTPTradeReportList_ctp_2eproto() {
 
 ::google::protobuf::internal::SCCInfo<1> scc_info_CTPTradeReportList_ctp_2eproto =
     {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsCTPTradeReportList_ctp_2eproto}, {
-      &scc_info_CTPTradeReport_ctp_2eproto.base,}};
+      &scc_info_CTPTradeField_ctp_2eproto.base,}};
 
 static void InitDefaultsCTPPositionSummation_ctp_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -502,8 +497,8 @@ static void InitDefaultsCTPTradingUnit_ctp_2eproto() {
       &scc_info_CTPPosition_ctp_2eproto.base,
       &scc_info_CTPOrderLink_ctp_2eproto.base,
       &scc_info_CTPCloseTradeRecord_ctp_2eproto.base,
-      &scc_info_CTPOrder_ctp_2eproto.base,
-      &scc_info_CTPTradeReport_ctp_2eproto.base,
+      &scc_info_CTPOrderField_ctp_2eproto.base,
+      &scc_info_CTPTradeField_ctp_2eproto.base,
       &scc_info_CTPCommissionRate_ctp_2eproto.base,
       &scc_info_CTPMarginRate_ctp_2eproto.base,}};
 
@@ -925,12 +920,12 @@ static void InitDefaultsCTPOnRspOrderInsert_ctp_2eproto() {
 
 void InitDefaults_ctp_2eproto() {
   ::google::protobuf::internal::InitSCC(&scc_info_CTPOrderID_ctp_2eproto.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_CTPOrder_ctp_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_CTPOrderField_ctp_2eproto.base);
   ::google::protobuf::internal::InitSCC(&scc_info_CTPOrderList_ctp_2eproto.base);
   ::google::protobuf::internal::InitSCC(&scc_info_CTPOrderLink_ctp_2eproto.base);
   ::google::protobuf::internal::InitSCC(&scc_info_CTPCancelOrderRequest_ctp_2eproto.base);
   ::google::protobuf::internal::InitSCC(&scc_info_CTPOnRtnCancelOrder_ctp_2eproto.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_CTPTradeReport_ctp_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_CTPTradeField_ctp_2eproto.base);
   ::google::protobuf::internal::InitSCC(&scc_info_CTPTradeReportList_ctp_2eproto.base);
   ::google::protobuf::internal::InitSCC(&scc_info_CTPPositionSummation_ctp_2eproto.base);
   ::google::protobuf::internal::InitSCC(&scc_info_CTPPosition_ctp_2eproto.base);
@@ -988,48 +983,73 @@ const ::google::protobuf::uint32 TableStruct_ctp_2eproto::offsets[] PROTOBUF_SEC
   PROTOBUF_FIELD_OFFSET(::pb::CTPOrderID, order_ref_),
   PROTOBUF_FIELD_OFFSET(::pb::CTPOrderID, string_id_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::pb::CTPOrder, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::pb::CTPOrderField, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::pb::CTPOrder, symbol_),
-  PROTOBUF_FIELD_OFFSET(::pb::CTPOrder, id_),
-  PROTOBUF_FIELD_OFFSET(::pb::CTPOrder, account_id_),
-  PROTOBUF_FIELD_OFFSET(::pb::CTPOrder, direction_),
-  PROTOBUF_FIELD_OFFSET(::pb::CTPOrder, status_),
-  PROTOBUF_FIELD_OFFSET(::pb::CTPOrder, price_type_),
-  PROTOBUF_FIELD_OFFSET(::pb::CTPOrder, limit_price_),
-  PROTOBUF_FIELD_OFFSET(::pb::CTPOrder, volume_),
-  PROTOBUF_FIELD_OFFSET(::pb::CTPOrder, volume_traded_),
-  PROTOBUF_FIELD_OFFSET(::pb::CTPOrder, volume_canceled_),
-  PROTOBUF_FIELD_OFFSET(::pb::CTPOrder, frozen_commission_),
-  PROTOBUF_FIELD_OFFSET(::pb::CTPOrder, send_order_time_),
-  PROTOBUF_FIELD_OFFSET(::pb::CTPOrder, send_order_trading_day_),
-  PROTOBUF_FIELD_OFFSET(::pb::CTPOrder, comment_),
-  PROTOBUF_FIELD_OFFSET(::pb::CTPOrder, request_id_),
-  PROTOBUF_FIELD_OFFSET(::pb::CTPOrder, local_order_seq_),
-  PROTOBUF_FIELD_OFFSET(::pb::CTPOrder, force_close_type_),
-  PROTOBUF_FIELD_OFFSET(::pb::CTPOrder, order_source_type_),
-  PROTOBUF_FIELD_OFFSET(::pb::CTPOrder, order_hedge_type_),
-  PROTOBUF_FIELD_OFFSET(::pb::CTPOrder, user_product_info_),
-  PROTOBUF_FIELD_OFFSET(::pb::CTPOrder, currency_type_),
-  PROTOBUF_FIELD_OFFSET(::pb::CTPOrder, exchange_order_id_),
-  PROTOBUF_FIELD_OFFSET(::pb::CTPOrder, time_condition_type_),
-  PROTOBUF_FIELD_OFFSET(::pb::CTPOrder, route_account_id_),
-  PROTOBUF_FIELD_OFFSET(::pb::CTPOrder, local_type_id_),
-  PROTOBUF_FIELD_OFFSET(::pb::CTPOrder, commission_),
-  PROTOBUF_FIELD_OFFSET(::pb::CTPOrder, offset_flag_),
-  PROTOBUF_FIELD_OFFSET(::pb::CTPOrder, error_code_),
-  PROTOBUF_FIELD_OFFSET(::pb::CTPOrder, token_),
-  PROTOBUF_FIELD_OFFSET(::pb::CTPOrder, stoploss_),
-  PROTOBUF_FIELD_OFFSET(::pb::CTPOrder, take_profit_),
-  PROTOBUF_FIELD_OFFSET(::pb::CTPOrder, traded_amount_),
-  PROTOBUF_FIELD_OFFSET(::pb::CTPOrder, volume_multiple_),
-  PROTOBUF_FIELD_OFFSET(::pb::CTPOrder, product_id_),
-  PROTOBUF_FIELD_OFFSET(::pb::CTPOrder, price_tick_),
-  PROTOBUF_FIELD_OFFSET(::pb::CTPOrder, frozen_margin_),
-  PROTOBUF_FIELD_OFFSET(::pb::CTPOrder, symbol_name_),
-  PROTOBUF_FIELD_OFFSET(::pb::CTPOrder, reason_comment_),
+  PROTOBUF_FIELD_OFFSET(::pb::CTPOrderField, broker_id_),
+  PROTOBUF_FIELD_OFFSET(::pb::CTPOrderField, investor_id_),
+  PROTOBUF_FIELD_OFFSET(::pb::CTPOrderField, instrument_id_),
+  PROTOBUF_FIELD_OFFSET(::pb::CTPOrderField, order_ref_),
+  PROTOBUF_FIELD_OFFSET(::pb::CTPOrderField, user_id_),
+  PROTOBUF_FIELD_OFFSET(::pb::CTPOrderField, order_price_type_),
+  PROTOBUF_FIELD_OFFSET(::pb::CTPOrderField, direction_),
+  PROTOBUF_FIELD_OFFSET(::pb::CTPOrderField, comb_offset_flag_),
+  PROTOBUF_FIELD_OFFSET(::pb::CTPOrderField, comb_hedge_flag_),
+  PROTOBUF_FIELD_OFFSET(::pb::CTPOrderField, limit_price_),
+  PROTOBUF_FIELD_OFFSET(::pb::CTPOrderField, volume_total_original_),
+  PROTOBUF_FIELD_OFFSET(::pb::CTPOrderField, time_condition_),
+  PROTOBUF_FIELD_OFFSET(::pb::CTPOrderField, gtd_date_),
+  PROTOBUF_FIELD_OFFSET(::pb::CTPOrderField, volume_condition_),
+  PROTOBUF_FIELD_OFFSET(::pb::CTPOrderField, min_volume_),
+  PROTOBUF_FIELD_OFFSET(::pb::CTPOrderField, contingent_condition_),
+  PROTOBUF_FIELD_OFFSET(::pb::CTPOrderField, stop_price_),
+  PROTOBUF_FIELD_OFFSET(::pb::CTPOrderField, force_close_reason_),
+  PROTOBUF_FIELD_OFFSET(::pb::CTPOrderField, is_auto_suspend_),
+  PROTOBUF_FIELD_OFFSET(::pb::CTPOrderField, business_unit_),
+  PROTOBUF_FIELD_OFFSET(::pb::CTPOrderField, request_id_),
+  PROTOBUF_FIELD_OFFSET(::pb::CTPOrderField, order_local_id_),
+  PROTOBUF_FIELD_OFFSET(::pb::CTPOrderField, exchange_id_),
+  PROTOBUF_FIELD_OFFSET(::pb::CTPOrderField, participant_id_),
+  PROTOBUF_FIELD_OFFSET(::pb::CTPOrderField, client_id_),
+  PROTOBUF_FIELD_OFFSET(::pb::CTPOrderField, exchange_inst_id_),
+  PROTOBUF_FIELD_OFFSET(::pb::CTPOrderField, trader_id_),
+  PROTOBUF_FIELD_OFFSET(::pb::CTPOrderField, install_id_),
+  PROTOBUF_FIELD_OFFSET(::pb::CTPOrderField, order_submit_status_),
+  PROTOBUF_FIELD_OFFSET(::pb::CTPOrderField, notify_sequence_),
+  PROTOBUF_FIELD_OFFSET(::pb::CTPOrderField, trading_day_),
+  PROTOBUF_FIELD_OFFSET(::pb::CTPOrderField, settlement_id_),
+  PROTOBUF_FIELD_OFFSET(::pb::CTPOrderField, order_sys_id_),
+  PROTOBUF_FIELD_OFFSET(::pb::CTPOrderField, order_source_),
+  PROTOBUF_FIELD_OFFSET(::pb::CTPOrderField, order_status_),
+  PROTOBUF_FIELD_OFFSET(::pb::CTPOrderField, order_type_),
+  PROTOBUF_FIELD_OFFSET(::pb::CTPOrderField, volume_traded_),
+  PROTOBUF_FIELD_OFFSET(::pb::CTPOrderField, volume_total_),
+  PROTOBUF_FIELD_OFFSET(::pb::CTPOrderField, insert_date_),
+  PROTOBUF_FIELD_OFFSET(::pb::CTPOrderField, insert_time_),
+  PROTOBUF_FIELD_OFFSET(::pb::CTPOrderField, active_time_),
+  PROTOBUF_FIELD_OFFSET(::pb::CTPOrderField, suspend_time_),
+  PROTOBUF_FIELD_OFFSET(::pb::CTPOrderField, update_time_),
+  PROTOBUF_FIELD_OFFSET(::pb::CTPOrderField, cancel_time_),
+  PROTOBUF_FIELD_OFFSET(::pb::CTPOrderField, active_trader_id_),
+  PROTOBUF_FIELD_OFFSET(::pb::CTPOrderField, clearing_part_id_),
+  PROTOBUF_FIELD_OFFSET(::pb::CTPOrderField, sequence_no_),
+  PROTOBUF_FIELD_OFFSET(::pb::CTPOrderField, front_id_),
+  PROTOBUF_FIELD_OFFSET(::pb::CTPOrderField, session_id_),
+  PROTOBUF_FIELD_OFFSET(::pb::CTPOrderField, user_product_info_),
+  PROTOBUF_FIELD_OFFSET(::pb::CTPOrderField, status_msg_),
+  PROTOBUF_FIELD_OFFSET(::pb::CTPOrderField, user_force_close_),
+  PROTOBUF_FIELD_OFFSET(::pb::CTPOrderField, active_user_id_),
+  PROTOBUF_FIELD_OFFSET(::pb::CTPOrderField, broker_order_seq_),
+  PROTOBUF_FIELD_OFFSET(::pb::CTPOrderField, relative_order_sys_id_),
+  PROTOBUF_FIELD_OFFSET(::pb::CTPOrderField, zce_total_traded_volume_),
+  PROTOBUF_FIELD_OFFSET(::pb::CTPOrderField, is_swap_order_),
+  PROTOBUF_FIELD_OFFSET(::pb::CTPOrderField, branch_id_),
+  PROTOBUF_FIELD_OFFSET(::pb::CTPOrderField, invest_unit_id_),
+  PROTOBUF_FIELD_OFFSET(::pb::CTPOrderField, account_id_),
+  PROTOBUF_FIELD_OFFSET(::pb::CTPOrderField, currency_id_),
+  PROTOBUF_FIELD_OFFSET(::pb::CTPOrderField, ip_address_),
+  PROTOBUF_FIELD_OFFSET(::pb::CTPOrderField, mac_address_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::pb::CTPOrderList, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -1072,34 +1092,41 @@ const ::google::protobuf::uint32 TableStruct_ctp_2eproto::offsets[] PROTOBUF_SEC
   PROTOBUF_FIELD_OFFSET(::pb::CTPOnRtnCancelOrder, msg_),
   PROTOBUF_FIELD_OFFSET(::pb::CTPOnRtnCancelOrder, route_account_id_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::pb::CTPTradeReport, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::pb::CTPTradeField, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::pb::CTPTradeReport, account_id_),
-  PROTOBUF_FIELD_OFFSET(::pb::CTPTradeReport, trade_id_),
-  PROTOBUF_FIELD_OFFSET(::pb::CTPTradeReport, symbol_),
-  PROTOBUF_FIELD_OFFSET(::pb::CTPTradeReport, direction_),
-  PROTOBUF_FIELD_OFFSET(::pb::CTPTradeReport, price_),
-  PROTOBUF_FIELD_OFFSET(::pb::CTPTradeReport, volume_),
-  PROTOBUF_FIELD_OFFSET(::pb::CTPTradeReport, traded_time_),
-  PROTOBUF_FIELD_OFFSET(::pb::CTPTradeReport, traded_trading_day_),
-  PROTOBUF_FIELD_OFFSET(::pb::CTPTradeReport, order_id_),
-  PROTOBUF_FIELD_OFFSET(::pb::CTPTradeReport, price_type_),
-  PROTOBUF_FIELD_OFFSET(::pb::CTPTradeReport, hedge_type_),
-  PROTOBUF_FIELD_OFFSET(::pb::CTPTradeReport, trade_type_),
-  PROTOBUF_FIELD_OFFSET(::pb::CTPTradeReport, currency_type_),
-  PROTOBUF_FIELD_OFFSET(::pb::CTPTradeReport, exchange_order_id_),
-  PROTOBUF_FIELD_OFFSET(::pb::CTPTradeReport, local_type_id_),
-  PROTOBUF_FIELD_OFFSET(::pb::CTPTradeReport, commission_),
-  PROTOBUF_FIELD_OFFSET(::pb::CTPTradeReport, tax_),
-  PROTOBUF_FIELD_OFFSET(::pb::CTPTradeReport, total_other_fee_),
-  PROTOBUF_FIELD_OFFSET(::pb::CTPTradeReport, initial_traded_price_),
-  PROTOBUF_FIELD_OFFSET(::pb::CTPTradeReport, reserve_),
-  PROTOBUF_FIELD_OFFSET(::pb::CTPTradeReport, offset_flag_),
-  PROTOBUF_FIELD_OFFSET(::pb::CTPTradeReport, route_account_id_),
-  PROTOBUF_FIELD_OFFSET(::pb::CTPTradeReport, symbol_name_),
-  PROTOBUF_FIELD_OFFSET(::pb::CTPTradeReport, price_tick_),
+  PROTOBUF_FIELD_OFFSET(::pb::CTPTradeField, broker_id_),
+  PROTOBUF_FIELD_OFFSET(::pb::CTPTradeField, investor_id_),
+  PROTOBUF_FIELD_OFFSET(::pb::CTPTradeField, instrument_id_),
+  PROTOBUF_FIELD_OFFSET(::pb::CTPTradeField, order_ref_),
+  PROTOBUF_FIELD_OFFSET(::pb::CTPTradeField, user_id_),
+  PROTOBUF_FIELD_OFFSET(::pb::CTPTradeField, exchange_id_),
+  PROTOBUF_FIELD_OFFSET(::pb::CTPTradeField, trade_id_),
+  PROTOBUF_FIELD_OFFSET(::pb::CTPTradeField, direction_),
+  PROTOBUF_FIELD_OFFSET(::pb::CTPTradeField, order_sys_id_),
+  PROTOBUF_FIELD_OFFSET(::pb::CTPTradeField, participant_id_),
+  PROTOBUF_FIELD_OFFSET(::pb::CTPTradeField, client_id_),
+  PROTOBUF_FIELD_OFFSET(::pb::CTPTradeField, trading_role_),
+  PROTOBUF_FIELD_OFFSET(::pb::CTPTradeField, exchange_inst_id_),
+  PROTOBUF_FIELD_OFFSET(::pb::CTPTradeField, offset_flag_),
+  PROTOBUF_FIELD_OFFSET(::pb::CTPTradeField, hedge_flag_),
+  PROTOBUF_FIELD_OFFSET(::pb::CTPTradeField, price_),
+  PROTOBUF_FIELD_OFFSET(::pb::CTPTradeField, volume_),
+  PROTOBUF_FIELD_OFFSET(::pb::CTPTradeField, trade_date_),
+  PROTOBUF_FIELD_OFFSET(::pb::CTPTradeField, trade_time_),
+  PROTOBUF_FIELD_OFFSET(::pb::CTPTradeField, trade_type_),
+  PROTOBUF_FIELD_OFFSET(::pb::CTPTradeField, price_source_),
+  PROTOBUF_FIELD_OFFSET(::pb::CTPTradeField, trader_id_),
+  PROTOBUF_FIELD_OFFSET(::pb::CTPTradeField, order_local_id_),
+  PROTOBUF_FIELD_OFFSET(::pb::CTPTradeField, clearing_part_id_),
+  PROTOBUF_FIELD_OFFSET(::pb::CTPTradeField, business_unit_),
+  PROTOBUF_FIELD_OFFSET(::pb::CTPTradeField, sequence_no_),
+  PROTOBUF_FIELD_OFFSET(::pb::CTPTradeField, trading_day_),
+  PROTOBUF_FIELD_OFFSET(::pb::CTPTradeField, settlement_id_),
+  PROTOBUF_FIELD_OFFSET(::pb::CTPTradeField, broker_order_seq_),
+  PROTOBUF_FIELD_OFFSET(::pb::CTPTradeField, trade_source_),
+  PROTOBUF_FIELD_OFFSET(::pb::CTPTradeField, invest_unit_id_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::pb::CTPTradeReportList, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -1604,62 +1631,62 @@ const ::google::protobuf::uint32 TableStruct_ctp_2eproto::offsets[] PROTOBUF_SEC
 };
 static const ::google::protobuf::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::pb::CTPOrderID)},
-  { 9, -1, sizeof(::pb::CTPOrder)},
-  { 52, -1, sizeof(::pb::CTPOrderList)},
-  { 58, -1, sizeof(::pb::CTPOrderLink)},
-  { 65, -1, sizeof(::pb::CTPCancelOrderRequest)},
-  { 79, -1, sizeof(::pb::CTPOnRtnCancelOrder)},
-  { 93, -1, sizeof(::pb::CTPTradeReport)},
-  { 122, -1, sizeof(::pb::CTPTradeReportList)},
-  { 128, -1, sizeof(::pb::CTPPositionSummation)},
-  { 151, -1, sizeof(::pb::CTPPosition)},
-  { 170, -1, sizeof(::pb::CTPPositionList)},
-  { 176, -1, sizeof(::pb::CTPCloseTradeRecord)},
-  { 211, -1, sizeof(::pb::CTPCloseTradeRecordList)},
-  { 217, -1, sizeof(::pb::CTPMarginRate)},
-  { 230, -1, sizeof(::pb::CTPMarginItem)},
-  { 239, -1, sizeof(::pb::CTPCommissionRateItem)},
-  { 249, -1, sizeof(::pb::CTPCommissionRate)},
-  { 259, -1, sizeof(::pb::CTPTradingUnit)},
-  { 277, -1, sizeof(::pb::CTPForceCloseTimeRule)},
-  { 285, -1, sizeof(::pb::CTPTradingUnitOption)},
-  { 307, -1, sizeof(::pb::MarginCheckRule)},
-  { 325, -1, sizeof(::pb::SettlementUnitOption)},
-  { 337, -1, sizeof(::pb::CTPTradingAccount)},
-  { 347, -1, sizeof(::pb::CTPTradingAccountSnapshot)},
-  { 355, -1, sizeof(::pb::CTPRspInfo)},
-  { 364, -1, sizeof(::pb::CtpReqQryAccountRegister)},
-  { 374, -1, sizeof(::pb::CtpRspQryAccountRegister)},
-  { 401, -1, sizeof(::pb::CtpReqAuthencate)},
-  { 408, -1, sizeof(::pb::CtpRspAuthencate)},
-  { 420, -1, sizeof(::pb::CtpReqUserLogin)},
-  { 428, -1, sizeof(::pb::CtpRspUserLogin)},
-  { 450, -1, sizeof(::pb::CtpReqConnect)},
-  { 458, -1, sizeof(::pb::CtpOnFrontConnected)},
-  { 463, -1, sizeof(::pb::CtpOnFrontDisconnected)},
-  { 468, -1, sizeof(::pb::CtpReqSettlementInfoConfirm)},
-  { 475, -1, sizeof(::pb::CtpOnRspSettlementInfoConfirm)},
-  { 491, -1, sizeof(::pb::CtpReqQryInvestor)},
-  { 496, -1, sizeof(::pb::CtpRspQryInvestor)},
-  { 516, -1, sizeof(::pb::CtpReqQryTransferBank)},
-  { 523, -1, sizeof(::pb::CtpRspQryTransferBank)},
-  { 536, -1, sizeof(::pb::CtpReqTransfer)},
-  { 583, -1, sizeof(::pb::CtpRspTransfer)},
-  { 593, -1, sizeof(::pb::CTPReqSubscribeMarketData)},
-  { 599, -1, sizeof(::pb::CTPRspSusbcribeMarketData)},
-  { 604, -1, sizeof(::pb::CTPReqUnSusbibeMarketData)},
-  { 610, -1, sizeof(::pb::CTPRspUnSusbibeMarketData)},
-  { 615, -1, sizeof(::pb::CTPOnRspOrderInsert)},
+  { 9, -1, sizeof(::pb::CTPOrderField)},
+  { 77, -1, sizeof(::pb::CTPOrderList)},
+  { 83, -1, sizeof(::pb::CTPOrderLink)},
+  { 90, -1, sizeof(::pb::CTPCancelOrderRequest)},
+  { 104, -1, sizeof(::pb::CTPOnRtnCancelOrder)},
+  { 118, -1, sizeof(::pb::CTPTradeField)},
+  { 154, -1, sizeof(::pb::CTPTradeReportList)},
+  { 160, -1, sizeof(::pb::CTPPositionSummation)},
+  { 183, -1, sizeof(::pb::CTPPosition)},
+  { 202, -1, sizeof(::pb::CTPPositionList)},
+  { 208, -1, sizeof(::pb::CTPCloseTradeRecord)},
+  { 243, -1, sizeof(::pb::CTPCloseTradeRecordList)},
+  { 249, -1, sizeof(::pb::CTPMarginRate)},
+  { 262, -1, sizeof(::pb::CTPMarginItem)},
+  { 271, -1, sizeof(::pb::CTPCommissionRateItem)},
+  { 281, -1, sizeof(::pb::CTPCommissionRate)},
+  { 291, -1, sizeof(::pb::CTPTradingUnit)},
+  { 309, -1, sizeof(::pb::CTPForceCloseTimeRule)},
+  { 317, -1, sizeof(::pb::CTPTradingUnitOption)},
+  { 339, -1, sizeof(::pb::MarginCheckRule)},
+  { 357, -1, sizeof(::pb::SettlementUnitOption)},
+  { 369, -1, sizeof(::pb::CTPTradingAccount)},
+  { 379, -1, sizeof(::pb::CTPTradingAccountSnapshot)},
+  { 387, -1, sizeof(::pb::CTPRspInfo)},
+  { 396, -1, sizeof(::pb::CtpReqQryAccountRegister)},
+  { 406, -1, sizeof(::pb::CtpRspQryAccountRegister)},
+  { 433, -1, sizeof(::pb::CtpReqAuthencate)},
+  { 440, -1, sizeof(::pb::CtpRspAuthencate)},
+  { 452, -1, sizeof(::pb::CtpReqUserLogin)},
+  { 460, -1, sizeof(::pb::CtpRspUserLogin)},
+  { 482, -1, sizeof(::pb::CtpReqConnect)},
+  { 490, -1, sizeof(::pb::CtpOnFrontConnected)},
+  { 495, -1, sizeof(::pb::CtpOnFrontDisconnected)},
+  { 500, -1, sizeof(::pb::CtpReqSettlementInfoConfirm)},
+  { 507, -1, sizeof(::pb::CtpOnRspSettlementInfoConfirm)},
+  { 523, -1, sizeof(::pb::CtpReqQryInvestor)},
+  { 528, -1, sizeof(::pb::CtpRspQryInvestor)},
+  { 548, -1, sizeof(::pb::CtpReqQryTransferBank)},
+  { 555, -1, sizeof(::pb::CtpRspQryTransferBank)},
+  { 568, -1, sizeof(::pb::CtpReqTransfer)},
+  { 615, -1, sizeof(::pb::CtpRspTransfer)},
+  { 625, -1, sizeof(::pb::CTPReqSubscribeMarketData)},
+  { 631, -1, sizeof(::pb::CTPRspSusbcribeMarketData)},
+  { 636, -1, sizeof(::pb::CTPReqUnSusbibeMarketData)},
+  { 642, -1, sizeof(::pb::CTPRspUnSusbibeMarketData)},
+  { 647, -1, sizeof(::pb::CTPOnRspOrderInsert)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
   reinterpret_cast<const ::google::protobuf::Message*>(&::pb::_CTPOrderID_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::pb::_CTPOrder_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::pb::_CTPOrderField_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::pb::_CTPOrderList_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::pb::_CTPOrderLink_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::pb::_CTPCancelOrderRequest_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::pb::_CTPOnRtnCancelOrder_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::pb::_CTPTradeReport_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::pb::_CTPTradeField_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::pb::_CTPTradeReportList_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::pb::_CTPPositionSummation_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::pb::_CTPPosition_default_instance_),
@@ -1712,287 +1739,300 @@ const char descriptor_table_protodef_ctp_2eproto[] =
   "\n\tctp.proto\022\002pb\032\014common.proto\"X\n\nCTPOrde"
   "rID\022\020\n\010front_id\030\001 \001(\003\022\022\n\nsession_id\030\002 \001("
   "\003\022\021\n\torder_ref\030\003 \001(\003\022\021\n\tstring_id\030\004 \001(\t\""
-  "\353\007\n\010CTPOrder\022\032\n\006symbol\030\001 \001(\0132\n.pb.Symbol"
-  "\022\032\n\002id\030\002 \001(\0132\016.pb.CTPOrderID\022\022\n\naccount_"
-  "id\030\003 \001(\t\022#\n\tdirection\030\004 \001(\0162\020.pb.CTPDire"
-  "ction\022\"\n\006status\030\005 \001(\0162\022.pb.CTPOrderStatu"
-  "s\022$\n\nprice_type\030\006 \001(\0162\020.pb.CTPPriceType\022"
-  "\023\n\013limit_price\030\007 \001(\001\022\016\n\006volume\030\010 \001(\005\022\025\n\r"
-  "volume_traded\030\t \001(\005\022\027\n\017volume_canceled\030\n"
-  " \001(\005\022\031\n\021frozen_commission\030\013 \001(\001\022\027\n\017send_"
-  "order_time\030\014 \001(\003\022\036\n\026send_order_trading_d"
-  "ay\030\r \001(\005\022\017\n\007comment\030\016 \001(\t\022\022\n\nrequest_id\030"
-  "\017 \001(\005\022\027\n\017local_order_seq\030\020 \001(\005\022\030\n\020force_"
-  "close_type\030\021 \001(\005\022\031\n\021order_source_type\030\022 "
-  "\001(\005\022*\n\020order_hedge_type\030\023 \001(\0162\020.pb.CTPHe"
-  "dgeType\022\031\n\021user_product_info\030\024 \001(\t\022\'\n\rcu"
-  "rrency_type\030\025 \001(\0162\020.pb.CurrencyType\022\031\n\021e"
-  "xchange_order_id\030\026 \001(\t\022\033\n\023time_condition"
-  "_type\030\027 \001(\005\022\030\n\020route_account_id\030\030 \001(\t\022\025\n"
-  "\rlocal_type_id\030\031 \001(\005\022\022\n\ncommission\030\032 \001(\001"
-  "\022&\n\013offset_flag\030\033 \001(\0162\021.pb.CTPOffsetFlag"
-  "\022\022\n\nerror_code\030\034 \001(\005\022\r\n\005token\030\035 \001(\t\022\020\n\010s"
-  "toploss\030\036 \001(\001\022\023\n\013take_profit\030\037 \001(\001\022\025\n\rtr"
-  "aded_amount\030  \001(\001\022\027\n\017volume_multiple\030! \001"
-  "(\005\022!\n\nproduct_id\030\" \001(\0132\r.pb.ProductID\022\022\n"
-  "\nprice_tick\030# \001(\001\022\025\n\rfrozen_margin\030$ \001(\001"
-  "\022\023\n\013symbol_name\030% \001(\t\022\026\n\016reason_comment\030"
-  "& \001(\t\"*\n\014CTPOrderList\022\032\n\004list\030\001 \003(\0132\014.pb"
-  ".CTPOrder\"L\n\014CTPOrderLink\022\034\n\006parent\030\001 \001("
-  "\0132\014.pb.CTPOrder\022\036\n\010children\030\002 \003(\0132\014.pb.C"
-  "TPOrder\"\351\001\n\025CTPCancelOrderRequest\022\022\n\nacc"
-  "ount_id\030\001 \001(\t\022\"\n\nCTPOrderID\030\002 \001(\0132\016.pb.C"
-  "TPOrderID\022\032\n\006symbol\030\003 \001(\0132\n.pb.Symbol\022\022\n"
-  "\nrequest_id\030\004 \001(\005\022\020\n\010front_id\030\005 \001(\005\022\022\n\ns"
-  "ession_id\030\006 \001(\005\022\031\n\021exchange_order_id\030\007 \001"
-  "(\t\022\r\n\005token\030\010 \001(\t\022\030\n\020route_account_id\030\t "
-  "\001(\t\"\340\001\n\023CTPOnRtnCancelOrder\022\022\n\naccount_i"
-  "d\030\001 \001(\t\022 \n\010order_id\030\002 \001(\0132\016.pb.CTPOrderI"
-  "D\022\031\n\021exchange_order_id\030\003 \001(\t\022\032\n\006symbol\030\004"
-  " \001(\0132\n.pb.Symbol\022\022\n\nrequest_id\030\005 \001(\005\022\022\n\n"
-  "error_type\030\006 \001(\005\022\r\n\005error\030\007 \001(\005\022\013\n\003msg\030\010"
-  " \001(\t\022\030\n\020route_account_id\030\t \001(\t\"\370\004\n\016CTPTr"
-  "adeReport\022\022\n\naccount_id\030\001 \001(\t\022\020\n\010trade_i"
-  "d\030\002 \001(\t\022\032\n\006symbol\030\003 \001(\0132\n.pb.Symbol\022#\n\td"
-  "irection\030\004 \001(\0162\020.pb.CTPDirection\022\r\n\005pric"
-  "e\030\005 \001(\001\022\016\n\006volume\030\006 \001(\005\022\023\n\013traded_time\030\007"
-  " \001(\003\022\032\n\022traded_trading_day\030\010 \001(\005\022 \n\010orde"
-  "r_id\030\t \001(\0132\016.pb.CTPOrderID\022$\n\nprice_type"
-  "\030\n \001(\0162\020.pb.CTPPriceType\022$\n\nhedge_type\030\013"
-  " \001(\0162\020.pb.CTPHedgeType\022$\n\ntrade_type\030\014 \001"
-  "(\0162\020.pb.CTPTradeType\022\025\n\rcurrency_type\030\r "
-  "\001(\005\022\031\n\021exchange_order_id\030\016 \001(\t\022\025\n\rlocal_"
-  "type_id\030\017 \001(\005\022\022\n\ncommission\030\020 \001(\001\022\013\n\003tax"
-  "\030\021 \001(\001\022\027\n\017total_other_fee\030\022 \001(\001\022\034\n\024initi"
-  "al_traded_price\030\023 \001(\001\022\017\n\007reserve\030\024 \001(\001\022&"
-  "\n\013offset_flag\030\025 \001(\0162\021.pb.CTPOffsetFlag\022\030"
-  "\n\020route_account_id\030\026 \001(\t\022\023\n\013symbol_name\030"
-  "\027 \001(\t\022\022\n\nprice_tick\030\030 \001(\001\"6\n\022CTPTradeRep"
-  "ortList\022 \n\004list\030\001 \003(\0132\022.pb.CTPTradeRepor"
-  "t\"\232\003\n\024CTPPositionSummation\022#\n\tdirection\030"
-  "\001 \001(\0162\020.pb.CTPDirection\022\014\n\004type\030\002 \001(\005\022\030\n"
-  "\020route_account_id\030\003 \001(\t\022\020\n\010position\030\004 \001("
-  "\005\022\016\n\006amount\030\005 \001(\001\022\014\n\004cost\030\006 \001(\001\022\016\n\006froze"
-  "n\030\007 \001(\005\022\021\n\tavailable\030\010 \001(\005\022\027\n\017position_p"
-  "rofit\030\t \001(\001\022\025\n\rclosed_profit\030\n \001(\001\022\016\n\006ma"
-  "rgin\030\013 \001(\001\022\025\n\rfrozen_margin\030\014 \001(\001\022\022\n\ncom"
-  "mission\030\r \001(\001\022\031\n\021frozen_commission\030\016 \001(\001"
-  "\022\020\n\010interest\030\017 \001(\001\022\027\n\017frozen_interest\030\020 "
-  "\001(\001\022\022\n\nmtm_profit\030\021 \001(\001\022\035\n\025cleared_close"
-  "d_profit\030\022 \001(\001\"\260\003\n\013CTPPosition\022\032\n\006symbol"
-  "\030\001 \001(\0132\n.pb.Symbol\022+\n\tsummation\030\002 \001(\0132\030."
-  "pb.CTPPositionSummation\0221\n\017today_summati"
-  "on\030\003 \001(\0132\030.pb.CTPPositionSummation\0225\n\023ye"
-  "sterday_summation\030\004 \001(\0132\030.pb.CTPPosition"
-  "Summation\022\034\n\024pre_settlement_price\030\005 \001(\001\022"
-  "\030\n\020settlement_price\030\006 \001(\001\022\022\n\nlast_price\030"
-  "\007 \001(\001\022\023\n\013trading_day\030\010 \001(\005\022\024\n\014product_ty"
-  "pe\030\t \001(\005\022\027\n\017volume_multiple\030\013 \001(\005\022!\n\npro"
-  "duct_id\030\014 \001(\0132\r.pb.ProductID\022\022\n\nprice_ti"
-  "ck\030\r \001(\001\022\023\n\013symbol_name\030\016 \001(\t\022\022\n\naccount"
-  "_id\030\017 \001(\t\"0\n\017CTPPositionList\022\035\n\004list\030\001 \003"
-  "(\0132\017.pb.CTPPosition\"\244\006\n\023CTPCloseTradeRec"
-  "ord\022\022\n\naccount_id\030\001 \001(\t\022\032\n\006symbol\030\002 \001(\0132"
-  "\n.pb.Symbol\022#\n\tdirection\030\003 \001(\0162\020.pb.CTPD"
-  "irection\022\023\n\013open_volume\030\004 \001(\005\022\023\n\013open_am"
-  "ount\030\005 \001(\001\022\025\n\rclosed_volume\030\006 \001(\005\022\025\n\rclo"
-  "sed_amount\030\007 \001(\001\022\021\n\topen_time\030\010 \001(\003\022\030\n\020o"
-  "pen_trading_day\030\t \001(\005\022%\n\ropen_order_id\030\n"
-  " \001(\0132\016.pb.CTPOrderID\022\025\n\ropen_trade_id\030\013 "
-  "\001(\t\022\027\n\017open_trade_type\030\014 \001(\005\022\027\n\017open_hed"
-  "ge_type\030\r \001(\005\022\022\n\nclose_time\030\016 \001(\003\022\031\n\021clo"
-  "se_trading_day\030\017 \001(\005\022&\n\016close_order_id\030\020"
-  " \001(\0132\016.pb.CTPOrderID\022\026\n\016close_trade_id\030\021"
-  " \001(\t\022\030\n\020close_trade_type\030\022 \001(\005\022\030\n\020close_"
-  "hedge_type\030\023 \001(\005\022\024\n\014close_profit\030\024 \001(\001\022\034"
-  "\n\024pre_settlement_price\030\025 \001(\001\022\'\n\rcurrency"
-  "_type\030\026 \001(\0162\020.pb.CurrencyType\022\027\n\017open_co"
-  "mmission\030\027 \001(\001\022\030\n\020close_commission\030\030 \001(\001"
-  "\022\016\n\006margin\030\031 \001(\001\022\033\n\023initial_open_amount\030"
-  "\032 \001(\001\022\027\n\017volume_multiple\030\033 \001(\005\022\027\n\017frozen"
-  "_interest\030\034 \001(\001\022\030\n\020route_account_id\030\035 \001("
-  "\t\022\027\n\017position_profit\030\036 \001(\001\"@\n\027CTPCloseTr"
-  "adeRecordList\022%\n\004list\030\001 \003(\0132\027.pb.CTPClos"
-  "eTradeRecord\"\302\001\n\rCTPMarginRate\022\"\n\010exchan"
-  "ge\030\001 \001(\0162\020.pb.ExchangeType\022\016\n\006symbol\030\002 \001"
-  "(\t\022\017\n\007product\030\003 \001(\t\022\026\n\016long_by_volume\030\004 "
-  "\001(\001\022\026\n\016long_by_amount\030\005 \001(\001\022\027\n\017short_by_"
-  "volume\030\006 \001(\001\022\027\n\017short_by_amount\030\007 \001(\001\022\n\n"
-  "\002id\030\n \001(\003\"q\n\rCTPMarginItem\022\026\n\016long_by_vo"
-  "lume\030\001 \001(\001\022\026\n\016long_by_amount\030\002 \001(\001\022\027\n\017sh"
-  "ort_by_volume\030\003 \001(\001\022\027\n\017short_by_amount\030\004"
-  " \001(\001\"\203\001\n\025CTPCommissionRateItem\022\021\n\tby_amo"
-  "unt\030\001 \001(\001\022\021\n\tby_volume\030\002 \001(\001\022\017\n\007minimum\030"
-  "\003 \001(\001\022&\n\013offset_flag\030\004 \001(\0162\021.pb.CTPOffse"
-  "tFlag\022\013\n\003tag\030\005 \001(\t\"\221\001\n\021CTPCommissionRate"
-  "\022\"\n\010exchange\030\001 \001(\0162\020.pb.ExchangeType\022\016\n\006"
-  "symbol\030\002 \001(\t\022\017\n\007product\030\003 \001(\t\022+\n\010setting"
-  "s\030\004 \003(\0132\031.pb.CTPCommissionRateItem\022\n\n\002id"
-  "\030\005 \001(\003\"\337\003\n\016CTPTradingUnit\022\032\n\006symbol\030\001 \001("
-  "\0132\n.pb.Symbol\022!\n\010position\030\002 \003(\0132\017.pb.CTP"
-  "Position\022)\n\017order_link_list\030\003 \003(\0132\020.pb.C"
-  "TPOrderLink\0225\n\024position_detail_list\030\004 \003("
-  "\0132\027.pb.CTPCloseTradeRecord\0221\n\020history_ct"
-  "r_list\030\005 \003(\0132\027.pb.CTPCloseTradeRecord\022(\n"
-  "\022history_order_list\030\006 \003(\0132\014.pb.CTPOrder\022"
-  ".\n\022history_trade_list\030\007 \003(\0132\022.pb.CTPTrad"
-  "eReport\022\022\n\nlast_price\030\n \001(\001\022\034\n\024last_mds_"
-  "update_time\030\013 \001(\003\022\022\n\nprice_tick\030\014 \001(\001\022\027\n"
-  "\017volume_multiple\030\r \001(\005\022!\n\002cr\030\016 \001(\0132\025.pb."
-  "CTPCommissionRate\022\035\n\002mr\030\017 \001(\0132\021.pb.CTPMa"
-  "rginRate\"O\n\025CTPForceCloseTimeRule\022\r\n\005sta"
-  "rt\030\001 \001(\003\022\013\n\003end\030\002 \001(\003\022\032\n\022disable_open_st"
-  "art\030\003 \001(\003\"\346\004\n\024CTPTradingUnitOption\022 \n\030li"
-  "mit_price_disable_open\030\001 \001(\005\022\037\n\027limit_pr"
-  "ice_force_close\030\002 \001(\005\022)\n!pre_position_pe"
-  "rcentage_threshold\030\003 \001(\001\022\036\n\026pre_position"
-  "_threshold\030\004 \001(\001\022\'\n\037pre_volume_percentag"
-  "e_threshold\030\005 \001(\001\022\034\n\024pre_volume_threshol"
-  "d\030\006 \001(\001\022*\n\"single_product_margin_weight_"
-  "limit\030\007 \001(\001\022+\n\010fcr_list\030\010 \003(\0132\031.pb.CTPFo"
-  "rceCloseTimeRule\022\024\n\014disable_open\030\t \001(\010\022."
-  "\n\013cr_settings\030\n \003(\0132\031.pb.CTPCommissionRa"
-  "teItem\022&\n\013margin_rate\030\013 \001(\0132\021.pb.CTPMarg"
-  "inItem\022\033\n\023stoploss_candidates\030\014 \003(\005\022\036\n\026t"
-  "ake_profit_candidates\030\r \003(\005\022\031\n\021volume_ca"
-  "ndidates\030\016 \003(\005\022 \n\030disable_open_symbol_li"
-  "st\030\017 \003(\t\022\037\n\027disable_open_class_list\030\020 \003("
-  "\t\022\027\n\017open_days_limit\030\021 \001(\005\"\226\003\n\017MarginChe"
-  "ckRule\022\r\n\005start\030\001 \001(\003\022\013\n\003end\030\002 \001(\003\022\031\n\021fo"
-  "rce_close_order\030\003 \001(\005\022\025\n\rwarning_level\030\004"
-  " \001(\001\022\031\n\021force_close_level\030\005 \001(\001\022\037\n\027commo"
-  "n_balance_multiple\030\006 \001(\001\022(\n disable_open"
-  "_under_warning_level\030\007 \001(\010\022%\n\035warning_le"
-  "vel_by_prefer_ratio\030\010 \001(\001\022)\n!force_close"
-  "_level_by_prefer_ratio\030\t \001(\001\022\037\n\027warning_"
-  "level_by_margin\030\n \001(\001\022#\n\033force_close_lev"
-  "el_by_margin\030\013 \001(\001\022\026\n\016margin_ceiling\030\014 \001"
-  "(\001\022\037\n\027position_amount_ceiling\030\r \001(\001\"\301\001\n\024"
-  "SettlementUnitOption\022\n\n\002id\030\001 \001(\003\022\017\n\007comm"
-  "ent\030\002 \001(\t\022\030\n\020settlement_group\030\003 \001(\005\022\035\n\025a"
-  "vailable_check_level\030\004 \001(\005\022\026\n\016force_clos"
-  "e_on\030\005 \001(\010\022%\n\010mcr_list\030\006 \003(\0132\023.pb.Margin"
-  "CheckRule\022\024\n\014disable_open\030\007 \001(\010\"\322\001\n\021CTPT"
-  "radingAccount\022(\n\007summary\030\001 \001(\0132\027.pb.Acco"
-  "untMoneySummary\022)\n\010mtr_list\030\002 \003(\0132\027.pb.M"
-  "oneyTransferRecord\022#\n\007tu_list\030\003 \003(\0132\022.pb"
-  ".CTPTradingUnit\022\030\n\020last_settle_date\030\004 \001("
-  "\005\022)\n\007options\030\005 \001(\0132\030.pb.SettlementUnitOp"
-  "tion\"b\n\031CTPTradingAccountSnapshot\022&\n\007acc"
-  "ount\030\001 \001(\0132\025.pb.CTPTradingAccount\022\014\n\004tim"
-  "e\030\002 \001(\003\022\017\n\007comment\030\003 \001(\t\"V\n\nCTPRspInfo\022\020"
-  "\n\010error_id\030\001 \001(\005\022\021\n\terror_msg\030\002 \001(\014\022\022\n\nr"
-  "equest_id\030\003 \001(\005\022\017\n\007is_last\030\004 \001(\010\"\177\n\030CtpR"
-  "eqQryAccountRegister\022\021\n\tbroker_id\030\001 \001(\t\022"
-  "\022\n\naccount_id\030\002 \001(\t\022\017\n\007bank_id\030\003 \001(\t\022\026\n\016"
-  "bank_branch_id\030\004 \001(\t\022\023\n\013currency_id\030\005 \001("
-  "\t\"\347\003\n\030CtpRspQryAccountRegister\022\020\n\010error_"
+  "\253\013\n\rCTPOrderField\022\021\n\tbroker_id\030\001 \001(\t\022\023\n\013"
+  "investor_id\030\002 \001(\t\022\025\n\rinstrument_id\030\003 \001(\t"
+  "\022\021\n\torder_ref\030\004 \001(\t\022\017\n\007user_id\030\005 \001(\t\022\030\n\020"
+  "order_price_type\030\006 \001(\005\022\021\n\tdirection\030\007 \001("
+  "\005\022\030\n\020comb_offset_flag\030\010 \001(\005\022\027\n\017comb_hedg"
+  "e_flag\030\t \001(\005\022\023\n\013limit_price\030\n \001(\001\022\035\n\025vol"
+  "ume_total_original\030\013 \001(\005\022\026\n\016time_conditi"
+  "on\030\014 \001(\005\022\020\n\010GTD_date\030\r \001(\t\022\030\n\020volume_con"
+  "dition\030\016 \001(\005\022\022\n\nmin_volume\030\017 \001(\005\022\034\n\024cont"
+  "ingent_condition\030\020 \001(\005\022\022\n\nstop_price\030\021 \001"
+  "(\001\022\032\n\022force_close_reason\030\022 \001(\005\022\027\n\017is_aut"
+  "o_suspend\030\023 \001(\010\022\025\n\rbusiness_unit\030\024 \001(\t\022\022"
+  "\n\nrequest_id\030\025 \001(\005\022\026\n\016order_local_id\030\026 \001"
+  "(\t\022\023\n\013exchange_id\030\027 \001(\t\022\026\n\016participant_i"
+  "d\030\030 \001(\t\022\021\n\tclient_id\030\031 \001(\t\022\030\n\020exchange_i"
+  "nst_id\030\032 \001(\t\022\021\n\ttrader_id\030\033 \001(\t\022\022\n\ninsta"
+  "ll_id\030\034 \001(\005\022\033\n\023order_submit_status\030\035 \001(\005"
+  "\022\027\n\017notify_sequence\030\036 \001(\005\022\023\n\013trading_day"
+  "\030\037 \001(\005\022\025\n\rsettlement_id\030  \001(\005\022\024\n\014order_s"
+  "ys_id\030! \001(\t\022\024\n\014order_source\030\" \001(\005\022\024\n\014ord"
+  "er_status\030# \001(\005\022\022\n\norder_type\030$ \001(\005\022\025\n\rv"
+  "olume_traded\030% \001(\005\022\024\n\014volume_total\030& \001(\005"
+  "\022\023\n\013insert_date\030\' \001(\t\022\023\n\013insert_time\030( \001"
+  "(\t\022\023\n\013active_time\030) \001(\t\022\024\n\014suspend_time\030"
+  "* \001(\t\022\023\n\013update_time\030+ \001(\t\022\023\n\013cancel_tim"
+  "e\030, \001(\t\022\030\n\020active_trader_id\030- \001(\t\022\030\n\020cle"
+  "aring_part_id\030. \001(\t\022\023\n\013sequence_no\030/ \001(\005"
+  "\022\020\n\010front_id\0300 \001(\005\022\022\n\nsession_id\0301 \001(\005\022\031"
+  "\n\021user_product_info\0302 \001(\t\022\022\n\nstatus_msg\030"
+  "3 \001(\014\022\030\n\020user_force_close\0304 \001(\010\022\026\n\016activ"
+  "e_user_id\0305 \001(\t\022\030\n\020broker_order_seq\0306 \001("
+  "\005\022\035\n\025relative_order_sys_id\0307 \001(\t\022\037\n\027ZCE_"
+  "total_traded_volume\0308 \001(\005\022\025\n\ris_swap_ord"
+  "er\0309 \001(\010\022\021\n\tbranch_id\030: \001(\t\022\026\n\016invest_un"
+  "it_id\030; \001(\t\022\022\n\naccount_id\030< \001(\t\022\023\n\013curre"
+  "ncy_id\030= \001(\t\022\022\n\nIP_address\030> \001(\t\022\023\n\013Mac_"
+  "address\030\? \001(\t\"/\n\014CTPOrderList\022\037\n\004list\030\001 "
+  "\003(\0132\021.pb.CTPOrderField\"V\n\014CTPOrderLink\022!"
+  "\n\006parent\030\001 \001(\0132\021.pb.CTPOrderField\022#\n\010chi"
+  "ldren\030\002 \003(\0132\021.pb.CTPOrderField\"\351\001\n\025CTPCa"
+  "ncelOrderRequest\022\022\n\naccount_id\030\001 \001(\t\022\"\n\n"
+  "CTPOrderID\030\002 \001(\0132\016.pb.CTPOrderID\022\032\n\006symb"
+  "ol\030\003 \001(\0132\n.pb.Symbol\022\022\n\nrequest_id\030\004 \001(\005"
+  "\022\020\n\010front_id\030\005 \001(\005\022\022\n\nsession_id\030\006 \001(\005\022\031"
+  "\n\021exchange_order_id\030\007 \001(\t\022\r\n\005token\030\010 \001(\t"
+  "\022\030\n\020route_account_id\030\t \001(\t\"\340\001\n\023CTPOnRtnC"
+  "ancelOrder\022\022\n\naccount_id\030\001 \001(\t\022 \n\010order_"
+  "id\030\002 \001(\0132\016.pb.CTPOrderID\022\031\n\021exchange_ord"
+  "er_id\030\003 \001(\t\022\032\n\006symbol\030\004 \001(\0132\n.pb.Symbol\022"
+  "\022\n\nrequest_id\030\005 \001(\005\022\022\n\nerror_type\030\006 \001(\005\022"
+  "\r\n\005error\030\007 \001(\005\022\013\n\003msg\030\010 \001(\t\022\030\n\020route_acc"
+  "ount_id\030\t \001(\t\"\234\005\n\rCTPTradeField\022\021\n\tbroke"
+  "r_id\030\001 \001(\t\022\023\n\013investor_id\030\002 \001(\t\022\025\n\rinstr"
+  "ument_id\030\003 \001(\t\022\021\n\torder_ref\030\004 \001(\t\022\017\n\007use"
+  "r_id\030\005 \001(\t\022\023\n\013exchange_id\030\006 \001(\t\022\020\n\010trade"
+  "_id\030\007 \001(\t\022\021\n\tdirection\030\010 \001(\005\022\024\n\014order_sy"
+  "s_id\030\t \001(\t\022\026\n\016participant_id\030\n \001(\t\022\021\n\tcl"
+  "ient_id\030\013 \001(\t\022\024\n\014trading_role\030\014 \001(\005\022\030\n\020e"
+  "xchange_inst_id\030\r \001(\t\022\023\n\013offset_flag\030\016 \001"
+  "(\005\022\022\n\nhedge_flag\030\017 \001(\005\022\r\n\005price\030\020 \001(\001\022\016\n"
+  "\006volume\030\021 \001(\005\022\022\n\ntrade_date\030\022 \001(\t\022\022\n\ntra"
+  "de_time\030\023 \001(\t\022\022\n\ntrade_type\030\024 \001(\005\022\024\n\014pri"
+  "ce_source\030\025 \001(\005\022\021\n\ttrader_id\030\026 \001(\t\022\026\n\016or"
+  "der_local_id\030\027 \001(\t\022\030\n\020clearing_part_id\030\030"
+  " \001(\t\022\025\n\rbusiness_unit\030\031 \001(\t\022\023\n\013sequence_"
+  "no\030\032 \001(\005\022\023\n\013trading_day\030\033 \001(\005\022\025\n\rsettlem"
+  "ent_id\030\034 \001(\005\022\030\n\020broker_order_seq\030\035 \001(\005\022\024"
+  "\n\014trade_source\030\036 \001(\005\022\026\n\016invest_unit_id\030\037"
+  " \001(\t\"5\n\022CTPTradeReportList\022\037\n\004list\030\001 \003(\013"
+  "2\021.pb.CTPTradeField\"\232\003\n\024CTPPositionSumma"
+  "tion\022#\n\tdirection\030\001 \001(\0162\020.pb.CTPDirectio"
+  "n\022\014\n\004type\030\002 \001(\005\022\030\n\020route_account_id\030\003 \001("
+  "\t\022\020\n\010position\030\004 \001(\005\022\016\n\006amount\030\005 \001(\001\022\014\n\004c"
+  "ost\030\006 \001(\001\022\016\n\006frozen\030\007 \001(\005\022\021\n\tavailable\030\010"
+  " \001(\005\022\027\n\017position_profit\030\t \001(\001\022\025\n\rclosed_"
+  "profit\030\n \001(\001\022\016\n\006margin\030\013 \001(\001\022\025\n\rfrozen_m"
+  "argin\030\014 \001(\001\022\022\n\ncommission\030\r \001(\001\022\031\n\021froze"
+  "n_commission\030\016 \001(\001\022\020\n\010interest\030\017 \001(\001\022\027\n\017"
+  "frozen_interest\030\020 \001(\001\022\022\n\nmtm_profit\030\021 \001("
+  "\001\022\035\n\025cleared_closed_profit\030\022 \001(\001\"\260\003\n\013CTP"
+  "Position\022\032\n\006symbol\030\001 \001(\0132\n.pb.Symbol\022+\n\t"
+  "summation\030\002 \001(\0132\030.pb.CTPPositionSummatio"
+  "n\0221\n\017today_summation\030\003 \001(\0132\030.pb.CTPPosit"
+  "ionSummation\0225\n\023yesterday_summation\030\004 \001("
+  "\0132\030.pb.CTPPositionSummation\022\034\n\024pre_settl"
+  "ement_price\030\005 \001(\001\022\030\n\020settlement_price\030\006 "
+  "\001(\001\022\022\n\nlast_price\030\007 \001(\001\022\023\n\013trading_day\030\010"
+  " \001(\005\022\024\n\014product_type\030\t \001(\005\022\027\n\017volume_mul"
+  "tiple\030\013 \001(\005\022!\n\nproduct_id\030\014 \001(\0132\r.pb.Pro"
+  "ductID\022\022\n\nprice_tick\030\r \001(\001\022\023\n\013symbol_nam"
+  "e\030\016 \001(\t\022\022\n\naccount_id\030\017 \001(\t\"0\n\017CTPPositi"
+  "onList\022\035\n\004list\030\001 \003(\0132\017.pb.CTPPosition\"\244\006"
+  "\n\023CTPCloseTradeRecord\022\022\n\naccount_id\030\001 \001("
+  "\t\022\032\n\006symbol\030\002 \001(\0132\n.pb.Symbol\022#\n\tdirecti"
+  "on\030\003 \001(\0162\020.pb.CTPDirection\022\023\n\013open_volum"
+  "e\030\004 \001(\005\022\023\n\013open_amount\030\005 \001(\001\022\025\n\rclosed_v"
+  "olume\030\006 \001(\005\022\025\n\rclosed_amount\030\007 \001(\001\022\021\n\top"
+  "en_time\030\010 \001(\003\022\030\n\020open_trading_day\030\t \001(\005\022"
+  "%\n\ropen_order_id\030\n \001(\0132\016.pb.CTPOrderID\022\025"
+  "\n\ropen_trade_id\030\013 \001(\t\022\027\n\017open_trade_type"
+  "\030\014 \001(\005\022\027\n\017open_hedge_type\030\r \001(\005\022\022\n\nclose"
+  "_time\030\016 \001(\003\022\031\n\021close_trading_day\030\017 \001(\005\022&"
+  "\n\016close_order_id\030\020 \001(\0132\016.pb.CTPOrderID\022\026"
+  "\n\016close_trade_id\030\021 \001(\t\022\030\n\020close_trade_ty"
+  "pe\030\022 \001(\005\022\030\n\020close_hedge_type\030\023 \001(\005\022\024\n\014cl"
+  "ose_profit\030\024 \001(\001\022\034\n\024pre_settlement_price"
+  "\030\025 \001(\001\022\'\n\rcurrency_type\030\026 \001(\0162\020.pb.Curre"
+  "ncyType\022\027\n\017open_commission\030\027 \001(\001\022\030\n\020clos"
+  "e_commission\030\030 \001(\001\022\016\n\006margin\030\031 \001(\001\022\033\n\023in"
+  "itial_open_amount\030\032 \001(\001\022\027\n\017volume_multip"
+  "le\030\033 \001(\005\022\027\n\017frozen_interest\030\034 \001(\001\022\030\n\020rou"
+  "te_account_id\030\035 \001(\t\022\027\n\017position_profit\030\036"
+  " \001(\001\"@\n\027CTPCloseTradeRecordList\022%\n\004list\030"
+  "\001 \003(\0132\027.pb.CTPCloseTradeRecord\"\302\001\n\rCTPMa"
+  "rginRate\022\"\n\010exchange\030\001 \001(\0162\020.pb.Exchange"
+  "Type\022\016\n\006symbol\030\002 \001(\t\022\017\n\007product\030\003 \001(\t\022\026\n"
+  "\016long_by_volume\030\004 \001(\001\022\026\n\016long_by_amount\030"
+  "\005 \001(\001\022\027\n\017short_by_volume\030\006 \001(\001\022\027\n\017short_"
+  "by_amount\030\007 \001(\001\022\n\n\002id\030\n \001(\003\"q\n\rCTPMargin"
+  "Item\022\026\n\016long_by_volume\030\001 \001(\001\022\026\n\016long_by_"
+  "amount\030\002 \001(\001\022\027\n\017short_by_volume\030\003 \001(\001\022\027\n"
+  "\017short_by_amount\030\004 \001(\001\"\203\001\n\025CTPCommission"
+  "RateItem\022\021\n\tby_amount\030\001 \001(\001\022\021\n\tby_volume"
+  "\030\002 \001(\001\022\017\n\007minimum\030\003 \001(\001\022&\n\013offset_flag\030\004"
+  " \001(\0162\021.pb.CTPOffsetFlag\022\013\n\003tag\030\005 \001(\t\"\221\001\n"
+  "\021CTPCommissionRate\022\"\n\010exchange\030\001 \001(\0162\020.p"
+  "b.ExchangeType\022\016\n\006symbol\030\002 \001(\t\022\017\n\007produc"
+  "t\030\003 \001(\t\022+\n\010settings\030\004 \003(\0132\031.pb.CTPCommis"
+  "sionRateItem\022\n\n\002id\030\005 \001(\003\"\343\003\n\016CTPTradingU"
+  "nit\022\032\n\006symbol\030\001 \001(\0132\n.pb.Symbol\022!\n\010posit"
+  "ion\030\002 \003(\0132\017.pb.CTPPosition\022)\n\017order_link"
+  "_list\030\003 \003(\0132\020.pb.CTPOrderLink\0225\n\024positio"
+  "n_detail_list\030\004 \003(\0132\027.pb.CTPCloseTradeRe"
+  "cord\0221\n\020history_ctr_list\030\005 \003(\0132\027.pb.CTPC"
+  "loseTradeRecord\022-\n\022history_order_list\030\006 "
+  "\003(\0132\021.pb.CTPOrderField\022-\n\022history_trade_"
+  "list\030\007 \003(\0132\021.pb.CTPTradeField\022\022\n\nlast_pr"
+  "ice\030\n \001(\001\022\034\n\024last_mds_update_time\030\013 \001(\003\022"
+  "\022\n\nprice_tick\030\014 \001(\001\022\027\n\017volume_multiple\030\r"
+  " \001(\005\022!\n\002cr\030\016 \001(\0132\025.pb.CTPCommissionRate\022"
+  "\035\n\002mr\030\017 \001(\0132\021.pb.CTPMarginRate\"O\n\025CTPFor"
+  "ceCloseTimeRule\022\r\n\005start\030\001 \001(\003\022\013\n\003end\030\002 "
+  "\001(\003\022\032\n\022disable_open_start\030\003 \001(\003\"\346\004\n\024CTPT"
+  "radingUnitOption\022 \n\030limit_price_disable_"
+  "open\030\001 \001(\005\022\037\n\027limit_price_force_close\030\002 "
+  "\001(\005\022)\n!pre_position_percentage_threshold"
+  "\030\003 \001(\001\022\036\n\026pre_position_threshold\030\004 \001(\001\022\'"
+  "\n\037pre_volume_percentage_threshold\030\005 \001(\001\022"
+  "\034\n\024pre_volume_threshold\030\006 \001(\001\022*\n\"single_"
+  "product_margin_weight_limit\030\007 \001(\001\022+\n\010fcr"
+  "_list\030\010 \003(\0132\031.pb.CTPForceCloseTimeRule\022\024"
+  "\n\014disable_open\030\t \001(\010\022.\n\013cr_settings\030\n \003("
+  "\0132\031.pb.CTPCommissionRateItem\022&\n\013margin_r"
+  "ate\030\013 \001(\0132\021.pb.CTPMarginItem\022\033\n\023stoploss"
+  "_candidates\030\014 \003(\005\022\036\n\026take_profit_candida"
+  "tes\030\r \003(\005\022\031\n\021volume_candidates\030\016 \003(\005\022 \n\030"
+  "disable_open_symbol_list\030\017 \003(\t\022\037\n\027disabl"
+  "e_open_class_list\030\020 \003(\t\022\027\n\017open_days_lim"
+  "it\030\021 \001(\005\"\226\003\n\017MarginCheckRule\022\r\n\005start\030\001 "
+  "\001(\003\022\013\n\003end\030\002 \001(\003\022\031\n\021force_close_order\030\003 "
+  "\001(\005\022\025\n\rwarning_level\030\004 \001(\001\022\031\n\021force_clos"
+  "e_level\030\005 \001(\001\022\037\n\027common_balance_multiple"
+  "\030\006 \001(\001\022(\n disable_open_under_warning_lev"
+  "el\030\007 \001(\010\022%\n\035warning_level_by_prefer_rati"
+  "o\030\010 \001(\001\022)\n!force_close_level_by_prefer_r"
+  "atio\030\t \001(\001\022\037\n\027warning_level_by_margin\030\n "
+  "\001(\001\022#\n\033force_close_level_by_margin\030\013 \001(\001"
+  "\022\026\n\016margin_ceiling\030\014 \001(\001\022\037\n\027position_amo"
+  "unt_ceiling\030\r \001(\001\"\301\001\n\024SettlementUnitOpti"
+  "on\022\n\n\002id\030\001 \001(\003\022\017\n\007comment\030\002 \001(\t\022\030\n\020settl"
+  "ement_group\030\003 \001(\005\022\035\n\025available_check_lev"
+  "el\030\004 \001(\005\022\026\n\016force_close_on\030\005 \001(\010\022%\n\010mcr_"
+  "list\030\006 \003(\0132\023.pb.MarginCheckRule\022\024\n\014disab"
+  "le_open\030\007 \001(\010\"\322\001\n\021CTPTradingAccount\022(\n\007s"
+  "ummary\030\001 \001(\0132\027.pb.AccountMoneySummary\022)\n"
+  "\010mtr_list\030\002 \003(\0132\027.pb.MoneyTransferRecord"
+  "\022#\n\007tu_list\030\003 \003(\0132\022.pb.CTPTradingUnit\022\030\n"
+  "\020last_settle_date\030\004 \001(\005\022)\n\007options\030\005 \001(\013"
+  "2\030.pb.SettlementUnitOption\"b\n\031CTPTrading"
+  "AccountSnapshot\022&\n\007account\030\001 \001(\0132\025.pb.CT"
+  "PTradingAccount\022\014\n\004time\030\002 \001(\003\022\017\n\007comment"
+  "\030\003 \001(\t\"V\n\nCTPRspInfo\022\020\n\010error_id\030\001 \001(\005\022\021"
+  "\n\terror_msg\030\002 \001(\014\022\022\n\nrequest_id\030\003 \001(\005\022\017\n"
+  "\007is_last\030\004 \001(\010\"\177\n\030CtpReqQryAccountRegist"
+  "er\022\021\n\tbroker_id\030\001 \001(\t\022\022\n\naccount_id\030\002 \001("
+  "\t\022\017\n\007bank_id\030\003 \001(\t\022\026\n\016bank_branch_id\030\004 \001"
+  "(\t\022\023\n\013currency_id\030\005 \001(\t\"\347\003\n\030CtpRspQryAcc"
+  "ountRegister\022\020\n\010error_id\030\001 \001(\005\022\021\n\terror_"
+  "msg\030\002 \001(\t\022\022\n\nrequest_id\030\003 \001(\005\022\017\n\007is_last"
+  "\030\004 \001(\010\022\023\n\013trading_day\030\005 \001(\t\022\017\n\007bank_id\030\006"
+  " \001(\t\022\026\n\016bank_branch_id\030\007 \001(\t\022\024\n\014bank_acc"
+  "ount\030\010 \001(\t\022\021\n\tbroker_id\030\t \001(\t\022\030\n\020broker_"
+  "branch_id\030\n \001(\t\022\022\n\naccount_id\030\013 \001(\t\022\024\n\014i"
+  "d_card_type\030\014 \001(\005\022\032\n\022identified_card_no\030"
+  "\r \001(\t\022\025\n\rcustomer_name\030\016 \001(\t\022\023\n\013currency"
+  "_id\030\017 \001(\t\022\027\n\017open_or_destory\030\020 \001(\005\022\020\n\010re"
+  "g_date\030\021 \001(\t\022\020\n\010out_date\030\022 \001(\t\022\013\n\003tid\030\023 "
+  "\001(\005\022\021\n\tcust_type\030\024 \001(\005\022\025\n\rbank_acc_type\030"
+  "\025 \001(\005\022\032\n\022long_customer_name\030\026 \001(\t\"6\n\020Ctp"
+  "ReqAuthencate\022\021\n\tauth_code\030\001 \001(\t\022\017\n\007prod"
+  "uct\030\002 \001(\t\"\233\001\n\020CtpRspAuthencate\022\020\n\010error_"
   "id\030\001 \001(\005\022\021\n\terror_msg\030\002 \001(\t\022\022\n\nrequest_i"
-  "d\030\003 \001(\005\022\017\n\007is_last\030\004 \001(\010\022\023\n\013trading_day\030"
-  "\005 \001(\t\022\017\n\007bank_id\030\006 \001(\t\022\026\n\016bank_branch_id"
-  "\030\007 \001(\t\022\024\n\014bank_account\030\010 \001(\t\022\021\n\tbroker_i"
-  "d\030\t \001(\t\022\030\n\020broker_branch_id\030\n \001(\t\022\022\n\nacc"
-  "ount_id\030\013 \001(\t\022\024\n\014id_card_type\030\014 \001(\005\022\032\n\022i"
-  "dentified_card_no\030\r \001(\t\022\025\n\rcustomer_name"
-  "\030\016 \001(\t\022\023\n\013currency_id\030\017 \001(\t\022\027\n\017open_or_d"
-  "estory\030\020 \001(\005\022\020\n\010reg_date\030\021 \001(\t\022\020\n\010out_da"
-  "te\030\022 \001(\t\022\013\n\003tid\030\023 \001(\005\022\021\n\tcust_type\030\024 \001(\005"
-  "\022\025\n\rbank_acc_type\030\025 \001(\005\022\032\n\022long_customer"
-  "_name\030\026 \001(\t\"6\n\020CtpReqAuthencate\022\021\n\tauth_"
-  "code\030\001 \001(\t\022\017\n\007product\030\002 \001(\t\"\233\001\n\020CtpRspAu"
-  "thencate\022\020\n\010error_id\030\001 \001(\005\022\021\n\terror_msg\030"
-  "\002 \001(\t\022\022\n\nrequest_id\030\003 \001(\005\022\017\n\007is_last\030\004 \001"
-  "(\010\022\021\n\tbroker_id\030\005 \001(\t\022\017\n\007user_id\030\006 \001(\t\022\031"
-  "\n\021user_product_info\030\007 \001(\t\"G\n\017CtpReqUserL"
-  "ogin\022\021\n\tbroker_id\030\001 \001(\t\022\017\n\007account\030\002 \001(\t"
-  "\022\020\n\010password\030\003 \001(\t\"\330\002\n\017CtpRspUserLogin\022\020"
+  "d\030\003 \001(\005\022\017\n\007is_last\030\004 \001(\010\022\021\n\tbroker_id\030\005 "
+  "\001(\t\022\017\n\007user_id\030\006 \001(\t\022\031\n\021user_product_inf"
+  "o\030\007 \001(\t\"G\n\017CtpReqUserLogin\022\021\n\tbroker_id\030"
+  "\001 \001(\t\022\017\n\007account\030\002 \001(\t\022\020\n\010password\030\003 \001(\t"
+  "\"\330\002\n\017CtpRspUserLogin\022\020\n\010error_id\030\001 \001(\005\022\021"
+  "\n\terror_msg\030\002 \001(\t\022\022\n\nrequest_id\030\003 \001(\005\022\017\n"
+  "\007is_last\030\004 \001(\010\022\023\n\013trading_day\030\005 \001(\t\022\022\n\nl"
+  "ogin_time\030\006 \001(\t\022\021\n\tbroker_id\030\007 \001(\t\022\017\n\007us"
+  "er_id\030\010 \001(\t\022\023\n\013system_name\030\t \001(\t\022\020\n\010fron"
+  "t_id\030\n \001(\005\022\022\n\nsession_id\030\013 \001(\005\022\025\n\rmax_or"
+  "der_ref\030\014 \001(\t\022\021\n\tshfe_time\030\r \001(\t\022\020\n\010dce_"
+  "time\030\016 \001(\t\022\021\n\tczce_time\030\017 \001(\t\022\022\n\ncffex_t"
+  "ime\030\020 \001(\t\022\020\n\010ine_time\030\021 \001(\t\"D\n\rCtpReqCon"
+  "nect\022\017\n\007address\030\001 \001(\t\022\017\n\007account\030\002 \001(\t\022\021"
+  "\n\tdirectory\030\003 \001(\t\"\025\n\023CtpOnFrontConnected"
+  "\"\030\n\026CtpOnFrontDisconnected\"E\n\033CtpReqSett"
+  "lementInfoConfirm\022\021\n\tbroker_id\030\001 \001(\t\022\023\n\013"
+  "investor_id\030\002 \001(\t\"\375\001\n\035CtpOnRspSettlement"
+  "InfoConfirm\022\020\n\010error_id\030\001 \001(\005\022\021\n\terror_m"
+  "sg\030\002 \001(\t\022\022\n\nrequest_id\030\003 \001(\005\022\017\n\007is_last\030"
+  "\004 \001(\010\022\021\n\tbroker_id\030\005 \001(\t\022\023\n\013investor_id\030"
+  "\006 \001(\t\022\024\n\014confirm_date\030\007 \001(\t\022\024\n\014confirm_t"
+  "ime\030\010 \001(\t\022\025\n\rsettlement_id\030\t \001(\005\022\022\n\nacco"
+  "unt_id\030\n \001(\t\022\023\n\013currency_id\030\013 \001(\t\"\023\n\021Ctp"
+  "ReqQryInvestor\"\312\002\n\021CtpRspQryInvestor\022\020\n\010"
+  "error_id\030\001 \001(\005\022\021\n\terror_msg\030\002 \001(\t\022\022\n\nreq"
+  "uest_id\030\003 \001(\005\022\017\n\007is_last\030\004 \001(\010\022\023\n\013invest"
+  "or_id\030\005 \001(\t\022\021\n\tbroker_id\030\006 \001(\t\022\031\n\021invest"
+  "or_group_id\030\007 \001(\t\022\025\n\rinvestor_name\030\010 \001(\t"
+  "\022\034\n\024identified_card_type\030\t \001(\005\022\032\n\022identi"
+  "fied_card_no\030\n \001(\t\022\021\n\tis_active\030\013 \001(\010\022\020\n"
+  "\010telphone\030\014 \001(\t\022\017\n\007address\030\r \001(\t\022\021\n\topen"
+  "_date\030\016 \001(\t\022\016\n\006mobile\030\017 \001(\t\"\?\n\025CtpReqQry"
+  "TransferBank\022\021\n\tbroker_id\030\001 \001(\t\022\023\n\013inves"
+  "tor_id\030\002 \001(\t\"\260\001\n\025CtpRspQryTransferBank\022\020"
   "\n\010error_id\030\001 \001(\005\022\021\n\terror_msg\030\002 \001(\t\022\022\n\nr"
-  "equest_id\030\003 \001(\005\022\017\n\007is_last\030\004 \001(\010\022\023\n\013trad"
-  "ing_day\030\005 \001(\t\022\022\n\nlogin_time\030\006 \001(\t\022\021\n\tbro"
-  "ker_id\030\007 \001(\t\022\017\n\007user_id\030\010 \001(\t\022\023\n\013system_"
-  "name\030\t \001(\t\022\020\n\010front_id\030\n \001(\005\022\022\n\nsession_"
-  "id\030\013 \001(\005\022\025\n\rmax_order_ref\030\014 \001(\t\022\021\n\tshfe_"
-  "time\030\r \001(\t\022\020\n\010dce_time\030\016 \001(\t\022\021\n\tczce_tim"
-  "e\030\017 \001(\t\022\022\n\ncffex_time\030\020 \001(\t\022\020\n\010ine_time\030"
-  "\021 \001(\t\"D\n\rCtpReqConnect\022\017\n\007address\030\001 \001(\t\022"
-  "\017\n\007account\030\002 \001(\t\022\021\n\tdirectory\030\003 \001(\t\"\025\n\023C"
-  "tpOnFrontConnected\"\030\n\026CtpOnFrontDisconne"
-  "cted\"E\n\033CtpReqSettlementInfoConfirm\022\021\n\tb"
-  "roker_id\030\001 \001(\t\022\023\n\013investor_id\030\002 \001(\t\"\375\001\n\035"
-  "CtpOnRspSettlementInfoConfirm\022\020\n\010error_i"
-  "d\030\001 \001(\005\022\021\n\terror_msg\030\002 \001(\t\022\022\n\nrequest_id"
-  "\030\003 \001(\005\022\017\n\007is_last\030\004 \001(\010\022\021\n\tbroker_id\030\005 \001"
-  "(\t\022\023\n\013investor_id\030\006 \001(\t\022\024\n\014confirm_date\030"
-  "\007 \001(\t\022\024\n\014confirm_time\030\010 \001(\t\022\025\n\rsettlemen"
-  "t_id\030\t \001(\005\022\022\n\naccount_id\030\n \001(\t\022\023\n\013curren"
-  "cy_id\030\013 \001(\t\"\023\n\021CtpReqQryInvestor\"\312\002\n\021Ctp"
-  "RspQryInvestor\022\020\n\010error_id\030\001 \001(\005\022\021\n\terro"
-  "r_msg\030\002 \001(\t\022\022\n\nrequest_id\030\003 \001(\005\022\017\n\007is_la"
-  "st\030\004 \001(\010\022\023\n\013investor_id\030\005 \001(\t\022\021\n\tbroker_"
-  "id\030\006 \001(\t\022\031\n\021investor_group_id\030\007 \001(\t\022\025\n\ri"
-  "nvestor_name\030\010 \001(\t\022\034\n\024identified_card_ty"
-  "pe\030\t \001(\005\022\032\n\022identified_card_no\030\n \001(\t\022\021\n\t"
-  "is_active\030\013 \001(\010\022\020\n\010telphone\030\014 \001(\t\022\017\n\007add"
-  "ress\030\r \001(\t\022\021\n\topen_date\030\016 \001(\t\022\016\n\006mobile\030"
-  "\017 \001(\t\"\?\n\025CtpReqQryTransferBank\022\021\n\tbroker"
-  "_id\030\001 \001(\t\022\023\n\013investor_id\030\002 \001(\t\"\260\001\n\025CtpRs"
-  "pQryTransferBank\022\020\n\010error_id\030\001 \001(\005\022\021\n\ter"
-  "ror_msg\030\002 \001(\t\022\022\n\nrequest_id\030\003 \001(\005\022\017\n\007is_"
-  "last\030\004 \001(\010\022\021\n\tbroker_id\030\005 \001(\t\022\017\n\007bank_id"
-  "\030\006 \001(\t\022\026\n\016bank_branch_id\030\007 \001(\t\022\021\n\tbank_n"
-  "ame\030\010 \001(\t\"\221\007\n\016CtpReqTransfer\022\022\n\ntrade_co"
-  "de\030\001 \001(\t\022\017\n\007bank_id\030\002 \001(\t\022\026\n\016bank_branch"
-  "_id\030\003 \001(\t\022\021\n\tbroker_id\030\004 \001(\t\022\030\n\020broker_b"
-  "ranch_id\030\005 \001(\t\022\022\n\ntrade_date\030\006 \001(\t\022\022\n\ntr"
-  "ade_time\030\007 \001(\t\022\023\n\013bank_serial\030\010 \001(\t\022\023\n\013t"
-  "rading_day\030\t \001(\t\022\025\n\rplate_serieal\030\n \001(\005\022"
-  "\025\n\rlast_fragment\030\013 \001(\t\022\022\n\nsession_id\030\014 \001"
-  "(\005\022\025\n\rcustomer_name\030\r \001(\t\022\024\n\014id_card_typ"
-  "e\030\016 \001(\005\022\032\n\022identified_card_no\030\017 \001(\t\022\021\n\tc"
-  "ust_type\030\020 \001(\t\022\024\n\014bank_account\030\021 \001(\t\022\025\n\r"
-  "bank_password\030\022 \001(\t\022\022\n\naccount_id\030\023 \001(\t\022"
-  "\020\n\010password\030\024 \001(\t\022\022\n\ninstall_id\030\025 \001(\005\022\025\n"
-  "\rfuture_serial\030\026 \001(\005\022\017\n\007user_id\030\027 \001(\t\022\033\n"
-  "\023verify_cert_no_flag\030\030 \001(\t\022\023\n\013currency_i"
-  "d\030\031 \001(\t\022\024\n\014trade_amount\030\032 \001(\001\022\033\n\023future_"
-  "fetch_amount\030\033 \001(\001\022\024\n\014fee_pay_flag\030\034 \001(\005"
-  "\022\020\n\010cust_fee\030\035 \001(\001\022\022\n\nbroker_fee\030\036 \001(\001\022\017"
-  "\n\007message\030\037 \001(\t\022\016\n\006digest\030  \001(\t\022\025\n\rbank_"
-  "acc_type\030! \001(\005\022\021\n\tdevice_id\030\" \001(\t\022\025\n\rban"
-  "k_secu_acc\030# \001(\t\022\025\n\rbank_pwd_flag\030$ \001(\t\022"
-  "\025\n\rsecu_pwd_flag\030% \001(\t\022\017\n\007oper_no\030& \001(\t\022"
-  "\022\n\nrequest_id\030\' \001(\005\022\013\n\003tid\030( \001(\005\022\027\n\017tran"
-  "sfer_status\030) \001(\t\022\032\n\022long_customer_name\030"
-  "* \001(\t\"{\n\016CtpRspTransfer\022\020\n\010error_id\030\001 \001("
-  "\005\022\021\n\terror_msg\030\002 \001(\t\022\022\n\nrequest_id\030\003 \001(\005"
-  "\022\017\n\007is_last\030\004 \001(\010\022\037\n\003req\030\005 \001(\0132\022.pb.CtpR"
-  "eqTransfer\")\n\031CTPReqSubscribeMarketData\022"
-  "\014\n\004list\030\001 \003(\t\"\033\n\031CTPRspSusbcribeMarketDa"
-  "ta\")\n\031CTPReqUnSusbibeMarketData\022\014\n\004list\030"
-  "\001 \003(\t\"\033\n\031CTPRspUnSusbibeMarketData\"M\n\023CT"
-  "POnRspOrderInsert\022\020\n\010error_id\030\001 \001(\005\022\021\n\te"
-  "rror_msg\030\002 \001(\014\022\021\n\torder_ref\030\003 \001(\t*#\n\014CTP"
-  "Direction\022\010\n\004LONG\020\000\022\t\n\005SHORT\020\001*\252\001\n\016CTPOr"
-  "derStatus\022\017\n\013CTP_OS_DONE\020\000\022$\n CTP_OS_PEN"
-  "DING_WITH_PARTIAL_DONE\020\001\022%\n!CTP_OS_CANCE"
-  "LED_WITH_PARTIAL_DONE\020\002\022\022\n\016CTP_OS_PENDIN"
-  "G\020\003\022\023\n\017CTP_OS_CANCELED\020\004\022\021\n\rCTP_OS_UNKOW"
-  "N\020\005*Q\n\014CTPPriceType\022\017\n\013LIMIT_PRICE\020\000\022\020\n\014"
-  "MARKET_PRICE\020\001\022\016\n\nBEST_PRICE\020\002\022\016\n\nLAST_P"
-  "RICE\020\003*e\n\rCTPOffsetFlag\022\010\n\004NONE\020\000\022\010\n\004OPE"
-  "N\020\001\022\t\n\005CLOSE\020\002\022\017\n\013FORCE_CLOSE\020\003\022\017\n\013CLOSE"
-  "_TODAY\020\004\022\023\n\017CLOSE_YESTERDAY\020\005*9\n\014CTPHedg"
-  "eType\022\017\n\013SPECULATION\020\000\022\r\n\tARBITRAGE\020\001\022\t\n"
-  "\005HEDGE\020\002*\247\001\n\014CTPTradeType\022\n\n\006NORMAL\020\000\022\025\n"
-  "\021OPTIONS_EXECUTION\020\001\022\007\n\003OTC\020\002\022\017\n\013EFP_DER"
-  "IVED\020\003\022\027\n\023COMBINATION_DERIVED\020\004\022\022\n\016DELIV"
-  "ERY_CLOSE\020\005\022\026\n\022SETTLEMENT_DERIVED\020\006\022\025\n\021P"
-  "LACEMENT_DERIVED\020\007b\006proto3"
+  "equest_id\030\003 \001(\005\022\017\n\007is_last\030\004 \001(\010\022\021\n\tbrok"
+  "er_id\030\005 \001(\t\022\017\n\007bank_id\030\006 \001(\t\022\026\n\016bank_bra"
+  "nch_id\030\007 \001(\t\022\021\n\tbank_name\030\010 \001(\t\"\221\007\n\016CtpR"
+  "eqTransfer\022\022\n\ntrade_code\030\001 \001(\t\022\017\n\007bank_i"
+  "d\030\002 \001(\t\022\026\n\016bank_branch_id\030\003 \001(\t\022\021\n\tbroke"
+  "r_id\030\004 \001(\t\022\030\n\020broker_branch_id\030\005 \001(\t\022\022\n\n"
+  "trade_date\030\006 \001(\t\022\022\n\ntrade_time\030\007 \001(\t\022\023\n\013"
+  "bank_serial\030\010 \001(\t\022\023\n\013trading_day\030\t \001(\t\022\025"
+  "\n\rplate_serieal\030\n \001(\005\022\025\n\rlast_fragment\030\013"
+  " \001(\t\022\022\n\nsession_id\030\014 \001(\005\022\025\n\rcustomer_nam"
+  "e\030\r \001(\t\022\024\n\014id_card_type\030\016 \001(\005\022\032\n\022identif"
+  "ied_card_no\030\017 \001(\t\022\021\n\tcust_type\030\020 \001(\t\022\024\n\014"
+  "bank_account\030\021 \001(\t\022\025\n\rbank_password\030\022 \001("
+  "\t\022\022\n\naccount_id\030\023 \001(\t\022\020\n\010password\030\024 \001(\t\022"
+  "\022\n\ninstall_id\030\025 \001(\005\022\025\n\rfuture_serial\030\026 \001"
+  "(\005\022\017\n\007user_id\030\027 \001(\t\022\033\n\023verify_cert_no_fl"
+  "ag\030\030 \001(\t\022\023\n\013currency_id\030\031 \001(\t\022\024\n\014trade_a"
+  "mount\030\032 \001(\001\022\033\n\023future_fetch_amount\030\033 \001(\001"
+  "\022\024\n\014fee_pay_flag\030\034 \001(\005\022\020\n\010cust_fee\030\035 \001(\001"
+  "\022\022\n\nbroker_fee\030\036 \001(\001\022\017\n\007message\030\037 \001(\t\022\016\n"
+  "\006digest\030  \001(\t\022\025\n\rbank_acc_type\030! \001(\005\022\021\n\t"
+  "device_id\030\" \001(\t\022\025\n\rbank_secu_acc\030# \001(\t\022\025"
+  "\n\rbank_pwd_flag\030$ \001(\t\022\025\n\rsecu_pwd_flag\030%"
+  " \001(\t\022\017\n\007oper_no\030& \001(\t\022\022\n\nrequest_id\030\' \001("
+  "\005\022\013\n\003tid\030( \001(\005\022\027\n\017transfer_status\030) \001(\t\022"
+  "\032\n\022long_customer_name\030* \001(\t\"{\n\016CtpRspTra"
+  "nsfer\022\020\n\010error_id\030\001 \001(\005\022\021\n\terror_msg\030\002 \001"
+  "(\t\022\022\n\nrequest_id\030\003 \001(\005\022\017\n\007is_last\030\004 \001(\010\022"
+  "\037\n\003req\030\005 \001(\0132\022.pb.CtpReqTransfer\")\n\031CTPR"
+  "eqSubscribeMarketData\022\014\n\004list\030\001 \003(\t\"\033\n\031C"
+  "TPRspSusbcribeMarketData\")\n\031CTPReqUnSusb"
+  "ibeMarketData\022\014\n\004list\030\001 \003(\t\"\033\n\031CTPRspUnS"
+  "usbibeMarketData\"M\n\023CTPOnRspOrderInsert\022"
+  "\020\n\010error_id\030\001 \001(\005\022\021\n\terror_msg\030\002 \001(\014\022\021\n\t"
+  "order_ref\030\003 \001(\t*#\n\014CTPDirection\022\010\n\004LONG\020"
+  "\000\022\t\n\005SHORT\020\001*\252\001\n\016CTPOrderStatus\022\017\n\013CTP_O"
+  "S_DONE\020\000\022$\n CTP_OS_PENDING_WITH_PARTIAL_"
+  "DONE\020\001\022%\n!CTP_OS_CANCELED_WITH_PARTIAL_D"
+  "ONE\020\002\022\022\n\016CTP_OS_PENDING\020\003\022\023\n\017CTP_OS_CANC"
+  "ELED\020\004\022\021\n\rCTP_OS_UNKOWN\020\005*Q\n\014CTPPriceTyp"
+  "e\022\017\n\013LIMIT_PRICE\020\000\022\020\n\014MARKET_PRICE\020\001\022\016\n\n"
+  "BEST_PRICE\020\002\022\016\n\nLAST_PRICE\020\003*e\n\rCTPOffse"
+  "tFlag\022\010\n\004NONE\020\000\022\010\n\004OPEN\020\001\022\t\n\005CLOSE\020\002\022\017\n\013"
+  "FORCE_CLOSE\020\003\022\017\n\013CLOSE_TODAY\020\004\022\023\n\017CLOSE_"
+  "YESTERDAY\020\005*9\n\014CTPHedgeType\022\017\n\013SPECULATI"
+  "ON\020\000\022\r\n\tARBITRAGE\020\001\022\t\n\005HEDGE\020\002*\247\001\n\014CTPTr"
+  "adeType\022\n\n\006NORMAL\020\000\022\025\n\021OPTIONS_EXECUTION"
+  "\020\001\022\007\n\003OTC\020\002\022\017\n\013EFP_DERIVED\020\003\022\027\n\023COMBINAT"
+  "ION_DERIVED\020\004\022\022\n\016DELIVERY_CLOSE\020\005\022\026\n\022SET"
+  "TLEMENT_DERIVED\020\006\022\025\n\021PLACEMENT_DERIVED\020\007"
+  "b\006proto3"
   ;
 ::google::protobuf::internal::DescriptorTable descriptor_table_ctp_2eproto = {
   false, InitDefaults_ctp_2eproto, 
   descriptor_table_protodef_ctp_2eproto,
-  "ctp.proto", &assign_descriptors_table_ctp_2eproto, 11146,
+  "ctp.proto", &assign_descriptors_table_ctp_2eproto, 11648,
 };
 
 void AddDescriptors_ctp_2eproto() {
@@ -2542,228 +2582,358 @@ void CTPOrderID::InternalSwap(CTPOrderID* other) {
 
 // ===================================================================
 
-void CTPOrder::InitAsDefaultInstance() {
-  ::pb::_CTPOrder_default_instance_._instance.get_mutable()->symbol_ = const_cast< ::pb::Symbol*>(
-      ::pb::Symbol::internal_default_instance());
-  ::pb::_CTPOrder_default_instance_._instance.get_mutable()->id_ = const_cast< ::pb::CTPOrderID*>(
-      ::pb::CTPOrderID::internal_default_instance());
-  ::pb::_CTPOrder_default_instance_._instance.get_mutable()->product_id_ = const_cast< ::pb::ProductID*>(
-      ::pb::ProductID::internal_default_instance());
+void CTPOrderField::InitAsDefaultInstance() {
 }
-class CTPOrder::HasBitSetters {
+class CTPOrderField::HasBitSetters {
  public:
-  static const ::pb::Symbol& symbol(const CTPOrder* msg);
-  static const ::pb::CTPOrderID& id(const CTPOrder* msg);
-  static const ::pb::ProductID& product_id(const CTPOrder* msg);
 };
 
-const ::pb::Symbol&
-CTPOrder::HasBitSetters::symbol(const CTPOrder* msg) {
-  return *msg->symbol_;
-}
-const ::pb::CTPOrderID&
-CTPOrder::HasBitSetters::id(const CTPOrder* msg) {
-  return *msg->id_;
-}
-const ::pb::ProductID&
-CTPOrder::HasBitSetters::product_id(const CTPOrder* msg) {
-  return *msg->product_id_;
-}
-void CTPOrder::clear_symbol() {
-  if (GetArenaNoVirtual() == nullptr && symbol_ != nullptr) {
-    delete symbol_;
-  }
-  symbol_ = nullptr;
-}
-void CTPOrder::clear_product_id() {
-  if (GetArenaNoVirtual() == nullptr && product_id_ != nullptr) {
-    delete product_id_;
-  }
-  product_id_ = nullptr;
-}
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int CTPOrder::kSymbolFieldNumber;
-const int CTPOrder::kIdFieldNumber;
-const int CTPOrder::kAccountIdFieldNumber;
-const int CTPOrder::kDirectionFieldNumber;
-const int CTPOrder::kStatusFieldNumber;
-const int CTPOrder::kPriceTypeFieldNumber;
-const int CTPOrder::kLimitPriceFieldNumber;
-const int CTPOrder::kVolumeFieldNumber;
-const int CTPOrder::kVolumeTradedFieldNumber;
-const int CTPOrder::kVolumeCanceledFieldNumber;
-const int CTPOrder::kFrozenCommissionFieldNumber;
-const int CTPOrder::kSendOrderTimeFieldNumber;
-const int CTPOrder::kSendOrderTradingDayFieldNumber;
-const int CTPOrder::kCommentFieldNumber;
-const int CTPOrder::kRequestIdFieldNumber;
-const int CTPOrder::kLocalOrderSeqFieldNumber;
-const int CTPOrder::kForceCloseTypeFieldNumber;
-const int CTPOrder::kOrderSourceTypeFieldNumber;
-const int CTPOrder::kOrderHedgeTypeFieldNumber;
-const int CTPOrder::kUserProductInfoFieldNumber;
-const int CTPOrder::kCurrencyTypeFieldNumber;
-const int CTPOrder::kExchangeOrderIdFieldNumber;
-const int CTPOrder::kTimeConditionTypeFieldNumber;
-const int CTPOrder::kRouteAccountIdFieldNumber;
-const int CTPOrder::kLocalTypeIdFieldNumber;
-const int CTPOrder::kCommissionFieldNumber;
-const int CTPOrder::kOffsetFlagFieldNumber;
-const int CTPOrder::kErrorCodeFieldNumber;
-const int CTPOrder::kTokenFieldNumber;
-const int CTPOrder::kStoplossFieldNumber;
-const int CTPOrder::kTakeProfitFieldNumber;
-const int CTPOrder::kTradedAmountFieldNumber;
-const int CTPOrder::kVolumeMultipleFieldNumber;
-const int CTPOrder::kProductIdFieldNumber;
-const int CTPOrder::kPriceTickFieldNumber;
-const int CTPOrder::kFrozenMarginFieldNumber;
-const int CTPOrder::kSymbolNameFieldNumber;
-const int CTPOrder::kReasonCommentFieldNumber;
+const int CTPOrderField::kBrokerIdFieldNumber;
+const int CTPOrderField::kInvestorIdFieldNumber;
+const int CTPOrderField::kInstrumentIdFieldNumber;
+const int CTPOrderField::kOrderRefFieldNumber;
+const int CTPOrderField::kUserIdFieldNumber;
+const int CTPOrderField::kOrderPriceTypeFieldNumber;
+const int CTPOrderField::kDirectionFieldNumber;
+const int CTPOrderField::kCombOffsetFlagFieldNumber;
+const int CTPOrderField::kCombHedgeFlagFieldNumber;
+const int CTPOrderField::kLimitPriceFieldNumber;
+const int CTPOrderField::kVolumeTotalOriginalFieldNumber;
+const int CTPOrderField::kTimeConditionFieldNumber;
+const int CTPOrderField::kGTDDateFieldNumber;
+const int CTPOrderField::kVolumeConditionFieldNumber;
+const int CTPOrderField::kMinVolumeFieldNumber;
+const int CTPOrderField::kContingentConditionFieldNumber;
+const int CTPOrderField::kStopPriceFieldNumber;
+const int CTPOrderField::kForceCloseReasonFieldNumber;
+const int CTPOrderField::kIsAutoSuspendFieldNumber;
+const int CTPOrderField::kBusinessUnitFieldNumber;
+const int CTPOrderField::kRequestIdFieldNumber;
+const int CTPOrderField::kOrderLocalIdFieldNumber;
+const int CTPOrderField::kExchangeIdFieldNumber;
+const int CTPOrderField::kParticipantIdFieldNumber;
+const int CTPOrderField::kClientIdFieldNumber;
+const int CTPOrderField::kExchangeInstIdFieldNumber;
+const int CTPOrderField::kTraderIdFieldNumber;
+const int CTPOrderField::kInstallIdFieldNumber;
+const int CTPOrderField::kOrderSubmitStatusFieldNumber;
+const int CTPOrderField::kNotifySequenceFieldNumber;
+const int CTPOrderField::kTradingDayFieldNumber;
+const int CTPOrderField::kSettlementIdFieldNumber;
+const int CTPOrderField::kOrderSysIdFieldNumber;
+const int CTPOrderField::kOrderSourceFieldNumber;
+const int CTPOrderField::kOrderStatusFieldNumber;
+const int CTPOrderField::kOrderTypeFieldNumber;
+const int CTPOrderField::kVolumeTradedFieldNumber;
+const int CTPOrderField::kVolumeTotalFieldNumber;
+const int CTPOrderField::kInsertDateFieldNumber;
+const int CTPOrderField::kInsertTimeFieldNumber;
+const int CTPOrderField::kActiveTimeFieldNumber;
+const int CTPOrderField::kSuspendTimeFieldNumber;
+const int CTPOrderField::kUpdateTimeFieldNumber;
+const int CTPOrderField::kCancelTimeFieldNumber;
+const int CTPOrderField::kActiveTraderIdFieldNumber;
+const int CTPOrderField::kClearingPartIdFieldNumber;
+const int CTPOrderField::kSequenceNoFieldNumber;
+const int CTPOrderField::kFrontIdFieldNumber;
+const int CTPOrderField::kSessionIdFieldNumber;
+const int CTPOrderField::kUserProductInfoFieldNumber;
+const int CTPOrderField::kStatusMsgFieldNumber;
+const int CTPOrderField::kUserForceCloseFieldNumber;
+const int CTPOrderField::kActiveUserIdFieldNumber;
+const int CTPOrderField::kBrokerOrderSeqFieldNumber;
+const int CTPOrderField::kRelativeOrderSysIdFieldNumber;
+const int CTPOrderField::kZCETotalTradedVolumeFieldNumber;
+const int CTPOrderField::kIsSwapOrderFieldNumber;
+const int CTPOrderField::kBranchIdFieldNumber;
+const int CTPOrderField::kInvestUnitIdFieldNumber;
+const int CTPOrderField::kAccountIdFieldNumber;
+const int CTPOrderField::kCurrencyIdFieldNumber;
+const int CTPOrderField::kIPAddressFieldNumber;
+const int CTPOrderField::kMacAddressFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
-CTPOrder::CTPOrder()
+CTPOrderField::CTPOrderField()
   : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:pb.CTPOrder)
+  // @@protoc_insertion_point(constructor:pb.CTPOrderField)
 }
-CTPOrder::CTPOrder(const CTPOrder& from)
+CTPOrderField::CTPOrderField(const CTPOrderField& from)
   : ::google::protobuf::Message(),
       _internal_metadata_(nullptr) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  account_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.account_id().size() > 0) {
-    account_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.account_id_);
+  broker_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.broker_id().size() > 0) {
+    broker_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.broker_id_);
   }
-  comment_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.comment().size() > 0) {
-    comment_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.comment_);
+  investor_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.investor_id().size() > 0) {
+    investor_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.investor_id_);
+  }
+  instrument_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.instrument_id().size() > 0) {
+    instrument_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.instrument_id_);
+  }
+  order_ref_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.order_ref().size() > 0) {
+    order_ref_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.order_ref_);
+  }
+  user_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.user_id().size() > 0) {
+    user_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.user_id_);
+  }
+  gtd_date_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.gtd_date().size() > 0) {
+    gtd_date_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.gtd_date_);
+  }
+  business_unit_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.business_unit().size() > 0) {
+    business_unit_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.business_unit_);
+  }
+  order_local_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.order_local_id().size() > 0) {
+    order_local_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.order_local_id_);
+  }
+  exchange_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.exchange_id().size() > 0) {
+    exchange_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.exchange_id_);
+  }
+  participant_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.participant_id().size() > 0) {
+    participant_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.participant_id_);
+  }
+  client_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.client_id().size() > 0) {
+    client_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.client_id_);
+  }
+  exchange_inst_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.exchange_inst_id().size() > 0) {
+    exchange_inst_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.exchange_inst_id_);
+  }
+  trader_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.trader_id().size() > 0) {
+    trader_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.trader_id_);
+  }
+  order_sys_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.order_sys_id().size() > 0) {
+    order_sys_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.order_sys_id_);
+  }
+  insert_date_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.insert_date().size() > 0) {
+    insert_date_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.insert_date_);
+  }
+  insert_time_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.insert_time().size() > 0) {
+    insert_time_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.insert_time_);
+  }
+  active_time_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.active_time().size() > 0) {
+    active_time_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.active_time_);
+  }
+  suspend_time_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.suspend_time().size() > 0) {
+    suspend_time_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.suspend_time_);
+  }
+  update_time_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.update_time().size() > 0) {
+    update_time_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.update_time_);
+  }
+  cancel_time_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.cancel_time().size() > 0) {
+    cancel_time_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.cancel_time_);
+  }
+  active_trader_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.active_trader_id().size() > 0) {
+    active_trader_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.active_trader_id_);
+  }
+  clearing_part_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.clearing_part_id().size() > 0) {
+    clearing_part_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.clearing_part_id_);
   }
   user_product_info_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (from.user_product_info().size() > 0) {
     user_product_info_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.user_product_info_);
   }
-  exchange_order_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.exchange_order_id().size() > 0) {
-    exchange_order_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.exchange_order_id_);
+  status_msg_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.status_msg().size() > 0) {
+    status_msg_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.status_msg_);
   }
-  route_account_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.route_account_id().size() > 0) {
-    route_account_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.route_account_id_);
+  active_user_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.active_user_id().size() > 0) {
+    active_user_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.active_user_id_);
   }
-  token_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.token().size() > 0) {
-    token_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.token_);
+  relative_order_sys_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.relative_order_sys_id().size() > 0) {
+    relative_order_sys_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.relative_order_sys_id_);
   }
-  symbol_name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.symbol_name().size() > 0) {
-    symbol_name_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.symbol_name_);
+  branch_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.branch_id().size() > 0) {
+    branch_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.branch_id_);
   }
-  reason_comment_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.reason_comment().size() > 0) {
-    reason_comment_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.reason_comment_);
+  invest_unit_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.invest_unit_id().size() > 0) {
+    invest_unit_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.invest_unit_id_);
   }
-  if (from.has_symbol()) {
-    symbol_ = new ::pb::Symbol(*from.symbol_);
-  } else {
-    symbol_ = nullptr;
-  }
-  if (from.has_id()) {
-    id_ = new ::pb::CTPOrderID(*from.id_);
-  } else {
-    id_ = nullptr;
-  }
-  if (from.has_product_id()) {
-    product_id_ = new ::pb::ProductID(*from.product_id_);
-  } else {
-    product_id_ = nullptr;
-  }
-  ::memcpy(&direction_, &from.direction_,
-    static_cast<size_t>(reinterpret_cast<char*>(&frozen_margin_) -
-    reinterpret_cast<char*>(&direction_)) + sizeof(frozen_margin_));
-  // @@protoc_insertion_point(copy_constructor:pb.CTPOrder)
-}
-
-void CTPOrder::SharedCtor() {
-  ::google::protobuf::internal::InitSCC(
-      &scc_info_CTPOrder_ctp_2eproto.base);
   account_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  comment_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  user_product_info_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  exchange_order_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  route_account_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  token_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  symbol_name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  reason_comment_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  ::memset(&symbol_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&frozen_margin_) -
-      reinterpret_cast<char*>(&symbol_)) + sizeof(frozen_margin_));
+  if (from.account_id().size() > 0) {
+    account_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.account_id_);
+  }
+  currency_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.currency_id().size() > 0) {
+    currency_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.currency_id_);
+  }
+  ip_address_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.ip_address().size() > 0) {
+    ip_address_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.ip_address_);
+  }
+  mac_address_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.mac_address().size() > 0) {
+    mac_address_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.mac_address_);
+  }
+  ::memcpy(&order_price_type_, &from.order_price_type_,
+    static_cast<size_t>(reinterpret_cast<char*>(&zce_total_traded_volume_) -
+    reinterpret_cast<char*>(&order_price_type_)) + sizeof(zce_total_traded_volume_));
+  // @@protoc_insertion_point(copy_constructor:pb.CTPOrderField)
 }
 
-CTPOrder::~CTPOrder() {
-  // @@protoc_insertion_point(destructor:pb.CTPOrder)
+void CTPOrderField::SharedCtor() {
+  ::google::protobuf::internal::InitSCC(
+      &scc_info_CTPOrderField_ctp_2eproto.base);
+  broker_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  investor_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  instrument_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  order_ref_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  user_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  gtd_date_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  business_unit_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  order_local_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  exchange_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  participant_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  client_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  exchange_inst_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  trader_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  order_sys_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  insert_date_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  insert_time_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  active_time_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  suspend_time_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  update_time_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  cancel_time_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  active_trader_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clearing_part_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  user_product_info_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  status_msg_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  active_user_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  relative_order_sys_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  branch_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  invest_unit_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  account_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  currency_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  ip_address_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  mac_address_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  ::memset(&order_price_type_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&zce_total_traded_volume_) -
+      reinterpret_cast<char*>(&order_price_type_)) + sizeof(zce_total_traded_volume_));
+}
+
+CTPOrderField::~CTPOrderField() {
+  // @@protoc_insertion_point(destructor:pb.CTPOrderField)
   SharedDtor();
 }
 
-void CTPOrder::SharedDtor() {
-  account_id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  comment_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+void CTPOrderField::SharedDtor() {
+  broker_id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  investor_id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  instrument_id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  order_ref_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  user_id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  gtd_date_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  business_unit_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  order_local_id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  exchange_id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  participant_id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  client_id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  exchange_inst_id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  trader_id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  order_sys_id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  insert_date_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  insert_time_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  active_time_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  suspend_time_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  update_time_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  cancel_time_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  active_trader_id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clearing_part_id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   user_product_info_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  exchange_order_id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  route_account_id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  token_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  symbol_name_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  reason_comment_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (this != internal_default_instance()) delete symbol_;
-  if (this != internal_default_instance()) delete id_;
-  if (this != internal_default_instance()) delete product_id_;
+  status_msg_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  active_user_id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  relative_order_sys_id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  branch_id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  invest_unit_id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  account_id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  currency_id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  ip_address_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  mac_address_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 
-void CTPOrder::SetCachedSize(int size) const {
+void CTPOrderField::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const CTPOrder& CTPOrder::default_instance() {
-  ::google::protobuf::internal::InitSCC(&::scc_info_CTPOrder_ctp_2eproto.base);
+const CTPOrderField& CTPOrderField::default_instance() {
+  ::google::protobuf::internal::InitSCC(&::scc_info_CTPOrderField_ctp_2eproto.base);
   return *internal_default_instance();
 }
 
 
-void CTPOrder::Clear() {
-// @@protoc_insertion_point(message_clear_start:pb.CTPOrder)
+void CTPOrderField::Clear() {
+// @@protoc_insertion_point(message_clear_start:pb.CTPOrderField)
   ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  account_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  comment_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  broker_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  investor_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  instrument_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  order_ref_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  user_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  gtd_date_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  business_unit_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  order_local_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  exchange_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  participant_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  client_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  exchange_inst_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  trader_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  order_sys_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  insert_date_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  insert_time_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  active_time_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  suspend_time_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  update_time_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  cancel_time_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  active_trader_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clearing_part_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   user_product_info_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  exchange_order_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  route_account_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  token_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  symbol_name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  reason_comment_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (GetArenaNoVirtual() == nullptr && symbol_ != nullptr) {
-    delete symbol_;
-  }
-  symbol_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && id_ != nullptr) {
-    delete id_;
-  }
-  id_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && product_id_ != nullptr) {
-    delete product_id_;
-  }
-  product_id_ = nullptr;
-  ::memset(&direction_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&frozen_margin_) -
-      reinterpret_cast<char*>(&direction_)) + sizeof(frozen_margin_));
+  status_msg_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  active_user_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  relative_order_sys_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  branch_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  invest_unit_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  account_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  currency_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  ip_address_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  mac_address_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  ::memset(&order_price_type_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&zce_total_traded_volume_) -
+      reinterpret_cast<char*>(&order_price_type_)) + sizeof(zce_total_traded_volume_));
   _internal_metadata_.Clear();
 }
 
 #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-const char* CTPOrder::_InternalParse(const char* begin, const char* end, void* object,
+const char* CTPOrderField::_InternalParse(const char* begin, const char* end, void* object,
                   ::google::protobuf::internal::ParseContext* ctx) {
-  auto msg = static_cast<CTPOrder*>(object);
+  auto msg = static_cast<CTPOrderField*>(object);
   ::google::protobuf::int32 size; (void)size;
   int depth; (void)depth;
   ::google::protobuf::uint32 tag;
@@ -2773,39 +2943,45 @@ const char* CTPOrder::_InternalParse(const char* begin, const char* end, void* o
     ptr = ::google::protobuf::io::Parse32(ptr, &tag);
     GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
     switch (tag >> 3) {
-      // .pb.Symbol symbol = 1;
+      // string broker_id = 1;
       case 1: {
         if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
         ptr = ::google::protobuf::io::ReadSize(ptr, &size);
         GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::pb::Symbol::_InternalParse;
-        object = msg->mutable_symbol();
-        if (size > end - ptr) goto len_delim_till_end;
+        ctx->extra_parse_data().SetFieldName("pb.CTPOrderField.broker_id");
+        object = msg->mutable_broker_id();
+        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
+          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
+          goto string_till_end;
+        }
+        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
+        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
         ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
         break;
       }
-      // .pb.CTPOrderID id = 2;
+      // string investor_id = 2;
       case 2: {
         if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
         ptr = ::google::protobuf::io::ReadSize(ptr, &size);
         GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::pb::CTPOrderID::_InternalParse;
-        object = msg->mutable_id();
-        if (size > end - ptr) goto len_delim_till_end;
+        ctx->extra_parse_data().SetFieldName("pb.CTPOrderField.investor_id");
+        object = msg->mutable_investor_id();
+        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
+          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
+          goto string_till_end;
+        }
+        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
+        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
         ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
         break;
       }
-      // string account_id = 3;
+      // string instrument_id = 3;
       case 3: {
         if (static_cast<::google::protobuf::uint8>(tag) != 26) goto handle_unusual;
         ptr = ::google::protobuf::io::ReadSize(ptr, &size);
         GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        ctx->extra_parse_data().SetFieldName("pb.CTPOrder.account_id");
-        object = msg->mutable_account_id();
+        ctx->extra_parse_data().SetFieldName("pb.CTPOrderField.instrument_id");
+        object = msg->mutable_instrument_id();
         if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
           parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
           goto string_till_end;
@@ -2815,86 +2991,94 @@ const char* CTPOrder::_InternalParse(const char* begin, const char* end, void* o
         ptr += size;
         break;
       }
-      // .pb.CTPDirection direction = 4;
+      // string order_ref = 4;
       case 4: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 32) goto handle_unusual;
-        ::google::protobuf::uint64 val = ::google::protobuf::internal::ReadVarint(&ptr);
-        msg->set_direction(static_cast<::pb::CTPDirection>(val));
+        if (static_cast<::google::protobuf::uint8>(tag) != 34) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
         GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        ctx->extra_parse_data().SetFieldName("pb.CTPOrderField.order_ref");
+        object = msg->mutable_order_ref();
+        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
+          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
+          goto string_till_end;
+        }
+        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
+        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
+        ptr += size;
         break;
       }
-      // .pb.CTPOrderStatus status = 5;
+      // string user_id = 5;
       case 5: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 40) goto handle_unusual;
-        ::google::protobuf::uint64 val = ::google::protobuf::internal::ReadVarint(&ptr);
-        msg->set_status(static_cast<::pb::CTPOrderStatus>(val));
+        if (static_cast<::google::protobuf::uint8>(tag) != 42) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
         GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        ctx->extra_parse_data().SetFieldName("pb.CTPOrderField.user_id");
+        object = msg->mutable_user_id();
+        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
+          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
+          goto string_till_end;
+        }
+        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
+        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
+        ptr += size;
         break;
       }
-      // .pb.CTPPriceType price_type = 6;
+      // int32 order_price_type = 6;
       case 6: {
         if (static_cast<::google::protobuf::uint8>(tag) != 48) goto handle_unusual;
-        ::google::protobuf::uint64 val = ::google::protobuf::internal::ReadVarint(&ptr);
-        msg->set_price_type(static_cast<::pb::CTPPriceType>(val));
+        msg->set_order_price_type(::google::protobuf::internal::ReadVarint(&ptr));
         GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
         break;
       }
-      // double limit_price = 7;
+      // int32 direction = 7;
       case 7: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 57) goto handle_unusual;
+        if (static_cast<::google::protobuf::uint8>(tag) != 56) goto handle_unusual;
+        msg->set_direction(::google::protobuf::internal::ReadVarint(&ptr));
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        break;
+      }
+      // int32 comb_offset_flag = 8;
+      case 8: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 64) goto handle_unusual;
+        msg->set_comb_offset_flag(::google::protobuf::internal::ReadVarint(&ptr));
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        break;
+      }
+      // int32 comb_hedge_flag = 9;
+      case 9: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 72) goto handle_unusual;
+        msg->set_comb_hedge_flag(::google::protobuf::internal::ReadVarint(&ptr));
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        break;
+      }
+      // double limit_price = 10;
+      case 10: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 81) goto handle_unusual;
         msg->set_limit_price(::google::protobuf::io::UnalignedLoad<double>(ptr));
         ptr += sizeof(double);
         break;
       }
-      // int32 volume = 8;
-      case 8: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 64) goto handle_unusual;
-        msg->set_volume(::google::protobuf::internal::ReadVarint(&ptr));
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        break;
-      }
-      // int32 volume_traded = 9;
-      case 9: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 72) goto handle_unusual;
-        msg->set_volume_traded(::google::protobuf::internal::ReadVarint(&ptr));
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        break;
-      }
-      // int32 volume_canceled = 10;
-      case 10: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 80) goto handle_unusual;
-        msg->set_volume_canceled(::google::protobuf::internal::ReadVarint(&ptr));
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        break;
-      }
-      // double frozen_commission = 11;
+      // int32 volume_total_original = 11;
       case 11: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 89) goto handle_unusual;
-        msg->set_frozen_commission(::google::protobuf::io::UnalignedLoad<double>(ptr));
-        ptr += sizeof(double);
+        if (static_cast<::google::protobuf::uint8>(tag) != 88) goto handle_unusual;
+        msg->set_volume_total_original(::google::protobuf::internal::ReadVarint(&ptr));
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
         break;
       }
-      // int64 send_order_time = 12;
+      // int32 time_condition = 12;
       case 12: {
         if (static_cast<::google::protobuf::uint8>(tag) != 96) goto handle_unusual;
-        msg->set_send_order_time(::google::protobuf::internal::ReadVarint(&ptr));
+        msg->set_time_condition(::google::protobuf::internal::ReadVarint(&ptr));
         GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
         break;
       }
-      // int32 send_order_trading_day = 13;
+      // string GTD_date = 13;
       case 13: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 104) goto handle_unusual;
-        msg->set_send_order_trading_day(::google::protobuf::internal::ReadVarint(&ptr));
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        break;
-      }
-      // string comment = 14;
-      case 14: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 114) goto handle_unusual;
+        if (static_cast<::google::protobuf::uint8>(tag) != 106) goto handle_unusual;
         ptr = ::google::protobuf::io::ReadSize(ptr, &size);
         GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        ctx->extra_parse_data().SetFieldName("pb.CTPOrder.comment");
-        object = msg->mutable_comment();
+        ctx->extra_parse_data().SetFieldName("pb.CTPOrderField.GTD_date");
+        object = msg->mutable_gtd_date();
         if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
           parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
           goto string_till_end;
@@ -2904,48 +3088,408 @@ const char* CTPOrder::_InternalParse(const char* begin, const char* end, void* o
         ptr += size;
         break;
       }
-      // int32 request_id = 15;
+      // int32 volume_condition = 14;
+      case 14: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 112) goto handle_unusual;
+        msg->set_volume_condition(::google::protobuf::internal::ReadVarint(&ptr));
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        break;
+      }
+      // int32 min_volume = 15;
       case 15: {
         if (static_cast<::google::protobuf::uint8>(tag) != 120) goto handle_unusual;
-        msg->set_request_id(::google::protobuf::internal::ReadVarint(&ptr));
+        msg->set_min_volume(::google::protobuf::internal::ReadVarint(&ptr));
         GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
         break;
       }
-      // int32 local_order_seq = 16;
+      // int32 contingent_condition = 16;
       case 16: {
         if (static_cast<::google::protobuf::uint8>(tag) != 128) goto handle_unusual;
-        msg->set_local_order_seq(::google::protobuf::internal::ReadVarint(&ptr));
+        msg->set_contingent_condition(::google::protobuf::internal::ReadVarint(&ptr));
         GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
         break;
       }
-      // int32 force_close_type = 17;
+      // double stop_price = 17;
       case 17: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 136) goto handle_unusual;
-        msg->set_force_close_type(::google::protobuf::internal::ReadVarint(&ptr));
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        if (static_cast<::google::protobuf::uint8>(tag) != 137) goto handle_unusual;
+        msg->set_stop_price(::google::protobuf::io::UnalignedLoad<double>(ptr));
+        ptr += sizeof(double);
         break;
       }
-      // int32 order_source_type = 18;
+      // int32 force_close_reason = 18;
       case 18: {
         if (static_cast<::google::protobuf::uint8>(tag) != 144) goto handle_unusual;
-        msg->set_order_source_type(::google::protobuf::internal::ReadVarint(&ptr));
+        msg->set_force_close_reason(::google::protobuf::internal::ReadVarint(&ptr));
         GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
         break;
       }
-      // .pb.CTPHedgeType order_hedge_type = 19;
+      // bool is_auto_suspend = 19;
       case 19: {
         if (static_cast<::google::protobuf::uint8>(tag) != 152) goto handle_unusual;
-        ::google::protobuf::uint64 val = ::google::protobuf::internal::ReadVarint(&ptr);
-        msg->set_order_hedge_type(static_cast<::pb::CTPHedgeType>(val));
+        msg->set_is_auto_suspend(::google::protobuf::internal::ReadVarint(&ptr));
         GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
         break;
       }
-      // string user_product_info = 20;
+      // string business_unit = 20;
       case 20: {
         if (static_cast<::google::protobuf::uint8>(tag) != 162) goto handle_unusual;
         ptr = ::google::protobuf::io::ReadSize(ptr, &size);
         GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        ctx->extra_parse_data().SetFieldName("pb.CTPOrder.user_product_info");
+        ctx->extra_parse_data().SetFieldName("pb.CTPOrderField.business_unit");
+        object = msg->mutable_business_unit();
+        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
+          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
+          goto string_till_end;
+        }
+        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
+        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
+        ptr += size;
+        break;
+      }
+      // int32 request_id = 21;
+      case 21: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 168) goto handle_unusual;
+        msg->set_request_id(::google::protobuf::internal::ReadVarint(&ptr));
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        break;
+      }
+      // string order_local_id = 22;
+      case 22: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 178) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        ctx->extra_parse_data().SetFieldName("pb.CTPOrderField.order_local_id");
+        object = msg->mutable_order_local_id();
+        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
+          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
+          goto string_till_end;
+        }
+        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
+        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
+        ptr += size;
+        break;
+      }
+      // string exchange_id = 23;
+      case 23: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 186) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        ctx->extra_parse_data().SetFieldName("pb.CTPOrderField.exchange_id");
+        object = msg->mutable_exchange_id();
+        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
+          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
+          goto string_till_end;
+        }
+        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
+        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
+        ptr += size;
+        break;
+      }
+      // string participant_id = 24;
+      case 24: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 194) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        ctx->extra_parse_data().SetFieldName("pb.CTPOrderField.participant_id");
+        object = msg->mutable_participant_id();
+        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
+          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
+          goto string_till_end;
+        }
+        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
+        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
+        ptr += size;
+        break;
+      }
+      // string client_id = 25;
+      case 25: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 202) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        ctx->extra_parse_data().SetFieldName("pb.CTPOrderField.client_id");
+        object = msg->mutable_client_id();
+        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
+          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
+          goto string_till_end;
+        }
+        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
+        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
+        ptr += size;
+        break;
+      }
+      // string exchange_inst_id = 26;
+      case 26: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 210) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        ctx->extra_parse_data().SetFieldName("pb.CTPOrderField.exchange_inst_id");
+        object = msg->mutable_exchange_inst_id();
+        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
+          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
+          goto string_till_end;
+        }
+        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
+        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
+        ptr += size;
+        break;
+      }
+      // string trader_id = 27;
+      case 27: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 218) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        ctx->extra_parse_data().SetFieldName("pb.CTPOrderField.trader_id");
+        object = msg->mutable_trader_id();
+        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
+          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
+          goto string_till_end;
+        }
+        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
+        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
+        ptr += size;
+        break;
+      }
+      // int32 install_id = 28;
+      case 28: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 224) goto handle_unusual;
+        msg->set_install_id(::google::protobuf::internal::ReadVarint(&ptr));
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        break;
+      }
+      // int32 order_submit_status = 29;
+      case 29: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 232) goto handle_unusual;
+        msg->set_order_submit_status(::google::protobuf::internal::ReadVarint(&ptr));
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        break;
+      }
+      // int32 notify_sequence = 30;
+      case 30: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 240) goto handle_unusual;
+        msg->set_notify_sequence(::google::protobuf::internal::ReadVarint(&ptr));
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        break;
+      }
+      // int32 trading_day = 31;
+      case 31: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 248) goto handle_unusual;
+        msg->set_trading_day(::google::protobuf::internal::ReadVarint(&ptr));
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        break;
+      }
+      // int32 settlement_id = 32;
+      case 32: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 0) goto handle_unusual;
+        msg->set_settlement_id(::google::protobuf::internal::ReadVarint(&ptr));
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        break;
+      }
+      // string order_sys_id = 33;
+      case 33: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        ctx->extra_parse_data().SetFieldName("pb.CTPOrderField.order_sys_id");
+        object = msg->mutable_order_sys_id();
+        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
+          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
+          goto string_till_end;
+        }
+        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
+        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
+        ptr += size;
+        break;
+      }
+      // int32 order_source = 34;
+      case 34: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 16) goto handle_unusual;
+        msg->set_order_source(::google::protobuf::internal::ReadVarint(&ptr));
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        break;
+      }
+      // int32 order_status = 35;
+      case 35: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 24) goto handle_unusual;
+        msg->set_order_status(::google::protobuf::internal::ReadVarint(&ptr));
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        break;
+      }
+      // int32 order_type = 36;
+      case 36: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 32) goto handle_unusual;
+        msg->set_order_type(::google::protobuf::internal::ReadVarint(&ptr));
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        break;
+      }
+      // int32 volume_traded = 37;
+      case 37: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 40) goto handle_unusual;
+        msg->set_volume_traded(::google::protobuf::internal::ReadVarint(&ptr));
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        break;
+      }
+      // int32 volume_total = 38;
+      case 38: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 48) goto handle_unusual;
+        msg->set_volume_total(::google::protobuf::internal::ReadVarint(&ptr));
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        break;
+      }
+      // string insert_date = 39;
+      case 39: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 58) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        ctx->extra_parse_data().SetFieldName("pb.CTPOrderField.insert_date");
+        object = msg->mutable_insert_date();
+        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
+          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
+          goto string_till_end;
+        }
+        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
+        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
+        ptr += size;
+        break;
+      }
+      // string insert_time = 40;
+      case 40: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 66) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        ctx->extra_parse_data().SetFieldName("pb.CTPOrderField.insert_time");
+        object = msg->mutable_insert_time();
+        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
+          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
+          goto string_till_end;
+        }
+        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
+        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
+        ptr += size;
+        break;
+      }
+      // string active_time = 41;
+      case 41: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 74) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        ctx->extra_parse_data().SetFieldName("pb.CTPOrderField.active_time");
+        object = msg->mutable_active_time();
+        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
+          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
+          goto string_till_end;
+        }
+        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
+        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
+        ptr += size;
+        break;
+      }
+      // string suspend_time = 42;
+      case 42: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 82) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        ctx->extra_parse_data().SetFieldName("pb.CTPOrderField.suspend_time");
+        object = msg->mutable_suspend_time();
+        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
+          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
+          goto string_till_end;
+        }
+        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
+        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
+        ptr += size;
+        break;
+      }
+      // string update_time = 43;
+      case 43: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 90) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        ctx->extra_parse_data().SetFieldName("pb.CTPOrderField.update_time");
+        object = msg->mutable_update_time();
+        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
+          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
+          goto string_till_end;
+        }
+        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
+        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
+        ptr += size;
+        break;
+      }
+      // string cancel_time = 44;
+      case 44: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 98) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        ctx->extra_parse_data().SetFieldName("pb.CTPOrderField.cancel_time");
+        object = msg->mutable_cancel_time();
+        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
+          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
+          goto string_till_end;
+        }
+        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
+        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
+        ptr += size;
+        break;
+      }
+      // string active_trader_id = 45;
+      case 45: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 106) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        ctx->extra_parse_data().SetFieldName("pb.CTPOrderField.active_trader_id");
+        object = msg->mutable_active_trader_id();
+        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
+          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
+          goto string_till_end;
+        }
+        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
+        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
+        ptr += size;
+        break;
+      }
+      // string clearing_part_id = 46;
+      case 46: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 114) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        ctx->extra_parse_data().SetFieldName("pb.CTPOrderField.clearing_part_id");
+        object = msg->mutable_clearing_part_id();
+        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
+          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
+          goto string_till_end;
+        }
+        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
+        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
+        ptr += size;
+        break;
+      }
+      // int32 sequence_no = 47;
+      case 47: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 120) goto handle_unusual;
+        msg->set_sequence_no(::google::protobuf::internal::ReadVarint(&ptr));
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        break;
+      }
+      // int32 front_id = 48;
+      case 48: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 128) goto handle_unusual;
+        msg->set_front_id(::google::protobuf::internal::ReadVarint(&ptr));
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        break;
+      }
+      // int32 session_id = 49;
+      case 49: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 136) goto handle_unusual;
+        msg->set_session_id(::google::protobuf::internal::ReadVarint(&ptr));
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        break;
+      }
+      // string user_product_info = 50;
+      case 50: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 146) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        ctx->extra_parse_data().SetFieldName("pb.CTPOrderField.user_product_info");
         object = msg->mutable_user_product_info();
         if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
           parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
@@ -2956,21 +3500,35 @@ const char* CTPOrder::_InternalParse(const char* begin, const char* end, void* o
         ptr += size;
         break;
       }
-      // .pb.CurrencyType currency_type = 21;
-      case 21: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 168) goto handle_unusual;
-        ::google::protobuf::uint64 val = ::google::protobuf::internal::ReadVarint(&ptr);
-        msg->set_currency_type(static_cast<::pb::CurrencyType>(val));
+      // bytes status_msg = 51;
+      case 51: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 154) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        object = msg->mutable_status_msg();
+        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
+          parser_till_end = ::google::protobuf::internal::GreedyStringParser;
+          goto string_till_end;
+        }
+        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheck(ptr, size, ctx));
+        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
+        ptr += size;
+        break;
+      }
+      // bool user_force_close = 52;
+      case 52: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 160) goto handle_unusual;
+        msg->set_user_force_close(::google::protobuf::internal::ReadVarint(&ptr));
         GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
         break;
       }
-      // string exchange_order_id = 22;
-      case 22: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 178) goto handle_unusual;
+      // string active_user_id = 53;
+      case 53: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 170) goto handle_unusual;
         ptr = ::google::protobuf::io::ReadSize(ptr, &size);
         GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        ctx->extra_parse_data().SetFieldName("pb.CTPOrder.exchange_order_id");
-        object = msg->mutable_exchange_order_id();
+        ctx->extra_parse_data().SetFieldName("pb.CTPOrderField.active_user_id");
+        object = msg->mutable_active_user_id();
         if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
           parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
           goto string_till_end;
@@ -2980,20 +3538,20 @@ const char* CTPOrder::_InternalParse(const char* begin, const char* end, void* o
         ptr += size;
         break;
       }
-      // int32 time_condition_type = 23;
-      case 23: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 184) goto handle_unusual;
-        msg->set_time_condition_type(::google::protobuf::internal::ReadVarint(&ptr));
+      // int32 broker_order_seq = 54;
+      case 54: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 176) goto handle_unusual;
+        msg->set_broker_order_seq(::google::protobuf::internal::ReadVarint(&ptr));
         GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
         break;
       }
-      // string route_account_id = 24;
-      case 24: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 194) goto handle_unusual;
+      // string relative_order_sys_id = 55;
+      case 55: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 186) goto handle_unusual;
         ptr = ::google::protobuf::io::ReadSize(ptr, &size);
         GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        ctx->extra_parse_data().SetFieldName("pb.CTPOrder.route_account_id");
-        object = msg->mutable_route_account_id();
+        ctx->extra_parse_data().SetFieldName("pb.CTPOrderField.relative_order_sys_id");
+        object = msg->mutable_relative_order_sys_id();
         if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
           parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
           goto string_till_end;
@@ -3003,42 +3561,75 @@ const char* CTPOrder::_InternalParse(const char* begin, const char* end, void* o
         ptr += size;
         break;
       }
-      // int32 local_type_id = 25;
-      case 25: {
+      // int32 ZCE_total_traded_volume = 56;
+      case 56: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 192) goto handle_unusual;
+        msg->set_zce_total_traded_volume(::google::protobuf::internal::ReadVarint(&ptr));
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        break;
+      }
+      // bool is_swap_order = 57;
+      case 57: {
         if (static_cast<::google::protobuf::uint8>(tag) != 200) goto handle_unusual;
-        msg->set_local_type_id(::google::protobuf::internal::ReadVarint(&ptr));
+        msg->set_is_swap_order(::google::protobuf::internal::ReadVarint(&ptr));
         GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
         break;
       }
-      // double commission = 26;
-      case 26: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 209) goto handle_unusual;
-        msg->set_commission(::google::protobuf::io::UnalignedLoad<double>(ptr));
-        ptr += sizeof(double);
-        break;
-      }
-      // .pb.CTPOffsetFlag offset_flag = 27;
-      case 27: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 216) goto handle_unusual;
-        ::google::protobuf::uint64 val = ::google::protobuf::internal::ReadVarint(&ptr);
-        msg->set_offset_flag(static_cast<::pb::CTPOffsetFlag>(val));
+      // string branch_id = 58;
+      case 58: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 210) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
         GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        ctx->extra_parse_data().SetFieldName("pb.CTPOrderField.branch_id");
+        object = msg->mutable_branch_id();
+        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
+          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
+          goto string_till_end;
+        }
+        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
+        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
+        ptr += size;
         break;
       }
-      // int32 error_code = 28;
-      case 28: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 224) goto handle_unusual;
-        msg->set_error_code(::google::protobuf::internal::ReadVarint(&ptr));
+      // string invest_unit_id = 59;
+      case 59: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 218) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
         GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        ctx->extra_parse_data().SetFieldName("pb.CTPOrderField.invest_unit_id");
+        object = msg->mutable_invest_unit_id();
+        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
+          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
+          goto string_till_end;
+        }
+        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
+        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
+        ptr += size;
         break;
       }
-      // string token = 29;
-      case 29: {
+      // string account_id = 60;
+      case 60: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 226) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        ctx->extra_parse_data().SetFieldName("pb.CTPOrderField.account_id");
+        object = msg->mutable_account_id();
+        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
+          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
+          goto string_till_end;
+        }
+        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
+        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
+        ptr += size;
+        break;
+      }
+      // string currency_id = 61;
+      case 61: {
         if (static_cast<::google::protobuf::uint8>(tag) != 234) goto handle_unusual;
         ptr = ::google::protobuf::io::ReadSize(ptr, &size);
         GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        ctx->extra_parse_data().SetFieldName("pb.CTPOrder.token");
-        object = msg->mutable_token();
+        ctx->extra_parse_data().SetFieldName("pb.CTPOrderField.currency_id");
+        object = msg->mutable_currency_id();
         if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
           parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
           goto string_till_end;
@@ -3048,68 +3639,13 @@ const char* CTPOrder::_InternalParse(const char* begin, const char* end, void* o
         ptr += size;
         break;
       }
-      // double stoploss = 30;
-      case 30: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 241) goto handle_unusual;
-        msg->set_stoploss(::google::protobuf::io::UnalignedLoad<double>(ptr));
-        ptr += sizeof(double);
-        break;
-      }
-      // double take_profit = 31;
-      case 31: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 249) goto handle_unusual;
-        msg->set_take_profit(::google::protobuf::io::UnalignedLoad<double>(ptr));
-        ptr += sizeof(double);
-        break;
-      }
-      // double traded_amount = 32;
-      case 32: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 1) goto handle_unusual;
-        msg->set_traded_amount(::google::protobuf::io::UnalignedLoad<double>(ptr));
-        ptr += sizeof(double);
-        break;
-      }
-      // int32 volume_multiple = 33;
-      case 33: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 8) goto handle_unusual;
-        msg->set_volume_multiple(::google::protobuf::internal::ReadVarint(&ptr));
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        break;
-      }
-      // .pb.ProductID product_id = 34;
-      case 34: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
+      // string IP_address = 62;
+      case 62: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 242) goto handle_unusual;
         ptr = ::google::protobuf::io::ReadSize(ptr, &size);
         GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::pb::ProductID::_InternalParse;
-        object = msg->mutable_product_id();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
-      // double price_tick = 35;
-      case 35: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 25) goto handle_unusual;
-        msg->set_price_tick(::google::protobuf::io::UnalignedLoad<double>(ptr));
-        ptr += sizeof(double);
-        break;
-      }
-      // double frozen_margin = 36;
-      case 36: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 33) goto handle_unusual;
-        msg->set_frozen_margin(::google::protobuf::io::UnalignedLoad<double>(ptr));
-        ptr += sizeof(double);
-        break;
-      }
-      // string symbol_name = 37;
-      case 37: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 42) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        ctx->extra_parse_data().SetFieldName("pb.CTPOrder.symbol_name");
-        object = msg->mutable_symbol_name();
+        ctx->extra_parse_data().SetFieldName("pb.CTPOrderField.IP_address");
+        object = msg->mutable_ip_address();
         if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
           parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
           goto string_till_end;
@@ -3119,13 +3655,13 @@ const char* CTPOrder::_InternalParse(const char* begin, const char* end, void* o
         ptr += size;
         break;
       }
-      // string reason_comment = 38;
-      case 38: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 50) goto handle_unusual;
+      // string Mac_address = 63;
+      case 63: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 250) goto handle_unusual;
         ptr = ::google::protobuf::io::ReadSize(ptr, &size);
         GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        ctx->extra_parse_data().SetFieldName("pb.CTPOrder.reason_comment");
-        object = msg->mutable_reason_comment();
+        ctx->extra_parse_data().SetFieldName("pb.CTPOrderField.Mac_address");
+        object = msg->mutable_mac_address();
         if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
           parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
           goto string_till_end;
@@ -3159,98 +3695,146 @@ len_delim_till_end:
                                {parser_till_end, object}, size);
 }
 #else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool CTPOrder::MergePartialFromCodedStream(
+bool CTPOrderField::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:pb.CTPOrder)
+  // @@protoc_insertion_point(parse_start:pb.CTPOrderField)
   for (;;) {
     ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(16383u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // .pb.Symbol symbol = 1;
+      // string broker_id = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_symbol()));
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_broker_id()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->broker_id().data(), static_cast<int>(this->broker_id().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "pb.CTPOrderField.broker_id"));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // .pb.CTPOrderID id = 2;
+      // string investor_id = 2;
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_id()));
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_investor_id()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->investor_id().data(), static_cast<int>(this->investor_id().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "pb.CTPOrderField.investor_id"));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // string account_id = 3;
+      // string instrument_id = 3;
       case 3: {
         if (static_cast< ::google::protobuf::uint8>(tag) == (26 & 0xFF)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_account_id()));
+                input, this->mutable_instrument_id()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->account_id().data(), static_cast<int>(this->account_id().length()),
+            this->instrument_id().data(), static_cast<int>(this->instrument_id().length()),
             ::google::protobuf::internal::WireFormatLite::PARSE,
-            "pb.CTPOrder.account_id"));
+            "pb.CTPOrderField.instrument_id"));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // .pb.CTPDirection direction = 4;
+      // string order_ref = 4;
       case 4: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (32 & 0xFF)) {
-          int value = 0;
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
-                 input, &value)));
-          set_direction(static_cast< ::pb::CTPDirection >(value));
+        if (static_cast< ::google::protobuf::uint8>(tag) == (34 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_order_ref()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->order_ref().data(), static_cast<int>(this->order_ref().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "pb.CTPOrderField.order_ref"));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // .pb.CTPOrderStatus status = 5;
+      // string user_id = 5;
       case 5: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (40 & 0xFF)) {
-          int value = 0;
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
-                 input, &value)));
-          set_status(static_cast< ::pb::CTPOrderStatus >(value));
+        if (static_cast< ::google::protobuf::uint8>(tag) == (42 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_user_id()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->user_id().data(), static_cast<int>(this->user_id().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "pb.CTPOrderField.user_id"));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // .pb.CTPPriceType price_type = 6;
+      // int32 order_price_type = 6;
       case 6: {
         if (static_cast< ::google::protobuf::uint8>(tag) == (48 & 0xFF)) {
-          int value = 0;
+
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
-                 input, &value)));
-          set_price_type(static_cast< ::pb::CTPPriceType >(value));
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &order_price_type_)));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // double limit_price = 7;
+      // int32 direction = 7;
       case 7: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (57 & 0xFF)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (56 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &direction_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // int32 comb_offset_flag = 8;
+      case 8: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (64 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &comb_offset_flag_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // int32 comb_hedge_flag = 9;
+      case 9: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (72 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &comb_hedge_flag_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // double limit_price = 10;
+      case 10: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (81 & 0xFF)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
@@ -3261,102 +3845,143 @@ bool CTPOrder::MergePartialFromCodedStream(
         break;
       }
 
-      // int32 volume = 8;
-      case 8: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (64 & 0xFF)) {
-
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                 input, &volume_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // int32 volume_traded = 9;
-      case 9: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (72 & 0xFF)) {
-
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                 input, &volume_traded_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // int32 volume_canceled = 10;
-      case 10: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (80 & 0xFF)) {
-
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                 input, &volume_canceled_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // double frozen_commission = 11;
+      // int32 volume_total_original = 11;
       case 11: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (89 & 0xFF)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (88 & 0xFF)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, &frozen_commission_)));
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &volume_total_original_)));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // int64 send_order_time = 12;
+      // int32 time_condition = 12;
       case 12: {
         if (static_cast< ::google::protobuf::uint8>(tag) == (96 & 0xFF)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::int64, ::google::protobuf::internal::WireFormatLite::TYPE_INT64>(
-                 input, &send_order_time_)));
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &time_condition_)));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // int32 send_order_trading_day = 13;
+      // string GTD_date = 13;
       case 13: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (104 & 0xFF)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (106 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_gtd_date()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->gtd_date().data(), static_cast<int>(this->gtd_date().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "pb.CTPOrderField.GTD_date"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // int32 volume_condition = 14;
+      case 14: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (112 & 0xFF)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                 input, &send_order_trading_day_)));
+                 input, &volume_condition_)));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // string comment = 14;
-      case 14: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (114 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_comment()));
-          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->comment().data(), static_cast<int>(this->comment().length()),
-            ::google::protobuf::internal::WireFormatLite::PARSE,
-            "pb.CTPOrder.comment"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // int32 request_id = 15;
+      // int32 min_volume = 15;
       case 15: {
         if (static_cast< ::google::protobuf::uint8>(tag) == (120 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &min_volume_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // int32 contingent_condition = 16;
+      case 16: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (128 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &contingent_condition_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // double stop_price = 17;
+      case 17: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (137 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
+                 input, &stop_price_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // int32 force_close_reason = 18;
+      case 18: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (144 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &force_close_reason_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // bool is_auto_suspend = 19;
+      case 19: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (152 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &is_auto_suspend_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string business_unit = 20;
+      case 20: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (162 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_business_unit()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->business_unit().data(), static_cast<int>(this->business_unit().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "pb.CTPOrderField.business_unit"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // int32 request_id = 21;
+      case 21: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (168 & 0xFF)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
@@ -3367,312 +3992,592 @@ bool CTPOrder::MergePartialFromCodedStream(
         break;
       }
 
-      // int32 local_order_seq = 16;
-      case 16: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (128 & 0xFF)) {
-
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                 input, &local_order_seq_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // int32 force_close_type = 17;
-      case 17: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (136 & 0xFF)) {
-
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                 input, &force_close_type_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // int32 order_source_type = 18;
-      case 18: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (144 & 0xFF)) {
-
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                 input, &order_source_type_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .pb.CTPHedgeType order_hedge_type = 19;
-      case 19: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (152 & 0xFF)) {
-          int value = 0;
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
-                 input, &value)));
-          set_order_hedge_type(static_cast< ::pb::CTPHedgeType >(value));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // string user_product_info = 20;
-      case 20: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (162 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_user_product_info()));
-          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->user_product_info().data(), static_cast<int>(this->user_product_info().length()),
-            ::google::protobuf::internal::WireFormatLite::PARSE,
-            "pb.CTPOrder.user_product_info"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .pb.CurrencyType currency_type = 21;
-      case 21: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (168 & 0xFF)) {
-          int value = 0;
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
-                 input, &value)));
-          set_currency_type(static_cast< ::pb::CurrencyType >(value));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // string exchange_order_id = 22;
+      // string order_local_id = 22;
       case 22: {
         if (static_cast< ::google::protobuf::uint8>(tag) == (178 & 0xFF)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_exchange_order_id()));
+                input, this->mutable_order_local_id()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->exchange_order_id().data(), static_cast<int>(this->exchange_order_id().length()),
+            this->order_local_id().data(), static_cast<int>(this->order_local_id().length()),
             ::google::protobuf::internal::WireFormatLite::PARSE,
-            "pb.CTPOrder.exchange_order_id"));
+            "pb.CTPOrderField.order_local_id"));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // int32 time_condition_type = 23;
+      // string exchange_id = 23;
       case 23: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (184 & 0xFF)) {
-
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                 input, &time_condition_type_)));
+        if (static_cast< ::google::protobuf::uint8>(tag) == (186 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_exchange_id()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->exchange_id().data(), static_cast<int>(this->exchange_id().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "pb.CTPOrderField.exchange_id"));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // string route_account_id = 24;
+      // string participant_id = 24;
       case 24: {
         if (static_cast< ::google::protobuf::uint8>(tag) == (194 & 0xFF)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_route_account_id()));
+                input, this->mutable_participant_id()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->route_account_id().data(), static_cast<int>(this->route_account_id().length()),
+            this->participant_id().data(), static_cast<int>(this->participant_id().length()),
             ::google::protobuf::internal::WireFormatLite::PARSE,
-            "pb.CTPOrder.route_account_id"));
+            "pb.CTPOrderField.participant_id"));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // int32 local_type_id = 25;
+      // string client_id = 25;
       case 25: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (200 & 0xFF)) {
-
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                 input, &local_type_id_)));
+        if (static_cast< ::google::protobuf::uint8>(tag) == (202 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_client_id()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->client_id().data(), static_cast<int>(this->client_id().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "pb.CTPOrderField.client_id"));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // double commission = 26;
+      // string exchange_inst_id = 26;
       case 26: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (209 & 0xFF)) {
-
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, &commission_)));
+        if (static_cast< ::google::protobuf::uint8>(tag) == (210 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_exchange_inst_id()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->exchange_inst_id().data(), static_cast<int>(this->exchange_inst_id().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "pb.CTPOrderField.exchange_inst_id"));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // .pb.CTPOffsetFlag offset_flag = 27;
+      // string trader_id = 27;
       case 27: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (216 & 0xFF)) {
-          int value = 0;
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
-                 input, &value)));
-          set_offset_flag(static_cast< ::pb::CTPOffsetFlag >(value));
+        if (static_cast< ::google::protobuf::uint8>(tag) == (218 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_trader_id()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->trader_id().data(), static_cast<int>(this->trader_id().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "pb.CTPOrderField.trader_id"));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // int32 error_code = 28;
+      // int32 install_id = 28;
       case 28: {
         if (static_cast< ::google::protobuf::uint8>(tag) == (224 & 0xFF)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                 input, &error_code_)));
+                 input, &install_id_)));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // string token = 29;
+      // int32 order_submit_status = 29;
       case 29: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (234 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_token()));
-          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->token().data(), static_cast<int>(this->token().length()),
-            ::google::protobuf::internal::WireFormatLite::PARSE,
-            "pb.CTPOrder.token"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // double stoploss = 30;
-      case 30: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (241 & 0xFF)) {
-
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, &stoploss_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // double take_profit = 31;
-      case 31: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (249 & 0xFF)) {
-
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, &take_profit_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // double traded_amount = 32;
-      case 32: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (257 & 0xFF)) {
-
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, &traded_amount_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // int32 volume_multiple = 33;
-      case 33: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (264 & 0xFF)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (232 & 0xFF)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                 input, &volume_multiple_)));
+                 input, &order_submit_status_)));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // .pb.ProductID product_id = 34;
+      // int32 notify_sequence = 30;
+      case 30: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (240 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &notify_sequence_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // int32 trading_day = 31;
+      case 31: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (248 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &trading_day_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // int32 settlement_id = 32;
+      case 32: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (256 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &settlement_id_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string order_sys_id = 33;
+      case 33: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (266 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_order_sys_id()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->order_sys_id().data(), static_cast<int>(this->order_sys_id().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "pb.CTPOrderField.order_sys_id"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // int32 order_source = 34;
       case 34: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (274 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_product_id()));
+        if (static_cast< ::google::protobuf::uint8>(tag) == (272 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &order_source_)));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // double price_tick = 35;
+      // int32 order_status = 35;
       case 35: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (281 & 0xFF)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (280 & 0xFF)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, &price_tick_)));
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &order_status_)));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // double frozen_margin = 36;
+      // int32 order_type = 36;
       case 36: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (289 & 0xFF)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (288 & 0xFF)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, &frozen_margin_)));
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &order_type_)));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // string symbol_name = 37;
+      // int32 volume_traded = 37;
       case 37: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (298 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_symbol_name()));
-          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->symbol_name().data(), static_cast<int>(this->symbol_name().length()),
-            ::google::protobuf::internal::WireFormatLite::PARSE,
-            "pb.CTPOrder.symbol_name"));
+        if (static_cast< ::google::protobuf::uint8>(tag) == (296 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &volume_traded_)));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // string reason_comment = 38;
+      // int32 volume_total = 38;
       case 38: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (306 & 0xFF)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (304 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &volume_total_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string insert_date = 39;
+      case 39: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (314 & 0xFF)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_reason_comment()));
+                input, this->mutable_insert_date()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->reason_comment().data(), static_cast<int>(this->reason_comment().length()),
+            this->insert_date().data(), static_cast<int>(this->insert_date().length()),
             ::google::protobuf::internal::WireFormatLite::PARSE,
-            "pb.CTPOrder.reason_comment"));
+            "pb.CTPOrderField.insert_date"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string insert_time = 40;
+      case 40: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (322 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_insert_time()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->insert_time().data(), static_cast<int>(this->insert_time().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "pb.CTPOrderField.insert_time"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string active_time = 41;
+      case 41: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (330 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_active_time()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->active_time().data(), static_cast<int>(this->active_time().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "pb.CTPOrderField.active_time"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string suspend_time = 42;
+      case 42: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (338 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_suspend_time()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->suspend_time().data(), static_cast<int>(this->suspend_time().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "pb.CTPOrderField.suspend_time"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string update_time = 43;
+      case 43: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (346 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_update_time()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->update_time().data(), static_cast<int>(this->update_time().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "pb.CTPOrderField.update_time"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string cancel_time = 44;
+      case 44: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (354 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_cancel_time()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->cancel_time().data(), static_cast<int>(this->cancel_time().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "pb.CTPOrderField.cancel_time"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string active_trader_id = 45;
+      case 45: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (362 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_active_trader_id()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->active_trader_id().data(), static_cast<int>(this->active_trader_id().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "pb.CTPOrderField.active_trader_id"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string clearing_part_id = 46;
+      case 46: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (370 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_clearing_part_id()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->clearing_part_id().data(), static_cast<int>(this->clearing_part_id().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "pb.CTPOrderField.clearing_part_id"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // int32 sequence_no = 47;
+      case 47: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (376 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &sequence_no_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // int32 front_id = 48;
+      case 48: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (384 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &front_id_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // int32 session_id = 49;
+      case 49: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (392 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &session_id_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string user_product_info = 50;
+      case 50: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (402 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_user_product_info()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->user_product_info().data(), static_cast<int>(this->user_product_info().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "pb.CTPOrderField.user_product_info"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // bytes status_msg = 51;
+      case 51: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (410 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadBytes(
+                input, this->mutable_status_msg()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // bool user_force_close = 52;
+      case 52: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (416 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &user_force_close_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string active_user_id = 53;
+      case 53: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (426 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_active_user_id()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->active_user_id().data(), static_cast<int>(this->active_user_id().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "pb.CTPOrderField.active_user_id"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // int32 broker_order_seq = 54;
+      case 54: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (432 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &broker_order_seq_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string relative_order_sys_id = 55;
+      case 55: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (442 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_relative_order_sys_id()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->relative_order_sys_id().data(), static_cast<int>(this->relative_order_sys_id().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "pb.CTPOrderField.relative_order_sys_id"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // int32 ZCE_total_traded_volume = 56;
+      case 56: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (448 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &zce_total_traded_volume_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // bool is_swap_order = 57;
+      case 57: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (456 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &is_swap_order_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string branch_id = 58;
+      case 58: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (466 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_branch_id()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->branch_id().data(), static_cast<int>(this->branch_id().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "pb.CTPOrderField.branch_id"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string invest_unit_id = 59;
+      case 59: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (474 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_invest_unit_id()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->invest_unit_id().data(), static_cast<int>(this->invest_unit_id().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "pb.CTPOrderField.invest_unit_id"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string account_id = 60;
+      case 60: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (482 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_account_id()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->account_id().data(), static_cast<int>(this->account_id().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "pb.CTPOrderField.account_id"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string currency_id = 61;
+      case 61: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (490 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_currency_id()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->currency_id().data(), static_cast<int>(this->currency_id().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "pb.CTPOrderField.currency_id"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string IP_address = 62;
+      case 62: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (498 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_ip_address()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->ip_address().data(), static_cast<int>(this->ip_address().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "pb.CTPOrderField.IP_address"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string Mac_address = 63;
+      case 63: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (506 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_mac_address()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->mac_address().data(), static_cast<int>(this->mac_address().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "pb.CTPOrderField.Mac_address"));
         } else {
           goto handle_unusual;
         }
@@ -3691,533 +4596,1018 @@ bool CTPOrder::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:pb.CTPOrder)
+  // @@protoc_insertion_point(parse_success:pb.CTPOrderField)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:pb.CTPOrder)
+  // @@protoc_insertion_point(parse_failure:pb.CTPOrderField)
   return false;
 #undef DO_
 }
 #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 
-void CTPOrder::SerializeWithCachedSizes(
+void CTPOrderField::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:pb.CTPOrder)
+  // @@protoc_insertion_point(serialize_start:pb.CTPOrderField)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .pb.Symbol symbol = 1;
-  if (this->has_symbol()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, HasBitSetters::symbol(this), output);
-  }
-
-  // .pb.CTPOrderID id = 2;
-  if (this->has_id()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, HasBitSetters::id(this), output);
-  }
-
-  // string account_id = 3;
-  if (this->account_id().size() > 0) {
+  // string broker_id = 1;
+  if (this->broker_id().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->account_id().data(), static_cast<int>(this->account_id().length()),
+      this->broker_id().data(), static_cast<int>(this->broker_id().length()),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "pb.CTPOrder.account_id");
+      "pb.CTPOrderField.broker_id");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      3, this->account_id(), output);
+      1, this->broker_id(), output);
   }
 
-  // .pb.CTPDirection direction = 4;
+  // string investor_id = 2;
+  if (this->investor_id().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->investor_id().data(), static_cast<int>(this->investor_id().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.CTPOrderField.investor_id");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      2, this->investor_id(), output);
+  }
+
+  // string instrument_id = 3;
+  if (this->instrument_id().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->instrument_id().data(), static_cast<int>(this->instrument_id().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.CTPOrderField.instrument_id");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      3, this->instrument_id(), output);
+  }
+
+  // string order_ref = 4;
+  if (this->order_ref().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->order_ref().data(), static_cast<int>(this->order_ref().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.CTPOrderField.order_ref");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      4, this->order_ref(), output);
+  }
+
+  // string user_id = 5;
+  if (this->user_id().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->user_id().data(), static_cast<int>(this->user_id().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.CTPOrderField.user_id");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      5, this->user_id(), output);
+  }
+
+  // int32 order_price_type = 6;
+  if (this->order_price_type() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(6, this->order_price_type(), output);
+  }
+
+  // int32 direction = 7;
   if (this->direction() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteEnum(
-      4, this->direction(), output);
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(7, this->direction(), output);
   }
 
-  // .pb.CTPOrderStatus status = 5;
-  if (this->status() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteEnum(
-      5, this->status(), output);
+  // int32 comb_offset_flag = 8;
+  if (this->comb_offset_flag() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(8, this->comb_offset_flag(), output);
   }
 
-  // .pb.CTPPriceType price_type = 6;
-  if (this->price_type() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteEnum(
-      6, this->price_type(), output);
+  // int32 comb_hedge_flag = 9;
+  if (this->comb_hedge_flag() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(9, this->comb_hedge_flag(), output);
   }
 
-  // double limit_price = 7;
+  // double limit_price = 10;
   if (this->limit_price() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(7, this->limit_price(), output);
+    ::google::protobuf::internal::WireFormatLite::WriteDouble(10, this->limit_price(), output);
   }
 
-  // int32 volume = 8;
-  if (this->volume() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(8, this->volume(), output);
+  // int32 volume_total_original = 11;
+  if (this->volume_total_original() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(11, this->volume_total_original(), output);
   }
 
-  // int32 volume_traded = 9;
-  if (this->volume_traded() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(9, this->volume_traded(), output);
+  // int32 time_condition = 12;
+  if (this->time_condition() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(12, this->time_condition(), output);
   }
 
-  // int32 volume_canceled = 10;
-  if (this->volume_canceled() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(10, this->volume_canceled(), output);
-  }
-
-  // double frozen_commission = 11;
-  if (this->frozen_commission() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(11, this->frozen_commission(), output);
-  }
-
-  // int64 send_order_time = 12;
-  if (this->send_order_time() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt64(12, this->send_order_time(), output);
-  }
-
-  // int32 send_order_trading_day = 13;
-  if (this->send_order_trading_day() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(13, this->send_order_trading_day(), output);
-  }
-
-  // string comment = 14;
-  if (this->comment().size() > 0) {
+  // string GTD_date = 13;
+  if (this->gtd_date().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->comment().data(), static_cast<int>(this->comment().length()),
+      this->gtd_date().data(), static_cast<int>(this->gtd_date().length()),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "pb.CTPOrder.comment");
+      "pb.CTPOrderField.GTD_date");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      14, this->comment(), output);
+      13, this->gtd_date(), output);
   }
 
-  // int32 request_id = 15;
+  // int32 volume_condition = 14;
+  if (this->volume_condition() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(14, this->volume_condition(), output);
+  }
+
+  // int32 min_volume = 15;
+  if (this->min_volume() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(15, this->min_volume(), output);
+  }
+
+  // int32 contingent_condition = 16;
+  if (this->contingent_condition() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(16, this->contingent_condition(), output);
+  }
+
+  // double stop_price = 17;
+  if (this->stop_price() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteDouble(17, this->stop_price(), output);
+  }
+
+  // int32 force_close_reason = 18;
+  if (this->force_close_reason() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(18, this->force_close_reason(), output);
+  }
+
+  // bool is_auto_suspend = 19;
+  if (this->is_auto_suspend() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(19, this->is_auto_suspend(), output);
+  }
+
+  // string business_unit = 20;
+  if (this->business_unit().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->business_unit().data(), static_cast<int>(this->business_unit().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.CTPOrderField.business_unit");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      20, this->business_unit(), output);
+  }
+
+  // int32 request_id = 21;
   if (this->request_id() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(15, this->request_id(), output);
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(21, this->request_id(), output);
   }
 
-  // int32 local_order_seq = 16;
-  if (this->local_order_seq() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(16, this->local_order_seq(), output);
+  // string order_local_id = 22;
+  if (this->order_local_id().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->order_local_id().data(), static_cast<int>(this->order_local_id().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.CTPOrderField.order_local_id");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      22, this->order_local_id(), output);
   }
 
-  // int32 force_close_type = 17;
-  if (this->force_close_type() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(17, this->force_close_type(), output);
+  // string exchange_id = 23;
+  if (this->exchange_id().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->exchange_id().data(), static_cast<int>(this->exchange_id().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.CTPOrderField.exchange_id");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      23, this->exchange_id(), output);
   }
 
-  // int32 order_source_type = 18;
-  if (this->order_source_type() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(18, this->order_source_type(), output);
+  // string participant_id = 24;
+  if (this->participant_id().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->participant_id().data(), static_cast<int>(this->participant_id().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.CTPOrderField.participant_id");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      24, this->participant_id(), output);
   }
 
-  // .pb.CTPHedgeType order_hedge_type = 19;
-  if (this->order_hedge_type() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteEnum(
-      19, this->order_hedge_type(), output);
+  // string client_id = 25;
+  if (this->client_id().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->client_id().data(), static_cast<int>(this->client_id().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.CTPOrderField.client_id");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      25, this->client_id(), output);
   }
 
-  // string user_product_info = 20;
+  // string exchange_inst_id = 26;
+  if (this->exchange_inst_id().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->exchange_inst_id().data(), static_cast<int>(this->exchange_inst_id().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.CTPOrderField.exchange_inst_id");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      26, this->exchange_inst_id(), output);
+  }
+
+  // string trader_id = 27;
+  if (this->trader_id().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->trader_id().data(), static_cast<int>(this->trader_id().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.CTPOrderField.trader_id");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      27, this->trader_id(), output);
+  }
+
+  // int32 install_id = 28;
+  if (this->install_id() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(28, this->install_id(), output);
+  }
+
+  // int32 order_submit_status = 29;
+  if (this->order_submit_status() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(29, this->order_submit_status(), output);
+  }
+
+  // int32 notify_sequence = 30;
+  if (this->notify_sequence() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(30, this->notify_sequence(), output);
+  }
+
+  // int32 trading_day = 31;
+  if (this->trading_day() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(31, this->trading_day(), output);
+  }
+
+  // int32 settlement_id = 32;
+  if (this->settlement_id() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(32, this->settlement_id(), output);
+  }
+
+  // string order_sys_id = 33;
+  if (this->order_sys_id().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->order_sys_id().data(), static_cast<int>(this->order_sys_id().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.CTPOrderField.order_sys_id");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      33, this->order_sys_id(), output);
+  }
+
+  // int32 order_source = 34;
+  if (this->order_source() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(34, this->order_source(), output);
+  }
+
+  // int32 order_status = 35;
+  if (this->order_status() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(35, this->order_status(), output);
+  }
+
+  // int32 order_type = 36;
+  if (this->order_type() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(36, this->order_type(), output);
+  }
+
+  // int32 volume_traded = 37;
+  if (this->volume_traded() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(37, this->volume_traded(), output);
+  }
+
+  // int32 volume_total = 38;
+  if (this->volume_total() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(38, this->volume_total(), output);
+  }
+
+  // string insert_date = 39;
+  if (this->insert_date().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->insert_date().data(), static_cast<int>(this->insert_date().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.CTPOrderField.insert_date");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      39, this->insert_date(), output);
+  }
+
+  // string insert_time = 40;
+  if (this->insert_time().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->insert_time().data(), static_cast<int>(this->insert_time().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.CTPOrderField.insert_time");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      40, this->insert_time(), output);
+  }
+
+  // string active_time = 41;
+  if (this->active_time().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->active_time().data(), static_cast<int>(this->active_time().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.CTPOrderField.active_time");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      41, this->active_time(), output);
+  }
+
+  // string suspend_time = 42;
+  if (this->suspend_time().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->suspend_time().data(), static_cast<int>(this->suspend_time().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.CTPOrderField.suspend_time");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      42, this->suspend_time(), output);
+  }
+
+  // string update_time = 43;
+  if (this->update_time().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->update_time().data(), static_cast<int>(this->update_time().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.CTPOrderField.update_time");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      43, this->update_time(), output);
+  }
+
+  // string cancel_time = 44;
+  if (this->cancel_time().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->cancel_time().data(), static_cast<int>(this->cancel_time().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.CTPOrderField.cancel_time");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      44, this->cancel_time(), output);
+  }
+
+  // string active_trader_id = 45;
+  if (this->active_trader_id().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->active_trader_id().data(), static_cast<int>(this->active_trader_id().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.CTPOrderField.active_trader_id");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      45, this->active_trader_id(), output);
+  }
+
+  // string clearing_part_id = 46;
+  if (this->clearing_part_id().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->clearing_part_id().data(), static_cast<int>(this->clearing_part_id().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.CTPOrderField.clearing_part_id");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      46, this->clearing_part_id(), output);
+  }
+
+  // int32 sequence_no = 47;
+  if (this->sequence_no() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(47, this->sequence_no(), output);
+  }
+
+  // int32 front_id = 48;
+  if (this->front_id() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(48, this->front_id(), output);
+  }
+
+  // int32 session_id = 49;
+  if (this->session_id() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(49, this->session_id(), output);
+  }
+
+  // string user_product_info = 50;
   if (this->user_product_info().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->user_product_info().data(), static_cast<int>(this->user_product_info().length()),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "pb.CTPOrder.user_product_info");
+      "pb.CTPOrderField.user_product_info");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      20, this->user_product_info(), output);
+      50, this->user_product_info(), output);
   }
 
-  // .pb.CurrencyType currency_type = 21;
-  if (this->currency_type() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteEnum(
-      21, this->currency_type(), output);
+  // bytes status_msg = 51;
+  if (this->status_msg().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteBytesMaybeAliased(
+      51, this->status_msg(), output);
   }
 
-  // string exchange_order_id = 22;
-  if (this->exchange_order_id().size() > 0) {
+  // bool user_force_close = 52;
+  if (this->user_force_close() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(52, this->user_force_close(), output);
+  }
+
+  // string active_user_id = 53;
+  if (this->active_user_id().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->exchange_order_id().data(), static_cast<int>(this->exchange_order_id().length()),
+      this->active_user_id().data(), static_cast<int>(this->active_user_id().length()),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "pb.CTPOrder.exchange_order_id");
+      "pb.CTPOrderField.active_user_id");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      22, this->exchange_order_id(), output);
+      53, this->active_user_id(), output);
   }
 
-  // int32 time_condition_type = 23;
-  if (this->time_condition_type() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(23, this->time_condition_type(), output);
+  // int32 broker_order_seq = 54;
+  if (this->broker_order_seq() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(54, this->broker_order_seq(), output);
   }
 
-  // string route_account_id = 24;
-  if (this->route_account_id().size() > 0) {
+  // string relative_order_sys_id = 55;
+  if (this->relative_order_sys_id().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->route_account_id().data(), static_cast<int>(this->route_account_id().length()),
+      this->relative_order_sys_id().data(), static_cast<int>(this->relative_order_sys_id().length()),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "pb.CTPOrder.route_account_id");
+      "pb.CTPOrderField.relative_order_sys_id");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      24, this->route_account_id(), output);
+      55, this->relative_order_sys_id(), output);
   }
 
-  // int32 local_type_id = 25;
-  if (this->local_type_id() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(25, this->local_type_id(), output);
+  // int32 ZCE_total_traded_volume = 56;
+  if (this->zce_total_traded_volume() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(56, this->zce_total_traded_volume(), output);
   }
 
-  // double commission = 26;
-  if (this->commission() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(26, this->commission(), output);
+  // bool is_swap_order = 57;
+  if (this->is_swap_order() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(57, this->is_swap_order(), output);
   }
 
-  // .pb.CTPOffsetFlag offset_flag = 27;
-  if (this->offset_flag() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteEnum(
-      27, this->offset_flag(), output);
-  }
-
-  // int32 error_code = 28;
-  if (this->error_code() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(28, this->error_code(), output);
-  }
-
-  // string token = 29;
-  if (this->token().size() > 0) {
+  // string branch_id = 58;
+  if (this->branch_id().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->token().data(), static_cast<int>(this->token().length()),
+      this->branch_id().data(), static_cast<int>(this->branch_id().length()),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "pb.CTPOrder.token");
+      "pb.CTPOrderField.branch_id");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      29, this->token(), output);
+      58, this->branch_id(), output);
   }
 
-  // double stoploss = 30;
-  if (this->stoploss() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(30, this->stoploss(), output);
-  }
-
-  // double take_profit = 31;
-  if (this->take_profit() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(31, this->take_profit(), output);
-  }
-
-  // double traded_amount = 32;
-  if (this->traded_amount() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(32, this->traded_amount(), output);
-  }
-
-  // int32 volume_multiple = 33;
-  if (this->volume_multiple() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(33, this->volume_multiple(), output);
-  }
-
-  // .pb.ProductID product_id = 34;
-  if (this->has_product_id()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      34, HasBitSetters::product_id(this), output);
-  }
-
-  // double price_tick = 35;
-  if (this->price_tick() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(35, this->price_tick(), output);
-  }
-
-  // double frozen_margin = 36;
-  if (this->frozen_margin() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(36, this->frozen_margin(), output);
-  }
-
-  // string symbol_name = 37;
-  if (this->symbol_name().size() > 0) {
+  // string invest_unit_id = 59;
+  if (this->invest_unit_id().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->symbol_name().data(), static_cast<int>(this->symbol_name().length()),
+      this->invest_unit_id().data(), static_cast<int>(this->invest_unit_id().length()),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "pb.CTPOrder.symbol_name");
+      "pb.CTPOrderField.invest_unit_id");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      37, this->symbol_name(), output);
+      59, this->invest_unit_id(), output);
   }
 
-  // string reason_comment = 38;
-  if (this->reason_comment().size() > 0) {
+  // string account_id = 60;
+  if (this->account_id().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->reason_comment().data(), static_cast<int>(this->reason_comment().length()),
+      this->account_id().data(), static_cast<int>(this->account_id().length()),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "pb.CTPOrder.reason_comment");
+      "pb.CTPOrderField.account_id");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      38, this->reason_comment(), output);
+      60, this->account_id(), output);
+  }
+
+  // string currency_id = 61;
+  if (this->currency_id().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->currency_id().data(), static_cast<int>(this->currency_id().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.CTPOrderField.currency_id");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      61, this->currency_id(), output);
+  }
+
+  // string IP_address = 62;
+  if (this->ip_address().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->ip_address().data(), static_cast<int>(this->ip_address().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.CTPOrderField.IP_address");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      62, this->ip_address(), output);
+  }
+
+  // string Mac_address = 63;
+  if (this->mac_address().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->mac_address().data(), static_cast<int>(this->mac_address().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.CTPOrderField.Mac_address");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      63, this->mac_address(), output);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         _internal_metadata_.unknown_fields(), output);
   }
-  // @@protoc_insertion_point(serialize_end:pb.CTPOrder)
+  // @@protoc_insertion_point(serialize_end:pb.CTPOrderField)
 }
 
-::google::protobuf::uint8* CTPOrder::InternalSerializeWithCachedSizesToArray(
+::google::protobuf::uint8* CTPOrderField::InternalSerializeWithCachedSizesToArray(
     ::google::protobuf::uint8* target) const {
-  // @@protoc_insertion_point(serialize_to_array_start:pb.CTPOrder)
+  // @@protoc_insertion_point(serialize_to_array_start:pb.CTPOrderField)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .pb.Symbol symbol = 1;
-  if (this->has_symbol()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        1, HasBitSetters::symbol(this), target);
-  }
-
-  // .pb.CTPOrderID id = 2;
-  if (this->has_id()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        2, HasBitSetters::id(this), target);
-  }
-
-  // string account_id = 3;
-  if (this->account_id().size() > 0) {
+  // string broker_id = 1;
+  if (this->broker_id().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->account_id().data(), static_cast<int>(this->account_id().length()),
+      this->broker_id().data(), static_cast<int>(this->broker_id().length()),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "pb.CTPOrder.account_id");
+      "pb.CTPOrderField.broker_id");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        3, this->account_id(), target);
+        1, this->broker_id(), target);
   }
 
-  // .pb.CTPDirection direction = 4;
+  // string investor_id = 2;
+  if (this->investor_id().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->investor_id().data(), static_cast<int>(this->investor_id().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.CTPOrderField.investor_id");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        2, this->investor_id(), target);
+  }
+
+  // string instrument_id = 3;
+  if (this->instrument_id().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->instrument_id().data(), static_cast<int>(this->instrument_id().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.CTPOrderField.instrument_id");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        3, this->instrument_id(), target);
+  }
+
+  // string order_ref = 4;
+  if (this->order_ref().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->order_ref().data(), static_cast<int>(this->order_ref().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.CTPOrderField.order_ref");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        4, this->order_ref(), target);
+  }
+
+  // string user_id = 5;
+  if (this->user_id().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->user_id().data(), static_cast<int>(this->user_id().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.CTPOrderField.user_id");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        5, this->user_id(), target);
+  }
+
+  // int32 order_price_type = 6;
+  if (this->order_price_type() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(6, this->order_price_type(), target);
+  }
+
+  // int32 direction = 7;
   if (this->direction() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
-      4, this->direction(), target);
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(7, this->direction(), target);
   }
 
-  // .pb.CTPOrderStatus status = 5;
-  if (this->status() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
-      5, this->status(), target);
+  // int32 comb_offset_flag = 8;
+  if (this->comb_offset_flag() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(8, this->comb_offset_flag(), target);
   }
 
-  // .pb.CTPPriceType price_type = 6;
-  if (this->price_type() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
-      6, this->price_type(), target);
+  // int32 comb_hedge_flag = 9;
+  if (this->comb_hedge_flag() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(9, this->comb_hedge_flag(), target);
   }
 
-  // double limit_price = 7;
+  // double limit_price = 10;
   if (this->limit_price() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(7, this->limit_price(), target);
+    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(10, this->limit_price(), target);
   }
 
-  // int32 volume = 8;
-  if (this->volume() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(8, this->volume(), target);
+  // int32 volume_total_original = 11;
+  if (this->volume_total_original() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(11, this->volume_total_original(), target);
   }
 
-  // int32 volume_traded = 9;
-  if (this->volume_traded() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(9, this->volume_traded(), target);
+  // int32 time_condition = 12;
+  if (this->time_condition() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(12, this->time_condition(), target);
   }
 
-  // int32 volume_canceled = 10;
-  if (this->volume_canceled() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(10, this->volume_canceled(), target);
-  }
-
-  // double frozen_commission = 11;
-  if (this->frozen_commission() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(11, this->frozen_commission(), target);
-  }
-
-  // int64 send_order_time = 12;
-  if (this->send_order_time() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(12, this->send_order_time(), target);
-  }
-
-  // int32 send_order_trading_day = 13;
-  if (this->send_order_trading_day() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(13, this->send_order_trading_day(), target);
-  }
-
-  // string comment = 14;
-  if (this->comment().size() > 0) {
+  // string GTD_date = 13;
+  if (this->gtd_date().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->comment().data(), static_cast<int>(this->comment().length()),
+      this->gtd_date().data(), static_cast<int>(this->gtd_date().length()),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "pb.CTPOrder.comment");
+      "pb.CTPOrderField.GTD_date");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        14, this->comment(), target);
+        13, this->gtd_date(), target);
   }
 
-  // int32 request_id = 15;
+  // int32 volume_condition = 14;
+  if (this->volume_condition() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(14, this->volume_condition(), target);
+  }
+
+  // int32 min_volume = 15;
+  if (this->min_volume() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(15, this->min_volume(), target);
+  }
+
+  // int32 contingent_condition = 16;
+  if (this->contingent_condition() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(16, this->contingent_condition(), target);
+  }
+
+  // double stop_price = 17;
+  if (this->stop_price() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(17, this->stop_price(), target);
+  }
+
+  // int32 force_close_reason = 18;
+  if (this->force_close_reason() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(18, this->force_close_reason(), target);
+  }
+
+  // bool is_auto_suspend = 19;
+  if (this->is_auto_suspend() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(19, this->is_auto_suspend(), target);
+  }
+
+  // string business_unit = 20;
+  if (this->business_unit().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->business_unit().data(), static_cast<int>(this->business_unit().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.CTPOrderField.business_unit");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        20, this->business_unit(), target);
+  }
+
+  // int32 request_id = 21;
   if (this->request_id() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(15, this->request_id(), target);
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(21, this->request_id(), target);
   }
 
-  // int32 local_order_seq = 16;
-  if (this->local_order_seq() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(16, this->local_order_seq(), target);
+  // string order_local_id = 22;
+  if (this->order_local_id().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->order_local_id().data(), static_cast<int>(this->order_local_id().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.CTPOrderField.order_local_id");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        22, this->order_local_id(), target);
   }
 
-  // int32 force_close_type = 17;
-  if (this->force_close_type() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(17, this->force_close_type(), target);
+  // string exchange_id = 23;
+  if (this->exchange_id().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->exchange_id().data(), static_cast<int>(this->exchange_id().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.CTPOrderField.exchange_id");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        23, this->exchange_id(), target);
   }
 
-  // int32 order_source_type = 18;
-  if (this->order_source_type() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(18, this->order_source_type(), target);
+  // string participant_id = 24;
+  if (this->participant_id().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->participant_id().data(), static_cast<int>(this->participant_id().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.CTPOrderField.participant_id");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        24, this->participant_id(), target);
   }
 
-  // .pb.CTPHedgeType order_hedge_type = 19;
-  if (this->order_hedge_type() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
-      19, this->order_hedge_type(), target);
+  // string client_id = 25;
+  if (this->client_id().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->client_id().data(), static_cast<int>(this->client_id().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.CTPOrderField.client_id");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        25, this->client_id(), target);
   }
 
-  // string user_product_info = 20;
+  // string exchange_inst_id = 26;
+  if (this->exchange_inst_id().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->exchange_inst_id().data(), static_cast<int>(this->exchange_inst_id().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.CTPOrderField.exchange_inst_id");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        26, this->exchange_inst_id(), target);
+  }
+
+  // string trader_id = 27;
+  if (this->trader_id().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->trader_id().data(), static_cast<int>(this->trader_id().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.CTPOrderField.trader_id");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        27, this->trader_id(), target);
+  }
+
+  // int32 install_id = 28;
+  if (this->install_id() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(28, this->install_id(), target);
+  }
+
+  // int32 order_submit_status = 29;
+  if (this->order_submit_status() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(29, this->order_submit_status(), target);
+  }
+
+  // int32 notify_sequence = 30;
+  if (this->notify_sequence() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(30, this->notify_sequence(), target);
+  }
+
+  // int32 trading_day = 31;
+  if (this->trading_day() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(31, this->trading_day(), target);
+  }
+
+  // int32 settlement_id = 32;
+  if (this->settlement_id() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(32, this->settlement_id(), target);
+  }
+
+  // string order_sys_id = 33;
+  if (this->order_sys_id().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->order_sys_id().data(), static_cast<int>(this->order_sys_id().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.CTPOrderField.order_sys_id");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        33, this->order_sys_id(), target);
+  }
+
+  // int32 order_source = 34;
+  if (this->order_source() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(34, this->order_source(), target);
+  }
+
+  // int32 order_status = 35;
+  if (this->order_status() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(35, this->order_status(), target);
+  }
+
+  // int32 order_type = 36;
+  if (this->order_type() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(36, this->order_type(), target);
+  }
+
+  // int32 volume_traded = 37;
+  if (this->volume_traded() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(37, this->volume_traded(), target);
+  }
+
+  // int32 volume_total = 38;
+  if (this->volume_total() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(38, this->volume_total(), target);
+  }
+
+  // string insert_date = 39;
+  if (this->insert_date().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->insert_date().data(), static_cast<int>(this->insert_date().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.CTPOrderField.insert_date");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        39, this->insert_date(), target);
+  }
+
+  // string insert_time = 40;
+  if (this->insert_time().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->insert_time().data(), static_cast<int>(this->insert_time().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.CTPOrderField.insert_time");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        40, this->insert_time(), target);
+  }
+
+  // string active_time = 41;
+  if (this->active_time().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->active_time().data(), static_cast<int>(this->active_time().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.CTPOrderField.active_time");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        41, this->active_time(), target);
+  }
+
+  // string suspend_time = 42;
+  if (this->suspend_time().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->suspend_time().data(), static_cast<int>(this->suspend_time().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.CTPOrderField.suspend_time");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        42, this->suspend_time(), target);
+  }
+
+  // string update_time = 43;
+  if (this->update_time().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->update_time().data(), static_cast<int>(this->update_time().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.CTPOrderField.update_time");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        43, this->update_time(), target);
+  }
+
+  // string cancel_time = 44;
+  if (this->cancel_time().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->cancel_time().data(), static_cast<int>(this->cancel_time().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.CTPOrderField.cancel_time");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        44, this->cancel_time(), target);
+  }
+
+  // string active_trader_id = 45;
+  if (this->active_trader_id().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->active_trader_id().data(), static_cast<int>(this->active_trader_id().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.CTPOrderField.active_trader_id");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        45, this->active_trader_id(), target);
+  }
+
+  // string clearing_part_id = 46;
+  if (this->clearing_part_id().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->clearing_part_id().data(), static_cast<int>(this->clearing_part_id().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.CTPOrderField.clearing_part_id");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        46, this->clearing_part_id(), target);
+  }
+
+  // int32 sequence_no = 47;
+  if (this->sequence_no() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(47, this->sequence_no(), target);
+  }
+
+  // int32 front_id = 48;
+  if (this->front_id() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(48, this->front_id(), target);
+  }
+
+  // int32 session_id = 49;
+  if (this->session_id() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(49, this->session_id(), target);
+  }
+
+  // string user_product_info = 50;
   if (this->user_product_info().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->user_product_info().data(), static_cast<int>(this->user_product_info().length()),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "pb.CTPOrder.user_product_info");
+      "pb.CTPOrderField.user_product_info");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        20, this->user_product_info(), target);
+        50, this->user_product_info(), target);
   }
 
-  // .pb.CurrencyType currency_type = 21;
-  if (this->currency_type() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
-      21, this->currency_type(), target);
+  // bytes status_msg = 51;
+  if (this->status_msg().size() > 0) {
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteBytesToArray(
+        51, this->status_msg(), target);
   }
 
-  // string exchange_order_id = 22;
-  if (this->exchange_order_id().size() > 0) {
+  // bool user_force_close = 52;
+  if (this->user_force_close() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(52, this->user_force_close(), target);
+  }
+
+  // string active_user_id = 53;
+  if (this->active_user_id().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->exchange_order_id().data(), static_cast<int>(this->exchange_order_id().length()),
+      this->active_user_id().data(), static_cast<int>(this->active_user_id().length()),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "pb.CTPOrder.exchange_order_id");
+      "pb.CTPOrderField.active_user_id");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        22, this->exchange_order_id(), target);
+        53, this->active_user_id(), target);
   }
 
-  // int32 time_condition_type = 23;
-  if (this->time_condition_type() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(23, this->time_condition_type(), target);
+  // int32 broker_order_seq = 54;
+  if (this->broker_order_seq() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(54, this->broker_order_seq(), target);
   }
 
-  // string route_account_id = 24;
-  if (this->route_account_id().size() > 0) {
+  // string relative_order_sys_id = 55;
+  if (this->relative_order_sys_id().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->route_account_id().data(), static_cast<int>(this->route_account_id().length()),
+      this->relative_order_sys_id().data(), static_cast<int>(this->relative_order_sys_id().length()),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "pb.CTPOrder.route_account_id");
+      "pb.CTPOrderField.relative_order_sys_id");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        24, this->route_account_id(), target);
+        55, this->relative_order_sys_id(), target);
   }
 
-  // int32 local_type_id = 25;
-  if (this->local_type_id() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(25, this->local_type_id(), target);
+  // int32 ZCE_total_traded_volume = 56;
+  if (this->zce_total_traded_volume() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(56, this->zce_total_traded_volume(), target);
   }
 
-  // double commission = 26;
-  if (this->commission() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(26, this->commission(), target);
+  // bool is_swap_order = 57;
+  if (this->is_swap_order() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(57, this->is_swap_order(), target);
   }
 
-  // .pb.CTPOffsetFlag offset_flag = 27;
-  if (this->offset_flag() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
-      27, this->offset_flag(), target);
-  }
-
-  // int32 error_code = 28;
-  if (this->error_code() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(28, this->error_code(), target);
-  }
-
-  // string token = 29;
-  if (this->token().size() > 0) {
+  // string branch_id = 58;
+  if (this->branch_id().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->token().data(), static_cast<int>(this->token().length()),
+      this->branch_id().data(), static_cast<int>(this->branch_id().length()),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "pb.CTPOrder.token");
+      "pb.CTPOrderField.branch_id");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        29, this->token(), target);
+        58, this->branch_id(), target);
   }
 
-  // double stoploss = 30;
-  if (this->stoploss() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(30, this->stoploss(), target);
-  }
-
-  // double take_profit = 31;
-  if (this->take_profit() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(31, this->take_profit(), target);
-  }
-
-  // double traded_amount = 32;
-  if (this->traded_amount() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(32, this->traded_amount(), target);
-  }
-
-  // int32 volume_multiple = 33;
-  if (this->volume_multiple() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(33, this->volume_multiple(), target);
-  }
-
-  // .pb.ProductID product_id = 34;
-  if (this->has_product_id()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        34, HasBitSetters::product_id(this), target);
-  }
-
-  // double price_tick = 35;
-  if (this->price_tick() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(35, this->price_tick(), target);
-  }
-
-  // double frozen_margin = 36;
-  if (this->frozen_margin() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(36, this->frozen_margin(), target);
-  }
-
-  // string symbol_name = 37;
-  if (this->symbol_name().size() > 0) {
+  // string invest_unit_id = 59;
+  if (this->invest_unit_id().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->symbol_name().data(), static_cast<int>(this->symbol_name().length()),
+      this->invest_unit_id().data(), static_cast<int>(this->invest_unit_id().length()),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "pb.CTPOrder.symbol_name");
+      "pb.CTPOrderField.invest_unit_id");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        37, this->symbol_name(), target);
+        59, this->invest_unit_id(), target);
   }
 
-  // string reason_comment = 38;
-  if (this->reason_comment().size() > 0) {
+  // string account_id = 60;
+  if (this->account_id().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->reason_comment().data(), static_cast<int>(this->reason_comment().length()),
+      this->account_id().data(), static_cast<int>(this->account_id().length()),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "pb.CTPOrder.reason_comment");
+      "pb.CTPOrderField.account_id");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        38, this->reason_comment(), target);
+        60, this->account_id(), target);
+  }
+
+  // string currency_id = 61;
+  if (this->currency_id().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->currency_id().data(), static_cast<int>(this->currency_id().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.CTPOrderField.currency_id");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        61, this->currency_id(), target);
+  }
+
+  // string IP_address = 62;
+  if (this->ip_address().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->ip_address().data(), static_cast<int>(this->ip_address().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.CTPOrderField.IP_address");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        62, this->ip_address(), target);
+  }
+
+  // string Mac_address = 63;
+  if (this->mac_address().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->mac_address().data(), static_cast<int>(this->mac_address().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.CTPOrderField.Mac_address");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        63, this->mac_address(), target);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields(), target);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:pb.CTPOrder)
+  // @@protoc_insertion_point(serialize_to_array_end:pb.CTPOrderField)
   return target;
 }
 
-size_t CTPOrder::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:pb.CTPOrder)
+size_t CTPOrderField::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:pb.CTPOrderField)
   size_t total_size = 0;
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -4229,248 +5619,435 @@ size_t CTPOrder::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string account_id = 3;
-  if (this->account_id().size() > 0) {
+  // string broker_id = 1;
+  if (this->broker_id().size() > 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->account_id());
+        this->broker_id());
   }
 
-  // string comment = 14;
-  if (this->comment().size() > 0) {
+  // string investor_id = 2;
+  if (this->investor_id().size() > 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->comment());
+        this->investor_id());
   }
 
-  // string user_product_info = 20;
+  // string instrument_id = 3;
+  if (this->instrument_id().size() > 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->instrument_id());
+  }
+
+  // string order_ref = 4;
+  if (this->order_ref().size() > 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->order_ref());
+  }
+
+  // string user_id = 5;
+  if (this->user_id().size() > 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->user_id());
+  }
+
+  // string GTD_date = 13;
+  if (this->gtd_date().size() > 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->gtd_date());
+  }
+
+  // string business_unit = 20;
+  if (this->business_unit().size() > 0) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->business_unit());
+  }
+
+  // string order_local_id = 22;
+  if (this->order_local_id().size() > 0) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->order_local_id());
+  }
+
+  // string exchange_id = 23;
+  if (this->exchange_id().size() > 0) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->exchange_id());
+  }
+
+  // string participant_id = 24;
+  if (this->participant_id().size() > 0) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->participant_id());
+  }
+
+  // string client_id = 25;
+  if (this->client_id().size() > 0) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->client_id());
+  }
+
+  // string exchange_inst_id = 26;
+  if (this->exchange_inst_id().size() > 0) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->exchange_inst_id());
+  }
+
+  // string trader_id = 27;
+  if (this->trader_id().size() > 0) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->trader_id());
+  }
+
+  // string order_sys_id = 33;
+  if (this->order_sys_id().size() > 0) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->order_sys_id());
+  }
+
+  // string insert_date = 39;
+  if (this->insert_date().size() > 0) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->insert_date());
+  }
+
+  // string insert_time = 40;
+  if (this->insert_time().size() > 0) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->insert_time());
+  }
+
+  // string active_time = 41;
+  if (this->active_time().size() > 0) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->active_time());
+  }
+
+  // string suspend_time = 42;
+  if (this->suspend_time().size() > 0) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->suspend_time());
+  }
+
+  // string update_time = 43;
+  if (this->update_time().size() > 0) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->update_time());
+  }
+
+  // string cancel_time = 44;
+  if (this->cancel_time().size() > 0) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->cancel_time());
+  }
+
+  // string active_trader_id = 45;
+  if (this->active_trader_id().size() > 0) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->active_trader_id());
+  }
+
+  // string clearing_part_id = 46;
+  if (this->clearing_part_id().size() > 0) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->clearing_part_id());
+  }
+
+  // string user_product_info = 50;
   if (this->user_product_info().size() > 0) {
     total_size += 2 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
         this->user_product_info());
   }
 
-  // string exchange_order_id = 22;
-  if (this->exchange_order_id().size() > 0) {
+  // bytes status_msg = 51;
+  if (this->status_msg().size() > 0) {
     total_size += 2 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->exchange_order_id());
+      ::google::protobuf::internal::WireFormatLite::BytesSize(
+        this->status_msg());
   }
 
-  // string route_account_id = 24;
-  if (this->route_account_id().size() > 0) {
+  // string active_user_id = 53;
+  if (this->active_user_id().size() > 0) {
     total_size += 2 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->route_account_id());
+        this->active_user_id());
   }
 
-  // string token = 29;
-  if (this->token().size() > 0) {
+  // string relative_order_sys_id = 55;
+  if (this->relative_order_sys_id().size() > 0) {
     total_size += 2 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->token());
+        this->relative_order_sys_id());
   }
 
-  // string symbol_name = 37;
-  if (this->symbol_name().size() > 0) {
+  // string branch_id = 58;
+  if (this->branch_id().size() > 0) {
     total_size += 2 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->symbol_name());
+        this->branch_id());
   }
 
-  // string reason_comment = 38;
-  if (this->reason_comment().size() > 0) {
+  // string invest_unit_id = 59;
+  if (this->invest_unit_id().size() > 0) {
     total_size += 2 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->reason_comment());
+        this->invest_unit_id());
   }
 
-  // .pb.Symbol symbol = 1;
-  if (this->has_symbol()) {
+  // string account_id = 60;
+  if (this->account_id().size() > 0) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->account_id());
+  }
+
+  // string currency_id = 61;
+  if (this->currency_id().size() > 0) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->currency_id());
+  }
+
+  // string IP_address = 62;
+  if (this->ip_address().size() > 0) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->ip_address());
+  }
+
+  // string Mac_address = 63;
+  if (this->mac_address().size() > 0) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->mac_address());
+  }
+
+  // int32 order_price_type = 6;
+  if (this->order_price_type() != 0) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *symbol_);
+      ::google::protobuf::internal::WireFormatLite::Int32Size(
+        this->order_price_type());
   }
 
-  // .pb.CTPOrderID id = 2;
-  if (this->has_id()) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *id_);
-  }
-
-  // .pb.ProductID product_id = 34;
-  if (this->has_product_id()) {
-    total_size += 2 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *product_id_);
-  }
-
-  // .pb.CTPDirection direction = 4;
+  // int32 direction = 7;
   if (this->direction() != 0) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::EnumSize(this->direction());
+      ::google::protobuf::internal::WireFormatLite::Int32Size(
+        this->direction());
   }
 
-  // .pb.CTPOrderStatus status = 5;
-  if (this->status() != 0) {
+  // int32 comb_offset_flag = 8;
+  if (this->comb_offset_flag() != 0) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::EnumSize(this->status());
+      ::google::protobuf::internal::WireFormatLite::Int32Size(
+        this->comb_offset_flag());
   }
 
-  // double limit_price = 7;
+  // int32 comb_hedge_flag = 9;
+  if (this->comb_hedge_flag() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::Int32Size(
+        this->comb_hedge_flag());
+  }
+
+  // double limit_price = 10;
   if (this->limit_price() != 0) {
     total_size += 1 + 8;
   }
 
-  // .pb.CTPPriceType price_type = 6;
-  if (this->price_type() != 0) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::EnumSize(this->price_type());
-  }
-
-  // int32 volume = 8;
-  if (this->volume() != 0) {
+  // int32 volume_total_original = 11;
+  if (this->volume_total_original() != 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::Int32Size(
-        this->volume());
+        this->volume_total_original());
   }
 
-  // int32 volume_traded = 9;
-  if (this->volume_traded() != 0) {
+  // int32 time_condition = 12;
+  if (this->time_condition() != 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::Int32Size(
-        this->volume_traded());
+        this->time_condition());
   }
 
-  // int32 volume_canceled = 10;
-  if (this->volume_canceled() != 0) {
+  // int32 volume_condition = 14;
+  if (this->volume_condition() != 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::Int32Size(
-        this->volume_canceled());
+        this->volume_condition());
   }
 
-  // double frozen_commission = 11;
-  if (this->frozen_commission() != 0) {
-    total_size += 1 + 8;
-  }
-
-  // int64 send_order_time = 12;
-  if (this->send_order_time() != 0) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::Int64Size(
-        this->send_order_time());
-  }
-
-  // int32 send_order_trading_day = 13;
-  if (this->send_order_trading_day() != 0) {
+  // int32 min_volume = 15;
+  if (this->min_volume() != 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::Int32Size(
-        this->send_order_trading_day());
+        this->min_volume());
   }
 
-  // int32 request_id = 15;
+  // double stop_price = 17;
+  if (this->stop_price() != 0) {
+    total_size += 2 + 8;
+  }
+
+  // int32 contingent_condition = 16;
+  if (this->contingent_condition() != 0) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::Int32Size(
+        this->contingent_condition());
+  }
+
+  // int32 force_close_reason = 18;
+  if (this->force_close_reason() != 0) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::Int32Size(
+        this->force_close_reason());
+  }
+
+  // int32 request_id = 21;
   if (this->request_id() != 0) {
-    total_size += 1 +
+    total_size += 2 +
       ::google::protobuf::internal::WireFormatLite::Int32Size(
         this->request_id());
   }
 
-  // int32 local_order_seq = 16;
-  if (this->local_order_seq() != 0) {
+  // int32 install_id = 28;
+  if (this->install_id() != 0) {
     total_size += 2 +
       ::google::protobuf::internal::WireFormatLite::Int32Size(
-        this->local_order_seq());
+        this->install_id());
   }
 
-  // int32 force_close_type = 17;
-  if (this->force_close_type() != 0) {
+  // int32 order_submit_status = 29;
+  if (this->order_submit_status() != 0) {
     total_size += 2 +
       ::google::protobuf::internal::WireFormatLite::Int32Size(
-        this->force_close_type());
+        this->order_submit_status());
   }
 
-  // int32 order_source_type = 18;
-  if (this->order_source_type() != 0) {
+  // int32 notify_sequence = 30;
+  if (this->notify_sequence() != 0) {
     total_size += 2 +
       ::google::protobuf::internal::WireFormatLite::Int32Size(
-        this->order_source_type());
+        this->notify_sequence());
   }
 
-  // .pb.CTPHedgeType order_hedge_type = 19;
-  if (this->order_hedge_type() != 0) {
-    total_size += 2 +
-      ::google::protobuf::internal::WireFormatLite::EnumSize(this->order_hedge_type());
-  }
-
-  // .pb.CurrencyType currency_type = 21;
-  if (this->currency_type() != 0) {
-    total_size += 2 +
-      ::google::protobuf::internal::WireFormatLite::EnumSize(this->currency_type());
-  }
-
-  // int32 time_condition_type = 23;
-  if (this->time_condition_type() != 0) {
+  // int32 trading_day = 31;
+  if (this->trading_day() != 0) {
     total_size += 2 +
       ::google::protobuf::internal::WireFormatLite::Int32Size(
-        this->time_condition_type());
+        this->trading_day());
   }
 
-  // double commission = 26;
-  if (this->commission() != 0) {
-    total_size += 2 + 8;
-  }
-
-  // int32 local_type_id = 25;
-  if (this->local_type_id() != 0) {
+  // int32 settlement_id = 32;
+  if (this->settlement_id() != 0) {
     total_size += 2 +
       ::google::protobuf::internal::WireFormatLite::Int32Size(
-        this->local_type_id());
+        this->settlement_id());
   }
 
-  // .pb.CTPOffsetFlag offset_flag = 27;
-  if (this->offset_flag() != 0) {
-    total_size += 2 +
-      ::google::protobuf::internal::WireFormatLite::EnumSize(this->offset_flag());
-  }
-
-  // double stoploss = 30;
-  if (this->stoploss() != 0) {
-    total_size += 2 + 8;
-  }
-
-  // int32 error_code = 28;
-  if (this->error_code() != 0) {
+  // int32 order_source = 34;
+  if (this->order_source() != 0) {
     total_size += 2 +
       ::google::protobuf::internal::WireFormatLite::Int32Size(
-        this->error_code());
+        this->order_source());
   }
 
-  // int32 volume_multiple = 33;
-  if (this->volume_multiple() != 0) {
+  // int32 order_status = 35;
+  if (this->order_status() != 0) {
     total_size += 2 +
       ::google::protobuf::internal::WireFormatLite::Int32Size(
-        this->volume_multiple());
+        this->order_status());
   }
 
-  // double take_profit = 31;
-  if (this->take_profit() != 0) {
-    total_size += 2 + 8;
+  // int32 order_type = 36;
+  if (this->order_type() != 0) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::Int32Size(
+        this->order_type());
   }
 
-  // double traded_amount = 32;
-  if (this->traded_amount() != 0) {
-    total_size += 2 + 8;
+  // int32 volume_traded = 37;
+  if (this->volume_traded() != 0) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::Int32Size(
+        this->volume_traded());
   }
 
-  // double price_tick = 35;
-  if (this->price_tick() != 0) {
-    total_size += 2 + 8;
+  // int32 volume_total = 38;
+  if (this->volume_total() != 0) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::Int32Size(
+        this->volume_total());
   }
 
-  // double frozen_margin = 36;
-  if (this->frozen_margin() != 0) {
-    total_size += 2 + 8;
+  // bool is_auto_suspend = 19;
+  if (this->is_auto_suspend() != 0) {
+    total_size += 2 + 1;
+  }
+
+  // bool user_force_close = 52;
+  if (this->user_force_close() != 0) {
+    total_size += 2 + 1;
+  }
+
+  // bool is_swap_order = 57;
+  if (this->is_swap_order() != 0) {
+    total_size += 2 + 1;
+  }
+
+  // int32 sequence_no = 47;
+  if (this->sequence_no() != 0) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::Int32Size(
+        this->sequence_no());
+  }
+
+  // int32 front_id = 48;
+  if (this->front_id() != 0) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::Int32Size(
+        this->front_id());
+  }
+
+  // int32 session_id = 49;
+  if (this->session_id() != 0) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::Int32Size(
+        this->session_id());
+  }
+
+  // int32 broker_order_seq = 54;
+  if (this->broker_order_seq() != 0) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::Int32Size(
+        this->broker_order_seq());
+  }
+
+  // int32 ZCE_total_traded_volume = 56;
+  if (this->zce_total_traded_volume() != 0) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::Int32Size(
+        this->zce_total_traded_volume());
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
@@ -4478,226 +6055,374 @@ size_t CTPOrder::ByteSizeLong() const {
   return total_size;
 }
 
-void CTPOrder::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:pb.CTPOrder)
+void CTPOrderField::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:pb.CTPOrderField)
   GOOGLE_DCHECK_NE(&from, this);
-  const CTPOrder* source =
-      ::google::protobuf::DynamicCastToGenerated<CTPOrder>(
+  const CTPOrderField* source =
+      ::google::protobuf::DynamicCastToGenerated<CTPOrderField>(
           &from);
   if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:pb.CTPOrder)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:pb.CTPOrderField)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:pb.CTPOrder)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:pb.CTPOrderField)
     MergeFrom(*source);
   }
 }
 
-void CTPOrder::MergeFrom(const CTPOrder& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:pb.CTPOrder)
+void CTPOrderField::MergeFrom(const CTPOrderField& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:pb.CTPOrderField)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.account_id().size() > 0) {
+  if (from.broker_id().size() > 0) {
 
-    account_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.account_id_);
+    broker_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.broker_id_);
   }
-  if (from.comment().size() > 0) {
+  if (from.investor_id().size() > 0) {
 
-    comment_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.comment_);
+    investor_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.investor_id_);
+  }
+  if (from.instrument_id().size() > 0) {
+
+    instrument_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.instrument_id_);
+  }
+  if (from.order_ref().size() > 0) {
+
+    order_ref_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.order_ref_);
+  }
+  if (from.user_id().size() > 0) {
+
+    user_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.user_id_);
+  }
+  if (from.gtd_date().size() > 0) {
+
+    gtd_date_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.gtd_date_);
+  }
+  if (from.business_unit().size() > 0) {
+
+    business_unit_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.business_unit_);
+  }
+  if (from.order_local_id().size() > 0) {
+
+    order_local_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.order_local_id_);
+  }
+  if (from.exchange_id().size() > 0) {
+
+    exchange_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.exchange_id_);
+  }
+  if (from.participant_id().size() > 0) {
+
+    participant_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.participant_id_);
+  }
+  if (from.client_id().size() > 0) {
+
+    client_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.client_id_);
+  }
+  if (from.exchange_inst_id().size() > 0) {
+
+    exchange_inst_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.exchange_inst_id_);
+  }
+  if (from.trader_id().size() > 0) {
+
+    trader_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.trader_id_);
+  }
+  if (from.order_sys_id().size() > 0) {
+
+    order_sys_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.order_sys_id_);
+  }
+  if (from.insert_date().size() > 0) {
+
+    insert_date_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.insert_date_);
+  }
+  if (from.insert_time().size() > 0) {
+
+    insert_time_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.insert_time_);
+  }
+  if (from.active_time().size() > 0) {
+
+    active_time_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.active_time_);
+  }
+  if (from.suspend_time().size() > 0) {
+
+    suspend_time_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.suspend_time_);
+  }
+  if (from.update_time().size() > 0) {
+
+    update_time_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.update_time_);
+  }
+  if (from.cancel_time().size() > 0) {
+
+    cancel_time_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.cancel_time_);
+  }
+  if (from.active_trader_id().size() > 0) {
+
+    active_trader_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.active_trader_id_);
+  }
+  if (from.clearing_part_id().size() > 0) {
+
+    clearing_part_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.clearing_part_id_);
   }
   if (from.user_product_info().size() > 0) {
 
     user_product_info_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.user_product_info_);
   }
-  if (from.exchange_order_id().size() > 0) {
+  if (from.status_msg().size() > 0) {
 
-    exchange_order_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.exchange_order_id_);
+    status_msg_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.status_msg_);
   }
-  if (from.route_account_id().size() > 0) {
+  if (from.active_user_id().size() > 0) {
 
-    route_account_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.route_account_id_);
+    active_user_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.active_user_id_);
   }
-  if (from.token().size() > 0) {
+  if (from.relative_order_sys_id().size() > 0) {
 
-    token_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.token_);
+    relative_order_sys_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.relative_order_sys_id_);
   }
-  if (from.symbol_name().size() > 0) {
+  if (from.branch_id().size() > 0) {
 
-    symbol_name_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.symbol_name_);
+    branch_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.branch_id_);
   }
-  if (from.reason_comment().size() > 0) {
+  if (from.invest_unit_id().size() > 0) {
 
-    reason_comment_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.reason_comment_);
+    invest_unit_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.invest_unit_id_);
   }
-  if (from.has_symbol()) {
-    mutable_symbol()->::pb::Symbol::MergeFrom(from.symbol());
+  if (from.account_id().size() > 0) {
+
+    account_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.account_id_);
   }
-  if (from.has_id()) {
-    mutable_id()->::pb::CTPOrderID::MergeFrom(from.id());
+  if (from.currency_id().size() > 0) {
+
+    currency_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.currency_id_);
   }
-  if (from.has_product_id()) {
-    mutable_product_id()->::pb::ProductID::MergeFrom(from.product_id());
+  if (from.ip_address().size() > 0) {
+
+    ip_address_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.ip_address_);
+  }
+  if (from.mac_address().size() > 0) {
+
+    mac_address_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.mac_address_);
+  }
+  if (from.order_price_type() != 0) {
+    set_order_price_type(from.order_price_type());
   }
   if (from.direction() != 0) {
     set_direction(from.direction());
   }
-  if (from.status() != 0) {
-    set_status(from.status());
+  if (from.comb_offset_flag() != 0) {
+    set_comb_offset_flag(from.comb_offset_flag());
+  }
+  if (from.comb_hedge_flag() != 0) {
+    set_comb_hedge_flag(from.comb_hedge_flag());
   }
   if (from.limit_price() != 0) {
     set_limit_price(from.limit_price());
   }
-  if (from.price_type() != 0) {
-    set_price_type(from.price_type());
+  if (from.volume_total_original() != 0) {
+    set_volume_total_original(from.volume_total_original());
   }
-  if (from.volume() != 0) {
-    set_volume(from.volume());
+  if (from.time_condition() != 0) {
+    set_time_condition(from.time_condition());
   }
-  if (from.volume_traded() != 0) {
-    set_volume_traded(from.volume_traded());
+  if (from.volume_condition() != 0) {
+    set_volume_condition(from.volume_condition());
   }
-  if (from.volume_canceled() != 0) {
-    set_volume_canceled(from.volume_canceled());
+  if (from.min_volume() != 0) {
+    set_min_volume(from.min_volume());
   }
-  if (from.frozen_commission() != 0) {
-    set_frozen_commission(from.frozen_commission());
+  if (from.stop_price() != 0) {
+    set_stop_price(from.stop_price());
   }
-  if (from.send_order_time() != 0) {
-    set_send_order_time(from.send_order_time());
+  if (from.contingent_condition() != 0) {
+    set_contingent_condition(from.contingent_condition());
   }
-  if (from.send_order_trading_day() != 0) {
-    set_send_order_trading_day(from.send_order_trading_day());
+  if (from.force_close_reason() != 0) {
+    set_force_close_reason(from.force_close_reason());
   }
   if (from.request_id() != 0) {
     set_request_id(from.request_id());
   }
-  if (from.local_order_seq() != 0) {
-    set_local_order_seq(from.local_order_seq());
+  if (from.install_id() != 0) {
+    set_install_id(from.install_id());
   }
-  if (from.force_close_type() != 0) {
-    set_force_close_type(from.force_close_type());
+  if (from.order_submit_status() != 0) {
+    set_order_submit_status(from.order_submit_status());
   }
-  if (from.order_source_type() != 0) {
-    set_order_source_type(from.order_source_type());
+  if (from.notify_sequence() != 0) {
+    set_notify_sequence(from.notify_sequence());
   }
-  if (from.order_hedge_type() != 0) {
-    set_order_hedge_type(from.order_hedge_type());
+  if (from.trading_day() != 0) {
+    set_trading_day(from.trading_day());
   }
-  if (from.currency_type() != 0) {
-    set_currency_type(from.currency_type());
+  if (from.settlement_id() != 0) {
+    set_settlement_id(from.settlement_id());
   }
-  if (from.time_condition_type() != 0) {
-    set_time_condition_type(from.time_condition_type());
+  if (from.order_source() != 0) {
+    set_order_source(from.order_source());
   }
-  if (from.commission() != 0) {
-    set_commission(from.commission());
+  if (from.order_status() != 0) {
+    set_order_status(from.order_status());
   }
-  if (from.local_type_id() != 0) {
-    set_local_type_id(from.local_type_id());
+  if (from.order_type() != 0) {
+    set_order_type(from.order_type());
   }
-  if (from.offset_flag() != 0) {
-    set_offset_flag(from.offset_flag());
+  if (from.volume_traded() != 0) {
+    set_volume_traded(from.volume_traded());
   }
-  if (from.stoploss() != 0) {
-    set_stoploss(from.stoploss());
+  if (from.volume_total() != 0) {
+    set_volume_total(from.volume_total());
   }
-  if (from.error_code() != 0) {
-    set_error_code(from.error_code());
+  if (from.is_auto_suspend() != 0) {
+    set_is_auto_suspend(from.is_auto_suspend());
   }
-  if (from.volume_multiple() != 0) {
-    set_volume_multiple(from.volume_multiple());
+  if (from.user_force_close() != 0) {
+    set_user_force_close(from.user_force_close());
   }
-  if (from.take_profit() != 0) {
-    set_take_profit(from.take_profit());
+  if (from.is_swap_order() != 0) {
+    set_is_swap_order(from.is_swap_order());
   }
-  if (from.traded_amount() != 0) {
-    set_traded_amount(from.traded_amount());
+  if (from.sequence_no() != 0) {
+    set_sequence_no(from.sequence_no());
   }
-  if (from.price_tick() != 0) {
-    set_price_tick(from.price_tick());
+  if (from.front_id() != 0) {
+    set_front_id(from.front_id());
   }
-  if (from.frozen_margin() != 0) {
-    set_frozen_margin(from.frozen_margin());
+  if (from.session_id() != 0) {
+    set_session_id(from.session_id());
+  }
+  if (from.broker_order_seq() != 0) {
+    set_broker_order_seq(from.broker_order_seq());
+  }
+  if (from.zce_total_traded_volume() != 0) {
+    set_zce_total_traded_volume(from.zce_total_traded_volume());
   }
 }
 
-void CTPOrder::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:pb.CTPOrder)
+void CTPOrderField::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:pb.CTPOrderField)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-void CTPOrder::CopyFrom(const CTPOrder& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:pb.CTPOrder)
+void CTPOrderField::CopyFrom(const CTPOrderField& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:pb.CTPOrderField)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool CTPOrder::IsInitialized() const {
+bool CTPOrderField::IsInitialized() const {
   return true;
 }
 
-void CTPOrder::Swap(CTPOrder* other) {
+void CTPOrderField::Swap(CTPOrderField* other) {
   if (other == this) return;
   InternalSwap(other);
 }
-void CTPOrder::InternalSwap(CTPOrder* other) {
+void CTPOrderField::InternalSwap(CTPOrderField* other) {
   using std::swap;
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  account_id_.Swap(&other->account_id_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+  broker_id_.Swap(&other->broker_id_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
-  comment_.Swap(&other->comment_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+  investor_id_.Swap(&other->investor_id_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  instrument_id_.Swap(&other->instrument_id_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  order_ref_.Swap(&other->order_ref_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  user_id_.Swap(&other->user_id_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  gtd_date_.Swap(&other->gtd_date_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  business_unit_.Swap(&other->business_unit_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  order_local_id_.Swap(&other->order_local_id_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  exchange_id_.Swap(&other->exchange_id_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  participant_id_.Swap(&other->participant_id_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  client_id_.Swap(&other->client_id_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  exchange_inst_id_.Swap(&other->exchange_inst_id_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  trader_id_.Swap(&other->trader_id_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  order_sys_id_.Swap(&other->order_sys_id_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  insert_date_.Swap(&other->insert_date_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  insert_time_.Swap(&other->insert_time_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  active_time_.Swap(&other->active_time_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  suspend_time_.Swap(&other->suspend_time_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  update_time_.Swap(&other->update_time_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  cancel_time_.Swap(&other->cancel_time_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  active_trader_id_.Swap(&other->active_trader_id_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  clearing_part_id_.Swap(&other->clearing_part_id_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
   user_product_info_.Swap(&other->user_product_info_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
-  exchange_order_id_.Swap(&other->exchange_order_id_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+  status_msg_.Swap(&other->status_msg_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
-  route_account_id_.Swap(&other->route_account_id_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+  active_user_id_.Swap(&other->active_user_id_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
-  token_.Swap(&other->token_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+  relative_order_sys_id_.Swap(&other->relative_order_sys_id_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
-  symbol_name_.Swap(&other->symbol_name_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+  branch_id_.Swap(&other->branch_id_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
-  reason_comment_.Swap(&other->reason_comment_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+  invest_unit_id_.Swap(&other->invest_unit_id_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
-  swap(symbol_, other->symbol_);
-  swap(id_, other->id_);
-  swap(product_id_, other->product_id_);
+  account_id_.Swap(&other->account_id_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  currency_id_.Swap(&other->currency_id_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  ip_address_.Swap(&other->ip_address_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  mac_address_.Swap(&other->mac_address_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  swap(order_price_type_, other->order_price_type_);
   swap(direction_, other->direction_);
-  swap(status_, other->status_);
+  swap(comb_offset_flag_, other->comb_offset_flag_);
+  swap(comb_hedge_flag_, other->comb_hedge_flag_);
   swap(limit_price_, other->limit_price_);
-  swap(price_type_, other->price_type_);
-  swap(volume_, other->volume_);
-  swap(volume_traded_, other->volume_traded_);
-  swap(volume_canceled_, other->volume_canceled_);
-  swap(frozen_commission_, other->frozen_commission_);
-  swap(send_order_time_, other->send_order_time_);
-  swap(send_order_trading_day_, other->send_order_trading_day_);
+  swap(volume_total_original_, other->volume_total_original_);
+  swap(time_condition_, other->time_condition_);
+  swap(volume_condition_, other->volume_condition_);
+  swap(min_volume_, other->min_volume_);
+  swap(stop_price_, other->stop_price_);
+  swap(contingent_condition_, other->contingent_condition_);
+  swap(force_close_reason_, other->force_close_reason_);
   swap(request_id_, other->request_id_);
-  swap(local_order_seq_, other->local_order_seq_);
-  swap(force_close_type_, other->force_close_type_);
-  swap(order_source_type_, other->order_source_type_);
-  swap(order_hedge_type_, other->order_hedge_type_);
-  swap(currency_type_, other->currency_type_);
-  swap(time_condition_type_, other->time_condition_type_);
-  swap(commission_, other->commission_);
-  swap(local_type_id_, other->local_type_id_);
-  swap(offset_flag_, other->offset_flag_);
-  swap(stoploss_, other->stoploss_);
-  swap(error_code_, other->error_code_);
-  swap(volume_multiple_, other->volume_multiple_);
-  swap(take_profit_, other->take_profit_);
-  swap(traded_amount_, other->traded_amount_);
-  swap(price_tick_, other->price_tick_);
-  swap(frozen_margin_, other->frozen_margin_);
+  swap(install_id_, other->install_id_);
+  swap(order_submit_status_, other->order_submit_status_);
+  swap(notify_sequence_, other->notify_sequence_);
+  swap(trading_day_, other->trading_day_);
+  swap(settlement_id_, other->settlement_id_);
+  swap(order_source_, other->order_source_);
+  swap(order_status_, other->order_status_);
+  swap(order_type_, other->order_type_);
+  swap(volume_traded_, other->volume_traded_);
+  swap(volume_total_, other->volume_total_);
+  swap(is_auto_suspend_, other->is_auto_suspend_);
+  swap(user_force_close_, other->user_force_close_);
+  swap(is_swap_order_, other->is_swap_order_);
+  swap(sequence_no_, other->sequence_no_);
+  swap(front_id_, other->front_id_);
+  swap(session_id_, other->session_id_);
+  swap(broker_order_seq_, other->broker_order_seq_);
+  swap(zce_total_traded_volume_, other->zce_total_traded_volume_);
 }
 
-::google::protobuf::Metadata CTPOrder::GetMetadata() const {
+::google::protobuf::Metadata CTPOrderField::GetMetadata() const {
   ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_ctp_2eproto);
   return ::file_level_metadata_ctp_2eproto[kIndexInFileMessages];
 }
@@ -4773,13 +6498,13 @@ const char* CTPOrderList::_InternalParse(const char* begin, const char* end, voi
     ptr = ::google::protobuf::io::Parse32(ptr, &tag);
     GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
     switch (tag >> 3) {
-      // repeated .pb.CTPOrder list = 1;
+      // repeated .pb.CTPOrderField list = 1;
       case 1: {
         if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
         do {
           ptr = ::google::protobuf::io::ReadSize(ptr, &size);
           GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-          parser_till_end = ::pb::CTPOrder::_InternalParse;
+          parser_till_end = ::pb::CTPOrderField::_InternalParse;
           object = msg->add_list();
           if (size > end - ptr) goto len_delim_till_end;
           ptr += size;
@@ -4819,7 +6544,7 @@ bool CTPOrderList::MergePartialFromCodedStream(
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // repeated .pb.CTPOrder list = 1;
+      // repeated .pb.CTPOrderField list = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
@@ -4857,7 +6582,7 @@ void CTPOrderList::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated .pb.CTPOrder list = 1;
+  // repeated .pb.CTPOrderField list = 1;
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->list_size()); i < n; i++) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
@@ -4879,7 +6604,7 @@ void CTPOrderList::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated .pb.CTPOrder list = 1;
+  // repeated .pb.CTPOrderField list = 1;
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->list_size()); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
@@ -4908,7 +6633,7 @@ size_t CTPOrderList::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated .pb.CTPOrder list = 1;
+  // repeated .pb.CTPOrderField list = 1;
   {
     unsigned int count = static_cast<unsigned int>(this->list_size());
     total_size += 1UL * count;
@@ -4986,15 +6711,15 @@ void CTPOrderList::InternalSwap(CTPOrderList* other) {
 // ===================================================================
 
 void CTPOrderLink::InitAsDefaultInstance() {
-  ::pb::_CTPOrderLink_default_instance_._instance.get_mutable()->parent_ = const_cast< ::pb::CTPOrder*>(
-      ::pb::CTPOrder::internal_default_instance());
+  ::pb::_CTPOrderLink_default_instance_._instance.get_mutable()->parent_ = const_cast< ::pb::CTPOrderField*>(
+      ::pb::CTPOrderField::internal_default_instance());
 }
 class CTPOrderLink::HasBitSetters {
  public:
-  static const ::pb::CTPOrder& parent(const CTPOrderLink* msg);
+  static const ::pb::CTPOrderField& parent(const CTPOrderLink* msg);
 };
 
-const ::pb::CTPOrder&
+const ::pb::CTPOrderField&
 CTPOrderLink::HasBitSetters::parent(const CTPOrderLink* msg) {
   return *msg->parent_;
 }
@@ -5014,7 +6739,7 @@ CTPOrderLink::CTPOrderLink(const CTPOrderLink& from)
       children_(from.children_) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   if (from.has_parent()) {
-    parent_ = new ::pb::CTPOrder(*from.parent_);
+    parent_ = new ::pb::CTPOrderField(*from.parent_);
   } else {
     parent_ = nullptr;
   }
@@ -5072,12 +6797,12 @@ const char* CTPOrderLink::_InternalParse(const char* begin, const char* end, voi
     ptr = ::google::protobuf::io::Parse32(ptr, &tag);
     GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
     switch (tag >> 3) {
-      // .pb.CTPOrder parent = 1;
+      // .pb.CTPOrderField parent = 1;
       case 1: {
         if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
         ptr = ::google::protobuf::io::ReadSize(ptr, &size);
         GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::pb::CTPOrder::_InternalParse;
+        parser_till_end = ::pb::CTPOrderField::_InternalParse;
         object = msg->mutable_parent();
         if (size > end - ptr) goto len_delim_till_end;
         ptr += size;
@@ -5085,13 +6810,13 @@ const char* CTPOrderLink::_InternalParse(const char* begin, const char* end, voi
             {parser_till_end, object}, ptr - size, ptr));
         break;
       }
-      // repeated .pb.CTPOrder children = 2;
+      // repeated .pb.CTPOrderField children = 2;
       case 2: {
         if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
         do {
           ptr = ::google::protobuf::io::ReadSize(ptr, &size);
           GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-          parser_till_end = ::pb::CTPOrder::_InternalParse;
+          parser_till_end = ::pb::CTPOrderField::_InternalParse;
           object = msg->add_children();
           if (size > end - ptr) goto len_delim_till_end;
           ptr += size;
@@ -5131,7 +6856,7 @@ bool CTPOrderLink::MergePartialFromCodedStream(
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // .pb.CTPOrder parent = 1;
+      // .pb.CTPOrderField parent = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
@@ -5142,7 +6867,7 @@ bool CTPOrderLink::MergePartialFromCodedStream(
         break;
       }
 
-      // repeated .pb.CTPOrder children = 2;
+      // repeated .pb.CTPOrderField children = 2;
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
@@ -5180,13 +6905,13 @@ void CTPOrderLink::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .pb.CTPOrder parent = 1;
+  // .pb.CTPOrderField parent = 1;
   if (this->has_parent()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
       1, HasBitSetters::parent(this), output);
   }
 
-  // repeated .pb.CTPOrder children = 2;
+  // repeated .pb.CTPOrderField children = 2;
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->children_size()); i < n; i++) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
@@ -5208,14 +6933,14 @@ void CTPOrderLink::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .pb.CTPOrder parent = 1;
+  // .pb.CTPOrderField parent = 1;
   if (this->has_parent()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
         1, HasBitSetters::parent(this), target);
   }
 
-  // repeated .pb.CTPOrder children = 2;
+  // repeated .pb.CTPOrderField children = 2;
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->children_size()); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
@@ -5244,7 +6969,7 @@ size_t CTPOrderLink::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated .pb.CTPOrder children = 2;
+  // repeated .pb.CTPOrderField children = 2;
   {
     unsigned int count = static_cast<unsigned int>(this->children_size());
     total_size += 1UL * count;
@@ -5255,7 +6980,7 @@ size_t CTPOrderLink::ByteSizeLong() const {
     }
   }
 
-  // .pb.CTPOrder parent = 1;
+  // .pb.CTPOrderField parent = 1;
   if (this->has_parent()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSize(
@@ -5291,7 +7016,7 @@ void CTPOrderLink::MergeFrom(const CTPOrderLink& from) {
 
   children_.MergeFrom(from.children_);
   if (from.has_parent()) {
-    mutable_parent()->::pb::CTPOrder::MergeFrom(from.parent());
+    mutable_parent()->::pb::CTPOrderField::MergeFrom(from.parent());
   }
 }
 
@@ -6910,170 +8635,228 @@ void CTPOnRtnCancelOrder::InternalSwap(CTPOnRtnCancelOrder* other) {
 
 // ===================================================================
 
-void CTPTradeReport::InitAsDefaultInstance() {
-  ::pb::_CTPTradeReport_default_instance_._instance.get_mutable()->symbol_ = const_cast< ::pb::Symbol*>(
-      ::pb::Symbol::internal_default_instance());
-  ::pb::_CTPTradeReport_default_instance_._instance.get_mutable()->order_id_ = const_cast< ::pb::CTPOrderID*>(
-      ::pb::CTPOrderID::internal_default_instance());
+void CTPTradeField::InitAsDefaultInstance() {
 }
-class CTPTradeReport::HasBitSetters {
+class CTPTradeField::HasBitSetters {
  public:
-  static const ::pb::Symbol& symbol(const CTPTradeReport* msg);
-  static const ::pb::CTPOrderID& order_id(const CTPTradeReport* msg);
 };
 
-const ::pb::Symbol&
-CTPTradeReport::HasBitSetters::symbol(const CTPTradeReport* msg) {
-  return *msg->symbol_;
-}
-const ::pb::CTPOrderID&
-CTPTradeReport::HasBitSetters::order_id(const CTPTradeReport* msg) {
-  return *msg->order_id_;
-}
-void CTPTradeReport::clear_symbol() {
-  if (GetArenaNoVirtual() == nullptr && symbol_ != nullptr) {
-    delete symbol_;
-  }
-  symbol_ = nullptr;
-}
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int CTPTradeReport::kAccountIdFieldNumber;
-const int CTPTradeReport::kTradeIdFieldNumber;
-const int CTPTradeReport::kSymbolFieldNumber;
-const int CTPTradeReport::kDirectionFieldNumber;
-const int CTPTradeReport::kPriceFieldNumber;
-const int CTPTradeReport::kVolumeFieldNumber;
-const int CTPTradeReport::kTradedTimeFieldNumber;
-const int CTPTradeReport::kTradedTradingDayFieldNumber;
-const int CTPTradeReport::kOrderIdFieldNumber;
-const int CTPTradeReport::kPriceTypeFieldNumber;
-const int CTPTradeReport::kHedgeTypeFieldNumber;
-const int CTPTradeReport::kTradeTypeFieldNumber;
-const int CTPTradeReport::kCurrencyTypeFieldNumber;
-const int CTPTradeReport::kExchangeOrderIdFieldNumber;
-const int CTPTradeReport::kLocalTypeIdFieldNumber;
-const int CTPTradeReport::kCommissionFieldNumber;
-const int CTPTradeReport::kTaxFieldNumber;
-const int CTPTradeReport::kTotalOtherFeeFieldNumber;
-const int CTPTradeReport::kInitialTradedPriceFieldNumber;
-const int CTPTradeReport::kReserveFieldNumber;
-const int CTPTradeReport::kOffsetFlagFieldNumber;
-const int CTPTradeReport::kRouteAccountIdFieldNumber;
-const int CTPTradeReport::kSymbolNameFieldNumber;
-const int CTPTradeReport::kPriceTickFieldNumber;
+const int CTPTradeField::kBrokerIdFieldNumber;
+const int CTPTradeField::kInvestorIdFieldNumber;
+const int CTPTradeField::kInstrumentIdFieldNumber;
+const int CTPTradeField::kOrderRefFieldNumber;
+const int CTPTradeField::kUserIdFieldNumber;
+const int CTPTradeField::kExchangeIdFieldNumber;
+const int CTPTradeField::kTradeIdFieldNumber;
+const int CTPTradeField::kDirectionFieldNumber;
+const int CTPTradeField::kOrderSysIdFieldNumber;
+const int CTPTradeField::kParticipantIdFieldNumber;
+const int CTPTradeField::kClientIdFieldNumber;
+const int CTPTradeField::kTradingRoleFieldNumber;
+const int CTPTradeField::kExchangeInstIdFieldNumber;
+const int CTPTradeField::kOffsetFlagFieldNumber;
+const int CTPTradeField::kHedgeFlagFieldNumber;
+const int CTPTradeField::kPriceFieldNumber;
+const int CTPTradeField::kVolumeFieldNumber;
+const int CTPTradeField::kTradeDateFieldNumber;
+const int CTPTradeField::kTradeTimeFieldNumber;
+const int CTPTradeField::kTradeTypeFieldNumber;
+const int CTPTradeField::kPriceSourceFieldNumber;
+const int CTPTradeField::kTraderIdFieldNumber;
+const int CTPTradeField::kOrderLocalIdFieldNumber;
+const int CTPTradeField::kClearingPartIdFieldNumber;
+const int CTPTradeField::kBusinessUnitFieldNumber;
+const int CTPTradeField::kSequenceNoFieldNumber;
+const int CTPTradeField::kTradingDayFieldNumber;
+const int CTPTradeField::kSettlementIdFieldNumber;
+const int CTPTradeField::kBrokerOrderSeqFieldNumber;
+const int CTPTradeField::kTradeSourceFieldNumber;
+const int CTPTradeField::kInvestUnitIdFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
-CTPTradeReport::CTPTradeReport()
+CTPTradeField::CTPTradeField()
   : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:pb.CTPTradeReport)
+  // @@protoc_insertion_point(constructor:pb.CTPTradeField)
 }
-CTPTradeReport::CTPTradeReport(const CTPTradeReport& from)
+CTPTradeField::CTPTradeField(const CTPTradeField& from)
   : ::google::protobuf::Message(),
       _internal_metadata_(nullptr) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  account_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.account_id().size() > 0) {
-    account_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.account_id_);
+  broker_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.broker_id().size() > 0) {
+    broker_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.broker_id_);
+  }
+  investor_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.investor_id().size() > 0) {
+    investor_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.investor_id_);
+  }
+  instrument_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.instrument_id().size() > 0) {
+    instrument_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.instrument_id_);
+  }
+  order_ref_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.order_ref().size() > 0) {
+    order_ref_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.order_ref_);
+  }
+  user_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.user_id().size() > 0) {
+    user_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.user_id_);
+  }
+  exchange_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.exchange_id().size() > 0) {
+    exchange_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.exchange_id_);
   }
   trade_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (from.trade_id().size() > 0) {
     trade_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.trade_id_);
   }
-  exchange_order_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.exchange_order_id().size() > 0) {
-    exchange_order_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.exchange_order_id_);
+  order_sys_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.order_sys_id().size() > 0) {
+    order_sys_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.order_sys_id_);
   }
-  route_account_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.route_account_id().size() > 0) {
-    route_account_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.route_account_id_);
+  participant_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.participant_id().size() > 0) {
+    participant_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.participant_id_);
   }
-  symbol_name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.symbol_name().size() > 0) {
-    symbol_name_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.symbol_name_);
+  client_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.client_id().size() > 0) {
+    client_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.client_id_);
   }
-  if (from.has_symbol()) {
-    symbol_ = new ::pb::Symbol(*from.symbol_);
-  } else {
-    symbol_ = nullptr;
+  exchange_inst_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.exchange_inst_id().size() > 0) {
+    exchange_inst_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.exchange_inst_id_);
   }
-  if (from.has_order_id()) {
-    order_id_ = new ::pb::CTPOrderID(*from.order_id_);
-  } else {
-    order_id_ = nullptr;
+  trade_date_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.trade_date().size() > 0) {
+    trade_date_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.trade_date_);
   }
-  ::memcpy(&price_, &from.price_,
-    static_cast<size_t>(reinterpret_cast<char*>(&offset_flag_) -
-    reinterpret_cast<char*>(&price_)) + sizeof(offset_flag_));
-  // @@protoc_insertion_point(copy_constructor:pb.CTPTradeReport)
+  trade_time_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.trade_time().size() > 0) {
+    trade_time_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.trade_time_);
+  }
+  trader_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.trader_id().size() > 0) {
+    trader_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.trader_id_);
+  }
+  order_local_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.order_local_id().size() > 0) {
+    order_local_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.order_local_id_);
+  }
+  clearing_part_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.clearing_part_id().size() > 0) {
+    clearing_part_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.clearing_part_id_);
+  }
+  business_unit_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.business_unit().size() > 0) {
+    business_unit_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.business_unit_);
+  }
+  invest_unit_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.invest_unit_id().size() > 0) {
+    invest_unit_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.invest_unit_id_);
+  }
+  ::memcpy(&direction_, &from.direction_,
+    static_cast<size_t>(reinterpret_cast<char*>(&trade_source_) -
+    reinterpret_cast<char*>(&direction_)) + sizeof(trade_source_));
+  // @@protoc_insertion_point(copy_constructor:pb.CTPTradeField)
 }
 
-void CTPTradeReport::SharedCtor() {
+void CTPTradeField::SharedCtor() {
   ::google::protobuf::internal::InitSCC(
-      &scc_info_CTPTradeReport_ctp_2eproto.base);
-  account_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+      &scc_info_CTPTradeField_ctp_2eproto.base);
+  broker_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  investor_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  instrument_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  order_ref_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  user_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  exchange_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   trade_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  exchange_order_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  route_account_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  symbol_name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  ::memset(&symbol_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&offset_flag_) -
-      reinterpret_cast<char*>(&symbol_)) + sizeof(offset_flag_));
+  order_sys_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  participant_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  client_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  exchange_inst_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  trade_date_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  trade_time_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  trader_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  order_local_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clearing_part_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  business_unit_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  invest_unit_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  ::memset(&direction_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&trade_source_) -
+      reinterpret_cast<char*>(&direction_)) + sizeof(trade_source_));
 }
 
-CTPTradeReport::~CTPTradeReport() {
-  // @@protoc_insertion_point(destructor:pb.CTPTradeReport)
+CTPTradeField::~CTPTradeField() {
+  // @@protoc_insertion_point(destructor:pb.CTPTradeField)
   SharedDtor();
 }
 
-void CTPTradeReport::SharedDtor() {
-  account_id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+void CTPTradeField::SharedDtor() {
+  broker_id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  investor_id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  instrument_id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  order_ref_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  user_id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  exchange_id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   trade_id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  exchange_order_id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  route_account_id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  symbol_name_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (this != internal_default_instance()) delete symbol_;
-  if (this != internal_default_instance()) delete order_id_;
+  order_sys_id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  participant_id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  client_id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  exchange_inst_id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  trade_date_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  trade_time_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  trader_id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  order_local_id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clearing_part_id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  business_unit_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  invest_unit_id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 
-void CTPTradeReport::SetCachedSize(int size) const {
+void CTPTradeField::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const CTPTradeReport& CTPTradeReport::default_instance() {
-  ::google::protobuf::internal::InitSCC(&::scc_info_CTPTradeReport_ctp_2eproto.base);
+const CTPTradeField& CTPTradeField::default_instance() {
+  ::google::protobuf::internal::InitSCC(&::scc_info_CTPTradeField_ctp_2eproto.base);
   return *internal_default_instance();
 }
 
 
-void CTPTradeReport::Clear() {
-// @@protoc_insertion_point(message_clear_start:pb.CTPTradeReport)
+void CTPTradeField::Clear() {
+// @@protoc_insertion_point(message_clear_start:pb.CTPTradeField)
   ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  account_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  broker_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  investor_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  instrument_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  order_ref_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  user_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  exchange_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   trade_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  exchange_order_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  route_account_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  symbol_name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (GetArenaNoVirtual() == nullptr && symbol_ != nullptr) {
-    delete symbol_;
-  }
-  symbol_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && order_id_ != nullptr) {
-    delete order_id_;
-  }
-  order_id_ = nullptr;
-  ::memset(&price_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&offset_flag_) -
-      reinterpret_cast<char*>(&price_)) + sizeof(offset_flag_));
+  order_sys_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  participant_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  client_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  exchange_inst_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  trade_date_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  trade_time_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  trader_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  order_local_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clearing_part_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  business_unit_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  invest_unit_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  ::memset(&direction_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&trade_source_) -
+      reinterpret_cast<char*>(&direction_)) + sizeof(trade_source_));
   _internal_metadata_.Clear();
 }
 
 #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-const char* CTPTradeReport::_InternalParse(const char* begin, const char* end, void* object,
+const char* CTPTradeField::_InternalParse(const char* begin, const char* end, void* object,
                   ::google::protobuf::internal::ParseContext* ctx) {
-  auto msg = static_cast<CTPTradeReport*>(object);
+  auto msg = static_cast<CTPTradeField*>(object);
   ::google::protobuf::int32 size; (void)size;
   int depth; (void)depth;
   ::google::protobuf::uint32 tag;
@@ -7083,13 +8866,13 @@ const char* CTPTradeReport::_InternalParse(const char* begin, const char* end, v
     ptr = ::google::protobuf::io::Parse32(ptr, &tag);
     GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
     switch (tag >> 3) {
-      // string account_id = 1;
+      // string broker_id = 1;
       case 1: {
         if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
         ptr = ::google::protobuf::io::ReadSize(ptr, &size);
         GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        ctx->extra_parse_data().SetFieldName("pb.CTPTradeReport.account_id");
-        object = msg->mutable_account_id();
+        ctx->extra_parse_data().SetFieldName("pb.CTPTradeField.broker_id");
+        object = msg->mutable_broker_id();
         if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
           parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
           goto string_till_end;
@@ -7099,12 +8882,92 @@ const char* CTPTradeReport::_InternalParse(const char* begin, const char* end, v
         ptr += size;
         break;
       }
-      // string trade_id = 2;
+      // string investor_id = 2;
       case 2: {
         if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
         ptr = ::google::protobuf::io::ReadSize(ptr, &size);
         GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        ctx->extra_parse_data().SetFieldName("pb.CTPTradeReport.trade_id");
+        ctx->extra_parse_data().SetFieldName("pb.CTPTradeField.investor_id");
+        object = msg->mutable_investor_id();
+        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
+          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
+          goto string_till_end;
+        }
+        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
+        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
+        ptr += size;
+        break;
+      }
+      // string instrument_id = 3;
+      case 3: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 26) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        ctx->extra_parse_data().SetFieldName("pb.CTPTradeField.instrument_id");
+        object = msg->mutable_instrument_id();
+        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
+          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
+          goto string_till_end;
+        }
+        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
+        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
+        ptr += size;
+        break;
+      }
+      // string order_ref = 4;
+      case 4: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 34) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        ctx->extra_parse_data().SetFieldName("pb.CTPTradeField.order_ref");
+        object = msg->mutable_order_ref();
+        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
+          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
+          goto string_till_end;
+        }
+        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
+        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
+        ptr += size;
+        break;
+      }
+      // string user_id = 5;
+      case 5: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 42) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        ctx->extra_parse_data().SetFieldName("pb.CTPTradeField.user_id");
+        object = msg->mutable_user_id();
+        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
+          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
+          goto string_till_end;
+        }
+        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
+        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
+        ptr += size;
+        break;
+      }
+      // string exchange_id = 6;
+      case 6: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 50) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        ctx->extra_parse_data().SetFieldName("pb.CTPTradeField.exchange_id");
+        object = msg->mutable_exchange_id();
+        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
+          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
+          goto string_till_end;
+        }
+        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
+        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
+        ptr += size;
+        break;
+      }
+      // string trade_id = 7;
+      case 7: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 58) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        ctx->extra_parse_data().SetFieldName("pb.CTPTradeField.trade_id");
         object = msg->mutable_trade_id();
         if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
           parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
@@ -7115,106 +8978,20 @@ const char* CTPTradeReport::_InternalParse(const char* begin, const char* end, v
         ptr += size;
         break;
       }
-      // .pb.Symbol symbol = 3;
-      case 3: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 26) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::pb::Symbol::_InternalParse;
-        object = msg->mutable_symbol();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
-      // .pb.CTPDirection direction = 4;
-      case 4: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 32) goto handle_unusual;
-        ::google::protobuf::uint64 val = ::google::protobuf::internal::ReadVarint(&ptr);
-        msg->set_direction(static_cast<::pb::CTPDirection>(val));
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        break;
-      }
-      // double price = 5;
-      case 5: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 41) goto handle_unusual;
-        msg->set_price(::google::protobuf::io::UnalignedLoad<double>(ptr));
-        ptr += sizeof(double);
-        break;
-      }
-      // int32 volume = 6;
-      case 6: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 48) goto handle_unusual;
-        msg->set_volume(::google::protobuf::internal::ReadVarint(&ptr));
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        break;
-      }
-      // int64 traded_time = 7;
-      case 7: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 56) goto handle_unusual;
-        msg->set_traded_time(::google::protobuf::internal::ReadVarint(&ptr));
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        break;
-      }
-      // int32 traded_trading_day = 8;
+      // int32 direction = 8;
       case 8: {
         if (static_cast<::google::protobuf::uint8>(tag) != 64) goto handle_unusual;
-        msg->set_traded_trading_day(::google::protobuf::internal::ReadVarint(&ptr));
+        msg->set_direction(::google::protobuf::internal::ReadVarint(&ptr));
         GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
         break;
       }
-      // .pb.CTPOrderID order_id = 9;
+      // string order_sys_id = 9;
       case 9: {
         if (static_cast<::google::protobuf::uint8>(tag) != 74) goto handle_unusual;
         ptr = ::google::protobuf::io::ReadSize(ptr, &size);
         GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::pb::CTPOrderID::_InternalParse;
-        object = msg->mutable_order_id();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
-      // .pb.CTPPriceType price_type = 10;
-      case 10: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 80) goto handle_unusual;
-        ::google::protobuf::uint64 val = ::google::protobuf::internal::ReadVarint(&ptr);
-        msg->set_price_type(static_cast<::pb::CTPPriceType>(val));
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        break;
-      }
-      // .pb.CTPHedgeType hedge_type = 11;
-      case 11: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 88) goto handle_unusual;
-        ::google::protobuf::uint64 val = ::google::protobuf::internal::ReadVarint(&ptr);
-        msg->set_hedge_type(static_cast<::pb::CTPHedgeType>(val));
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        break;
-      }
-      // .pb.CTPTradeType trade_type = 12;
-      case 12: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 96) goto handle_unusual;
-        ::google::protobuf::uint64 val = ::google::protobuf::internal::ReadVarint(&ptr);
-        msg->set_trade_type(static_cast<::pb::CTPTradeType>(val));
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        break;
-      }
-      // int32 currency_type = 13;
-      case 13: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 104) goto handle_unusual;
-        msg->set_currency_type(::google::protobuf::internal::ReadVarint(&ptr));
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        break;
-      }
-      // string exchange_order_id = 14;
-      case 14: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 114) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        ctx->extra_parse_data().SetFieldName("pb.CTPTradeReport.exchange_order_id");
-        object = msg->mutable_exchange_order_id();
+        ctx->extra_parse_data().SetFieldName("pb.CTPTradeField.order_sys_id");
+        object = msg->mutable_order_sys_id();
         if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
           parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
           goto string_till_end;
@@ -7224,63 +9001,142 @@ const char* CTPTradeReport::_InternalParse(const char* begin, const char* end, v
         ptr += size;
         break;
       }
-      // int32 local_type_id = 15;
+      // string participant_id = 10;
+      case 10: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 82) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        ctx->extra_parse_data().SetFieldName("pb.CTPTradeField.participant_id");
+        object = msg->mutable_participant_id();
+        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
+          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
+          goto string_till_end;
+        }
+        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
+        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
+        ptr += size;
+        break;
+      }
+      // string client_id = 11;
+      case 11: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 90) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        ctx->extra_parse_data().SetFieldName("pb.CTPTradeField.client_id");
+        object = msg->mutable_client_id();
+        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
+          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
+          goto string_till_end;
+        }
+        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
+        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
+        ptr += size;
+        break;
+      }
+      // int32 trading_role = 12;
+      case 12: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 96) goto handle_unusual;
+        msg->set_trading_role(::google::protobuf::internal::ReadVarint(&ptr));
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        break;
+      }
+      // string exchange_inst_id = 13;
+      case 13: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 106) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        ctx->extra_parse_data().SetFieldName("pb.CTPTradeField.exchange_inst_id");
+        object = msg->mutable_exchange_inst_id();
+        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
+          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
+          goto string_till_end;
+        }
+        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
+        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
+        ptr += size;
+        break;
+      }
+      // int32 offset_flag = 14;
+      case 14: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 112) goto handle_unusual;
+        msg->set_offset_flag(::google::protobuf::internal::ReadVarint(&ptr));
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        break;
+      }
+      // int32 hedge_flag = 15;
       case 15: {
         if (static_cast<::google::protobuf::uint8>(tag) != 120) goto handle_unusual;
-        msg->set_local_type_id(::google::protobuf::internal::ReadVarint(&ptr));
+        msg->set_hedge_flag(::google::protobuf::internal::ReadVarint(&ptr));
         GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
         break;
       }
-      // double commission = 16;
+      // double price = 16;
       case 16: {
         if (static_cast<::google::protobuf::uint8>(tag) != 129) goto handle_unusual;
-        msg->set_commission(::google::protobuf::io::UnalignedLoad<double>(ptr));
+        msg->set_price(::google::protobuf::io::UnalignedLoad<double>(ptr));
         ptr += sizeof(double);
         break;
       }
-      // double tax = 17;
+      // int32 volume = 17;
       case 17: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 137) goto handle_unusual;
-        msg->set_tax(::google::protobuf::io::UnalignedLoad<double>(ptr));
-        ptr += sizeof(double);
-        break;
-      }
-      // double total_other_fee = 18;
-      case 18: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 145) goto handle_unusual;
-        msg->set_total_other_fee(::google::protobuf::io::UnalignedLoad<double>(ptr));
-        ptr += sizeof(double);
-        break;
-      }
-      // double initial_traded_price = 19;
-      case 19: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 153) goto handle_unusual;
-        msg->set_initial_traded_price(::google::protobuf::io::UnalignedLoad<double>(ptr));
-        ptr += sizeof(double);
-        break;
-      }
-      // double reserve = 20;
-      case 20: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 161) goto handle_unusual;
-        msg->set_reserve(::google::protobuf::io::UnalignedLoad<double>(ptr));
-        ptr += sizeof(double);
-        break;
-      }
-      // .pb.CTPOffsetFlag offset_flag = 21;
-      case 21: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 168) goto handle_unusual;
-        ::google::protobuf::uint64 val = ::google::protobuf::internal::ReadVarint(&ptr);
-        msg->set_offset_flag(static_cast<::pb::CTPOffsetFlag>(val));
+        if (static_cast<::google::protobuf::uint8>(tag) != 136) goto handle_unusual;
+        msg->set_volume(::google::protobuf::internal::ReadVarint(&ptr));
         GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
         break;
       }
-      // string route_account_id = 22;
+      // string trade_date = 18;
+      case 18: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 146) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        ctx->extra_parse_data().SetFieldName("pb.CTPTradeField.trade_date");
+        object = msg->mutable_trade_date();
+        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
+          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
+          goto string_till_end;
+        }
+        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
+        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
+        ptr += size;
+        break;
+      }
+      // string trade_time = 19;
+      case 19: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 154) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        ctx->extra_parse_data().SetFieldName("pb.CTPTradeField.trade_time");
+        object = msg->mutable_trade_time();
+        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
+          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
+          goto string_till_end;
+        }
+        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
+        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
+        ptr += size;
+        break;
+      }
+      // int32 trade_type = 20;
+      case 20: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 160) goto handle_unusual;
+        msg->set_trade_type(::google::protobuf::internal::ReadVarint(&ptr));
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        break;
+      }
+      // int32 price_source = 21;
+      case 21: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 168) goto handle_unusual;
+        msg->set_price_source(::google::protobuf::internal::ReadVarint(&ptr));
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        break;
+      }
+      // string trader_id = 22;
       case 22: {
         if (static_cast<::google::protobuf::uint8>(tag) != 178) goto handle_unusual;
         ptr = ::google::protobuf::io::ReadSize(ptr, &size);
         GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        ctx->extra_parse_data().SetFieldName("pb.CTPTradeReport.route_account_id");
-        object = msg->mutable_route_account_id();
+        ctx->extra_parse_data().SetFieldName("pb.CTPTradeField.trader_id");
+        object = msg->mutable_trader_id();
         if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
           parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
           goto string_till_end;
@@ -7290,13 +9146,13 @@ const char* CTPTradeReport::_InternalParse(const char* begin, const char* end, v
         ptr += size;
         break;
       }
-      // string symbol_name = 23;
+      // string order_local_id = 23;
       case 23: {
         if (static_cast<::google::protobuf::uint8>(tag) != 186) goto handle_unusual;
         ptr = ::google::protobuf::io::ReadSize(ptr, &size);
         GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        ctx->extra_parse_data().SetFieldName("pb.CTPTradeReport.symbol_name");
-        object = msg->mutable_symbol_name();
+        ctx->extra_parse_data().SetFieldName("pb.CTPTradeField.order_local_id");
+        object = msg->mutable_order_local_id();
         if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
           parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
           goto string_till_end;
@@ -7306,11 +9162,87 @@ const char* CTPTradeReport::_InternalParse(const char* begin, const char* end, v
         ptr += size;
         break;
       }
-      // double price_tick = 24;
+      // string clearing_part_id = 24;
       case 24: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 193) goto handle_unusual;
-        msg->set_price_tick(::google::protobuf::io::UnalignedLoad<double>(ptr));
-        ptr += sizeof(double);
+        if (static_cast<::google::protobuf::uint8>(tag) != 194) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        ctx->extra_parse_data().SetFieldName("pb.CTPTradeField.clearing_part_id");
+        object = msg->mutable_clearing_part_id();
+        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
+          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
+          goto string_till_end;
+        }
+        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
+        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
+        ptr += size;
+        break;
+      }
+      // string business_unit = 25;
+      case 25: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 202) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        ctx->extra_parse_data().SetFieldName("pb.CTPTradeField.business_unit");
+        object = msg->mutable_business_unit();
+        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
+          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
+          goto string_till_end;
+        }
+        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
+        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
+        ptr += size;
+        break;
+      }
+      // int32 sequence_no = 26;
+      case 26: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 208) goto handle_unusual;
+        msg->set_sequence_no(::google::protobuf::internal::ReadVarint(&ptr));
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        break;
+      }
+      // int32 trading_day = 27;
+      case 27: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 216) goto handle_unusual;
+        msg->set_trading_day(::google::protobuf::internal::ReadVarint(&ptr));
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        break;
+      }
+      // int32 settlement_id = 28;
+      case 28: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 224) goto handle_unusual;
+        msg->set_settlement_id(::google::protobuf::internal::ReadVarint(&ptr));
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        break;
+      }
+      // int32 broker_order_seq = 29;
+      case 29: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 232) goto handle_unusual;
+        msg->set_broker_order_seq(::google::protobuf::internal::ReadVarint(&ptr));
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        break;
+      }
+      // int32 trade_source = 30;
+      case 30: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 240) goto handle_unusual;
+        msg->set_trade_source(::google::protobuf::internal::ReadVarint(&ptr));
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        break;
+      }
+      // string invest_unit_id = 31;
+      case 31: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 250) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        ctx->extra_parse_data().SetFieldName("pb.CTPTradeField.invest_unit_id");
+        object = msg->mutable_invest_unit_id();
+        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
+          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
+          goto string_till_end;
+        }
+        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
+        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
+        ptr += size;
         break;
       }
       default: {
@@ -7337,74 +9269,236 @@ len_delim_till_end:
                                {parser_till_end, object}, size);
 }
 #else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool CTPTradeReport::MergePartialFromCodedStream(
+bool CTPTradeField::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:pb.CTPTradeReport)
+  // @@protoc_insertion_point(parse_start:pb.CTPTradeField)
   for (;;) {
     ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(16383u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // string account_id = 1;
+      // string broker_id = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_account_id()));
+                input, this->mutable_broker_id()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->account_id().data(), static_cast<int>(this->account_id().length()),
+            this->broker_id().data(), static_cast<int>(this->broker_id().length()),
             ::google::protobuf::internal::WireFormatLite::PARSE,
-            "pb.CTPTradeReport.account_id"));
+            "pb.CTPTradeField.broker_id"));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // string trade_id = 2;
+      // string investor_id = 2;
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_investor_id()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->investor_id().data(), static_cast<int>(this->investor_id().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "pb.CTPTradeField.investor_id"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string instrument_id = 3;
+      case 3: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (26 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_instrument_id()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->instrument_id().data(), static_cast<int>(this->instrument_id().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "pb.CTPTradeField.instrument_id"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string order_ref = 4;
+      case 4: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (34 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_order_ref()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->order_ref().data(), static_cast<int>(this->order_ref().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "pb.CTPTradeField.order_ref"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string user_id = 5;
+      case 5: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (42 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_user_id()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->user_id().data(), static_cast<int>(this->user_id().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "pb.CTPTradeField.user_id"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string exchange_id = 6;
+      case 6: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (50 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_exchange_id()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->exchange_id().data(), static_cast<int>(this->exchange_id().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "pb.CTPTradeField.exchange_id"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string trade_id = 7;
+      case 7: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (58 & 0xFF)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_trade_id()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
             this->trade_id().data(), static_cast<int>(this->trade_id().length()),
             ::google::protobuf::internal::WireFormatLite::PARSE,
-            "pb.CTPTradeReport.trade_id"));
+            "pb.CTPTradeField.trade_id"));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // .pb.Symbol symbol = 3;
-      case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (26 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_symbol()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
+      // int32 direction = 8;
+      case 8: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (64 & 0xFF)) {
 
-      // .pb.CTPDirection direction = 4;
-      case 4: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (32 & 0xFF)) {
-          int value = 0;
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
-                 input, &value)));
-          set_direction(static_cast< ::pb::CTPDirection >(value));
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &direction_)));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // double price = 5;
-      case 5: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (41 & 0xFF)) {
+      // string order_sys_id = 9;
+      case 9: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (74 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_order_sys_id()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->order_sys_id().data(), static_cast<int>(this->order_sys_id().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "pb.CTPTradeField.order_sys_id"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string participant_id = 10;
+      case 10: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (82 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_participant_id()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->participant_id().data(), static_cast<int>(this->participant_id().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "pb.CTPTradeField.participant_id"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string client_id = 11;
+      case 11: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (90 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_client_id()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->client_id().data(), static_cast<int>(this->client_id().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "pb.CTPTradeField.client_id"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // int32 trading_role = 12;
+      case 12: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (96 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &trading_role_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string exchange_inst_id = 13;
+      case 13: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (106 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_exchange_inst_id()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->exchange_inst_id().data(), static_cast<int>(this->exchange_inst_id().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "pb.CTPTradeField.exchange_inst_id"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // int32 offset_flag = 14;
+      case 14: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (112 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &offset_flag_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // int32 hedge_flag = 15;
+      case 15: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (120 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &hedge_flag_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // double price = 16;
+      case 16: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (129 & 0xFF)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
@@ -7415,9 +9509,9 @@ bool CTPTradeReport::MergePartialFromCodedStream(
         break;
       }
 
-      // int32 volume = 6;
-      case 6: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (48 & 0xFF)) {
+      // int32 volume = 17;
+      case 17: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (136 & 0xFF)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
@@ -7428,242 +9522,196 @@ bool CTPTradeReport::MergePartialFromCodedStream(
         break;
       }
 
-      // int64 traded_time = 7;
-      case 7: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (56 & 0xFF)) {
-
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::int64, ::google::protobuf::internal::WireFormatLite::TYPE_INT64>(
-                 input, &traded_time_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // int32 traded_trading_day = 8;
-      case 8: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (64 & 0xFF)) {
-
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                 input, &traded_trading_day_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .pb.CTPOrderID order_id = 9;
-      case 9: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (74 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_order_id()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .pb.CTPPriceType price_type = 10;
-      case 10: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (80 & 0xFF)) {
-          int value = 0;
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
-                 input, &value)));
-          set_price_type(static_cast< ::pb::CTPPriceType >(value));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .pb.CTPHedgeType hedge_type = 11;
-      case 11: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (88 & 0xFF)) {
-          int value = 0;
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
-                 input, &value)));
-          set_hedge_type(static_cast< ::pb::CTPHedgeType >(value));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .pb.CTPTradeType trade_type = 12;
-      case 12: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (96 & 0xFF)) {
-          int value = 0;
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
-                 input, &value)));
-          set_trade_type(static_cast< ::pb::CTPTradeType >(value));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // int32 currency_type = 13;
-      case 13: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (104 & 0xFF)) {
-
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                 input, &currency_type_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // string exchange_order_id = 14;
-      case 14: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (114 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_exchange_order_id()));
-          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->exchange_order_id().data(), static_cast<int>(this->exchange_order_id().length()),
-            ::google::protobuf::internal::WireFormatLite::PARSE,
-            "pb.CTPTradeReport.exchange_order_id"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // int32 local_type_id = 15;
-      case 15: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (120 & 0xFF)) {
-
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                 input, &local_type_id_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // double commission = 16;
-      case 16: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (129 & 0xFF)) {
-
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, &commission_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // double tax = 17;
-      case 17: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (137 & 0xFF)) {
-
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, &tax_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // double total_other_fee = 18;
+      // string trade_date = 18;
       case 18: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (145 & 0xFF)) {
-
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, &total_other_fee_)));
+        if (static_cast< ::google::protobuf::uint8>(tag) == (146 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_trade_date()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->trade_date().data(), static_cast<int>(this->trade_date().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "pb.CTPTradeField.trade_date"));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // double initial_traded_price = 19;
+      // string trade_time = 19;
       case 19: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (153 & 0xFF)) {
-
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, &initial_traded_price_)));
+        if (static_cast< ::google::protobuf::uint8>(tag) == (154 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_trade_time()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->trade_time().data(), static_cast<int>(this->trade_time().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "pb.CTPTradeField.trade_time"));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // double reserve = 20;
+      // int32 trade_type = 20;
       case 20: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (161 & 0xFF)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (160 & 0xFF)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, &reserve_)));
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &trade_type_)));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // .pb.CTPOffsetFlag offset_flag = 21;
+      // int32 price_source = 21;
       case 21: {
         if (static_cast< ::google::protobuf::uint8>(tag) == (168 & 0xFF)) {
-          int value = 0;
+
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
-                 input, &value)));
-          set_offset_flag(static_cast< ::pb::CTPOffsetFlag >(value));
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &price_source_)));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // string route_account_id = 22;
+      // string trader_id = 22;
       case 22: {
         if (static_cast< ::google::protobuf::uint8>(tag) == (178 & 0xFF)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_route_account_id()));
+                input, this->mutable_trader_id()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->route_account_id().data(), static_cast<int>(this->route_account_id().length()),
+            this->trader_id().data(), static_cast<int>(this->trader_id().length()),
             ::google::protobuf::internal::WireFormatLite::PARSE,
-            "pb.CTPTradeReport.route_account_id"));
+            "pb.CTPTradeField.trader_id"));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // string symbol_name = 23;
+      // string order_local_id = 23;
       case 23: {
         if (static_cast< ::google::protobuf::uint8>(tag) == (186 & 0xFF)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_symbol_name()));
+                input, this->mutable_order_local_id()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->symbol_name().data(), static_cast<int>(this->symbol_name().length()),
+            this->order_local_id().data(), static_cast<int>(this->order_local_id().length()),
             ::google::protobuf::internal::WireFormatLite::PARSE,
-            "pb.CTPTradeReport.symbol_name"));
+            "pb.CTPTradeField.order_local_id"));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // double price_tick = 24;
+      // string clearing_part_id = 24;
       case 24: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (193 & 0xFF)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (194 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_clearing_part_id()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->clearing_part_id().data(), static_cast<int>(this->clearing_part_id().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "pb.CTPTradeField.clearing_part_id"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string business_unit = 25;
+      case 25: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (202 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_business_unit()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->business_unit().data(), static_cast<int>(this->business_unit().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "pb.CTPTradeField.business_unit"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // int32 sequence_no = 26;
+      case 26: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (208 & 0xFF)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, &price_tick_)));
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &sequence_no_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // int32 trading_day = 27;
+      case 27: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (216 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &trading_day_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // int32 settlement_id = 28;
+      case 28: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (224 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &settlement_id_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // int32 broker_order_seq = 29;
+      case 29: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (232 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &broker_order_seq_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // int32 trade_source = 30;
+      case 30: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (240 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &trade_source_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string invest_unit_id = 31;
+      case 31: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (250 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_invest_unit_id()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->invest_unit_id().data(), static_cast<int>(this->invest_unit_id().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "pb.CTPTradeField.invest_unit_id"));
         } else {
           goto handle_unusual;
         }
@@ -7682,355 +9730,552 @@ bool CTPTradeReport::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:pb.CTPTradeReport)
+  // @@protoc_insertion_point(parse_success:pb.CTPTradeField)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:pb.CTPTradeReport)
+  // @@protoc_insertion_point(parse_failure:pb.CTPTradeField)
   return false;
 #undef DO_
 }
 #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 
-void CTPTradeReport::SerializeWithCachedSizes(
+void CTPTradeField::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:pb.CTPTradeReport)
+  // @@protoc_insertion_point(serialize_start:pb.CTPTradeField)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string account_id = 1;
-  if (this->account_id().size() > 0) {
+  // string broker_id = 1;
+  if (this->broker_id().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->account_id().data(), static_cast<int>(this->account_id().length()),
+      this->broker_id().data(), static_cast<int>(this->broker_id().length()),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "pb.CTPTradeReport.account_id");
+      "pb.CTPTradeField.broker_id");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      1, this->account_id(), output);
+      1, this->broker_id(), output);
   }
 
-  // string trade_id = 2;
+  // string investor_id = 2;
+  if (this->investor_id().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->investor_id().data(), static_cast<int>(this->investor_id().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.CTPTradeField.investor_id");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      2, this->investor_id(), output);
+  }
+
+  // string instrument_id = 3;
+  if (this->instrument_id().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->instrument_id().data(), static_cast<int>(this->instrument_id().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.CTPTradeField.instrument_id");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      3, this->instrument_id(), output);
+  }
+
+  // string order_ref = 4;
+  if (this->order_ref().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->order_ref().data(), static_cast<int>(this->order_ref().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.CTPTradeField.order_ref");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      4, this->order_ref(), output);
+  }
+
+  // string user_id = 5;
+  if (this->user_id().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->user_id().data(), static_cast<int>(this->user_id().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.CTPTradeField.user_id");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      5, this->user_id(), output);
+  }
+
+  // string exchange_id = 6;
+  if (this->exchange_id().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->exchange_id().data(), static_cast<int>(this->exchange_id().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.CTPTradeField.exchange_id");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      6, this->exchange_id(), output);
+  }
+
+  // string trade_id = 7;
   if (this->trade_id().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->trade_id().data(), static_cast<int>(this->trade_id().length()),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "pb.CTPTradeReport.trade_id");
+      "pb.CTPTradeField.trade_id");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      2, this->trade_id(), output);
+      7, this->trade_id(), output);
   }
 
-  // .pb.Symbol symbol = 3;
-  if (this->has_symbol()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      3, HasBitSetters::symbol(this), output);
-  }
-
-  // .pb.CTPDirection direction = 4;
+  // int32 direction = 8;
   if (this->direction() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteEnum(
-      4, this->direction(), output);
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(8, this->direction(), output);
   }
 
-  // double price = 5;
-  if (this->price() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(5, this->price(), output);
-  }
-
-  // int32 volume = 6;
-  if (this->volume() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(6, this->volume(), output);
-  }
-
-  // int64 traded_time = 7;
-  if (this->traded_time() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt64(7, this->traded_time(), output);
-  }
-
-  // int32 traded_trading_day = 8;
-  if (this->traded_trading_day() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(8, this->traded_trading_day(), output);
-  }
-
-  // .pb.CTPOrderID order_id = 9;
-  if (this->has_order_id()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      9, HasBitSetters::order_id(this), output);
-  }
-
-  // .pb.CTPPriceType price_type = 10;
-  if (this->price_type() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteEnum(
-      10, this->price_type(), output);
-  }
-
-  // .pb.CTPHedgeType hedge_type = 11;
-  if (this->hedge_type() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteEnum(
-      11, this->hedge_type(), output);
-  }
-
-  // .pb.CTPTradeType trade_type = 12;
-  if (this->trade_type() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteEnum(
-      12, this->trade_type(), output);
-  }
-
-  // int32 currency_type = 13;
-  if (this->currency_type() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(13, this->currency_type(), output);
-  }
-
-  // string exchange_order_id = 14;
-  if (this->exchange_order_id().size() > 0) {
+  // string order_sys_id = 9;
+  if (this->order_sys_id().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->exchange_order_id().data(), static_cast<int>(this->exchange_order_id().length()),
+      this->order_sys_id().data(), static_cast<int>(this->order_sys_id().length()),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "pb.CTPTradeReport.exchange_order_id");
+      "pb.CTPTradeField.order_sys_id");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      14, this->exchange_order_id(), output);
+      9, this->order_sys_id(), output);
   }
 
-  // int32 local_type_id = 15;
-  if (this->local_type_id() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(15, this->local_type_id(), output);
+  // string participant_id = 10;
+  if (this->participant_id().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->participant_id().data(), static_cast<int>(this->participant_id().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.CTPTradeField.participant_id");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      10, this->participant_id(), output);
   }
 
-  // double commission = 16;
-  if (this->commission() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(16, this->commission(), output);
+  // string client_id = 11;
+  if (this->client_id().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->client_id().data(), static_cast<int>(this->client_id().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.CTPTradeField.client_id");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      11, this->client_id(), output);
   }
 
-  // double tax = 17;
-  if (this->tax() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(17, this->tax(), output);
+  // int32 trading_role = 12;
+  if (this->trading_role() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(12, this->trading_role(), output);
   }
 
-  // double total_other_fee = 18;
-  if (this->total_other_fee() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(18, this->total_other_fee(), output);
+  // string exchange_inst_id = 13;
+  if (this->exchange_inst_id().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->exchange_inst_id().data(), static_cast<int>(this->exchange_inst_id().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.CTPTradeField.exchange_inst_id");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      13, this->exchange_inst_id(), output);
   }
 
-  // double initial_traded_price = 19;
-  if (this->initial_traded_price() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(19, this->initial_traded_price(), output);
-  }
-
-  // double reserve = 20;
-  if (this->reserve() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(20, this->reserve(), output);
-  }
-
-  // .pb.CTPOffsetFlag offset_flag = 21;
+  // int32 offset_flag = 14;
   if (this->offset_flag() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteEnum(
-      21, this->offset_flag(), output);
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(14, this->offset_flag(), output);
   }
 
-  // string route_account_id = 22;
-  if (this->route_account_id().size() > 0) {
+  // int32 hedge_flag = 15;
+  if (this->hedge_flag() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(15, this->hedge_flag(), output);
+  }
+
+  // double price = 16;
+  if (this->price() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteDouble(16, this->price(), output);
+  }
+
+  // int32 volume = 17;
+  if (this->volume() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(17, this->volume(), output);
+  }
+
+  // string trade_date = 18;
+  if (this->trade_date().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->route_account_id().data(), static_cast<int>(this->route_account_id().length()),
+      this->trade_date().data(), static_cast<int>(this->trade_date().length()),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "pb.CTPTradeReport.route_account_id");
+      "pb.CTPTradeField.trade_date");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      22, this->route_account_id(), output);
+      18, this->trade_date(), output);
   }
 
-  // string symbol_name = 23;
-  if (this->symbol_name().size() > 0) {
+  // string trade_time = 19;
+  if (this->trade_time().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->symbol_name().data(), static_cast<int>(this->symbol_name().length()),
+      this->trade_time().data(), static_cast<int>(this->trade_time().length()),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "pb.CTPTradeReport.symbol_name");
+      "pb.CTPTradeField.trade_time");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      23, this->symbol_name(), output);
+      19, this->trade_time(), output);
   }
 
-  // double price_tick = 24;
-  if (this->price_tick() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(24, this->price_tick(), output);
+  // int32 trade_type = 20;
+  if (this->trade_type() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(20, this->trade_type(), output);
+  }
+
+  // int32 price_source = 21;
+  if (this->price_source() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(21, this->price_source(), output);
+  }
+
+  // string trader_id = 22;
+  if (this->trader_id().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->trader_id().data(), static_cast<int>(this->trader_id().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.CTPTradeField.trader_id");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      22, this->trader_id(), output);
+  }
+
+  // string order_local_id = 23;
+  if (this->order_local_id().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->order_local_id().data(), static_cast<int>(this->order_local_id().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.CTPTradeField.order_local_id");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      23, this->order_local_id(), output);
+  }
+
+  // string clearing_part_id = 24;
+  if (this->clearing_part_id().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->clearing_part_id().data(), static_cast<int>(this->clearing_part_id().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.CTPTradeField.clearing_part_id");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      24, this->clearing_part_id(), output);
+  }
+
+  // string business_unit = 25;
+  if (this->business_unit().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->business_unit().data(), static_cast<int>(this->business_unit().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.CTPTradeField.business_unit");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      25, this->business_unit(), output);
+  }
+
+  // int32 sequence_no = 26;
+  if (this->sequence_no() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(26, this->sequence_no(), output);
+  }
+
+  // int32 trading_day = 27;
+  if (this->trading_day() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(27, this->trading_day(), output);
+  }
+
+  // int32 settlement_id = 28;
+  if (this->settlement_id() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(28, this->settlement_id(), output);
+  }
+
+  // int32 broker_order_seq = 29;
+  if (this->broker_order_seq() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(29, this->broker_order_seq(), output);
+  }
+
+  // int32 trade_source = 30;
+  if (this->trade_source() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(30, this->trade_source(), output);
+  }
+
+  // string invest_unit_id = 31;
+  if (this->invest_unit_id().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->invest_unit_id().data(), static_cast<int>(this->invest_unit_id().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.CTPTradeField.invest_unit_id");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      31, this->invest_unit_id(), output);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         _internal_metadata_.unknown_fields(), output);
   }
-  // @@protoc_insertion_point(serialize_end:pb.CTPTradeReport)
+  // @@protoc_insertion_point(serialize_end:pb.CTPTradeField)
 }
 
-::google::protobuf::uint8* CTPTradeReport::InternalSerializeWithCachedSizesToArray(
+::google::protobuf::uint8* CTPTradeField::InternalSerializeWithCachedSizesToArray(
     ::google::protobuf::uint8* target) const {
-  // @@protoc_insertion_point(serialize_to_array_start:pb.CTPTradeReport)
+  // @@protoc_insertion_point(serialize_to_array_start:pb.CTPTradeField)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string account_id = 1;
-  if (this->account_id().size() > 0) {
+  // string broker_id = 1;
+  if (this->broker_id().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->account_id().data(), static_cast<int>(this->account_id().length()),
+      this->broker_id().data(), static_cast<int>(this->broker_id().length()),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "pb.CTPTradeReport.account_id");
+      "pb.CTPTradeField.broker_id");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        1, this->account_id(), target);
+        1, this->broker_id(), target);
   }
 
-  // string trade_id = 2;
+  // string investor_id = 2;
+  if (this->investor_id().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->investor_id().data(), static_cast<int>(this->investor_id().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.CTPTradeField.investor_id");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        2, this->investor_id(), target);
+  }
+
+  // string instrument_id = 3;
+  if (this->instrument_id().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->instrument_id().data(), static_cast<int>(this->instrument_id().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.CTPTradeField.instrument_id");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        3, this->instrument_id(), target);
+  }
+
+  // string order_ref = 4;
+  if (this->order_ref().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->order_ref().data(), static_cast<int>(this->order_ref().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.CTPTradeField.order_ref");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        4, this->order_ref(), target);
+  }
+
+  // string user_id = 5;
+  if (this->user_id().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->user_id().data(), static_cast<int>(this->user_id().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.CTPTradeField.user_id");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        5, this->user_id(), target);
+  }
+
+  // string exchange_id = 6;
+  if (this->exchange_id().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->exchange_id().data(), static_cast<int>(this->exchange_id().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.CTPTradeField.exchange_id");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        6, this->exchange_id(), target);
+  }
+
+  // string trade_id = 7;
   if (this->trade_id().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->trade_id().data(), static_cast<int>(this->trade_id().length()),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "pb.CTPTradeReport.trade_id");
+      "pb.CTPTradeField.trade_id");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        2, this->trade_id(), target);
+        7, this->trade_id(), target);
   }
 
-  // .pb.Symbol symbol = 3;
-  if (this->has_symbol()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        3, HasBitSetters::symbol(this), target);
-  }
-
-  // .pb.CTPDirection direction = 4;
+  // int32 direction = 8;
   if (this->direction() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
-      4, this->direction(), target);
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(8, this->direction(), target);
   }
 
-  // double price = 5;
-  if (this->price() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(5, this->price(), target);
-  }
-
-  // int32 volume = 6;
-  if (this->volume() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(6, this->volume(), target);
-  }
-
-  // int64 traded_time = 7;
-  if (this->traded_time() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(7, this->traded_time(), target);
-  }
-
-  // int32 traded_trading_day = 8;
-  if (this->traded_trading_day() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(8, this->traded_trading_day(), target);
-  }
-
-  // .pb.CTPOrderID order_id = 9;
-  if (this->has_order_id()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        9, HasBitSetters::order_id(this), target);
-  }
-
-  // .pb.CTPPriceType price_type = 10;
-  if (this->price_type() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
-      10, this->price_type(), target);
-  }
-
-  // .pb.CTPHedgeType hedge_type = 11;
-  if (this->hedge_type() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
-      11, this->hedge_type(), target);
-  }
-
-  // .pb.CTPTradeType trade_type = 12;
-  if (this->trade_type() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
-      12, this->trade_type(), target);
-  }
-
-  // int32 currency_type = 13;
-  if (this->currency_type() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(13, this->currency_type(), target);
-  }
-
-  // string exchange_order_id = 14;
-  if (this->exchange_order_id().size() > 0) {
+  // string order_sys_id = 9;
+  if (this->order_sys_id().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->exchange_order_id().data(), static_cast<int>(this->exchange_order_id().length()),
+      this->order_sys_id().data(), static_cast<int>(this->order_sys_id().length()),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "pb.CTPTradeReport.exchange_order_id");
+      "pb.CTPTradeField.order_sys_id");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        14, this->exchange_order_id(), target);
+        9, this->order_sys_id(), target);
   }
 
-  // int32 local_type_id = 15;
-  if (this->local_type_id() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(15, this->local_type_id(), target);
+  // string participant_id = 10;
+  if (this->participant_id().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->participant_id().data(), static_cast<int>(this->participant_id().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.CTPTradeField.participant_id");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        10, this->participant_id(), target);
   }
 
-  // double commission = 16;
-  if (this->commission() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(16, this->commission(), target);
+  // string client_id = 11;
+  if (this->client_id().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->client_id().data(), static_cast<int>(this->client_id().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.CTPTradeField.client_id");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        11, this->client_id(), target);
   }
 
-  // double tax = 17;
-  if (this->tax() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(17, this->tax(), target);
+  // int32 trading_role = 12;
+  if (this->trading_role() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(12, this->trading_role(), target);
   }
 
-  // double total_other_fee = 18;
-  if (this->total_other_fee() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(18, this->total_other_fee(), target);
+  // string exchange_inst_id = 13;
+  if (this->exchange_inst_id().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->exchange_inst_id().data(), static_cast<int>(this->exchange_inst_id().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.CTPTradeField.exchange_inst_id");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        13, this->exchange_inst_id(), target);
   }
 
-  // double initial_traded_price = 19;
-  if (this->initial_traded_price() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(19, this->initial_traded_price(), target);
-  }
-
-  // double reserve = 20;
-  if (this->reserve() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(20, this->reserve(), target);
-  }
-
-  // .pb.CTPOffsetFlag offset_flag = 21;
+  // int32 offset_flag = 14;
   if (this->offset_flag() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
-      21, this->offset_flag(), target);
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(14, this->offset_flag(), target);
   }
 
-  // string route_account_id = 22;
-  if (this->route_account_id().size() > 0) {
+  // int32 hedge_flag = 15;
+  if (this->hedge_flag() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(15, this->hedge_flag(), target);
+  }
+
+  // double price = 16;
+  if (this->price() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(16, this->price(), target);
+  }
+
+  // int32 volume = 17;
+  if (this->volume() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(17, this->volume(), target);
+  }
+
+  // string trade_date = 18;
+  if (this->trade_date().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->route_account_id().data(), static_cast<int>(this->route_account_id().length()),
+      this->trade_date().data(), static_cast<int>(this->trade_date().length()),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "pb.CTPTradeReport.route_account_id");
+      "pb.CTPTradeField.trade_date");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        22, this->route_account_id(), target);
+        18, this->trade_date(), target);
   }
 
-  // string symbol_name = 23;
-  if (this->symbol_name().size() > 0) {
+  // string trade_time = 19;
+  if (this->trade_time().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->symbol_name().data(), static_cast<int>(this->symbol_name().length()),
+      this->trade_time().data(), static_cast<int>(this->trade_time().length()),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "pb.CTPTradeReport.symbol_name");
+      "pb.CTPTradeField.trade_time");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        23, this->symbol_name(), target);
+        19, this->trade_time(), target);
   }
 
-  // double price_tick = 24;
-  if (this->price_tick() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(24, this->price_tick(), target);
+  // int32 trade_type = 20;
+  if (this->trade_type() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(20, this->trade_type(), target);
+  }
+
+  // int32 price_source = 21;
+  if (this->price_source() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(21, this->price_source(), target);
+  }
+
+  // string trader_id = 22;
+  if (this->trader_id().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->trader_id().data(), static_cast<int>(this->trader_id().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.CTPTradeField.trader_id");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        22, this->trader_id(), target);
+  }
+
+  // string order_local_id = 23;
+  if (this->order_local_id().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->order_local_id().data(), static_cast<int>(this->order_local_id().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.CTPTradeField.order_local_id");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        23, this->order_local_id(), target);
+  }
+
+  // string clearing_part_id = 24;
+  if (this->clearing_part_id().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->clearing_part_id().data(), static_cast<int>(this->clearing_part_id().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.CTPTradeField.clearing_part_id");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        24, this->clearing_part_id(), target);
+  }
+
+  // string business_unit = 25;
+  if (this->business_unit().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->business_unit().data(), static_cast<int>(this->business_unit().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.CTPTradeField.business_unit");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        25, this->business_unit(), target);
+  }
+
+  // int32 sequence_no = 26;
+  if (this->sequence_no() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(26, this->sequence_no(), target);
+  }
+
+  // int32 trading_day = 27;
+  if (this->trading_day() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(27, this->trading_day(), target);
+  }
+
+  // int32 settlement_id = 28;
+  if (this->settlement_id() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(28, this->settlement_id(), target);
+  }
+
+  // int32 broker_order_seq = 29;
+  if (this->broker_order_seq() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(29, this->broker_order_seq(), target);
+  }
+
+  // int32 trade_source = 30;
+  if (this->trade_source() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(30, this->trade_source(), target);
+  }
+
+  // string invest_unit_id = 31;
+  if (this->invest_unit_id().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->invest_unit_id().data(), static_cast<int>(this->invest_unit_id().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.CTPTradeField.invest_unit_id");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        31, this->invest_unit_id(), target);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields(), target);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:pb.CTPTradeReport)
+  // @@protoc_insertion_point(serialize_to_array_end:pb.CTPTradeField)
   return target;
 }
 
-size_t CTPTradeReport::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:pb.CTPTradeReport)
+size_t CTPTradeField::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:pb.CTPTradeField)
   size_t total_size = 0;
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -8042,153 +10287,219 @@ size_t CTPTradeReport::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string account_id = 1;
-  if (this->account_id().size() > 0) {
+  // string broker_id = 1;
+  if (this->broker_id().size() > 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->account_id());
+        this->broker_id());
   }
 
-  // string trade_id = 2;
+  // string investor_id = 2;
+  if (this->investor_id().size() > 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->investor_id());
+  }
+
+  // string instrument_id = 3;
+  if (this->instrument_id().size() > 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->instrument_id());
+  }
+
+  // string order_ref = 4;
+  if (this->order_ref().size() > 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->order_ref());
+  }
+
+  // string user_id = 5;
+  if (this->user_id().size() > 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->user_id());
+  }
+
+  // string exchange_id = 6;
+  if (this->exchange_id().size() > 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->exchange_id());
+  }
+
+  // string trade_id = 7;
   if (this->trade_id().size() > 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
         this->trade_id());
   }
 
-  // string exchange_order_id = 14;
-  if (this->exchange_order_id().size() > 0) {
+  // string order_sys_id = 9;
+  if (this->order_sys_id().size() > 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->exchange_order_id());
+        this->order_sys_id());
   }
 
-  // string route_account_id = 22;
-  if (this->route_account_id().size() > 0) {
+  // string participant_id = 10;
+  if (this->participant_id().size() > 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->participant_id());
+  }
+
+  // string client_id = 11;
+  if (this->client_id().size() > 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->client_id());
+  }
+
+  // string exchange_inst_id = 13;
+  if (this->exchange_inst_id().size() > 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->exchange_inst_id());
+  }
+
+  // string trade_date = 18;
+  if (this->trade_date().size() > 0) {
     total_size += 2 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->route_account_id());
+        this->trade_date());
   }
 
-  // string symbol_name = 23;
-  if (this->symbol_name().size() > 0) {
+  // string trade_time = 19;
+  if (this->trade_time().size() > 0) {
     total_size += 2 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->symbol_name());
+        this->trade_time());
   }
 
-  // .pb.Symbol symbol = 3;
-  if (this->has_symbol()) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *symbol_);
+  // string trader_id = 22;
+  if (this->trader_id().size() > 0) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->trader_id());
   }
 
-  // .pb.CTPOrderID order_id = 9;
-  if (this->has_order_id()) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *order_id_);
+  // string order_local_id = 23;
+  if (this->order_local_id().size() > 0) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->order_local_id());
   }
 
-  // double price = 5;
-  if (this->price() != 0) {
-    total_size += 1 + 8;
+  // string clearing_part_id = 24;
+  if (this->clearing_part_id().size() > 0) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->clearing_part_id());
   }
 
-  // .pb.CTPDirection direction = 4;
+  // string business_unit = 25;
+  if (this->business_unit().size() > 0) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->business_unit());
+  }
+
+  // string invest_unit_id = 31;
+  if (this->invest_unit_id().size() > 0) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->invest_unit_id());
+  }
+
+  // int32 direction = 8;
   if (this->direction() != 0) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::EnumSize(this->direction());
+      ::google::protobuf::internal::WireFormatLite::Int32Size(
+        this->direction());
   }
 
-  // int32 volume = 6;
-  if (this->volume() != 0) {
+  // int32 trading_role = 12;
+  if (this->trading_role() != 0) {
     total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::Int32Size(
+        this->trading_role());
+  }
+
+  // int32 offset_flag = 14;
+  if (this->offset_flag() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::Int32Size(
+        this->offset_flag());
+  }
+
+  // int32 hedge_flag = 15;
+  if (this->hedge_flag() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::Int32Size(
+        this->hedge_flag());
+  }
+
+  // double price = 16;
+  if (this->price() != 0) {
+    total_size += 2 + 8;
+  }
+
+  // int32 volume = 17;
+  if (this->volume() != 0) {
+    total_size += 2 +
       ::google::protobuf::internal::WireFormatLite::Int32Size(
         this->volume());
   }
 
-  // int64 traded_time = 7;
-  if (this->traded_time() != 0) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::Int64Size(
-        this->traded_time());
-  }
-
-  // int32 traded_trading_day = 8;
-  if (this->traded_trading_day() != 0) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::Int32Size(
-        this->traded_trading_day());
-  }
-
-  // .pb.CTPPriceType price_type = 10;
-  if (this->price_type() != 0) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::EnumSize(this->price_type());
-  }
-
-  // .pb.CTPHedgeType hedge_type = 11;
-  if (this->hedge_type() != 0) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::EnumSize(this->hedge_type());
-  }
-
-  // .pb.CTPTradeType trade_type = 12;
+  // int32 trade_type = 20;
   if (this->trade_type() != 0) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::EnumSize(this->trade_type());
-  }
-
-  // int32 currency_type = 13;
-  if (this->currency_type() != 0) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::Int32Size(
-        this->currency_type());
-  }
-
-  // int32 local_type_id = 15;
-  if (this->local_type_id() != 0) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::Int32Size(
-        this->local_type_id());
-  }
-
-  // double commission = 16;
-  if (this->commission() != 0) {
-    total_size += 2 + 8;
-  }
-
-  // double tax = 17;
-  if (this->tax() != 0) {
-    total_size += 2 + 8;
-  }
-
-  // double total_other_fee = 18;
-  if (this->total_other_fee() != 0) {
-    total_size += 2 + 8;
-  }
-
-  // double initial_traded_price = 19;
-  if (this->initial_traded_price() != 0) {
-    total_size += 2 + 8;
-  }
-
-  // double reserve = 20;
-  if (this->reserve() != 0) {
-    total_size += 2 + 8;
-  }
-
-  // double price_tick = 24;
-  if (this->price_tick() != 0) {
-    total_size += 2 + 8;
-  }
-
-  // .pb.CTPOffsetFlag offset_flag = 21;
-  if (this->offset_flag() != 0) {
     total_size += 2 +
-      ::google::protobuf::internal::WireFormatLite::EnumSize(this->offset_flag());
+      ::google::protobuf::internal::WireFormatLite::Int32Size(
+        this->trade_type());
+  }
+
+  // int32 price_source = 21;
+  if (this->price_source() != 0) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::Int32Size(
+        this->price_source());
+  }
+
+  // int32 sequence_no = 26;
+  if (this->sequence_no() != 0) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::Int32Size(
+        this->sequence_no());
+  }
+
+  // int32 trading_day = 27;
+  if (this->trading_day() != 0) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::Int32Size(
+        this->trading_day());
+  }
+
+  // int32 settlement_id = 28;
+  if (this->settlement_id() != 0) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::Int32Size(
+        this->settlement_id());
+  }
+
+  // int32 broker_order_seq = 29;
+  if (this->broker_order_seq() != 0) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::Int32Size(
+        this->broker_order_seq());
+  }
+
+  // int32 trade_source = 30;
+  if (this->trade_source() != 0) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::Int32Size(
+        this->trade_source());
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
@@ -8196,164 +10507,218 @@ size_t CTPTradeReport::ByteSizeLong() const {
   return total_size;
 }
 
-void CTPTradeReport::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:pb.CTPTradeReport)
+void CTPTradeField::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:pb.CTPTradeField)
   GOOGLE_DCHECK_NE(&from, this);
-  const CTPTradeReport* source =
-      ::google::protobuf::DynamicCastToGenerated<CTPTradeReport>(
+  const CTPTradeField* source =
+      ::google::protobuf::DynamicCastToGenerated<CTPTradeField>(
           &from);
   if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:pb.CTPTradeReport)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:pb.CTPTradeField)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:pb.CTPTradeReport)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:pb.CTPTradeField)
     MergeFrom(*source);
   }
 }
 
-void CTPTradeReport::MergeFrom(const CTPTradeReport& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:pb.CTPTradeReport)
+void CTPTradeField::MergeFrom(const CTPTradeField& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:pb.CTPTradeField)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.account_id().size() > 0) {
+  if (from.broker_id().size() > 0) {
 
-    account_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.account_id_);
+    broker_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.broker_id_);
+  }
+  if (from.investor_id().size() > 0) {
+
+    investor_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.investor_id_);
+  }
+  if (from.instrument_id().size() > 0) {
+
+    instrument_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.instrument_id_);
+  }
+  if (from.order_ref().size() > 0) {
+
+    order_ref_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.order_ref_);
+  }
+  if (from.user_id().size() > 0) {
+
+    user_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.user_id_);
+  }
+  if (from.exchange_id().size() > 0) {
+
+    exchange_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.exchange_id_);
   }
   if (from.trade_id().size() > 0) {
 
     trade_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.trade_id_);
   }
-  if (from.exchange_order_id().size() > 0) {
+  if (from.order_sys_id().size() > 0) {
 
-    exchange_order_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.exchange_order_id_);
+    order_sys_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.order_sys_id_);
   }
-  if (from.route_account_id().size() > 0) {
+  if (from.participant_id().size() > 0) {
 
-    route_account_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.route_account_id_);
+    participant_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.participant_id_);
   }
-  if (from.symbol_name().size() > 0) {
+  if (from.client_id().size() > 0) {
 
-    symbol_name_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.symbol_name_);
+    client_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.client_id_);
   }
-  if (from.has_symbol()) {
-    mutable_symbol()->::pb::Symbol::MergeFrom(from.symbol());
+  if (from.exchange_inst_id().size() > 0) {
+
+    exchange_inst_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.exchange_inst_id_);
   }
-  if (from.has_order_id()) {
-    mutable_order_id()->::pb::CTPOrderID::MergeFrom(from.order_id());
+  if (from.trade_date().size() > 0) {
+
+    trade_date_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.trade_date_);
   }
-  if (from.price() != 0) {
-    set_price(from.price());
+  if (from.trade_time().size() > 0) {
+
+    trade_time_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.trade_time_);
+  }
+  if (from.trader_id().size() > 0) {
+
+    trader_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.trader_id_);
+  }
+  if (from.order_local_id().size() > 0) {
+
+    order_local_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.order_local_id_);
+  }
+  if (from.clearing_part_id().size() > 0) {
+
+    clearing_part_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.clearing_part_id_);
+  }
+  if (from.business_unit().size() > 0) {
+
+    business_unit_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.business_unit_);
+  }
+  if (from.invest_unit_id().size() > 0) {
+
+    invest_unit_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.invest_unit_id_);
   }
   if (from.direction() != 0) {
     set_direction(from.direction());
   }
-  if (from.volume() != 0) {
-    set_volume(from.volume());
-  }
-  if (from.traded_time() != 0) {
-    set_traded_time(from.traded_time());
-  }
-  if (from.traded_trading_day() != 0) {
-    set_traded_trading_day(from.traded_trading_day());
-  }
-  if (from.price_type() != 0) {
-    set_price_type(from.price_type());
-  }
-  if (from.hedge_type() != 0) {
-    set_hedge_type(from.hedge_type());
-  }
-  if (from.trade_type() != 0) {
-    set_trade_type(from.trade_type());
-  }
-  if (from.currency_type() != 0) {
-    set_currency_type(from.currency_type());
-  }
-  if (from.local_type_id() != 0) {
-    set_local_type_id(from.local_type_id());
-  }
-  if (from.commission() != 0) {
-    set_commission(from.commission());
-  }
-  if (from.tax() != 0) {
-    set_tax(from.tax());
-  }
-  if (from.total_other_fee() != 0) {
-    set_total_other_fee(from.total_other_fee());
-  }
-  if (from.initial_traded_price() != 0) {
-    set_initial_traded_price(from.initial_traded_price());
-  }
-  if (from.reserve() != 0) {
-    set_reserve(from.reserve());
-  }
-  if (from.price_tick() != 0) {
-    set_price_tick(from.price_tick());
+  if (from.trading_role() != 0) {
+    set_trading_role(from.trading_role());
   }
   if (from.offset_flag() != 0) {
     set_offset_flag(from.offset_flag());
   }
+  if (from.hedge_flag() != 0) {
+    set_hedge_flag(from.hedge_flag());
+  }
+  if (from.price() != 0) {
+    set_price(from.price());
+  }
+  if (from.volume() != 0) {
+    set_volume(from.volume());
+  }
+  if (from.trade_type() != 0) {
+    set_trade_type(from.trade_type());
+  }
+  if (from.price_source() != 0) {
+    set_price_source(from.price_source());
+  }
+  if (from.sequence_no() != 0) {
+    set_sequence_no(from.sequence_no());
+  }
+  if (from.trading_day() != 0) {
+    set_trading_day(from.trading_day());
+  }
+  if (from.settlement_id() != 0) {
+    set_settlement_id(from.settlement_id());
+  }
+  if (from.broker_order_seq() != 0) {
+    set_broker_order_seq(from.broker_order_seq());
+  }
+  if (from.trade_source() != 0) {
+    set_trade_source(from.trade_source());
+  }
 }
 
-void CTPTradeReport::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:pb.CTPTradeReport)
+void CTPTradeField::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:pb.CTPTradeField)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-void CTPTradeReport::CopyFrom(const CTPTradeReport& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:pb.CTPTradeReport)
+void CTPTradeField::CopyFrom(const CTPTradeField& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:pb.CTPTradeField)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool CTPTradeReport::IsInitialized() const {
+bool CTPTradeField::IsInitialized() const {
   return true;
 }
 
-void CTPTradeReport::Swap(CTPTradeReport* other) {
+void CTPTradeField::Swap(CTPTradeField* other) {
   if (other == this) return;
   InternalSwap(other);
 }
-void CTPTradeReport::InternalSwap(CTPTradeReport* other) {
+void CTPTradeField::InternalSwap(CTPTradeField* other) {
   using std::swap;
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  account_id_.Swap(&other->account_id_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+  broker_id_.Swap(&other->broker_id_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  investor_id_.Swap(&other->investor_id_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  instrument_id_.Swap(&other->instrument_id_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  order_ref_.Swap(&other->order_ref_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  user_id_.Swap(&other->user_id_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  exchange_id_.Swap(&other->exchange_id_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
   trade_id_.Swap(&other->trade_id_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
-  exchange_order_id_.Swap(&other->exchange_order_id_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+  order_sys_id_.Swap(&other->order_sys_id_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
-  route_account_id_.Swap(&other->route_account_id_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+  participant_id_.Swap(&other->participant_id_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
-  symbol_name_.Swap(&other->symbol_name_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+  client_id_.Swap(&other->client_id_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
-  swap(symbol_, other->symbol_);
-  swap(order_id_, other->order_id_);
-  swap(price_, other->price_);
+  exchange_inst_id_.Swap(&other->exchange_inst_id_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  trade_date_.Swap(&other->trade_date_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  trade_time_.Swap(&other->trade_time_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  trader_id_.Swap(&other->trader_id_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  order_local_id_.Swap(&other->order_local_id_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  clearing_part_id_.Swap(&other->clearing_part_id_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  business_unit_.Swap(&other->business_unit_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  invest_unit_id_.Swap(&other->invest_unit_id_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
   swap(direction_, other->direction_);
-  swap(volume_, other->volume_);
-  swap(traded_time_, other->traded_time_);
-  swap(traded_trading_day_, other->traded_trading_day_);
-  swap(price_type_, other->price_type_);
-  swap(hedge_type_, other->hedge_type_);
-  swap(trade_type_, other->trade_type_);
-  swap(currency_type_, other->currency_type_);
-  swap(local_type_id_, other->local_type_id_);
-  swap(commission_, other->commission_);
-  swap(tax_, other->tax_);
-  swap(total_other_fee_, other->total_other_fee_);
-  swap(initial_traded_price_, other->initial_traded_price_);
-  swap(reserve_, other->reserve_);
-  swap(price_tick_, other->price_tick_);
+  swap(trading_role_, other->trading_role_);
   swap(offset_flag_, other->offset_flag_);
+  swap(hedge_flag_, other->hedge_flag_);
+  swap(price_, other->price_);
+  swap(volume_, other->volume_);
+  swap(trade_type_, other->trade_type_);
+  swap(price_source_, other->price_source_);
+  swap(sequence_no_, other->sequence_no_);
+  swap(trading_day_, other->trading_day_);
+  swap(settlement_id_, other->settlement_id_);
+  swap(broker_order_seq_, other->broker_order_seq_);
+  swap(trade_source_, other->trade_source_);
 }
 
-::google::protobuf::Metadata CTPTradeReport::GetMetadata() const {
+::google::protobuf::Metadata CTPTradeField::GetMetadata() const {
   ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_ctp_2eproto);
   return ::file_level_metadata_ctp_2eproto[kIndexInFileMessages];
 }
@@ -8429,13 +10794,13 @@ const char* CTPTradeReportList::_InternalParse(const char* begin, const char* en
     ptr = ::google::protobuf::io::Parse32(ptr, &tag);
     GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
     switch (tag >> 3) {
-      // repeated .pb.CTPTradeReport list = 1;
+      // repeated .pb.CTPTradeField list = 1;
       case 1: {
         if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
         do {
           ptr = ::google::protobuf::io::ReadSize(ptr, &size);
           GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-          parser_till_end = ::pb::CTPTradeReport::_InternalParse;
+          parser_till_end = ::pb::CTPTradeField::_InternalParse;
           object = msg->add_list();
           if (size > end - ptr) goto len_delim_till_end;
           ptr += size;
@@ -8475,7 +10840,7 @@ bool CTPTradeReportList::MergePartialFromCodedStream(
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // repeated .pb.CTPTradeReport list = 1;
+      // repeated .pb.CTPTradeField list = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
@@ -8513,7 +10878,7 @@ void CTPTradeReportList::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated .pb.CTPTradeReport list = 1;
+  // repeated .pb.CTPTradeField list = 1;
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->list_size()); i < n; i++) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
@@ -8535,7 +10900,7 @@ void CTPTradeReportList::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated .pb.CTPTradeReport list = 1;
+  // repeated .pb.CTPTradeField list = 1;
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->list_size()); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
@@ -8564,7 +10929,7 @@ size_t CTPTradeReportList::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated .pb.CTPTradeReport list = 1;
+  // repeated .pb.CTPTradeField list = 1;
   {
     unsigned int count = static_cast<unsigned int>(this->list_size());
     total_size += 1UL * count;
@@ -15128,13 +17493,13 @@ const char* CTPTradingUnit::_InternalParse(const char* begin, const char* end, v
         } while ((::google::protobuf::io::UnalignedLoad<::google::protobuf::uint64>(ptr) & 255) == 42 && (ptr += 1));
         break;
       }
-      // repeated .pb.CTPOrder history_order_list = 6;
+      // repeated .pb.CTPOrderField history_order_list = 6;
       case 6: {
         if (static_cast<::google::protobuf::uint8>(tag) != 50) goto handle_unusual;
         do {
           ptr = ::google::protobuf::io::ReadSize(ptr, &size);
           GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-          parser_till_end = ::pb::CTPOrder::_InternalParse;
+          parser_till_end = ::pb::CTPOrderField::_InternalParse;
           object = msg->add_history_order_list();
           if (size > end - ptr) goto len_delim_till_end;
           ptr += size;
@@ -15144,13 +17509,13 @@ const char* CTPTradingUnit::_InternalParse(const char* begin, const char* end, v
         } while ((::google::protobuf::io::UnalignedLoad<::google::protobuf::uint64>(ptr) & 255) == 50 && (ptr += 1));
         break;
       }
-      // repeated .pb.CTPTradeReport history_trade_list = 7;
+      // repeated .pb.CTPTradeField history_trade_list = 7;
       case 7: {
         if (static_cast<::google::protobuf::uint8>(tag) != 58) goto handle_unusual;
         do {
           ptr = ::google::protobuf::io::ReadSize(ptr, &size);
           GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-          parser_till_end = ::pb::CTPTradeReport::_InternalParse;
+          parser_till_end = ::pb::CTPTradeField::_InternalParse;
           object = msg->add_history_trade_list();
           if (size > end - ptr) goto len_delim_till_end;
           ptr += size;
@@ -15299,7 +17664,7 @@ bool CTPTradingUnit::MergePartialFromCodedStream(
         break;
       }
 
-      // repeated .pb.CTPOrder history_order_list = 6;
+      // repeated .pb.CTPOrderField history_order_list = 6;
       case 6: {
         if (static_cast< ::google::protobuf::uint8>(tag) == (50 & 0xFF)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
@@ -15310,7 +17675,7 @@ bool CTPTradingUnit::MergePartialFromCodedStream(
         break;
       }
 
-      // repeated .pb.CTPTradeReport history_trade_list = 7;
+      // repeated .pb.CTPTradeField history_trade_list = 7;
       case 7: {
         if (static_cast< ::google::protobuf::uint8>(tag) == (58 & 0xFF)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
@@ -15464,7 +17829,7 @@ void CTPTradingUnit::SerializeWithCachedSizes(
       output);
   }
 
-  // repeated .pb.CTPOrder history_order_list = 6;
+  // repeated .pb.CTPOrderField history_order_list = 6;
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->history_order_list_size()); i < n; i++) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
@@ -15473,7 +17838,7 @@ void CTPTradingUnit::SerializeWithCachedSizes(
       output);
   }
 
-  // repeated .pb.CTPTradeReport history_trade_list = 7;
+  // repeated .pb.CTPTradeField history_trade_list = 7;
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->history_trade_list_size()); i < n; i++) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
@@ -15566,7 +17931,7 @@ void CTPTradingUnit::SerializeWithCachedSizes(
         5, this->history_ctr_list(static_cast<int>(i)), target);
   }
 
-  // repeated .pb.CTPOrder history_order_list = 6;
+  // repeated .pb.CTPOrderField history_order_list = 6;
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->history_order_list_size()); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
@@ -15574,7 +17939,7 @@ void CTPTradingUnit::SerializeWithCachedSizes(
         6, this->history_order_list(static_cast<int>(i)), target);
   }
 
-  // repeated .pb.CTPTradeReport history_trade_list = 7;
+  // repeated .pb.CTPTradeField history_trade_list = 7;
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->history_trade_list_size()); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
@@ -15681,7 +18046,7 @@ size_t CTPTradingUnit::ByteSizeLong() const {
     }
   }
 
-  // repeated .pb.CTPOrder history_order_list = 6;
+  // repeated .pb.CTPOrderField history_order_list = 6;
   {
     unsigned int count = static_cast<unsigned int>(this->history_order_list_size());
     total_size += 1UL * count;
@@ -15692,7 +18057,7 @@ size_t CTPTradingUnit::ByteSizeLong() const {
     }
   }
 
-  // repeated .pb.CTPTradeReport history_trade_list = 7;
+  // repeated .pb.CTPTradeField history_trade_list = 7;
   {
     unsigned int count = static_cast<unsigned int>(this->history_trade_list_size());
     total_size += 1UL * count;
@@ -34401,8 +36766,8 @@ namespace protobuf {
 template<> PROTOBUF_NOINLINE ::pb::CTPOrderID* Arena::CreateMaybeMessage< ::pb::CTPOrderID >(Arena* arena) {
   return Arena::CreateInternal< ::pb::CTPOrderID >(arena);
 }
-template<> PROTOBUF_NOINLINE ::pb::CTPOrder* Arena::CreateMaybeMessage< ::pb::CTPOrder >(Arena* arena) {
-  return Arena::CreateInternal< ::pb::CTPOrder >(arena);
+template<> PROTOBUF_NOINLINE ::pb::CTPOrderField* Arena::CreateMaybeMessage< ::pb::CTPOrderField >(Arena* arena) {
+  return Arena::CreateInternal< ::pb::CTPOrderField >(arena);
 }
 template<> PROTOBUF_NOINLINE ::pb::CTPOrderList* Arena::CreateMaybeMessage< ::pb::CTPOrderList >(Arena* arena) {
   return Arena::CreateInternal< ::pb::CTPOrderList >(arena);
@@ -34416,8 +36781,8 @@ template<> PROTOBUF_NOINLINE ::pb::CTPCancelOrderRequest* Arena::CreateMaybeMess
 template<> PROTOBUF_NOINLINE ::pb::CTPOnRtnCancelOrder* Arena::CreateMaybeMessage< ::pb::CTPOnRtnCancelOrder >(Arena* arena) {
   return Arena::CreateInternal< ::pb::CTPOnRtnCancelOrder >(arena);
 }
-template<> PROTOBUF_NOINLINE ::pb::CTPTradeReport* Arena::CreateMaybeMessage< ::pb::CTPTradeReport >(Arena* arena) {
-  return Arena::CreateInternal< ::pb::CTPTradeReport >(arena);
+template<> PROTOBUF_NOINLINE ::pb::CTPTradeField* Arena::CreateMaybeMessage< ::pb::CTPTradeField >(Arena* arena) {
+  return Arena::CreateInternal< ::pb::CTPTradeField >(arena);
 }
 template<> PROTOBUF_NOINLINE ::pb::CTPTradeReportList* Arena::CreateMaybeMessage< ::pb::CTPTradeReportList >(Arena* arena) {
   return Arena::CreateInternal< ::pb::CTPTradeReportList >(arena);

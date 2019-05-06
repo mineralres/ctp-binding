@@ -327,7 +327,7 @@ const ::google::protobuf::uint32 TableStruct_order_2eproto::offsets[] PROTOBUF_S
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   PROTOBUF_FIELD_OFFSET(::pb::CancelOrderRequest, account_),
-  PROTOBUF_FIELD_OFFSET(::pb::CancelOrderRequest, orderid_),
+  PROTOBUF_FIELD_OFFSET(::pb::CancelOrderRequest, order_id_),
   PROTOBUF_FIELD_OFFSET(::pb::CancelOrderRequest, symbol_),
   PROTOBUF_FIELD_OFFSET(::pb::CancelOrderRequest, request_id_),
   PROTOBUF_FIELD_OFFSET(::pb::CancelOrderRequest, front_id_),
@@ -445,8 +445,8 @@ static ::google::protobuf::Message const * const file_default_instances[] = {
 
 const char descriptor_table_protodef_order_2eproto[] =
   "\n\013order.proto\022\002pb\032\014common.proto\"B\n\007Order"
-  "ID\022\020\n\010front_id\030\001 \001(\003\022\022\n\nsession_id\030\002 \001(\003"
-  "\022\021\n\torder_ref\030\003 \001(\003\"\302\n\n\005Order\022\032\n\006symbol\030"
+  "ID\022\020\n\010front_id\030\001 \001(\005\022\022\n\nsession_id\030\002 \001(\005"
+  "\022\021\n\torder_ref\030\003 \001(\005\"\302\n\n\005Order\022\032\n\006symbol\030"
   "\001 \001(\0132\n.pb.Symbol\022\027\n\002id\030\002 \001(\0132\013.pb.Order"
   "ID\022\017\n\007account\030\003 \001(\t\022%\n\tdirection\030\004 \001(\0162\022"
   ".pb.OrderDirection\022\037\n\006status\030\005 \001(\0162\017.pb."
@@ -484,86 +484,86 @@ const char descriptor_table_protodef_order_2eproto[] =
   ".Order\"O\n\nJointOrder\022\036\n\013local_order\030\001 \001("
   "\0132\t.pb.Order\022!\n\016exchange_order\030\002 \001(\0132\t.p"
   "b.Order\"B\n\tOrderLink\022\030\n\005local\030\001 \001(\0132\t.pb"
-  ".Order\022\033\n\010upstream\030\002 \003(\0132\t.pb.Order\"\321\002\n\022"
-  "CancelOrderRequest\022\017\n\007account\030\001 \001(\t\022\034\n\007O"
-  "rderID\030\002 \001(\0132\013.pb.OrderID\022\032\n\006symbol\030\003 \001("
-  "\0132\n.pb.Symbol\022\022\n\nrequest_id\030\004 \001(\005\022\020\n\010fro"
-  "nt_id\030\005 \001(\005\022\022\n\nsession_id\030\006 \001(\005\022\031\n\021excha"
-  "nge_order_id\030\007 \001(\t\022\r\n\005token\030\010 \001(\t\022\025\n\rrou"
-  "te_account\030\t \001(\t\022\030\n\020settlement_group\030\n \001"
-  "(\005\022\017\n\007company\030\013 \001(\003\022\021\n\tsend_time\030\014 \001(\003\022)"
-  "\n\tuser_type\030\r \001(\0162\026.pb.TradingAccountTyp"
-  "e\022\014\n\004user\030\017 \001(\t\"\375\001\n\020OnRtnCancelOrder\022\017\n\007"
-  "account\030\001 \001(\t\022\034\n\007OrderID\030\002 \001(\0132\013.pb.Orde"
-  "rID\022\031\n\021exchange_order_id\030\003 \001(\t\022\032\n\006symbol"
-  "\030\004 \001(\0132\n.pb.Symbol\022\022\n\nrequest_id\030\005 \001(\005\022\022"
-  "\n\nerror_type\030\006 \001(\005\022\r\n\005error\030\007 \001(\005\022\013\n\003msg"
-  "\030\010 \001(\t\022\025\n\rroute_account\030\t \001(\t\022\032\n\022upstrea"
-  "m_not_found\030\n \001(\010\022\014\n\004user\030F \001(\t\"\361\005\n\016Cond"
-  "itionOrder\022\n\n\002id\030\001 \001(\003\022\017\n\007account\030\002 \001(\t\022"
-  "\032\n\006symbol\030\003 \001(\0132\n.pb.Symbol\022.\n\022position_"
-  "direction\030\004 \001(\0162\022.pb.OrderDirection\022%\n\td"
-  "irection\030\005 \001(\0162\022.pb.OrderDirection\022#\n\013of"
-  "fset_flag\030\006 \001(\0162\016.pb.OffsetFlag\022\023\n\013symbo"
-  "l_name\030\007 \001(\t\022\027\n\017volume_multiple\030\010 \001(\005\022!\n"
-  "\nproduct_id\030\t \001(\0132\r.pb.ProductID\022\022\n\npric"
-  "e_tick\030\n \001(\001\022\021\n\ttriggered\030\013 \001(\010\022\026\n\016trigg"
-  "ered_time\030\014 \001(\003\022\016\n\006volume\030\r \001(\001\022\r\n\005price"
-  "\030\016 \001(\001\022\037\n\027trigger_condition_price\030\017 \001(\001\022"
-  ">\n\022trigger_price_type\030\020 \001(\0162\".pb.Conditi"
-  "onOrderTriggerPriceType\0223\n\014trigger_type\030"
-  "\021 \001(\0162\035.pb.ConditionOrderTriggerType\0225\n\025"
-  "send_order_price_type\030\022 \001(\0162\026.pb.SendOrd"
-  "erPriceType\022\023\n\013send_result\030\023 \001(\t\022\023\n\013crea"
-  "te_time\030\024 \001(\003\022\013\n\003tag\030\025 \001(\t\022\020\n\010deadline\030\026"
-  " \001(\003\022\030\n\020settlement_group\030\027 \001(\005\022\021\n\tstop_l"
-  "oss\030\030 \001(\010\022\n\n\002ip\030\031 \001(\t\022\013\n\003mac\030\032 \001(\t\022\021\n\tus"
-  "er_name\030\033 \001(\t\022\014\n\004user\030F \001(\t\"]\n\010TradeCmd\022"
-  "\036\n\004type\030\001 \001(\0162\020.pb.TradeCmdType\022\014\n\004data\030"
-  "\002 \001(\014\022\017\n\007node_id\030\003 \001(\003\022\022\n\nrequest_id\030\004 \001"
-  "(\003\"\337\001\n\tDemoOrder\022\030\n\005order\030\001 \001(\0132\t.pb.Ord"
-  "er\022\031\n\021upper_limit_price\030\002 \001(\001\022\031\n\021lower_l"
-  "imit_price\030\003 \001(\001\022\036\n\026min_limit_order_volu"
-  "me\030\004 \001(\005\022\037\n\027min_market_order_volume\030\005 \001("
-  "\005\022%\n\ttime_rule\030\006 \001(\0132\022.pb.MarketTimeRule"
-  "\022\032\n\022update_trading_day\030\007 \001(\005*\217\001\n\013OrderSt"
-  "atus\022\013\n\007OS_DONE\020\000\022 \n\034OS_PENDING_WITH_PAR"
-  "TIAL_DONE\020\001\022!\n\035OS_CANCELED_WITH_PARTIAL_"
-  "DONE\020\002\022\016\n\nOS_PENDING\020\003\022\017\n\013OS_CANCELED\020\004\022"
-  "\r\n\tOS_UNKOWN\020\005*c\n\016OrderPriceType\022\023\n\017OPT_"
-  "LIMIT_PRICE\020\000\022\024\n\020OPT_MARKET_PRICE\020\001\022\022\n\016O"
-  "PT_BEST_PRICE\020\002\022\022\n\016OPT_LAST_PRICE\020\003*t\n\nO"
-  "ffsetFlag\022\013\n\007OF_NONE\020\000\022\013\n\007OF_OPEN\020\001\022\014\n\010O"
-  "F_CLOSE\020\002\022\022\n\016OF_FORCE_CLOSE\020\003\022\022\n\016OF_CLOS"
-  "E_TODAY\020\004\022\026\n\022OF_CLOSE_YESTERDAY\020\005*+\n\016Ord"
-  "erDirection\022\013\n\007OD_LONG\020\000\022\014\n\010OD_SHORT\020\001*\273"
-  "\001\n\016ForceCloseType\022\013\n\007FCT_NOT\020\000\022\031\n\025FCT_NO"
-  "T_ENOUGH_MARGIN\020\001\022\"\n\036FCT_client_over_pos"
-  "ition_limit\020\002\022#\n\037FCT_broker_over_poisiti"
-  "on_limit\020\003\022\021\n\rFCT_violation\020\004\022\r\n\tFCT_oth"
-  "er\020\005\022\026\n\022FCT_person_deliver\020\006*\223\002\n\017OrderSo"
-  "urceType\022\016\n\nOST_CLIENT\020\000\022\025\n\021OST_ADMINIST"
-  "RATOR\020\001\022\020\n\014OST_RISK_SRV\020\002\022\016\n\nOST_MOBILE\020"
-  "\003\022\n\n\006OST_PC\020\004\022\032\n\026OST_SETTLEMENT_DERIVED\020"
-  "\005\022\033\n\027OST_COMBINATION_DERIVED\020\006\022!\n\035OST_MU"
-  "LTI_ROUTE_CLOSE_DERIVED\020\007\022\027\n\023OST_PLACEME"
-  "NT_SHARE\020\010\022\022\n\016OST_REPURCHASE\020\t\022\022\n\016OST_CT"
-  "P_UPLOAD\020\n\022\016\n\nOST_UNKOWN\020\013*`\n\036ConditionO"
-  "rderTriggerPriceType\022\024\n\020COTPT_LAST_PRICE"
-  "\020\000\022\023\n\017COTPT_BID_PRICE\020\001\022\023\n\017COTPT_ASK_PRI"
-  "CE\020\002*X\n\031ConditionOrderTriggerType\022\036\n\032COT"
-  "T_GREATER_THAN_OR_EQUAL\020\000\022\033\n\027COTT_LESS_T"
-  "HAN_OR_EQUAL\020\001*O\n\022SendOrderPriceType\022\020\n\014"
-  "SOPT_BID_ASK\020\000\022\017\n\013SOPT_MARKET\020\001\022\026\n\022SOPT_"
-  "BID_ASK_MINUS\020\002*c\n\014TradeCmdType\022\r\n\tTCT_O"
-  "RDER\020\000\022\016\n\nTCT_CANCEL\020\001\022\025\n\021TCT_QUERY_BALA"
-  "NCE\020\002\022\035\n\031TCT_QUERY_POSITION_DETAIL\020\003b\006pr"
-  "oto3"
+  ".Order\022\033\n\010upstream\030\002 \003(\0132\t.pb.Order\"\322\002\n\022"
+  "CancelOrderRequest\022\017\n\007account\030\001 \001(\t\022\035\n\010o"
+  "rder_id\030\002 \001(\0132\013.pb.OrderID\022\032\n\006symbol\030\003 \001"
+  "(\0132\n.pb.Symbol\022\022\n\nrequest_id\030\004 \001(\005\022\020\n\010fr"
+  "ont_id\030\005 \001(\005\022\022\n\nsession_id\030\006 \001(\005\022\031\n\021exch"
+  "ange_order_id\030\007 \001(\t\022\r\n\005token\030\010 \001(\t\022\025\n\rro"
+  "ute_account\030\t \001(\t\022\030\n\020settlement_group\030\n "
+  "\001(\005\022\017\n\007company\030\013 \001(\003\022\021\n\tsend_time\030\014 \001(\003\022"
+  ")\n\tuser_type\030\r \001(\0162\026.pb.TradingAccountTy"
+  "pe\022\014\n\004user\030\017 \001(\t\"\375\001\n\020OnRtnCancelOrder\022\017\n"
+  "\007account\030\001 \001(\t\022\034\n\007OrderID\030\002 \001(\0132\013.pb.Ord"
+  "erID\022\031\n\021exchange_order_id\030\003 \001(\t\022\032\n\006symbo"
+  "l\030\004 \001(\0132\n.pb.Symbol\022\022\n\nrequest_id\030\005 \001(\005\022"
+  "\022\n\nerror_type\030\006 \001(\005\022\r\n\005error\030\007 \001(\005\022\013\n\003ms"
+  "g\030\010 \001(\t\022\025\n\rroute_account\030\t \001(\t\022\032\n\022upstre"
+  "am_not_found\030\n \001(\010\022\014\n\004user\030F \001(\t\"\361\005\n\016Con"
+  "ditionOrder\022\n\n\002id\030\001 \001(\003\022\017\n\007account\030\002 \001(\t"
+  "\022\032\n\006symbol\030\003 \001(\0132\n.pb.Symbol\022.\n\022position"
+  "_direction\030\004 \001(\0162\022.pb.OrderDirection\022%\n\t"
+  "direction\030\005 \001(\0162\022.pb.OrderDirection\022#\n\013o"
+  "ffset_flag\030\006 \001(\0162\016.pb.OffsetFlag\022\023\n\013symb"
+  "ol_name\030\007 \001(\t\022\027\n\017volume_multiple\030\010 \001(\005\022!"
+  "\n\nproduct_id\030\t \001(\0132\r.pb.ProductID\022\022\n\npri"
+  "ce_tick\030\n \001(\001\022\021\n\ttriggered\030\013 \001(\010\022\026\n\016trig"
+  "gered_time\030\014 \001(\003\022\016\n\006volume\030\r \001(\001\022\r\n\005pric"
+  "e\030\016 \001(\001\022\037\n\027trigger_condition_price\030\017 \001(\001"
+  "\022>\n\022trigger_price_type\030\020 \001(\0162\".pb.Condit"
+  "ionOrderTriggerPriceType\0223\n\014trigger_type"
+  "\030\021 \001(\0162\035.pb.ConditionOrderTriggerType\0225\n"
+  "\025send_order_price_type\030\022 \001(\0162\026.pb.SendOr"
+  "derPriceType\022\023\n\013send_result\030\023 \001(\t\022\023\n\013cre"
+  "ate_time\030\024 \001(\003\022\013\n\003tag\030\025 \001(\t\022\020\n\010deadline\030"
+  "\026 \001(\003\022\030\n\020settlement_group\030\027 \001(\005\022\021\n\tstop_"
+  "loss\030\030 \001(\010\022\n\n\002ip\030\031 \001(\t\022\013\n\003mac\030\032 \001(\t\022\021\n\tu"
+  "ser_name\030\033 \001(\t\022\014\n\004user\030F \001(\t\"]\n\010TradeCmd"
+  "\022\036\n\004type\030\001 \001(\0162\020.pb.TradeCmdType\022\014\n\004data"
+  "\030\002 \001(\014\022\017\n\007node_id\030\003 \001(\003\022\022\n\nrequest_id\030\004 "
+  "\001(\003\"\337\001\n\tDemoOrder\022\030\n\005order\030\001 \001(\0132\t.pb.Or"
+  "der\022\031\n\021upper_limit_price\030\002 \001(\001\022\031\n\021lower_"
+  "limit_price\030\003 \001(\001\022\036\n\026min_limit_order_vol"
+  "ume\030\004 \001(\005\022\037\n\027min_market_order_volume\030\005 \001"
+  "(\005\022%\n\ttime_rule\030\006 \001(\0132\022.pb.MarketTimeRul"
+  "e\022\032\n\022update_trading_day\030\007 \001(\005*\217\001\n\013OrderS"
+  "tatus\022\013\n\007OS_DONE\020\000\022 \n\034OS_PENDING_WITH_PA"
+  "RTIAL_DONE\020\001\022!\n\035OS_CANCELED_WITH_PARTIAL"
+  "_DONE\020\002\022\016\n\nOS_PENDING\020\003\022\017\n\013OS_CANCELED\020\004"
+  "\022\r\n\tOS_UNKOWN\020\005*c\n\016OrderPriceType\022\023\n\017OPT"
+  "_LIMIT_PRICE\020\000\022\024\n\020OPT_MARKET_PRICE\020\001\022\022\n\016"
+  "OPT_BEST_PRICE\020\002\022\022\n\016OPT_LAST_PRICE\020\003*t\n\n"
+  "OffsetFlag\022\013\n\007OF_NONE\020\000\022\013\n\007OF_OPEN\020\001\022\014\n\010"
+  "OF_CLOSE\020\002\022\022\n\016OF_FORCE_CLOSE\020\003\022\022\n\016OF_CLO"
+  "SE_TODAY\020\004\022\026\n\022OF_CLOSE_YESTERDAY\020\005*+\n\016Or"
+  "derDirection\022\013\n\007OD_LONG\020\000\022\014\n\010OD_SHORT\020\001*"
+  "\273\001\n\016ForceCloseType\022\013\n\007FCT_NOT\020\000\022\031\n\025FCT_N"
+  "OT_ENOUGH_MARGIN\020\001\022\"\n\036FCT_client_over_po"
+  "sition_limit\020\002\022#\n\037FCT_broker_over_poisit"
+  "ion_limit\020\003\022\021\n\rFCT_violation\020\004\022\r\n\tFCT_ot"
+  "her\020\005\022\026\n\022FCT_person_deliver\020\006*\223\002\n\017OrderS"
+  "ourceType\022\016\n\nOST_CLIENT\020\000\022\025\n\021OST_ADMINIS"
+  "TRATOR\020\001\022\020\n\014OST_RISK_SRV\020\002\022\016\n\nOST_MOBILE"
+  "\020\003\022\n\n\006OST_PC\020\004\022\032\n\026OST_SETTLEMENT_DERIVED"
+  "\020\005\022\033\n\027OST_COMBINATION_DERIVED\020\006\022!\n\035OST_M"
+  "ULTI_ROUTE_CLOSE_DERIVED\020\007\022\027\n\023OST_PLACEM"
+  "ENT_SHARE\020\010\022\022\n\016OST_REPURCHASE\020\t\022\022\n\016OST_C"
+  "TP_UPLOAD\020\n\022\016\n\nOST_UNKOWN\020\013*`\n\036Condition"
+  "OrderTriggerPriceType\022\024\n\020COTPT_LAST_PRIC"
+  "E\020\000\022\023\n\017COTPT_BID_PRICE\020\001\022\023\n\017COTPT_ASK_PR"
+  "ICE\020\002*X\n\031ConditionOrderTriggerType\022\036\n\032CO"
+  "TT_GREATER_THAN_OR_EQUAL\020\000\022\033\n\027COTT_LESS_"
+  "THAN_OR_EQUAL\020\001*O\n\022SendOrderPriceType\022\020\n"
+  "\014SOPT_BID_ASK\020\000\022\017\n\013SOPT_MARKET\020\001\022\026\n\022SOPT"
+  "_BID_ASK_MINUS\020\002*c\n\014TradeCmdType\022\r\n\tTCT_"
+  "ORDER\020\000\022\016\n\nTCT_CANCEL\020\001\022\025\n\021TCT_QUERY_BAL"
+  "ANCE\020\002\022\035\n\031TCT_QUERY_POSITION_DETAIL\020\003b\006p"
+  "roto3"
   ;
 ::google::protobuf::internal::DescriptorTable descriptor_table_order_2eproto = {
   false, InitDefaults_order_2eproto, 
   descriptor_table_protodef_order_2eproto,
-  "order.proto", &assign_descriptors_table_order_2eproto, 4564,
+  "order.proto", &assign_descriptors_table_order_2eproto, 4565,
 };
 
 void AddDescriptors_order_2eproto() {
@@ -824,21 +824,21 @@ const char* OrderID::_InternalParse(const char* begin, const char* end, void* ob
     ptr = ::google::protobuf::io::Parse32(ptr, &tag);
     GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
     switch (tag >> 3) {
-      // int64 front_id = 1;
+      // int32 front_id = 1;
       case 1: {
         if (static_cast<::google::protobuf::uint8>(tag) != 8) goto handle_unusual;
         msg->set_front_id(::google::protobuf::internal::ReadVarint(&ptr));
         GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
         break;
       }
-      // int64 session_id = 2;
+      // int32 session_id = 2;
       case 2: {
         if (static_cast<::google::protobuf::uint8>(tag) != 16) goto handle_unusual;
         msg->set_session_id(::google::protobuf::internal::ReadVarint(&ptr));
         GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
         break;
       }
-      // int64 order_ref = 3;
+      // int32 order_ref = 3;
       case 3: {
         if (static_cast<::google::protobuf::uint8>(tag) != 24) goto handle_unusual;
         msg->set_order_ref(::google::protobuf::internal::ReadVarint(&ptr));
@@ -872,12 +872,12 @@ bool OrderID::MergePartialFromCodedStream(
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // int64 front_id = 1;
+      // int32 front_id = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) == (8 & 0xFF)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::int64, ::google::protobuf::internal::WireFormatLite::TYPE_INT64>(
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
                  input, &front_id_)));
         } else {
           goto handle_unusual;
@@ -885,12 +885,12 @@ bool OrderID::MergePartialFromCodedStream(
         break;
       }
 
-      // int64 session_id = 2;
+      // int32 session_id = 2;
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) == (16 & 0xFF)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::int64, ::google::protobuf::internal::WireFormatLite::TYPE_INT64>(
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
                  input, &session_id_)));
         } else {
           goto handle_unusual;
@@ -898,12 +898,12 @@ bool OrderID::MergePartialFromCodedStream(
         break;
       }
 
-      // int64 order_ref = 3;
+      // int32 order_ref = 3;
       case 3: {
         if (static_cast< ::google::protobuf::uint8>(tag) == (24 & 0xFF)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::int64, ::google::protobuf::internal::WireFormatLite::TYPE_INT64>(
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
                  input, &order_ref_)));
         } else {
           goto handle_unusual;
@@ -938,19 +938,19 @@ void OrderID::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // int64 front_id = 1;
+  // int32 front_id = 1;
   if (this->front_id() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt64(1, this->front_id(), output);
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(1, this->front_id(), output);
   }
 
-  // int64 session_id = 2;
+  // int32 session_id = 2;
   if (this->session_id() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt64(2, this->session_id(), output);
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(2, this->session_id(), output);
   }
 
-  // int64 order_ref = 3;
+  // int32 order_ref = 3;
   if (this->order_ref() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt64(3, this->order_ref(), output);
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(3, this->order_ref(), output);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -966,19 +966,19 @@ void OrderID::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // int64 front_id = 1;
+  // int32 front_id = 1;
   if (this->front_id() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(1, this->front_id(), target);
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(1, this->front_id(), target);
   }
 
-  // int64 session_id = 2;
+  // int32 session_id = 2;
   if (this->session_id() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(2, this->session_id(), target);
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(2, this->session_id(), target);
   }
 
-  // int64 order_ref = 3;
+  // int32 order_ref = 3;
   if (this->order_ref() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(3, this->order_ref(), target);
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(3, this->order_ref(), target);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -1002,24 +1002,24 @@ size_t OrderID::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // int64 front_id = 1;
+  // int32 front_id = 1;
   if (this->front_id() != 0) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::Int64Size(
+      ::google::protobuf::internal::WireFormatLite::Int32Size(
         this->front_id());
   }
 
-  // int64 session_id = 2;
+  // int32 session_id = 2;
   if (this->session_id() != 0) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::Int64Size(
+      ::google::protobuf::internal::WireFormatLite::Int32Size(
         this->session_id());
   }
 
-  // int64 order_ref = 3;
+  // int32 order_ref = 3;
   if (this->order_ref() != 0) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::Int64Size(
+      ::google::protobuf::internal::WireFormatLite::Int32Size(
         this->order_ref());
   }
 
@@ -5151,20 +5151,20 @@ void OrderLink::InternalSwap(OrderLink* other) {
 // ===================================================================
 
 void CancelOrderRequest::InitAsDefaultInstance() {
-  ::pb::_CancelOrderRequest_default_instance_._instance.get_mutable()->orderid_ = const_cast< ::pb::OrderID*>(
+  ::pb::_CancelOrderRequest_default_instance_._instance.get_mutable()->order_id_ = const_cast< ::pb::OrderID*>(
       ::pb::OrderID::internal_default_instance());
   ::pb::_CancelOrderRequest_default_instance_._instance.get_mutable()->symbol_ = const_cast< ::pb::Symbol*>(
       ::pb::Symbol::internal_default_instance());
 }
 class CancelOrderRequest::HasBitSetters {
  public:
-  static const ::pb::OrderID& orderid(const CancelOrderRequest* msg);
+  static const ::pb::OrderID& order_id(const CancelOrderRequest* msg);
   static const ::pb::Symbol& symbol(const CancelOrderRequest* msg);
 };
 
 const ::pb::OrderID&
-CancelOrderRequest::HasBitSetters::orderid(const CancelOrderRequest* msg) {
-  return *msg->orderid_;
+CancelOrderRequest::HasBitSetters::order_id(const CancelOrderRequest* msg) {
+  return *msg->order_id_;
 }
 const ::pb::Symbol&
 CancelOrderRequest::HasBitSetters::symbol(const CancelOrderRequest* msg) {
@@ -5178,7 +5178,7 @@ void CancelOrderRequest::clear_symbol() {
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int CancelOrderRequest::kAccountFieldNumber;
-const int CancelOrderRequest::kOrderIDFieldNumber;
+const int CancelOrderRequest::kOrderIdFieldNumber;
 const int CancelOrderRequest::kSymbolFieldNumber;
 const int CancelOrderRequest::kRequestIdFieldNumber;
 const int CancelOrderRequest::kFrontIdFieldNumber;
@@ -5222,10 +5222,10 @@ CancelOrderRequest::CancelOrderRequest(const CancelOrderRequest& from)
   if (from.user().size() > 0) {
     user_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.user_);
   }
-  if (from.has_orderid()) {
-    orderid_ = new ::pb::OrderID(*from.orderid_);
+  if (from.has_order_id()) {
+    order_id_ = new ::pb::OrderID(*from.order_id_);
   } else {
-    orderid_ = nullptr;
+    order_id_ = nullptr;
   }
   if (from.has_symbol()) {
     symbol_ = new ::pb::Symbol(*from.symbol_);
@@ -5246,9 +5246,9 @@ void CancelOrderRequest::SharedCtor() {
   token_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   route_account_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   user_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  ::memset(&orderid_, 0, static_cast<size_t>(
+  ::memset(&order_id_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&user_type_) -
-      reinterpret_cast<char*>(&orderid_)) + sizeof(user_type_));
+      reinterpret_cast<char*>(&order_id_)) + sizeof(user_type_));
 }
 
 CancelOrderRequest::~CancelOrderRequest() {
@@ -5262,7 +5262,7 @@ void CancelOrderRequest::SharedDtor() {
   token_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   route_account_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   user_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (this != internal_default_instance()) delete orderid_;
+  if (this != internal_default_instance()) delete order_id_;
   if (this != internal_default_instance()) delete symbol_;
 }
 
@@ -5286,10 +5286,10 @@ void CancelOrderRequest::Clear() {
   token_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   route_account_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   user_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (GetArenaNoVirtual() == nullptr && orderid_ != nullptr) {
-    delete orderid_;
+  if (GetArenaNoVirtual() == nullptr && order_id_ != nullptr) {
+    delete order_id_;
   }
-  orderid_ = nullptr;
+  order_id_ = nullptr;
   if (GetArenaNoVirtual() == nullptr && symbol_ != nullptr) {
     delete symbol_;
   }
@@ -5329,13 +5329,13 @@ const char* CancelOrderRequest::_InternalParse(const char* begin, const char* en
         ptr += size;
         break;
       }
-      // .pb.OrderID OrderID = 2;
+      // .pb.OrderID order_id = 2;
       case 2: {
         if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
         ptr = ::google::protobuf::io::ReadSize(ptr, &size);
         GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
         parser_till_end = ::pb::OrderID::_InternalParse;
-        object = msg->mutable_orderid();
+        object = msg->mutable_order_id();
         if (size > end - ptr) goto len_delim_till_end;
         ptr += size;
         GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
@@ -5518,11 +5518,11 @@ bool CancelOrderRequest::MergePartialFromCodedStream(
         break;
       }
 
-      // .pb.OrderID OrderID = 2;
+      // .pb.OrderID order_id = 2;
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_orderid()));
+               input, mutable_order_id()));
         } else {
           goto handle_unusual;
         }
@@ -5729,10 +5729,10 @@ void CancelOrderRequest::SerializeWithCachedSizes(
       1, this->account(), output);
   }
 
-  // .pb.OrderID OrderID = 2;
-  if (this->has_orderid()) {
+  // .pb.OrderID order_id = 2;
+  if (this->has_order_id()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, HasBitSetters::orderid(this), output);
+      2, HasBitSetters::order_id(this), output);
   }
 
   // .pb.Symbol symbol = 3;
@@ -5841,11 +5841,11 @@ void CancelOrderRequest::SerializeWithCachedSizes(
         1, this->account(), target);
   }
 
-  // .pb.OrderID OrderID = 2;
-  if (this->has_orderid()) {
+  // .pb.OrderID order_id = 2;
+  if (this->has_order_id()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        2, HasBitSetters::orderid(this), target);
+        2, HasBitSetters::order_id(this), target);
   }
 
   // .pb.Symbol symbol = 3;
@@ -5991,11 +5991,11 @@ size_t CancelOrderRequest::ByteSizeLong() const {
         this->user());
   }
 
-  // .pb.OrderID OrderID = 2;
-  if (this->has_orderid()) {
+  // .pb.OrderID order_id = 2;
+  if (this->has_order_id()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *orderid_);
+        *order_id_);
   }
 
   // .pb.Symbol symbol = 3;
@@ -6100,8 +6100,8 @@ void CancelOrderRequest::MergeFrom(const CancelOrderRequest& from) {
 
     user_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.user_);
   }
-  if (from.has_orderid()) {
-    mutable_orderid()->::pb::OrderID::MergeFrom(from.orderid());
+  if (from.has_order_id()) {
+    mutable_order_id()->::pb::OrderID::MergeFrom(from.order_id());
   }
   if (from.has_symbol()) {
     mutable_symbol()->::pb::Symbol::MergeFrom(from.symbol());
@@ -6164,7 +6164,7 @@ void CancelOrderRequest::InternalSwap(CancelOrderRequest* other) {
     GetArenaNoVirtual());
   user_.Swap(&other->user_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
-  swap(orderid_, other->orderid_);
+  swap(order_id_, other->order_id_);
   swap(symbol_, other->symbol_);
   swap(request_id_, other->request_id_);
   swap(front_id_, other->front_id_);

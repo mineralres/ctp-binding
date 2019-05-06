@@ -17,12 +17,17 @@
 #include <google/protobuf/port_def.inc>
 
 extern PROTOBUF_INTERNAL_EXPORT_user_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_Permission_user_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_user_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_User_user_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_user_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_PermissionTreeNode_user_2eproto;
 namespace pb {
 class UserDefaultTypeInternal {
  public:
   ::google::protobuf::internal::ExplicitlyConstructed<User> _instance;
 } _User_default_instance_;
+class UserListDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<UserList> _instance;
+} _UserList_default_instance_;
 class PermissionDefaultTypeInternal {
  public:
   ::google::protobuf::internal::ExplicitlyConstructed<Permission> _instance;
@@ -57,6 +62,21 @@ static void InitDefaultsUser_user_2eproto() {
 
 ::google::protobuf::internal::SCCInfo<0> scc_info_User_user_2eproto =
     {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsUser_user_2eproto}, {}};
+
+static void InitDefaultsUserList_user_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::pb::_UserList_default_instance_;
+    new (ptr) ::pb::UserList();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::pb::UserList::InitAsDefaultInstance();
+}
+
+::google::protobuf::internal::SCCInfo<1> scc_info_UserList_user_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsUserList_user_2eproto}, {
+      &scc_info_User_user_2eproto.base,}};
 
 static void InitDefaultsPermission_user_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -133,6 +153,7 @@ static void InitDefaultsUserSession_user_2eproto() {
 
 void InitDefaults_user_2eproto() {
   ::google::protobuf::internal::InitSCC(&scc_info_User_user_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_UserList_user_2eproto.base);
   ::google::protobuf::internal::InitSCC(&scc_info_Permission_user_2eproto.base);
   ::google::protobuf::internal::InitSCC(&scc_info_PermissionTreeNode_user_2eproto.base);
   ::google::protobuf::internal::InitSCC(&scc_info_PermissionList_user_2eproto.base);
@@ -140,7 +161,7 @@ void InitDefaults_user_2eproto() {
   ::google::protobuf::internal::InitSCC(&scc_info_UserSession_user_2eproto.base);
 }
 
-::google::protobuf::Metadata file_level_metadata_user_2eproto[6];
+::google::protobuf::Metadata file_level_metadata_user_2eproto[7];
 const ::google::protobuf::EnumDescriptor* file_level_enum_descriptors_user_2eproto[2];
 constexpr ::google::protobuf::ServiceDescriptor const** file_level_service_descriptors_user_2eproto = nullptr;
 
@@ -155,6 +176,12 @@ const ::google::protobuf::uint32 TableStruct_user_2eproto::offsets[] PROTOBUF_SE
   PROTOBUF_FIELD_OFFSET(::pb::User, type_),
   PROTOBUF_FIELD_OFFSET(::pb::User, status_),
   PROTOBUF_FIELD_OFFSET(::pb::User, roles_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::pb::UserList, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::pb::UserList, list_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::pb::Permission, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -201,15 +228,17 @@ const ::google::protobuf::uint32 TableStruct_user_2eproto::offsets[] PROTOBUF_SE
 };
 static const ::google::protobuf::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::pb::User)},
-  { 10, -1, sizeof(::pb::Permission)},
-  { 19, -1, sizeof(::pb::PermissionTreeNode)},
-  { 27, -1, sizeof(::pb::PermissionList)},
-  { 33, -1, sizeof(::pb::UserRole)},
-  { 42, -1, sizeof(::pb::UserSession)},
+  { 10, -1, sizeof(::pb::UserList)},
+  { 16, -1, sizeof(::pb::Permission)},
+  { 25, -1, sizeof(::pb::PermissionTreeNode)},
+  { 33, -1, sizeof(::pb::PermissionList)},
+  { 39, -1, sizeof(::pb::UserRole)},
+  { 48, -1, sizeof(::pb::UserSession)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
   reinterpret_cast<const ::google::protobuf::Message*>(&::pb::_User_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::pb::_UserList_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::pb::_Permission_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::pb::_PermissionTreeNode_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::pb::_PermissionList_default_instance_),
@@ -220,34 +249,35 @@ static ::google::protobuf::Message const * const file_default_instances[] = {
 ::google::protobuf::internal::AssignDescriptorsTable assign_descriptors_table_user_2eproto = {
   {}, AddDescriptors_user_2eproto, "user.proto", schemas,
   file_default_instances, TableStruct_user_2eproto::offsets,
-  file_level_metadata_user_2eproto, 6, file_level_enum_descriptors_user_2eproto, file_level_service_descriptors_user_2eproto,
+  file_level_metadata_user_2eproto, 7, file_level_enum_descriptors_user_2eproto, file_level_service_descriptors_user_2eproto,
 };
 
 const char descriptor_table_protodef_user_2eproto[] =
   "\n\nuser.proto\022\002pb\"k\n\004User\022\n\n\002id\030\001 \001(\t\022\014\n\004"
   "name\030\002 \001(\t\022\032\n\004type\030\003 \001(\0162\014.pb.UserType\022\036"
   "\n\006status\030\004 \001(\0162\016.pb.UserStatus\022\r\n\005roles\030"
-  "\005 \003(\003\"C\n\nPermission\022\n\n\002id\030\001 \001(\003\022\014\n\004name\030"
-  "\002 \001(\t\022\r\n\005menus\030\003 \003(\t\022\014\n\004apis\030\004 \003(\t\"t\n\022Pe"
-  "rmissionTreeNode\022\"\n\npermission\030\001 \001(\0132\016.p"
-  "b.Permission\022\020\n\010selected\030\002 \001(\010\022(\n\010childr"
-  "en\030\003 \003(\0132\026.pb.PermissionTreeNode\".\n\016Perm"
-  "issionList\022\034\n\004list\030\001 \003(\0132\016.pb.Permission"
-  "\"^\n\010UserRole\022\n\n\002id\030\001 \001(\003\022\014\n\004name\030\002 \001(\t\022\023"
-  "\n\013discription\030\003 \001(\t\022#\n\013permissions\030\004 \003(\013"
-  "2\016.pb.Permission\"\205\001\n\013UserSession\022\n\n\002id\030\001"
-  " \001(\t\022\r\n\005token\030\002 \001(\t\022\032\n\004type\030\003 \001(\0162\014.pb.U"
-  "serType\022\036\n\006status\030\004 \001(\0162\016.pb.UserStatus\022"
-  "\r\n\005roles\030\005 \003(\003\022\020\n\010deadline\030\006 \001(\003*C\n\010User"
-  "Type\022\r\n\tUT_NORMAL\020\000\022\023\n\017UT_BRANCH_ADMIN\020\001"
-  "\022\023\n\017UT_SYSTEM_ADMIN\020\002*:\n\nUserStatus\022\r\n\tU"
-  "S_NORMAL\020\000\022\r\n\tUS_FROZEN\020\001\022\016\n\nUS_DELETED\020"
-  "\002b\006proto3"
+  "\005 \003(\003\"\"\n\010UserList\022\026\n\004list\030\001 \003(\0132\010.pb.Use"
+  "r\"C\n\nPermission\022\n\n\002id\030\001 \001(\003\022\014\n\004name\030\002 \001("
+  "\t\022\r\n\005menus\030\003 \003(\t\022\014\n\004apis\030\004 \003(\t\"t\n\022Permis"
+  "sionTreeNode\022\"\n\npermission\030\001 \001(\0132\016.pb.Pe"
+  "rmission\022\020\n\010selected\030\002 \001(\010\022(\n\010children\030\003"
+  " \003(\0132\026.pb.PermissionTreeNode\".\n\016Permissi"
+  "onList\022\034\n\004list\030\001 \003(\0132\016.pb.Permission\"^\n\010"
+  "UserRole\022\n\n\002id\030\001 \001(\003\022\014\n\004name\030\002 \001(\t\022\023\n\013di"
+  "scription\030\003 \001(\t\022#\n\013permissions\030\004 \003(\0132\016.p"
+  "b.Permission\"\205\001\n\013UserSession\022\n\n\002id\030\001 \001(\t"
+  "\022\r\n\005token\030\002 \001(\t\022\032\n\004type\030\003 \001(\0162\014.pb.UserT"
+  "ype\022\036\n\006status\030\004 \001(\0162\016.pb.UserStatus\022\r\n\005r"
+  "oles\030\005 \003(\003\022\020\n\010deadline\030\006 \001(\003*C\n\010UserType"
+  "\022\r\n\tUT_NORMAL\020\000\022\023\n\017UT_BRANCH_ADMIN\020\001\022\023\n\017"
+  "UT_SYSTEM_ADMIN\020\002*:\n\nUserStatus\022\r\n\tUS_NO"
+  "RMAL\020\000\022\r\n\tUS_FROZEN\020\001\022\016\n\nUS_DELETED\020\002b\006p"
+  "roto3"
   ;
 ::google::protobuf::internal::DescriptorTable descriptor_table_user_2eproto = {
   false, InitDefaults_user_2eproto, 
   descriptor_table_protodef_user_2eproto,
-  "user.proto", &assign_descriptors_table_user_2eproto, 729,
+  "user.proto", &assign_descriptors_table_user_2eproto, 765,
 };
 
 void AddDescriptors_user_2eproto() {
@@ -835,6 +865,286 @@ void User::InternalSwap(User* other) {
 }
 
 ::google::protobuf::Metadata User::GetMetadata() const {
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_user_2eproto);
+  return ::file_level_metadata_user_2eproto[kIndexInFileMessages];
+}
+
+
+// ===================================================================
+
+void UserList::InitAsDefaultInstance() {
+}
+class UserList::HasBitSetters {
+ public:
+};
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int UserList::kListFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+UserList::UserList()
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:pb.UserList)
+}
+UserList::UserList(const UserList& from)
+  : ::google::protobuf::Message(),
+      _internal_metadata_(nullptr),
+      list_(from.list_) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  // @@protoc_insertion_point(copy_constructor:pb.UserList)
+}
+
+void UserList::SharedCtor() {
+  ::google::protobuf::internal::InitSCC(
+      &scc_info_UserList_user_2eproto.base);
+}
+
+UserList::~UserList() {
+  // @@protoc_insertion_point(destructor:pb.UserList)
+  SharedDtor();
+}
+
+void UserList::SharedDtor() {
+}
+
+void UserList::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const UserList& UserList::default_instance() {
+  ::google::protobuf::internal::InitSCC(&::scc_info_UserList_user_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void UserList::Clear() {
+// @@protoc_insertion_point(message_clear_start:pb.UserList)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  list_.Clear();
+  _internal_metadata_.Clear();
+}
+
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* UserList::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<UserList*>(object);
+  ::google::protobuf::int32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+    switch (tag >> 3) {
+      // repeated .pb.User list = 1;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
+        do {
+          ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+          GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+          parser_till_end = ::pb::User::_InternalParse;
+          object = msg->add_list();
+          if (size > end - ptr) goto len_delim_till_end;
+          ptr += size;
+          GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+              {parser_till_end, object}, ptr - size, ptr));
+          if (ptr >= end) break;
+        } while ((::google::protobuf::io::UnalignedLoad<::google::protobuf::uint64>(ptr) & 255) == 10 && (ptr += 1));
+        break;
+      }
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->EndGroup(tag);
+          return ptr;
+        }
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        if (res.second) return ptr;
+      }
+    }  // switch
+  }  // while
+  return ptr;
+len_delim_till_end:
+  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
+                               {parser_till_end, object}, size);
+}
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool UserList::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:pb.UserList)
+  for (;;) {
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // repeated .pb.User list = 1;
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+                input, add_list()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:pb.UserList)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:pb.UserList)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void UserList::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:pb.UserList)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // repeated .pb.User list = 1;
+  for (unsigned int i = 0,
+      n = static_cast<unsigned int>(this->list_size()); i < n; i++) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1,
+      this->list(static_cast<int>(i)),
+      output);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:pb.UserList)
+}
+
+::google::protobuf::uint8* UserList::InternalSerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:pb.UserList)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // repeated .pb.User list = 1;
+  for (unsigned int i = 0,
+      n = static_cast<unsigned int>(this->list_size()); i < n; i++) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        1, this->list(static_cast<int>(i)), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:pb.UserList)
+  return target;
+}
+
+size_t UserList::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:pb.UserList)
+  size_t total_size = 0;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // repeated .pb.User list = 1;
+  {
+    unsigned int count = static_cast<unsigned int>(this->list_size());
+    total_size += 1UL * count;
+    for (unsigned int i = 0; i < count; i++) {
+      total_size +=
+        ::google::protobuf::internal::WireFormatLite::MessageSize(
+          this->list(static_cast<int>(i)));
+    }
+  }
+
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void UserList::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:pb.UserList)
+  GOOGLE_DCHECK_NE(&from, this);
+  const UserList* source =
+      ::google::protobuf::DynamicCastToGenerated<UserList>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:pb.UserList)
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:pb.UserList)
+    MergeFrom(*source);
+  }
+}
+
+void UserList::MergeFrom(const UserList& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:pb.UserList)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  list_.MergeFrom(from.list_);
+}
+
+void UserList::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:pb.UserList)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void UserList::CopyFrom(const UserList& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:pb.UserList)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool UserList::IsInitialized() const {
+  return true;
+}
+
+void UserList::Swap(UserList* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void UserList::InternalSwap(UserList* other) {
+  using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  CastToBase(&list_)->InternalSwap(CastToBase(&other->list_));
+}
+
+::google::protobuf::Metadata UserList::GetMetadata() const {
   ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_user_2eproto);
   return ::file_level_metadata_user_2eproto[kIndexInFileMessages];
 }
@@ -3061,6 +3371,9 @@ namespace google {
 namespace protobuf {
 template<> PROTOBUF_NOINLINE ::pb::User* Arena::CreateMaybeMessage< ::pb::User >(Arena* arena) {
   return Arena::CreateInternal< ::pb::User >(arena);
+}
+template<> PROTOBUF_NOINLINE ::pb::UserList* Arena::CreateMaybeMessage< ::pb::UserList >(Arena* arena) {
+  return Arena::CreateInternal< ::pb::UserList >(arena);
 }
 template<> PROTOBUF_NOINLINE ::pb::Permission* Arena::CreateMaybeMessage< ::pb::Permission >(Arena* arena) {
   return Arena::CreateInternal< ::pb::Permission >(arena);

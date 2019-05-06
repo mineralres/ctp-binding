@@ -42,7 +42,7 @@ struct TableStruct_common_2eproto {
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::google::protobuf::internal::AuxillaryParseTableField aux[]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
-  static const ::google::protobuf::internal::ParseTable schema[23]
+  static const ::google::protobuf::internal::ParseTable schema[25]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::google::protobuf::internal::FieldMetadata field_metadata[];
   static const ::google::protobuf::internal::SerializationTable serialization_table[];
@@ -62,6 +62,12 @@ extern BrokerRouteDefaultTypeInternal _BrokerRoute_default_instance_;
 class BrokerRouteList;
 class BrokerRouteListDefaultTypeInternal;
 extern BrokerRouteListDefaultTypeInternal _BrokerRouteList_default_instance_;
+class EmptyRequest;
+class EmptyRequestDefaultTypeInternal;
+extern EmptyRequestDefaultTypeInternal _EmptyRequest_default_instance_;
+class EmptyResponse;
+class EmptyResponseDefaultTypeInternal;
+extern EmptyResponseDefaultTypeInternal _EmptyResponse_default_instance_;
 class InstrumentInfo;
 class InstrumentInfoDefaultTypeInternal;
 extern InstrumentInfoDefaultTypeInternal _InstrumentInfo_default_instance_;
@@ -126,6 +132,8 @@ template<> ::pb::AccountMoneySummary* Arena::CreateMaybeMessage<::pb::AccountMon
 template<> ::pb::AccountMoneySummaryList* Arena::CreateMaybeMessage<::pb::AccountMoneySummaryList>(Arena*);
 template<> ::pb::BrokerRoute* Arena::CreateMaybeMessage<::pb::BrokerRoute>(Arena*);
 template<> ::pb::BrokerRouteList* Arena::CreateMaybeMessage<::pb::BrokerRouteList>(Arena*);
+template<> ::pb::EmptyRequest* Arena::CreateMaybeMessage<::pb::EmptyRequest>(Arena*);
+template<> ::pb::EmptyResponse* Arena::CreateMaybeMessage<::pb::EmptyResponse>(Arena*);
 template<> ::pb::InstrumentInfo* Arena::CreateMaybeMessage<::pb::InstrumentInfo>(Arena*);
 template<> ::pb::MTRList* Arena::CreateMaybeMessage<::pb::MTRList>(Arena*);
 template<> ::pb::MarketTimeRule* Arena::CreateMaybeMessage<::pb::MarketTimeRule>(Arena*);
@@ -4787,6 +4795,216 @@ class OptionMonthList :
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::RepeatedPtrField< ::pb::OptionMonth > list_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_common_2eproto;
+};
+// -------------------------------------------------------------------
+
+class EmptyRequest :
+    public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:pb.EmptyRequest) */ {
+ public:
+  EmptyRequest();
+  virtual ~EmptyRequest();
+
+  EmptyRequest(const EmptyRequest& from);
+
+  inline EmptyRequest& operator=(const EmptyRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  EmptyRequest(EmptyRequest&& from) noexcept
+    : EmptyRequest() {
+    *this = ::std::move(from);
+  }
+
+  inline EmptyRequest& operator=(EmptyRequest&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return default_instance().GetDescriptor();
+  }
+  static const EmptyRequest& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const EmptyRequest* internal_default_instance() {
+    return reinterpret_cast<const EmptyRequest*>(
+               &_EmptyRequest_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    23;
+
+  void Swap(EmptyRequest* other);
+  friend void swap(EmptyRequest& a, EmptyRequest& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline EmptyRequest* New() const final {
+    return CreateMaybeMessage<EmptyRequest>(nullptr);
+  }
+
+  EmptyRequest* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<EmptyRequest>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const EmptyRequest& from);
+  void MergeFrom(const EmptyRequest& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  static const char* _InternalParse(const char* begin, const char* end, void* object, ::google::protobuf::internal::ParseContext* ctx);
+  ::google::protobuf::internal::ParseFunc _ParseFunc() const final { return _InternalParse; }
+  #else
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(EmptyRequest* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return nullptr;
+  }
+  inline void* MaybeArenaPtr() const {
+    return nullptr;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // @@protoc_insertion_point(class_scope:pb.EmptyRequest)
+ private:
+  class HasBitSetters;
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_common_2eproto;
+};
+// -------------------------------------------------------------------
+
+class EmptyResponse :
+    public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:pb.EmptyResponse) */ {
+ public:
+  EmptyResponse();
+  virtual ~EmptyResponse();
+
+  EmptyResponse(const EmptyResponse& from);
+
+  inline EmptyResponse& operator=(const EmptyResponse& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  EmptyResponse(EmptyResponse&& from) noexcept
+    : EmptyResponse() {
+    *this = ::std::move(from);
+  }
+
+  inline EmptyResponse& operator=(EmptyResponse&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return default_instance().GetDescriptor();
+  }
+  static const EmptyResponse& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const EmptyResponse* internal_default_instance() {
+    return reinterpret_cast<const EmptyResponse*>(
+               &_EmptyResponse_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    24;
+
+  void Swap(EmptyResponse* other);
+  friend void swap(EmptyResponse& a, EmptyResponse& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline EmptyResponse* New() const final {
+    return CreateMaybeMessage<EmptyResponse>(nullptr);
+  }
+
+  EmptyResponse* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<EmptyResponse>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const EmptyResponse& from);
+  void MergeFrom(const EmptyResponse& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  static const char* _InternalParse(const char* begin, const char* end, void* object, ::google::protobuf::internal::ParseContext* ctx);
+  ::google::protobuf::internal::ParseFunc _ParseFunc() const final { return _InternalParse; }
+  #else
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(EmptyResponse* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return nullptr;
+  }
+  inline void* MaybeArenaPtr() const {
+    return nullptr;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // @@protoc_insertion_point(class_scope:pb.EmptyResponse)
+ private:
+  class HasBitSetters;
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   mutable ::google::protobuf::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_common_2eproto;
 };
@@ -10688,9 +10906,21 @@ OptionMonthList::list() const {
   return list_;
 }
 
+// -------------------------------------------------------------------
+
+// EmptyRequest
+
+// -------------------------------------------------------------------
+
+// EmptyResponse
+
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------

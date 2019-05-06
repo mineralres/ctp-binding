@@ -121,6 +121,14 @@ class OptionMonthListDefaultTypeInternal {
  public:
   ::google::protobuf::internal::ExplicitlyConstructed<OptionMonthList> _instance;
 } _OptionMonthList_default_instance_;
+class EmptyRequestDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<EmptyRequest> _instance;
+} _EmptyRequest_default_instance_;
+class EmptyResponseDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<EmptyResponse> _instance;
+} _EmptyResponse_default_instance_;
 }  // namespace pb
 static void InitDefaultsSymbol_common_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -462,6 +470,34 @@ static void InitDefaultsOptionMonthList_common_2eproto() {
     {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsOptionMonthList_common_2eproto}, {
       &scc_info_OptionMonth_common_2eproto.base,}};
 
+static void InitDefaultsEmptyRequest_common_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::pb::_EmptyRequest_default_instance_;
+    new (ptr) ::pb::EmptyRequest();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::pb::EmptyRequest::InitAsDefaultInstance();
+}
+
+::google::protobuf::internal::SCCInfo<0> scc_info_EmptyRequest_common_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsEmptyRequest_common_2eproto}, {}};
+
+static void InitDefaultsEmptyResponse_common_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::pb::_EmptyResponse_default_instance_;
+    new (ptr) ::pb::EmptyResponse();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::pb::EmptyResponse::InitAsDefaultInstance();
+}
+
+::google::protobuf::internal::SCCInfo<0> scc_info_EmptyResponse_common_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsEmptyResponse_common_2eproto}, {}};
+
 void InitDefaults_common_2eproto() {
   ::google::protobuf::internal::InitSCC(&scc_info_Symbol_common_2eproto.base);
   ::google::protobuf::internal::InitSCC(&scc_info_SymbolList_common_2eproto.base);
@@ -486,9 +522,11 @@ void InitDefaults_common_2eproto() {
   ::google::protobuf::internal::InitSCC(&scc_info_SSEStockOption_common_2eproto.base);
   ::google::protobuf::internal::InitSCC(&scc_info_OptionMonth_common_2eproto.base);
   ::google::protobuf::internal::InitSCC(&scc_info_OptionMonthList_common_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_EmptyRequest_common_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_EmptyResponse_common_2eproto.base);
 }
 
-::google::protobuf::Metadata file_level_metadata_common_2eproto[23];
+::google::protobuf::Metadata file_level_metadata_common_2eproto[25];
 const ::google::protobuf::EnumDescriptor* file_level_enum_descriptors_common_2eproto[9];
 constexpr ::google::protobuf::ServiceDescriptor const** file_level_service_descriptors_common_2eproto = nullptr;
 
@@ -803,6 +841,16 @@ const ::google::protobuf::uint32 TableStruct_common_2eproto::offsets[] PROTOBUF_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   PROTOBUF_FIELD_OFFSET(::pb::OptionMonthList, list_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::pb::EmptyRequest, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::pb::EmptyResponse, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
 };
 static const ::google::protobuf::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::pb::Symbol)},
@@ -828,6 +876,8 @@ static const ::google::protobuf::internal::MigrationSchema schemas[] PROTOBUF_SE
   { 257, -1, sizeof(::pb::SSEStockOption)},
   { 296, -1, sizeof(::pb::OptionMonth)},
   { 304, -1, sizeof(::pb::OptionMonthList)},
+  { 310, -1, sizeof(::pb::EmptyRequest)},
+  { 315, -1, sizeof(::pb::EmptyResponse)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
@@ -854,12 +904,14 @@ static ::google::protobuf::Message const * const file_default_instances[] = {
   reinterpret_cast<const ::google::protobuf::Message*>(&::pb::_SSEStockOption_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::pb::_OptionMonth_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::pb::_OptionMonthList_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::pb::_EmptyRequest_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::pb::_EmptyResponse_default_instance_),
 };
 
 ::google::protobuf::internal::AssignDescriptorsTable assign_descriptors_table_common_2eproto = {
   {}, AddDescriptors_common_2eproto, "common.proto", schemas,
   file_default_instances, TableStruct_common_2eproto::offsets,
-  file_level_metadata_common_2eproto, 23, file_level_enum_descriptors_common_2eproto, file_level_service_descriptors_common_2eproto,
+  file_level_metadata_common_2eproto, 25, file_level_enum_descriptors_common_2eproto, file_level_service_descriptors_common_2eproto,
 };
 
 const char descriptor_table_protodef_common_2eproto[] =
@@ -995,34 +1047,35 @@ const char descriptor_table_protodef_common_2eproto[] =
   "derlying_closePX\030\" \001(\t\"9\n\013OptionMonth\022\014\n"
   "\004name\030\001 \001(\t\022\r\n\005value\030\002 \001(\t\022\r\n\005short\030\003 \001("
   "\t\"0\n\017OptionMonthList\022\035\n\004list\030\001 \003(\0132\017.pb."
-  "OptionMonth*\373\001\n\014ExchangeType\022\010\n\004SHFE\020\000\022\010"
-  "\n\004CZCE\020\001\022\007\n\003DCE\020\002\022\t\n\005CFFEX\020\003\022\007\n\003SSE\020\004\022\007\n"
-  "\003SZE\020\005\022\007\n\003HKG\020\006\022\010\n\004HKFE\020\007\022\t\n\005INDEX\020\010\022\016\n\n"
-  "OPTION_SSE\020\t\022\010\n\004NYME\020\n\022\010\n\004GLBX\020\013\022\010\n\004CBOT"
-  "\020\014\022\007\n\003CME\020\r\022\t\n\005COMEX\020\016\022\t\n\005EUREX\020\017\022\007\n\003IPE"
-  "\020\020\022\t\n\005LIFFE\020\021\022\007\n\003LME\020\022\022\007\n\003SGX\020\023\022\010\n\004DEMO\020"
-  "\024\022\007\n\003INE\020\025\022\r\n\tINVALIDEX\020\026*\253\001\n\013ProductTyp"
-  "e\022\r\n\tPT_UNKOWN\020\000\022\r\n\tPT_FUTURE\020\001\022\014\n\010PT_ST"
-  "OCK\020\002\022\013\n\007PT_BOND\020\003\022\022\n\016PT_COMBINATION\020\004\022\r"
-  "\n\tPT_OPTION\020\005\022\024\n\020PT_FUTURE_OPTION\020\006\022\023\n\017P"
-  "T_STOCK_OPTION\020\007\022\025\n\021PT_SSE_ETF_OPTION\020\010*"
-  "s\n\nPeriodType\022\010\n\004TICK\020\000\022\006\n\002M1\020\001\022\006\n\002M3\020\002\022"
-  "\006\n\002M5\020\003\022\007\n\003M10\020\004\022\007\n\003M15\020\005\022\007\n\003M30\020\006\022\006\n\002H1"
-  "\020\007\022\006\n\002H3\020\010\022\006\n\002D1\020\t\022\006\n\002W1\020\n\022\010\n\004MON1\020\013*0\n\021"
-  "OptionCallPutType\022\r\n\tOCPT_CALL\020\000\022\014\n\010OCPT"
-  "_PUT\020\001*&\n\026OptionDeliveryDateType\022\014\n\010ODDT"
-  "_EUR\020\000*S\n\031CloseCommissionAlgorithim\022\016\n\nC"
-  "CA_NORMAL\020\000\022\014\n\010CCA_ONCE\020\001\022\030\n\024CCA_MULTIPL"
-  "E_BY_DATE\020\002**\n\013AccountType\022\r\n\tCN_FUTURE\020"
-  "\000\022\014\n\010CN_STOCK\020\001* \n\014CurrencyType\022\007\n\003CNY\020\000"
-  "\022\007\n\003USD\020\001*K\n\022TradingAccountType\022\016\n\nTAT_N"
-  "ORMAL\020\000\022\021\n\rTAT_TRAINNING\020\001\022\022\n\016TAT_CTP_MI"
-  "RROR\020\002b\006proto3"
+  "OptionMonth\"\016\n\014EmptyRequest\"\017\n\rEmptyResp"
+  "onse*\373\001\n\014ExchangeType\022\010\n\004SHFE\020\000\022\010\n\004CZCE\020"
+  "\001\022\007\n\003DCE\020\002\022\t\n\005CFFEX\020\003\022\007\n\003SSE\020\004\022\007\n\003SZE\020\005\022"
+  "\007\n\003HKG\020\006\022\010\n\004HKFE\020\007\022\t\n\005INDEX\020\010\022\016\n\nOPTION_"
+  "SSE\020\t\022\010\n\004NYME\020\n\022\010\n\004GLBX\020\013\022\010\n\004CBOT\020\014\022\007\n\003C"
+  "ME\020\r\022\t\n\005COMEX\020\016\022\t\n\005EUREX\020\017\022\007\n\003IPE\020\020\022\t\n\005L"
+  "IFFE\020\021\022\007\n\003LME\020\022\022\007\n\003SGX\020\023\022\010\n\004DEMO\020\024\022\007\n\003IN"
+  "E\020\025\022\r\n\tINVALIDEX\020\026*\253\001\n\013ProductType\022\r\n\tPT"
+  "_UNKOWN\020\000\022\r\n\tPT_FUTURE\020\001\022\014\n\010PT_STOCK\020\002\022\013"
+  "\n\007PT_BOND\020\003\022\022\n\016PT_COMBINATION\020\004\022\r\n\tPT_OP"
+  "TION\020\005\022\024\n\020PT_FUTURE_OPTION\020\006\022\023\n\017PT_STOCK"
+  "_OPTION\020\007\022\025\n\021PT_SSE_ETF_OPTION\020\010*s\n\nPeri"
+  "odType\022\010\n\004TICK\020\000\022\006\n\002M1\020\001\022\006\n\002M3\020\002\022\006\n\002M5\020\003"
+  "\022\007\n\003M10\020\004\022\007\n\003M15\020\005\022\007\n\003M30\020\006\022\006\n\002H1\020\007\022\006\n\002H"
+  "3\020\010\022\006\n\002D1\020\t\022\006\n\002W1\020\n\022\010\n\004MON1\020\013*0\n\021OptionC"
+  "allPutType\022\r\n\tOCPT_CALL\020\000\022\014\n\010OCPT_PUT\020\001*"
+  "&\n\026OptionDeliveryDateType\022\014\n\010ODDT_EUR\020\000*"
+  "S\n\031CloseCommissionAlgorithim\022\016\n\nCCA_NORM"
+  "AL\020\000\022\014\n\010CCA_ONCE\020\001\022\030\n\024CCA_MULTIPLE_BY_DA"
+  "TE\020\002**\n\013AccountType\022\r\n\tCN_FUTURE\020\000\022\014\n\010CN"
+  "_STOCK\020\001* \n\014CurrencyType\022\007\n\003CNY\020\000\022\007\n\003USD"
+  "\020\001*K\n\022TradingAccountType\022\016\n\nTAT_NORMAL\020\000"
+  "\022\021\n\rTAT_TRAINNING\020\001\022\022\n\016TAT_CTP_MIRROR\020\002b"
+  "\006proto3"
   ;
 ::google::protobuf::internal::DescriptorTable descriptor_table_common_2eproto = {
   false, InitDefaults_common_2eproto, 
   descriptor_table_protodef_common_2eproto,
-  "common.proto", &assign_descriptors_table_common_2eproto, 6174,
+  "common.proto", &assign_descriptors_table_common_2eproto, 6207,
 };
 
 void AddDescriptors_common_2eproto() {
@@ -16890,6 +16943,424 @@ void OptionMonthList::InternalSwap(OptionMonthList* other) {
 }
 
 
+// ===================================================================
+
+void EmptyRequest::InitAsDefaultInstance() {
+}
+class EmptyRequest::HasBitSetters {
+ public:
+};
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+EmptyRequest::EmptyRequest()
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:pb.EmptyRequest)
+}
+EmptyRequest::EmptyRequest(const EmptyRequest& from)
+  : ::google::protobuf::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  // @@protoc_insertion_point(copy_constructor:pb.EmptyRequest)
+}
+
+void EmptyRequest::SharedCtor() {
+}
+
+EmptyRequest::~EmptyRequest() {
+  // @@protoc_insertion_point(destructor:pb.EmptyRequest)
+  SharedDtor();
+}
+
+void EmptyRequest::SharedDtor() {
+}
+
+void EmptyRequest::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const EmptyRequest& EmptyRequest::default_instance() {
+  ::google::protobuf::internal::InitSCC(&::scc_info_EmptyRequest_common_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void EmptyRequest::Clear() {
+// @@protoc_insertion_point(message_clear_start:pb.EmptyRequest)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _internal_metadata_.Clear();
+}
+
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* EmptyRequest::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<EmptyRequest*>(object);
+  ::google::protobuf::int32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+    switch (tag >> 3) {
+      default: {
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->EndGroup(tag);
+          return ptr;
+        }
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        if (res.second) return ptr;
+      }
+    }  // switch
+  }  // while
+  return ptr;
+}
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool EmptyRequest::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:pb.EmptyRequest)
+  for (;;) {
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+  handle_unusual:
+    if (tag == 0) {
+      goto success;
+    }
+    DO_(::google::protobuf::internal::WireFormat::SkipField(
+          input, tag, _internal_metadata_.mutable_unknown_fields()));
+  }
+success:
+  // @@protoc_insertion_point(parse_success:pb.EmptyRequest)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:pb.EmptyRequest)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void EmptyRequest::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:pb.EmptyRequest)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:pb.EmptyRequest)
+}
+
+::google::protobuf::uint8* EmptyRequest::InternalSerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:pb.EmptyRequest)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:pb.EmptyRequest)
+  return target;
+}
+
+size_t EmptyRequest::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:pb.EmptyRequest)
+  size_t total_size = 0;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void EmptyRequest::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:pb.EmptyRequest)
+  GOOGLE_DCHECK_NE(&from, this);
+  const EmptyRequest* source =
+      ::google::protobuf::DynamicCastToGenerated<EmptyRequest>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:pb.EmptyRequest)
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:pb.EmptyRequest)
+    MergeFrom(*source);
+  }
+}
+
+void EmptyRequest::MergeFrom(const EmptyRequest& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:pb.EmptyRequest)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+}
+
+void EmptyRequest::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:pb.EmptyRequest)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void EmptyRequest::CopyFrom(const EmptyRequest& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:pb.EmptyRequest)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool EmptyRequest::IsInitialized() const {
+  return true;
+}
+
+void EmptyRequest::Swap(EmptyRequest* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void EmptyRequest::InternalSwap(EmptyRequest* other) {
+  using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+}
+
+::google::protobuf::Metadata EmptyRequest::GetMetadata() const {
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_common_2eproto);
+  return ::file_level_metadata_common_2eproto[kIndexInFileMessages];
+}
+
+
+// ===================================================================
+
+void EmptyResponse::InitAsDefaultInstance() {
+}
+class EmptyResponse::HasBitSetters {
+ public:
+};
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+EmptyResponse::EmptyResponse()
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:pb.EmptyResponse)
+}
+EmptyResponse::EmptyResponse(const EmptyResponse& from)
+  : ::google::protobuf::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  // @@protoc_insertion_point(copy_constructor:pb.EmptyResponse)
+}
+
+void EmptyResponse::SharedCtor() {
+}
+
+EmptyResponse::~EmptyResponse() {
+  // @@protoc_insertion_point(destructor:pb.EmptyResponse)
+  SharedDtor();
+}
+
+void EmptyResponse::SharedDtor() {
+}
+
+void EmptyResponse::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const EmptyResponse& EmptyResponse::default_instance() {
+  ::google::protobuf::internal::InitSCC(&::scc_info_EmptyResponse_common_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void EmptyResponse::Clear() {
+// @@protoc_insertion_point(message_clear_start:pb.EmptyResponse)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _internal_metadata_.Clear();
+}
+
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* EmptyResponse::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<EmptyResponse*>(object);
+  ::google::protobuf::int32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+    switch (tag >> 3) {
+      default: {
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->EndGroup(tag);
+          return ptr;
+        }
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        if (res.second) return ptr;
+      }
+    }  // switch
+  }  // while
+  return ptr;
+}
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool EmptyResponse::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:pb.EmptyResponse)
+  for (;;) {
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+  handle_unusual:
+    if (tag == 0) {
+      goto success;
+    }
+    DO_(::google::protobuf::internal::WireFormat::SkipField(
+          input, tag, _internal_metadata_.mutable_unknown_fields()));
+  }
+success:
+  // @@protoc_insertion_point(parse_success:pb.EmptyResponse)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:pb.EmptyResponse)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void EmptyResponse::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:pb.EmptyResponse)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:pb.EmptyResponse)
+}
+
+::google::protobuf::uint8* EmptyResponse::InternalSerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:pb.EmptyResponse)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:pb.EmptyResponse)
+  return target;
+}
+
+size_t EmptyResponse::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:pb.EmptyResponse)
+  size_t total_size = 0;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void EmptyResponse::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:pb.EmptyResponse)
+  GOOGLE_DCHECK_NE(&from, this);
+  const EmptyResponse* source =
+      ::google::protobuf::DynamicCastToGenerated<EmptyResponse>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:pb.EmptyResponse)
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:pb.EmptyResponse)
+    MergeFrom(*source);
+  }
+}
+
+void EmptyResponse::MergeFrom(const EmptyResponse& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:pb.EmptyResponse)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+}
+
+void EmptyResponse::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:pb.EmptyResponse)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void EmptyResponse::CopyFrom(const EmptyResponse& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:pb.EmptyResponse)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool EmptyResponse::IsInitialized() const {
+  return true;
+}
+
+void EmptyResponse::Swap(EmptyResponse* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void EmptyResponse::InternalSwap(EmptyResponse* other) {
+  using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+}
+
+::google::protobuf::Metadata EmptyResponse::GetMetadata() const {
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_common_2eproto);
+  return ::file_level_metadata_common_2eproto[kIndexInFileMessages];
+}
+
+
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace pb
 namespace google {
@@ -16962,6 +17433,12 @@ template<> PROTOBUF_NOINLINE ::pb::OptionMonth* Arena::CreateMaybeMessage< ::pb:
 }
 template<> PROTOBUF_NOINLINE ::pb::OptionMonthList* Arena::CreateMaybeMessage< ::pb::OptionMonthList >(Arena* arena) {
   return Arena::CreateInternal< ::pb::OptionMonthList >(arena);
+}
+template<> PROTOBUF_NOINLINE ::pb::EmptyRequest* Arena::CreateMaybeMessage< ::pb::EmptyRequest >(Arena* arena) {
+  return Arena::CreateInternal< ::pb::EmptyRequest >(arena);
+}
+template<> PROTOBUF_NOINLINE ::pb::EmptyResponse* Arena::CreateMaybeMessage< ::pb::EmptyResponse >(Arena* arena) {
+  return Arena::CreateInternal< ::pb::EmptyResponse >(arena);
 }
 }  // namespace protobuf
 }  // namespace google

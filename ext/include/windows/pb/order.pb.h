@@ -434,32 +434,32 @@ class OrderID :
 
   // accessors -------------------------------------------------------
 
-  // int64 front_id = 1;
+  // int32 front_id = 1;
   void clear_front_id();
   static const int kFrontIdFieldNumber = 1;
-  ::google::protobuf::int64 front_id() const;
-  void set_front_id(::google::protobuf::int64 value);
+  ::google::protobuf::int32 front_id() const;
+  void set_front_id(::google::protobuf::int32 value);
 
-  // int64 session_id = 2;
+  // int32 session_id = 2;
   void clear_session_id();
   static const int kSessionIdFieldNumber = 2;
-  ::google::protobuf::int64 session_id() const;
-  void set_session_id(::google::protobuf::int64 value);
+  ::google::protobuf::int32 session_id() const;
+  void set_session_id(::google::protobuf::int32 value);
 
-  // int64 order_ref = 3;
+  // int32 order_ref = 3;
   void clear_order_ref();
   static const int kOrderRefFieldNumber = 3;
-  ::google::protobuf::int64 order_ref() const;
-  void set_order_ref(::google::protobuf::int64 value);
+  ::google::protobuf::int32 order_ref() const;
+  void set_order_ref(::google::protobuf::int32 value);
 
   // @@protoc_insertion_point(class_scope:pb.OrderID)
  private:
   class HasBitSetters;
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::google::protobuf::int64 front_id_;
-  ::google::protobuf::int64 session_id_;
-  ::google::protobuf::int64 order_ref_;
+  ::google::protobuf::int32 front_id_;
+  ::google::protobuf::int32 session_id_;
+  ::google::protobuf::int32 order_ref_;
   mutable ::google::protobuf::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_order_2eproto;
 };
@@ -1617,14 +1617,14 @@ class CancelOrderRequest :
   ::std::string* release_user();
   void set_allocated_user(::std::string* user);
 
-  // .pb.OrderID OrderID = 2;
-  bool has_orderid() const;
-  void clear_orderid();
-  static const int kOrderIDFieldNumber = 2;
-  const ::pb::OrderID& orderid() const;
-  ::pb::OrderID* release_orderid();
-  ::pb::OrderID* mutable_orderid();
-  void set_allocated_orderid(::pb::OrderID* orderid);
+  // .pb.OrderID order_id = 2;
+  bool has_order_id() const;
+  void clear_order_id();
+  static const int kOrderIdFieldNumber = 2;
+  const ::pb::OrderID& order_id() const;
+  ::pb::OrderID* release_order_id();
+  ::pb::OrderID* mutable_order_id();
+  void set_allocated_order_id(::pb::OrderID* order_id);
 
   // .pb.Symbol symbol = 3;
   bool has_symbol() const;
@@ -1687,7 +1687,7 @@ class CancelOrderRequest :
   ::google::protobuf::internal::ArenaStringPtr token_;
   ::google::protobuf::internal::ArenaStringPtr route_account_;
   ::google::protobuf::internal::ArenaStringPtr user_;
-  ::pb::OrderID* orderid_;
+  ::pb::OrderID* order_id_;
   ::pb::Symbol* symbol_;
   ::google::protobuf::int32 request_id_;
   ::google::protobuf::int32 front_id_;
@@ -2610,43 +2610,43 @@ class DemoOrder :
 #endif  // __GNUC__
 // OrderID
 
-// int64 front_id = 1;
+// int32 front_id = 1;
 inline void OrderID::clear_front_id() {
-  front_id_ = PROTOBUF_LONGLONG(0);
+  front_id_ = 0;
 }
-inline ::google::protobuf::int64 OrderID::front_id() const {
+inline ::google::protobuf::int32 OrderID::front_id() const {
   // @@protoc_insertion_point(field_get:pb.OrderID.front_id)
   return front_id_;
 }
-inline void OrderID::set_front_id(::google::protobuf::int64 value) {
+inline void OrderID::set_front_id(::google::protobuf::int32 value) {
   
   front_id_ = value;
   // @@protoc_insertion_point(field_set:pb.OrderID.front_id)
 }
 
-// int64 session_id = 2;
+// int32 session_id = 2;
 inline void OrderID::clear_session_id() {
-  session_id_ = PROTOBUF_LONGLONG(0);
+  session_id_ = 0;
 }
-inline ::google::protobuf::int64 OrderID::session_id() const {
+inline ::google::protobuf::int32 OrderID::session_id() const {
   // @@protoc_insertion_point(field_get:pb.OrderID.session_id)
   return session_id_;
 }
-inline void OrderID::set_session_id(::google::protobuf::int64 value) {
+inline void OrderID::set_session_id(::google::protobuf::int32 value) {
   
   session_id_ = value;
   // @@protoc_insertion_point(field_set:pb.OrderID.session_id)
 }
 
-// int64 order_ref = 3;
+// int32 order_ref = 3;
 inline void OrderID::clear_order_ref() {
-  order_ref_ = PROTOBUF_LONGLONG(0);
+  order_ref_ = 0;
 }
-inline ::google::protobuf::int64 OrderID::order_ref() const {
+inline ::google::protobuf::int32 OrderID::order_ref() const {
   // @@protoc_insertion_point(field_get:pb.OrderID.order_ref)
   return order_ref_;
 }
-inline void OrderID::set_order_ref(::google::protobuf::int64 value) {
+inline void OrderID::set_order_ref(::google::protobuf::int32 value) {
   
   order_ref_ = value;
   // @@protoc_insertion_point(field_set:pb.OrderID.order_ref)
@@ -4440,55 +4440,55 @@ inline void CancelOrderRequest::set_allocated_account(::std::string* account) {
   // @@protoc_insertion_point(field_set_allocated:pb.CancelOrderRequest.account)
 }
 
-// .pb.OrderID OrderID = 2;
-inline bool CancelOrderRequest::has_orderid() const {
-  return this != internal_default_instance() && orderid_ != nullptr;
+// .pb.OrderID order_id = 2;
+inline bool CancelOrderRequest::has_order_id() const {
+  return this != internal_default_instance() && order_id_ != nullptr;
 }
-inline void CancelOrderRequest::clear_orderid() {
-  if (GetArenaNoVirtual() == nullptr && orderid_ != nullptr) {
-    delete orderid_;
+inline void CancelOrderRequest::clear_order_id() {
+  if (GetArenaNoVirtual() == nullptr && order_id_ != nullptr) {
+    delete order_id_;
   }
-  orderid_ = nullptr;
+  order_id_ = nullptr;
 }
-inline const ::pb::OrderID& CancelOrderRequest::orderid() const {
-  const ::pb::OrderID* p = orderid_;
-  // @@protoc_insertion_point(field_get:pb.CancelOrderRequest.OrderID)
+inline const ::pb::OrderID& CancelOrderRequest::order_id() const {
+  const ::pb::OrderID* p = order_id_;
+  // @@protoc_insertion_point(field_get:pb.CancelOrderRequest.order_id)
   return p != nullptr ? *p : *reinterpret_cast<const ::pb::OrderID*>(
       &::pb::_OrderID_default_instance_);
 }
-inline ::pb::OrderID* CancelOrderRequest::release_orderid() {
-  // @@protoc_insertion_point(field_release:pb.CancelOrderRequest.OrderID)
+inline ::pb::OrderID* CancelOrderRequest::release_order_id() {
+  // @@protoc_insertion_point(field_release:pb.CancelOrderRequest.order_id)
   
-  ::pb::OrderID* temp = orderid_;
-  orderid_ = nullptr;
+  ::pb::OrderID* temp = order_id_;
+  order_id_ = nullptr;
   return temp;
 }
-inline ::pb::OrderID* CancelOrderRequest::mutable_orderid() {
+inline ::pb::OrderID* CancelOrderRequest::mutable_order_id() {
   
-  if (orderid_ == nullptr) {
+  if (order_id_ == nullptr) {
     auto* p = CreateMaybeMessage<::pb::OrderID>(GetArenaNoVirtual());
-    orderid_ = p;
+    order_id_ = p;
   }
-  // @@protoc_insertion_point(field_mutable:pb.CancelOrderRequest.OrderID)
-  return orderid_;
+  // @@protoc_insertion_point(field_mutable:pb.CancelOrderRequest.order_id)
+  return order_id_;
 }
-inline void CancelOrderRequest::set_allocated_orderid(::pb::OrderID* orderid) {
+inline void CancelOrderRequest::set_allocated_order_id(::pb::OrderID* order_id) {
   ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
   if (message_arena == nullptr) {
-    delete orderid_;
+    delete order_id_;
   }
-  if (orderid) {
+  if (order_id) {
     ::google::protobuf::Arena* submessage_arena = nullptr;
     if (message_arena != submessage_arena) {
-      orderid = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, orderid, submessage_arena);
+      order_id = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, order_id, submessage_arena);
     }
     
   } else {
     
   }
-  orderid_ = orderid;
-  // @@protoc_insertion_point(field_set_allocated:pb.CancelOrderRequest.OrderID)
+  order_id_ = order_id;
+  // @@protoc_insertion_point(field_set_allocated:pb.CancelOrderRequest.order_id)
 }
 
 // .pb.Symbol symbol = 3;

@@ -39,6 +39,18 @@ class ReqDeleteTradingRouteDefaultTypeInternal {
  public:
   ::google::protobuf::internal::ExplicitlyConstructed<ReqDeleteTradingRoute> _instance;
 } _ReqDeleteTradingRoute_default_instance_;
+class TradingAccountSummaryDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<TradingAccountSummary> _instance;
+} _TradingAccountSummary_default_instance_;
+class RspTradingAccountLoginDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<RspTradingAccountLogin> _instance;
+} _RspTradingAccountLogin_default_instance_;
+class RspOrderInsertDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<RspOrderInsert> _instance;
+} _RspOrderInsert_default_instance_;
 }  // namespace pb
 static void InitDefaultsTradingRoute_trading_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -113,15 +125,60 @@ static void InitDefaultsReqDeleteTradingRoute_trading_2eproto() {
 ::google::protobuf::internal::SCCInfo<0> scc_info_ReqDeleteTradingRoute_trading_2eproto =
     {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsReqDeleteTradingRoute_trading_2eproto}, {}};
 
+static void InitDefaultsTradingAccountSummary_trading_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::pb::_TradingAccountSummary_default_instance_;
+    new (ptr) ::pb::TradingAccountSummary();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::pb::TradingAccountSummary::InitAsDefaultInstance();
+}
+
+::google::protobuf::internal::SCCInfo<0> scc_info_TradingAccountSummary_trading_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsTradingAccountSummary_trading_2eproto}, {}};
+
+static void InitDefaultsRspTradingAccountLogin_trading_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::pb::_RspTradingAccountLogin_default_instance_;
+    new (ptr) ::pb::RspTradingAccountLogin();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::pb::RspTradingAccountLogin::InitAsDefaultInstance();
+}
+
+::google::protobuf::internal::SCCInfo<0> scc_info_RspTradingAccountLogin_trading_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsRspTradingAccountLogin_trading_2eproto}, {}};
+
+static void InitDefaultsRspOrderInsert_trading_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::pb::_RspOrderInsert_default_instance_;
+    new (ptr) ::pb::RspOrderInsert();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::pb::RspOrderInsert::InitAsDefaultInstance();
+}
+
+::google::protobuf::internal::SCCInfo<0> scc_info_RspOrderInsert_trading_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsRspOrderInsert_trading_2eproto}, {}};
+
 void InitDefaults_trading_2eproto() {
   ::google::protobuf::internal::InitSCC(&scc_info_TradingRoute_trading_2eproto.base);
   ::google::protobuf::internal::InitSCC(&scc_info_TradingRouteList_trading_2eproto.base);
   ::google::protobuf::internal::InitSCC(&scc_info_TradingAccount_trading_2eproto.base);
   ::google::protobuf::internal::InitSCC(&scc_info_TradingAccountList_trading_2eproto.base);
   ::google::protobuf::internal::InitSCC(&scc_info_ReqDeleteTradingRoute_trading_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_TradingAccountSummary_trading_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_RspTradingAccountLogin_trading_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_RspOrderInsert_trading_2eproto.base);
 }
 
-::google::protobuf::Metadata file_level_metadata_trading_2eproto[5];
+::google::protobuf::Metadata file_level_metadata_trading_2eproto[8];
 const ::google::protobuf::EnumDescriptor* file_level_enum_descriptors_trading_2eproto[1];
 constexpr ::google::protobuf::ServiceDescriptor const** file_level_service_descriptors_trading_2eproto = nullptr;
 
@@ -176,6 +233,106 @@ const ::google::protobuf::uint32 TableStruct_trading_2eproto::offsets[] PROTOBUF
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   PROTOBUF_FIELD_OFFSET(::pb::ReqDeleteTradingRoute, id_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::pb::TradingAccountSummary, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::pb::TradingAccountSummary, account_),
+  PROTOBUF_FIELD_OFFSET(::pb::TradingAccountSummary, user_),
+  PROTOBUF_FIELD_OFFSET(::pb::TradingAccountSummary, currency_),
+  PROTOBUF_FIELD_OFFSET(::pb::TradingAccountSummary, balance_),
+  PROTOBUF_FIELD_OFFSET(::pb::TradingAccountSummary, commission_),
+  PROTOBUF_FIELD_OFFSET(::pb::TradingAccountSummary, cur_margin_),
+  PROTOBUF_FIELD_OFFSET(::pb::TradingAccountSummary, net_position_amount_),
+  PROTOBUF_FIELD_OFFSET(::pb::TradingAccountSummary, pre_balance_),
+  PROTOBUF_FIELD_OFFSET(::pb::TradingAccountSummary, interest_in_),
+  PROTOBUF_FIELD_OFFSET(::pb::TradingAccountSummary, deposit_),
+  PROTOBUF_FIELD_OFFSET(::pb::TradingAccountSummary, withdraw_),
+  PROTOBUF_FIELD_OFFSET(::pb::TradingAccountSummary, frozen_margin_),
+  PROTOBUF_FIELD_OFFSET(::pb::TradingAccountSummary, frozen_commission_),
+  PROTOBUF_FIELD_OFFSET(::pb::TradingAccountSummary, available_),
+  PROTOBUF_FIELD_OFFSET(::pb::TradingAccountSummary, close_profit_),
+  PROTOBUF_FIELD_OFFSET(::pb::TradingAccountSummary, position_profit_),
+  PROTOBUF_FIELD_OFFSET(::pb::TradingAccountSummary, pre_mortgate_),
+  PROTOBUF_FIELD_OFFSET(::pb::TradingAccountSummary, pre_credit_),
+  PROTOBUF_FIELD_OFFSET(::pb::TradingAccountSummary, interest_base_),
+  PROTOBUF_FIELD_OFFSET(::pb::TradingAccountSummary, withdraw_available_),
+  PROTOBUF_FIELD_OFFSET(::pb::TradingAccountSummary, reserve_),
+  PROTOBUF_FIELD_OFFSET(::pb::TradingAccountSummary, trading_day_),
+  PROTOBUF_FIELD_OFFSET(::pb::TradingAccountSummary, credit_),
+  PROTOBUF_FIELD_OFFSET(::pb::TradingAccountSummary, mortgate_),
+  PROTOBUF_FIELD_OFFSET(::pb::TradingAccountSummary, exchange_margin_),
+  PROTOBUF_FIELD_OFFSET(::pb::TradingAccountSummary, delivery_margin_),
+  PROTOBUF_FIELD_OFFSET(::pb::TradingAccountSummary, exchange_delivery_margin_),
+  PROTOBUF_FIELD_OFFSET(::pb::TradingAccountSummary, reserve_balance_),
+  PROTOBUF_FIELD_OFFSET(::pb::TradingAccountSummary, delivery_commission_),
+  PROTOBUF_FIELD_OFFSET(::pb::TradingAccountSummary, frozen_transfer_fee_),
+  PROTOBUF_FIELD_OFFSET(::pb::TradingAccountSummary, frozen_stamp_tax_),
+  PROTOBUF_FIELD_OFFSET(::pb::TradingAccountSummary, transfer_fee_),
+  PROTOBUF_FIELD_OFFSET(::pb::TradingAccountSummary, stamp_tax_),
+  PROTOBUF_FIELD_OFFSET(::pb::TradingAccountSummary, mtm_profit_),
+  PROTOBUF_FIELD_OFFSET(::pb::TradingAccountSummary, mtm_balance_),
+  PROTOBUF_FIELD_OFFSET(::pb::TradingAccountSummary, stock_value_),
+  PROTOBUF_FIELD_OFFSET(::pb::TradingAccountSummary, bond_repurchase_amount_),
+  PROTOBUF_FIELD_OFFSET(::pb::TradingAccountSummary, reverse_repurchase_amount_),
+  PROTOBUF_FIELD_OFFSET(::pb::TradingAccountSummary, margin_trade_amount_),
+  PROTOBUF_FIELD_OFFSET(::pb::TradingAccountSummary, short_sell_amount_),
+  PROTOBUF_FIELD_OFFSET(::pb::TradingAccountSummary, margin_trade_profit_),
+  PROTOBUF_FIELD_OFFSET(::pb::TradingAccountSummary, pre_prefered_balance_),
+  PROTOBUF_FIELD_OFFSET(::pb::TradingAccountSummary, frozen_close_commission_),
+  PROTOBUF_FIELD_OFFSET(::pb::TradingAccountSummary, common_balance_),
+  PROTOBUF_FIELD_OFFSET(::pb::TradingAccountSummary, prefered_balance_),
+  PROTOBUF_FIELD_OFFSET(::pb::TradingAccountSummary, base_exchange_rate_),
+  PROTOBUF_FIELD_OFFSET(::pb::TradingAccountSummary, warning_level_),
+  PROTOBUF_FIELD_OFFSET(::pb::TradingAccountSummary, force_close_level_),
+  PROTOBUF_FIELD_OFFSET(::pb::TradingAccountSummary, cleared_closed_profit_),
+  PROTOBUF_FIELD_OFFSET(::pb::TradingAccountSummary, account_name_),
+  PROTOBUF_FIELD_OFFSET(::pb::TradingAccountSummary, interest_),
+  PROTOBUF_FIELD_OFFSET(::pb::TradingAccountSummary, frozen_interest_),
+  PROTOBUF_FIELD_OFFSET(::pb::TradingAccountSummary, options_id_),
+  PROTOBUF_FIELD_OFFSET(::pb::TradingAccountSummary, options_name_),
+  PROTOBUF_FIELD_OFFSET(::pb::TradingAccountSummary, activated_),
+  PROTOBUF_FIELD_OFFSET(::pb::TradingAccountSummary, overnight_fee_),
+  PROTOBUF_FIELD_OFFSET(::pb::TradingAccountSummary, commission_l0_),
+  PROTOBUF_FIELD_OFFSET(::pb::TradingAccountSummary, long_position_market_value_),
+  PROTOBUF_FIELD_OFFSET(::pb::TradingAccountSummary, short_position_market_value_),
+  PROTOBUF_FIELD_OFFSET(::pb::TradingAccountSummary, prefered_deposit_),
+  PROTOBUF_FIELD_OFFSET(::pb::TradingAccountSummary, common_deposit_),
+  PROTOBUF_FIELD_OFFSET(::pb::TradingAccountSummary, prefered_withdraw_),
+  PROTOBUF_FIELD_OFFSET(::pb::TradingAccountSummary, common_withdraw_),
+  PROTOBUF_FIELD_OFFSET(::pb::TradingAccountSummary, branch_),
+  PROTOBUF_FIELD_OFFSET(::pb::TradingAccountSummary, branch_name_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::pb::RspTradingAccountLogin, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::pb::RspTradingAccountLogin, error_id_),
+  PROTOBUF_FIELD_OFFSET(::pb::RspTradingAccountLogin, error_msg_),
+  PROTOBUF_FIELD_OFFSET(::pb::RspTradingAccountLogin, request_id_),
+  PROTOBUF_FIELD_OFFSET(::pb::RspTradingAccountLogin, is_last_),
+  PROTOBUF_FIELD_OFFSET(::pb::RspTradingAccountLogin, trading_day_),
+  PROTOBUF_FIELD_OFFSET(::pb::RspTradingAccountLogin, login_time_),
+  PROTOBUF_FIELD_OFFSET(::pb::RspTradingAccountLogin, broker_id_),
+  PROTOBUF_FIELD_OFFSET(::pb::RspTradingAccountLogin, user_id_),
+  PROTOBUF_FIELD_OFFSET(::pb::RspTradingAccountLogin, system_name_),
+  PROTOBUF_FIELD_OFFSET(::pb::RspTradingAccountLogin, front_id_),
+  PROTOBUF_FIELD_OFFSET(::pb::RspTradingAccountLogin, session_id_),
+  PROTOBUF_FIELD_OFFSET(::pb::RspTradingAccountLogin, max_order_ref_),
+  PROTOBUF_FIELD_OFFSET(::pb::RspTradingAccountLogin, shfe_time_),
+  PROTOBUF_FIELD_OFFSET(::pb::RspTradingAccountLogin, dce_time_),
+  PROTOBUF_FIELD_OFFSET(::pb::RspTradingAccountLogin, czce_time_),
+  PROTOBUF_FIELD_OFFSET(::pb::RspTradingAccountLogin, ffex_time_),
+  PROTOBUF_FIELD_OFFSET(::pb::RspTradingAccountLogin, ine_time_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::pb::RspOrderInsert, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::pb::RspOrderInsert, error_id_),
+  PROTOBUF_FIELD_OFFSET(::pb::RspOrderInsert, error_msg_),
+  PROTOBUF_FIELD_OFFSET(::pb::RspOrderInsert, order_ref_),
 };
 static const ::google::protobuf::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::pb::TradingRoute)},
@@ -183,6 +340,9 @@ static const ::google::protobuf::internal::MigrationSchema schemas[] PROTOBUF_SE
   { 21, -1, sizeof(::pb::TradingAccount)},
   { 38, -1, sizeof(::pb::TradingAccountList)},
   { 44, -1, sizeof(::pb::ReqDeleteTradingRoute)},
+  { 50, -1, sizeof(::pb::TradingAccountSummary)},
+  { 120, -1, sizeof(::pb::RspTradingAccountLogin)},
+  { 142, -1, sizeof(::pb::RspOrderInsert)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
@@ -191,12 +351,15 @@ static ::google::protobuf::Message const * const file_default_instances[] = {
   reinterpret_cast<const ::google::protobuf::Message*>(&::pb::_TradingAccount_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::pb::_TradingAccountList_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::pb::_ReqDeleteTradingRoute_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::pb::_TradingAccountSummary_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::pb::_RspTradingAccountLogin_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::pb::_RspOrderInsert_default_instance_),
 };
 
 ::google::protobuf::internal::AssignDescriptorsTable assign_descriptors_table_trading_2eproto = {
   {}, AddDescriptors_trading_2eproto, "trading.proto", schemas,
   file_default_instances, TableStruct_trading_2eproto::offsets,
-  file_level_metadata_trading_2eproto, 5, file_level_enum_descriptors_trading_2eproto, file_level_service_descriptors_trading_2eproto,
+  file_level_metadata_trading_2eproto, 8, file_level_enum_descriptors_trading_2eproto, file_level_service_descriptors_trading_2eproto,
 };
 
 const char descriptor_table_protodef_trading_2eproto[] =
@@ -216,7 +379,57 @@ const char descriptor_table_protodef_trading_2eproto[] =
   "k_option_position_limit\030\n \001(\005\022\024\n\014cancel_"
   "limit\030\013 \001(\005\022\014\n\004user\030\014 \001(\t\"6\n\022TradingAcco"
   "untList\022 \n\004list\030\001 \003(\0132\022.pb.TradingAccoun"
-  "t\"#\n\025ReqDeleteTradingRoute\022\n\n\002id\030\001 \001(\003*\212"
+  "t\"#\n\025ReqDeleteTradingRoute\022\n\n\002id\030\001 \001(\003\"\242"
+  "\014\n\025TradingAccountSummary\022\017\n\007account\030\001 \001("
+  "\t\022\014\n\004user\030\002 \001(\t\022\020\n\010currency\030\003 \001(\t\022\017\n\007bal"
+  "ance\030\004 \001(\001\022\022\n\ncommission\030\005 \001(\001\022\022\n\ncur_ma"
+  "rgin\030\006 \001(\001\022\033\n\023net_position_amount\030\007 \001(\001\022"
+  "\023\n\013pre_balance\030\010 \001(\001\022\023\n\013interest_in\030\t \001("
+  "\001\022\017\n\007deposit\030\n \001(\001\022\020\n\010withdraw\030\013 \001(\001\022\025\n\r"
+  "frozen_margin\030\014 \001(\001\022\031\n\021frozen_commission"
+  "\030\r \001(\001\022\021\n\tavailable\030\016 \001(\001\022\024\n\014close_profi"
+  "t\030\017 \001(\001\022\027\n\017position_profit\030\020 \001(\001\022\024\n\014pre_"
+  "mortgate\030\021 \001(\001\022\022\n\npre_credit\030\022 \001(\001\022\025\n\rin"
+  "terest_base\030\023 \001(\001\022\032\n\022withdraw_available\030"
+  "\024 \001(\001\022\017\n\007reserve\030\025 \001(\001\022\023\n\013trading_day\030\026 "
+  "\001(\005\022\016\n\006credit\030\027 \001(\001\022\020\n\010mortgate\030\030 \001(\001\022\027\n"
+  "\017exchange_margin\030\031 \001(\001\022\027\n\017delivery_margi"
+  "n\030\032 \001(\001\022 \n\030exchange_delivery_margin\030\033 \001("
+  "\001\022\027\n\017reserve_balance\030\034 \001(\001\022\033\n\023delivery_c"
+  "ommission\030\035 \001(\001\022\033\n\023frozen_transfer_fee\030\036"
+  " \001(\001\022\030\n\020frozen_stamp_tax\030\037 \001(\001\022\024\n\014transf"
+  "er_fee\030  \001(\001\022\021\n\tstamp_tax\030! \001(\001\022\022\n\nmtm_p"
+  "rofit\030\" \001(\001\022\023\n\013mtm_balance\030# \001(\001\022\023\n\013stoc"
+  "k_value\030$ \001(\001\022\036\n\026bond_repurchase_amount\030"
+  "% \001(\001\022!\n\031reverse_repurchase_amount\030& \001(\001"
+  "\022\033\n\023margin_trade_amount\030\' \001(\001\022\031\n\021short_s"
+  "ell_amount\030( \001(\001\022\033\n\023margin_trade_profit\030"
+  ") \001(\001\022\034\n\024pre_prefered_balance\030* \001(\001\022\037\n\027f"
+  "rozen_close_commission\030+ \001(\001\022\026\n\016common_b"
+  "alance\030, \001(\001\022\030\n\020prefered_balance\030- \001(\001\022\032"
+  "\n\022base_exchange_rate\030. \001(\001\022\025\n\rwarning_le"
+  "vel\030/ \001(\001\022\031\n\021force_close_level\0300 \001(\001\022\035\n\025"
+  "cleared_closed_profit\0301 \001(\001\022\024\n\014account_n"
+  "ame\0302 \001(\t\022\020\n\010interest\0303 \001(\001\022\027\n\017frozen_in"
+  "terest\0304 \001(\001\022\022\n\noptions_id\0305 \001(\003\022\024\n\014opti"
+  "ons_name\0306 \001(\t\022\021\n\tactivated\0307 \001(\010\022\025\n\rove"
+  "rnight_fee\0308 \001(\001\022\025\n\rcommission_l0\0309 \001(\001\022"
+  "\"\n\032long_position_market_value\030: \001(\001\022#\n\033s"
+  "hort_position_market_value\030; \001(\001\022\030\n\020pref"
+  "ered_deposit\030< \001(\001\022\026\n\016common_deposit\030= \001"
+  "(\001\022\031\n\021prefered_withdraw\030> \001(\001\022\027\n\017common_"
+  "withdraw\030\? \001(\001\022\016\n\006branch\030@ \001(\t\022\023\n\013branch"
+  "_name\030A \001(\t\"\336\002\n\026RspTradingAccountLogin\022\020"
+  "\n\010error_id\030\001 \001(\005\022\021\n\terror_msg\030\002 \001(\014\022\022\n\nr"
+  "equest_id\030\003 \001(\005\022\017\n\007is_last\030\004 \001(\010\022\023\n\013trad"
+  "ing_day\030\005 \001(\005\022\022\n\nlogin_time\030\006 \001(\t\022\021\n\tbro"
+  "ker_id\030\007 \001(\t\022\017\n\007user_id\030\010 \001(\t\022\023\n\013system_"
+  "name\030\t \001(\t\022\020\n\010front_id\030\n \001(\005\022\022\n\nsession_"
+  "id\030\013 \001(\005\022\025\n\rmax_order_ref\030\014 \001(\t\022\021\n\tSHFE_"
+  "time\030\r \001(\t\022\020\n\010DCE_time\030\016 \001(\t\022\021\n\tCZCE_tim"
+  "e\030\017 \001(\t\022\021\n\tFFEX_time\030\020 \001(\t\022\020\n\010INE_time\030\021"
+  " \001(\t\"H\n\016RspOrderInsert\022\020\n\010error_id\030\001 \001(\005"
+  "\022\021\n\terror_msg\030\002 \001(\014\022\021\n\torder_ref\030\003 \001(\t*\212"
   "\001\n\tRouteType\022\021\n\rRT_CTP_FUTURE\020\000\022\020\n\014RT_CT"
   "P_STOCK\020\001\022\031\n\025RT_INTERACTIVE_BROKER\020\002\022\n\n\006"
   "RT_LTS\020\003\022\013\n\007RT_CATS\020\004\022\027\n\023RT_CTP_STOCK_OP"
@@ -225,7 +438,7 @@ const char descriptor_table_protodef_trading_2eproto[] =
 ::google::protobuf::internal::DescriptorTable descriptor_table_trading_2eproto = {
   false, InitDefaults_trading_2eproto, 
   descriptor_table_protodef_trading_2eproto,
-  "trading.proto", &assign_descriptors_table_trading_2eproto, 827,
+  "trading.proto", &assign_descriptors_table_trading_2eproto, 2827,
 };
 
 void AddDescriptors_trading_2eproto() {
@@ -2979,6 +3192,4749 @@ void ReqDeleteTradingRoute::InternalSwap(ReqDeleteTradingRoute* other) {
 }
 
 
+// ===================================================================
+
+void TradingAccountSummary::InitAsDefaultInstance() {
+}
+class TradingAccountSummary::HasBitSetters {
+ public:
+};
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int TradingAccountSummary::kAccountFieldNumber;
+const int TradingAccountSummary::kUserFieldNumber;
+const int TradingAccountSummary::kCurrencyFieldNumber;
+const int TradingAccountSummary::kBalanceFieldNumber;
+const int TradingAccountSummary::kCommissionFieldNumber;
+const int TradingAccountSummary::kCurMarginFieldNumber;
+const int TradingAccountSummary::kNetPositionAmountFieldNumber;
+const int TradingAccountSummary::kPreBalanceFieldNumber;
+const int TradingAccountSummary::kInterestInFieldNumber;
+const int TradingAccountSummary::kDepositFieldNumber;
+const int TradingAccountSummary::kWithdrawFieldNumber;
+const int TradingAccountSummary::kFrozenMarginFieldNumber;
+const int TradingAccountSummary::kFrozenCommissionFieldNumber;
+const int TradingAccountSummary::kAvailableFieldNumber;
+const int TradingAccountSummary::kCloseProfitFieldNumber;
+const int TradingAccountSummary::kPositionProfitFieldNumber;
+const int TradingAccountSummary::kPreMortgateFieldNumber;
+const int TradingAccountSummary::kPreCreditFieldNumber;
+const int TradingAccountSummary::kInterestBaseFieldNumber;
+const int TradingAccountSummary::kWithdrawAvailableFieldNumber;
+const int TradingAccountSummary::kReserveFieldNumber;
+const int TradingAccountSummary::kTradingDayFieldNumber;
+const int TradingAccountSummary::kCreditFieldNumber;
+const int TradingAccountSummary::kMortgateFieldNumber;
+const int TradingAccountSummary::kExchangeMarginFieldNumber;
+const int TradingAccountSummary::kDeliveryMarginFieldNumber;
+const int TradingAccountSummary::kExchangeDeliveryMarginFieldNumber;
+const int TradingAccountSummary::kReserveBalanceFieldNumber;
+const int TradingAccountSummary::kDeliveryCommissionFieldNumber;
+const int TradingAccountSummary::kFrozenTransferFeeFieldNumber;
+const int TradingAccountSummary::kFrozenStampTaxFieldNumber;
+const int TradingAccountSummary::kTransferFeeFieldNumber;
+const int TradingAccountSummary::kStampTaxFieldNumber;
+const int TradingAccountSummary::kMtmProfitFieldNumber;
+const int TradingAccountSummary::kMtmBalanceFieldNumber;
+const int TradingAccountSummary::kStockValueFieldNumber;
+const int TradingAccountSummary::kBondRepurchaseAmountFieldNumber;
+const int TradingAccountSummary::kReverseRepurchaseAmountFieldNumber;
+const int TradingAccountSummary::kMarginTradeAmountFieldNumber;
+const int TradingAccountSummary::kShortSellAmountFieldNumber;
+const int TradingAccountSummary::kMarginTradeProfitFieldNumber;
+const int TradingAccountSummary::kPrePreferedBalanceFieldNumber;
+const int TradingAccountSummary::kFrozenCloseCommissionFieldNumber;
+const int TradingAccountSummary::kCommonBalanceFieldNumber;
+const int TradingAccountSummary::kPreferedBalanceFieldNumber;
+const int TradingAccountSummary::kBaseExchangeRateFieldNumber;
+const int TradingAccountSummary::kWarningLevelFieldNumber;
+const int TradingAccountSummary::kForceCloseLevelFieldNumber;
+const int TradingAccountSummary::kClearedClosedProfitFieldNumber;
+const int TradingAccountSummary::kAccountNameFieldNumber;
+const int TradingAccountSummary::kInterestFieldNumber;
+const int TradingAccountSummary::kFrozenInterestFieldNumber;
+const int TradingAccountSummary::kOptionsIdFieldNumber;
+const int TradingAccountSummary::kOptionsNameFieldNumber;
+const int TradingAccountSummary::kActivatedFieldNumber;
+const int TradingAccountSummary::kOvernightFeeFieldNumber;
+const int TradingAccountSummary::kCommissionL0FieldNumber;
+const int TradingAccountSummary::kLongPositionMarketValueFieldNumber;
+const int TradingAccountSummary::kShortPositionMarketValueFieldNumber;
+const int TradingAccountSummary::kPreferedDepositFieldNumber;
+const int TradingAccountSummary::kCommonDepositFieldNumber;
+const int TradingAccountSummary::kPreferedWithdrawFieldNumber;
+const int TradingAccountSummary::kCommonWithdrawFieldNumber;
+const int TradingAccountSummary::kBranchFieldNumber;
+const int TradingAccountSummary::kBranchNameFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+TradingAccountSummary::TradingAccountSummary()
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:pb.TradingAccountSummary)
+}
+TradingAccountSummary::TradingAccountSummary(const TradingAccountSummary& from)
+  : ::google::protobuf::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  account_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.account().size() > 0) {
+    account_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.account_);
+  }
+  user_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.user().size() > 0) {
+    user_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.user_);
+  }
+  currency_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.currency().size() > 0) {
+    currency_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.currency_);
+  }
+  account_name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.account_name().size() > 0) {
+    account_name_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.account_name_);
+  }
+  options_name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.options_name().size() > 0) {
+    options_name_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.options_name_);
+  }
+  branch_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.branch().size() > 0) {
+    branch_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.branch_);
+  }
+  branch_name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.branch_name().size() > 0) {
+    branch_name_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.branch_name_);
+  }
+  ::memcpy(&balance_, &from.balance_,
+    static_cast<size_t>(reinterpret_cast<char*>(&common_withdraw_) -
+    reinterpret_cast<char*>(&balance_)) + sizeof(common_withdraw_));
+  // @@protoc_insertion_point(copy_constructor:pb.TradingAccountSummary)
+}
+
+void TradingAccountSummary::SharedCtor() {
+  ::google::protobuf::internal::InitSCC(
+      &scc_info_TradingAccountSummary_trading_2eproto.base);
+  account_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  user_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  currency_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  account_name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  options_name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  branch_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  branch_name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  ::memset(&balance_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&common_withdraw_) -
+      reinterpret_cast<char*>(&balance_)) + sizeof(common_withdraw_));
+}
+
+TradingAccountSummary::~TradingAccountSummary() {
+  // @@protoc_insertion_point(destructor:pb.TradingAccountSummary)
+  SharedDtor();
+}
+
+void TradingAccountSummary::SharedDtor() {
+  account_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  user_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  currency_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  account_name_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  options_name_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  branch_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  branch_name_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+
+void TradingAccountSummary::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const TradingAccountSummary& TradingAccountSummary::default_instance() {
+  ::google::protobuf::internal::InitSCC(&::scc_info_TradingAccountSummary_trading_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void TradingAccountSummary::Clear() {
+// @@protoc_insertion_point(message_clear_start:pb.TradingAccountSummary)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  account_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  user_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  currency_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  account_name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  options_name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  branch_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  branch_name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  ::memset(&balance_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&common_withdraw_) -
+      reinterpret_cast<char*>(&balance_)) + sizeof(common_withdraw_));
+  _internal_metadata_.Clear();
+}
+
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* TradingAccountSummary::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<TradingAccountSummary*>(object);
+  ::google::protobuf::int32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+    switch (tag >> 3) {
+      // string account = 1;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        ctx->extra_parse_data().SetFieldName("pb.TradingAccountSummary.account");
+        object = msg->mutable_account();
+        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
+          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
+          goto string_till_end;
+        }
+        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
+        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
+        ptr += size;
+        break;
+      }
+      // string user = 2;
+      case 2: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        ctx->extra_parse_data().SetFieldName("pb.TradingAccountSummary.user");
+        object = msg->mutable_user();
+        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
+          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
+          goto string_till_end;
+        }
+        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
+        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
+        ptr += size;
+        break;
+      }
+      // string currency = 3;
+      case 3: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 26) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        ctx->extra_parse_data().SetFieldName("pb.TradingAccountSummary.currency");
+        object = msg->mutable_currency();
+        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
+          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
+          goto string_till_end;
+        }
+        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
+        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
+        ptr += size;
+        break;
+      }
+      // double balance = 4;
+      case 4: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 33) goto handle_unusual;
+        msg->set_balance(::google::protobuf::io::UnalignedLoad<double>(ptr));
+        ptr += sizeof(double);
+        break;
+      }
+      // double commission = 5;
+      case 5: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 41) goto handle_unusual;
+        msg->set_commission(::google::protobuf::io::UnalignedLoad<double>(ptr));
+        ptr += sizeof(double);
+        break;
+      }
+      // double cur_margin = 6;
+      case 6: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 49) goto handle_unusual;
+        msg->set_cur_margin(::google::protobuf::io::UnalignedLoad<double>(ptr));
+        ptr += sizeof(double);
+        break;
+      }
+      // double net_position_amount = 7;
+      case 7: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 57) goto handle_unusual;
+        msg->set_net_position_amount(::google::protobuf::io::UnalignedLoad<double>(ptr));
+        ptr += sizeof(double);
+        break;
+      }
+      // double pre_balance = 8;
+      case 8: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 65) goto handle_unusual;
+        msg->set_pre_balance(::google::protobuf::io::UnalignedLoad<double>(ptr));
+        ptr += sizeof(double);
+        break;
+      }
+      // double interest_in = 9;
+      case 9: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 73) goto handle_unusual;
+        msg->set_interest_in(::google::protobuf::io::UnalignedLoad<double>(ptr));
+        ptr += sizeof(double);
+        break;
+      }
+      // double deposit = 10;
+      case 10: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 81) goto handle_unusual;
+        msg->set_deposit(::google::protobuf::io::UnalignedLoad<double>(ptr));
+        ptr += sizeof(double);
+        break;
+      }
+      // double withdraw = 11;
+      case 11: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 89) goto handle_unusual;
+        msg->set_withdraw(::google::protobuf::io::UnalignedLoad<double>(ptr));
+        ptr += sizeof(double);
+        break;
+      }
+      // double frozen_margin = 12;
+      case 12: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 97) goto handle_unusual;
+        msg->set_frozen_margin(::google::protobuf::io::UnalignedLoad<double>(ptr));
+        ptr += sizeof(double);
+        break;
+      }
+      // double frozen_commission = 13;
+      case 13: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 105) goto handle_unusual;
+        msg->set_frozen_commission(::google::protobuf::io::UnalignedLoad<double>(ptr));
+        ptr += sizeof(double);
+        break;
+      }
+      // double available = 14;
+      case 14: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 113) goto handle_unusual;
+        msg->set_available(::google::protobuf::io::UnalignedLoad<double>(ptr));
+        ptr += sizeof(double);
+        break;
+      }
+      // double close_profit = 15;
+      case 15: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 121) goto handle_unusual;
+        msg->set_close_profit(::google::protobuf::io::UnalignedLoad<double>(ptr));
+        ptr += sizeof(double);
+        break;
+      }
+      // double position_profit = 16;
+      case 16: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 129) goto handle_unusual;
+        msg->set_position_profit(::google::protobuf::io::UnalignedLoad<double>(ptr));
+        ptr += sizeof(double);
+        break;
+      }
+      // double pre_mortgate = 17;
+      case 17: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 137) goto handle_unusual;
+        msg->set_pre_mortgate(::google::protobuf::io::UnalignedLoad<double>(ptr));
+        ptr += sizeof(double);
+        break;
+      }
+      // double pre_credit = 18;
+      case 18: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 145) goto handle_unusual;
+        msg->set_pre_credit(::google::protobuf::io::UnalignedLoad<double>(ptr));
+        ptr += sizeof(double);
+        break;
+      }
+      // double interest_base = 19;
+      case 19: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 153) goto handle_unusual;
+        msg->set_interest_base(::google::protobuf::io::UnalignedLoad<double>(ptr));
+        ptr += sizeof(double);
+        break;
+      }
+      // double withdraw_available = 20;
+      case 20: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 161) goto handle_unusual;
+        msg->set_withdraw_available(::google::protobuf::io::UnalignedLoad<double>(ptr));
+        ptr += sizeof(double);
+        break;
+      }
+      // double reserve = 21;
+      case 21: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 169) goto handle_unusual;
+        msg->set_reserve(::google::protobuf::io::UnalignedLoad<double>(ptr));
+        ptr += sizeof(double);
+        break;
+      }
+      // int32 trading_day = 22;
+      case 22: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 176) goto handle_unusual;
+        msg->set_trading_day(::google::protobuf::internal::ReadVarint(&ptr));
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        break;
+      }
+      // double credit = 23;
+      case 23: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 185) goto handle_unusual;
+        msg->set_credit(::google::protobuf::io::UnalignedLoad<double>(ptr));
+        ptr += sizeof(double);
+        break;
+      }
+      // double mortgate = 24;
+      case 24: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 193) goto handle_unusual;
+        msg->set_mortgate(::google::protobuf::io::UnalignedLoad<double>(ptr));
+        ptr += sizeof(double);
+        break;
+      }
+      // double exchange_margin = 25;
+      case 25: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 201) goto handle_unusual;
+        msg->set_exchange_margin(::google::protobuf::io::UnalignedLoad<double>(ptr));
+        ptr += sizeof(double);
+        break;
+      }
+      // double delivery_margin = 26;
+      case 26: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 209) goto handle_unusual;
+        msg->set_delivery_margin(::google::protobuf::io::UnalignedLoad<double>(ptr));
+        ptr += sizeof(double);
+        break;
+      }
+      // double exchange_delivery_margin = 27;
+      case 27: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 217) goto handle_unusual;
+        msg->set_exchange_delivery_margin(::google::protobuf::io::UnalignedLoad<double>(ptr));
+        ptr += sizeof(double);
+        break;
+      }
+      // double reserve_balance = 28;
+      case 28: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 225) goto handle_unusual;
+        msg->set_reserve_balance(::google::protobuf::io::UnalignedLoad<double>(ptr));
+        ptr += sizeof(double);
+        break;
+      }
+      // double delivery_commission = 29;
+      case 29: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 233) goto handle_unusual;
+        msg->set_delivery_commission(::google::protobuf::io::UnalignedLoad<double>(ptr));
+        ptr += sizeof(double);
+        break;
+      }
+      // double frozen_transfer_fee = 30;
+      case 30: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 241) goto handle_unusual;
+        msg->set_frozen_transfer_fee(::google::protobuf::io::UnalignedLoad<double>(ptr));
+        ptr += sizeof(double);
+        break;
+      }
+      // double frozen_stamp_tax = 31;
+      case 31: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 249) goto handle_unusual;
+        msg->set_frozen_stamp_tax(::google::protobuf::io::UnalignedLoad<double>(ptr));
+        ptr += sizeof(double);
+        break;
+      }
+      // double transfer_fee = 32;
+      case 32: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 1) goto handle_unusual;
+        msg->set_transfer_fee(::google::protobuf::io::UnalignedLoad<double>(ptr));
+        ptr += sizeof(double);
+        break;
+      }
+      // double stamp_tax = 33;
+      case 33: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 9) goto handle_unusual;
+        msg->set_stamp_tax(::google::protobuf::io::UnalignedLoad<double>(ptr));
+        ptr += sizeof(double);
+        break;
+      }
+      // double mtm_profit = 34;
+      case 34: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 17) goto handle_unusual;
+        msg->set_mtm_profit(::google::protobuf::io::UnalignedLoad<double>(ptr));
+        ptr += sizeof(double);
+        break;
+      }
+      // double mtm_balance = 35;
+      case 35: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 25) goto handle_unusual;
+        msg->set_mtm_balance(::google::protobuf::io::UnalignedLoad<double>(ptr));
+        ptr += sizeof(double);
+        break;
+      }
+      // double stock_value = 36;
+      case 36: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 33) goto handle_unusual;
+        msg->set_stock_value(::google::protobuf::io::UnalignedLoad<double>(ptr));
+        ptr += sizeof(double);
+        break;
+      }
+      // double bond_repurchase_amount = 37;
+      case 37: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 41) goto handle_unusual;
+        msg->set_bond_repurchase_amount(::google::protobuf::io::UnalignedLoad<double>(ptr));
+        ptr += sizeof(double);
+        break;
+      }
+      // double reverse_repurchase_amount = 38;
+      case 38: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 49) goto handle_unusual;
+        msg->set_reverse_repurchase_amount(::google::protobuf::io::UnalignedLoad<double>(ptr));
+        ptr += sizeof(double);
+        break;
+      }
+      // double margin_trade_amount = 39;
+      case 39: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 57) goto handle_unusual;
+        msg->set_margin_trade_amount(::google::protobuf::io::UnalignedLoad<double>(ptr));
+        ptr += sizeof(double);
+        break;
+      }
+      // double short_sell_amount = 40;
+      case 40: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 65) goto handle_unusual;
+        msg->set_short_sell_amount(::google::protobuf::io::UnalignedLoad<double>(ptr));
+        ptr += sizeof(double);
+        break;
+      }
+      // double margin_trade_profit = 41;
+      case 41: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 73) goto handle_unusual;
+        msg->set_margin_trade_profit(::google::protobuf::io::UnalignedLoad<double>(ptr));
+        ptr += sizeof(double);
+        break;
+      }
+      // double pre_prefered_balance = 42;
+      case 42: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 81) goto handle_unusual;
+        msg->set_pre_prefered_balance(::google::protobuf::io::UnalignedLoad<double>(ptr));
+        ptr += sizeof(double);
+        break;
+      }
+      // double frozen_close_commission = 43;
+      case 43: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 89) goto handle_unusual;
+        msg->set_frozen_close_commission(::google::protobuf::io::UnalignedLoad<double>(ptr));
+        ptr += sizeof(double);
+        break;
+      }
+      // double common_balance = 44;
+      case 44: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 97) goto handle_unusual;
+        msg->set_common_balance(::google::protobuf::io::UnalignedLoad<double>(ptr));
+        ptr += sizeof(double);
+        break;
+      }
+      // double prefered_balance = 45;
+      case 45: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 105) goto handle_unusual;
+        msg->set_prefered_balance(::google::protobuf::io::UnalignedLoad<double>(ptr));
+        ptr += sizeof(double);
+        break;
+      }
+      // double base_exchange_rate = 46;
+      case 46: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 113) goto handle_unusual;
+        msg->set_base_exchange_rate(::google::protobuf::io::UnalignedLoad<double>(ptr));
+        ptr += sizeof(double);
+        break;
+      }
+      // double warning_level = 47;
+      case 47: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 121) goto handle_unusual;
+        msg->set_warning_level(::google::protobuf::io::UnalignedLoad<double>(ptr));
+        ptr += sizeof(double);
+        break;
+      }
+      // double force_close_level = 48;
+      case 48: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 129) goto handle_unusual;
+        msg->set_force_close_level(::google::protobuf::io::UnalignedLoad<double>(ptr));
+        ptr += sizeof(double);
+        break;
+      }
+      // double cleared_closed_profit = 49;
+      case 49: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 137) goto handle_unusual;
+        msg->set_cleared_closed_profit(::google::protobuf::io::UnalignedLoad<double>(ptr));
+        ptr += sizeof(double);
+        break;
+      }
+      // string account_name = 50;
+      case 50: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 146) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        ctx->extra_parse_data().SetFieldName("pb.TradingAccountSummary.account_name");
+        object = msg->mutable_account_name();
+        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
+          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
+          goto string_till_end;
+        }
+        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
+        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
+        ptr += size;
+        break;
+      }
+      // double interest = 51;
+      case 51: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 153) goto handle_unusual;
+        msg->set_interest(::google::protobuf::io::UnalignedLoad<double>(ptr));
+        ptr += sizeof(double);
+        break;
+      }
+      // double frozen_interest = 52;
+      case 52: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 161) goto handle_unusual;
+        msg->set_frozen_interest(::google::protobuf::io::UnalignedLoad<double>(ptr));
+        ptr += sizeof(double);
+        break;
+      }
+      // int64 options_id = 53;
+      case 53: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 168) goto handle_unusual;
+        msg->set_options_id(::google::protobuf::internal::ReadVarint(&ptr));
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        break;
+      }
+      // string options_name = 54;
+      case 54: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 178) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        ctx->extra_parse_data().SetFieldName("pb.TradingAccountSummary.options_name");
+        object = msg->mutable_options_name();
+        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
+          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
+          goto string_till_end;
+        }
+        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
+        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
+        ptr += size;
+        break;
+      }
+      // bool activated = 55;
+      case 55: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 184) goto handle_unusual;
+        msg->set_activated(::google::protobuf::internal::ReadVarint(&ptr));
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        break;
+      }
+      // double overnight_fee = 56;
+      case 56: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 193) goto handle_unusual;
+        msg->set_overnight_fee(::google::protobuf::io::UnalignedLoad<double>(ptr));
+        ptr += sizeof(double);
+        break;
+      }
+      // double commission_l0 = 57;
+      case 57: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 201) goto handle_unusual;
+        msg->set_commission_l0(::google::protobuf::io::UnalignedLoad<double>(ptr));
+        ptr += sizeof(double);
+        break;
+      }
+      // double long_position_market_value = 58;
+      case 58: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 209) goto handle_unusual;
+        msg->set_long_position_market_value(::google::protobuf::io::UnalignedLoad<double>(ptr));
+        ptr += sizeof(double);
+        break;
+      }
+      // double short_position_market_value = 59;
+      case 59: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 217) goto handle_unusual;
+        msg->set_short_position_market_value(::google::protobuf::io::UnalignedLoad<double>(ptr));
+        ptr += sizeof(double);
+        break;
+      }
+      // double prefered_deposit = 60;
+      case 60: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 225) goto handle_unusual;
+        msg->set_prefered_deposit(::google::protobuf::io::UnalignedLoad<double>(ptr));
+        ptr += sizeof(double);
+        break;
+      }
+      // double common_deposit = 61;
+      case 61: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 233) goto handle_unusual;
+        msg->set_common_deposit(::google::protobuf::io::UnalignedLoad<double>(ptr));
+        ptr += sizeof(double);
+        break;
+      }
+      // double prefered_withdraw = 62;
+      case 62: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 241) goto handle_unusual;
+        msg->set_prefered_withdraw(::google::protobuf::io::UnalignedLoad<double>(ptr));
+        ptr += sizeof(double);
+        break;
+      }
+      // double common_withdraw = 63;
+      case 63: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 249) goto handle_unusual;
+        msg->set_common_withdraw(::google::protobuf::io::UnalignedLoad<double>(ptr));
+        ptr += sizeof(double);
+        break;
+      }
+      // string branch = 64;
+      case 64: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 2) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        ctx->extra_parse_data().SetFieldName("pb.TradingAccountSummary.branch");
+        object = msg->mutable_branch();
+        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
+          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
+          goto string_till_end;
+        }
+        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
+        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
+        ptr += size;
+        break;
+      }
+      // string branch_name = 65;
+      case 65: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        ctx->extra_parse_data().SetFieldName("pb.TradingAccountSummary.branch_name");
+        object = msg->mutable_branch_name();
+        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
+          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
+          goto string_till_end;
+        }
+        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
+        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
+        ptr += size;
+        break;
+      }
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->EndGroup(tag);
+          return ptr;
+        }
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        if (res.second) return ptr;
+      }
+    }  // switch
+  }  // while
+  return ptr;
+string_till_end:
+  static_cast<::std::string*>(object)->clear();
+  static_cast<::std::string*>(object)->reserve(size);
+  goto len_delim_till_end;
+len_delim_till_end:
+  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
+                               {parser_till_end, object}, size);
+}
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool TradingAccountSummary::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:pb.TradingAccountSummary)
+  for (;;) {
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(16383u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // string account = 1;
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_account()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->account().data(), static_cast<int>(this->account().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "pb.TradingAccountSummary.account"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string user = 2;
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_user()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->user().data(), static_cast<int>(this->user().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "pb.TradingAccountSummary.user"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string currency = 3;
+      case 3: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (26 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_currency()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->currency().data(), static_cast<int>(this->currency().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "pb.TradingAccountSummary.currency"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // double balance = 4;
+      case 4: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (33 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
+                 input, &balance_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // double commission = 5;
+      case 5: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (41 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
+                 input, &commission_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // double cur_margin = 6;
+      case 6: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (49 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
+                 input, &cur_margin_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // double net_position_amount = 7;
+      case 7: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (57 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
+                 input, &net_position_amount_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // double pre_balance = 8;
+      case 8: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (65 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
+                 input, &pre_balance_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // double interest_in = 9;
+      case 9: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (73 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
+                 input, &interest_in_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // double deposit = 10;
+      case 10: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (81 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
+                 input, &deposit_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // double withdraw = 11;
+      case 11: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (89 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
+                 input, &withdraw_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // double frozen_margin = 12;
+      case 12: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (97 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
+                 input, &frozen_margin_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // double frozen_commission = 13;
+      case 13: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (105 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
+                 input, &frozen_commission_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // double available = 14;
+      case 14: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (113 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
+                 input, &available_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // double close_profit = 15;
+      case 15: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (121 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
+                 input, &close_profit_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // double position_profit = 16;
+      case 16: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (129 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
+                 input, &position_profit_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // double pre_mortgate = 17;
+      case 17: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (137 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
+                 input, &pre_mortgate_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // double pre_credit = 18;
+      case 18: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (145 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
+                 input, &pre_credit_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // double interest_base = 19;
+      case 19: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (153 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
+                 input, &interest_base_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // double withdraw_available = 20;
+      case 20: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (161 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
+                 input, &withdraw_available_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // double reserve = 21;
+      case 21: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (169 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
+                 input, &reserve_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // int32 trading_day = 22;
+      case 22: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (176 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &trading_day_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // double credit = 23;
+      case 23: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (185 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
+                 input, &credit_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // double mortgate = 24;
+      case 24: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (193 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
+                 input, &mortgate_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // double exchange_margin = 25;
+      case 25: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (201 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
+                 input, &exchange_margin_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // double delivery_margin = 26;
+      case 26: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (209 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
+                 input, &delivery_margin_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // double exchange_delivery_margin = 27;
+      case 27: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (217 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
+                 input, &exchange_delivery_margin_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // double reserve_balance = 28;
+      case 28: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (225 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
+                 input, &reserve_balance_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // double delivery_commission = 29;
+      case 29: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (233 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
+                 input, &delivery_commission_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // double frozen_transfer_fee = 30;
+      case 30: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (241 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
+                 input, &frozen_transfer_fee_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // double frozen_stamp_tax = 31;
+      case 31: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (249 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
+                 input, &frozen_stamp_tax_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // double transfer_fee = 32;
+      case 32: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (257 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
+                 input, &transfer_fee_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // double stamp_tax = 33;
+      case 33: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (265 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
+                 input, &stamp_tax_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // double mtm_profit = 34;
+      case 34: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (273 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
+                 input, &mtm_profit_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // double mtm_balance = 35;
+      case 35: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (281 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
+                 input, &mtm_balance_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // double stock_value = 36;
+      case 36: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (289 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
+                 input, &stock_value_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // double bond_repurchase_amount = 37;
+      case 37: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (297 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
+                 input, &bond_repurchase_amount_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // double reverse_repurchase_amount = 38;
+      case 38: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (305 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
+                 input, &reverse_repurchase_amount_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // double margin_trade_amount = 39;
+      case 39: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (313 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
+                 input, &margin_trade_amount_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // double short_sell_amount = 40;
+      case 40: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (321 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
+                 input, &short_sell_amount_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // double margin_trade_profit = 41;
+      case 41: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (329 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
+                 input, &margin_trade_profit_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // double pre_prefered_balance = 42;
+      case 42: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (337 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
+                 input, &pre_prefered_balance_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // double frozen_close_commission = 43;
+      case 43: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (345 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
+                 input, &frozen_close_commission_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // double common_balance = 44;
+      case 44: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (353 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
+                 input, &common_balance_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // double prefered_balance = 45;
+      case 45: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (361 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
+                 input, &prefered_balance_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // double base_exchange_rate = 46;
+      case 46: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (369 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
+                 input, &base_exchange_rate_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // double warning_level = 47;
+      case 47: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (377 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
+                 input, &warning_level_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // double force_close_level = 48;
+      case 48: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (385 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
+                 input, &force_close_level_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // double cleared_closed_profit = 49;
+      case 49: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (393 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
+                 input, &cleared_closed_profit_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string account_name = 50;
+      case 50: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (402 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_account_name()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->account_name().data(), static_cast<int>(this->account_name().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "pb.TradingAccountSummary.account_name"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // double interest = 51;
+      case 51: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (409 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
+                 input, &interest_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // double frozen_interest = 52;
+      case 52: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (417 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
+                 input, &frozen_interest_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // int64 options_id = 53;
+      case 53: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (424 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int64, ::google::protobuf::internal::WireFormatLite::TYPE_INT64>(
+                 input, &options_id_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string options_name = 54;
+      case 54: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (434 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_options_name()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->options_name().data(), static_cast<int>(this->options_name().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "pb.TradingAccountSummary.options_name"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // bool activated = 55;
+      case 55: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (440 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &activated_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // double overnight_fee = 56;
+      case 56: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (449 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
+                 input, &overnight_fee_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // double commission_l0 = 57;
+      case 57: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (457 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
+                 input, &commission_l0_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // double long_position_market_value = 58;
+      case 58: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (465 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
+                 input, &long_position_market_value_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // double short_position_market_value = 59;
+      case 59: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (473 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
+                 input, &short_position_market_value_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // double prefered_deposit = 60;
+      case 60: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (481 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
+                 input, &prefered_deposit_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // double common_deposit = 61;
+      case 61: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (489 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
+                 input, &common_deposit_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // double prefered_withdraw = 62;
+      case 62: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (497 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
+                 input, &prefered_withdraw_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // double common_withdraw = 63;
+      case 63: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (505 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
+                 input, &common_withdraw_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string branch = 64;
+      case 64: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (514 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_branch()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->branch().data(), static_cast<int>(this->branch().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "pb.TradingAccountSummary.branch"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string branch_name = 65;
+      case 65: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (522 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_branch_name()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->branch_name().data(), static_cast<int>(this->branch_name().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "pb.TradingAccountSummary.branch_name"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:pb.TradingAccountSummary)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:pb.TradingAccountSummary)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void TradingAccountSummary::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:pb.TradingAccountSummary)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // string account = 1;
+  if (this->account().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->account().data(), static_cast<int>(this->account().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.TradingAccountSummary.account");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      1, this->account(), output);
+  }
+
+  // string user = 2;
+  if (this->user().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->user().data(), static_cast<int>(this->user().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.TradingAccountSummary.user");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      2, this->user(), output);
+  }
+
+  // string currency = 3;
+  if (this->currency().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->currency().data(), static_cast<int>(this->currency().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.TradingAccountSummary.currency");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      3, this->currency(), output);
+  }
+
+  // double balance = 4;
+  if (this->balance() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteDouble(4, this->balance(), output);
+  }
+
+  // double commission = 5;
+  if (this->commission() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteDouble(5, this->commission(), output);
+  }
+
+  // double cur_margin = 6;
+  if (this->cur_margin() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteDouble(6, this->cur_margin(), output);
+  }
+
+  // double net_position_amount = 7;
+  if (this->net_position_amount() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteDouble(7, this->net_position_amount(), output);
+  }
+
+  // double pre_balance = 8;
+  if (this->pre_balance() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteDouble(8, this->pre_balance(), output);
+  }
+
+  // double interest_in = 9;
+  if (this->interest_in() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteDouble(9, this->interest_in(), output);
+  }
+
+  // double deposit = 10;
+  if (this->deposit() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteDouble(10, this->deposit(), output);
+  }
+
+  // double withdraw = 11;
+  if (this->withdraw() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteDouble(11, this->withdraw(), output);
+  }
+
+  // double frozen_margin = 12;
+  if (this->frozen_margin() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteDouble(12, this->frozen_margin(), output);
+  }
+
+  // double frozen_commission = 13;
+  if (this->frozen_commission() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteDouble(13, this->frozen_commission(), output);
+  }
+
+  // double available = 14;
+  if (this->available() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteDouble(14, this->available(), output);
+  }
+
+  // double close_profit = 15;
+  if (this->close_profit() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteDouble(15, this->close_profit(), output);
+  }
+
+  // double position_profit = 16;
+  if (this->position_profit() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteDouble(16, this->position_profit(), output);
+  }
+
+  // double pre_mortgate = 17;
+  if (this->pre_mortgate() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteDouble(17, this->pre_mortgate(), output);
+  }
+
+  // double pre_credit = 18;
+  if (this->pre_credit() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteDouble(18, this->pre_credit(), output);
+  }
+
+  // double interest_base = 19;
+  if (this->interest_base() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteDouble(19, this->interest_base(), output);
+  }
+
+  // double withdraw_available = 20;
+  if (this->withdraw_available() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteDouble(20, this->withdraw_available(), output);
+  }
+
+  // double reserve = 21;
+  if (this->reserve() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteDouble(21, this->reserve(), output);
+  }
+
+  // int32 trading_day = 22;
+  if (this->trading_day() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(22, this->trading_day(), output);
+  }
+
+  // double credit = 23;
+  if (this->credit() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteDouble(23, this->credit(), output);
+  }
+
+  // double mortgate = 24;
+  if (this->mortgate() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteDouble(24, this->mortgate(), output);
+  }
+
+  // double exchange_margin = 25;
+  if (this->exchange_margin() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteDouble(25, this->exchange_margin(), output);
+  }
+
+  // double delivery_margin = 26;
+  if (this->delivery_margin() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteDouble(26, this->delivery_margin(), output);
+  }
+
+  // double exchange_delivery_margin = 27;
+  if (this->exchange_delivery_margin() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteDouble(27, this->exchange_delivery_margin(), output);
+  }
+
+  // double reserve_balance = 28;
+  if (this->reserve_balance() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteDouble(28, this->reserve_balance(), output);
+  }
+
+  // double delivery_commission = 29;
+  if (this->delivery_commission() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteDouble(29, this->delivery_commission(), output);
+  }
+
+  // double frozen_transfer_fee = 30;
+  if (this->frozen_transfer_fee() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteDouble(30, this->frozen_transfer_fee(), output);
+  }
+
+  // double frozen_stamp_tax = 31;
+  if (this->frozen_stamp_tax() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteDouble(31, this->frozen_stamp_tax(), output);
+  }
+
+  // double transfer_fee = 32;
+  if (this->transfer_fee() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteDouble(32, this->transfer_fee(), output);
+  }
+
+  // double stamp_tax = 33;
+  if (this->stamp_tax() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteDouble(33, this->stamp_tax(), output);
+  }
+
+  // double mtm_profit = 34;
+  if (this->mtm_profit() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteDouble(34, this->mtm_profit(), output);
+  }
+
+  // double mtm_balance = 35;
+  if (this->mtm_balance() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteDouble(35, this->mtm_balance(), output);
+  }
+
+  // double stock_value = 36;
+  if (this->stock_value() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteDouble(36, this->stock_value(), output);
+  }
+
+  // double bond_repurchase_amount = 37;
+  if (this->bond_repurchase_amount() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteDouble(37, this->bond_repurchase_amount(), output);
+  }
+
+  // double reverse_repurchase_amount = 38;
+  if (this->reverse_repurchase_amount() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteDouble(38, this->reverse_repurchase_amount(), output);
+  }
+
+  // double margin_trade_amount = 39;
+  if (this->margin_trade_amount() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteDouble(39, this->margin_trade_amount(), output);
+  }
+
+  // double short_sell_amount = 40;
+  if (this->short_sell_amount() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteDouble(40, this->short_sell_amount(), output);
+  }
+
+  // double margin_trade_profit = 41;
+  if (this->margin_trade_profit() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteDouble(41, this->margin_trade_profit(), output);
+  }
+
+  // double pre_prefered_balance = 42;
+  if (this->pre_prefered_balance() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteDouble(42, this->pre_prefered_balance(), output);
+  }
+
+  // double frozen_close_commission = 43;
+  if (this->frozen_close_commission() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteDouble(43, this->frozen_close_commission(), output);
+  }
+
+  // double common_balance = 44;
+  if (this->common_balance() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteDouble(44, this->common_balance(), output);
+  }
+
+  // double prefered_balance = 45;
+  if (this->prefered_balance() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteDouble(45, this->prefered_balance(), output);
+  }
+
+  // double base_exchange_rate = 46;
+  if (this->base_exchange_rate() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteDouble(46, this->base_exchange_rate(), output);
+  }
+
+  // double warning_level = 47;
+  if (this->warning_level() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteDouble(47, this->warning_level(), output);
+  }
+
+  // double force_close_level = 48;
+  if (this->force_close_level() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteDouble(48, this->force_close_level(), output);
+  }
+
+  // double cleared_closed_profit = 49;
+  if (this->cleared_closed_profit() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteDouble(49, this->cleared_closed_profit(), output);
+  }
+
+  // string account_name = 50;
+  if (this->account_name().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->account_name().data(), static_cast<int>(this->account_name().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.TradingAccountSummary.account_name");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      50, this->account_name(), output);
+  }
+
+  // double interest = 51;
+  if (this->interest() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteDouble(51, this->interest(), output);
+  }
+
+  // double frozen_interest = 52;
+  if (this->frozen_interest() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteDouble(52, this->frozen_interest(), output);
+  }
+
+  // int64 options_id = 53;
+  if (this->options_id() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt64(53, this->options_id(), output);
+  }
+
+  // string options_name = 54;
+  if (this->options_name().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->options_name().data(), static_cast<int>(this->options_name().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.TradingAccountSummary.options_name");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      54, this->options_name(), output);
+  }
+
+  // bool activated = 55;
+  if (this->activated() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(55, this->activated(), output);
+  }
+
+  // double overnight_fee = 56;
+  if (this->overnight_fee() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteDouble(56, this->overnight_fee(), output);
+  }
+
+  // double commission_l0 = 57;
+  if (this->commission_l0() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteDouble(57, this->commission_l0(), output);
+  }
+
+  // double long_position_market_value = 58;
+  if (this->long_position_market_value() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteDouble(58, this->long_position_market_value(), output);
+  }
+
+  // double short_position_market_value = 59;
+  if (this->short_position_market_value() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteDouble(59, this->short_position_market_value(), output);
+  }
+
+  // double prefered_deposit = 60;
+  if (this->prefered_deposit() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteDouble(60, this->prefered_deposit(), output);
+  }
+
+  // double common_deposit = 61;
+  if (this->common_deposit() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteDouble(61, this->common_deposit(), output);
+  }
+
+  // double prefered_withdraw = 62;
+  if (this->prefered_withdraw() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteDouble(62, this->prefered_withdraw(), output);
+  }
+
+  // double common_withdraw = 63;
+  if (this->common_withdraw() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteDouble(63, this->common_withdraw(), output);
+  }
+
+  // string branch = 64;
+  if (this->branch().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->branch().data(), static_cast<int>(this->branch().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.TradingAccountSummary.branch");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      64, this->branch(), output);
+  }
+
+  // string branch_name = 65;
+  if (this->branch_name().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->branch_name().data(), static_cast<int>(this->branch_name().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.TradingAccountSummary.branch_name");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      65, this->branch_name(), output);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:pb.TradingAccountSummary)
+}
+
+::google::protobuf::uint8* TradingAccountSummary::InternalSerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:pb.TradingAccountSummary)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // string account = 1;
+  if (this->account().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->account().data(), static_cast<int>(this->account().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.TradingAccountSummary.account");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        1, this->account(), target);
+  }
+
+  // string user = 2;
+  if (this->user().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->user().data(), static_cast<int>(this->user().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.TradingAccountSummary.user");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        2, this->user(), target);
+  }
+
+  // string currency = 3;
+  if (this->currency().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->currency().data(), static_cast<int>(this->currency().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.TradingAccountSummary.currency");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        3, this->currency(), target);
+  }
+
+  // double balance = 4;
+  if (this->balance() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(4, this->balance(), target);
+  }
+
+  // double commission = 5;
+  if (this->commission() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(5, this->commission(), target);
+  }
+
+  // double cur_margin = 6;
+  if (this->cur_margin() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(6, this->cur_margin(), target);
+  }
+
+  // double net_position_amount = 7;
+  if (this->net_position_amount() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(7, this->net_position_amount(), target);
+  }
+
+  // double pre_balance = 8;
+  if (this->pre_balance() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(8, this->pre_balance(), target);
+  }
+
+  // double interest_in = 9;
+  if (this->interest_in() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(9, this->interest_in(), target);
+  }
+
+  // double deposit = 10;
+  if (this->deposit() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(10, this->deposit(), target);
+  }
+
+  // double withdraw = 11;
+  if (this->withdraw() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(11, this->withdraw(), target);
+  }
+
+  // double frozen_margin = 12;
+  if (this->frozen_margin() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(12, this->frozen_margin(), target);
+  }
+
+  // double frozen_commission = 13;
+  if (this->frozen_commission() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(13, this->frozen_commission(), target);
+  }
+
+  // double available = 14;
+  if (this->available() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(14, this->available(), target);
+  }
+
+  // double close_profit = 15;
+  if (this->close_profit() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(15, this->close_profit(), target);
+  }
+
+  // double position_profit = 16;
+  if (this->position_profit() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(16, this->position_profit(), target);
+  }
+
+  // double pre_mortgate = 17;
+  if (this->pre_mortgate() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(17, this->pre_mortgate(), target);
+  }
+
+  // double pre_credit = 18;
+  if (this->pre_credit() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(18, this->pre_credit(), target);
+  }
+
+  // double interest_base = 19;
+  if (this->interest_base() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(19, this->interest_base(), target);
+  }
+
+  // double withdraw_available = 20;
+  if (this->withdraw_available() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(20, this->withdraw_available(), target);
+  }
+
+  // double reserve = 21;
+  if (this->reserve() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(21, this->reserve(), target);
+  }
+
+  // int32 trading_day = 22;
+  if (this->trading_day() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(22, this->trading_day(), target);
+  }
+
+  // double credit = 23;
+  if (this->credit() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(23, this->credit(), target);
+  }
+
+  // double mortgate = 24;
+  if (this->mortgate() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(24, this->mortgate(), target);
+  }
+
+  // double exchange_margin = 25;
+  if (this->exchange_margin() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(25, this->exchange_margin(), target);
+  }
+
+  // double delivery_margin = 26;
+  if (this->delivery_margin() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(26, this->delivery_margin(), target);
+  }
+
+  // double exchange_delivery_margin = 27;
+  if (this->exchange_delivery_margin() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(27, this->exchange_delivery_margin(), target);
+  }
+
+  // double reserve_balance = 28;
+  if (this->reserve_balance() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(28, this->reserve_balance(), target);
+  }
+
+  // double delivery_commission = 29;
+  if (this->delivery_commission() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(29, this->delivery_commission(), target);
+  }
+
+  // double frozen_transfer_fee = 30;
+  if (this->frozen_transfer_fee() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(30, this->frozen_transfer_fee(), target);
+  }
+
+  // double frozen_stamp_tax = 31;
+  if (this->frozen_stamp_tax() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(31, this->frozen_stamp_tax(), target);
+  }
+
+  // double transfer_fee = 32;
+  if (this->transfer_fee() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(32, this->transfer_fee(), target);
+  }
+
+  // double stamp_tax = 33;
+  if (this->stamp_tax() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(33, this->stamp_tax(), target);
+  }
+
+  // double mtm_profit = 34;
+  if (this->mtm_profit() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(34, this->mtm_profit(), target);
+  }
+
+  // double mtm_balance = 35;
+  if (this->mtm_balance() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(35, this->mtm_balance(), target);
+  }
+
+  // double stock_value = 36;
+  if (this->stock_value() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(36, this->stock_value(), target);
+  }
+
+  // double bond_repurchase_amount = 37;
+  if (this->bond_repurchase_amount() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(37, this->bond_repurchase_amount(), target);
+  }
+
+  // double reverse_repurchase_amount = 38;
+  if (this->reverse_repurchase_amount() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(38, this->reverse_repurchase_amount(), target);
+  }
+
+  // double margin_trade_amount = 39;
+  if (this->margin_trade_amount() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(39, this->margin_trade_amount(), target);
+  }
+
+  // double short_sell_amount = 40;
+  if (this->short_sell_amount() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(40, this->short_sell_amount(), target);
+  }
+
+  // double margin_trade_profit = 41;
+  if (this->margin_trade_profit() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(41, this->margin_trade_profit(), target);
+  }
+
+  // double pre_prefered_balance = 42;
+  if (this->pre_prefered_balance() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(42, this->pre_prefered_balance(), target);
+  }
+
+  // double frozen_close_commission = 43;
+  if (this->frozen_close_commission() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(43, this->frozen_close_commission(), target);
+  }
+
+  // double common_balance = 44;
+  if (this->common_balance() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(44, this->common_balance(), target);
+  }
+
+  // double prefered_balance = 45;
+  if (this->prefered_balance() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(45, this->prefered_balance(), target);
+  }
+
+  // double base_exchange_rate = 46;
+  if (this->base_exchange_rate() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(46, this->base_exchange_rate(), target);
+  }
+
+  // double warning_level = 47;
+  if (this->warning_level() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(47, this->warning_level(), target);
+  }
+
+  // double force_close_level = 48;
+  if (this->force_close_level() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(48, this->force_close_level(), target);
+  }
+
+  // double cleared_closed_profit = 49;
+  if (this->cleared_closed_profit() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(49, this->cleared_closed_profit(), target);
+  }
+
+  // string account_name = 50;
+  if (this->account_name().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->account_name().data(), static_cast<int>(this->account_name().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.TradingAccountSummary.account_name");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        50, this->account_name(), target);
+  }
+
+  // double interest = 51;
+  if (this->interest() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(51, this->interest(), target);
+  }
+
+  // double frozen_interest = 52;
+  if (this->frozen_interest() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(52, this->frozen_interest(), target);
+  }
+
+  // int64 options_id = 53;
+  if (this->options_id() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(53, this->options_id(), target);
+  }
+
+  // string options_name = 54;
+  if (this->options_name().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->options_name().data(), static_cast<int>(this->options_name().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.TradingAccountSummary.options_name");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        54, this->options_name(), target);
+  }
+
+  // bool activated = 55;
+  if (this->activated() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(55, this->activated(), target);
+  }
+
+  // double overnight_fee = 56;
+  if (this->overnight_fee() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(56, this->overnight_fee(), target);
+  }
+
+  // double commission_l0 = 57;
+  if (this->commission_l0() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(57, this->commission_l0(), target);
+  }
+
+  // double long_position_market_value = 58;
+  if (this->long_position_market_value() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(58, this->long_position_market_value(), target);
+  }
+
+  // double short_position_market_value = 59;
+  if (this->short_position_market_value() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(59, this->short_position_market_value(), target);
+  }
+
+  // double prefered_deposit = 60;
+  if (this->prefered_deposit() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(60, this->prefered_deposit(), target);
+  }
+
+  // double common_deposit = 61;
+  if (this->common_deposit() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(61, this->common_deposit(), target);
+  }
+
+  // double prefered_withdraw = 62;
+  if (this->prefered_withdraw() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(62, this->prefered_withdraw(), target);
+  }
+
+  // double common_withdraw = 63;
+  if (this->common_withdraw() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(63, this->common_withdraw(), target);
+  }
+
+  // string branch = 64;
+  if (this->branch().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->branch().data(), static_cast<int>(this->branch().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.TradingAccountSummary.branch");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        64, this->branch(), target);
+  }
+
+  // string branch_name = 65;
+  if (this->branch_name().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->branch_name().data(), static_cast<int>(this->branch_name().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.TradingAccountSummary.branch_name");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        65, this->branch_name(), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:pb.TradingAccountSummary)
+  return target;
+}
+
+size_t TradingAccountSummary::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:pb.TradingAccountSummary)
+  size_t total_size = 0;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // string account = 1;
+  if (this->account().size() > 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->account());
+  }
+
+  // string user = 2;
+  if (this->user().size() > 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->user());
+  }
+
+  // string currency = 3;
+  if (this->currency().size() > 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->currency());
+  }
+
+  // string account_name = 50;
+  if (this->account_name().size() > 0) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->account_name());
+  }
+
+  // string options_name = 54;
+  if (this->options_name().size() > 0) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->options_name());
+  }
+
+  // string branch = 64;
+  if (this->branch().size() > 0) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->branch());
+  }
+
+  // string branch_name = 65;
+  if (this->branch_name().size() > 0) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->branch_name());
+  }
+
+  // double balance = 4;
+  if (this->balance() != 0) {
+    total_size += 1 + 8;
+  }
+
+  // double commission = 5;
+  if (this->commission() != 0) {
+    total_size += 1 + 8;
+  }
+
+  // double cur_margin = 6;
+  if (this->cur_margin() != 0) {
+    total_size += 1 + 8;
+  }
+
+  // double net_position_amount = 7;
+  if (this->net_position_amount() != 0) {
+    total_size += 1 + 8;
+  }
+
+  // double pre_balance = 8;
+  if (this->pre_balance() != 0) {
+    total_size += 1 + 8;
+  }
+
+  // double interest_in = 9;
+  if (this->interest_in() != 0) {
+    total_size += 1 + 8;
+  }
+
+  // double deposit = 10;
+  if (this->deposit() != 0) {
+    total_size += 1 + 8;
+  }
+
+  // double withdraw = 11;
+  if (this->withdraw() != 0) {
+    total_size += 1 + 8;
+  }
+
+  // double frozen_margin = 12;
+  if (this->frozen_margin() != 0) {
+    total_size += 1 + 8;
+  }
+
+  // double frozen_commission = 13;
+  if (this->frozen_commission() != 0) {
+    total_size += 1 + 8;
+  }
+
+  // double available = 14;
+  if (this->available() != 0) {
+    total_size += 1 + 8;
+  }
+
+  // double close_profit = 15;
+  if (this->close_profit() != 0) {
+    total_size += 1 + 8;
+  }
+
+  // double position_profit = 16;
+  if (this->position_profit() != 0) {
+    total_size += 2 + 8;
+  }
+
+  // double pre_mortgate = 17;
+  if (this->pre_mortgate() != 0) {
+    total_size += 2 + 8;
+  }
+
+  // double pre_credit = 18;
+  if (this->pre_credit() != 0) {
+    total_size += 2 + 8;
+  }
+
+  // double interest_base = 19;
+  if (this->interest_base() != 0) {
+    total_size += 2 + 8;
+  }
+
+  // double withdraw_available = 20;
+  if (this->withdraw_available() != 0) {
+    total_size += 2 + 8;
+  }
+
+  // double reserve = 21;
+  if (this->reserve() != 0) {
+    total_size += 2 + 8;
+  }
+
+  // double credit = 23;
+  if (this->credit() != 0) {
+    total_size += 2 + 8;
+  }
+
+  // double mortgate = 24;
+  if (this->mortgate() != 0) {
+    total_size += 2 + 8;
+  }
+
+  // double exchange_margin = 25;
+  if (this->exchange_margin() != 0) {
+    total_size += 2 + 8;
+  }
+
+  // double delivery_margin = 26;
+  if (this->delivery_margin() != 0) {
+    total_size += 2 + 8;
+  }
+
+  // double exchange_delivery_margin = 27;
+  if (this->exchange_delivery_margin() != 0) {
+    total_size += 2 + 8;
+  }
+
+  // double reserve_balance = 28;
+  if (this->reserve_balance() != 0) {
+    total_size += 2 + 8;
+  }
+
+  // double delivery_commission = 29;
+  if (this->delivery_commission() != 0) {
+    total_size += 2 + 8;
+  }
+
+  // double frozen_transfer_fee = 30;
+  if (this->frozen_transfer_fee() != 0) {
+    total_size += 2 + 8;
+  }
+
+  // double frozen_stamp_tax = 31;
+  if (this->frozen_stamp_tax() != 0) {
+    total_size += 2 + 8;
+  }
+
+  // double transfer_fee = 32;
+  if (this->transfer_fee() != 0) {
+    total_size += 2 + 8;
+  }
+
+  // double stamp_tax = 33;
+  if (this->stamp_tax() != 0) {
+    total_size += 2 + 8;
+  }
+
+  // double mtm_profit = 34;
+  if (this->mtm_profit() != 0) {
+    total_size += 2 + 8;
+  }
+
+  // double mtm_balance = 35;
+  if (this->mtm_balance() != 0) {
+    total_size += 2 + 8;
+  }
+
+  // double stock_value = 36;
+  if (this->stock_value() != 0) {
+    total_size += 2 + 8;
+  }
+
+  // double bond_repurchase_amount = 37;
+  if (this->bond_repurchase_amount() != 0) {
+    total_size += 2 + 8;
+  }
+
+  // double reverse_repurchase_amount = 38;
+  if (this->reverse_repurchase_amount() != 0) {
+    total_size += 2 + 8;
+  }
+
+  // int32 trading_day = 22;
+  if (this->trading_day() != 0) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::Int32Size(
+        this->trading_day());
+  }
+
+  // bool activated = 55;
+  if (this->activated() != 0) {
+    total_size += 2 + 1;
+  }
+
+  // double margin_trade_amount = 39;
+  if (this->margin_trade_amount() != 0) {
+    total_size += 2 + 8;
+  }
+
+  // double short_sell_amount = 40;
+  if (this->short_sell_amount() != 0) {
+    total_size += 2 + 8;
+  }
+
+  // double margin_trade_profit = 41;
+  if (this->margin_trade_profit() != 0) {
+    total_size += 2 + 8;
+  }
+
+  // double pre_prefered_balance = 42;
+  if (this->pre_prefered_balance() != 0) {
+    total_size += 2 + 8;
+  }
+
+  // double frozen_close_commission = 43;
+  if (this->frozen_close_commission() != 0) {
+    total_size += 2 + 8;
+  }
+
+  // double common_balance = 44;
+  if (this->common_balance() != 0) {
+    total_size += 2 + 8;
+  }
+
+  // double prefered_balance = 45;
+  if (this->prefered_balance() != 0) {
+    total_size += 2 + 8;
+  }
+
+  // double base_exchange_rate = 46;
+  if (this->base_exchange_rate() != 0) {
+    total_size += 2 + 8;
+  }
+
+  // double warning_level = 47;
+  if (this->warning_level() != 0) {
+    total_size += 2 + 8;
+  }
+
+  // double force_close_level = 48;
+  if (this->force_close_level() != 0) {
+    total_size += 2 + 8;
+  }
+
+  // double cleared_closed_profit = 49;
+  if (this->cleared_closed_profit() != 0) {
+    total_size += 2 + 8;
+  }
+
+  // double interest = 51;
+  if (this->interest() != 0) {
+    total_size += 2 + 8;
+  }
+
+  // double frozen_interest = 52;
+  if (this->frozen_interest() != 0) {
+    total_size += 2 + 8;
+  }
+
+  // int64 options_id = 53;
+  if (this->options_id() != 0) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::Int64Size(
+        this->options_id());
+  }
+
+  // double overnight_fee = 56;
+  if (this->overnight_fee() != 0) {
+    total_size += 2 + 8;
+  }
+
+  // double commission_l0 = 57;
+  if (this->commission_l0() != 0) {
+    total_size += 2 + 8;
+  }
+
+  // double long_position_market_value = 58;
+  if (this->long_position_market_value() != 0) {
+    total_size += 2 + 8;
+  }
+
+  // double short_position_market_value = 59;
+  if (this->short_position_market_value() != 0) {
+    total_size += 2 + 8;
+  }
+
+  // double prefered_deposit = 60;
+  if (this->prefered_deposit() != 0) {
+    total_size += 2 + 8;
+  }
+
+  // double common_deposit = 61;
+  if (this->common_deposit() != 0) {
+    total_size += 2 + 8;
+  }
+
+  // double prefered_withdraw = 62;
+  if (this->prefered_withdraw() != 0) {
+    total_size += 2 + 8;
+  }
+
+  // double common_withdraw = 63;
+  if (this->common_withdraw() != 0) {
+    total_size += 2 + 8;
+  }
+
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void TradingAccountSummary::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:pb.TradingAccountSummary)
+  GOOGLE_DCHECK_NE(&from, this);
+  const TradingAccountSummary* source =
+      ::google::protobuf::DynamicCastToGenerated<TradingAccountSummary>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:pb.TradingAccountSummary)
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:pb.TradingAccountSummary)
+    MergeFrom(*source);
+  }
+}
+
+void TradingAccountSummary::MergeFrom(const TradingAccountSummary& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:pb.TradingAccountSummary)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.account().size() > 0) {
+
+    account_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.account_);
+  }
+  if (from.user().size() > 0) {
+
+    user_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.user_);
+  }
+  if (from.currency().size() > 0) {
+
+    currency_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.currency_);
+  }
+  if (from.account_name().size() > 0) {
+
+    account_name_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.account_name_);
+  }
+  if (from.options_name().size() > 0) {
+
+    options_name_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.options_name_);
+  }
+  if (from.branch().size() > 0) {
+
+    branch_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.branch_);
+  }
+  if (from.branch_name().size() > 0) {
+
+    branch_name_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.branch_name_);
+  }
+  if (from.balance() != 0) {
+    set_balance(from.balance());
+  }
+  if (from.commission() != 0) {
+    set_commission(from.commission());
+  }
+  if (from.cur_margin() != 0) {
+    set_cur_margin(from.cur_margin());
+  }
+  if (from.net_position_amount() != 0) {
+    set_net_position_amount(from.net_position_amount());
+  }
+  if (from.pre_balance() != 0) {
+    set_pre_balance(from.pre_balance());
+  }
+  if (from.interest_in() != 0) {
+    set_interest_in(from.interest_in());
+  }
+  if (from.deposit() != 0) {
+    set_deposit(from.deposit());
+  }
+  if (from.withdraw() != 0) {
+    set_withdraw(from.withdraw());
+  }
+  if (from.frozen_margin() != 0) {
+    set_frozen_margin(from.frozen_margin());
+  }
+  if (from.frozen_commission() != 0) {
+    set_frozen_commission(from.frozen_commission());
+  }
+  if (from.available() != 0) {
+    set_available(from.available());
+  }
+  if (from.close_profit() != 0) {
+    set_close_profit(from.close_profit());
+  }
+  if (from.position_profit() != 0) {
+    set_position_profit(from.position_profit());
+  }
+  if (from.pre_mortgate() != 0) {
+    set_pre_mortgate(from.pre_mortgate());
+  }
+  if (from.pre_credit() != 0) {
+    set_pre_credit(from.pre_credit());
+  }
+  if (from.interest_base() != 0) {
+    set_interest_base(from.interest_base());
+  }
+  if (from.withdraw_available() != 0) {
+    set_withdraw_available(from.withdraw_available());
+  }
+  if (from.reserve() != 0) {
+    set_reserve(from.reserve());
+  }
+  if (from.credit() != 0) {
+    set_credit(from.credit());
+  }
+  if (from.mortgate() != 0) {
+    set_mortgate(from.mortgate());
+  }
+  if (from.exchange_margin() != 0) {
+    set_exchange_margin(from.exchange_margin());
+  }
+  if (from.delivery_margin() != 0) {
+    set_delivery_margin(from.delivery_margin());
+  }
+  if (from.exchange_delivery_margin() != 0) {
+    set_exchange_delivery_margin(from.exchange_delivery_margin());
+  }
+  if (from.reserve_balance() != 0) {
+    set_reserve_balance(from.reserve_balance());
+  }
+  if (from.delivery_commission() != 0) {
+    set_delivery_commission(from.delivery_commission());
+  }
+  if (from.frozen_transfer_fee() != 0) {
+    set_frozen_transfer_fee(from.frozen_transfer_fee());
+  }
+  if (from.frozen_stamp_tax() != 0) {
+    set_frozen_stamp_tax(from.frozen_stamp_tax());
+  }
+  if (from.transfer_fee() != 0) {
+    set_transfer_fee(from.transfer_fee());
+  }
+  if (from.stamp_tax() != 0) {
+    set_stamp_tax(from.stamp_tax());
+  }
+  if (from.mtm_profit() != 0) {
+    set_mtm_profit(from.mtm_profit());
+  }
+  if (from.mtm_balance() != 0) {
+    set_mtm_balance(from.mtm_balance());
+  }
+  if (from.stock_value() != 0) {
+    set_stock_value(from.stock_value());
+  }
+  if (from.bond_repurchase_amount() != 0) {
+    set_bond_repurchase_amount(from.bond_repurchase_amount());
+  }
+  if (from.reverse_repurchase_amount() != 0) {
+    set_reverse_repurchase_amount(from.reverse_repurchase_amount());
+  }
+  if (from.trading_day() != 0) {
+    set_trading_day(from.trading_day());
+  }
+  if (from.activated() != 0) {
+    set_activated(from.activated());
+  }
+  if (from.margin_trade_amount() != 0) {
+    set_margin_trade_amount(from.margin_trade_amount());
+  }
+  if (from.short_sell_amount() != 0) {
+    set_short_sell_amount(from.short_sell_amount());
+  }
+  if (from.margin_trade_profit() != 0) {
+    set_margin_trade_profit(from.margin_trade_profit());
+  }
+  if (from.pre_prefered_balance() != 0) {
+    set_pre_prefered_balance(from.pre_prefered_balance());
+  }
+  if (from.frozen_close_commission() != 0) {
+    set_frozen_close_commission(from.frozen_close_commission());
+  }
+  if (from.common_balance() != 0) {
+    set_common_balance(from.common_balance());
+  }
+  if (from.prefered_balance() != 0) {
+    set_prefered_balance(from.prefered_balance());
+  }
+  if (from.base_exchange_rate() != 0) {
+    set_base_exchange_rate(from.base_exchange_rate());
+  }
+  if (from.warning_level() != 0) {
+    set_warning_level(from.warning_level());
+  }
+  if (from.force_close_level() != 0) {
+    set_force_close_level(from.force_close_level());
+  }
+  if (from.cleared_closed_profit() != 0) {
+    set_cleared_closed_profit(from.cleared_closed_profit());
+  }
+  if (from.interest() != 0) {
+    set_interest(from.interest());
+  }
+  if (from.frozen_interest() != 0) {
+    set_frozen_interest(from.frozen_interest());
+  }
+  if (from.options_id() != 0) {
+    set_options_id(from.options_id());
+  }
+  if (from.overnight_fee() != 0) {
+    set_overnight_fee(from.overnight_fee());
+  }
+  if (from.commission_l0() != 0) {
+    set_commission_l0(from.commission_l0());
+  }
+  if (from.long_position_market_value() != 0) {
+    set_long_position_market_value(from.long_position_market_value());
+  }
+  if (from.short_position_market_value() != 0) {
+    set_short_position_market_value(from.short_position_market_value());
+  }
+  if (from.prefered_deposit() != 0) {
+    set_prefered_deposit(from.prefered_deposit());
+  }
+  if (from.common_deposit() != 0) {
+    set_common_deposit(from.common_deposit());
+  }
+  if (from.prefered_withdraw() != 0) {
+    set_prefered_withdraw(from.prefered_withdraw());
+  }
+  if (from.common_withdraw() != 0) {
+    set_common_withdraw(from.common_withdraw());
+  }
+}
+
+void TradingAccountSummary::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:pb.TradingAccountSummary)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void TradingAccountSummary::CopyFrom(const TradingAccountSummary& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:pb.TradingAccountSummary)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool TradingAccountSummary::IsInitialized() const {
+  return true;
+}
+
+void TradingAccountSummary::Swap(TradingAccountSummary* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void TradingAccountSummary::InternalSwap(TradingAccountSummary* other) {
+  using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  account_.Swap(&other->account_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  user_.Swap(&other->user_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  currency_.Swap(&other->currency_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  account_name_.Swap(&other->account_name_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  options_name_.Swap(&other->options_name_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  branch_.Swap(&other->branch_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  branch_name_.Swap(&other->branch_name_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  swap(balance_, other->balance_);
+  swap(commission_, other->commission_);
+  swap(cur_margin_, other->cur_margin_);
+  swap(net_position_amount_, other->net_position_amount_);
+  swap(pre_balance_, other->pre_balance_);
+  swap(interest_in_, other->interest_in_);
+  swap(deposit_, other->deposit_);
+  swap(withdraw_, other->withdraw_);
+  swap(frozen_margin_, other->frozen_margin_);
+  swap(frozen_commission_, other->frozen_commission_);
+  swap(available_, other->available_);
+  swap(close_profit_, other->close_profit_);
+  swap(position_profit_, other->position_profit_);
+  swap(pre_mortgate_, other->pre_mortgate_);
+  swap(pre_credit_, other->pre_credit_);
+  swap(interest_base_, other->interest_base_);
+  swap(withdraw_available_, other->withdraw_available_);
+  swap(reserve_, other->reserve_);
+  swap(credit_, other->credit_);
+  swap(mortgate_, other->mortgate_);
+  swap(exchange_margin_, other->exchange_margin_);
+  swap(delivery_margin_, other->delivery_margin_);
+  swap(exchange_delivery_margin_, other->exchange_delivery_margin_);
+  swap(reserve_balance_, other->reserve_balance_);
+  swap(delivery_commission_, other->delivery_commission_);
+  swap(frozen_transfer_fee_, other->frozen_transfer_fee_);
+  swap(frozen_stamp_tax_, other->frozen_stamp_tax_);
+  swap(transfer_fee_, other->transfer_fee_);
+  swap(stamp_tax_, other->stamp_tax_);
+  swap(mtm_profit_, other->mtm_profit_);
+  swap(mtm_balance_, other->mtm_balance_);
+  swap(stock_value_, other->stock_value_);
+  swap(bond_repurchase_amount_, other->bond_repurchase_amount_);
+  swap(reverse_repurchase_amount_, other->reverse_repurchase_amount_);
+  swap(trading_day_, other->trading_day_);
+  swap(activated_, other->activated_);
+  swap(margin_trade_amount_, other->margin_trade_amount_);
+  swap(short_sell_amount_, other->short_sell_amount_);
+  swap(margin_trade_profit_, other->margin_trade_profit_);
+  swap(pre_prefered_balance_, other->pre_prefered_balance_);
+  swap(frozen_close_commission_, other->frozen_close_commission_);
+  swap(common_balance_, other->common_balance_);
+  swap(prefered_balance_, other->prefered_balance_);
+  swap(base_exchange_rate_, other->base_exchange_rate_);
+  swap(warning_level_, other->warning_level_);
+  swap(force_close_level_, other->force_close_level_);
+  swap(cleared_closed_profit_, other->cleared_closed_profit_);
+  swap(interest_, other->interest_);
+  swap(frozen_interest_, other->frozen_interest_);
+  swap(options_id_, other->options_id_);
+  swap(overnight_fee_, other->overnight_fee_);
+  swap(commission_l0_, other->commission_l0_);
+  swap(long_position_market_value_, other->long_position_market_value_);
+  swap(short_position_market_value_, other->short_position_market_value_);
+  swap(prefered_deposit_, other->prefered_deposit_);
+  swap(common_deposit_, other->common_deposit_);
+  swap(prefered_withdraw_, other->prefered_withdraw_);
+  swap(common_withdraw_, other->common_withdraw_);
+}
+
+::google::protobuf::Metadata TradingAccountSummary::GetMetadata() const {
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_trading_2eproto);
+  return ::file_level_metadata_trading_2eproto[kIndexInFileMessages];
+}
+
+
+// ===================================================================
+
+void RspTradingAccountLogin::InitAsDefaultInstance() {
+}
+class RspTradingAccountLogin::HasBitSetters {
+ public:
+};
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int RspTradingAccountLogin::kErrorIdFieldNumber;
+const int RspTradingAccountLogin::kErrorMsgFieldNumber;
+const int RspTradingAccountLogin::kRequestIdFieldNumber;
+const int RspTradingAccountLogin::kIsLastFieldNumber;
+const int RspTradingAccountLogin::kTradingDayFieldNumber;
+const int RspTradingAccountLogin::kLoginTimeFieldNumber;
+const int RspTradingAccountLogin::kBrokerIdFieldNumber;
+const int RspTradingAccountLogin::kUserIdFieldNumber;
+const int RspTradingAccountLogin::kSystemNameFieldNumber;
+const int RspTradingAccountLogin::kFrontIdFieldNumber;
+const int RspTradingAccountLogin::kSessionIdFieldNumber;
+const int RspTradingAccountLogin::kMaxOrderRefFieldNumber;
+const int RspTradingAccountLogin::kSHFETimeFieldNumber;
+const int RspTradingAccountLogin::kDCETimeFieldNumber;
+const int RspTradingAccountLogin::kCZCETimeFieldNumber;
+const int RspTradingAccountLogin::kFFEXTimeFieldNumber;
+const int RspTradingAccountLogin::kINETimeFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+RspTradingAccountLogin::RspTradingAccountLogin()
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:pb.RspTradingAccountLogin)
+}
+RspTradingAccountLogin::RspTradingAccountLogin(const RspTradingAccountLogin& from)
+  : ::google::protobuf::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  error_msg_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.error_msg().size() > 0) {
+    error_msg_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.error_msg_);
+  }
+  login_time_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.login_time().size() > 0) {
+    login_time_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.login_time_);
+  }
+  broker_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.broker_id().size() > 0) {
+    broker_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.broker_id_);
+  }
+  user_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.user_id().size() > 0) {
+    user_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.user_id_);
+  }
+  system_name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.system_name().size() > 0) {
+    system_name_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.system_name_);
+  }
+  max_order_ref_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.max_order_ref().size() > 0) {
+    max_order_ref_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.max_order_ref_);
+  }
+  shfe_time_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.shfe_time().size() > 0) {
+    shfe_time_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.shfe_time_);
+  }
+  dce_time_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.dce_time().size() > 0) {
+    dce_time_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.dce_time_);
+  }
+  czce_time_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.czce_time().size() > 0) {
+    czce_time_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.czce_time_);
+  }
+  ffex_time_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.ffex_time().size() > 0) {
+    ffex_time_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.ffex_time_);
+  }
+  ine_time_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.ine_time().size() > 0) {
+    ine_time_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.ine_time_);
+  }
+  ::memcpy(&error_id_, &from.error_id_,
+    static_cast<size_t>(reinterpret_cast<char*>(&session_id_) -
+    reinterpret_cast<char*>(&error_id_)) + sizeof(session_id_));
+  // @@protoc_insertion_point(copy_constructor:pb.RspTradingAccountLogin)
+}
+
+void RspTradingAccountLogin::SharedCtor() {
+  ::google::protobuf::internal::InitSCC(
+      &scc_info_RspTradingAccountLogin_trading_2eproto.base);
+  error_msg_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  login_time_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  broker_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  user_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  system_name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  max_order_ref_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  shfe_time_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  dce_time_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  czce_time_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  ffex_time_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  ine_time_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  ::memset(&error_id_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&session_id_) -
+      reinterpret_cast<char*>(&error_id_)) + sizeof(session_id_));
+}
+
+RspTradingAccountLogin::~RspTradingAccountLogin() {
+  // @@protoc_insertion_point(destructor:pb.RspTradingAccountLogin)
+  SharedDtor();
+}
+
+void RspTradingAccountLogin::SharedDtor() {
+  error_msg_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  login_time_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  broker_id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  user_id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  system_name_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  max_order_ref_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  shfe_time_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  dce_time_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  czce_time_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  ffex_time_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  ine_time_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+
+void RspTradingAccountLogin::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const RspTradingAccountLogin& RspTradingAccountLogin::default_instance() {
+  ::google::protobuf::internal::InitSCC(&::scc_info_RspTradingAccountLogin_trading_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void RspTradingAccountLogin::Clear() {
+// @@protoc_insertion_point(message_clear_start:pb.RspTradingAccountLogin)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  error_msg_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  login_time_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  broker_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  user_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  system_name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  max_order_ref_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  shfe_time_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  dce_time_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  czce_time_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  ffex_time_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  ine_time_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  ::memset(&error_id_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&session_id_) -
+      reinterpret_cast<char*>(&error_id_)) + sizeof(session_id_));
+  _internal_metadata_.Clear();
+}
+
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* RspTradingAccountLogin::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<RspTradingAccountLogin*>(object);
+  ::google::protobuf::int32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+    switch (tag >> 3) {
+      // int32 error_id = 1;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 8) goto handle_unusual;
+        msg->set_error_id(::google::protobuf::internal::ReadVarint(&ptr));
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        break;
+      }
+      // bytes error_msg = 2;
+      case 2: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        object = msg->mutable_error_msg();
+        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
+          parser_till_end = ::google::protobuf::internal::GreedyStringParser;
+          goto string_till_end;
+        }
+        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheck(ptr, size, ctx));
+        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
+        ptr += size;
+        break;
+      }
+      // int32 request_id = 3;
+      case 3: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 24) goto handle_unusual;
+        msg->set_request_id(::google::protobuf::internal::ReadVarint(&ptr));
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        break;
+      }
+      // bool is_last = 4;
+      case 4: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 32) goto handle_unusual;
+        msg->set_is_last(::google::protobuf::internal::ReadVarint(&ptr));
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        break;
+      }
+      // int32 trading_day = 5;
+      case 5: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 40) goto handle_unusual;
+        msg->set_trading_day(::google::protobuf::internal::ReadVarint(&ptr));
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        break;
+      }
+      // string login_time = 6;
+      case 6: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 50) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        ctx->extra_parse_data().SetFieldName("pb.RspTradingAccountLogin.login_time");
+        object = msg->mutable_login_time();
+        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
+          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
+          goto string_till_end;
+        }
+        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
+        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
+        ptr += size;
+        break;
+      }
+      // string broker_id = 7;
+      case 7: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 58) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        ctx->extra_parse_data().SetFieldName("pb.RspTradingAccountLogin.broker_id");
+        object = msg->mutable_broker_id();
+        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
+          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
+          goto string_till_end;
+        }
+        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
+        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
+        ptr += size;
+        break;
+      }
+      // string user_id = 8;
+      case 8: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 66) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        ctx->extra_parse_data().SetFieldName("pb.RspTradingAccountLogin.user_id");
+        object = msg->mutable_user_id();
+        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
+          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
+          goto string_till_end;
+        }
+        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
+        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
+        ptr += size;
+        break;
+      }
+      // string system_name = 9;
+      case 9: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 74) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        ctx->extra_parse_data().SetFieldName("pb.RspTradingAccountLogin.system_name");
+        object = msg->mutable_system_name();
+        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
+          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
+          goto string_till_end;
+        }
+        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
+        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
+        ptr += size;
+        break;
+      }
+      // int32 front_id = 10;
+      case 10: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 80) goto handle_unusual;
+        msg->set_front_id(::google::protobuf::internal::ReadVarint(&ptr));
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        break;
+      }
+      // int32 session_id = 11;
+      case 11: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 88) goto handle_unusual;
+        msg->set_session_id(::google::protobuf::internal::ReadVarint(&ptr));
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        break;
+      }
+      // string max_order_ref = 12;
+      case 12: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 98) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        ctx->extra_parse_data().SetFieldName("pb.RspTradingAccountLogin.max_order_ref");
+        object = msg->mutable_max_order_ref();
+        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
+          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
+          goto string_till_end;
+        }
+        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
+        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
+        ptr += size;
+        break;
+      }
+      // string SHFE_time = 13;
+      case 13: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 106) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        ctx->extra_parse_data().SetFieldName("pb.RspTradingAccountLogin.SHFE_time");
+        object = msg->mutable_shfe_time();
+        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
+          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
+          goto string_till_end;
+        }
+        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
+        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
+        ptr += size;
+        break;
+      }
+      // string DCE_time = 14;
+      case 14: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 114) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        ctx->extra_parse_data().SetFieldName("pb.RspTradingAccountLogin.DCE_time");
+        object = msg->mutable_dce_time();
+        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
+          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
+          goto string_till_end;
+        }
+        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
+        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
+        ptr += size;
+        break;
+      }
+      // string CZCE_time = 15;
+      case 15: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 122) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        ctx->extra_parse_data().SetFieldName("pb.RspTradingAccountLogin.CZCE_time");
+        object = msg->mutable_czce_time();
+        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
+          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
+          goto string_till_end;
+        }
+        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
+        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
+        ptr += size;
+        break;
+      }
+      // string FFEX_time = 16;
+      case 16: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 130) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        ctx->extra_parse_data().SetFieldName("pb.RspTradingAccountLogin.FFEX_time");
+        object = msg->mutable_ffex_time();
+        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
+          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
+          goto string_till_end;
+        }
+        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
+        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
+        ptr += size;
+        break;
+      }
+      // string INE_time = 17;
+      case 17: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 138) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        ctx->extra_parse_data().SetFieldName("pb.RspTradingAccountLogin.INE_time");
+        object = msg->mutable_ine_time();
+        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
+          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
+          goto string_till_end;
+        }
+        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
+        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
+        ptr += size;
+        break;
+      }
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->EndGroup(tag);
+          return ptr;
+        }
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        if (res.second) return ptr;
+      }
+    }  // switch
+  }  // while
+  return ptr;
+string_till_end:
+  static_cast<::std::string*>(object)->clear();
+  static_cast<::std::string*>(object)->reserve(size);
+  goto len_delim_till_end;
+len_delim_till_end:
+  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
+                               {parser_till_end, object}, size);
+}
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool RspTradingAccountLogin::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:pb.RspTradingAccountLogin)
+  for (;;) {
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(16383u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // int32 error_id = 1;
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (8 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &error_id_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // bytes error_msg = 2;
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadBytes(
+                input, this->mutable_error_msg()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // int32 request_id = 3;
+      case 3: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (24 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &request_id_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // bool is_last = 4;
+      case 4: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (32 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &is_last_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // int32 trading_day = 5;
+      case 5: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (40 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &trading_day_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string login_time = 6;
+      case 6: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (50 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_login_time()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->login_time().data(), static_cast<int>(this->login_time().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "pb.RspTradingAccountLogin.login_time"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string broker_id = 7;
+      case 7: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (58 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_broker_id()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->broker_id().data(), static_cast<int>(this->broker_id().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "pb.RspTradingAccountLogin.broker_id"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string user_id = 8;
+      case 8: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (66 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_user_id()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->user_id().data(), static_cast<int>(this->user_id().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "pb.RspTradingAccountLogin.user_id"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string system_name = 9;
+      case 9: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (74 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_system_name()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->system_name().data(), static_cast<int>(this->system_name().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "pb.RspTradingAccountLogin.system_name"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // int32 front_id = 10;
+      case 10: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (80 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &front_id_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // int32 session_id = 11;
+      case 11: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (88 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &session_id_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string max_order_ref = 12;
+      case 12: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (98 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_max_order_ref()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->max_order_ref().data(), static_cast<int>(this->max_order_ref().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "pb.RspTradingAccountLogin.max_order_ref"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string SHFE_time = 13;
+      case 13: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (106 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_shfe_time()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->shfe_time().data(), static_cast<int>(this->shfe_time().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "pb.RspTradingAccountLogin.SHFE_time"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string DCE_time = 14;
+      case 14: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (114 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_dce_time()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->dce_time().data(), static_cast<int>(this->dce_time().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "pb.RspTradingAccountLogin.DCE_time"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string CZCE_time = 15;
+      case 15: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (122 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_czce_time()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->czce_time().data(), static_cast<int>(this->czce_time().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "pb.RspTradingAccountLogin.CZCE_time"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string FFEX_time = 16;
+      case 16: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (130 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_ffex_time()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->ffex_time().data(), static_cast<int>(this->ffex_time().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "pb.RspTradingAccountLogin.FFEX_time"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string INE_time = 17;
+      case 17: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (138 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_ine_time()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->ine_time().data(), static_cast<int>(this->ine_time().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "pb.RspTradingAccountLogin.INE_time"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:pb.RspTradingAccountLogin)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:pb.RspTradingAccountLogin)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void RspTradingAccountLogin::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:pb.RspTradingAccountLogin)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // int32 error_id = 1;
+  if (this->error_id() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(1, this->error_id(), output);
+  }
+
+  // bytes error_msg = 2;
+  if (this->error_msg().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteBytesMaybeAliased(
+      2, this->error_msg(), output);
+  }
+
+  // int32 request_id = 3;
+  if (this->request_id() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(3, this->request_id(), output);
+  }
+
+  // bool is_last = 4;
+  if (this->is_last() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(4, this->is_last(), output);
+  }
+
+  // int32 trading_day = 5;
+  if (this->trading_day() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(5, this->trading_day(), output);
+  }
+
+  // string login_time = 6;
+  if (this->login_time().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->login_time().data(), static_cast<int>(this->login_time().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.RspTradingAccountLogin.login_time");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      6, this->login_time(), output);
+  }
+
+  // string broker_id = 7;
+  if (this->broker_id().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->broker_id().data(), static_cast<int>(this->broker_id().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.RspTradingAccountLogin.broker_id");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      7, this->broker_id(), output);
+  }
+
+  // string user_id = 8;
+  if (this->user_id().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->user_id().data(), static_cast<int>(this->user_id().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.RspTradingAccountLogin.user_id");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      8, this->user_id(), output);
+  }
+
+  // string system_name = 9;
+  if (this->system_name().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->system_name().data(), static_cast<int>(this->system_name().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.RspTradingAccountLogin.system_name");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      9, this->system_name(), output);
+  }
+
+  // int32 front_id = 10;
+  if (this->front_id() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(10, this->front_id(), output);
+  }
+
+  // int32 session_id = 11;
+  if (this->session_id() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(11, this->session_id(), output);
+  }
+
+  // string max_order_ref = 12;
+  if (this->max_order_ref().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->max_order_ref().data(), static_cast<int>(this->max_order_ref().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.RspTradingAccountLogin.max_order_ref");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      12, this->max_order_ref(), output);
+  }
+
+  // string SHFE_time = 13;
+  if (this->shfe_time().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->shfe_time().data(), static_cast<int>(this->shfe_time().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.RspTradingAccountLogin.SHFE_time");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      13, this->shfe_time(), output);
+  }
+
+  // string DCE_time = 14;
+  if (this->dce_time().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->dce_time().data(), static_cast<int>(this->dce_time().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.RspTradingAccountLogin.DCE_time");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      14, this->dce_time(), output);
+  }
+
+  // string CZCE_time = 15;
+  if (this->czce_time().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->czce_time().data(), static_cast<int>(this->czce_time().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.RspTradingAccountLogin.CZCE_time");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      15, this->czce_time(), output);
+  }
+
+  // string FFEX_time = 16;
+  if (this->ffex_time().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->ffex_time().data(), static_cast<int>(this->ffex_time().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.RspTradingAccountLogin.FFEX_time");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      16, this->ffex_time(), output);
+  }
+
+  // string INE_time = 17;
+  if (this->ine_time().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->ine_time().data(), static_cast<int>(this->ine_time().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.RspTradingAccountLogin.INE_time");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      17, this->ine_time(), output);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:pb.RspTradingAccountLogin)
+}
+
+::google::protobuf::uint8* RspTradingAccountLogin::InternalSerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:pb.RspTradingAccountLogin)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // int32 error_id = 1;
+  if (this->error_id() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(1, this->error_id(), target);
+  }
+
+  // bytes error_msg = 2;
+  if (this->error_msg().size() > 0) {
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteBytesToArray(
+        2, this->error_msg(), target);
+  }
+
+  // int32 request_id = 3;
+  if (this->request_id() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(3, this->request_id(), target);
+  }
+
+  // bool is_last = 4;
+  if (this->is_last() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(4, this->is_last(), target);
+  }
+
+  // int32 trading_day = 5;
+  if (this->trading_day() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(5, this->trading_day(), target);
+  }
+
+  // string login_time = 6;
+  if (this->login_time().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->login_time().data(), static_cast<int>(this->login_time().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.RspTradingAccountLogin.login_time");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        6, this->login_time(), target);
+  }
+
+  // string broker_id = 7;
+  if (this->broker_id().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->broker_id().data(), static_cast<int>(this->broker_id().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.RspTradingAccountLogin.broker_id");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        7, this->broker_id(), target);
+  }
+
+  // string user_id = 8;
+  if (this->user_id().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->user_id().data(), static_cast<int>(this->user_id().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.RspTradingAccountLogin.user_id");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        8, this->user_id(), target);
+  }
+
+  // string system_name = 9;
+  if (this->system_name().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->system_name().data(), static_cast<int>(this->system_name().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.RspTradingAccountLogin.system_name");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        9, this->system_name(), target);
+  }
+
+  // int32 front_id = 10;
+  if (this->front_id() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(10, this->front_id(), target);
+  }
+
+  // int32 session_id = 11;
+  if (this->session_id() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(11, this->session_id(), target);
+  }
+
+  // string max_order_ref = 12;
+  if (this->max_order_ref().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->max_order_ref().data(), static_cast<int>(this->max_order_ref().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.RspTradingAccountLogin.max_order_ref");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        12, this->max_order_ref(), target);
+  }
+
+  // string SHFE_time = 13;
+  if (this->shfe_time().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->shfe_time().data(), static_cast<int>(this->shfe_time().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.RspTradingAccountLogin.SHFE_time");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        13, this->shfe_time(), target);
+  }
+
+  // string DCE_time = 14;
+  if (this->dce_time().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->dce_time().data(), static_cast<int>(this->dce_time().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.RspTradingAccountLogin.DCE_time");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        14, this->dce_time(), target);
+  }
+
+  // string CZCE_time = 15;
+  if (this->czce_time().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->czce_time().data(), static_cast<int>(this->czce_time().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.RspTradingAccountLogin.CZCE_time");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        15, this->czce_time(), target);
+  }
+
+  // string FFEX_time = 16;
+  if (this->ffex_time().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->ffex_time().data(), static_cast<int>(this->ffex_time().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.RspTradingAccountLogin.FFEX_time");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        16, this->ffex_time(), target);
+  }
+
+  // string INE_time = 17;
+  if (this->ine_time().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->ine_time().data(), static_cast<int>(this->ine_time().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.RspTradingAccountLogin.INE_time");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        17, this->ine_time(), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:pb.RspTradingAccountLogin)
+  return target;
+}
+
+size_t RspTradingAccountLogin::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:pb.RspTradingAccountLogin)
+  size_t total_size = 0;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // bytes error_msg = 2;
+  if (this->error_msg().size() > 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::BytesSize(
+        this->error_msg());
+  }
+
+  // string login_time = 6;
+  if (this->login_time().size() > 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->login_time());
+  }
+
+  // string broker_id = 7;
+  if (this->broker_id().size() > 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->broker_id());
+  }
+
+  // string user_id = 8;
+  if (this->user_id().size() > 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->user_id());
+  }
+
+  // string system_name = 9;
+  if (this->system_name().size() > 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->system_name());
+  }
+
+  // string max_order_ref = 12;
+  if (this->max_order_ref().size() > 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->max_order_ref());
+  }
+
+  // string SHFE_time = 13;
+  if (this->shfe_time().size() > 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->shfe_time());
+  }
+
+  // string DCE_time = 14;
+  if (this->dce_time().size() > 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->dce_time());
+  }
+
+  // string CZCE_time = 15;
+  if (this->czce_time().size() > 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->czce_time());
+  }
+
+  // string FFEX_time = 16;
+  if (this->ffex_time().size() > 0) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->ffex_time());
+  }
+
+  // string INE_time = 17;
+  if (this->ine_time().size() > 0) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->ine_time());
+  }
+
+  // int32 error_id = 1;
+  if (this->error_id() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::Int32Size(
+        this->error_id());
+  }
+
+  // int32 request_id = 3;
+  if (this->request_id() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::Int32Size(
+        this->request_id());
+  }
+
+  // bool is_last = 4;
+  if (this->is_last() != 0) {
+    total_size += 1 + 1;
+  }
+
+  // int32 trading_day = 5;
+  if (this->trading_day() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::Int32Size(
+        this->trading_day());
+  }
+
+  // int32 front_id = 10;
+  if (this->front_id() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::Int32Size(
+        this->front_id());
+  }
+
+  // int32 session_id = 11;
+  if (this->session_id() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::Int32Size(
+        this->session_id());
+  }
+
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void RspTradingAccountLogin::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:pb.RspTradingAccountLogin)
+  GOOGLE_DCHECK_NE(&from, this);
+  const RspTradingAccountLogin* source =
+      ::google::protobuf::DynamicCastToGenerated<RspTradingAccountLogin>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:pb.RspTradingAccountLogin)
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:pb.RspTradingAccountLogin)
+    MergeFrom(*source);
+  }
+}
+
+void RspTradingAccountLogin::MergeFrom(const RspTradingAccountLogin& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:pb.RspTradingAccountLogin)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.error_msg().size() > 0) {
+
+    error_msg_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.error_msg_);
+  }
+  if (from.login_time().size() > 0) {
+
+    login_time_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.login_time_);
+  }
+  if (from.broker_id().size() > 0) {
+
+    broker_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.broker_id_);
+  }
+  if (from.user_id().size() > 0) {
+
+    user_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.user_id_);
+  }
+  if (from.system_name().size() > 0) {
+
+    system_name_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.system_name_);
+  }
+  if (from.max_order_ref().size() > 0) {
+
+    max_order_ref_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.max_order_ref_);
+  }
+  if (from.shfe_time().size() > 0) {
+
+    shfe_time_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.shfe_time_);
+  }
+  if (from.dce_time().size() > 0) {
+
+    dce_time_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.dce_time_);
+  }
+  if (from.czce_time().size() > 0) {
+
+    czce_time_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.czce_time_);
+  }
+  if (from.ffex_time().size() > 0) {
+
+    ffex_time_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.ffex_time_);
+  }
+  if (from.ine_time().size() > 0) {
+
+    ine_time_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.ine_time_);
+  }
+  if (from.error_id() != 0) {
+    set_error_id(from.error_id());
+  }
+  if (from.request_id() != 0) {
+    set_request_id(from.request_id());
+  }
+  if (from.is_last() != 0) {
+    set_is_last(from.is_last());
+  }
+  if (from.trading_day() != 0) {
+    set_trading_day(from.trading_day());
+  }
+  if (from.front_id() != 0) {
+    set_front_id(from.front_id());
+  }
+  if (from.session_id() != 0) {
+    set_session_id(from.session_id());
+  }
+}
+
+void RspTradingAccountLogin::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:pb.RspTradingAccountLogin)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void RspTradingAccountLogin::CopyFrom(const RspTradingAccountLogin& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:pb.RspTradingAccountLogin)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool RspTradingAccountLogin::IsInitialized() const {
+  return true;
+}
+
+void RspTradingAccountLogin::Swap(RspTradingAccountLogin* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void RspTradingAccountLogin::InternalSwap(RspTradingAccountLogin* other) {
+  using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  error_msg_.Swap(&other->error_msg_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  login_time_.Swap(&other->login_time_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  broker_id_.Swap(&other->broker_id_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  user_id_.Swap(&other->user_id_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  system_name_.Swap(&other->system_name_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  max_order_ref_.Swap(&other->max_order_ref_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  shfe_time_.Swap(&other->shfe_time_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  dce_time_.Swap(&other->dce_time_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  czce_time_.Swap(&other->czce_time_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  ffex_time_.Swap(&other->ffex_time_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  ine_time_.Swap(&other->ine_time_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  swap(error_id_, other->error_id_);
+  swap(request_id_, other->request_id_);
+  swap(is_last_, other->is_last_);
+  swap(trading_day_, other->trading_day_);
+  swap(front_id_, other->front_id_);
+  swap(session_id_, other->session_id_);
+}
+
+::google::protobuf::Metadata RspTradingAccountLogin::GetMetadata() const {
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_trading_2eproto);
+  return ::file_level_metadata_trading_2eproto[kIndexInFileMessages];
+}
+
+
+// ===================================================================
+
+void RspOrderInsert::InitAsDefaultInstance() {
+}
+class RspOrderInsert::HasBitSetters {
+ public:
+};
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int RspOrderInsert::kErrorIdFieldNumber;
+const int RspOrderInsert::kErrorMsgFieldNumber;
+const int RspOrderInsert::kOrderRefFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+RspOrderInsert::RspOrderInsert()
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:pb.RspOrderInsert)
+}
+RspOrderInsert::RspOrderInsert(const RspOrderInsert& from)
+  : ::google::protobuf::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  error_msg_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.error_msg().size() > 0) {
+    error_msg_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.error_msg_);
+  }
+  order_ref_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.order_ref().size() > 0) {
+    order_ref_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.order_ref_);
+  }
+  error_id_ = from.error_id_;
+  // @@protoc_insertion_point(copy_constructor:pb.RspOrderInsert)
+}
+
+void RspOrderInsert::SharedCtor() {
+  ::google::protobuf::internal::InitSCC(
+      &scc_info_RspOrderInsert_trading_2eproto.base);
+  error_msg_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  order_ref_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  error_id_ = 0;
+}
+
+RspOrderInsert::~RspOrderInsert() {
+  // @@protoc_insertion_point(destructor:pb.RspOrderInsert)
+  SharedDtor();
+}
+
+void RspOrderInsert::SharedDtor() {
+  error_msg_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  order_ref_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+
+void RspOrderInsert::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const RspOrderInsert& RspOrderInsert::default_instance() {
+  ::google::protobuf::internal::InitSCC(&::scc_info_RspOrderInsert_trading_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void RspOrderInsert::Clear() {
+// @@protoc_insertion_point(message_clear_start:pb.RspOrderInsert)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  error_msg_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  order_ref_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  error_id_ = 0;
+  _internal_metadata_.Clear();
+}
+
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* RspOrderInsert::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<RspOrderInsert*>(object);
+  ::google::protobuf::int32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+    switch (tag >> 3) {
+      // int32 error_id = 1;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 8) goto handle_unusual;
+        msg->set_error_id(::google::protobuf::internal::ReadVarint(&ptr));
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        break;
+      }
+      // bytes error_msg = 2;
+      case 2: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        object = msg->mutable_error_msg();
+        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
+          parser_till_end = ::google::protobuf::internal::GreedyStringParser;
+          goto string_till_end;
+        }
+        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheck(ptr, size, ctx));
+        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
+        ptr += size;
+        break;
+      }
+      // string order_ref = 3;
+      case 3: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 26) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        ctx->extra_parse_data().SetFieldName("pb.RspOrderInsert.order_ref");
+        object = msg->mutable_order_ref();
+        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
+          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
+          goto string_till_end;
+        }
+        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
+        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
+        ptr += size;
+        break;
+      }
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->EndGroup(tag);
+          return ptr;
+        }
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        if (res.second) return ptr;
+      }
+    }  // switch
+  }  // while
+  return ptr;
+string_till_end:
+  static_cast<::std::string*>(object)->clear();
+  static_cast<::std::string*>(object)->reserve(size);
+  goto len_delim_till_end;
+len_delim_till_end:
+  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
+                               {parser_till_end, object}, size);
+}
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool RspOrderInsert::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:pb.RspOrderInsert)
+  for (;;) {
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // int32 error_id = 1;
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (8 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &error_id_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // bytes error_msg = 2;
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadBytes(
+                input, this->mutable_error_msg()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string order_ref = 3;
+      case 3: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (26 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_order_ref()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->order_ref().data(), static_cast<int>(this->order_ref().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "pb.RspOrderInsert.order_ref"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:pb.RspOrderInsert)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:pb.RspOrderInsert)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void RspOrderInsert::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:pb.RspOrderInsert)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // int32 error_id = 1;
+  if (this->error_id() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(1, this->error_id(), output);
+  }
+
+  // bytes error_msg = 2;
+  if (this->error_msg().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteBytesMaybeAliased(
+      2, this->error_msg(), output);
+  }
+
+  // string order_ref = 3;
+  if (this->order_ref().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->order_ref().data(), static_cast<int>(this->order_ref().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.RspOrderInsert.order_ref");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      3, this->order_ref(), output);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:pb.RspOrderInsert)
+}
+
+::google::protobuf::uint8* RspOrderInsert::InternalSerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:pb.RspOrderInsert)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // int32 error_id = 1;
+  if (this->error_id() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(1, this->error_id(), target);
+  }
+
+  // bytes error_msg = 2;
+  if (this->error_msg().size() > 0) {
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteBytesToArray(
+        2, this->error_msg(), target);
+  }
+
+  // string order_ref = 3;
+  if (this->order_ref().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->order_ref().data(), static_cast<int>(this->order_ref().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.RspOrderInsert.order_ref");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        3, this->order_ref(), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:pb.RspOrderInsert)
+  return target;
+}
+
+size_t RspOrderInsert::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:pb.RspOrderInsert)
+  size_t total_size = 0;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // bytes error_msg = 2;
+  if (this->error_msg().size() > 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::BytesSize(
+        this->error_msg());
+  }
+
+  // string order_ref = 3;
+  if (this->order_ref().size() > 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->order_ref());
+  }
+
+  // int32 error_id = 1;
+  if (this->error_id() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::Int32Size(
+        this->error_id());
+  }
+
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void RspOrderInsert::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:pb.RspOrderInsert)
+  GOOGLE_DCHECK_NE(&from, this);
+  const RspOrderInsert* source =
+      ::google::protobuf::DynamicCastToGenerated<RspOrderInsert>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:pb.RspOrderInsert)
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:pb.RspOrderInsert)
+    MergeFrom(*source);
+  }
+}
+
+void RspOrderInsert::MergeFrom(const RspOrderInsert& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:pb.RspOrderInsert)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.error_msg().size() > 0) {
+
+    error_msg_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.error_msg_);
+  }
+  if (from.order_ref().size() > 0) {
+
+    order_ref_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.order_ref_);
+  }
+  if (from.error_id() != 0) {
+    set_error_id(from.error_id());
+  }
+}
+
+void RspOrderInsert::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:pb.RspOrderInsert)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void RspOrderInsert::CopyFrom(const RspOrderInsert& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:pb.RspOrderInsert)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool RspOrderInsert::IsInitialized() const {
+  return true;
+}
+
+void RspOrderInsert::Swap(RspOrderInsert* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void RspOrderInsert::InternalSwap(RspOrderInsert* other) {
+  using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  error_msg_.Swap(&other->error_msg_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  order_ref_.Swap(&other->order_ref_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  swap(error_id_, other->error_id_);
+}
+
+::google::protobuf::Metadata RspOrderInsert::GetMetadata() const {
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_trading_2eproto);
+  return ::file_level_metadata_trading_2eproto[kIndexInFileMessages];
+}
+
+
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace pb
 namespace google {
@@ -2997,6 +7953,15 @@ template<> PROTOBUF_NOINLINE ::pb::TradingAccountList* Arena::CreateMaybeMessage
 }
 template<> PROTOBUF_NOINLINE ::pb::ReqDeleteTradingRoute* Arena::CreateMaybeMessage< ::pb::ReqDeleteTradingRoute >(Arena* arena) {
   return Arena::CreateInternal< ::pb::ReqDeleteTradingRoute >(arena);
+}
+template<> PROTOBUF_NOINLINE ::pb::TradingAccountSummary* Arena::CreateMaybeMessage< ::pb::TradingAccountSummary >(Arena* arena) {
+  return Arena::CreateInternal< ::pb::TradingAccountSummary >(arena);
+}
+template<> PROTOBUF_NOINLINE ::pb::RspTradingAccountLogin* Arena::CreateMaybeMessage< ::pb::RspTradingAccountLogin >(Arena* arena) {
+  return Arena::CreateInternal< ::pb::RspTradingAccountLogin >(arena);
+}
+template<> PROTOBUF_NOINLINE ::pb::RspOrderInsert* Arena::CreateMaybeMessage< ::pb::RspOrderInsert >(Arena* arena) {
+  return Arena::CreateInternal< ::pb::RspOrderInsert >(arena);
 }
 }  // namespace protobuf
 }  // namespace google

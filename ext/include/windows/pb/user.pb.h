@@ -42,7 +42,7 @@ struct TableStruct_user_2eproto {
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::google::protobuf::internal::AuxillaryParseTableField aux[]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
-  static const ::google::protobuf::internal::ParseTable schema[6]
+  static const ::google::protobuf::internal::ParseTable schema[7]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::google::protobuf::internal::FieldMetadata field_metadata[];
   static const ::google::protobuf::internal::SerializationTable serialization_table[];
@@ -62,6 +62,9 @@ extern PermissionTreeNodeDefaultTypeInternal _PermissionTreeNode_default_instanc
 class User;
 class UserDefaultTypeInternal;
 extern UserDefaultTypeInternal _User_default_instance_;
+class UserList;
+class UserListDefaultTypeInternal;
+extern UserListDefaultTypeInternal _UserList_default_instance_;
 class UserRole;
 class UserRoleDefaultTypeInternal;
 extern UserRoleDefaultTypeInternal _UserRole_default_instance_;
@@ -75,6 +78,7 @@ template<> ::pb::Permission* Arena::CreateMaybeMessage<::pb::Permission>(Arena*)
 template<> ::pb::PermissionList* Arena::CreateMaybeMessage<::pb::PermissionList>(Arena*);
 template<> ::pb::PermissionTreeNode* Arena::CreateMaybeMessage<::pb::PermissionTreeNode>(Arena*);
 template<> ::pb::User* Arena::CreateMaybeMessage<::pb::User>(Arena*);
+template<> ::pb::UserList* Arena::CreateMaybeMessage<::pb::UserList>(Arena*);
 template<> ::pb::UserRole* Arena::CreateMaybeMessage<::pb::UserRole>(Arena*);
 template<> ::pb::UserSession* Arena::CreateMaybeMessage<::pb::UserSession>(Arena*);
 }  // namespace protobuf
@@ -290,6 +294,124 @@ class User :
 };
 // -------------------------------------------------------------------
 
+class UserList :
+    public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:pb.UserList) */ {
+ public:
+  UserList();
+  virtual ~UserList();
+
+  UserList(const UserList& from);
+
+  inline UserList& operator=(const UserList& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  UserList(UserList&& from) noexcept
+    : UserList() {
+    *this = ::std::move(from);
+  }
+
+  inline UserList& operator=(UserList&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return default_instance().GetDescriptor();
+  }
+  static const UserList& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const UserList* internal_default_instance() {
+    return reinterpret_cast<const UserList*>(
+               &_UserList_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    1;
+
+  void Swap(UserList* other);
+  friend void swap(UserList& a, UserList& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline UserList* New() const final {
+    return CreateMaybeMessage<UserList>(nullptr);
+  }
+
+  UserList* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<UserList>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const UserList& from);
+  void MergeFrom(const UserList& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  static const char* _InternalParse(const char* begin, const char* end, void* object, ::google::protobuf::internal::ParseContext* ctx);
+  ::google::protobuf::internal::ParseFunc _ParseFunc() const final { return _InternalParse; }
+  #else
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(UserList* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return nullptr;
+  }
+  inline void* MaybeArenaPtr() const {
+    return nullptr;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // repeated .pb.User list = 1;
+  int list_size() const;
+  void clear_list();
+  static const int kListFieldNumber = 1;
+  ::pb::User* mutable_list(int index);
+  ::google::protobuf::RepeatedPtrField< ::pb::User >*
+      mutable_list();
+  const ::pb::User& list(int index) const;
+  ::pb::User* add_list();
+  const ::google::protobuf::RepeatedPtrField< ::pb::User >&
+      list() const;
+
+  // @@protoc_insertion_point(class_scope:pb.UserList)
+ private:
+  class HasBitSetters;
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::RepeatedPtrField< ::pb::User > list_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_user_2eproto;
+};
+// -------------------------------------------------------------------
+
 class Permission :
     public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:pb.Permission) */ {
  public:
@@ -328,7 +450,7 @@ class Permission :
                &_Permission_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    1;
+    2;
 
   void Swap(Permission* other);
   friend void swap(Permission& a, Permission& b) {
@@ -501,7 +623,7 @@ class PermissionTreeNode :
                &_PermissionTreeNode_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    2;
+    3;
 
   void Swap(PermissionTreeNode* other);
   friend void swap(PermissionTreeNode& a, PermissionTreeNode& b) {
@@ -636,7 +758,7 @@ class PermissionList :
                &_PermissionList_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    3;
+    4;
 
   void Swap(PermissionList* other);
   friend void swap(PermissionList& a, PermissionList& b) {
@@ -754,7 +876,7 @@ class UserRole :
                &_UserRole_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    4;
+    5;
 
   void Swap(UserRole* other);
   friend void swap(UserRole& a, UserRole& b) {
@@ -909,7 +1031,7 @@ class UserSession :
                &_UserSession_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    5;
+    6;
 
   void Swap(UserSession* other);
   friend void swap(UserSession& a, UserSession& b) {
@@ -1212,6 +1334,40 @@ inline ::google::protobuf::RepeatedField< ::google::protobuf::int64 >*
 User::mutable_roles() {
   // @@protoc_insertion_point(field_mutable_list:pb.User.roles)
   return &roles_;
+}
+
+// -------------------------------------------------------------------
+
+// UserList
+
+// repeated .pb.User list = 1;
+inline int UserList::list_size() const {
+  return list_.size();
+}
+inline void UserList::clear_list() {
+  list_.Clear();
+}
+inline ::pb::User* UserList::mutable_list(int index) {
+  // @@protoc_insertion_point(field_mutable:pb.UserList.list)
+  return list_.Mutable(index);
+}
+inline ::google::protobuf::RepeatedPtrField< ::pb::User >*
+UserList::mutable_list() {
+  // @@protoc_insertion_point(field_mutable_list:pb.UserList.list)
+  return &list_;
+}
+inline const ::pb::User& UserList::list(int index) const {
+  // @@protoc_insertion_point(field_get:pb.UserList.list)
+  return list_.Get(index);
+}
+inline ::pb::User* UserList::add_list() {
+  // @@protoc_insertion_point(field_add:pb.UserList.list)
+  return list_.Add();
+}
+inline const ::google::protobuf::RepeatedPtrField< ::pb::User >&
+UserList::list() const {
+  // @@protoc_insertion_point(field_list:pb.UserList.list)
+  return list_;
 }
 
 // -------------------------------------------------------------------
@@ -1895,6 +2051,8 @@ inline void UserSession::set_deadline(::google::protobuf::int64 value) {
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------

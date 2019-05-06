@@ -373,6 +373,9 @@ const ::google::protobuf::uint32 TableStruct_market_5fdata_2eproto::offsets[] PR
   PROTOBUF_FIELD_OFFSET(::pb::MarketDataSnapshot, name_),
   PROTOBUF_FIELD_OFFSET(::pb::MarketDataSnapshot, exercise_price_),
   PROTOBUF_FIELD_OFFSET(::pb::MarketDataSnapshot, volume_delta_),
+  PROTOBUF_FIELD_OFFSET(::pb::MarketDataSnapshot, time2_),
+  PROTOBUF_FIELD_OFFSET(::pb::MarketDataSnapshot, exchange_),
+  PROTOBUF_FIELD_OFFSET(::pb::MarketDataSnapshot, action_day_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::pb::MdsList, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -484,19 +487,19 @@ const ::google::protobuf::uint32 TableStruct_market_5fdata_2eproto::offsets[] PR
 static const ::google::protobuf::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::pb::OrderBook)},
   { 9, -1, sizeof(::pb::MarketDataSnapshot)},
-  { 39, -1, sizeof(::pb::MdsList)},
-  { 45, -1, sizeof(::pb::OptionTMarket)},
-  { 52, -1, sizeof(::pb::SimpleTickForTQuote)},
-  { 62, -1, sizeof(::pb::OptionTQuoteItem)},
-  { 71, -1, sizeof(::pb::OptionTQuoteItemList)},
-  { 80, -1, sizeof(::pb::Kline)},
-  { 94, -1, sizeof(::pb::KlineSeries)},
-  { 103, -1, sizeof(::pb::ReqSubscribeMarketData)},
-  { 110, -1, sizeof(::pb::RspSubscribeMarketData)},
-  { 115, -1, sizeof(::pb::RtnMarketDataUpdate)},
-  { 122, -1, sizeof(::pb::TickSeries)},
-  { 130, -1, sizeof(::pb::SimpleTick)},
-  { 138, -1, sizeof(::pb::SimpleTickSeries)},
+  { 42, -1, sizeof(::pb::MdsList)},
+  { 48, -1, sizeof(::pb::OptionTMarket)},
+  { 55, -1, sizeof(::pb::SimpleTickForTQuote)},
+  { 65, -1, sizeof(::pb::OptionTQuoteItem)},
+  { 74, -1, sizeof(::pb::OptionTQuoteItemList)},
+  { 83, -1, sizeof(::pb::Kline)},
+  { 97, -1, sizeof(::pb::KlineSeries)},
+  { 106, -1, sizeof(::pb::ReqSubscribeMarketData)},
+  { 113, -1, sizeof(::pb::RspSubscribeMarketData)},
+  { 118, -1, sizeof(::pb::RtnMarketDataUpdate)},
+  { 125, -1, sizeof(::pb::TickSeries)},
+  { 133, -1, sizeof(::pb::SimpleTick)},
+  { 141, -1, sizeof(::pb::SimpleTickSeries)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
@@ -526,7 +529,7 @@ static ::google::protobuf::Message const * const file_default_instances[] = {
 const char descriptor_table_protodef_market_5fdata_2eproto[] =
   "\n\021market_data.proto\022\002pb\032\014common.proto\"M\n"
   "\tOrderBook\022\013\n\003ask\030\001 \001(\001\022\022\n\nask_volume\030\002 "
-  "\001(\001\022\013\n\003bid\030\003 \001(\001\022\022\n\nbid_volume\030\004 \001(\001\"\226\004\n"
+  "\001(\001\022\013\n\003bid\030\003 \001(\001\022\022\n\nbid_volume\030\004 \001(\001\"\313\004\n"
   "\022MarketDataSnapshot\022\032\n\006symbol\030\001 \001(\0132\n.pb"
   ".Symbol\022\014\n\004time\030\002 \001(\003\022\024\n\014milliseconds\030\003 "
   "\001(\005\022\014\n\004open\030\004 \001(\001\022\014\n\004high\030\005 \001(\001\022\013\n\003low\030\006"
@@ -540,44 +543,46 @@ const char descriptor_table_protodef_market_5fdata_2eproto[] =
   "_price\030\024 \001(\001\022\023\n\013trading_day\030\025 \001(\005\022&\n\017ord"
   "er_book_list\030\026 \003(\0132\r.pb.OrderBook\022\014\n\004nam"
   "e\030\027 \001(\t\022\026\n\016exercise_price\030\030 \001(\001\022\024\n\014volum"
-  "e_delta\030\031 \001(\001\"/\n\007MdsList\022$\n\004list\030\001 \003(\0132\026"
-  ".pb.MarketDataSnapshot\"^\n\rOptionTMarket\022"
-  "&\n\006callTk\030\001 \001(\0132\026.pb.MarketDataSnapshot\022"
-  "%\n\005putTk\030\002 \001(\0132\026.pb.MarketDataSnapshot\"\203"
-  "\001\n\023SimpleTickForTQuote\022\032\n\006symbol\030\001 \001(\0132\n"
-  ".pb.Symbol\022\r\n\005price\030\002 \001(\001\022\025\n\rup_down_rat"
-  "io\030\003 \001(\001\022\034\n\024pre_settlement_price\030\004 \001(\001\022\014"
-  "\n\004name\030\005 \001(\t\"\224\001\n\020OptionTQuoteItem\022\026\n\016exe"
-  "rcise_price\030\001 \001(\001\022%\n\004call\030\002 \001(\0132\027.pb.Sim"
-  "pleTickForTQuote\022$\n\003put\030\003 \001(\0132\027.pb.Simpl"
-  "eTickForTQuote\022\033\n\023exercise_price_flag\030\004 "
-  "\001(\t\"r\n\024OptionTQuoteItemList\022\020\n\010exchange\030"
-  "\001 \001(\005\022\025\n\rstrike_symbol\030\002 \001(\t\022\r\n\005month\030\003 "
-  "\001(\t\022\"\n\004list\030\004 \003(\0132\024.pb.OptionTQuoteItem\""
-  "\224\001\n\005Kline\022\014\n\004time\030\001 \001(\003\022\014\n\004open\030\002 \001(\001\022\014\n"
-  "\004high\030\003 \001(\001\022\013\n\003low\030\004 \001(\001\022\r\n\005close\030\005 \001(\001\022"
-  "\016\n\006volume\030\006 \001(\001\022\016\n\006amount\030\007 \001(\001\022\020\n\010posit"
-  "ion\030\010 \001(\001\022\023\n\013trading_day\030\t \001(\005\"}\n\013KlineS"
-  "eries\022\032\n\006symbol\030\001 \001(\0132\n.pb.Symbol\022\036\n\006per"
-  "iod\030\002 \001(\0162\016.pb.PeriodType\022\031\n\021period_in_s"
-  "econds\030\003 \001(\005\022\027\n\004list\030\004 \003(\0132\t.pb.Kline\"X\n"
-  "\026ReqSubscribeMarketData\022\032\n\006symbol\030\001 \001(\0132"
-  "\n.pb.Symbol\022\"\n\nperiodList\030\002 \003(\0162\016.pb.Per"
-  "iodType\"\030\n\026RspSubscribeMarketData\"Z\n\023Rtn"
-  "MarketDataUpdate\022$\n\004tick\030\001 \001(\0132\026.pb.Mark"
-  "etDataSnapshot\022\035\n\nkline_list\030\002 \003(\0132\t.pb."
-  "Kline\"c\n\nTickSeries\022\032\n\006symbol\030\001 \001(\0132\n.pb"
-  ".Symbol\022\023\n\013trading_day\030\002 \001(\005\022$\n\004list\030\003 \003"
-  "(\0132\026.pb.MarketDataSnapshot\"9\n\nSimpleTick"
-  "\022\014\n\004time\030\001 \001(\003\022\r\n\005price\030\002 \001(\001\022\016\n\006volume\030"
-  "\003 \001(\001\"a\n\020SimpleTickSeries\022\032\n\006symbol\030\001 \001("
-  "\0132\n.pb.Symbol\022\023\n\013trading_day\030\002 \001(\005\022\034\n\004li"
-  "st\030\003 \003(\0132\016.pb.SimpleTickb\006proto3"
+  "e_delta\030\031 \001(\001\022\r\n\005time2\030\032 \001(\t\022\020\n\010exchange"
+  "\030\033 \001(\t\022\022\n\naction_day\030\034 \001(\005\"/\n\007MdsList\022$\n"
+  "\004list\030\001 \003(\0132\026.pb.MarketDataSnapshot\"^\n\rO"
+  "ptionTMarket\022&\n\006callTk\030\001 \001(\0132\026.pb.Market"
+  "DataSnapshot\022%\n\005putTk\030\002 \001(\0132\026.pb.MarketD"
+  "ataSnapshot\"\203\001\n\023SimpleTickForTQuote\022\032\n\006s"
+  "ymbol\030\001 \001(\0132\n.pb.Symbol\022\r\n\005price\030\002 \001(\001\022\025"
+  "\n\rup_down_ratio\030\003 \001(\001\022\034\n\024pre_settlement_"
+  "price\030\004 \001(\001\022\014\n\004name\030\005 \001(\t\"\224\001\n\020OptionTQuo"
+  "teItem\022\026\n\016exercise_price\030\001 \001(\001\022%\n\004call\030\002"
+  " \001(\0132\027.pb.SimpleTickForTQuote\022$\n\003put\030\003 \001"
+  "(\0132\027.pb.SimpleTickForTQuote\022\033\n\023exercise_"
+  "price_flag\030\004 \001(\t\"r\n\024OptionTQuoteItemList"
+  "\022\020\n\010exchange\030\001 \001(\005\022\025\n\rstrike_symbol\030\002 \001("
+  "\t\022\r\n\005month\030\003 \001(\t\022\"\n\004list\030\004 \003(\0132\024.pb.Opti"
+  "onTQuoteItem\"\224\001\n\005Kline\022\014\n\004time\030\001 \001(\003\022\014\n\004"
+  "open\030\002 \001(\001\022\014\n\004high\030\003 \001(\001\022\013\n\003low\030\004 \001(\001\022\r\n"
+  "\005close\030\005 \001(\001\022\016\n\006volume\030\006 \001(\001\022\016\n\006amount\030\007"
+  " \001(\001\022\020\n\010position\030\010 \001(\001\022\023\n\013trading_day\030\t "
+  "\001(\005\"}\n\013KlineSeries\022\032\n\006symbol\030\001 \001(\0132\n.pb."
+  "Symbol\022\036\n\006period\030\002 \001(\0162\016.pb.PeriodType\022\031"
+  "\n\021period_in_seconds\030\003 \001(\005\022\027\n\004list\030\004 \003(\0132"
+  "\t.pb.Kline\"X\n\026ReqSubscribeMarketData\022\032\n\006"
+  "symbol\030\001 \001(\0132\n.pb.Symbol\022\"\n\nperiodList\030\002"
+  " \003(\0162\016.pb.PeriodType\"\030\n\026RspSubscribeMark"
+  "etData\"Z\n\023RtnMarketDataUpdate\022$\n\004tick\030\001 "
+  "\001(\0132\026.pb.MarketDataSnapshot\022\035\n\nkline_lis"
+  "t\030\002 \003(\0132\t.pb.Kline\"c\n\nTickSeries\022\032\n\006symb"
+  "ol\030\001 \001(\0132\n.pb.Symbol\022\023\n\013trading_day\030\002 \001("
+  "\005\022$\n\004list\030\003 \003(\0132\026.pb.MarketDataSnapshot\""
+  "9\n\nSimpleTick\022\014\n\004time\030\001 \001(\003\022\r\n\005price\030\002 \001"
+  "(\001\022\016\n\006volume\030\003 \001(\001\"a\n\020SimpleTickSeries\022\032"
+  "\n\006symbol\030\001 \001(\0132\n.pb.Symbol\022\023\n\013trading_da"
+  "y\030\002 \001(\005\022\034\n\004list\030\003 \003(\0132\016.pb.SimpleTickb\006p"
+  "roto3"
   ;
 ::google::protobuf::internal::DescriptorTable descriptor_table_market_5fdata_2eproto = {
   false, InitDefaults_market_5fdata_2eproto, 
   descriptor_table_protodef_market_5fdata_2eproto,
-  "market_data.proto", &assign_descriptors_table_market_5fdata_2eproto, 1952,
+  "market_data.proto", &assign_descriptors_table_market_5fdata_2eproto, 2005,
 };
 
 void AddDescriptors_market_5fdata_2eproto() {
@@ -1023,6 +1028,9 @@ const int MarketDataSnapshot::kOrderBookListFieldNumber;
 const int MarketDataSnapshot::kNameFieldNumber;
 const int MarketDataSnapshot::kExercisePriceFieldNumber;
 const int MarketDataSnapshot::kVolumeDeltaFieldNumber;
+const int MarketDataSnapshot::kTime2FieldNumber;
+const int MarketDataSnapshot::kExchangeFieldNumber;
+const int MarketDataSnapshot::kActionDayFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 MarketDataSnapshot::MarketDataSnapshot()
@@ -1039,14 +1047,22 @@ MarketDataSnapshot::MarketDataSnapshot(const MarketDataSnapshot& from)
   if (from.name().size() > 0) {
     name_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.name_);
   }
+  time2_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.time2().size() > 0) {
+    time2_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.time2_);
+  }
+  exchange_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.exchange().size() > 0) {
+    exchange_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.exchange_);
+  }
   if (from.has_symbol()) {
     symbol_ = new ::pb::Symbol(*from.symbol_);
   } else {
     symbol_ = nullptr;
   }
   ::memcpy(&time_, &from.time_,
-    static_cast<size_t>(reinterpret_cast<char*>(&volume_delta_) -
-    reinterpret_cast<char*>(&time_)) + sizeof(volume_delta_));
+    static_cast<size_t>(reinterpret_cast<char*>(&action_day_) -
+    reinterpret_cast<char*>(&time_)) + sizeof(action_day_));
   // @@protoc_insertion_point(copy_constructor:pb.MarketDataSnapshot)
 }
 
@@ -1054,9 +1070,11 @@ void MarketDataSnapshot::SharedCtor() {
   ::google::protobuf::internal::InitSCC(
       &scc_info_MarketDataSnapshot_market_5fdata_2eproto.base);
   name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  time2_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  exchange_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   ::memset(&symbol_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&volume_delta_) -
-      reinterpret_cast<char*>(&symbol_)) + sizeof(volume_delta_));
+      reinterpret_cast<char*>(&action_day_) -
+      reinterpret_cast<char*>(&symbol_)) + sizeof(action_day_));
 }
 
 MarketDataSnapshot::~MarketDataSnapshot() {
@@ -1066,6 +1084,8 @@ MarketDataSnapshot::~MarketDataSnapshot() {
 
 void MarketDataSnapshot::SharedDtor() {
   name_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  time2_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  exchange_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (this != internal_default_instance()) delete symbol_;
 }
 
@@ -1086,13 +1106,15 @@ void MarketDataSnapshot::Clear() {
 
   order_book_list_.Clear();
   name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  time2_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  exchange_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (GetArenaNoVirtual() == nullptr && symbol_ != nullptr) {
     delete symbol_;
   }
   symbol_ = nullptr;
   ::memset(&time_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&volume_delta_) -
-      reinterpret_cast<char*>(&time_)) + sizeof(volume_delta_));
+      reinterpret_cast<char*>(&action_day_) -
+      reinterpret_cast<char*>(&time_)) + sizeof(action_day_));
   _internal_metadata_.Clear();
 }
 
@@ -1306,6 +1328,45 @@ const char* MarketDataSnapshot::_InternalParse(const char* begin, const char* en
         if (static_cast<::google::protobuf::uint8>(tag) != 201) goto handle_unusual;
         msg->set_volume_delta(::google::protobuf::io::UnalignedLoad<double>(ptr));
         ptr += sizeof(double);
+        break;
+      }
+      // string time2 = 26;
+      case 26: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 210) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        ctx->extra_parse_data().SetFieldName("pb.MarketDataSnapshot.time2");
+        object = msg->mutable_time2();
+        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
+          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
+          goto string_till_end;
+        }
+        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
+        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
+        ptr += size;
+        break;
+      }
+      // string exchange = 27;
+      case 27: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 218) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        ctx->extra_parse_data().SetFieldName("pb.MarketDataSnapshot.exchange");
+        object = msg->mutable_exchange();
+        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
+          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
+          goto string_till_end;
+        }
+        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
+        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
+        ptr += size;
+        break;
+      }
+      // int32 action_day = 28;
+      case 28: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 224) goto handle_unusual;
+        msg->set_action_day(::google::protobuf::internal::ReadVarint(&ptr));
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
         break;
       }
       default: {
@@ -1665,6 +1726,49 @@ bool MarketDataSnapshot::MergePartialFromCodedStream(
         break;
       }
 
+      // string time2 = 26;
+      case 26: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (210 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_time2()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->time2().data(), static_cast<int>(this->time2().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "pb.MarketDataSnapshot.time2"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string exchange = 27;
+      case 27: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (218 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_exchange()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->exchange().data(), static_cast<int>(this->exchange().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "pb.MarketDataSnapshot.exchange"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // int32 action_day = 28;
+      case 28: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (224 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &action_day_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
       default: {
       handle_unusual:
         if (tag == 0) {
@@ -1827,6 +1931,31 @@ void MarketDataSnapshot::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteDouble(25, this->volume_delta(), output);
   }
 
+  // string time2 = 26;
+  if (this->time2().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->time2().data(), static_cast<int>(this->time2().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.MarketDataSnapshot.time2");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      26, this->time2(), output);
+  }
+
+  // string exchange = 27;
+  if (this->exchange().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->exchange().data(), static_cast<int>(this->exchange().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.MarketDataSnapshot.exchange");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      27, this->exchange(), output);
+  }
+
+  // int32 action_day = 28;
+  if (this->action_day() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(28, this->action_day(), output);
+  }
+
   if (_internal_metadata_.have_unknown_fields()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         _internal_metadata_.unknown_fields(), output);
@@ -1976,6 +2105,33 @@ void MarketDataSnapshot::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(25, this->volume_delta(), target);
   }
 
+  // string time2 = 26;
+  if (this->time2().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->time2().data(), static_cast<int>(this->time2().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.MarketDataSnapshot.time2");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        26, this->time2(), target);
+  }
+
+  // string exchange = 27;
+  if (this->exchange().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->exchange().data(), static_cast<int>(this->exchange().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "pb.MarketDataSnapshot.exchange");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        27, this->exchange(), target);
+  }
+
+  // int32 action_day = 28;
+  if (this->action_day() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(28, this->action_day(), target);
+  }
+
   if (_internal_metadata_.have_unknown_fields()) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields(), target);
@@ -2013,6 +2169,20 @@ size_t MarketDataSnapshot::ByteSizeLong() const {
     total_size += 2 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
         this->name());
+  }
+
+  // string time2 = 26;
+  if (this->time2().size() > 0) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->time2());
+  }
+
+  // string exchange = 27;
+  if (this->exchange().size() > 0) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->exchange());
   }
 
   // .pb.Symbol symbol = 1;
@@ -2138,6 +2308,13 @@ size_t MarketDataSnapshot::ByteSizeLong() const {
     total_size += 2 + 8;
   }
 
+  // int32 action_day = 28;
+  if (this->action_day() != 0) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::Int32Size(
+        this->action_day());
+  }
+
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
@@ -2169,6 +2346,14 @@ void MarketDataSnapshot::MergeFrom(const MarketDataSnapshot& from) {
   if (from.name().size() > 0) {
 
     name_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.name_);
+  }
+  if (from.time2().size() > 0) {
+
+    time2_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.time2_);
+  }
+  if (from.exchange().size() > 0) {
+
+    exchange_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.exchange_);
   }
   if (from.has_symbol()) {
     mutable_symbol()->::pb::Symbol::MergeFrom(from.symbol());
@@ -2239,6 +2424,9 @@ void MarketDataSnapshot::MergeFrom(const MarketDataSnapshot& from) {
   if (from.volume_delta() != 0) {
     set_volume_delta(from.volume_delta());
   }
+  if (from.action_day() != 0) {
+    set_action_day(from.action_day());
+  }
 }
 
 void MarketDataSnapshot::CopyFrom(const ::google::protobuf::Message& from) {
@@ -2269,6 +2457,10 @@ void MarketDataSnapshot::InternalSwap(MarketDataSnapshot* other) {
   CastToBase(&order_book_list_)->InternalSwap(CastToBase(&other->order_book_list_));
   name_.Swap(&other->name_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
+  time2_.Swap(&other->time2_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  exchange_.Swap(&other->exchange_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
   swap(symbol_, other->symbol_);
   swap(time_, other->time_);
   swap(open_, other->open_);
@@ -2292,6 +2484,7 @@ void MarketDataSnapshot::InternalSwap(MarketDataSnapshot* other) {
   swap(average_price_, other->average_price_);
   swap(exercise_price_, other->exercise_price_);
   swap(volume_delta_, other->volume_delta_);
+  swap(action_day_, other->action_day_);
 }
 
 ::google::protobuf::Metadata MarketDataSnapshot::GetMetadata() const {

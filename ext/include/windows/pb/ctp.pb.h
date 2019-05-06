@@ -81,9 +81,9 @@ extern CTPOnRspOrderInsertDefaultTypeInternal _CTPOnRspOrderInsert_default_insta
 class CTPOnRtnCancelOrder;
 class CTPOnRtnCancelOrderDefaultTypeInternal;
 extern CTPOnRtnCancelOrderDefaultTypeInternal _CTPOnRtnCancelOrder_default_instance_;
-class CTPOrder;
-class CTPOrderDefaultTypeInternal;
-extern CTPOrderDefaultTypeInternal _CTPOrder_default_instance_;
+class CTPOrderField;
+class CTPOrderFieldDefaultTypeInternal;
+extern CTPOrderFieldDefaultTypeInternal _CTPOrderField_default_instance_;
 class CTPOrderID;
 class CTPOrderIDDefaultTypeInternal;
 extern CTPOrderIDDefaultTypeInternal _CTPOrderID_default_instance_;
@@ -117,9 +117,9 @@ extern CTPRspSusbcribeMarketDataDefaultTypeInternal _CTPRspSusbcribeMarketData_d
 class CTPRspUnSusbibeMarketData;
 class CTPRspUnSusbibeMarketDataDefaultTypeInternal;
 extern CTPRspUnSusbibeMarketDataDefaultTypeInternal _CTPRspUnSusbibeMarketData_default_instance_;
-class CTPTradeReport;
-class CTPTradeReportDefaultTypeInternal;
-extern CTPTradeReportDefaultTypeInternal _CTPTradeReport_default_instance_;
+class CTPTradeField;
+class CTPTradeFieldDefaultTypeInternal;
+extern CTPTradeFieldDefaultTypeInternal _CTPTradeField_default_instance_;
 class CTPTradeReportList;
 class CTPTradeReportListDefaultTypeInternal;
 extern CTPTradeReportListDefaultTypeInternal _CTPTradeReportList_default_instance_;
@@ -205,7 +205,7 @@ template<> ::pb::CTPMarginItem* Arena::CreateMaybeMessage<::pb::CTPMarginItem>(A
 template<> ::pb::CTPMarginRate* Arena::CreateMaybeMessage<::pb::CTPMarginRate>(Arena*);
 template<> ::pb::CTPOnRspOrderInsert* Arena::CreateMaybeMessage<::pb::CTPOnRspOrderInsert>(Arena*);
 template<> ::pb::CTPOnRtnCancelOrder* Arena::CreateMaybeMessage<::pb::CTPOnRtnCancelOrder>(Arena*);
-template<> ::pb::CTPOrder* Arena::CreateMaybeMessage<::pb::CTPOrder>(Arena*);
+template<> ::pb::CTPOrderField* Arena::CreateMaybeMessage<::pb::CTPOrderField>(Arena*);
 template<> ::pb::CTPOrderID* Arena::CreateMaybeMessage<::pb::CTPOrderID>(Arena*);
 template<> ::pb::CTPOrderLink* Arena::CreateMaybeMessage<::pb::CTPOrderLink>(Arena*);
 template<> ::pb::CTPOrderList* Arena::CreateMaybeMessage<::pb::CTPOrderList>(Arena*);
@@ -217,7 +217,7 @@ template<> ::pb::CTPReqUnSusbibeMarketData* Arena::CreateMaybeMessage<::pb::CTPR
 template<> ::pb::CTPRspInfo* Arena::CreateMaybeMessage<::pb::CTPRspInfo>(Arena*);
 template<> ::pb::CTPRspSusbcribeMarketData* Arena::CreateMaybeMessage<::pb::CTPRspSusbcribeMarketData>(Arena*);
 template<> ::pb::CTPRspUnSusbibeMarketData* Arena::CreateMaybeMessage<::pb::CTPRspUnSusbibeMarketData>(Arena*);
-template<> ::pb::CTPTradeReport* Arena::CreateMaybeMessage<::pb::CTPTradeReport>(Arena*);
+template<> ::pb::CTPTradeField* Arena::CreateMaybeMessage<::pb::CTPTradeField>(Arena*);
 template<> ::pb::CTPTradeReportList* Arena::CreateMaybeMessage<::pb::CTPTradeReportList>(Arena*);
 template<> ::pb::CTPTradingAccount* Arena::CreateMaybeMessage<::pb::CTPTradingAccount>(Arena*);
 template<> ::pb::CTPTradingAccountSnapshot* Arena::CreateMaybeMessage<::pb::CTPTradingAccountSnapshot>(Arena*);
@@ -532,25 +532,25 @@ class CTPOrderID :
 };
 // -------------------------------------------------------------------
 
-class CTPOrder :
-    public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:pb.CTPOrder) */ {
+class CTPOrderField :
+    public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:pb.CTPOrderField) */ {
  public:
-  CTPOrder();
-  virtual ~CTPOrder();
+  CTPOrderField();
+  virtual ~CTPOrderField();
 
-  CTPOrder(const CTPOrder& from);
+  CTPOrderField(const CTPOrderField& from);
 
-  inline CTPOrder& operator=(const CTPOrder& from) {
+  inline CTPOrderField& operator=(const CTPOrderField& from) {
     CopyFrom(from);
     return *this;
   }
   #if LANG_CXX11
-  CTPOrder(CTPOrder&& from) noexcept
-    : CTPOrder() {
+  CTPOrderField(CTPOrderField&& from) noexcept
+    : CTPOrderField() {
     *this = ::std::move(from);
   }
 
-  inline CTPOrder& operator=(CTPOrder&& from) noexcept {
+  inline CTPOrderField& operator=(CTPOrderField&& from) noexcept {
     if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
       if (this != &from) InternalSwap(&from);
     } else {
@@ -562,34 +562,34 @@ class CTPOrder :
   static const ::google::protobuf::Descriptor* descriptor() {
     return default_instance().GetDescriptor();
   }
-  static const CTPOrder& default_instance();
+  static const CTPOrderField& default_instance();
 
   static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
-  static inline const CTPOrder* internal_default_instance() {
-    return reinterpret_cast<const CTPOrder*>(
-               &_CTPOrder_default_instance_);
+  static inline const CTPOrderField* internal_default_instance() {
+    return reinterpret_cast<const CTPOrderField*>(
+               &_CTPOrderField_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     1;
 
-  void Swap(CTPOrder* other);
-  friend void swap(CTPOrder& a, CTPOrder& b) {
+  void Swap(CTPOrderField* other);
+  friend void swap(CTPOrderField& a, CTPOrderField& b) {
     a.Swap(&b);
   }
 
   // implements Message ----------------------------------------------
 
-  inline CTPOrder* New() const final {
-    return CreateMaybeMessage<CTPOrder>(nullptr);
+  inline CTPOrderField* New() const final {
+    return CreateMaybeMessage<CTPOrderField>(nullptr);
   }
 
-  CTPOrder* New(::google::protobuf::Arena* arena) const final {
-    return CreateMaybeMessage<CTPOrder>(arena);
+  CTPOrderField* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<CTPOrderField>(arena);
   }
   void CopyFrom(const ::google::protobuf::Message& from) final;
   void MergeFrom(const ::google::protobuf::Message& from) final;
-  void CopyFrom(const CTPOrder& from);
-  void MergeFrom(const CTPOrder& from);
+  void CopyFrom(const CTPOrderField& from);
+  void MergeFrom(const CTPOrderField& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -611,7 +611,7 @@ class CTPOrder :
   void SharedCtor();
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(CTPOrder* other);
+  void InternalSwap(CTPOrderField* other);
   private:
   inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
     return nullptr;
@@ -627,37 +627,317 @@ class CTPOrder :
 
   // accessors -------------------------------------------------------
 
-  // string account_id = 3;
-  void clear_account_id();
-  static const int kAccountIdFieldNumber = 3;
-  const ::std::string& account_id() const;
-  void set_account_id(const ::std::string& value);
+  // string broker_id = 1;
+  void clear_broker_id();
+  static const int kBrokerIdFieldNumber = 1;
+  const ::std::string& broker_id() const;
+  void set_broker_id(const ::std::string& value);
   #if LANG_CXX11
-  void set_account_id(::std::string&& value);
+  void set_broker_id(::std::string&& value);
   #endif
-  void set_account_id(const char* value);
-  void set_account_id(const char* value, size_t size);
-  ::std::string* mutable_account_id();
-  ::std::string* release_account_id();
-  void set_allocated_account_id(::std::string* account_id);
+  void set_broker_id(const char* value);
+  void set_broker_id(const char* value, size_t size);
+  ::std::string* mutable_broker_id();
+  ::std::string* release_broker_id();
+  void set_allocated_broker_id(::std::string* broker_id);
 
-  // string comment = 14;
-  void clear_comment();
-  static const int kCommentFieldNumber = 14;
-  const ::std::string& comment() const;
-  void set_comment(const ::std::string& value);
+  // string investor_id = 2;
+  void clear_investor_id();
+  static const int kInvestorIdFieldNumber = 2;
+  const ::std::string& investor_id() const;
+  void set_investor_id(const ::std::string& value);
   #if LANG_CXX11
-  void set_comment(::std::string&& value);
+  void set_investor_id(::std::string&& value);
   #endif
-  void set_comment(const char* value);
-  void set_comment(const char* value, size_t size);
-  ::std::string* mutable_comment();
-  ::std::string* release_comment();
-  void set_allocated_comment(::std::string* comment);
+  void set_investor_id(const char* value);
+  void set_investor_id(const char* value, size_t size);
+  ::std::string* mutable_investor_id();
+  ::std::string* release_investor_id();
+  void set_allocated_investor_id(::std::string* investor_id);
 
-  // string user_product_info = 20;
+  // string instrument_id = 3;
+  void clear_instrument_id();
+  static const int kInstrumentIdFieldNumber = 3;
+  const ::std::string& instrument_id() const;
+  void set_instrument_id(const ::std::string& value);
+  #if LANG_CXX11
+  void set_instrument_id(::std::string&& value);
+  #endif
+  void set_instrument_id(const char* value);
+  void set_instrument_id(const char* value, size_t size);
+  ::std::string* mutable_instrument_id();
+  ::std::string* release_instrument_id();
+  void set_allocated_instrument_id(::std::string* instrument_id);
+
+  // string order_ref = 4;
+  void clear_order_ref();
+  static const int kOrderRefFieldNumber = 4;
+  const ::std::string& order_ref() const;
+  void set_order_ref(const ::std::string& value);
+  #if LANG_CXX11
+  void set_order_ref(::std::string&& value);
+  #endif
+  void set_order_ref(const char* value);
+  void set_order_ref(const char* value, size_t size);
+  ::std::string* mutable_order_ref();
+  ::std::string* release_order_ref();
+  void set_allocated_order_ref(::std::string* order_ref);
+
+  // string user_id = 5;
+  void clear_user_id();
+  static const int kUserIdFieldNumber = 5;
+  const ::std::string& user_id() const;
+  void set_user_id(const ::std::string& value);
+  #if LANG_CXX11
+  void set_user_id(::std::string&& value);
+  #endif
+  void set_user_id(const char* value);
+  void set_user_id(const char* value, size_t size);
+  ::std::string* mutable_user_id();
+  ::std::string* release_user_id();
+  void set_allocated_user_id(::std::string* user_id);
+
+  // string GTD_date = 13;
+  void clear_gtd_date();
+  static const int kGTDDateFieldNumber = 13;
+  const ::std::string& gtd_date() const;
+  void set_gtd_date(const ::std::string& value);
+  #if LANG_CXX11
+  void set_gtd_date(::std::string&& value);
+  #endif
+  void set_gtd_date(const char* value);
+  void set_gtd_date(const char* value, size_t size);
+  ::std::string* mutable_gtd_date();
+  ::std::string* release_gtd_date();
+  void set_allocated_gtd_date(::std::string* gtd_date);
+
+  // string business_unit = 20;
+  void clear_business_unit();
+  static const int kBusinessUnitFieldNumber = 20;
+  const ::std::string& business_unit() const;
+  void set_business_unit(const ::std::string& value);
+  #if LANG_CXX11
+  void set_business_unit(::std::string&& value);
+  #endif
+  void set_business_unit(const char* value);
+  void set_business_unit(const char* value, size_t size);
+  ::std::string* mutable_business_unit();
+  ::std::string* release_business_unit();
+  void set_allocated_business_unit(::std::string* business_unit);
+
+  // string order_local_id = 22;
+  void clear_order_local_id();
+  static const int kOrderLocalIdFieldNumber = 22;
+  const ::std::string& order_local_id() const;
+  void set_order_local_id(const ::std::string& value);
+  #if LANG_CXX11
+  void set_order_local_id(::std::string&& value);
+  #endif
+  void set_order_local_id(const char* value);
+  void set_order_local_id(const char* value, size_t size);
+  ::std::string* mutable_order_local_id();
+  ::std::string* release_order_local_id();
+  void set_allocated_order_local_id(::std::string* order_local_id);
+
+  // string exchange_id = 23;
+  void clear_exchange_id();
+  static const int kExchangeIdFieldNumber = 23;
+  const ::std::string& exchange_id() const;
+  void set_exchange_id(const ::std::string& value);
+  #if LANG_CXX11
+  void set_exchange_id(::std::string&& value);
+  #endif
+  void set_exchange_id(const char* value);
+  void set_exchange_id(const char* value, size_t size);
+  ::std::string* mutable_exchange_id();
+  ::std::string* release_exchange_id();
+  void set_allocated_exchange_id(::std::string* exchange_id);
+
+  // string participant_id = 24;
+  void clear_participant_id();
+  static const int kParticipantIdFieldNumber = 24;
+  const ::std::string& participant_id() const;
+  void set_participant_id(const ::std::string& value);
+  #if LANG_CXX11
+  void set_participant_id(::std::string&& value);
+  #endif
+  void set_participant_id(const char* value);
+  void set_participant_id(const char* value, size_t size);
+  ::std::string* mutable_participant_id();
+  ::std::string* release_participant_id();
+  void set_allocated_participant_id(::std::string* participant_id);
+
+  // string client_id = 25;
+  void clear_client_id();
+  static const int kClientIdFieldNumber = 25;
+  const ::std::string& client_id() const;
+  void set_client_id(const ::std::string& value);
+  #if LANG_CXX11
+  void set_client_id(::std::string&& value);
+  #endif
+  void set_client_id(const char* value);
+  void set_client_id(const char* value, size_t size);
+  ::std::string* mutable_client_id();
+  ::std::string* release_client_id();
+  void set_allocated_client_id(::std::string* client_id);
+
+  // string exchange_inst_id = 26;
+  void clear_exchange_inst_id();
+  static const int kExchangeInstIdFieldNumber = 26;
+  const ::std::string& exchange_inst_id() const;
+  void set_exchange_inst_id(const ::std::string& value);
+  #if LANG_CXX11
+  void set_exchange_inst_id(::std::string&& value);
+  #endif
+  void set_exchange_inst_id(const char* value);
+  void set_exchange_inst_id(const char* value, size_t size);
+  ::std::string* mutable_exchange_inst_id();
+  ::std::string* release_exchange_inst_id();
+  void set_allocated_exchange_inst_id(::std::string* exchange_inst_id);
+
+  // string trader_id = 27;
+  void clear_trader_id();
+  static const int kTraderIdFieldNumber = 27;
+  const ::std::string& trader_id() const;
+  void set_trader_id(const ::std::string& value);
+  #if LANG_CXX11
+  void set_trader_id(::std::string&& value);
+  #endif
+  void set_trader_id(const char* value);
+  void set_trader_id(const char* value, size_t size);
+  ::std::string* mutable_trader_id();
+  ::std::string* release_trader_id();
+  void set_allocated_trader_id(::std::string* trader_id);
+
+  // string order_sys_id = 33;
+  void clear_order_sys_id();
+  static const int kOrderSysIdFieldNumber = 33;
+  const ::std::string& order_sys_id() const;
+  void set_order_sys_id(const ::std::string& value);
+  #if LANG_CXX11
+  void set_order_sys_id(::std::string&& value);
+  #endif
+  void set_order_sys_id(const char* value);
+  void set_order_sys_id(const char* value, size_t size);
+  ::std::string* mutable_order_sys_id();
+  ::std::string* release_order_sys_id();
+  void set_allocated_order_sys_id(::std::string* order_sys_id);
+
+  // string insert_date = 39;
+  void clear_insert_date();
+  static const int kInsertDateFieldNumber = 39;
+  const ::std::string& insert_date() const;
+  void set_insert_date(const ::std::string& value);
+  #if LANG_CXX11
+  void set_insert_date(::std::string&& value);
+  #endif
+  void set_insert_date(const char* value);
+  void set_insert_date(const char* value, size_t size);
+  ::std::string* mutable_insert_date();
+  ::std::string* release_insert_date();
+  void set_allocated_insert_date(::std::string* insert_date);
+
+  // string insert_time = 40;
+  void clear_insert_time();
+  static const int kInsertTimeFieldNumber = 40;
+  const ::std::string& insert_time() const;
+  void set_insert_time(const ::std::string& value);
+  #if LANG_CXX11
+  void set_insert_time(::std::string&& value);
+  #endif
+  void set_insert_time(const char* value);
+  void set_insert_time(const char* value, size_t size);
+  ::std::string* mutable_insert_time();
+  ::std::string* release_insert_time();
+  void set_allocated_insert_time(::std::string* insert_time);
+
+  // string active_time = 41;
+  void clear_active_time();
+  static const int kActiveTimeFieldNumber = 41;
+  const ::std::string& active_time() const;
+  void set_active_time(const ::std::string& value);
+  #if LANG_CXX11
+  void set_active_time(::std::string&& value);
+  #endif
+  void set_active_time(const char* value);
+  void set_active_time(const char* value, size_t size);
+  ::std::string* mutable_active_time();
+  ::std::string* release_active_time();
+  void set_allocated_active_time(::std::string* active_time);
+
+  // string suspend_time = 42;
+  void clear_suspend_time();
+  static const int kSuspendTimeFieldNumber = 42;
+  const ::std::string& suspend_time() const;
+  void set_suspend_time(const ::std::string& value);
+  #if LANG_CXX11
+  void set_suspend_time(::std::string&& value);
+  #endif
+  void set_suspend_time(const char* value);
+  void set_suspend_time(const char* value, size_t size);
+  ::std::string* mutable_suspend_time();
+  ::std::string* release_suspend_time();
+  void set_allocated_suspend_time(::std::string* suspend_time);
+
+  // string update_time = 43;
+  void clear_update_time();
+  static const int kUpdateTimeFieldNumber = 43;
+  const ::std::string& update_time() const;
+  void set_update_time(const ::std::string& value);
+  #if LANG_CXX11
+  void set_update_time(::std::string&& value);
+  #endif
+  void set_update_time(const char* value);
+  void set_update_time(const char* value, size_t size);
+  ::std::string* mutable_update_time();
+  ::std::string* release_update_time();
+  void set_allocated_update_time(::std::string* update_time);
+
+  // string cancel_time = 44;
+  void clear_cancel_time();
+  static const int kCancelTimeFieldNumber = 44;
+  const ::std::string& cancel_time() const;
+  void set_cancel_time(const ::std::string& value);
+  #if LANG_CXX11
+  void set_cancel_time(::std::string&& value);
+  #endif
+  void set_cancel_time(const char* value);
+  void set_cancel_time(const char* value, size_t size);
+  ::std::string* mutable_cancel_time();
+  ::std::string* release_cancel_time();
+  void set_allocated_cancel_time(::std::string* cancel_time);
+
+  // string active_trader_id = 45;
+  void clear_active_trader_id();
+  static const int kActiveTraderIdFieldNumber = 45;
+  const ::std::string& active_trader_id() const;
+  void set_active_trader_id(const ::std::string& value);
+  #if LANG_CXX11
+  void set_active_trader_id(::std::string&& value);
+  #endif
+  void set_active_trader_id(const char* value);
+  void set_active_trader_id(const char* value, size_t size);
+  ::std::string* mutable_active_trader_id();
+  ::std::string* release_active_trader_id();
+  void set_allocated_active_trader_id(::std::string* active_trader_id);
+
+  // string clearing_part_id = 46;
+  void clear_clearing_part_id();
+  static const int kClearingPartIdFieldNumber = 46;
+  const ::std::string& clearing_part_id() const;
+  void set_clearing_part_id(const ::std::string& value);
+  #if LANG_CXX11
+  void set_clearing_part_id(::std::string&& value);
+  #endif
+  void set_clearing_part_id(const char* value);
+  void set_clearing_part_id(const char* value, size_t size);
+  ::std::string* mutable_clearing_part_id();
+  ::std::string* release_clearing_part_id();
+  void set_allocated_clearing_part_id(::std::string* clearing_part_id);
+
+  // string user_product_info = 50;
   void clear_user_product_info();
-  static const int kUserProductInfoFieldNumber = 20;
+  static const int kUserProductInfoFieldNumber = 50;
   const ::std::string& user_product_info() const;
   void set_user_product_info(const ::std::string& value);
   #if LANG_CXX11
@@ -669,308 +949,386 @@ class CTPOrder :
   ::std::string* release_user_product_info();
   void set_allocated_user_product_info(::std::string* user_product_info);
 
-  // string exchange_order_id = 22;
-  void clear_exchange_order_id();
-  static const int kExchangeOrderIdFieldNumber = 22;
-  const ::std::string& exchange_order_id() const;
-  void set_exchange_order_id(const ::std::string& value);
+  // bytes status_msg = 51;
+  void clear_status_msg();
+  static const int kStatusMsgFieldNumber = 51;
+  const ::std::string& status_msg() const;
+  void set_status_msg(const ::std::string& value);
   #if LANG_CXX11
-  void set_exchange_order_id(::std::string&& value);
+  void set_status_msg(::std::string&& value);
   #endif
-  void set_exchange_order_id(const char* value);
-  void set_exchange_order_id(const char* value, size_t size);
-  ::std::string* mutable_exchange_order_id();
-  ::std::string* release_exchange_order_id();
-  void set_allocated_exchange_order_id(::std::string* exchange_order_id);
+  void set_status_msg(const char* value);
+  void set_status_msg(const void* value, size_t size);
+  ::std::string* mutable_status_msg();
+  ::std::string* release_status_msg();
+  void set_allocated_status_msg(::std::string* status_msg);
 
-  // string route_account_id = 24;
-  void clear_route_account_id();
-  static const int kRouteAccountIdFieldNumber = 24;
-  const ::std::string& route_account_id() const;
-  void set_route_account_id(const ::std::string& value);
+  // string active_user_id = 53;
+  void clear_active_user_id();
+  static const int kActiveUserIdFieldNumber = 53;
+  const ::std::string& active_user_id() const;
+  void set_active_user_id(const ::std::string& value);
   #if LANG_CXX11
-  void set_route_account_id(::std::string&& value);
+  void set_active_user_id(::std::string&& value);
   #endif
-  void set_route_account_id(const char* value);
-  void set_route_account_id(const char* value, size_t size);
-  ::std::string* mutable_route_account_id();
-  ::std::string* release_route_account_id();
-  void set_allocated_route_account_id(::std::string* route_account_id);
+  void set_active_user_id(const char* value);
+  void set_active_user_id(const char* value, size_t size);
+  ::std::string* mutable_active_user_id();
+  ::std::string* release_active_user_id();
+  void set_allocated_active_user_id(::std::string* active_user_id);
 
-  // string token = 29;
-  void clear_token();
-  static const int kTokenFieldNumber = 29;
-  const ::std::string& token() const;
-  void set_token(const ::std::string& value);
+  // string relative_order_sys_id = 55;
+  void clear_relative_order_sys_id();
+  static const int kRelativeOrderSysIdFieldNumber = 55;
+  const ::std::string& relative_order_sys_id() const;
+  void set_relative_order_sys_id(const ::std::string& value);
   #if LANG_CXX11
-  void set_token(::std::string&& value);
+  void set_relative_order_sys_id(::std::string&& value);
   #endif
-  void set_token(const char* value);
-  void set_token(const char* value, size_t size);
-  ::std::string* mutable_token();
-  ::std::string* release_token();
-  void set_allocated_token(::std::string* token);
+  void set_relative_order_sys_id(const char* value);
+  void set_relative_order_sys_id(const char* value, size_t size);
+  ::std::string* mutable_relative_order_sys_id();
+  ::std::string* release_relative_order_sys_id();
+  void set_allocated_relative_order_sys_id(::std::string* relative_order_sys_id);
 
-  // string symbol_name = 37;
-  void clear_symbol_name();
-  static const int kSymbolNameFieldNumber = 37;
-  const ::std::string& symbol_name() const;
-  void set_symbol_name(const ::std::string& value);
+  // string branch_id = 58;
+  void clear_branch_id();
+  static const int kBranchIdFieldNumber = 58;
+  const ::std::string& branch_id() const;
+  void set_branch_id(const ::std::string& value);
   #if LANG_CXX11
-  void set_symbol_name(::std::string&& value);
+  void set_branch_id(::std::string&& value);
   #endif
-  void set_symbol_name(const char* value);
-  void set_symbol_name(const char* value, size_t size);
-  ::std::string* mutable_symbol_name();
-  ::std::string* release_symbol_name();
-  void set_allocated_symbol_name(::std::string* symbol_name);
+  void set_branch_id(const char* value);
+  void set_branch_id(const char* value, size_t size);
+  ::std::string* mutable_branch_id();
+  ::std::string* release_branch_id();
+  void set_allocated_branch_id(::std::string* branch_id);
 
-  // string reason_comment = 38;
-  void clear_reason_comment();
-  static const int kReasonCommentFieldNumber = 38;
-  const ::std::string& reason_comment() const;
-  void set_reason_comment(const ::std::string& value);
+  // string invest_unit_id = 59;
+  void clear_invest_unit_id();
+  static const int kInvestUnitIdFieldNumber = 59;
+  const ::std::string& invest_unit_id() const;
+  void set_invest_unit_id(const ::std::string& value);
   #if LANG_CXX11
-  void set_reason_comment(::std::string&& value);
+  void set_invest_unit_id(::std::string&& value);
   #endif
-  void set_reason_comment(const char* value);
-  void set_reason_comment(const char* value, size_t size);
-  ::std::string* mutable_reason_comment();
-  ::std::string* release_reason_comment();
-  void set_allocated_reason_comment(::std::string* reason_comment);
+  void set_invest_unit_id(const char* value);
+  void set_invest_unit_id(const char* value, size_t size);
+  ::std::string* mutable_invest_unit_id();
+  ::std::string* release_invest_unit_id();
+  void set_allocated_invest_unit_id(::std::string* invest_unit_id);
 
-  // .pb.Symbol symbol = 1;
-  bool has_symbol() const;
-  void clear_symbol();
-  static const int kSymbolFieldNumber = 1;
-  const ::pb::Symbol& symbol() const;
-  ::pb::Symbol* release_symbol();
-  ::pb::Symbol* mutable_symbol();
-  void set_allocated_symbol(::pb::Symbol* symbol);
+  // string account_id = 60;
+  void clear_account_id();
+  static const int kAccountIdFieldNumber = 60;
+  const ::std::string& account_id() const;
+  void set_account_id(const ::std::string& value);
+  #if LANG_CXX11
+  void set_account_id(::std::string&& value);
+  #endif
+  void set_account_id(const char* value);
+  void set_account_id(const char* value, size_t size);
+  ::std::string* mutable_account_id();
+  ::std::string* release_account_id();
+  void set_allocated_account_id(::std::string* account_id);
 
-  // .pb.CTPOrderID id = 2;
-  bool has_id() const;
-  void clear_id();
-  static const int kIdFieldNumber = 2;
-  const ::pb::CTPOrderID& id() const;
-  ::pb::CTPOrderID* release_id();
-  ::pb::CTPOrderID* mutable_id();
-  void set_allocated_id(::pb::CTPOrderID* id);
+  // string currency_id = 61;
+  void clear_currency_id();
+  static const int kCurrencyIdFieldNumber = 61;
+  const ::std::string& currency_id() const;
+  void set_currency_id(const ::std::string& value);
+  #if LANG_CXX11
+  void set_currency_id(::std::string&& value);
+  #endif
+  void set_currency_id(const char* value);
+  void set_currency_id(const char* value, size_t size);
+  ::std::string* mutable_currency_id();
+  ::std::string* release_currency_id();
+  void set_allocated_currency_id(::std::string* currency_id);
 
-  // .pb.ProductID product_id = 34;
-  bool has_product_id() const;
-  void clear_product_id();
-  static const int kProductIdFieldNumber = 34;
-  const ::pb::ProductID& product_id() const;
-  ::pb::ProductID* release_product_id();
-  ::pb::ProductID* mutable_product_id();
-  void set_allocated_product_id(::pb::ProductID* product_id);
+  // string IP_address = 62;
+  void clear_ip_address();
+  static const int kIPAddressFieldNumber = 62;
+  const ::std::string& ip_address() const;
+  void set_ip_address(const ::std::string& value);
+  #if LANG_CXX11
+  void set_ip_address(::std::string&& value);
+  #endif
+  void set_ip_address(const char* value);
+  void set_ip_address(const char* value, size_t size);
+  ::std::string* mutable_ip_address();
+  ::std::string* release_ip_address();
+  void set_allocated_ip_address(::std::string* ip_address);
 
-  // .pb.CTPDirection direction = 4;
+  // string Mac_address = 63;
+  void clear_mac_address();
+  static const int kMacAddressFieldNumber = 63;
+  const ::std::string& mac_address() const;
+  void set_mac_address(const ::std::string& value);
+  #if LANG_CXX11
+  void set_mac_address(::std::string&& value);
+  #endif
+  void set_mac_address(const char* value);
+  void set_mac_address(const char* value, size_t size);
+  ::std::string* mutable_mac_address();
+  ::std::string* release_mac_address();
+  void set_allocated_mac_address(::std::string* mac_address);
+
+  // int32 order_price_type = 6;
+  void clear_order_price_type();
+  static const int kOrderPriceTypeFieldNumber = 6;
+  ::google::protobuf::int32 order_price_type() const;
+  void set_order_price_type(::google::protobuf::int32 value);
+
+  // int32 direction = 7;
   void clear_direction();
-  static const int kDirectionFieldNumber = 4;
-  ::pb::CTPDirection direction() const;
-  void set_direction(::pb::CTPDirection value);
+  static const int kDirectionFieldNumber = 7;
+  ::google::protobuf::int32 direction() const;
+  void set_direction(::google::protobuf::int32 value);
 
-  // .pb.CTPOrderStatus status = 5;
-  void clear_status();
-  static const int kStatusFieldNumber = 5;
-  ::pb::CTPOrderStatus status() const;
-  void set_status(::pb::CTPOrderStatus value);
+  // int32 comb_offset_flag = 8;
+  void clear_comb_offset_flag();
+  static const int kCombOffsetFlagFieldNumber = 8;
+  ::google::protobuf::int32 comb_offset_flag() const;
+  void set_comb_offset_flag(::google::protobuf::int32 value);
 
-  // double limit_price = 7;
+  // int32 comb_hedge_flag = 9;
+  void clear_comb_hedge_flag();
+  static const int kCombHedgeFlagFieldNumber = 9;
+  ::google::protobuf::int32 comb_hedge_flag() const;
+  void set_comb_hedge_flag(::google::protobuf::int32 value);
+
+  // double limit_price = 10;
   void clear_limit_price();
-  static const int kLimitPriceFieldNumber = 7;
+  static const int kLimitPriceFieldNumber = 10;
   double limit_price() const;
   void set_limit_price(double value);
 
-  // .pb.CTPPriceType price_type = 6;
-  void clear_price_type();
-  static const int kPriceTypeFieldNumber = 6;
-  ::pb::CTPPriceType price_type() const;
-  void set_price_type(::pb::CTPPriceType value);
+  // int32 volume_total_original = 11;
+  void clear_volume_total_original();
+  static const int kVolumeTotalOriginalFieldNumber = 11;
+  ::google::protobuf::int32 volume_total_original() const;
+  void set_volume_total_original(::google::protobuf::int32 value);
 
-  // int32 volume = 8;
-  void clear_volume();
-  static const int kVolumeFieldNumber = 8;
-  ::google::protobuf::int32 volume() const;
-  void set_volume(::google::protobuf::int32 value);
+  // int32 time_condition = 12;
+  void clear_time_condition();
+  static const int kTimeConditionFieldNumber = 12;
+  ::google::protobuf::int32 time_condition() const;
+  void set_time_condition(::google::protobuf::int32 value);
 
-  // int32 volume_traded = 9;
-  void clear_volume_traded();
-  static const int kVolumeTradedFieldNumber = 9;
-  ::google::protobuf::int32 volume_traded() const;
-  void set_volume_traded(::google::protobuf::int32 value);
+  // int32 volume_condition = 14;
+  void clear_volume_condition();
+  static const int kVolumeConditionFieldNumber = 14;
+  ::google::protobuf::int32 volume_condition() const;
+  void set_volume_condition(::google::protobuf::int32 value);
 
-  // int32 volume_canceled = 10;
-  void clear_volume_canceled();
-  static const int kVolumeCanceledFieldNumber = 10;
-  ::google::protobuf::int32 volume_canceled() const;
-  void set_volume_canceled(::google::protobuf::int32 value);
+  // int32 min_volume = 15;
+  void clear_min_volume();
+  static const int kMinVolumeFieldNumber = 15;
+  ::google::protobuf::int32 min_volume() const;
+  void set_min_volume(::google::protobuf::int32 value);
 
-  // double frozen_commission = 11;
-  void clear_frozen_commission();
-  static const int kFrozenCommissionFieldNumber = 11;
-  double frozen_commission() const;
-  void set_frozen_commission(double value);
+  // double stop_price = 17;
+  void clear_stop_price();
+  static const int kStopPriceFieldNumber = 17;
+  double stop_price() const;
+  void set_stop_price(double value);
 
-  // int64 send_order_time = 12;
-  void clear_send_order_time();
-  static const int kSendOrderTimeFieldNumber = 12;
-  ::google::protobuf::int64 send_order_time() const;
-  void set_send_order_time(::google::protobuf::int64 value);
+  // int32 contingent_condition = 16;
+  void clear_contingent_condition();
+  static const int kContingentConditionFieldNumber = 16;
+  ::google::protobuf::int32 contingent_condition() const;
+  void set_contingent_condition(::google::protobuf::int32 value);
 
-  // int32 send_order_trading_day = 13;
-  void clear_send_order_trading_day();
-  static const int kSendOrderTradingDayFieldNumber = 13;
-  ::google::protobuf::int32 send_order_trading_day() const;
-  void set_send_order_trading_day(::google::protobuf::int32 value);
+  // int32 force_close_reason = 18;
+  void clear_force_close_reason();
+  static const int kForceCloseReasonFieldNumber = 18;
+  ::google::protobuf::int32 force_close_reason() const;
+  void set_force_close_reason(::google::protobuf::int32 value);
 
-  // int32 request_id = 15;
+  // int32 request_id = 21;
   void clear_request_id();
-  static const int kRequestIdFieldNumber = 15;
+  static const int kRequestIdFieldNumber = 21;
   ::google::protobuf::int32 request_id() const;
   void set_request_id(::google::protobuf::int32 value);
 
-  // int32 local_order_seq = 16;
-  void clear_local_order_seq();
-  static const int kLocalOrderSeqFieldNumber = 16;
-  ::google::protobuf::int32 local_order_seq() const;
-  void set_local_order_seq(::google::protobuf::int32 value);
+  // int32 install_id = 28;
+  void clear_install_id();
+  static const int kInstallIdFieldNumber = 28;
+  ::google::protobuf::int32 install_id() const;
+  void set_install_id(::google::protobuf::int32 value);
 
-  // int32 force_close_type = 17;
-  void clear_force_close_type();
-  static const int kForceCloseTypeFieldNumber = 17;
-  ::google::protobuf::int32 force_close_type() const;
-  void set_force_close_type(::google::protobuf::int32 value);
+  // int32 order_submit_status = 29;
+  void clear_order_submit_status();
+  static const int kOrderSubmitStatusFieldNumber = 29;
+  ::google::protobuf::int32 order_submit_status() const;
+  void set_order_submit_status(::google::protobuf::int32 value);
 
-  // int32 order_source_type = 18;
-  void clear_order_source_type();
-  static const int kOrderSourceTypeFieldNumber = 18;
-  ::google::protobuf::int32 order_source_type() const;
-  void set_order_source_type(::google::protobuf::int32 value);
+  // int32 notify_sequence = 30;
+  void clear_notify_sequence();
+  static const int kNotifySequenceFieldNumber = 30;
+  ::google::protobuf::int32 notify_sequence() const;
+  void set_notify_sequence(::google::protobuf::int32 value);
 
-  // .pb.CTPHedgeType order_hedge_type = 19;
-  void clear_order_hedge_type();
-  static const int kOrderHedgeTypeFieldNumber = 19;
-  ::pb::CTPHedgeType order_hedge_type() const;
-  void set_order_hedge_type(::pb::CTPHedgeType value);
+  // int32 trading_day = 31;
+  void clear_trading_day();
+  static const int kTradingDayFieldNumber = 31;
+  ::google::protobuf::int32 trading_day() const;
+  void set_trading_day(::google::protobuf::int32 value);
 
-  // .pb.CurrencyType currency_type = 21;
-  void clear_currency_type();
-  static const int kCurrencyTypeFieldNumber = 21;
-  ::pb::CurrencyType currency_type() const;
-  void set_currency_type(::pb::CurrencyType value);
+  // int32 settlement_id = 32;
+  void clear_settlement_id();
+  static const int kSettlementIdFieldNumber = 32;
+  ::google::protobuf::int32 settlement_id() const;
+  void set_settlement_id(::google::protobuf::int32 value);
 
-  // int32 time_condition_type = 23;
-  void clear_time_condition_type();
-  static const int kTimeConditionTypeFieldNumber = 23;
-  ::google::protobuf::int32 time_condition_type() const;
-  void set_time_condition_type(::google::protobuf::int32 value);
+  // int32 order_source = 34;
+  void clear_order_source();
+  static const int kOrderSourceFieldNumber = 34;
+  ::google::protobuf::int32 order_source() const;
+  void set_order_source(::google::protobuf::int32 value);
 
-  // double commission = 26;
-  void clear_commission();
-  static const int kCommissionFieldNumber = 26;
-  double commission() const;
-  void set_commission(double value);
+  // int32 order_status = 35;
+  void clear_order_status();
+  static const int kOrderStatusFieldNumber = 35;
+  ::google::protobuf::int32 order_status() const;
+  void set_order_status(::google::protobuf::int32 value);
 
-  // int32 local_type_id = 25;
-  void clear_local_type_id();
-  static const int kLocalTypeIdFieldNumber = 25;
-  ::google::protobuf::int32 local_type_id() const;
-  void set_local_type_id(::google::protobuf::int32 value);
+  // int32 order_type = 36;
+  void clear_order_type();
+  static const int kOrderTypeFieldNumber = 36;
+  ::google::protobuf::int32 order_type() const;
+  void set_order_type(::google::protobuf::int32 value);
 
-  // .pb.CTPOffsetFlag offset_flag = 27;
-  void clear_offset_flag();
-  static const int kOffsetFlagFieldNumber = 27;
-  ::pb::CTPOffsetFlag offset_flag() const;
-  void set_offset_flag(::pb::CTPOffsetFlag value);
+  // int32 volume_traded = 37;
+  void clear_volume_traded();
+  static const int kVolumeTradedFieldNumber = 37;
+  ::google::protobuf::int32 volume_traded() const;
+  void set_volume_traded(::google::protobuf::int32 value);
 
-  // double stoploss = 30;
-  void clear_stoploss();
-  static const int kStoplossFieldNumber = 30;
-  double stoploss() const;
-  void set_stoploss(double value);
+  // int32 volume_total = 38;
+  void clear_volume_total();
+  static const int kVolumeTotalFieldNumber = 38;
+  ::google::protobuf::int32 volume_total() const;
+  void set_volume_total(::google::protobuf::int32 value);
 
-  // int32 error_code = 28;
-  void clear_error_code();
-  static const int kErrorCodeFieldNumber = 28;
-  ::google::protobuf::int32 error_code() const;
-  void set_error_code(::google::protobuf::int32 value);
+  // bool is_auto_suspend = 19;
+  void clear_is_auto_suspend();
+  static const int kIsAutoSuspendFieldNumber = 19;
+  bool is_auto_suspend() const;
+  void set_is_auto_suspend(bool value);
 
-  // int32 volume_multiple = 33;
-  void clear_volume_multiple();
-  static const int kVolumeMultipleFieldNumber = 33;
-  ::google::protobuf::int32 volume_multiple() const;
-  void set_volume_multiple(::google::protobuf::int32 value);
+  // bool user_force_close = 52;
+  void clear_user_force_close();
+  static const int kUserForceCloseFieldNumber = 52;
+  bool user_force_close() const;
+  void set_user_force_close(bool value);
 
-  // double take_profit = 31;
-  void clear_take_profit();
-  static const int kTakeProfitFieldNumber = 31;
-  double take_profit() const;
-  void set_take_profit(double value);
+  // bool is_swap_order = 57;
+  void clear_is_swap_order();
+  static const int kIsSwapOrderFieldNumber = 57;
+  bool is_swap_order() const;
+  void set_is_swap_order(bool value);
 
-  // double traded_amount = 32;
-  void clear_traded_amount();
-  static const int kTradedAmountFieldNumber = 32;
-  double traded_amount() const;
-  void set_traded_amount(double value);
+  // int32 sequence_no = 47;
+  void clear_sequence_no();
+  static const int kSequenceNoFieldNumber = 47;
+  ::google::protobuf::int32 sequence_no() const;
+  void set_sequence_no(::google::protobuf::int32 value);
 
-  // double price_tick = 35;
-  void clear_price_tick();
-  static const int kPriceTickFieldNumber = 35;
-  double price_tick() const;
-  void set_price_tick(double value);
+  // int32 front_id = 48;
+  void clear_front_id();
+  static const int kFrontIdFieldNumber = 48;
+  ::google::protobuf::int32 front_id() const;
+  void set_front_id(::google::protobuf::int32 value);
 
-  // double frozen_margin = 36;
-  void clear_frozen_margin();
-  static const int kFrozenMarginFieldNumber = 36;
-  double frozen_margin() const;
-  void set_frozen_margin(double value);
+  // int32 session_id = 49;
+  void clear_session_id();
+  static const int kSessionIdFieldNumber = 49;
+  ::google::protobuf::int32 session_id() const;
+  void set_session_id(::google::protobuf::int32 value);
 
-  // @@protoc_insertion_point(class_scope:pb.CTPOrder)
+  // int32 broker_order_seq = 54;
+  void clear_broker_order_seq();
+  static const int kBrokerOrderSeqFieldNumber = 54;
+  ::google::protobuf::int32 broker_order_seq() const;
+  void set_broker_order_seq(::google::protobuf::int32 value);
+
+  // int32 ZCE_total_traded_volume = 56;
+  void clear_zce_total_traded_volume();
+  static const int kZCETotalTradedVolumeFieldNumber = 56;
+  ::google::protobuf::int32 zce_total_traded_volume() const;
+  void set_zce_total_traded_volume(::google::protobuf::int32 value);
+
+  // @@protoc_insertion_point(class_scope:pb.CTPOrderField)
  private:
   class HasBitSetters;
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::google::protobuf::internal::ArenaStringPtr account_id_;
-  ::google::protobuf::internal::ArenaStringPtr comment_;
+  ::google::protobuf::internal::ArenaStringPtr broker_id_;
+  ::google::protobuf::internal::ArenaStringPtr investor_id_;
+  ::google::protobuf::internal::ArenaStringPtr instrument_id_;
+  ::google::protobuf::internal::ArenaStringPtr order_ref_;
+  ::google::protobuf::internal::ArenaStringPtr user_id_;
+  ::google::protobuf::internal::ArenaStringPtr gtd_date_;
+  ::google::protobuf::internal::ArenaStringPtr business_unit_;
+  ::google::protobuf::internal::ArenaStringPtr order_local_id_;
+  ::google::protobuf::internal::ArenaStringPtr exchange_id_;
+  ::google::protobuf::internal::ArenaStringPtr participant_id_;
+  ::google::protobuf::internal::ArenaStringPtr client_id_;
+  ::google::protobuf::internal::ArenaStringPtr exchange_inst_id_;
+  ::google::protobuf::internal::ArenaStringPtr trader_id_;
+  ::google::protobuf::internal::ArenaStringPtr order_sys_id_;
+  ::google::protobuf::internal::ArenaStringPtr insert_date_;
+  ::google::protobuf::internal::ArenaStringPtr insert_time_;
+  ::google::protobuf::internal::ArenaStringPtr active_time_;
+  ::google::protobuf::internal::ArenaStringPtr suspend_time_;
+  ::google::protobuf::internal::ArenaStringPtr update_time_;
+  ::google::protobuf::internal::ArenaStringPtr cancel_time_;
+  ::google::protobuf::internal::ArenaStringPtr active_trader_id_;
+  ::google::protobuf::internal::ArenaStringPtr clearing_part_id_;
   ::google::protobuf::internal::ArenaStringPtr user_product_info_;
-  ::google::protobuf::internal::ArenaStringPtr exchange_order_id_;
-  ::google::protobuf::internal::ArenaStringPtr route_account_id_;
-  ::google::protobuf::internal::ArenaStringPtr token_;
-  ::google::protobuf::internal::ArenaStringPtr symbol_name_;
-  ::google::protobuf::internal::ArenaStringPtr reason_comment_;
-  ::pb::Symbol* symbol_;
-  ::pb::CTPOrderID* id_;
-  ::pb::ProductID* product_id_;
-  int direction_;
-  int status_;
+  ::google::protobuf::internal::ArenaStringPtr status_msg_;
+  ::google::protobuf::internal::ArenaStringPtr active_user_id_;
+  ::google::protobuf::internal::ArenaStringPtr relative_order_sys_id_;
+  ::google::protobuf::internal::ArenaStringPtr branch_id_;
+  ::google::protobuf::internal::ArenaStringPtr invest_unit_id_;
+  ::google::protobuf::internal::ArenaStringPtr account_id_;
+  ::google::protobuf::internal::ArenaStringPtr currency_id_;
+  ::google::protobuf::internal::ArenaStringPtr ip_address_;
+  ::google::protobuf::internal::ArenaStringPtr mac_address_;
+  ::google::protobuf::int32 order_price_type_;
+  ::google::protobuf::int32 direction_;
+  ::google::protobuf::int32 comb_offset_flag_;
+  ::google::protobuf::int32 comb_hedge_flag_;
   double limit_price_;
-  int price_type_;
-  ::google::protobuf::int32 volume_;
-  ::google::protobuf::int32 volume_traded_;
-  ::google::protobuf::int32 volume_canceled_;
-  double frozen_commission_;
-  ::google::protobuf::int64 send_order_time_;
-  ::google::protobuf::int32 send_order_trading_day_;
+  ::google::protobuf::int32 volume_total_original_;
+  ::google::protobuf::int32 time_condition_;
+  ::google::protobuf::int32 volume_condition_;
+  ::google::protobuf::int32 min_volume_;
+  double stop_price_;
+  ::google::protobuf::int32 contingent_condition_;
+  ::google::protobuf::int32 force_close_reason_;
   ::google::protobuf::int32 request_id_;
-  ::google::protobuf::int32 local_order_seq_;
-  ::google::protobuf::int32 force_close_type_;
-  ::google::protobuf::int32 order_source_type_;
-  int order_hedge_type_;
-  int currency_type_;
-  ::google::protobuf::int32 time_condition_type_;
-  double commission_;
-  ::google::protobuf::int32 local_type_id_;
-  int offset_flag_;
-  double stoploss_;
-  ::google::protobuf::int32 error_code_;
-  ::google::protobuf::int32 volume_multiple_;
-  double take_profit_;
-  double traded_amount_;
-  double price_tick_;
-  double frozen_margin_;
+  ::google::protobuf::int32 install_id_;
+  ::google::protobuf::int32 order_submit_status_;
+  ::google::protobuf::int32 notify_sequence_;
+  ::google::protobuf::int32 trading_day_;
+  ::google::protobuf::int32 settlement_id_;
+  ::google::protobuf::int32 order_source_;
+  ::google::protobuf::int32 order_status_;
+  ::google::protobuf::int32 order_type_;
+  ::google::protobuf::int32 volume_traded_;
+  ::google::protobuf::int32 volume_total_;
+  bool is_auto_suspend_;
+  bool user_force_close_;
+  bool is_swap_order_;
+  ::google::protobuf::int32 sequence_no_;
+  ::google::protobuf::int32 front_id_;
+  ::google::protobuf::int32 session_id_;
+  ::google::protobuf::int32 broker_order_seq_;
+  ::google::protobuf::int32 zce_total_traded_volume_;
   mutable ::google::protobuf::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_ctp_2eproto;
 };
@@ -1071,16 +1429,16 @@ class CTPOrderList :
 
   // accessors -------------------------------------------------------
 
-  // repeated .pb.CTPOrder list = 1;
+  // repeated .pb.CTPOrderField list = 1;
   int list_size() const;
   void clear_list();
   static const int kListFieldNumber = 1;
-  ::pb::CTPOrder* mutable_list(int index);
-  ::google::protobuf::RepeatedPtrField< ::pb::CTPOrder >*
+  ::pb::CTPOrderField* mutable_list(int index);
+  ::google::protobuf::RepeatedPtrField< ::pb::CTPOrderField >*
       mutable_list();
-  const ::pb::CTPOrder& list(int index) const;
-  ::pb::CTPOrder* add_list();
-  const ::google::protobuf::RepeatedPtrField< ::pb::CTPOrder >&
+  const ::pb::CTPOrderField& list(int index) const;
+  ::pb::CTPOrderField* add_list();
+  const ::google::protobuf::RepeatedPtrField< ::pb::CTPOrderField >&
       list() const;
 
   // @@protoc_insertion_point(class_scope:pb.CTPOrderList)
@@ -1088,7 +1446,7 @@ class CTPOrderList :
   class HasBitSetters;
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::google::protobuf::RepeatedPtrField< ::pb::CTPOrder > list_;
+  ::google::protobuf::RepeatedPtrField< ::pb::CTPOrderField > list_;
   mutable ::google::protobuf::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_ctp_2eproto;
 };
@@ -1189,34 +1547,34 @@ class CTPOrderLink :
 
   // accessors -------------------------------------------------------
 
-  // repeated .pb.CTPOrder children = 2;
+  // repeated .pb.CTPOrderField children = 2;
   int children_size() const;
   void clear_children();
   static const int kChildrenFieldNumber = 2;
-  ::pb::CTPOrder* mutable_children(int index);
-  ::google::protobuf::RepeatedPtrField< ::pb::CTPOrder >*
+  ::pb::CTPOrderField* mutable_children(int index);
+  ::google::protobuf::RepeatedPtrField< ::pb::CTPOrderField >*
       mutable_children();
-  const ::pb::CTPOrder& children(int index) const;
-  ::pb::CTPOrder* add_children();
-  const ::google::protobuf::RepeatedPtrField< ::pb::CTPOrder >&
+  const ::pb::CTPOrderField& children(int index) const;
+  ::pb::CTPOrderField* add_children();
+  const ::google::protobuf::RepeatedPtrField< ::pb::CTPOrderField >&
       children() const;
 
-  // .pb.CTPOrder parent = 1;
+  // .pb.CTPOrderField parent = 1;
   bool has_parent() const;
   void clear_parent();
   static const int kParentFieldNumber = 1;
-  const ::pb::CTPOrder& parent() const;
-  ::pb::CTPOrder* release_parent();
-  ::pb::CTPOrder* mutable_parent();
-  void set_allocated_parent(::pb::CTPOrder* parent);
+  const ::pb::CTPOrderField& parent() const;
+  ::pb::CTPOrderField* release_parent();
+  ::pb::CTPOrderField* mutable_parent();
+  void set_allocated_parent(::pb::CTPOrderField* parent);
 
   // @@protoc_insertion_point(class_scope:pb.CTPOrderLink)
  private:
   class HasBitSetters;
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::google::protobuf::RepeatedPtrField< ::pb::CTPOrder > children_;
-  ::pb::CTPOrder* parent_;
+  ::google::protobuf::RepeatedPtrField< ::pb::CTPOrderField > children_;
+  ::pb::CTPOrderField* parent_;
   mutable ::google::protobuf::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_ctp_2eproto;
 };
@@ -1634,25 +1992,25 @@ class CTPOnRtnCancelOrder :
 };
 // -------------------------------------------------------------------
 
-class CTPTradeReport :
-    public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:pb.CTPTradeReport) */ {
+class CTPTradeField :
+    public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:pb.CTPTradeField) */ {
  public:
-  CTPTradeReport();
-  virtual ~CTPTradeReport();
+  CTPTradeField();
+  virtual ~CTPTradeField();
 
-  CTPTradeReport(const CTPTradeReport& from);
+  CTPTradeField(const CTPTradeField& from);
 
-  inline CTPTradeReport& operator=(const CTPTradeReport& from) {
+  inline CTPTradeField& operator=(const CTPTradeField& from) {
     CopyFrom(from);
     return *this;
   }
   #if LANG_CXX11
-  CTPTradeReport(CTPTradeReport&& from) noexcept
-    : CTPTradeReport() {
+  CTPTradeField(CTPTradeField&& from) noexcept
+    : CTPTradeField() {
     *this = ::std::move(from);
   }
 
-  inline CTPTradeReport& operator=(CTPTradeReport&& from) noexcept {
+  inline CTPTradeField& operator=(CTPTradeField&& from) noexcept {
     if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
       if (this != &from) InternalSwap(&from);
     } else {
@@ -1664,34 +2022,34 @@ class CTPTradeReport :
   static const ::google::protobuf::Descriptor* descriptor() {
     return default_instance().GetDescriptor();
   }
-  static const CTPTradeReport& default_instance();
+  static const CTPTradeField& default_instance();
 
   static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
-  static inline const CTPTradeReport* internal_default_instance() {
-    return reinterpret_cast<const CTPTradeReport*>(
-               &_CTPTradeReport_default_instance_);
+  static inline const CTPTradeField* internal_default_instance() {
+    return reinterpret_cast<const CTPTradeField*>(
+               &_CTPTradeField_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     6;
 
-  void Swap(CTPTradeReport* other);
-  friend void swap(CTPTradeReport& a, CTPTradeReport& b) {
+  void Swap(CTPTradeField* other);
+  friend void swap(CTPTradeField& a, CTPTradeField& b) {
     a.Swap(&b);
   }
 
   // implements Message ----------------------------------------------
 
-  inline CTPTradeReport* New() const final {
-    return CreateMaybeMessage<CTPTradeReport>(nullptr);
+  inline CTPTradeField* New() const final {
+    return CreateMaybeMessage<CTPTradeField>(nullptr);
   }
 
-  CTPTradeReport* New(::google::protobuf::Arena* arena) const final {
-    return CreateMaybeMessage<CTPTradeReport>(arena);
+  CTPTradeField* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<CTPTradeField>(arena);
   }
   void CopyFrom(const ::google::protobuf::Message& from) final;
   void MergeFrom(const ::google::protobuf::Message& from) final;
-  void CopyFrom(const CTPTradeReport& from);
-  void MergeFrom(const CTPTradeReport& from);
+  void CopyFrom(const CTPTradeField& from);
+  void MergeFrom(const CTPTradeField& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1713,7 +2071,7 @@ class CTPTradeReport :
   void SharedCtor();
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(CTPTradeReport* other);
+  void InternalSwap(CTPTradeField* other);
   private:
   inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
     return nullptr;
@@ -1729,23 +2087,93 @@ class CTPTradeReport :
 
   // accessors -------------------------------------------------------
 
-  // string account_id = 1;
-  void clear_account_id();
-  static const int kAccountIdFieldNumber = 1;
-  const ::std::string& account_id() const;
-  void set_account_id(const ::std::string& value);
+  // string broker_id = 1;
+  void clear_broker_id();
+  static const int kBrokerIdFieldNumber = 1;
+  const ::std::string& broker_id() const;
+  void set_broker_id(const ::std::string& value);
   #if LANG_CXX11
-  void set_account_id(::std::string&& value);
+  void set_broker_id(::std::string&& value);
   #endif
-  void set_account_id(const char* value);
-  void set_account_id(const char* value, size_t size);
-  ::std::string* mutable_account_id();
-  ::std::string* release_account_id();
-  void set_allocated_account_id(::std::string* account_id);
+  void set_broker_id(const char* value);
+  void set_broker_id(const char* value, size_t size);
+  ::std::string* mutable_broker_id();
+  ::std::string* release_broker_id();
+  void set_allocated_broker_id(::std::string* broker_id);
 
-  // string trade_id = 2;
+  // string investor_id = 2;
+  void clear_investor_id();
+  static const int kInvestorIdFieldNumber = 2;
+  const ::std::string& investor_id() const;
+  void set_investor_id(const ::std::string& value);
+  #if LANG_CXX11
+  void set_investor_id(::std::string&& value);
+  #endif
+  void set_investor_id(const char* value);
+  void set_investor_id(const char* value, size_t size);
+  ::std::string* mutable_investor_id();
+  ::std::string* release_investor_id();
+  void set_allocated_investor_id(::std::string* investor_id);
+
+  // string instrument_id = 3;
+  void clear_instrument_id();
+  static const int kInstrumentIdFieldNumber = 3;
+  const ::std::string& instrument_id() const;
+  void set_instrument_id(const ::std::string& value);
+  #if LANG_CXX11
+  void set_instrument_id(::std::string&& value);
+  #endif
+  void set_instrument_id(const char* value);
+  void set_instrument_id(const char* value, size_t size);
+  ::std::string* mutable_instrument_id();
+  ::std::string* release_instrument_id();
+  void set_allocated_instrument_id(::std::string* instrument_id);
+
+  // string order_ref = 4;
+  void clear_order_ref();
+  static const int kOrderRefFieldNumber = 4;
+  const ::std::string& order_ref() const;
+  void set_order_ref(const ::std::string& value);
+  #if LANG_CXX11
+  void set_order_ref(::std::string&& value);
+  #endif
+  void set_order_ref(const char* value);
+  void set_order_ref(const char* value, size_t size);
+  ::std::string* mutable_order_ref();
+  ::std::string* release_order_ref();
+  void set_allocated_order_ref(::std::string* order_ref);
+
+  // string user_id = 5;
+  void clear_user_id();
+  static const int kUserIdFieldNumber = 5;
+  const ::std::string& user_id() const;
+  void set_user_id(const ::std::string& value);
+  #if LANG_CXX11
+  void set_user_id(::std::string&& value);
+  #endif
+  void set_user_id(const char* value);
+  void set_user_id(const char* value, size_t size);
+  ::std::string* mutable_user_id();
+  ::std::string* release_user_id();
+  void set_allocated_user_id(::std::string* user_id);
+
+  // string exchange_id = 6;
+  void clear_exchange_id();
+  static const int kExchangeIdFieldNumber = 6;
+  const ::std::string& exchange_id() const;
+  void set_exchange_id(const ::std::string& value);
+  #if LANG_CXX11
+  void set_exchange_id(::std::string&& value);
+  #endif
+  void set_exchange_id(const char* value);
+  void set_exchange_id(const char* value, size_t size);
+  ::std::string* mutable_exchange_id();
+  ::std::string* release_exchange_id();
+  void set_allocated_exchange_id(::std::string* exchange_id);
+
+  // string trade_id = 7;
   void clear_trade_id();
-  static const int kTradeIdFieldNumber = 2;
+  static const int kTradeIdFieldNumber = 7;
   const ::std::string& trade_id() const;
   void set_trade_id(const ::std::string& value);
   #if LANG_CXX11
@@ -1757,197 +2185,274 @@ class CTPTradeReport :
   ::std::string* release_trade_id();
   void set_allocated_trade_id(::std::string* trade_id);
 
-  // string exchange_order_id = 14;
-  void clear_exchange_order_id();
-  static const int kExchangeOrderIdFieldNumber = 14;
-  const ::std::string& exchange_order_id() const;
-  void set_exchange_order_id(const ::std::string& value);
+  // string order_sys_id = 9;
+  void clear_order_sys_id();
+  static const int kOrderSysIdFieldNumber = 9;
+  const ::std::string& order_sys_id() const;
+  void set_order_sys_id(const ::std::string& value);
   #if LANG_CXX11
-  void set_exchange_order_id(::std::string&& value);
+  void set_order_sys_id(::std::string&& value);
   #endif
-  void set_exchange_order_id(const char* value);
-  void set_exchange_order_id(const char* value, size_t size);
-  ::std::string* mutable_exchange_order_id();
-  ::std::string* release_exchange_order_id();
-  void set_allocated_exchange_order_id(::std::string* exchange_order_id);
+  void set_order_sys_id(const char* value);
+  void set_order_sys_id(const char* value, size_t size);
+  ::std::string* mutable_order_sys_id();
+  ::std::string* release_order_sys_id();
+  void set_allocated_order_sys_id(::std::string* order_sys_id);
 
-  // string route_account_id = 22;
-  void clear_route_account_id();
-  static const int kRouteAccountIdFieldNumber = 22;
-  const ::std::string& route_account_id() const;
-  void set_route_account_id(const ::std::string& value);
+  // string participant_id = 10;
+  void clear_participant_id();
+  static const int kParticipantIdFieldNumber = 10;
+  const ::std::string& participant_id() const;
+  void set_participant_id(const ::std::string& value);
   #if LANG_CXX11
-  void set_route_account_id(::std::string&& value);
+  void set_participant_id(::std::string&& value);
   #endif
-  void set_route_account_id(const char* value);
-  void set_route_account_id(const char* value, size_t size);
-  ::std::string* mutable_route_account_id();
-  ::std::string* release_route_account_id();
-  void set_allocated_route_account_id(::std::string* route_account_id);
+  void set_participant_id(const char* value);
+  void set_participant_id(const char* value, size_t size);
+  ::std::string* mutable_participant_id();
+  ::std::string* release_participant_id();
+  void set_allocated_participant_id(::std::string* participant_id);
 
-  // string symbol_name = 23;
-  void clear_symbol_name();
-  static const int kSymbolNameFieldNumber = 23;
-  const ::std::string& symbol_name() const;
-  void set_symbol_name(const ::std::string& value);
+  // string client_id = 11;
+  void clear_client_id();
+  static const int kClientIdFieldNumber = 11;
+  const ::std::string& client_id() const;
+  void set_client_id(const ::std::string& value);
   #if LANG_CXX11
-  void set_symbol_name(::std::string&& value);
+  void set_client_id(::std::string&& value);
   #endif
-  void set_symbol_name(const char* value);
-  void set_symbol_name(const char* value, size_t size);
-  ::std::string* mutable_symbol_name();
-  ::std::string* release_symbol_name();
-  void set_allocated_symbol_name(::std::string* symbol_name);
+  void set_client_id(const char* value);
+  void set_client_id(const char* value, size_t size);
+  ::std::string* mutable_client_id();
+  ::std::string* release_client_id();
+  void set_allocated_client_id(::std::string* client_id);
 
-  // .pb.Symbol symbol = 3;
-  bool has_symbol() const;
-  void clear_symbol();
-  static const int kSymbolFieldNumber = 3;
-  const ::pb::Symbol& symbol() const;
-  ::pb::Symbol* release_symbol();
-  ::pb::Symbol* mutable_symbol();
-  void set_allocated_symbol(::pb::Symbol* symbol);
+  // string exchange_inst_id = 13;
+  void clear_exchange_inst_id();
+  static const int kExchangeInstIdFieldNumber = 13;
+  const ::std::string& exchange_inst_id() const;
+  void set_exchange_inst_id(const ::std::string& value);
+  #if LANG_CXX11
+  void set_exchange_inst_id(::std::string&& value);
+  #endif
+  void set_exchange_inst_id(const char* value);
+  void set_exchange_inst_id(const char* value, size_t size);
+  ::std::string* mutable_exchange_inst_id();
+  ::std::string* release_exchange_inst_id();
+  void set_allocated_exchange_inst_id(::std::string* exchange_inst_id);
 
-  // .pb.CTPOrderID order_id = 9;
-  bool has_order_id() const;
-  void clear_order_id();
-  static const int kOrderIdFieldNumber = 9;
-  const ::pb::CTPOrderID& order_id() const;
-  ::pb::CTPOrderID* release_order_id();
-  ::pb::CTPOrderID* mutable_order_id();
-  void set_allocated_order_id(::pb::CTPOrderID* order_id);
+  // string trade_date = 18;
+  void clear_trade_date();
+  static const int kTradeDateFieldNumber = 18;
+  const ::std::string& trade_date() const;
+  void set_trade_date(const ::std::string& value);
+  #if LANG_CXX11
+  void set_trade_date(::std::string&& value);
+  #endif
+  void set_trade_date(const char* value);
+  void set_trade_date(const char* value, size_t size);
+  ::std::string* mutable_trade_date();
+  ::std::string* release_trade_date();
+  void set_allocated_trade_date(::std::string* trade_date);
 
-  // double price = 5;
+  // string trade_time = 19;
+  void clear_trade_time();
+  static const int kTradeTimeFieldNumber = 19;
+  const ::std::string& trade_time() const;
+  void set_trade_time(const ::std::string& value);
+  #if LANG_CXX11
+  void set_trade_time(::std::string&& value);
+  #endif
+  void set_trade_time(const char* value);
+  void set_trade_time(const char* value, size_t size);
+  ::std::string* mutable_trade_time();
+  ::std::string* release_trade_time();
+  void set_allocated_trade_time(::std::string* trade_time);
+
+  // string trader_id = 22;
+  void clear_trader_id();
+  static const int kTraderIdFieldNumber = 22;
+  const ::std::string& trader_id() const;
+  void set_trader_id(const ::std::string& value);
+  #if LANG_CXX11
+  void set_trader_id(::std::string&& value);
+  #endif
+  void set_trader_id(const char* value);
+  void set_trader_id(const char* value, size_t size);
+  ::std::string* mutable_trader_id();
+  ::std::string* release_trader_id();
+  void set_allocated_trader_id(::std::string* trader_id);
+
+  // string order_local_id = 23;
+  void clear_order_local_id();
+  static const int kOrderLocalIdFieldNumber = 23;
+  const ::std::string& order_local_id() const;
+  void set_order_local_id(const ::std::string& value);
+  #if LANG_CXX11
+  void set_order_local_id(::std::string&& value);
+  #endif
+  void set_order_local_id(const char* value);
+  void set_order_local_id(const char* value, size_t size);
+  ::std::string* mutable_order_local_id();
+  ::std::string* release_order_local_id();
+  void set_allocated_order_local_id(::std::string* order_local_id);
+
+  // string clearing_part_id = 24;
+  void clear_clearing_part_id();
+  static const int kClearingPartIdFieldNumber = 24;
+  const ::std::string& clearing_part_id() const;
+  void set_clearing_part_id(const ::std::string& value);
+  #if LANG_CXX11
+  void set_clearing_part_id(::std::string&& value);
+  #endif
+  void set_clearing_part_id(const char* value);
+  void set_clearing_part_id(const char* value, size_t size);
+  ::std::string* mutable_clearing_part_id();
+  ::std::string* release_clearing_part_id();
+  void set_allocated_clearing_part_id(::std::string* clearing_part_id);
+
+  // string business_unit = 25;
+  void clear_business_unit();
+  static const int kBusinessUnitFieldNumber = 25;
+  const ::std::string& business_unit() const;
+  void set_business_unit(const ::std::string& value);
+  #if LANG_CXX11
+  void set_business_unit(::std::string&& value);
+  #endif
+  void set_business_unit(const char* value);
+  void set_business_unit(const char* value, size_t size);
+  ::std::string* mutable_business_unit();
+  ::std::string* release_business_unit();
+  void set_allocated_business_unit(::std::string* business_unit);
+
+  // string invest_unit_id = 31;
+  void clear_invest_unit_id();
+  static const int kInvestUnitIdFieldNumber = 31;
+  const ::std::string& invest_unit_id() const;
+  void set_invest_unit_id(const ::std::string& value);
+  #if LANG_CXX11
+  void set_invest_unit_id(::std::string&& value);
+  #endif
+  void set_invest_unit_id(const char* value);
+  void set_invest_unit_id(const char* value, size_t size);
+  ::std::string* mutable_invest_unit_id();
+  ::std::string* release_invest_unit_id();
+  void set_allocated_invest_unit_id(::std::string* invest_unit_id);
+
+  // int32 direction = 8;
+  void clear_direction();
+  static const int kDirectionFieldNumber = 8;
+  ::google::protobuf::int32 direction() const;
+  void set_direction(::google::protobuf::int32 value);
+
+  // int32 trading_role = 12;
+  void clear_trading_role();
+  static const int kTradingRoleFieldNumber = 12;
+  ::google::protobuf::int32 trading_role() const;
+  void set_trading_role(::google::protobuf::int32 value);
+
+  // int32 offset_flag = 14;
+  void clear_offset_flag();
+  static const int kOffsetFlagFieldNumber = 14;
+  ::google::protobuf::int32 offset_flag() const;
+  void set_offset_flag(::google::protobuf::int32 value);
+
+  // int32 hedge_flag = 15;
+  void clear_hedge_flag();
+  static const int kHedgeFlagFieldNumber = 15;
+  ::google::protobuf::int32 hedge_flag() const;
+  void set_hedge_flag(::google::protobuf::int32 value);
+
+  // double price = 16;
   void clear_price();
-  static const int kPriceFieldNumber = 5;
+  static const int kPriceFieldNumber = 16;
   double price() const;
   void set_price(double value);
 
-  // .pb.CTPDirection direction = 4;
-  void clear_direction();
-  static const int kDirectionFieldNumber = 4;
-  ::pb::CTPDirection direction() const;
-  void set_direction(::pb::CTPDirection value);
-
-  // int32 volume = 6;
+  // int32 volume = 17;
   void clear_volume();
-  static const int kVolumeFieldNumber = 6;
+  static const int kVolumeFieldNumber = 17;
   ::google::protobuf::int32 volume() const;
   void set_volume(::google::protobuf::int32 value);
 
-  // int64 traded_time = 7;
-  void clear_traded_time();
-  static const int kTradedTimeFieldNumber = 7;
-  ::google::protobuf::int64 traded_time() const;
-  void set_traded_time(::google::protobuf::int64 value);
-
-  // int32 traded_trading_day = 8;
-  void clear_traded_trading_day();
-  static const int kTradedTradingDayFieldNumber = 8;
-  ::google::protobuf::int32 traded_trading_day() const;
-  void set_traded_trading_day(::google::protobuf::int32 value);
-
-  // .pb.CTPPriceType price_type = 10;
-  void clear_price_type();
-  static const int kPriceTypeFieldNumber = 10;
-  ::pb::CTPPriceType price_type() const;
-  void set_price_type(::pb::CTPPriceType value);
-
-  // .pb.CTPHedgeType hedge_type = 11;
-  void clear_hedge_type();
-  static const int kHedgeTypeFieldNumber = 11;
-  ::pb::CTPHedgeType hedge_type() const;
-  void set_hedge_type(::pb::CTPHedgeType value);
-
-  // .pb.CTPTradeType trade_type = 12;
+  // int32 trade_type = 20;
   void clear_trade_type();
-  static const int kTradeTypeFieldNumber = 12;
-  ::pb::CTPTradeType trade_type() const;
-  void set_trade_type(::pb::CTPTradeType value);
+  static const int kTradeTypeFieldNumber = 20;
+  ::google::protobuf::int32 trade_type() const;
+  void set_trade_type(::google::protobuf::int32 value);
 
-  // int32 currency_type = 13;
-  void clear_currency_type();
-  static const int kCurrencyTypeFieldNumber = 13;
-  ::google::protobuf::int32 currency_type() const;
-  void set_currency_type(::google::protobuf::int32 value);
+  // int32 price_source = 21;
+  void clear_price_source();
+  static const int kPriceSourceFieldNumber = 21;
+  ::google::protobuf::int32 price_source() const;
+  void set_price_source(::google::protobuf::int32 value);
 
-  // int32 local_type_id = 15;
-  void clear_local_type_id();
-  static const int kLocalTypeIdFieldNumber = 15;
-  ::google::protobuf::int32 local_type_id() const;
-  void set_local_type_id(::google::protobuf::int32 value);
+  // int32 sequence_no = 26;
+  void clear_sequence_no();
+  static const int kSequenceNoFieldNumber = 26;
+  ::google::protobuf::int32 sequence_no() const;
+  void set_sequence_no(::google::protobuf::int32 value);
 
-  // double commission = 16;
-  void clear_commission();
-  static const int kCommissionFieldNumber = 16;
-  double commission() const;
-  void set_commission(double value);
+  // int32 trading_day = 27;
+  void clear_trading_day();
+  static const int kTradingDayFieldNumber = 27;
+  ::google::protobuf::int32 trading_day() const;
+  void set_trading_day(::google::protobuf::int32 value);
 
-  // double tax = 17;
-  void clear_tax();
-  static const int kTaxFieldNumber = 17;
-  double tax() const;
-  void set_tax(double value);
+  // int32 settlement_id = 28;
+  void clear_settlement_id();
+  static const int kSettlementIdFieldNumber = 28;
+  ::google::protobuf::int32 settlement_id() const;
+  void set_settlement_id(::google::protobuf::int32 value);
 
-  // double total_other_fee = 18;
-  void clear_total_other_fee();
-  static const int kTotalOtherFeeFieldNumber = 18;
-  double total_other_fee() const;
-  void set_total_other_fee(double value);
+  // int32 broker_order_seq = 29;
+  void clear_broker_order_seq();
+  static const int kBrokerOrderSeqFieldNumber = 29;
+  ::google::protobuf::int32 broker_order_seq() const;
+  void set_broker_order_seq(::google::protobuf::int32 value);
 
-  // double initial_traded_price = 19;
-  void clear_initial_traded_price();
-  static const int kInitialTradedPriceFieldNumber = 19;
-  double initial_traded_price() const;
-  void set_initial_traded_price(double value);
+  // int32 trade_source = 30;
+  void clear_trade_source();
+  static const int kTradeSourceFieldNumber = 30;
+  ::google::protobuf::int32 trade_source() const;
+  void set_trade_source(::google::protobuf::int32 value);
 
-  // double reserve = 20;
-  void clear_reserve();
-  static const int kReserveFieldNumber = 20;
-  double reserve() const;
-  void set_reserve(double value);
-
-  // double price_tick = 24;
-  void clear_price_tick();
-  static const int kPriceTickFieldNumber = 24;
-  double price_tick() const;
-  void set_price_tick(double value);
-
-  // .pb.CTPOffsetFlag offset_flag = 21;
-  void clear_offset_flag();
-  static const int kOffsetFlagFieldNumber = 21;
-  ::pb::CTPOffsetFlag offset_flag() const;
-  void set_offset_flag(::pb::CTPOffsetFlag value);
-
-  // @@protoc_insertion_point(class_scope:pb.CTPTradeReport)
+  // @@protoc_insertion_point(class_scope:pb.CTPTradeField)
  private:
   class HasBitSetters;
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::google::protobuf::internal::ArenaStringPtr account_id_;
+  ::google::protobuf::internal::ArenaStringPtr broker_id_;
+  ::google::protobuf::internal::ArenaStringPtr investor_id_;
+  ::google::protobuf::internal::ArenaStringPtr instrument_id_;
+  ::google::protobuf::internal::ArenaStringPtr order_ref_;
+  ::google::protobuf::internal::ArenaStringPtr user_id_;
+  ::google::protobuf::internal::ArenaStringPtr exchange_id_;
   ::google::protobuf::internal::ArenaStringPtr trade_id_;
-  ::google::protobuf::internal::ArenaStringPtr exchange_order_id_;
-  ::google::protobuf::internal::ArenaStringPtr route_account_id_;
-  ::google::protobuf::internal::ArenaStringPtr symbol_name_;
-  ::pb::Symbol* symbol_;
-  ::pb::CTPOrderID* order_id_;
+  ::google::protobuf::internal::ArenaStringPtr order_sys_id_;
+  ::google::protobuf::internal::ArenaStringPtr participant_id_;
+  ::google::protobuf::internal::ArenaStringPtr client_id_;
+  ::google::protobuf::internal::ArenaStringPtr exchange_inst_id_;
+  ::google::protobuf::internal::ArenaStringPtr trade_date_;
+  ::google::protobuf::internal::ArenaStringPtr trade_time_;
+  ::google::protobuf::internal::ArenaStringPtr trader_id_;
+  ::google::protobuf::internal::ArenaStringPtr order_local_id_;
+  ::google::protobuf::internal::ArenaStringPtr clearing_part_id_;
+  ::google::protobuf::internal::ArenaStringPtr business_unit_;
+  ::google::protobuf::internal::ArenaStringPtr invest_unit_id_;
+  ::google::protobuf::int32 direction_;
+  ::google::protobuf::int32 trading_role_;
+  ::google::protobuf::int32 offset_flag_;
+  ::google::protobuf::int32 hedge_flag_;
   double price_;
-  int direction_;
   ::google::protobuf::int32 volume_;
-  ::google::protobuf::int64 traded_time_;
-  ::google::protobuf::int32 traded_trading_day_;
-  int price_type_;
-  int hedge_type_;
-  int trade_type_;
-  ::google::protobuf::int32 currency_type_;
-  ::google::protobuf::int32 local_type_id_;
-  double commission_;
-  double tax_;
-  double total_other_fee_;
-  double initial_traded_price_;
-  double reserve_;
-  double price_tick_;
-  int offset_flag_;
+  ::google::protobuf::int32 trade_type_;
+  ::google::protobuf::int32 price_source_;
+  ::google::protobuf::int32 sequence_no_;
+  ::google::protobuf::int32 trading_day_;
+  ::google::protobuf::int32 settlement_id_;
+  ::google::protobuf::int32 broker_order_seq_;
+  ::google::protobuf::int32 trade_source_;
   mutable ::google::protobuf::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_ctp_2eproto;
 };
@@ -2048,16 +2553,16 @@ class CTPTradeReportList :
 
   // accessors -------------------------------------------------------
 
-  // repeated .pb.CTPTradeReport list = 1;
+  // repeated .pb.CTPTradeField list = 1;
   int list_size() const;
   void clear_list();
   static const int kListFieldNumber = 1;
-  ::pb::CTPTradeReport* mutable_list(int index);
-  ::google::protobuf::RepeatedPtrField< ::pb::CTPTradeReport >*
+  ::pb::CTPTradeField* mutable_list(int index);
+  ::google::protobuf::RepeatedPtrField< ::pb::CTPTradeField >*
       mutable_list();
-  const ::pb::CTPTradeReport& list(int index) const;
-  ::pb::CTPTradeReport* add_list();
-  const ::google::protobuf::RepeatedPtrField< ::pb::CTPTradeReport >&
+  const ::pb::CTPTradeField& list(int index) const;
+  ::pb::CTPTradeField* add_list();
+  const ::google::protobuf::RepeatedPtrField< ::pb::CTPTradeField >&
       list() const;
 
   // @@protoc_insertion_point(class_scope:pb.CTPTradeReportList)
@@ -2065,7 +2570,7 @@ class CTPTradeReportList :
   class HasBitSetters;
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::google::protobuf::RepeatedPtrField< ::pb::CTPTradeReport > list_;
+  ::google::protobuf::RepeatedPtrField< ::pb::CTPTradeField > list_;
   mutable ::google::protobuf::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_ctp_2eproto;
 };
@@ -3899,28 +4404,28 @@ class CTPTradingUnit :
   const ::google::protobuf::RepeatedPtrField< ::pb::CTPCloseTradeRecord >&
       history_ctr_list() const;
 
-  // repeated .pb.CTPOrder history_order_list = 6;
+  // repeated .pb.CTPOrderField history_order_list = 6;
   int history_order_list_size() const;
   void clear_history_order_list();
   static const int kHistoryOrderListFieldNumber = 6;
-  ::pb::CTPOrder* mutable_history_order_list(int index);
-  ::google::protobuf::RepeatedPtrField< ::pb::CTPOrder >*
+  ::pb::CTPOrderField* mutable_history_order_list(int index);
+  ::google::protobuf::RepeatedPtrField< ::pb::CTPOrderField >*
       mutable_history_order_list();
-  const ::pb::CTPOrder& history_order_list(int index) const;
-  ::pb::CTPOrder* add_history_order_list();
-  const ::google::protobuf::RepeatedPtrField< ::pb::CTPOrder >&
+  const ::pb::CTPOrderField& history_order_list(int index) const;
+  ::pb::CTPOrderField* add_history_order_list();
+  const ::google::protobuf::RepeatedPtrField< ::pb::CTPOrderField >&
       history_order_list() const;
 
-  // repeated .pb.CTPTradeReport history_trade_list = 7;
+  // repeated .pb.CTPTradeField history_trade_list = 7;
   int history_trade_list_size() const;
   void clear_history_trade_list();
   static const int kHistoryTradeListFieldNumber = 7;
-  ::pb::CTPTradeReport* mutable_history_trade_list(int index);
-  ::google::protobuf::RepeatedPtrField< ::pb::CTPTradeReport >*
+  ::pb::CTPTradeField* mutable_history_trade_list(int index);
+  ::google::protobuf::RepeatedPtrField< ::pb::CTPTradeField >*
       mutable_history_trade_list();
-  const ::pb::CTPTradeReport& history_trade_list(int index) const;
-  ::pb::CTPTradeReport* add_history_trade_list();
-  const ::google::protobuf::RepeatedPtrField< ::pb::CTPTradeReport >&
+  const ::pb::CTPTradeField& history_trade_list(int index) const;
+  ::pb::CTPTradeField* add_history_trade_list();
+  const ::google::protobuf::RepeatedPtrField< ::pb::CTPTradeField >&
       history_trade_list() const;
 
   // .pb.Symbol symbol = 1;
@@ -3983,8 +4488,8 @@ class CTPTradingUnit :
   ::google::protobuf::RepeatedPtrField< ::pb::CTPOrderLink > order_link_list_;
   ::google::protobuf::RepeatedPtrField< ::pb::CTPCloseTradeRecord > position_detail_list_;
   ::google::protobuf::RepeatedPtrField< ::pb::CTPCloseTradeRecord > history_ctr_list_;
-  ::google::protobuf::RepeatedPtrField< ::pb::CTPOrder > history_order_list_;
-  ::google::protobuf::RepeatedPtrField< ::pb::CTPTradeReport > history_trade_list_;
+  ::google::protobuf::RepeatedPtrField< ::pb::CTPOrderField > history_order_list_;
+  ::google::protobuf::RepeatedPtrField< ::pb::CTPTradeField > history_trade_list_;
   ::pb::Symbol* symbol_;
   ::pb::CTPCommissionRate* cr_;
   ::pb::CTPMarginRate* mr_;
@@ -9517,980 +10022,2167 @@ inline void CTPOrderID::set_allocated_string_id(::std::string* string_id) {
 
 // -------------------------------------------------------------------
 
-// CTPOrder
+// CTPOrderField
 
-// .pb.Symbol symbol = 1;
-inline bool CTPOrder::has_symbol() const {
-  return this != internal_default_instance() && symbol_ != nullptr;
+// string broker_id = 1;
+inline void CTPOrderField::clear_broker_id() {
+  broker_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline const ::pb::Symbol& CTPOrder::symbol() const {
-  const ::pb::Symbol* p = symbol_;
-  // @@protoc_insertion_point(field_get:pb.CTPOrder.symbol)
-  return p != nullptr ? *p : *reinterpret_cast<const ::pb::Symbol*>(
-      &::pb::_Symbol_default_instance_);
+inline const ::std::string& CTPOrderField::broker_id() const {
+  // @@protoc_insertion_point(field_get:pb.CTPOrderField.broker_id)
+  return broker_id_.GetNoArena();
 }
-inline ::pb::Symbol* CTPOrder::release_symbol() {
-  // @@protoc_insertion_point(field_release:pb.CTPOrder.symbol)
+inline void CTPOrderField::set_broker_id(const ::std::string& value) {
   
-  ::pb::Symbol* temp = symbol_;
-  symbol_ = nullptr;
-  return temp;
-}
-inline ::pb::Symbol* CTPOrder::mutable_symbol() {
-  
-  if (symbol_ == nullptr) {
-    auto* p = CreateMaybeMessage<::pb::Symbol>(GetArenaNoVirtual());
-    symbol_ = p;
-  }
-  // @@protoc_insertion_point(field_mutable:pb.CTPOrder.symbol)
-  return symbol_;
-}
-inline void CTPOrder::set_allocated_symbol(::pb::Symbol* symbol) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == nullptr) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(symbol_);
-  }
-  if (symbol) {
-    ::google::protobuf::Arena* submessage_arena = nullptr;
-    if (message_arena != submessage_arena) {
-      symbol = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, symbol, submessage_arena);
-    }
-    
-  } else {
-    
-  }
-  symbol_ = symbol;
-  // @@protoc_insertion_point(field_set_allocated:pb.CTPOrder.symbol)
-}
-
-// .pb.CTPOrderID id = 2;
-inline bool CTPOrder::has_id() const {
-  return this != internal_default_instance() && id_ != nullptr;
-}
-inline void CTPOrder::clear_id() {
-  if (GetArenaNoVirtual() == nullptr && id_ != nullptr) {
-    delete id_;
-  }
-  id_ = nullptr;
-}
-inline const ::pb::CTPOrderID& CTPOrder::id() const {
-  const ::pb::CTPOrderID* p = id_;
-  // @@protoc_insertion_point(field_get:pb.CTPOrder.id)
-  return p != nullptr ? *p : *reinterpret_cast<const ::pb::CTPOrderID*>(
-      &::pb::_CTPOrderID_default_instance_);
-}
-inline ::pb::CTPOrderID* CTPOrder::release_id() {
-  // @@protoc_insertion_point(field_release:pb.CTPOrder.id)
-  
-  ::pb::CTPOrderID* temp = id_;
-  id_ = nullptr;
-  return temp;
-}
-inline ::pb::CTPOrderID* CTPOrder::mutable_id() {
-  
-  if (id_ == nullptr) {
-    auto* p = CreateMaybeMessage<::pb::CTPOrderID>(GetArenaNoVirtual());
-    id_ = p;
-  }
-  // @@protoc_insertion_point(field_mutable:pb.CTPOrder.id)
-  return id_;
-}
-inline void CTPOrder::set_allocated_id(::pb::CTPOrderID* id) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == nullptr) {
-    delete id_;
-  }
-  if (id) {
-    ::google::protobuf::Arena* submessage_arena = nullptr;
-    if (message_arena != submessage_arena) {
-      id = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, id, submessage_arena);
-    }
-    
-  } else {
-    
-  }
-  id_ = id;
-  // @@protoc_insertion_point(field_set_allocated:pb.CTPOrder.id)
-}
-
-// string account_id = 3;
-inline void CTPOrder::clear_account_id() {
-  account_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline const ::std::string& CTPOrder::account_id() const {
-  // @@protoc_insertion_point(field_get:pb.CTPOrder.account_id)
-  return account_id_.GetNoArena();
-}
-inline void CTPOrder::set_account_id(const ::std::string& value) {
-  
-  account_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:pb.CTPOrder.account_id)
+  broker_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:pb.CTPOrderField.broker_id)
 }
 #if LANG_CXX11
-inline void CTPOrder::set_account_id(::std::string&& value) {
+inline void CTPOrderField::set_broker_id(::std::string&& value) {
   
-  account_id_.SetNoArena(
+  broker_id_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:pb.CTPOrder.account_id)
+  // @@protoc_insertion_point(field_set_rvalue:pb.CTPOrderField.broker_id)
 }
 #endif
-inline void CTPOrder::set_account_id(const char* value) {
+inline void CTPOrderField::set_broker_id(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
-  account_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:pb.CTPOrder.account_id)
+  broker_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:pb.CTPOrderField.broker_id)
 }
-inline void CTPOrder::set_account_id(const char* value, size_t size) {
+inline void CTPOrderField::set_broker_id(const char* value, size_t size) {
   
-  account_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+  broker_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:pb.CTPOrder.account_id)
+  // @@protoc_insertion_point(field_set_pointer:pb.CTPOrderField.broker_id)
 }
-inline ::std::string* CTPOrder::mutable_account_id() {
+inline ::std::string* CTPOrderField::mutable_broker_id() {
   
-  // @@protoc_insertion_point(field_mutable:pb.CTPOrder.account_id)
-  return account_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  // @@protoc_insertion_point(field_mutable:pb.CTPOrderField.broker_id)
+  return broker_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline ::std::string* CTPOrder::release_account_id() {
-  // @@protoc_insertion_point(field_release:pb.CTPOrder.account_id)
+inline ::std::string* CTPOrderField::release_broker_id() {
+  // @@protoc_insertion_point(field_release:pb.CTPOrderField.broker_id)
   
-  return account_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return broker_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline void CTPOrder::set_allocated_account_id(::std::string* account_id) {
-  if (account_id != nullptr) {
+inline void CTPOrderField::set_allocated_broker_id(::std::string* broker_id) {
+  if (broker_id != nullptr) {
     
   } else {
     
   }
-  account_id_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), account_id);
-  // @@protoc_insertion_point(field_set_allocated:pb.CTPOrder.account_id)
+  broker_id_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), broker_id);
+  // @@protoc_insertion_point(field_set_allocated:pb.CTPOrderField.broker_id)
 }
 
-// .pb.CTPDirection direction = 4;
-inline void CTPOrder::clear_direction() {
+// string investor_id = 2;
+inline void CTPOrderField::clear_investor_id() {
+  investor_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& CTPOrderField::investor_id() const {
+  // @@protoc_insertion_point(field_get:pb.CTPOrderField.investor_id)
+  return investor_id_.GetNoArena();
+}
+inline void CTPOrderField::set_investor_id(const ::std::string& value) {
+  
+  investor_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:pb.CTPOrderField.investor_id)
+}
+#if LANG_CXX11
+inline void CTPOrderField::set_investor_id(::std::string&& value) {
+  
+  investor_id_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:pb.CTPOrderField.investor_id)
+}
+#endif
+inline void CTPOrderField::set_investor_id(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  investor_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:pb.CTPOrderField.investor_id)
+}
+inline void CTPOrderField::set_investor_id(const char* value, size_t size) {
+  
+  investor_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:pb.CTPOrderField.investor_id)
+}
+inline ::std::string* CTPOrderField::mutable_investor_id() {
+  
+  // @@protoc_insertion_point(field_mutable:pb.CTPOrderField.investor_id)
+  return investor_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* CTPOrderField::release_investor_id() {
+  // @@protoc_insertion_point(field_release:pb.CTPOrderField.investor_id)
+  
+  return investor_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void CTPOrderField::set_allocated_investor_id(::std::string* investor_id) {
+  if (investor_id != nullptr) {
+    
+  } else {
+    
+  }
+  investor_id_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), investor_id);
+  // @@protoc_insertion_point(field_set_allocated:pb.CTPOrderField.investor_id)
+}
+
+// string instrument_id = 3;
+inline void CTPOrderField::clear_instrument_id() {
+  instrument_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& CTPOrderField::instrument_id() const {
+  // @@protoc_insertion_point(field_get:pb.CTPOrderField.instrument_id)
+  return instrument_id_.GetNoArena();
+}
+inline void CTPOrderField::set_instrument_id(const ::std::string& value) {
+  
+  instrument_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:pb.CTPOrderField.instrument_id)
+}
+#if LANG_CXX11
+inline void CTPOrderField::set_instrument_id(::std::string&& value) {
+  
+  instrument_id_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:pb.CTPOrderField.instrument_id)
+}
+#endif
+inline void CTPOrderField::set_instrument_id(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  instrument_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:pb.CTPOrderField.instrument_id)
+}
+inline void CTPOrderField::set_instrument_id(const char* value, size_t size) {
+  
+  instrument_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:pb.CTPOrderField.instrument_id)
+}
+inline ::std::string* CTPOrderField::mutable_instrument_id() {
+  
+  // @@protoc_insertion_point(field_mutable:pb.CTPOrderField.instrument_id)
+  return instrument_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* CTPOrderField::release_instrument_id() {
+  // @@protoc_insertion_point(field_release:pb.CTPOrderField.instrument_id)
+  
+  return instrument_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void CTPOrderField::set_allocated_instrument_id(::std::string* instrument_id) {
+  if (instrument_id != nullptr) {
+    
+  } else {
+    
+  }
+  instrument_id_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), instrument_id);
+  // @@protoc_insertion_point(field_set_allocated:pb.CTPOrderField.instrument_id)
+}
+
+// string order_ref = 4;
+inline void CTPOrderField::clear_order_ref() {
+  order_ref_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& CTPOrderField::order_ref() const {
+  // @@protoc_insertion_point(field_get:pb.CTPOrderField.order_ref)
+  return order_ref_.GetNoArena();
+}
+inline void CTPOrderField::set_order_ref(const ::std::string& value) {
+  
+  order_ref_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:pb.CTPOrderField.order_ref)
+}
+#if LANG_CXX11
+inline void CTPOrderField::set_order_ref(::std::string&& value) {
+  
+  order_ref_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:pb.CTPOrderField.order_ref)
+}
+#endif
+inline void CTPOrderField::set_order_ref(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  order_ref_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:pb.CTPOrderField.order_ref)
+}
+inline void CTPOrderField::set_order_ref(const char* value, size_t size) {
+  
+  order_ref_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:pb.CTPOrderField.order_ref)
+}
+inline ::std::string* CTPOrderField::mutable_order_ref() {
+  
+  // @@protoc_insertion_point(field_mutable:pb.CTPOrderField.order_ref)
+  return order_ref_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* CTPOrderField::release_order_ref() {
+  // @@protoc_insertion_point(field_release:pb.CTPOrderField.order_ref)
+  
+  return order_ref_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void CTPOrderField::set_allocated_order_ref(::std::string* order_ref) {
+  if (order_ref != nullptr) {
+    
+  } else {
+    
+  }
+  order_ref_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), order_ref);
+  // @@protoc_insertion_point(field_set_allocated:pb.CTPOrderField.order_ref)
+}
+
+// string user_id = 5;
+inline void CTPOrderField::clear_user_id() {
+  user_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& CTPOrderField::user_id() const {
+  // @@protoc_insertion_point(field_get:pb.CTPOrderField.user_id)
+  return user_id_.GetNoArena();
+}
+inline void CTPOrderField::set_user_id(const ::std::string& value) {
+  
+  user_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:pb.CTPOrderField.user_id)
+}
+#if LANG_CXX11
+inline void CTPOrderField::set_user_id(::std::string&& value) {
+  
+  user_id_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:pb.CTPOrderField.user_id)
+}
+#endif
+inline void CTPOrderField::set_user_id(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  user_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:pb.CTPOrderField.user_id)
+}
+inline void CTPOrderField::set_user_id(const char* value, size_t size) {
+  
+  user_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:pb.CTPOrderField.user_id)
+}
+inline ::std::string* CTPOrderField::mutable_user_id() {
+  
+  // @@protoc_insertion_point(field_mutable:pb.CTPOrderField.user_id)
+  return user_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* CTPOrderField::release_user_id() {
+  // @@protoc_insertion_point(field_release:pb.CTPOrderField.user_id)
+  
+  return user_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void CTPOrderField::set_allocated_user_id(::std::string* user_id) {
+  if (user_id != nullptr) {
+    
+  } else {
+    
+  }
+  user_id_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), user_id);
+  // @@protoc_insertion_point(field_set_allocated:pb.CTPOrderField.user_id)
+}
+
+// int32 order_price_type = 6;
+inline void CTPOrderField::clear_order_price_type() {
+  order_price_type_ = 0;
+}
+inline ::google::protobuf::int32 CTPOrderField::order_price_type() const {
+  // @@protoc_insertion_point(field_get:pb.CTPOrderField.order_price_type)
+  return order_price_type_;
+}
+inline void CTPOrderField::set_order_price_type(::google::protobuf::int32 value) {
+  
+  order_price_type_ = value;
+  // @@protoc_insertion_point(field_set:pb.CTPOrderField.order_price_type)
+}
+
+// int32 direction = 7;
+inline void CTPOrderField::clear_direction() {
   direction_ = 0;
 }
-inline ::pb::CTPDirection CTPOrder::direction() const {
-  // @@protoc_insertion_point(field_get:pb.CTPOrder.direction)
-  return static_cast< ::pb::CTPDirection >(direction_);
+inline ::google::protobuf::int32 CTPOrderField::direction() const {
+  // @@protoc_insertion_point(field_get:pb.CTPOrderField.direction)
+  return direction_;
 }
-inline void CTPOrder::set_direction(::pb::CTPDirection value) {
+inline void CTPOrderField::set_direction(::google::protobuf::int32 value) {
   
   direction_ = value;
-  // @@protoc_insertion_point(field_set:pb.CTPOrder.direction)
+  // @@protoc_insertion_point(field_set:pb.CTPOrderField.direction)
 }
 
-// .pb.CTPOrderStatus status = 5;
-inline void CTPOrder::clear_status() {
-  status_ = 0;
+// int32 comb_offset_flag = 8;
+inline void CTPOrderField::clear_comb_offset_flag() {
+  comb_offset_flag_ = 0;
 }
-inline ::pb::CTPOrderStatus CTPOrder::status() const {
-  // @@protoc_insertion_point(field_get:pb.CTPOrder.status)
-  return static_cast< ::pb::CTPOrderStatus >(status_);
+inline ::google::protobuf::int32 CTPOrderField::comb_offset_flag() const {
+  // @@protoc_insertion_point(field_get:pb.CTPOrderField.comb_offset_flag)
+  return comb_offset_flag_;
 }
-inline void CTPOrder::set_status(::pb::CTPOrderStatus value) {
+inline void CTPOrderField::set_comb_offset_flag(::google::protobuf::int32 value) {
   
-  status_ = value;
-  // @@protoc_insertion_point(field_set:pb.CTPOrder.status)
+  comb_offset_flag_ = value;
+  // @@protoc_insertion_point(field_set:pb.CTPOrderField.comb_offset_flag)
 }
 
-// .pb.CTPPriceType price_type = 6;
-inline void CTPOrder::clear_price_type() {
-  price_type_ = 0;
+// int32 comb_hedge_flag = 9;
+inline void CTPOrderField::clear_comb_hedge_flag() {
+  comb_hedge_flag_ = 0;
 }
-inline ::pb::CTPPriceType CTPOrder::price_type() const {
-  // @@protoc_insertion_point(field_get:pb.CTPOrder.price_type)
-  return static_cast< ::pb::CTPPriceType >(price_type_);
+inline ::google::protobuf::int32 CTPOrderField::comb_hedge_flag() const {
+  // @@protoc_insertion_point(field_get:pb.CTPOrderField.comb_hedge_flag)
+  return comb_hedge_flag_;
 }
-inline void CTPOrder::set_price_type(::pb::CTPPriceType value) {
+inline void CTPOrderField::set_comb_hedge_flag(::google::protobuf::int32 value) {
   
-  price_type_ = value;
-  // @@protoc_insertion_point(field_set:pb.CTPOrder.price_type)
+  comb_hedge_flag_ = value;
+  // @@protoc_insertion_point(field_set:pb.CTPOrderField.comb_hedge_flag)
 }
 
-// double limit_price = 7;
-inline void CTPOrder::clear_limit_price() {
+// double limit_price = 10;
+inline void CTPOrderField::clear_limit_price() {
   limit_price_ = 0;
 }
-inline double CTPOrder::limit_price() const {
-  // @@protoc_insertion_point(field_get:pb.CTPOrder.limit_price)
+inline double CTPOrderField::limit_price() const {
+  // @@protoc_insertion_point(field_get:pb.CTPOrderField.limit_price)
   return limit_price_;
 }
-inline void CTPOrder::set_limit_price(double value) {
+inline void CTPOrderField::set_limit_price(double value) {
   
   limit_price_ = value;
-  // @@protoc_insertion_point(field_set:pb.CTPOrder.limit_price)
+  // @@protoc_insertion_point(field_set:pb.CTPOrderField.limit_price)
 }
 
-// int32 volume = 8;
-inline void CTPOrder::clear_volume() {
-  volume_ = 0;
+// int32 volume_total_original = 11;
+inline void CTPOrderField::clear_volume_total_original() {
+  volume_total_original_ = 0;
 }
-inline ::google::protobuf::int32 CTPOrder::volume() const {
-  // @@protoc_insertion_point(field_get:pb.CTPOrder.volume)
-  return volume_;
+inline ::google::protobuf::int32 CTPOrderField::volume_total_original() const {
+  // @@protoc_insertion_point(field_get:pb.CTPOrderField.volume_total_original)
+  return volume_total_original_;
 }
-inline void CTPOrder::set_volume(::google::protobuf::int32 value) {
+inline void CTPOrderField::set_volume_total_original(::google::protobuf::int32 value) {
   
-  volume_ = value;
-  // @@protoc_insertion_point(field_set:pb.CTPOrder.volume)
+  volume_total_original_ = value;
+  // @@protoc_insertion_point(field_set:pb.CTPOrderField.volume_total_original)
 }
 
-// int32 volume_traded = 9;
-inline void CTPOrder::clear_volume_traded() {
-  volume_traded_ = 0;
+// int32 time_condition = 12;
+inline void CTPOrderField::clear_time_condition() {
+  time_condition_ = 0;
 }
-inline ::google::protobuf::int32 CTPOrder::volume_traded() const {
-  // @@protoc_insertion_point(field_get:pb.CTPOrder.volume_traded)
-  return volume_traded_;
+inline ::google::protobuf::int32 CTPOrderField::time_condition() const {
+  // @@protoc_insertion_point(field_get:pb.CTPOrderField.time_condition)
+  return time_condition_;
 }
-inline void CTPOrder::set_volume_traded(::google::protobuf::int32 value) {
+inline void CTPOrderField::set_time_condition(::google::protobuf::int32 value) {
   
-  volume_traded_ = value;
-  // @@protoc_insertion_point(field_set:pb.CTPOrder.volume_traded)
+  time_condition_ = value;
+  // @@protoc_insertion_point(field_set:pb.CTPOrderField.time_condition)
 }
 
-// int32 volume_canceled = 10;
-inline void CTPOrder::clear_volume_canceled() {
-  volume_canceled_ = 0;
+// string GTD_date = 13;
+inline void CTPOrderField::clear_gtd_date() {
+  gtd_date_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline ::google::protobuf::int32 CTPOrder::volume_canceled() const {
-  // @@protoc_insertion_point(field_get:pb.CTPOrder.volume_canceled)
-  return volume_canceled_;
+inline const ::std::string& CTPOrderField::gtd_date() const {
+  // @@protoc_insertion_point(field_get:pb.CTPOrderField.GTD_date)
+  return gtd_date_.GetNoArena();
 }
-inline void CTPOrder::set_volume_canceled(::google::protobuf::int32 value) {
+inline void CTPOrderField::set_gtd_date(const ::std::string& value) {
   
-  volume_canceled_ = value;
-  // @@protoc_insertion_point(field_set:pb.CTPOrder.volume_canceled)
-}
-
-// double frozen_commission = 11;
-inline void CTPOrder::clear_frozen_commission() {
-  frozen_commission_ = 0;
-}
-inline double CTPOrder::frozen_commission() const {
-  // @@protoc_insertion_point(field_get:pb.CTPOrder.frozen_commission)
-  return frozen_commission_;
-}
-inline void CTPOrder::set_frozen_commission(double value) {
-  
-  frozen_commission_ = value;
-  // @@protoc_insertion_point(field_set:pb.CTPOrder.frozen_commission)
-}
-
-// int64 send_order_time = 12;
-inline void CTPOrder::clear_send_order_time() {
-  send_order_time_ = PROTOBUF_LONGLONG(0);
-}
-inline ::google::protobuf::int64 CTPOrder::send_order_time() const {
-  // @@protoc_insertion_point(field_get:pb.CTPOrder.send_order_time)
-  return send_order_time_;
-}
-inline void CTPOrder::set_send_order_time(::google::protobuf::int64 value) {
-  
-  send_order_time_ = value;
-  // @@protoc_insertion_point(field_set:pb.CTPOrder.send_order_time)
-}
-
-// int32 send_order_trading_day = 13;
-inline void CTPOrder::clear_send_order_trading_day() {
-  send_order_trading_day_ = 0;
-}
-inline ::google::protobuf::int32 CTPOrder::send_order_trading_day() const {
-  // @@protoc_insertion_point(field_get:pb.CTPOrder.send_order_trading_day)
-  return send_order_trading_day_;
-}
-inline void CTPOrder::set_send_order_trading_day(::google::protobuf::int32 value) {
-  
-  send_order_trading_day_ = value;
-  // @@protoc_insertion_point(field_set:pb.CTPOrder.send_order_trading_day)
-}
-
-// string comment = 14;
-inline void CTPOrder::clear_comment() {
-  comment_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline const ::std::string& CTPOrder::comment() const {
-  // @@protoc_insertion_point(field_get:pb.CTPOrder.comment)
-  return comment_.GetNoArena();
-}
-inline void CTPOrder::set_comment(const ::std::string& value) {
-  
-  comment_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:pb.CTPOrder.comment)
+  gtd_date_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:pb.CTPOrderField.GTD_date)
 }
 #if LANG_CXX11
-inline void CTPOrder::set_comment(::std::string&& value) {
+inline void CTPOrderField::set_gtd_date(::std::string&& value) {
   
-  comment_.SetNoArena(
+  gtd_date_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:pb.CTPOrder.comment)
+  // @@protoc_insertion_point(field_set_rvalue:pb.CTPOrderField.GTD_date)
 }
 #endif
-inline void CTPOrder::set_comment(const char* value) {
+inline void CTPOrderField::set_gtd_date(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
-  comment_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:pb.CTPOrder.comment)
+  gtd_date_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:pb.CTPOrderField.GTD_date)
 }
-inline void CTPOrder::set_comment(const char* value, size_t size) {
+inline void CTPOrderField::set_gtd_date(const char* value, size_t size) {
   
-  comment_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+  gtd_date_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:pb.CTPOrder.comment)
+  // @@protoc_insertion_point(field_set_pointer:pb.CTPOrderField.GTD_date)
 }
-inline ::std::string* CTPOrder::mutable_comment() {
+inline ::std::string* CTPOrderField::mutable_gtd_date() {
   
-  // @@protoc_insertion_point(field_mutable:pb.CTPOrder.comment)
-  return comment_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  // @@protoc_insertion_point(field_mutable:pb.CTPOrderField.GTD_date)
+  return gtd_date_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline ::std::string* CTPOrder::release_comment() {
-  // @@protoc_insertion_point(field_release:pb.CTPOrder.comment)
+inline ::std::string* CTPOrderField::release_gtd_date() {
+  // @@protoc_insertion_point(field_release:pb.CTPOrderField.GTD_date)
   
-  return comment_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return gtd_date_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline void CTPOrder::set_allocated_comment(::std::string* comment) {
-  if (comment != nullptr) {
+inline void CTPOrderField::set_allocated_gtd_date(::std::string* gtd_date) {
+  if (gtd_date != nullptr) {
     
   } else {
     
   }
-  comment_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), comment);
-  // @@protoc_insertion_point(field_set_allocated:pb.CTPOrder.comment)
+  gtd_date_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), gtd_date);
+  // @@protoc_insertion_point(field_set_allocated:pb.CTPOrderField.GTD_date)
 }
 
-// int32 request_id = 15;
-inline void CTPOrder::clear_request_id() {
-  request_id_ = 0;
+// int32 volume_condition = 14;
+inline void CTPOrderField::clear_volume_condition() {
+  volume_condition_ = 0;
 }
-inline ::google::protobuf::int32 CTPOrder::request_id() const {
-  // @@protoc_insertion_point(field_get:pb.CTPOrder.request_id)
-  return request_id_;
+inline ::google::protobuf::int32 CTPOrderField::volume_condition() const {
+  // @@protoc_insertion_point(field_get:pb.CTPOrderField.volume_condition)
+  return volume_condition_;
 }
-inline void CTPOrder::set_request_id(::google::protobuf::int32 value) {
+inline void CTPOrderField::set_volume_condition(::google::protobuf::int32 value) {
   
-  request_id_ = value;
-  // @@protoc_insertion_point(field_set:pb.CTPOrder.request_id)
+  volume_condition_ = value;
+  // @@protoc_insertion_point(field_set:pb.CTPOrderField.volume_condition)
 }
 
-// int32 local_order_seq = 16;
-inline void CTPOrder::clear_local_order_seq() {
-  local_order_seq_ = 0;
+// int32 min_volume = 15;
+inline void CTPOrderField::clear_min_volume() {
+  min_volume_ = 0;
 }
-inline ::google::protobuf::int32 CTPOrder::local_order_seq() const {
-  // @@protoc_insertion_point(field_get:pb.CTPOrder.local_order_seq)
-  return local_order_seq_;
+inline ::google::protobuf::int32 CTPOrderField::min_volume() const {
+  // @@protoc_insertion_point(field_get:pb.CTPOrderField.min_volume)
+  return min_volume_;
 }
-inline void CTPOrder::set_local_order_seq(::google::protobuf::int32 value) {
+inline void CTPOrderField::set_min_volume(::google::protobuf::int32 value) {
   
-  local_order_seq_ = value;
-  // @@protoc_insertion_point(field_set:pb.CTPOrder.local_order_seq)
+  min_volume_ = value;
+  // @@protoc_insertion_point(field_set:pb.CTPOrderField.min_volume)
 }
 
-// int32 force_close_type = 17;
-inline void CTPOrder::clear_force_close_type() {
-  force_close_type_ = 0;
+// int32 contingent_condition = 16;
+inline void CTPOrderField::clear_contingent_condition() {
+  contingent_condition_ = 0;
 }
-inline ::google::protobuf::int32 CTPOrder::force_close_type() const {
-  // @@protoc_insertion_point(field_get:pb.CTPOrder.force_close_type)
-  return force_close_type_;
+inline ::google::protobuf::int32 CTPOrderField::contingent_condition() const {
+  // @@protoc_insertion_point(field_get:pb.CTPOrderField.contingent_condition)
+  return contingent_condition_;
 }
-inline void CTPOrder::set_force_close_type(::google::protobuf::int32 value) {
+inline void CTPOrderField::set_contingent_condition(::google::protobuf::int32 value) {
   
-  force_close_type_ = value;
-  // @@protoc_insertion_point(field_set:pb.CTPOrder.force_close_type)
+  contingent_condition_ = value;
+  // @@protoc_insertion_point(field_set:pb.CTPOrderField.contingent_condition)
 }
 
-// int32 order_source_type = 18;
-inline void CTPOrder::clear_order_source_type() {
-  order_source_type_ = 0;
+// double stop_price = 17;
+inline void CTPOrderField::clear_stop_price() {
+  stop_price_ = 0;
 }
-inline ::google::protobuf::int32 CTPOrder::order_source_type() const {
-  // @@protoc_insertion_point(field_get:pb.CTPOrder.order_source_type)
-  return order_source_type_;
+inline double CTPOrderField::stop_price() const {
+  // @@protoc_insertion_point(field_get:pb.CTPOrderField.stop_price)
+  return stop_price_;
 }
-inline void CTPOrder::set_order_source_type(::google::protobuf::int32 value) {
+inline void CTPOrderField::set_stop_price(double value) {
   
-  order_source_type_ = value;
-  // @@protoc_insertion_point(field_set:pb.CTPOrder.order_source_type)
+  stop_price_ = value;
+  // @@protoc_insertion_point(field_set:pb.CTPOrderField.stop_price)
 }
 
-// .pb.CTPHedgeType order_hedge_type = 19;
-inline void CTPOrder::clear_order_hedge_type() {
-  order_hedge_type_ = 0;
+// int32 force_close_reason = 18;
+inline void CTPOrderField::clear_force_close_reason() {
+  force_close_reason_ = 0;
 }
-inline ::pb::CTPHedgeType CTPOrder::order_hedge_type() const {
-  // @@protoc_insertion_point(field_get:pb.CTPOrder.order_hedge_type)
-  return static_cast< ::pb::CTPHedgeType >(order_hedge_type_);
+inline ::google::protobuf::int32 CTPOrderField::force_close_reason() const {
+  // @@protoc_insertion_point(field_get:pb.CTPOrderField.force_close_reason)
+  return force_close_reason_;
 }
-inline void CTPOrder::set_order_hedge_type(::pb::CTPHedgeType value) {
+inline void CTPOrderField::set_force_close_reason(::google::protobuf::int32 value) {
   
-  order_hedge_type_ = value;
-  // @@protoc_insertion_point(field_set:pb.CTPOrder.order_hedge_type)
+  force_close_reason_ = value;
+  // @@protoc_insertion_point(field_set:pb.CTPOrderField.force_close_reason)
 }
 
-// string user_product_info = 20;
-inline void CTPOrder::clear_user_product_info() {
-  user_product_info_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+// bool is_auto_suspend = 19;
+inline void CTPOrderField::clear_is_auto_suspend() {
+  is_auto_suspend_ = false;
 }
-inline const ::std::string& CTPOrder::user_product_info() const {
-  // @@protoc_insertion_point(field_get:pb.CTPOrder.user_product_info)
-  return user_product_info_.GetNoArena();
+inline bool CTPOrderField::is_auto_suspend() const {
+  // @@protoc_insertion_point(field_get:pb.CTPOrderField.is_auto_suspend)
+  return is_auto_suspend_;
 }
-inline void CTPOrder::set_user_product_info(const ::std::string& value) {
+inline void CTPOrderField::set_is_auto_suspend(bool value) {
   
-  user_product_info_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:pb.CTPOrder.user_product_info)
+  is_auto_suspend_ = value;
+  // @@protoc_insertion_point(field_set:pb.CTPOrderField.is_auto_suspend)
+}
+
+// string business_unit = 20;
+inline void CTPOrderField::clear_business_unit() {
+  business_unit_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& CTPOrderField::business_unit() const {
+  // @@protoc_insertion_point(field_get:pb.CTPOrderField.business_unit)
+  return business_unit_.GetNoArena();
+}
+inline void CTPOrderField::set_business_unit(const ::std::string& value) {
+  
+  business_unit_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:pb.CTPOrderField.business_unit)
 }
 #if LANG_CXX11
-inline void CTPOrder::set_user_product_info(::std::string&& value) {
+inline void CTPOrderField::set_business_unit(::std::string&& value) {
+  
+  business_unit_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:pb.CTPOrderField.business_unit)
+}
+#endif
+inline void CTPOrderField::set_business_unit(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  business_unit_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:pb.CTPOrderField.business_unit)
+}
+inline void CTPOrderField::set_business_unit(const char* value, size_t size) {
+  
+  business_unit_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:pb.CTPOrderField.business_unit)
+}
+inline ::std::string* CTPOrderField::mutable_business_unit() {
+  
+  // @@protoc_insertion_point(field_mutable:pb.CTPOrderField.business_unit)
+  return business_unit_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* CTPOrderField::release_business_unit() {
+  // @@protoc_insertion_point(field_release:pb.CTPOrderField.business_unit)
+  
+  return business_unit_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void CTPOrderField::set_allocated_business_unit(::std::string* business_unit) {
+  if (business_unit != nullptr) {
+    
+  } else {
+    
+  }
+  business_unit_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), business_unit);
+  // @@protoc_insertion_point(field_set_allocated:pb.CTPOrderField.business_unit)
+}
+
+// int32 request_id = 21;
+inline void CTPOrderField::clear_request_id() {
+  request_id_ = 0;
+}
+inline ::google::protobuf::int32 CTPOrderField::request_id() const {
+  // @@protoc_insertion_point(field_get:pb.CTPOrderField.request_id)
+  return request_id_;
+}
+inline void CTPOrderField::set_request_id(::google::protobuf::int32 value) {
+  
+  request_id_ = value;
+  // @@protoc_insertion_point(field_set:pb.CTPOrderField.request_id)
+}
+
+// string order_local_id = 22;
+inline void CTPOrderField::clear_order_local_id() {
+  order_local_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& CTPOrderField::order_local_id() const {
+  // @@protoc_insertion_point(field_get:pb.CTPOrderField.order_local_id)
+  return order_local_id_.GetNoArena();
+}
+inline void CTPOrderField::set_order_local_id(const ::std::string& value) {
+  
+  order_local_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:pb.CTPOrderField.order_local_id)
+}
+#if LANG_CXX11
+inline void CTPOrderField::set_order_local_id(::std::string&& value) {
+  
+  order_local_id_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:pb.CTPOrderField.order_local_id)
+}
+#endif
+inline void CTPOrderField::set_order_local_id(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  order_local_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:pb.CTPOrderField.order_local_id)
+}
+inline void CTPOrderField::set_order_local_id(const char* value, size_t size) {
+  
+  order_local_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:pb.CTPOrderField.order_local_id)
+}
+inline ::std::string* CTPOrderField::mutable_order_local_id() {
+  
+  // @@protoc_insertion_point(field_mutable:pb.CTPOrderField.order_local_id)
+  return order_local_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* CTPOrderField::release_order_local_id() {
+  // @@protoc_insertion_point(field_release:pb.CTPOrderField.order_local_id)
+  
+  return order_local_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void CTPOrderField::set_allocated_order_local_id(::std::string* order_local_id) {
+  if (order_local_id != nullptr) {
+    
+  } else {
+    
+  }
+  order_local_id_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), order_local_id);
+  // @@protoc_insertion_point(field_set_allocated:pb.CTPOrderField.order_local_id)
+}
+
+// string exchange_id = 23;
+inline void CTPOrderField::clear_exchange_id() {
+  exchange_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& CTPOrderField::exchange_id() const {
+  // @@protoc_insertion_point(field_get:pb.CTPOrderField.exchange_id)
+  return exchange_id_.GetNoArena();
+}
+inline void CTPOrderField::set_exchange_id(const ::std::string& value) {
+  
+  exchange_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:pb.CTPOrderField.exchange_id)
+}
+#if LANG_CXX11
+inline void CTPOrderField::set_exchange_id(::std::string&& value) {
+  
+  exchange_id_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:pb.CTPOrderField.exchange_id)
+}
+#endif
+inline void CTPOrderField::set_exchange_id(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  exchange_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:pb.CTPOrderField.exchange_id)
+}
+inline void CTPOrderField::set_exchange_id(const char* value, size_t size) {
+  
+  exchange_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:pb.CTPOrderField.exchange_id)
+}
+inline ::std::string* CTPOrderField::mutable_exchange_id() {
+  
+  // @@protoc_insertion_point(field_mutable:pb.CTPOrderField.exchange_id)
+  return exchange_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* CTPOrderField::release_exchange_id() {
+  // @@protoc_insertion_point(field_release:pb.CTPOrderField.exchange_id)
+  
+  return exchange_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void CTPOrderField::set_allocated_exchange_id(::std::string* exchange_id) {
+  if (exchange_id != nullptr) {
+    
+  } else {
+    
+  }
+  exchange_id_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), exchange_id);
+  // @@protoc_insertion_point(field_set_allocated:pb.CTPOrderField.exchange_id)
+}
+
+// string participant_id = 24;
+inline void CTPOrderField::clear_participant_id() {
+  participant_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& CTPOrderField::participant_id() const {
+  // @@protoc_insertion_point(field_get:pb.CTPOrderField.participant_id)
+  return participant_id_.GetNoArena();
+}
+inline void CTPOrderField::set_participant_id(const ::std::string& value) {
+  
+  participant_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:pb.CTPOrderField.participant_id)
+}
+#if LANG_CXX11
+inline void CTPOrderField::set_participant_id(::std::string&& value) {
+  
+  participant_id_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:pb.CTPOrderField.participant_id)
+}
+#endif
+inline void CTPOrderField::set_participant_id(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  participant_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:pb.CTPOrderField.participant_id)
+}
+inline void CTPOrderField::set_participant_id(const char* value, size_t size) {
+  
+  participant_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:pb.CTPOrderField.participant_id)
+}
+inline ::std::string* CTPOrderField::mutable_participant_id() {
+  
+  // @@protoc_insertion_point(field_mutable:pb.CTPOrderField.participant_id)
+  return participant_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* CTPOrderField::release_participant_id() {
+  // @@protoc_insertion_point(field_release:pb.CTPOrderField.participant_id)
+  
+  return participant_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void CTPOrderField::set_allocated_participant_id(::std::string* participant_id) {
+  if (participant_id != nullptr) {
+    
+  } else {
+    
+  }
+  participant_id_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), participant_id);
+  // @@protoc_insertion_point(field_set_allocated:pb.CTPOrderField.participant_id)
+}
+
+// string client_id = 25;
+inline void CTPOrderField::clear_client_id() {
+  client_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& CTPOrderField::client_id() const {
+  // @@protoc_insertion_point(field_get:pb.CTPOrderField.client_id)
+  return client_id_.GetNoArena();
+}
+inline void CTPOrderField::set_client_id(const ::std::string& value) {
+  
+  client_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:pb.CTPOrderField.client_id)
+}
+#if LANG_CXX11
+inline void CTPOrderField::set_client_id(::std::string&& value) {
+  
+  client_id_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:pb.CTPOrderField.client_id)
+}
+#endif
+inline void CTPOrderField::set_client_id(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  client_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:pb.CTPOrderField.client_id)
+}
+inline void CTPOrderField::set_client_id(const char* value, size_t size) {
+  
+  client_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:pb.CTPOrderField.client_id)
+}
+inline ::std::string* CTPOrderField::mutable_client_id() {
+  
+  // @@protoc_insertion_point(field_mutable:pb.CTPOrderField.client_id)
+  return client_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* CTPOrderField::release_client_id() {
+  // @@protoc_insertion_point(field_release:pb.CTPOrderField.client_id)
+  
+  return client_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void CTPOrderField::set_allocated_client_id(::std::string* client_id) {
+  if (client_id != nullptr) {
+    
+  } else {
+    
+  }
+  client_id_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), client_id);
+  // @@protoc_insertion_point(field_set_allocated:pb.CTPOrderField.client_id)
+}
+
+// string exchange_inst_id = 26;
+inline void CTPOrderField::clear_exchange_inst_id() {
+  exchange_inst_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& CTPOrderField::exchange_inst_id() const {
+  // @@protoc_insertion_point(field_get:pb.CTPOrderField.exchange_inst_id)
+  return exchange_inst_id_.GetNoArena();
+}
+inline void CTPOrderField::set_exchange_inst_id(const ::std::string& value) {
+  
+  exchange_inst_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:pb.CTPOrderField.exchange_inst_id)
+}
+#if LANG_CXX11
+inline void CTPOrderField::set_exchange_inst_id(::std::string&& value) {
+  
+  exchange_inst_id_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:pb.CTPOrderField.exchange_inst_id)
+}
+#endif
+inline void CTPOrderField::set_exchange_inst_id(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  exchange_inst_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:pb.CTPOrderField.exchange_inst_id)
+}
+inline void CTPOrderField::set_exchange_inst_id(const char* value, size_t size) {
+  
+  exchange_inst_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:pb.CTPOrderField.exchange_inst_id)
+}
+inline ::std::string* CTPOrderField::mutable_exchange_inst_id() {
+  
+  // @@protoc_insertion_point(field_mutable:pb.CTPOrderField.exchange_inst_id)
+  return exchange_inst_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* CTPOrderField::release_exchange_inst_id() {
+  // @@protoc_insertion_point(field_release:pb.CTPOrderField.exchange_inst_id)
+  
+  return exchange_inst_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void CTPOrderField::set_allocated_exchange_inst_id(::std::string* exchange_inst_id) {
+  if (exchange_inst_id != nullptr) {
+    
+  } else {
+    
+  }
+  exchange_inst_id_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), exchange_inst_id);
+  // @@protoc_insertion_point(field_set_allocated:pb.CTPOrderField.exchange_inst_id)
+}
+
+// string trader_id = 27;
+inline void CTPOrderField::clear_trader_id() {
+  trader_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& CTPOrderField::trader_id() const {
+  // @@protoc_insertion_point(field_get:pb.CTPOrderField.trader_id)
+  return trader_id_.GetNoArena();
+}
+inline void CTPOrderField::set_trader_id(const ::std::string& value) {
+  
+  trader_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:pb.CTPOrderField.trader_id)
+}
+#if LANG_CXX11
+inline void CTPOrderField::set_trader_id(::std::string&& value) {
+  
+  trader_id_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:pb.CTPOrderField.trader_id)
+}
+#endif
+inline void CTPOrderField::set_trader_id(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  trader_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:pb.CTPOrderField.trader_id)
+}
+inline void CTPOrderField::set_trader_id(const char* value, size_t size) {
+  
+  trader_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:pb.CTPOrderField.trader_id)
+}
+inline ::std::string* CTPOrderField::mutable_trader_id() {
+  
+  // @@protoc_insertion_point(field_mutable:pb.CTPOrderField.trader_id)
+  return trader_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* CTPOrderField::release_trader_id() {
+  // @@protoc_insertion_point(field_release:pb.CTPOrderField.trader_id)
+  
+  return trader_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void CTPOrderField::set_allocated_trader_id(::std::string* trader_id) {
+  if (trader_id != nullptr) {
+    
+  } else {
+    
+  }
+  trader_id_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), trader_id);
+  // @@protoc_insertion_point(field_set_allocated:pb.CTPOrderField.trader_id)
+}
+
+// int32 install_id = 28;
+inline void CTPOrderField::clear_install_id() {
+  install_id_ = 0;
+}
+inline ::google::protobuf::int32 CTPOrderField::install_id() const {
+  // @@protoc_insertion_point(field_get:pb.CTPOrderField.install_id)
+  return install_id_;
+}
+inline void CTPOrderField::set_install_id(::google::protobuf::int32 value) {
+  
+  install_id_ = value;
+  // @@protoc_insertion_point(field_set:pb.CTPOrderField.install_id)
+}
+
+// int32 order_submit_status = 29;
+inline void CTPOrderField::clear_order_submit_status() {
+  order_submit_status_ = 0;
+}
+inline ::google::protobuf::int32 CTPOrderField::order_submit_status() const {
+  // @@protoc_insertion_point(field_get:pb.CTPOrderField.order_submit_status)
+  return order_submit_status_;
+}
+inline void CTPOrderField::set_order_submit_status(::google::protobuf::int32 value) {
+  
+  order_submit_status_ = value;
+  // @@protoc_insertion_point(field_set:pb.CTPOrderField.order_submit_status)
+}
+
+// int32 notify_sequence = 30;
+inline void CTPOrderField::clear_notify_sequence() {
+  notify_sequence_ = 0;
+}
+inline ::google::protobuf::int32 CTPOrderField::notify_sequence() const {
+  // @@protoc_insertion_point(field_get:pb.CTPOrderField.notify_sequence)
+  return notify_sequence_;
+}
+inline void CTPOrderField::set_notify_sequence(::google::protobuf::int32 value) {
+  
+  notify_sequence_ = value;
+  // @@protoc_insertion_point(field_set:pb.CTPOrderField.notify_sequence)
+}
+
+// int32 trading_day = 31;
+inline void CTPOrderField::clear_trading_day() {
+  trading_day_ = 0;
+}
+inline ::google::protobuf::int32 CTPOrderField::trading_day() const {
+  // @@protoc_insertion_point(field_get:pb.CTPOrderField.trading_day)
+  return trading_day_;
+}
+inline void CTPOrderField::set_trading_day(::google::protobuf::int32 value) {
+  
+  trading_day_ = value;
+  // @@protoc_insertion_point(field_set:pb.CTPOrderField.trading_day)
+}
+
+// int32 settlement_id = 32;
+inline void CTPOrderField::clear_settlement_id() {
+  settlement_id_ = 0;
+}
+inline ::google::protobuf::int32 CTPOrderField::settlement_id() const {
+  // @@protoc_insertion_point(field_get:pb.CTPOrderField.settlement_id)
+  return settlement_id_;
+}
+inline void CTPOrderField::set_settlement_id(::google::protobuf::int32 value) {
+  
+  settlement_id_ = value;
+  // @@protoc_insertion_point(field_set:pb.CTPOrderField.settlement_id)
+}
+
+// string order_sys_id = 33;
+inline void CTPOrderField::clear_order_sys_id() {
+  order_sys_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& CTPOrderField::order_sys_id() const {
+  // @@protoc_insertion_point(field_get:pb.CTPOrderField.order_sys_id)
+  return order_sys_id_.GetNoArena();
+}
+inline void CTPOrderField::set_order_sys_id(const ::std::string& value) {
+  
+  order_sys_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:pb.CTPOrderField.order_sys_id)
+}
+#if LANG_CXX11
+inline void CTPOrderField::set_order_sys_id(::std::string&& value) {
+  
+  order_sys_id_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:pb.CTPOrderField.order_sys_id)
+}
+#endif
+inline void CTPOrderField::set_order_sys_id(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  order_sys_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:pb.CTPOrderField.order_sys_id)
+}
+inline void CTPOrderField::set_order_sys_id(const char* value, size_t size) {
+  
+  order_sys_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:pb.CTPOrderField.order_sys_id)
+}
+inline ::std::string* CTPOrderField::mutable_order_sys_id() {
+  
+  // @@protoc_insertion_point(field_mutable:pb.CTPOrderField.order_sys_id)
+  return order_sys_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* CTPOrderField::release_order_sys_id() {
+  // @@protoc_insertion_point(field_release:pb.CTPOrderField.order_sys_id)
+  
+  return order_sys_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void CTPOrderField::set_allocated_order_sys_id(::std::string* order_sys_id) {
+  if (order_sys_id != nullptr) {
+    
+  } else {
+    
+  }
+  order_sys_id_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), order_sys_id);
+  // @@protoc_insertion_point(field_set_allocated:pb.CTPOrderField.order_sys_id)
+}
+
+// int32 order_source = 34;
+inline void CTPOrderField::clear_order_source() {
+  order_source_ = 0;
+}
+inline ::google::protobuf::int32 CTPOrderField::order_source() const {
+  // @@protoc_insertion_point(field_get:pb.CTPOrderField.order_source)
+  return order_source_;
+}
+inline void CTPOrderField::set_order_source(::google::protobuf::int32 value) {
+  
+  order_source_ = value;
+  // @@protoc_insertion_point(field_set:pb.CTPOrderField.order_source)
+}
+
+// int32 order_status = 35;
+inline void CTPOrderField::clear_order_status() {
+  order_status_ = 0;
+}
+inline ::google::protobuf::int32 CTPOrderField::order_status() const {
+  // @@protoc_insertion_point(field_get:pb.CTPOrderField.order_status)
+  return order_status_;
+}
+inline void CTPOrderField::set_order_status(::google::protobuf::int32 value) {
+  
+  order_status_ = value;
+  // @@protoc_insertion_point(field_set:pb.CTPOrderField.order_status)
+}
+
+// int32 order_type = 36;
+inline void CTPOrderField::clear_order_type() {
+  order_type_ = 0;
+}
+inline ::google::protobuf::int32 CTPOrderField::order_type() const {
+  // @@protoc_insertion_point(field_get:pb.CTPOrderField.order_type)
+  return order_type_;
+}
+inline void CTPOrderField::set_order_type(::google::protobuf::int32 value) {
+  
+  order_type_ = value;
+  // @@protoc_insertion_point(field_set:pb.CTPOrderField.order_type)
+}
+
+// int32 volume_traded = 37;
+inline void CTPOrderField::clear_volume_traded() {
+  volume_traded_ = 0;
+}
+inline ::google::protobuf::int32 CTPOrderField::volume_traded() const {
+  // @@protoc_insertion_point(field_get:pb.CTPOrderField.volume_traded)
+  return volume_traded_;
+}
+inline void CTPOrderField::set_volume_traded(::google::protobuf::int32 value) {
+  
+  volume_traded_ = value;
+  // @@protoc_insertion_point(field_set:pb.CTPOrderField.volume_traded)
+}
+
+// int32 volume_total = 38;
+inline void CTPOrderField::clear_volume_total() {
+  volume_total_ = 0;
+}
+inline ::google::protobuf::int32 CTPOrderField::volume_total() const {
+  // @@protoc_insertion_point(field_get:pb.CTPOrderField.volume_total)
+  return volume_total_;
+}
+inline void CTPOrderField::set_volume_total(::google::protobuf::int32 value) {
+  
+  volume_total_ = value;
+  // @@protoc_insertion_point(field_set:pb.CTPOrderField.volume_total)
+}
+
+// string insert_date = 39;
+inline void CTPOrderField::clear_insert_date() {
+  insert_date_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& CTPOrderField::insert_date() const {
+  // @@protoc_insertion_point(field_get:pb.CTPOrderField.insert_date)
+  return insert_date_.GetNoArena();
+}
+inline void CTPOrderField::set_insert_date(const ::std::string& value) {
+  
+  insert_date_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:pb.CTPOrderField.insert_date)
+}
+#if LANG_CXX11
+inline void CTPOrderField::set_insert_date(::std::string&& value) {
+  
+  insert_date_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:pb.CTPOrderField.insert_date)
+}
+#endif
+inline void CTPOrderField::set_insert_date(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  insert_date_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:pb.CTPOrderField.insert_date)
+}
+inline void CTPOrderField::set_insert_date(const char* value, size_t size) {
+  
+  insert_date_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:pb.CTPOrderField.insert_date)
+}
+inline ::std::string* CTPOrderField::mutable_insert_date() {
+  
+  // @@protoc_insertion_point(field_mutable:pb.CTPOrderField.insert_date)
+  return insert_date_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* CTPOrderField::release_insert_date() {
+  // @@protoc_insertion_point(field_release:pb.CTPOrderField.insert_date)
+  
+  return insert_date_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void CTPOrderField::set_allocated_insert_date(::std::string* insert_date) {
+  if (insert_date != nullptr) {
+    
+  } else {
+    
+  }
+  insert_date_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), insert_date);
+  // @@protoc_insertion_point(field_set_allocated:pb.CTPOrderField.insert_date)
+}
+
+// string insert_time = 40;
+inline void CTPOrderField::clear_insert_time() {
+  insert_time_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& CTPOrderField::insert_time() const {
+  // @@protoc_insertion_point(field_get:pb.CTPOrderField.insert_time)
+  return insert_time_.GetNoArena();
+}
+inline void CTPOrderField::set_insert_time(const ::std::string& value) {
+  
+  insert_time_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:pb.CTPOrderField.insert_time)
+}
+#if LANG_CXX11
+inline void CTPOrderField::set_insert_time(::std::string&& value) {
+  
+  insert_time_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:pb.CTPOrderField.insert_time)
+}
+#endif
+inline void CTPOrderField::set_insert_time(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  insert_time_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:pb.CTPOrderField.insert_time)
+}
+inline void CTPOrderField::set_insert_time(const char* value, size_t size) {
+  
+  insert_time_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:pb.CTPOrderField.insert_time)
+}
+inline ::std::string* CTPOrderField::mutable_insert_time() {
+  
+  // @@protoc_insertion_point(field_mutable:pb.CTPOrderField.insert_time)
+  return insert_time_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* CTPOrderField::release_insert_time() {
+  // @@protoc_insertion_point(field_release:pb.CTPOrderField.insert_time)
+  
+  return insert_time_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void CTPOrderField::set_allocated_insert_time(::std::string* insert_time) {
+  if (insert_time != nullptr) {
+    
+  } else {
+    
+  }
+  insert_time_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), insert_time);
+  // @@protoc_insertion_point(field_set_allocated:pb.CTPOrderField.insert_time)
+}
+
+// string active_time = 41;
+inline void CTPOrderField::clear_active_time() {
+  active_time_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& CTPOrderField::active_time() const {
+  // @@protoc_insertion_point(field_get:pb.CTPOrderField.active_time)
+  return active_time_.GetNoArena();
+}
+inline void CTPOrderField::set_active_time(const ::std::string& value) {
+  
+  active_time_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:pb.CTPOrderField.active_time)
+}
+#if LANG_CXX11
+inline void CTPOrderField::set_active_time(::std::string&& value) {
+  
+  active_time_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:pb.CTPOrderField.active_time)
+}
+#endif
+inline void CTPOrderField::set_active_time(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  active_time_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:pb.CTPOrderField.active_time)
+}
+inline void CTPOrderField::set_active_time(const char* value, size_t size) {
+  
+  active_time_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:pb.CTPOrderField.active_time)
+}
+inline ::std::string* CTPOrderField::mutable_active_time() {
+  
+  // @@protoc_insertion_point(field_mutable:pb.CTPOrderField.active_time)
+  return active_time_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* CTPOrderField::release_active_time() {
+  // @@protoc_insertion_point(field_release:pb.CTPOrderField.active_time)
+  
+  return active_time_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void CTPOrderField::set_allocated_active_time(::std::string* active_time) {
+  if (active_time != nullptr) {
+    
+  } else {
+    
+  }
+  active_time_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), active_time);
+  // @@protoc_insertion_point(field_set_allocated:pb.CTPOrderField.active_time)
+}
+
+// string suspend_time = 42;
+inline void CTPOrderField::clear_suspend_time() {
+  suspend_time_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& CTPOrderField::suspend_time() const {
+  // @@protoc_insertion_point(field_get:pb.CTPOrderField.suspend_time)
+  return suspend_time_.GetNoArena();
+}
+inline void CTPOrderField::set_suspend_time(const ::std::string& value) {
+  
+  suspend_time_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:pb.CTPOrderField.suspend_time)
+}
+#if LANG_CXX11
+inline void CTPOrderField::set_suspend_time(::std::string&& value) {
+  
+  suspend_time_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:pb.CTPOrderField.suspend_time)
+}
+#endif
+inline void CTPOrderField::set_suspend_time(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  suspend_time_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:pb.CTPOrderField.suspend_time)
+}
+inline void CTPOrderField::set_suspend_time(const char* value, size_t size) {
+  
+  suspend_time_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:pb.CTPOrderField.suspend_time)
+}
+inline ::std::string* CTPOrderField::mutable_suspend_time() {
+  
+  // @@protoc_insertion_point(field_mutable:pb.CTPOrderField.suspend_time)
+  return suspend_time_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* CTPOrderField::release_suspend_time() {
+  // @@protoc_insertion_point(field_release:pb.CTPOrderField.suspend_time)
+  
+  return suspend_time_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void CTPOrderField::set_allocated_suspend_time(::std::string* suspend_time) {
+  if (suspend_time != nullptr) {
+    
+  } else {
+    
+  }
+  suspend_time_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), suspend_time);
+  // @@protoc_insertion_point(field_set_allocated:pb.CTPOrderField.suspend_time)
+}
+
+// string update_time = 43;
+inline void CTPOrderField::clear_update_time() {
+  update_time_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& CTPOrderField::update_time() const {
+  // @@protoc_insertion_point(field_get:pb.CTPOrderField.update_time)
+  return update_time_.GetNoArena();
+}
+inline void CTPOrderField::set_update_time(const ::std::string& value) {
+  
+  update_time_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:pb.CTPOrderField.update_time)
+}
+#if LANG_CXX11
+inline void CTPOrderField::set_update_time(::std::string&& value) {
+  
+  update_time_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:pb.CTPOrderField.update_time)
+}
+#endif
+inline void CTPOrderField::set_update_time(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  update_time_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:pb.CTPOrderField.update_time)
+}
+inline void CTPOrderField::set_update_time(const char* value, size_t size) {
+  
+  update_time_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:pb.CTPOrderField.update_time)
+}
+inline ::std::string* CTPOrderField::mutable_update_time() {
+  
+  // @@protoc_insertion_point(field_mutable:pb.CTPOrderField.update_time)
+  return update_time_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* CTPOrderField::release_update_time() {
+  // @@protoc_insertion_point(field_release:pb.CTPOrderField.update_time)
+  
+  return update_time_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void CTPOrderField::set_allocated_update_time(::std::string* update_time) {
+  if (update_time != nullptr) {
+    
+  } else {
+    
+  }
+  update_time_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), update_time);
+  // @@protoc_insertion_point(field_set_allocated:pb.CTPOrderField.update_time)
+}
+
+// string cancel_time = 44;
+inline void CTPOrderField::clear_cancel_time() {
+  cancel_time_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& CTPOrderField::cancel_time() const {
+  // @@protoc_insertion_point(field_get:pb.CTPOrderField.cancel_time)
+  return cancel_time_.GetNoArena();
+}
+inline void CTPOrderField::set_cancel_time(const ::std::string& value) {
+  
+  cancel_time_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:pb.CTPOrderField.cancel_time)
+}
+#if LANG_CXX11
+inline void CTPOrderField::set_cancel_time(::std::string&& value) {
+  
+  cancel_time_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:pb.CTPOrderField.cancel_time)
+}
+#endif
+inline void CTPOrderField::set_cancel_time(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  cancel_time_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:pb.CTPOrderField.cancel_time)
+}
+inline void CTPOrderField::set_cancel_time(const char* value, size_t size) {
+  
+  cancel_time_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:pb.CTPOrderField.cancel_time)
+}
+inline ::std::string* CTPOrderField::mutable_cancel_time() {
+  
+  // @@protoc_insertion_point(field_mutable:pb.CTPOrderField.cancel_time)
+  return cancel_time_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* CTPOrderField::release_cancel_time() {
+  // @@protoc_insertion_point(field_release:pb.CTPOrderField.cancel_time)
+  
+  return cancel_time_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void CTPOrderField::set_allocated_cancel_time(::std::string* cancel_time) {
+  if (cancel_time != nullptr) {
+    
+  } else {
+    
+  }
+  cancel_time_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), cancel_time);
+  // @@protoc_insertion_point(field_set_allocated:pb.CTPOrderField.cancel_time)
+}
+
+// string active_trader_id = 45;
+inline void CTPOrderField::clear_active_trader_id() {
+  active_trader_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& CTPOrderField::active_trader_id() const {
+  // @@protoc_insertion_point(field_get:pb.CTPOrderField.active_trader_id)
+  return active_trader_id_.GetNoArena();
+}
+inline void CTPOrderField::set_active_trader_id(const ::std::string& value) {
+  
+  active_trader_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:pb.CTPOrderField.active_trader_id)
+}
+#if LANG_CXX11
+inline void CTPOrderField::set_active_trader_id(::std::string&& value) {
+  
+  active_trader_id_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:pb.CTPOrderField.active_trader_id)
+}
+#endif
+inline void CTPOrderField::set_active_trader_id(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  active_trader_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:pb.CTPOrderField.active_trader_id)
+}
+inline void CTPOrderField::set_active_trader_id(const char* value, size_t size) {
+  
+  active_trader_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:pb.CTPOrderField.active_trader_id)
+}
+inline ::std::string* CTPOrderField::mutable_active_trader_id() {
+  
+  // @@protoc_insertion_point(field_mutable:pb.CTPOrderField.active_trader_id)
+  return active_trader_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* CTPOrderField::release_active_trader_id() {
+  // @@protoc_insertion_point(field_release:pb.CTPOrderField.active_trader_id)
+  
+  return active_trader_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void CTPOrderField::set_allocated_active_trader_id(::std::string* active_trader_id) {
+  if (active_trader_id != nullptr) {
+    
+  } else {
+    
+  }
+  active_trader_id_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), active_trader_id);
+  // @@protoc_insertion_point(field_set_allocated:pb.CTPOrderField.active_trader_id)
+}
+
+// string clearing_part_id = 46;
+inline void CTPOrderField::clear_clearing_part_id() {
+  clearing_part_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& CTPOrderField::clearing_part_id() const {
+  // @@protoc_insertion_point(field_get:pb.CTPOrderField.clearing_part_id)
+  return clearing_part_id_.GetNoArena();
+}
+inline void CTPOrderField::set_clearing_part_id(const ::std::string& value) {
+  
+  clearing_part_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:pb.CTPOrderField.clearing_part_id)
+}
+#if LANG_CXX11
+inline void CTPOrderField::set_clearing_part_id(::std::string&& value) {
+  
+  clearing_part_id_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:pb.CTPOrderField.clearing_part_id)
+}
+#endif
+inline void CTPOrderField::set_clearing_part_id(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  clearing_part_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:pb.CTPOrderField.clearing_part_id)
+}
+inline void CTPOrderField::set_clearing_part_id(const char* value, size_t size) {
+  
+  clearing_part_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:pb.CTPOrderField.clearing_part_id)
+}
+inline ::std::string* CTPOrderField::mutable_clearing_part_id() {
+  
+  // @@protoc_insertion_point(field_mutable:pb.CTPOrderField.clearing_part_id)
+  return clearing_part_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* CTPOrderField::release_clearing_part_id() {
+  // @@protoc_insertion_point(field_release:pb.CTPOrderField.clearing_part_id)
+  
+  return clearing_part_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void CTPOrderField::set_allocated_clearing_part_id(::std::string* clearing_part_id) {
+  if (clearing_part_id != nullptr) {
+    
+  } else {
+    
+  }
+  clearing_part_id_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), clearing_part_id);
+  // @@protoc_insertion_point(field_set_allocated:pb.CTPOrderField.clearing_part_id)
+}
+
+// int32 sequence_no = 47;
+inline void CTPOrderField::clear_sequence_no() {
+  sequence_no_ = 0;
+}
+inline ::google::protobuf::int32 CTPOrderField::sequence_no() const {
+  // @@protoc_insertion_point(field_get:pb.CTPOrderField.sequence_no)
+  return sequence_no_;
+}
+inline void CTPOrderField::set_sequence_no(::google::protobuf::int32 value) {
+  
+  sequence_no_ = value;
+  // @@protoc_insertion_point(field_set:pb.CTPOrderField.sequence_no)
+}
+
+// int32 front_id = 48;
+inline void CTPOrderField::clear_front_id() {
+  front_id_ = 0;
+}
+inline ::google::protobuf::int32 CTPOrderField::front_id() const {
+  // @@protoc_insertion_point(field_get:pb.CTPOrderField.front_id)
+  return front_id_;
+}
+inline void CTPOrderField::set_front_id(::google::protobuf::int32 value) {
+  
+  front_id_ = value;
+  // @@protoc_insertion_point(field_set:pb.CTPOrderField.front_id)
+}
+
+// int32 session_id = 49;
+inline void CTPOrderField::clear_session_id() {
+  session_id_ = 0;
+}
+inline ::google::protobuf::int32 CTPOrderField::session_id() const {
+  // @@protoc_insertion_point(field_get:pb.CTPOrderField.session_id)
+  return session_id_;
+}
+inline void CTPOrderField::set_session_id(::google::protobuf::int32 value) {
+  
+  session_id_ = value;
+  // @@protoc_insertion_point(field_set:pb.CTPOrderField.session_id)
+}
+
+// string user_product_info = 50;
+inline void CTPOrderField::clear_user_product_info() {
+  user_product_info_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& CTPOrderField::user_product_info() const {
+  // @@protoc_insertion_point(field_get:pb.CTPOrderField.user_product_info)
+  return user_product_info_.GetNoArena();
+}
+inline void CTPOrderField::set_user_product_info(const ::std::string& value) {
+  
+  user_product_info_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:pb.CTPOrderField.user_product_info)
+}
+#if LANG_CXX11
+inline void CTPOrderField::set_user_product_info(::std::string&& value) {
   
   user_product_info_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:pb.CTPOrder.user_product_info)
+  // @@protoc_insertion_point(field_set_rvalue:pb.CTPOrderField.user_product_info)
 }
 #endif
-inline void CTPOrder::set_user_product_info(const char* value) {
+inline void CTPOrderField::set_user_product_info(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   user_product_info_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:pb.CTPOrder.user_product_info)
+  // @@protoc_insertion_point(field_set_char:pb.CTPOrderField.user_product_info)
 }
-inline void CTPOrder::set_user_product_info(const char* value, size_t size) {
+inline void CTPOrderField::set_user_product_info(const char* value, size_t size) {
   
   user_product_info_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:pb.CTPOrder.user_product_info)
+  // @@protoc_insertion_point(field_set_pointer:pb.CTPOrderField.user_product_info)
 }
-inline ::std::string* CTPOrder::mutable_user_product_info() {
+inline ::std::string* CTPOrderField::mutable_user_product_info() {
   
-  // @@protoc_insertion_point(field_mutable:pb.CTPOrder.user_product_info)
+  // @@protoc_insertion_point(field_mutable:pb.CTPOrderField.user_product_info)
   return user_product_info_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline ::std::string* CTPOrder::release_user_product_info() {
-  // @@protoc_insertion_point(field_release:pb.CTPOrder.user_product_info)
+inline ::std::string* CTPOrderField::release_user_product_info() {
+  // @@protoc_insertion_point(field_release:pb.CTPOrderField.user_product_info)
   
   return user_product_info_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline void CTPOrder::set_allocated_user_product_info(::std::string* user_product_info) {
+inline void CTPOrderField::set_allocated_user_product_info(::std::string* user_product_info) {
   if (user_product_info != nullptr) {
     
   } else {
     
   }
   user_product_info_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), user_product_info);
-  // @@protoc_insertion_point(field_set_allocated:pb.CTPOrder.user_product_info)
+  // @@protoc_insertion_point(field_set_allocated:pb.CTPOrderField.user_product_info)
 }
 
-// .pb.CurrencyType currency_type = 21;
-inline void CTPOrder::clear_currency_type() {
-  currency_type_ = 0;
+// bytes status_msg = 51;
+inline void CTPOrderField::clear_status_msg() {
+  status_msg_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline ::pb::CurrencyType CTPOrder::currency_type() const {
-  // @@protoc_insertion_point(field_get:pb.CTPOrder.currency_type)
-  return static_cast< ::pb::CurrencyType >(currency_type_);
+inline const ::std::string& CTPOrderField::status_msg() const {
+  // @@protoc_insertion_point(field_get:pb.CTPOrderField.status_msg)
+  return status_msg_.GetNoArena();
 }
-inline void CTPOrder::set_currency_type(::pb::CurrencyType value) {
+inline void CTPOrderField::set_status_msg(const ::std::string& value) {
   
-  currency_type_ = value;
-  // @@protoc_insertion_point(field_set:pb.CTPOrder.currency_type)
-}
-
-// string exchange_order_id = 22;
-inline void CTPOrder::clear_exchange_order_id() {
-  exchange_order_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline const ::std::string& CTPOrder::exchange_order_id() const {
-  // @@protoc_insertion_point(field_get:pb.CTPOrder.exchange_order_id)
-  return exchange_order_id_.GetNoArena();
-}
-inline void CTPOrder::set_exchange_order_id(const ::std::string& value) {
-  
-  exchange_order_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:pb.CTPOrder.exchange_order_id)
+  status_msg_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:pb.CTPOrderField.status_msg)
 }
 #if LANG_CXX11
-inline void CTPOrder::set_exchange_order_id(::std::string&& value) {
+inline void CTPOrderField::set_status_msg(::std::string&& value) {
   
-  exchange_order_id_.SetNoArena(
+  status_msg_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:pb.CTPOrder.exchange_order_id)
+  // @@protoc_insertion_point(field_set_rvalue:pb.CTPOrderField.status_msg)
 }
 #endif
-inline void CTPOrder::set_exchange_order_id(const char* value) {
+inline void CTPOrderField::set_status_msg(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
-  exchange_order_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:pb.CTPOrder.exchange_order_id)
+  status_msg_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:pb.CTPOrderField.status_msg)
 }
-inline void CTPOrder::set_exchange_order_id(const char* value, size_t size) {
+inline void CTPOrderField::set_status_msg(const void* value, size_t size) {
   
-  exchange_order_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+  status_msg_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:pb.CTPOrder.exchange_order_id)
+  // @@protoc_insertion_point(field_set_pointer:pb.CTPOrderField.status_msg)
 }
-inline ::std::string* CTPOrder::mutable_exchange_order_id() {
+inline ::std::string* CTPOrderField::mutable_status_msg() {
   
-  // @@protoc_insertion_point(field_mutable:pb.CTPOrder.exchange_order_id)
-  return exchange_order_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  // @@protoc_insertion_point(field_mutable:pb.CTPOrderField.status_msg)
+  return status_msg_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline ::std::string* CTPOrder::release_exchange_order_id() {
-  // @@protoc_insertion_point(field_release:pb.CTPOrder.exchange_order_id)
+inline ::std::string* CTPOrderField::release_status_msg() {
+  // @@protoc_insertion_point(field_release:pb.CTPOrderField.status_msg)
   
-  return exchange_order_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return status_msg_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline void CTPOrder::set_allocated_exchange_order_id(::std::string* exchange_order_id) {
-  if (exchange_order_id != nullptr) {
+inline void CTPOrderField::set_allocated_status_msg(::std::string* status_msg) {
+  if (status_msg != nullptr) {
     
   } else {
     
   }
-  exchange_order_id_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), exchange_order_id);
-  // @@protoc_insertion_point(field_set_allocated:pb.CTPOrder.exchange_order_id)
+  status_msg_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), status_msg);
+  // @@protoc_insertion_point(field_set_allocated:pb.CTPOrderField.status_msg)
 }
 
-// int32 time_condition_type = 23;
-inline void CTPOrder::clear_time_condition_type() {
-  time_condition_type_ = 0;
+// bool user_force_close = 52;
+inline void CTPOrderField::clear_user_force_close() {
+  user_force_close_ = false;
 }
-inline ::google::protobuf::int32 CTPOrder::time_condition_type() const {
-  // @@protoc_insertion_point(field_get:pb.CTPOrder.time_condition_type)
-  return time_condition_type_;
+inline bool CTPOrderField::user_force_close() const {
+  // @@protoc_insertion_point(field_get:pb.CTPOrderField.user_force_close)
+  return user_force_close_;
 }
-inline void CTPOrder::set_time_condition_type(::google::protobuf::int32 value) {
+inline void CTPOrderField::set_user_force_close(bool value) {
   
-  time_condition_type_ = value;
-  // @@protoc_insertion_point(field_set:pb.CTPOrder.time_condition_type)
+  user_force_close_ = value;
+  // @@protoc_insertion_point(field_set:pb.CTPOrderField.user_force_close)
 }
 
-// string route_account_id = 24;
-inline void CTPOrder::clear_route_account_id() {
-  route_account_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+// string active_user_id = 53;
+inline void CTPOrderField::clear_active_user_id() {
+  active_user_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline const ::std::string& CTPOrder::route_account_id() const {
-  // @@protoc_insertion_point(field_get:pb.CTPOrder.route_account_id)
-  return route_account_id_.GetNoArena();
+inline const ::std::string& CTPOrderField::active_user_id() const {
+  // @@protoc_insertion_point(field_get:pb.CTPOrderField.active_user_id)
+  return active_user_id_.GetNoArena();
 }
-inline void CTPOrder::set_route_account_id(const ::std::string& value) {
+inline void CTPOrderField::set_active_user_id(const ::std::string& value) {
   
-  route_account_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:pb.CTPOrder.route_account_id)
+  active_user_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:pb.CTPOrderField.active_user_id)
 }
 #if LANG_CXX11
-inline void CTPOrder::set_route_account_id(::std::string&& value) {
+inline void CTPOrderField::set_active_user_id(::std::string&& value) {
   
-  route_account_id_.SetNoArena(
+  active_user_id_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:pb.CTPOrder.route_account_id)
+  // @@protoc_insertion_point(field_set_rvalue:pb.CTPOrderField.active_user_id)
 }
 #endif
-inline void CTPOrder::set_route_account_id(const char* value) {
+inline void CTPOrderField::set_active_user_id(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
-  route_account_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:pb.CTPOrder.route_account_id)
+  active_user_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:pb.CTPOrderField.active_user_id)
 }
-inline void CTPOrder::set_route_account_id(const char* value, size_t size) {
+inline void CTPOrderField::set_active_user_id(const char* value, size_t size) {
   
-  route_account_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+  active_user_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:pb.CTPOrder.route_account_id)
+  // @@protoc_insertion_point(field_set_pointer:pb.CTPOrderField.active_user_id)
 }
-inline ::std::string* CTPOrder::mutable_route_account_id() {
+inline ::std::string* CTPOrderField::mutable_active_user_id() {
   
-  // @@protoc_insertion_point(field_mutable:pb.CTPOrder.route_account_id)
-  return route_account_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  // @@protoc_insertion_point(field_mutable:pb.CTPOrderField.active_user_id)
+  return active_user_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline ::std::string* CTPOrder::release_route_account_id() {
-  // @@protoc_insertion_point(field_release:pb.CTPOrder.route_account_id)
+inline ::std::string* CTPOrderField::release_active_user_id() {
+  // @@protoc_insertion_point(field_release:pb.CTPOrderField.active_user_id)
   
-  return route_account_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return active_user_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline void CTPOrder::set_allocated_route_account_id(::std::string* route_account_id) {
-  if (route_account_id != nullptr) {
+inline void CTPOrderField::set_allocated_active_user_id(::std::string* active_user_id) {
+  if (active_user_id != nullptr) {
     
   } else {
     
   }
-  route_account_id_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), route_account_id);
-  // @@protoc_insertion_point(field_set_allocated:pb.CTPOrder.route_account_id)
+  active_user_id_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), active_user_id);
+  // @@protoc_insertion_point(field_set_allocated:pb.CTPOrderField.active_user_id)
 }
 
-// int32 local_type_id = 25;
-inline void CTPOrder::clear_local_type_id() {
-  local_type_id_ = 0;
+// int32 broker_order_seq = 54;
+inline void CTPOrderField::clear_broker_order_seq() {
+  broker_order_seq_ = 0;
 }
-inline ::google::protobuf::int32 CTPOrder::local_type_id() const {
-  // @@protoc_insertion_point(field_get:pb.CTPOrder.local_type_id)
-  return local_type_id_;
+inline ::google::protobuf::int32 CTPOrderField::broker_order_seq() const {
+  // @@protoc_insertion_point(field_get:pb.CTPOrderField.broker_order_seq)
+  return broker_order_seq_;
 }
-inline void CTPOrder::set_local_type_id(::google::protobuf::int32 value) {
+inline void CTPOrderField::set_broker_order_seq(::google::protobuf::int32 value) {
   
-  local_type_id_ = value;
-  // @@protoc_insertion_point(field_set:pb.CTPOrder.local_type_id)
+  broker_order_seq_ = value;
+  // @@protoc_insertion_point(field_set:pb.CTPOrderField.broker_order_seq)
 }
 
-// double commission = 26;
-inline void CTPOrder::clear_commission() {
-  commission_ = 0;
+// string relative_order_sys_id = 55;
+inline void CTPOrderField::clear_relative_order_sys_id() {
+  relative_order_sys_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline double CTPOrder::commission() const {
-  // @@protoc_insertion_point(field_get:pb.CTPOrder.commission)
-  return commission_;
+inline const ::std::string& CTPOrderField::relative_order_sys_id() const {
+  // @@protoc_insertion_point(field_get:pb.CTPOrderField.relative_order_sys_id)
+  return relative_order_sys_id_.GetNoArena();
 }
-inline void CTPOrder::set_commission(double value) {
+inline void CTPOrderField::set_relative_order_sys_id(const ::std::string& value) {
   
-  commission_ = value;
-  // @@protoc_insertion_point(field_set:pb.CTPOrder.commission)
-}
-
-// .pb.CTPOffsetFlag offset_flag = 27;
-inline void CTPOrder::clear_offset_flag() {
-  offset_flag_ = 0;
-}
-inline ::pb::CTPOffsetFlag CTPOrder::offset_flag() const {
-  // @@protoc_insertion_point(field_get:pb.CTPOrder.offset_flag)
-  return static_cast< ::pb::CTPOffsetFlag >(offset_flag_);
-}
-inline void CTPOrder::set_offset_flag(::pb::CTPOffsetFlag value) {
-  
-  offset_flag_ = value;
-  // @@protoc_insertion_point(field_set:pb.CTPOrder.offset_flag)
-}
-
-// int32 error_code = 28;
-inline void CTPOrder::clear_error_code() {
-  error_code_ = 0;
-}
-inline ::google::protobuf::int32 CTPOrder::error_code() const {
-  // @@protoc_insertion_point(field_get:pb.CTPOrder.error_code)
-  return error_code_;
-}
-inline void CTPOrder::set_error_code(::google::protobuf::int32 value) {
-  
-  error_code_ = value;
-  // @@protoc_insertion_point(field_set:pb.CTPOrder.error_code)
-}
-
-// string token = 29;
-inline void CTPOrder::clear_token() {
-  token_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline const ::std::string& CTPOrder::token() const {
-  // @@protoc_insertion_point(field_get:pb.CTPOrder.token)
-  return token_.GetNoArena();
-}
-inline void CTPOrder::set_token(const ::std::string& value) {
-  
-  token_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:pb.CTPOrder.token)
+  relative_order_sys_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:pb.CTPOrderField.relative_order_sys_id)
 }
 #if LANG_CXX11
-inline void CTPOrder::set_token(::std::string&& value) {
+inline void CTPOrderField::set_relative_order_sys_id(::std::string&& value) {
   
-  token_.SetNoArena(
+  relative_order_sys_id_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:pb.CTPOrder.token)
+  // @@protoc_insertion_point(field_set_rvalue:pb.CTPOrderField.relative_order_sys_id)
 }
 #endif
-inline void CTPOrder::set_token(const char* value) {
+inline void CTPOrderField::set_relative_order_sys_id(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
-  token_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:pb.CTPOrder.token)
+  relative_order_sys_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:pb.CTPOrderField.relative_order_sys_id)
 }
-inline void CTPOrder::set_token(const char* value, size_t size) {
+inline void CTPOrderField::set_relative_order_sys_id(const char* value, size_t size) {
   
-  token_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+  relative_order_sys_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:pb.CTPOrder.token)
+  // @@protoc_insertion_point(field_set_pointer:pb.CTPOrderField.relative_order_sys_id)
 }
-inline ::std::string* CTPOrder::mutable_token() {
+inline ::std::string* CTPOrderField::mutable_relative_order_sys_id() {
   
-  // @@protoc_insertion_point(field_mutable:pb.CTPOrder.token)
-  return token_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  // @@protoc_insertion_point(field_mutable:pb.CTPOrderField.relative_order_sys_id)
+  return relative_order_sys_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline ::std::string* CTPOrder::release_token() {
-  // @@protoc_insertion_point(field_release:pb.CTPOrder.token)
+inline ::std::string* CTPOrderField::release_relative_order_sys_id() {
+  // @@protoc_insertion_point(field_release:pb.CTPOrderField.relative_order_sys_id)
   
-  return token_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return relative_order_sys_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline void CTPOrder::set_allocated_token(::std::string* token) {
-  if (token != nullptr) {
+inline void CTPOrderField::set_allocated_relative_order_sys_id(::std::string* relative_order_sys_id) {
+  if (relative_order_sys_id != nullptr) {
     
   } else {
     
   }
-  token_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), token);
-  // @@protoc_insertion_point(field_set_allocated:pb.CTPOrder.token)
+  relative_order_sys_id_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), relative_order_sys_id);
+  // @@protoc_insertion_point(field_set_allocated:pb.CTPOrderField.relative_order_sys_id)
 }
 
-// double stoploss = 30;
-inline void CTPOrder::clear_stoploss() {
-  stoploss_ = 0;
+// int32 ZCE_total_traded_volume = 56;
+inline void CTPOrderField::clear_zce_total_traded_volume() {
+  zce_total_traded_volume_ = 0;
 }
-inline double CTPOrder::stoploss() const {
-  // @@protoc_insertion_point(field_get:pb.CTPOrder.stoploss)
-  return stoploss_;
+inline ::google::protobuf::int32 CTPOrderField::zce_total_traded_volume() const {
+  // @@protoc_insertion_point(field_get:pb.CTPOrderField.ZCE_total_traded_volume)
+  return zce_total_traded_volume_;
 }
-inline void CTPOrder::set_stoploss(double value) {
+inline void CTPOrderField::set_zce_total_traded_volume(::google::protobuf::int32 value) {
   
-  stoploss_ = value;
-  // @@protoc_insertion_point(field_set:pb.CTPOrder.stoploss)
+  zce_total_traded_volume_ = value;
+  // @@protoc_insertion_point(field_set:pb.CTPOrderField.ZCE_total_traded_volume)
 }
 
-// double take_profit = 31;
-inline void CTPOrder::clear_take_profit() {
-  take_profit_ = 0;
+// bool is_swap_order = 57;
+inline void CTPOrderField::clear_is_swap_order() {
+  is_swap_order_ = false;
 }
-inline double CTPOrder::take_profit() const {
-  // @@protoc_insertion_point(field_get:pb.CTPOrder.take_profit)
-  return take_profit_;
+inline bool CTPOrderField::is_swap_order() const {
+  // @@protoc_insertion_point(field_get:pb.CTPOrderField.is_swap_order)
+  return is_swap_order_;
 }
-inline void CTPOrder::set_take_profit(double value) {
+inline void CTPOrderField::set_is_swap_order(bool value) {
   
-  take_profit_ = value;
-  // @@protoc_insertion_point(field_set:pb.CTPOrder.take_profit)
+  is_swap_order_ = value;
+  // @@protoc_insertion_point(field_set:pb.CTPOrderField.is_swap_order)
 }
 
-// double traded_amount = 32;
-inline void CTPOrder::clear_traded_amount() {
-  traded_amount_ = 0;
+// string branch_id = 58;
+inline void CTPOrderField::clear_branch_id() {
+  branch_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline double CTPOrder::traded_amount() const {
-  // @@protoc_insertion_point(field_get:pb.CTPOrder.traded_amount)
-  return traded_amount_;
+inline const ::std::string& CTPOrderField::branch_id() const {
+  // @@protoc_insertion_point(field_get:pb.CTPOrderField.branch_id)
+  return branch_id_.GetNoArena();
 }
-inline void CTPOrder::set_traded_amount(double value) {
+inline void CTPOrderField::set_branch_id(const ::std::string& value) {
   
-  traded_amount_ = value;
-  // @@protoc_insertion_point(field_set:pb.CTPOrder.traded_amount)
-}
-
-// int32 volume_multiple = 33;
-inline void CTPOrder::clear_volume_multiple() {
-  volume_multiple_ = 0;
-}
-inline ::google::protobuf::int32 CTPOrder::volume_multiple() const {
-  // @@protoc_insertion_point(field_get:pb.CTPOrder.volume_multiple)
-  return volume_multiple_;
-}
-inline void CTPOrder::set_volume_multiple(::google::protobuf::int32 value) {
-  
-  volume_multiple_ = value;
-  // @@protoc_insertion_point(field_set:pb.CTPOrder.volume_multiple)
-}
-
-// .pb.ProductID product_id = 34;
-inline bool CTPOrder::has_product_id() const {
-  return this != internal_default_instance() && product_id_ != nullptr;
-}
-inline const ::pb::ProductID& CTPOrder::product_id() const {
-  const ::pb::ProductID* p = product_id_;
-  // @@protoc_insertion_point(field_get:pb.CTPOrder.product_id)
-  return p != nullptr ? *p : *reinterpret_cast<const ::pb::ProductID*>(
-      &::pb::_ProductID_default_instance_);
-}
-inline ::pb::ProductID* CTPOrder::release_product_id() {
-  // @@protoc_insertion_point(field_release:pb.CTPOrder.product_id)
-  
-  ::pb::ProductID* temp = product_id_;
-  product_id_ = nullptr;
-  return temp;
-}
-inline ::pb::ProductID* CTPOrder::mutable_product_id() {
-  
-  if (product_id_ == nullptr) {
-    auto* p = CreateMaybeMessage<::pb::ProductID>(GetArenaNoVirtual());
-    product_id_ = p;
-  }
-  // @@protoc_insertion_point(field_mutable:pb.CTPOrder.product_id)
-  return product_id_;
-}
-inline void CTPOrder::set_allocated_product_id(::pb::ProductID* product_id) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == nullptr) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(product_id_);
-  }
-  if (product_id) {
-    ::google::protobuf::Arena* submessage_arena = nullptr;
-    if (message_arena != submessage_arena) {
-      product_id = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, product_id, submessage_arena);
-    }
-    
-  } else {
-    
-  }
-  product_id_ = product_id;
-  // @@protoc_insertion_point(field_set_allocated:pb.CTPOrder.product_id)
-}
-
-// double price_tick = 35;
-inline void CTPOrder::clear_price_tick() {
-  price_tick_ = 0;
-}
-inline double CTPOrder::price_tick() const {
-  // @@protoc_insertion_point(field_get:pb.CTPOrder.price_tick)
-  return price_tick_;
-}
-inline void CTPOrder::set_price_tick(double value) {
-  
-  price_tick_ = value;
-  // @@protoc_insertion_point(field_set:pb.CTPOrder.price_tick)
-}
-
-// double frozen_margin = 36;
-inline void CTPOrder::clear_frozen_margin() {
-  frozen_margin_ = 0;
-}
-inline double CTPOrder::frozen_margin() const {
-  // @@protoc_insertion_point(field_get:pb.CTPOrder.frozen_margin)
-  return frozen_margin_;
-}
-inline void CTPOrder::set_frozen_margin(double value) {
-  
-  frozen_margin_ = value;
-  // @@protoc_insertion_point(field_set:pb.CTPOrder.frozen_margin)
-}
-
-// string symbol_name = 37;
-inline void CTPOrder::clear_symbol_name() {
-  symbol_name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline const ::std::string& CTPOrder::symbol_name() const {
-  // @@protoc_insertion_point(field_get:pb.CTPOrder.symbol_name)
-  return symbol_name_.GetNoArena();
-}
-inline void CTPOrder::set_symbol_name(const ::std::string& value) {
-  
-  symbol_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:pb.CTPOrder.symbol_name)
+  branch_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:pb.CTPOrderField.branch_id)
 }
 #if LANG_CXX11
-inline void CTPOrder::set_symbol_name(::std::string&& value) {
+inline void CTPOrderField::set_branch_id(::std::string&& value) {
   
-  symbol_name_.SetNoArena(
+  branch_id_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:pb.CTPOrder.symbol_name)
+  // @@protoc_insertion_point(field_set_rvalue:pb.CTPOrderField.branch_id)
 }
 #endif
-inline void CTPOrder::set_symbol_name(const char* value) {
+inline void CTPOrderField::set_branch_id(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
-  symbol_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:pb.CTPOrder.symbol_name)
+  branch_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:pb.CTPOrderField.branch_id)
 }
-inline void CTPOrder::set_symbol_name(const char* value, size_t size) {
+inline void CTPOrderField::set_branch_id(const char* value, size_t size) {
   
-  symbol_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+  branch_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:pb.CTPOrder.symbol_name)
+  // @@protoc_insertion_point(field_set_pointer:pb.CTPOrderField.branch_id)
 }
-inline ::std::string* CTPOrder::mutable_symbol_name() {
+inline ::std::string* CTPOrderField::mutable_branch_id() {
   
-  // @@protoc_insertion_point(field_mutable:pb.CTPOrder.symbol_name)
-  return symbol_name_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  // @@protoc_insertion_point(field_mutable:pb.CTPOrderField.branch_id)
+  return branch_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline ::std::string* CTPOrder::release_symbol_name() {
-  // @@protoc_insertion_point(field_release:pb.CTPOrder.symbol_name)
+inline ::std::string* CTPOrderField::release_branch_id() {
+  // @@protoc_insertion_point(field_release:pb.CTPOrderField.branch_id)
   
-  return symbol_name_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return branch_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline void CTPOrder::set_allocated_symbol_name(::std::string* symbol_name) {
-  if (symbol_name != nullptr) {
+inline void CTPOrderField::set_allocated_branch_id(::std::string* branch_id) {
+  if (branch_id != nullptr) {
     
   } else {
     
   }
-  symbol_name_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), symbol_name);
-  // @@protoc_insertion_point(field_set_allocated:pb.CTPOrder.symbol_name)
+  branch_id_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), branch_id);
+  // @@protoc_insertion_point(field_set_allocated:pb.CTPOrderField.branch_id)
 }
 
-// string reason_comment = 38;
-inline void CTPOrder::clear_reason_comment() {
-  reason_comment_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+// string invest_unit_id = 59;
+inline void CTPOrderField::clear_invest_unit_id() {
+  invest_unit_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline const ::std::string& CTPOrder::reason_comment() const {
-  // @@protoc_insertion_point(field_get:pb.CTPOrder.reason_comment)
-  return reason_comment_.GetNoArena();
+inline const ::std::string& CTPOrderField::invest_unit_id() const {
+  // @@protoc_insertion_point(field_get:pb.CTPOrderField.invest_unit_id)
+  return invest_unit_id_.GetNoArena();
 }
-inline void CTPOrder::set_reason_comment(const ::std::string& value) {
+inline void CTPOrderField::set_invest_unit_id(const ::std::string& value) {
   
-  reason_comment_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:pb.CTPOrder.reason_comment)
+  invest_unit_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:pb.CTPOrderField.invest_unit_id)
 }
 #if LANG_CXX11
-inline void CTPOrder::set_reason_comment(::std::string&& value) {
+inline void CTPOrderField::set_invest_unit_id(::std::string&& value) {
   
-  reason_comment_.SetNoArena(
+  invest_unit_id_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:pb.CTPOrder.reason_comment)
+  // @@protoc_insertion_point(field_set_rvalue:pb.CTPOrderField.invest_unit_id)
 }
 #endif
-inline void CTPOrder::set_reason_comment(const char* value) {
+inline void CTPOrderField::set_invest_unit_id(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
-  reason_comment_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:pb.CTPOrder.reason_comment)
+  invest_unit_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:pb.CTPOrderField.invest_unit_id)
 }
-inline void CTPOrder::set_reason_comment(const char* value, size_t size) {
+inline void CTPOrderField::set_invest_unit_id(const char* value, size_t size) {
   
-  reason_comment_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+  invest_unit_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:pb.CTPOrder.reason_comment)
+  // @@protoc_insertion_point(field_set_pointer:pb.CTPOrderField.invest_unit_id)
 }
-inline ::std::string* CTPOrder::mutable_reason_comment() {
+inline ::std::string* CTPOrderField::mutable_invest_unit_id() {
   
-  // @@protoc_insertion_point(field_mutable:pb.CTPOrder.reason_comment)
-  return reason_comment_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  // @@protoc_insertion_point(field_mutable:pb.CTPOrderField.invest_unit_id)
+  return invest_unit_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline ::std::string* CTPOrder::release_reason_comment() {
-  // @@protoc_insertion_point(field_release:pb.CTPOrder.reason_comment)
+inline ::std::string* CTPOrderField::release_invest_unit_id() {
+  // @@protoc_insertion_point(field_release:pb.CTPOrderField.invest_unit_id)
   
-  return reason_comment_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return invest_unit_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline void CTPOrder::set_allocated_reason_comment(::std::string* reason_comment) {
-  if (reason_comment != nullptr) {
+inline void CTPOrderField::set_allocated_invest_unit_id(::std::string* invest_unit_id) {
+  if (invest_unit_id != nullptr) {
     
   } else {
     
   }
-  reason_comment_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), reason_comment);
-  // @@protoc_insertion_point(field_set_allocated:pb.CTPOrder.reason_comment)
+  invest_unit_id_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), invest_unit_id);
+  // @@protoc_insertion_point(field_set_allocated:pb.CTPOrderField.invest_unit_id)
+}
+
+// string account_id = 60;
+inline void CTPOrderField::clear_account_id() {
+  account_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& CTPOrderField::account_id() const {
+  // @@protoc_insertion_point(field_get:pb.CTPOrderField.account_id)
+  return account_id_.GetNoArena();
+}
+inline void CTPOrderField::set_account_id(const ::std::string& value) {
+  
+  account_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:pb.CTPOrderField.account_id)
+}
+#if LANG_CXX11
+inline void CTPOrderField::set_account_id(::std::string&& value) {
+  
+  account_id_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:pb.CTPOrderField.account_id)
+}
+#endif
+inline void CTPOrderField::set_account_id(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  account_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:pb.CTPOrderField.account_id)
+}
+inline void CTPOrderField::set_account_id(const char* value, size_t size) {
+  
+  account_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:pb.CTPOrderField.account_id)
+}
+inline ::std::string* CTPOrderField::mutable_account_id() {
+  
+  // @@protoc_insertion_point(field_mutable:pb.CTPOrderField.account_id)
+  return account_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* CTPOrderField::release_account_id() {
+  // @@protoc_insertion_point(field_release:pb.CTPOrderField.account_id)
+  
+  return account_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void CTPOrderField::set_allocated_account_id(::std::string* account_id) {
+  if (account_id != nullptr) {
+    
+  } else {
+    
+  }
+  account_id_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), account_id);
+  // @@protoc_insertion_point(field_set_allocated:pb.CTPOrderField.account_id)
+}
+
+// string currency_id = 61;
+inline void CTPOrderField::clear_currency_id() {
+  currency_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& CTPOrderField::currency_id() const {
+  // @@protoc_insertion_point(field_get:pb.CTPOrderField.currency_id)
+  return currency_id_.GetNoArena();
+}
+inline void CTPOrderField::set_currency_id(const ::std::string& value) {
+  
+  currency_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:pb.CTPOrderField.currency_id)
+}
+#if LANG_CXX11
+inline void CTPOrderField::set_currency_id(::std::string&& value) {
+  
+  currency_id_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:pb.CTPOrderField.currency_id)
+}
+#endif
+inline void CTPOrderField::set_currency_id(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  currency_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:pb.CTPOrderField.currency_id)
+}
+inline void CTPOrderField::set_currency_id(const char* value, size_t size) {
+  
+  currency_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:pb.CTPOrderField.currency_id)
+}
+inline ::std::string* CTPOrderField::mutable_currency_id() {
+  
+  // @@protoc_insertion_point(field_mutable:pb.CTPOrderField.currency_id)
+  return currency_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* CTPOrderField::release_currency_id() {
+  // @@protoc_insertion_point(field_release:pb.CTPOrderField.currency_id)
+  
+  return currency_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void CTPOrderField::set_allocated_currency_id(::std::string* currency_id) {
+  if (currency_id != nullptr) {
+    
+  } else {
+    
+  }
+  currency_id_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), currency_id);
+  // @@protoc_insertion_point(field_set_allocated:pb.CTPOrderField.currency_id)
+}
+
+// string IP_address = 62;
+inline void CTPOrderField::clear_ip_address() {
+  ip_address_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& CTPOrderField::ip_address() const {
+  // @@protoc_insertion_point(field_get:pb.CTPOrderField.IP_address)
+  return ip_address_.GetNoArena();
+}
+inline void CTPOrderField::set_ip_address(const ::std::string& value) {
+  
+  ip_address_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:pb.CTPOrderField.IP_address)
+}
+#if LANG_CXX11
+inline void CTPOrderField::set_ip_address(::std::string&& value) {
+  
+  ip_address_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:pb.CTPOrderField.IP_address)
+}
+#endif
+inline void CTPOrderField::set_ip_address(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  ip_address_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:pb.CTPOrderField.IP_address)
+}
+inline void CTPOrderField::set_ip_address(const char* value, size_t size) {
+  
+  ip_address_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:pb.CTPOrderField.IP_address)
+}
+inline ::std::string* CTPOrderField::mutable_ip_address() {
+  
+  // @@protoc_insertion_point(field_mutable:pb.CTPOrderField.IP_address)
+  return ip_address_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* CTPOrderField::release_ip_address() {
+  // @@protoc_insertion_point(field_release:pb.CTPOrderField.IP_address)
+  
+  return ip_address_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void CTPOrderField::set_allocated_ip_address(::std::string* ip_address) {
+  if (ip_address != nullptr) {
+    
+  } else {
+    
+  }
+  ip_address_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ip_address);
+  // @@protoc_insertion_point(field_set_allocated:pb.CTPOrderField.IP_address)
+}
+
+// string Mac_address = 63;
+inline void CTPOrderField::clear_mac_address() {
+  mac_address_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& CTPOrderField::mac_address() const {
+  // @@protoc_insertion_point(field_get:pb.CTPOrderField.Mac_address)
+  return mac_address_.GetNoArena();
+}
+inline void CTPOrderField::set_mac_address(const ::std::string& value) {
+  
+  mac_address_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:pb.CTPOrderField.Mac_address)
+}
+#if LANG_CXX11
+inline void CTPOrderField::set_mac_address(::std::string&& value) {
+  
+  mac_address_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:pb.CTPOrderField.Mac_address)
+}
+#endif
+inline void CTPOrderField::set_mac_address(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  mac_address_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:pb.CTPOrderField.Mac_address)
+}
+inline void CTPOrderField::set_mac_address(const char* value, size_t size) {
+  
+  mac_address_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:pb.CTPOrderField.Mac_address)
+}
+inline ::std::string* CTPOrderField::mutable_mac_address() {
+  
+  // @@protoc_insertion_point(field_mutable:pb.CTPOrderField.Mac_address)
+  return mac_address_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* CTPOrderField::release_mac_address() {
+  // @@protoc_insertion_point(field_release:pb.CTPOrderField.Mac_address)
+  
+  return mac_address_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void CTPOrderField::set_allocated_mac_address(::std::string* mac_address) {
+  if (mac_address != nullptr) {
+    
+  } else {
+    
+  }
+  mac_address_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), mac_address);
+  // @@protoc_insertion_point(field_set_allocated:pb.CTPOrderField.Mac_address)
 }
 
 // -------------------------------------------------------------------
 
 // CTPOrderList
 
-// repeated .pb.CTPOrder list = 1;
+// repeated .pb.CTPOrderField list = 1;
 inline int CTPOrderList::list_size() const {
   return list_.size();
 }
 inline void CTPOrderList::clear_list() {
   list_.Clear();
 }
-inline ::pb::CTPOrder* CTPOrderList::mutable_list(int index) {
+inline ::pb::CTPOrderField* CTPOrderList::mutable_list(int index) {
   // @@protoc_insertion_point(field_mutable:pb.CTPOrderList.list)
   return list_.Mutable(index);
 }
-inline ::google::protobuf::RepeatedPtrField< ::pb::CTPOrder >*
+inline ::google::protobuf::RepeatedPtrField< ::pb::CTPOrderField >*
 CTPOrderList::mutable_list() {
   // @@protoc_insertion_point(field_mutable_list:pb.CTPOrderList.list)
   return &list_;
 }
-inline const ::pb::CTPOrder& CTPOrderList::list(int index) const {
+inline const ::pb::CTPOrderField& CTPOrderList::list(int index) const {
   // @@protoc_insertion_point(field_get:pb.CTPOrderList.list)
   return list_.Get(index);
 }
-inline ::pb::CTPOrder* CTPOrderList::add_list() {
+inline ::pb::CTPOrderField* CTPOrderList::add_list() {
   // @@protoc_insertion_point(field_add:pb.CTPOrderList.list)
   return list_.Add();
 }
-inline const ::google::protobuf::RepeatedPtrField< ::pb::CTPOrder >&
+inline const ::google::protobuf::RepeatedPtrField< ::pb::CTPOrderField >&
 CTPOrderList::list() const {
   // @@protoc_insertion_point(field_list:pb.CTPOrderList.list)
   return list_;
@@ -10500,7 +12192,7 @@ CTPOrderList::list() const {
 
 // CTPOrderLink
 
-// .pb.CTPOrder parent = 1;
+// .pb.CTPOrderField parent = 1;
 inline bool CTPOrderLink::has_parent() const {
   return this != internal_default_instance() && parent_ != nullptr;
 }
@@ -10510,29 +12202,29 @@ inline void CTPOrderLink::clear_parent() {
   }
   parent_ = nullptr;
 }
-inline const ::pb::CTPOrder& CTPOrderLink::parent() const {
-  const ::pb::CTPOrder* p = parent_;
+inline const ::pb::CTPOrderField& CTPOrderLink::parent() const {
+  const ::pb::CTPOrderField* p = parent_;
   // @@protoc_insertion_point(field_get:pb.CTPOrderLink.parent)
-  return p != nullptr ? *p : *reinterpret_cast<const ::pb::CTPOrder*>(
-      &::pb::_CTPOrder_default_instance_);
+  return p != nullptr ? *p : *reinterpret_cast<const ::pb::CTPOrderField*>(
+      &::pb::_CTPOrderField_default_instance_);
 }
-inline ::pb::CTPOrder* CTPOrderLink::release_parent() {
+inline ::pb::CTPOrderField* CTPOrderLink::release_parent() {
   // @@protoc_insertion_point(field_release:pb.CTPOrderLink.parent)
   
-  ::pb::CTPOrder* temp = parent_;
+  ::pb::CTPOrderField* temp = parent_;
   parent_ = nullptr;
   return temp;
 }
-inline ::pb::CTPOrder* CTPOrderLink::mutable_parent() {
+inline ::pb::CTPOrderField* CTPOrderLink::mutable_parent() {
   
   if (parent_ == nullptr) {
-    auto* p = CreateMaybeMessage<::pb::CTPOrder>(GetArenaNoVirtual());
+    auto* p = CreateMaybeMessage<::pb::CTPOrderField>(GetArenaNoVirtual());
     parent_ = p;
   }
   // @@protoc_insertion_point(field_mutable:pb.CTPOrderLink.parent)
   return parent_;
 }
-inline void CTPOrderLink::set_allocated_parent(::pb::CTPOrder* parent) {
+inline void CTPOrderLink::set_allocated_parent(::pb::CTPOrderField* parent) {
   ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
   if (message_arena == nullptr) {
     delete parent_;
@@ -10551,31 +12243,31 @@ inline void CTPOrderLink::set_allocated_parent(::pb::CTPOrder* parent) {
   // @@protoc_insertion_point(field_set_allocated:pb.CTPOrderLink.parent)
 }
 
-// repeated .pb.CTPOrder children = 2;
+// repeated .pb.CTPOrderField children = 2;
 inline int CTPOrderLink::children_size() const {
   return children_.size();
 }
 inline void CTPOrderLink::clear_children() {
   children_.Clear();
 }
-inline ::pb::CTPOrder* CTPOrderLink::mutable_children(int index) {
+inline ::pb::CTPOrderField* CTPOrderLink::mutable_children(int index) {
   // @@protoc_insertion_point(field_mutable:pb.CTPOrderLink.children)
   return children_.Mutable(index);
 }
-inline ::google::protobuf::RepeatedPtrField< ::pb::CTPOrder >*
+inline ::google::protobuf::RepeatedPtrField< ::pb::CTPOrderField >*
 CTPOrderLink::mutable_children() {
   // @@protoc_insertion_point(field_mutable_list:pb.CTPOrderLink.children)
   return &children_;
 }
-inline const ::pb::CTPOrder& CTPOrderLink::children(int index) const {
+inline const ::pb::CTPOrderField& CTPOrderLink::children(int index) const {
   // @@protoc_insertion_point(field_get:pb.CTPOrderLink.children)
   return children_.Get(index);
 }
-inline ::pb::CTPOrder* CTPOrderLink::add_children() {
+inline ::pb::CTPOrderField* CTPOrderLink::add_children() {
   // @@protoc_insertion_point(field_add:pb.CTPOrderLink.children)
   return children_.Add();
 }
-inline const ::google::protobuf::RepeatedPtrField< ::pb::CTPOrder >&
+inline const ::google::protobuf::RepeatedPtrField< ::pb::CTPOrderField >&
 CTPOrderLink::children() const {
   // @@protoc_insertion_point(field_list:pb.CTPOrderLink.children)
   return children_;
@@ -11291,636 +12983,1173 @@ inline void CTPOnRtnCancelOrder::set_allocated_route_account_id(::std::string* r
 
 // -------------------------------------------------------------------
 
-// CTPTradeReport
+// CTPTradeField
 
-// string account_id = 1;
-inline void CTPTradeReport::clear_account_id() {
-  account_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+// string broker_id = 1;
+inline void CTPTradeField::clear_broker_id() {
+  broker_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline const ::std::string& CTPTradeReport::account_id() const {
-  // @@protoc_insertion_point(field_get:pb.CTPTradeReport.account_id)
-  return account_id_.GetNoArena();
+inline const ::std::string& CTPTradeField::broker_id() const {
+  // @@protoc_insertion_point(field_get:pb.CTPTradeField.broker_id)
+  return broker_id_.GetNoArena();
 }
-inline void CTPTradeReport::set_account_id(const ::std::string& value) {
+inline void CTPTradeField::set_broker_id(const ::std::string& value) {
   
-  account_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:pb.CTPTradeReport.account_id)
+  broker_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:pb.CTPTradeField.broker_id)
 }
 #if LANG_CXX11
-inline void CTPTradeReport::set_account_id(::std::string&& value) {
+inline void CTPTradeField::set_broker_id(::std::string&& value) {
   
-  account_id_.SetNoArena(
+  broker_id_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:pb.CTPTradeReport.account_id)
+  // @@protoc_insertion_point(field_set_rvalue:pb.CTPTradeField.broker_id)
 }
 #endif
-inline void CTPTradeReport::set_account_id(const char* value) {
+inline void CTPTradeField::set_broker_id(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
-  account_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:pb.CTPTradeReport.account_id)
+  broker_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:pb.CTPTradeField.broker_id)
 }
-inline void CTPTradeReport::set_account_id(const char* value, size_t size) {
+inline void CTPTradeField::set_broker_id(const char* value, size_t size) {
   
-  account_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+  broker_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:pb.CTPTradeReport.account_id)
+  // @@protoc_insertion_point(field_set_pointer:pb.CTPTradeField.broker_id)
 }
-inline ::std::string* CTPTradeReport::mutable_account_id() {
+inline ::std::string* CTPTradeField::mutable_broker_id() {
   
-  // @@protoc_insertion_point(field_mutable:pb.CTPTradeReport.account_id)
-  return account_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  // @@protoc_insertion_point(field_mutable:pb.CTPTradeField.broker_id)
+  return broker_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline ::std::string* CTPTradeReport::release_account_id() {
-  // @@protoc_insertion_point(field_release:pb.CTPTradeReport.account_id)
+inline ::std::string* CTPTradeField::release_broker_id() {
+  // @@protoc_insertion_point(field_release:pb.CTPTradeField.broker_id)
   
-  return account_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return broker_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline void CTPTradeReport::set_allocated_account_id(::std::string* account_id) {
-  if (account_id != nullptr) {
+inline void CTPTradeField::set_allocated_broker_id(::std::string* broker_id) {
+  if (broker_id != nullptr) {
     
   } else {
     
   }
-  account_id_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), account_id);
-  // @@protoc_insertion_point(field_set_allocated:pb.CTPTradeReport.account_id)
+  broker_id_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), broker_id);
+  // @@protoc_insertion_point(field_set_allocated:pb.CTPTradeField.broker_id)
 }
 
-// string trade_id = 2;
-inline void CTPTradeReport::clear_trade_id() {
-  trade_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+// string investor_id = 2;
+inline void CTPTradeField::clear_investor_id() {
+  investor_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline const ::std::string& CTPTradeReport::trade_id() const {
-  // @@protoc_insertion_point(field_get:pb.CTPTradeReport.trade_id)
-  return trade_id_.GetNoArena();
+inline const ::std::string& CTPTradeField::investor_id() const {
+  // @@protoc_insertion_point(field_get:pb.CTPTradeField.investor_id)
+  return investor_id_.GetNoArena();
 }
-inline void CTPTradeReport::set_trade_id(const ::std::string& value) {
+inline void CTPTradeField::set_investor_id(const ::std::string& value) {
   
-  trade_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:pb.CTPTradeReport.trade_id)
+  investor_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:pb.CTPTradeField.investor_id)
 }
 #if LANG_CXX11
-inline void CTPTradeReport::set_trade_id(::std::string&& value) {
+inline void CTPTradeField::set_investor_id(::std::string&& value) {
+  
+  investor_id_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:pb.CTPTradeField.investor_id)
+}
+#endif
+inline void CTPTradeField::set_investor_id(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  investor_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:pb.CTPTradeField.investor_id)
+}
+inline void CTPTradeField::set_investor_id(const char* value, size_t size) {
+  
+  investor_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:pb.CTPTradeField.investor_id)
+}
+inline ::std::string* CTPTradeField::mutable_investor_id() {
+  
+  // @@protoc_insertion_point(field_mutable:pb.CTPTradeField.investor_id)
+  return investor_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* CTPTradeField::release_investor_id() {
+  // @@protoc_insertion_point(field_release:pb.CTPTradeField.investor_id)
+  
+  return investor_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void CTPTradeField::set_allocated_investor_id(::std::string* investor_id) {
+  if (investor_id != nullptr) {
+    
+  } else {
+    
+  }
+  investor_id_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), investor_id);
+  // @@protoc_insertion_point(field_set_allocated:pb.CTPTradeField.investor_id)
+}
+
+// string instrument_id = 3;
+inline void CTPTradeField::clear_instrument_id() {
+  instrument_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& CTPTradeField::instrument_id() const {
+  // @@protoc_insertion_point(field_get:pb.CTPTradeField.instrument_id)
+  return instrument_id_.GetNoArena();
+}
+inline void CTPTradeField::set_instrument_id(const ::std::string& value) {
+  
+  instrument_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:pb.CTPTradeField.instrument_id)
+}
+#if LANG_CXX11
+inline void CTPTradeField::set_instrument_id(::std::string&& value) {
+  
+  instrument_id_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:pb.CTPTradeField.instrument_id)
+}
+#endif
+inline void CTPTradeField::set_instrument_id(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  instrument_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:pb.CTPTradeField.instrument_id)
+}
+inline void CTPTradeField::set_instrument_id(const char* value, size_t size) {
+  
+  instrument_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:pb.CTPTradeField.instrument_id)
+}
+inline ::std::string* CTPTradeField::mutable_instrument_id() {
+  
+  // @@protoc_insertion_point(field_mutable:pb.CTPTradeField.instrument_id)
+  return instrument_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* CTPTradeField::release_instrument_id() {
+  // @@protoc_insertion_point(field_release:pb.CTPTradeField.instrument_id)
+  
+  return instrument_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void CTPTradeField::set_allocated_instrument_id(::std::string* instrument_id) {
+  if (instrument_id != nullptr) {
+    
+  } else {
+    
+  }
+  instrument_id_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), instrument_id);
+  // @@protoc_insertion_point(field_set_allocated:pb.CTPTradeField.instrument_id)
+}
+
+// string order_ref = 4;
+inline void CTPTradeField::clear_order_ref() {
+  order_ref_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& CTPTradeField::order_ref() const {
+  // @@protoc_insertion_point(field_get:pb.CTPTradeField.order_ref)
+  return order_ref_.GetNoArena();
+}
+inline void CTPTradeField::set_order_ref(const ::std::string& value) {
+  
+  order_ref_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:pb.CTPTradeField.order_ref)
+}
+#if LANG_CXX11
+inline void CTPTradeField::set_order_ref(::std::string&& value) {
+  
+  order_ref_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:pb.CTPTradeField.order_ref)
+}
+#endif
+inline void CTPTradeField::set_order_ref(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  order_ref_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:pb.CTPTradeField.order_ref)
+}
+inline void CTPTradeField::set_order_ref(const char* value, size_t size) {
+  
+  order_ref_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:pb.CTPTradeField.order_ref)
+}
+inline ::std::string* CTPTradeField::mutable_order_ref() {
+  
+  // @@protoc_insertion_point(field_mutable:pb.CTPTradeField.order_ref)
+  return order_ref_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* CTPTradeField::release_order_ref() {
+  // @@protoc_insertion_point(field_release:pb.CTPTradeField.order_ref)
+  
+  return order_ref_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void CTPTradeField::set_allocated_order_ref(::std::string* order_ref) {
+  if (order_ref != nullptr) {
+    
+  } else {
+    
+  }
+  order_ref_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), order_ref);
+  // @@protoc_insertion_point(field_set_allocated:pb.CTPTradeField.order_ref)
+}
+
+// string user_id = 5;
+inline void CTPTradeField::clear_user_id() {
+  user_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& CTPTradeField::user_id() const {
+  // @@protoc_insertion_point(field_get:pb.CTPTradeField.user_id)
+  return user_id_.GetNoArena();
+}
+inline void CTPTradeField::set_user_id(const ::std::string& value) {
+  
+  user_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:pb.CTPTradeField.user_id)
+}
+#if LANG_CXX11
+inline void CTPTradeField::set_user_id(::std::string&& value) {
+  
+  user_id_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:pb.CTPTradeField.user_id)
+}
+#endif
+inline void CTPTradeField::set_user_id(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  user_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:pb.CTPTradeField.user_id)
+}
+inline void CTPTradeField::set_user_id(const char* value, size_t size) {
+  
+  user_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:pb.CTPTradeField.user_id)
+}
+inline ::std::string* CTPTradeField::mutable_user_id() {
+  
+  // @@protoc_insertion_point(field_mutable:pb.CTPTradeField.user_id)
+  return user_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* CTPTradeField::release_user_id() {
+  // @@protoc_insertion_point(field_release:pb.CTPTradeField.user_id)
+  
+  return user_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void CTPTradeField::set_allocated_user_id(::std::string* user_id) {
+  if (user_id != nullptr) {
+    
+  } else {
+    
+  }
+  user_id_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), user_id);
+  // @@protoc_insertion_point(field_set_allocated:pb.CTPTradeField.user_id)
+}
+
+// string exchange_id = 6;
+inline void CTPTradeField::clear_exchange_id() {
+  exchange_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& CTPTradeField::exchange_id() const {
+  // @@protoc_insertion_point(field_get:pb.CTPTradeField.exchange_id)
+  return exchange_id_.GetNoArena();
+}
+inline void CTPTradeField::set_exchange_id(const ::std::string& value) {
+  
+  exchange_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:pb.CTPTradeField.exchange_id)
+}
+#if LANG_CXX11
+inline void CTPTradeField::set_exchange_id(::std::string&& value) {
+  
+  exchange_id_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:pb.CTPTradeField.exchange_id)
+}
+#endif
+inline void CTPTradeField::set_exchange_id(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  exchange_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:pb.CTPTradeField.exchange_id)
+}
+inline void CTPTradeField::set_exchange_id(const char* value, size_t size) {
+  
+  exchange_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:pb.CTPTradeField.exchange_id)
+}
+inline ::std::string* CTPTradeField::mutable_exchange_id() {
+  
+  // @@protoc_insertion_point(field_mutable:pb.CTPTradeField.exchange_id)
+  return exchange_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* CTPTradeField::release_exchange_id() {
+  // @@protoc_insertion_point(field_release:pb.CTPTradeField.exchange_id)
+  
+  return exchange_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void CTPTradeField::set_allocated_exchange_id(::std::string* exchange_id) {
+  if (exchange_id != nullptr) {
+    
+  } else {
+    
+  }
+  exchange_id_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), exchange_id);
+  // @@protoc_insertion_point(field_set_allocated:pb.CTPTradeField.exchange_id)
+}
+
+// string trade_id = 7;
+inline void CTPTradeField::clear_trade_id() {
+  trade_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& CTPTradeField::trade_id() const {
+  // @@protoc_insertion_point(field_get:pb.CTPTradeField.trade_id)
+  return trade_id_.GetNoArena();
+}
+inline void CTPTradeField::set_trade_id(const ::std::string& value) {
+  
+  trade_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:pb.CTPTradeField.trade_id)
+}
+#if LANG_CXX11
+inline void CTPTradeField::set_trade_id(::std::string&& value) {
   
   trade_id_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:pb.CTPTradeReport.trade_id)
+  // @@protoc_insertion_point(field_set_rvalue:pb.CTPTradeField.trade_id)
 }
 #endif
-inline void CTPTradeReport::set_trade_id(const char* value) {
+inline void CTPTradeField::set_trade_id(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   trade_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:pb.CTPTradeReport.trade_id)
+  // @@protoc_insertion_point(field_set_char:pb.CTPTradeField.trade_id)
 }
-inline void CTPTradeReport::set_trade_id(const char* value, size_t size) {
+inline void CTPTradeField::set_trade_id(const char* value, size_t size) {
   
   trade_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:pb.CTPTradeReport.trade_id)
+  // @@protoc_insertion_point(field_set_pointer:pb.CTPTradeField.trade_id)
 }
-inline ::std::string* CTPTradeReport::mutable_trade_id() {
+inline ::std::string* CTPTradeField::mutable_trade_id() {
   
-  // @@protoc_insertion_point(field_mutable:pb.CTPTradeReport.trade_id)
+  // @@protoc_insertion_point(field_mutable:pb.CTPTradeField.trade_id)
   return trade_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline ::std::string* CTPTradeReport::release_trade_id() {
-  // @@protoc_insertion_point(field_release:pb.CTPTradeReport.trade_id)
+inline ::std::string* CTPTradeField::release_trade_id() {
+  // @@protoc_insertion_point(field_release:pb.CTPTradeField.trade_id)
   
   return trade_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline void CTPTradeReport::set_allocated_trade_id(::std::string* trade_id) {
+inline void CTPTradeField::set_allocated_trade_id(::std::string* trade_id) {
   if (trade_id != nullptr) {
     
   } else {
     
   }
   trade_id_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), trade_id);
-  // @@protoc_insertion_point(field_set_allocated:pb.CTPTradeReport.trade_id)
+  // @@protoc_insertion_point(field_set_allocated:pb.CTPTradeField.trade_id)
 }
 
-// .pb.Symbol symbol = 3;
-inline bool CTPTradeReport::has_symbol() const {
-  return this != internal_default_instance() && symbol_ != nullptr;
-}
-inline const ::pb::Symbol& CTPTradeReport::symbol() const {
-  const ::pb::Symbol* p = symbol_;
-  // @@protoc_insertion_point(field_get:pb.CTPTradeReport.symbol)
-  return p != nullptr ? *p : *reinterpret_cast<const ::pb::Symbol*>(
-      &::pb::_Symbol_default_instance_);
-}
-inline ::pb::Symbol* CTPTradeReport::release_symbol() {
-  // @@protoc_insertion_point(field_release:pb.CTPTradeReport.symbol)
-  
-  ::pb::Symbol* temp = symbol_;
-  symbol_ = nullptr;
-  return temp;
-}
-inline ::pb::Symbol* CTPTradeReport::mutable_symbol() {
-  
-  if (symbol_ == nullptr) {
-    auto* p = CreateMaybeMessage<::pb::Symbol>(GetArenaNoVirtual());
-    symbol_ = p;
-  }
-  // @@protoc_insertion_point(field_mutable:pb.CTPTradeReport.symbol)
-  return symbol_;
-}
-inline void CTPTradeReport::set_allocated_symbol(::pb::Symbol* symbol) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == nullptr) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(symbol_);
-  }
-  if (symbol) {
-    ::google::protobuf::Arena* submessage_arena = nullptr;
-    if (message_arena != submessage_arena) {
-      symbol = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, symbol, submessage_arena);
-    }
-    
-  } else {
-    
-  }
-  symbol_ = symbol;
-  // @@protoc_insertion_point(field_set_allocated:pb.CTPTradeReport.symbol)
-}
-
-// .pb.CTPDirection direction = 4;
-inline void CTPTradeReport::clear_direction() {
+// int32 direction = 8;
+inline void CTPTradeField::clear_direction() {
   direction_ = 0;
 }
-inline ::pb::CTPDirection CTPTradeReport::direction() const {
-  // @@protoc_insertion_point(field_get:pb.CTPTradeReport.direction)
-  return static_cast< ::pb::CTPDirection >(direction_);
+inline ::google::protobuf::int32 CTPTradeField::direction() const {
+  // @@protoc_insertion_point(field_get:pb.CTPTradeField.direction)
+  return direction_;
 }
-inline void CTPTradeReport::set_direction(::pb::CTPDirection value) {
+inline void CTPTradeField::set_direction(::google::protobuf::int32 value) {
   
   direction_ = value;
-  // @@protoc_insertion_point(field_set:pb.CTPTradeReport.direction)
+  // @@protoc_insertion_point(field_set:pb.CTPTradeField.direction)
 }
 
-// double price = 5;
-inline void CTPTradeReport::clear_price() {
-  price_ = 0;
+// string order_sys_id = 9;
+inline void CTPTradeField::clear_order_sys_id() {
+  order_sys_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline double CTPTradeReport::price() const {
-  // @@protoc_insertion_point(field_get:pb.CTPTradeReport.price)
-  return price_;
+inline const ::std::string& CTPTradeField::order_sys_id() const {
+  // @@protoc_insertion_point(field_get:pb.CTPTradeField.order_sys_id)
+  return order_sys_id_.GetNoArena();
 }
-inline void CTPTradeReport::set_price(double value) {
+inline void CTPTradeField::set_order_sys_id(const ::std::string& value) {
   
-  price_ = value;
-  // @@protoc_insertion_point(field_set:pb.CTPTradeReport.price)
-}
-
-// int32 volume = 6;
-inline void CTPTradeReport::clear_volume() {
-  volume_ = 0;
-}
-inline ::google::protobuf::int32 CTPTradeReport::volume() const {
-  // @@protoc_insertion_point(field_get:pb.CTPTradeReport.volume)
-  return volume_;
-}
-inline void CTPTradeReport::set_volume(::google::protobuf::int32 value) {
-  
-  volume_ = value;
-  // @@protoc_insertion_point(field_set:pb.CTPTradeReport.volume)
-}
-
-// int64 traded_time = 7;
-inline void CTPTradeReport::clear_traded_time() {
-  traded_time_ = PROTOBUF_LONGLONG(0);
-}
-inline ::google::protobuf::int64 CTPTradeReport::traded_time() const {
-  // @@protoc_insertion_point(field_get:pb.CTPTradeReport.traded_time)
-  return traded_time_;
-}
-inline void CTPTradeReport::set_traded_time(::google::protobuf::int64 value) {
-  
-  traded_time_ = value;
-  // @@protoc_insertion_point(field_set:pb.CTPTradeReport.traded_time)
-}
-
-// int32 traded_trading_day = 8;
-inline void CTPTradeReport::clear_traded_trading_day() {
-  traded_trading_day_ = 0;
-}
-inline ::google::protobuf::int32 CTPTradeReport::traded_trading_day() const {
-  // @@protoc_insertion_point(field_get:pb.CTPTradeReport.traded_trading_day)
-  return traded_trading_day_;
-}
-inline void CTPTradeReport::set_traded_trading_day(::google::protobuf::int32 value) {
-  
-  traded_trading_day_ = value;
-  // @@protoc_insertion_point(field_set:pb.CTPTradeReport.traded_trading_day)
-}
-
-// .pb.CTPOrderID order_id = 9;
-inline bool CTPTradeReport::has_order_id() const {
-  return this != internal_default_instance() && order_id_ != nullptr;
-}
-inline void CTPTradeReport::clear_order_id() {
-  if (GetArenaNoVirtual() == nullptr && order_id_ != nullptr) {
-    delete order_id_;
-  }
-  order_id_ = nullptr;
-}
-inline const ::pb::CTPOrderID& CTPTradeReport::order_id() const {
-  const ::pb::CTPOrderID* p = order_id_;
-  // @@protoc_insertion_point(field_get:pb.CTPTradeReport.order_id)
-  return p != nullptr ? *p : *reinterpret_cast<const ::pb::CTPOrderID*>(
-      &::pb::_CTPOrderID_default_instance_);
-}
-inline ::pb::CTPOrderID* CTPTradeReport::release_order_id() {
-  // @@protoc_insertion_point(field_release:pb.CTPTradeReport.order_id)
-  
-  ::pb::CTPOrderID* temp = order_id_;
-  order_id_ = nullptr;
-  return temp;
-}
-inline ::pb::CTPOrderID* CTPTradeReport::mutable_order_id() {
-  
-  if (order_id_ == nullptr) {
-    auto* p = CreateMaybeMessage<::pb::CTPOrderID>(GetArenaNoVirtual());
-    order_id_ = p;
-  }
-  // @@protoc_insertion_point(field_mutable:pb.CTPTradeReport.order_id)
-  return order_id_;
-}
-inline void CTPTradeReport::set_allocated_order_id(::pb::CTPOrderID* order_id) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == nullptr) {
-    delete order_id_;
-  }
-  if (order_id) {
-    ::google::protobuf::Arena* submessage_arena = nullptr;
-    if (message_arena != submessage_arena) {
-      order_id = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, order_id, submessage_arena);
-    }
-    
-  } else {
-    
-  }
-  order_id_ = order_id;
-  // @@protoc_insertion_point(field_set_allocated:pb.CTPTradeReport.order_id)
-}
-
-// .pb.CTPPriceType price_type = 10;
-inline void CTPTradeReport::clear_price_type() {
-  price_type_ = 0;
-}
-inline ::pb::CTPPriceType CTPTradeReport::price_type() const {
-  // @@protoc_insertion_point(field_get:pb.CTPTradeReport.price_type)
-  return static_cast< ::pb::CTPPriceType >(price_type_);
-}
-inline void CTPTradeReport::set_price_type(::pb::CTPPriceType value) {
-  
-  price_type_ = value;
-  // @@protoc_insertion_point(field_set:pb.CTPTradeReport.price_type)
-}
-
-// .pb.CTPHedgeType hedge_type = 11;
-inline void CTPTradeReport::clear_hedge_type() {
-  hedge_type_ = 0;
-}
-inline ::pb::CTPHedgeType CTPTradeReport::hedge_type() const {
-  // @@protoc_insertion_point(field_get:pb.CTPTradeReport.hedge_type)
-  return static_cast< ::pb::CTPHedgeType >(hedge_type_);
-}
-inline void CTPTradeReport::set_hedge_type(::pb::CTPHedgeType value) {
-  
-  hedge_type_ = value;
-  // @@protoc_insertion_point(field_set:pb.CTPTradeReport.hedge_type)
-}
-
-// .pb.CTPTradeType trade_type = 12;
-inline void CTPTradeReport::clear_trade_type() {
-  trade_type_ = 0;
-}
-inline ::pb::CTPTradeType CTPTradeReport::trade_type() const {
-  // @@protoc_insertion_point(field_get:pb.CTPTradeReport.trade_type)
-  return static_cast< ::pb::CTPTradeType >(trade_type_);
-}
-inline void CTPTradeReport::set_trade_type(::pb::CTPTradeType value) {
-  
-  trade_type_ = value;
-  // @@protoc_insertion_point(field_set:pb.CTPTradeReport.trade_type)
-}
-
-// int32 currency_type = 13;
-inline void CTPTradeReport::clear_currency_type() {
-  currency_type_ = 0;
-}
-inline ::google::protobuf::int32 CTPTradeReport::currency_type() const {
-  // @@protoc_insertion_point(field_get:pb.CTPTradeReport.currency_type)
-  return currency_type_;
-}
-inline void CTPTradeReport::set_currency_type(::google::protobuf::int32 value) {
-  
-  currency_type_ = value;
-  // @@protoc_insertion_point(field_set:pb.CTPTradeReport.currency_type)
-}
-
-// string exchange_order_id = 14;
-inline void CTPTradeReport::clear_exchange_order_id() {
-  exchange_order_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline const ::std::string& CTPTradeReport::exchange_order_id() const {
-  // @@protoc_insertion_point(field_get:pb.CTPTradeReport.exchange_order_id)
-  return exchange_order_id_.GetNoArena();
-}
-inline void CTPTradeReport::set_exchange_order_id(const ::std::string& value) {
-  
-  exchange_order_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:pb.CTPTradeReport.exchange_order_id)
+  order_sys_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:pb.CTPTradeField.order_sys_id)
 }
 #if LANG_CXX11
-inline void CTPTradeReport::set_exchange_order_id(::std::string&& value) {
+inline void CTPTradeField::set_order_sys_id(::std::string&& value) {
   
-  exchange_order_id_.SetNoArena(
+  order_sys_id_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:pb.CTPTradeReport.exchange_order_id)
+  // @@protoc_insertion_point(field_set_rvalue:pb.CTPTradeField.order_sys_id)
 }
 #endif
-inline void CTPTradeReport::set_exchange_order_id(const char* value) {
+inline void CTPTradeField::set_order_sys_id(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
-  exchange_order_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:pb.CTPTradeReport.exchange_order_id)
+  order_sys_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:pb.CTPTradeField.order_sys_id)
 }
-inline void CTPTradeReport::set_exchange_order_id(const char* value, size_t size) {
+inline void CTPTradeField::set_order_sys_id(const char* value, size_t size) {
   
-  exchange_order_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+  order_sys_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:pb.CTPTradeReport.exchange_order_id)
+  // @@protoc_insertion_point(field_set_pointer:pb.CTPTradeField.order_sys_id)
 }
-inline ::std::string* CTPTradeReport::mutable_exchange_order_id() {
+inline ::std::string* CTPTradeField::mutable_order_sys_id() {
   
-  // @@protoc_insertion_point(field_mutable:pb.CTPTradeReport.exchange_order_id)
-  return exchange_order_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  // @@protoc_insertion_point(field_mutable:pb.CTPTradeField.order_sys_id)
+  return order_sys_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline ::std::string* CTPTradeReport::release_exchange_order_id() {
-  // @@protoc_insertion_point(field_release:pb.CTPTradeReport.exchange_order_id)
+inline ::std::string* CTPTradeField::release_order_sys_id() {
+  // @@protoc_insertion_point(field_release:pb.CTPTradeField.order_sys_id)
   
-  return exchange_order_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return order_sys_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline void CTPTradeReport::set_allocated_exchange_order_id(::std::string* exchange_order_id) {
-  if (exchange_order_id != nullptr) {
+inline void CTPTradeField::set_allocated_order_sys_id(::std::string* order_sys_id) {
+  if (order_sys_id != nullptr) {
     
   } else {
     
   }
-  exchange_order_id_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), exchange_order_id);
-  // @@protoc_insertion_point(field_set_allocated:pb.CTPTradeReport.exchange_order_id)
+  order_sys_id_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), order_sys_id);
+  // @@protoc_insertion_point(field_set_allocated:pb.CTPTradeField.order_sys_id)
 }
 
-// int32 local_type_id = 15;
-inline void CTPTradeReport::clear_local_type_id() {
-  local_type_id_ = 0;
+// string participant_id = 10;
+inline void CTPTradeField::clear_participant_id() {
+  participant_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline ::google::protobuf::int32 CTPTradeReport::local_type_id() const {
-  // @@protoc_insertion_point(field_get:pb.CTPTradeReport.local_type_id)
-  return local_type_id_;
+inline const ::std::string& CTPTradeField::participant_id() const {
+  // @@protoc_insertion_point(field_get:pb.CTPTradeField.participant_id)
+  return participant_id_.GetNoArena();
 }
-inline void CTPTradeReport::set_local_type_id(::google::protobuf::int32 value) {
+inline void CTPTradeField::set_participant_id(const ::std::string& value) {
   
-  local_type_id_ = value;
-  // @@protoc_insertion_point(field_set:pb.CTPTradeReport.local_type_id)
+  participant_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:pb.CTPTradeField.participant_id)
 }
-
-// double commission = 16;
-inline void CTPTradeReport::clear_commission() {
-  commission_ = 0;
-}
-inline double CTPTradeReport::commission() const {
-  // @@protoc_insertion_point(field_get:pb.CTPTradeReport.commission)
-  return commission_;
-}
-inline void CTPTradeReport::set_commission(double value) {
+#if LANG_CXX11
+inline void CTPTradeField::set_participant_id(::std::string&& value) {
   
-  commission_ = value;
-  // @@protoc_insertion_point(field_set:pb.CTPTradeReport.commission)
+  participant_id_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:pb.CTPTradeField.participant_id)
 }
-
-// double tax = 17;
-inline void CTPTradeReport::clear_tax() {
-  tax_ = 0;
-}
-inline double CTPTradeReport::tax() const {
-  // @@protoc_insertion_point(field_get:pb.CTPTradeReport.tax)
-  return tax_;
-}
-inline void CTPTradeReport::set_tax(double value) {
+#endif
+inline void CTPTradeField::set_participant_id(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
   
-  tax_ = value;
-  // @@protoc_insertion_point(field_set:pb.CTPTradeReport.tax)
+  participant_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:pb.CTPTradeField.participant_id)
 }
-
-// double total_other_fee = 18;
-inline void CTPTradeReport::clear_total_other_fee() {
-  total_other_fee_ = 0;
-}
-inline double CTPTradeReport::total_other_fee() const {
-  // @@protoc_insertion_point(field_get:pb.CTPTradeReport.total_other_fee)
-  return total_other_fee_;
-}
-inline void CTPTradeReport::set_total_other_fee(double value) {
+inline void CTPTradeField::set_participant_id(const char* value, size_t size) {
   
-  total_other_fee_ = value;
-  // @@protoc_insertion_point(field_set:pb.CTPTradeReport.total_other_fee)
+  participant_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:pb.CTPTradeField.participant_id)
 }
-
-// double initial_traded_price = 19;
-inline void CTPTradeReport::clear_initial_traded_price() {
-  initial_traded_price_ = 0;
-}
-inline double CTPTradeReport::initial_traded_price() const {
-  // @@protoc_insertion_point(field_get:pb.CTPTradeReport.initial_traded_price)
-  return initial_traded_price_;
-}
-inline void CTPTradeReport::set_initial_traded_price(double value) {
+inline ::std::string* CTPTradeField::mutable_participant_id() {
   
-  initial_traded_price_ = value;
-  // @@protoc_insertion_point(field_set:pb.CTPTradeReport.initial_traded_price)
+  // @@protoc_insertion_point(field_mutable:pb.CTPTradeField.participant_id)
+  return participant_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-
-// double reserve = 20;
-inline void CTPTradeReport::clear_reserve() {
-  reserve_ = 0;
-}
-inline double CTPTradeReport::reserve() const {
-  // @@protoc_insertion_point(field_get:pb.CTPTradeReport.reserve)
-  return reserve_;
-}
-inline void CTPTradeReport::set_reserve(double value) {
+inline ::std::string* CTPTradeField::release_participant_id() {
+  // @@protoc_insertion_point(field_release:pb.CTPTradeField.participant_id)
   
-  reserve_ = value;
-  // @@protoc_insertion_point(field_set:pb.CTPTradeReport.reserve)
+  return participant_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void CTPTradeField::set_allocated_participant_id(::std::string* participant_id) {
+  if (participant_id != nullptr) {
+    
+  } else {
+    
+  }
+  participant_id_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), participant_id);
+  // @@protoc_insertion_point(field_set_allocated:pb.CTPTradeField.participant_id)
 }
 
-// .pb.CTPOffsetFlag offset_flag = 21;
-inline void CTPTradeReport::clear_offset_flag() {
+// string client_id = 11;
+inline void CTPTradeField::clear_client_id() {
+  client_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& CTPTradeField::client_id() const {
+  // @@protoc_insertion_point(field_get:pb.CTPTradeField.client_id)
+  return client_id_.GetNoArena();
+}
+inline void CTPTradeField::set_client_id(const ::std::string& value) {
+  
+  client_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:pb.CTPTradeField.client_id)
+}
+#if LANG_CXX11
+inline void CTPTradeField::set_client_id(::std::string&& value) {
+  
+  client_id_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:pb.CTPTradeField.client_id)
+}
+#endif
+inline void CTPTradeField::set_client_id(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  client_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:pb.CTPTradeField.client_id)
+}
+inline void CTPTradeField::set_client_id(const char* value, size_t size) {
+  
+  client_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:pb.CTPTradeField.client_id)
+}
+inline ::std::string* CTPTradeField::mutable_client_id() {
+  
+  // @@protoc_insertion_point(field_mutable:pb.CTPTradeField.client_id)
+  return client_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* CTPTradeField::release_client_id() {
+  // @@protoc_insertion_point(field_release:pb.CTPTradeField.client_id)
+  
+  return client_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void CTPTradeField::set_allocated_client_id(::std::string* client_id) {
+  if (client_id != nullptr) {
+    
+  } else {
+    
+  }
+  client_id_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), client_id);
+  // @@protoc_insertion_point(field_set_allocated:pb.CTPTradeField.client_id)
+}
+
+// int32 trading_role = 12;
+inline void CTPTradeField::clear_trading_role() {
+  trading_role_ = 0;
+}
+inline ::google::protobuf::int32 CTPTradeField::trading_role() const {
+  // @@protoc_insertion_point(field_get:pb.CTPTradeField.trading_role)
+  return trading_role_;
+}
+inline void CTPTradeField::set_trading_role(::google::protobuf::int32 value) {
+  
+  trading_role_ = value;
+  // @@protoc_insertion_point(field_set:pb.CTPTradeField.trading_role)
+}
+
+// string exchange_inst_id = 13;
+inline void CTPTradeField::clear_exchange_inst_id() {
+  exchange_inst_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& CTPTradeField::exchange_inst_id() const {
+  // @@protoc_insertion_point(field_get:pb.CTPTradeField.exchange_inst_id)
+  return exchange_inst_id_.GetNoArena();
+}
+inline void CTPTradeField::set_exchange_inst_id(const ::std::string& value) {
+  
+  exchange_inst_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:pb.CTPTradeField.exchange_inst_id)
+}
+#if LANG_CXX11
+inline void CTPTradeField::set_exchange_inst_id(::std::string&& value) {
+  
+  exchange_inst_id_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:pb.CTPTradeField.exchange_inst_id)
+}
+#endif
+inline void CTPTradeField::set_exchange_inst_id(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  exchange_inst_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:pb.CTPTradeField.exchange_inst_id)
+}
+inline void CTPTradeField::set_exchange_inst_id(const char* value, size_t size) {
+  
+  exchange_inst_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:pb.CTPTradeField.exchange_inst_id)
+}
+inline ::std::string* CTPTradeField::mutable_exchange_inst_id() {
+  
+  // @@protoc_insertion_point(field_mutable:pb.CTPTradeField.exchange_inst_id)
+  return exchange_inst_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* CTPTradeField::release_exchange_inst_id() {
+  // @@protoc_insertion_point(field_release:pb.CTPTradeField.exchange_inst_id)
+  
+  return exchange_inst_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void CTPTradeField::set_allocated_exchange_inst_id(::std::string* exchange_inst_id) {
+  if (exchange_inst_id != nullptr) {
+    
+  } else {
+    
+  }
+  exchange_inst_id_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), exchange_inst_id);
+  // @@protoc_insertion_point(field_set_allocated:pb.CTPTradeField.exchange_inst_id)
+}
+
+// int32 offset_flag = 14;
+inline void CTPTradeField::clear_offset_flag() {
   offset_flag_ = 0;
 }
-inline ::pb::CTPOffsetFlag CTPTradeReport::offset_flag() const {
-  // @@protoc_insertion_point(field_get:pb.CTPTradeReport.offset_flag)
-  return static_cast< ::pb::CTPOffsetFlag >(offset_flag_);
+inline ::google::protobuf::int32 CTPTradeField::offset_flag() const {
+  // @@protoc_insertion_point(field_get:pb.CTPTradeField.offset_flag)
+  return offset_flag_;
 }
-inline void CTPTradeReport::set_offset_flag(::pb::CTPOffsetFlag value) {
+inline void CTPTradeField::set_offset_flag(::google::protobuf::int32 value) {
   
   offset_flag_ = value;
-  // @@protoc_insertion_point(field_set:pb.CTPTradeReport.offset_flag)
+  // @@protoc_insertion_point(field_set:pb.CTPTradeField.offset_flag)
 }
 
-// string route_account_id = 22;
-inline void CTPTradeReport::clear_route_account_id() {
-  route_account_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+// int32 hedge_flag = 15;
+inline void CTPTradeField::clear_hedge_flag() {
+  hedge_flag_ = 0;
 }
-inline const ::std::string& CTPTradeReport::route_account_id() const {
-  // @@protoc_insertion_point(field_get:pb.CTPTradeReport.route_account_id)
-  return route_account_id_.GetNoArena();
+inline ::google::protobuf::int32 CTPTradeField::hedge_flag() const {
+  // @@protoc_insertion_point(field_get:pb.CTPTradeField.hedge_flag)
+  return hedge_flag_;
 }
-inline void CTPTradeReport::set_route_account_id(const ::std::string& value) {
+inline void CTPTradeField::set_hedge_flag(::google::protobuf::int32 value) {
   
-  route_account_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:pb.CTPTradeReport.route_account_id)
+  hedge_flag_ = value;
+  // @@protoc_insertion_point(field_set:pb.CTPTradeField.hedge_flag)
+}
+
+// double price = 16;
+inline void CTPTradeField::clear_price() {
+  price_ = 0;
+}
+inline double CTPTradeField::price() const {
+  // @@protoc_insertion_point(field_get:pb.CTPTradeField.price)
+  return price_;
+}
+inline void CTPTradeField::set_price(double value) {
+  
+  price_ = value;
+  // @@protoc_insertion_point(field_set:pb.CTPTradeField.price)
+}
+
+// int32 volume = 17;
+inline void CTPTradeField::clear_volume() {
+  volume_ = 0;
+}
+inline ::google::protobuf::int32 CTPTradeField::volume() const {
+  // @@protoc_insertion_point(field_get:pb.CTPTradeField.volume)
+  return volume_;
+}
+inline void CTPTradeField::set_volume(::google::protobuf::int32 value) {
+  
+  volume_ = value;
+  // @@protoc_insertion_point(field_set:pb.CTPTradeField.volume)
+}
+
+// string trade_date = 18;
+inline void CTPTradeField::clear_trade_date() {
+  trade_date_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& CTPTradeField::trade_date() const {
+  // @@protoc_insertion_point(field_get:pb.CTPTradeField.trade_date)
+  return trade_date_.GetNoArena();
+}
+inline void CTPTradeField::set_trade_date(const ::std::string& value) {
+  
+  trade_date_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:pb.CTPTradeField.trade_date)
 }
 #if LANG_CXX11
-inline void CTPTradeReport::set_route_account_id(::std::string&& value) {
+inline void CTPTradeField::set_trade_date(::std::string&& value) {
   
-  route_account_id_.SetNoArena(
+  trade_date_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:pb.CTPTradeReport.route_account_id)
+  // @@protoc_insertion_point(field_set_rvalue:pb.CTPTradeField.trade_date)
 }
 #endif
-inline void CTPTradeReport::set_route_account_id(const char* value) {
+inline void CTPTradeField::set_trade_date(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
-  route_account_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:pb.CTPTradeReport.route_account_id)
+  trade_date_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:pb.CTPTradeField.trade_date)
 }
-inline void CTPTradeReport::set_route_account_id(const char* value, size_t size) {
+inline void CTPTradeField::set_trade_date(const char* value, size_t size) {
   
-  route_account_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+  trade_date_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:pb.CTPTradeReport.route_account_id)
+  // @@protoc_insertion_point(field_set_pointer:pb.CTPTradeField.trade_date)
 }
-inline ::std::string* CTPTradeReport::mutable_route_account_id() {
+inline ::std::string* CTPTradeField::mutable_trade_date() {
   
-  // @@protoc_insertion_point(field_mutable:pb.CTPTradeReport.route_account_id)
-  return route_account_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  // @@protoc_insertion_point(field_mutable:pb.CTPTradeField.trade_date)
+  return trade_date_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline ::std::string* CTPTradeReport::release_route_account_id() {
-  // @@protoc_insertion_point(field_release:pb.CTPTradeReport.route_account_id)
+inline ::std::string* CTPTradeField::release_trade_date() {
+  // @@protoc_insertion_point(field_release:pb.CTPTradeField.trade_date)
   
-  return route_account_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return trade_date_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline void CTPTradeReport::set_allocated_route_account_id(::std::string* route_account_id) {
-  if (route_account_id != nullptr) {
+inline void CTPTradeField::set_allocated_trade_date(::std::string* trade_date) {
+  if (trade_date != nullptr) {
     
   } else {
     
   }
-  route_account_id_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), route_account_id);
-  // @@protoc_insertion_point(field_set_allocated:pb.CTPTradeReport.route_account_id)
+  trade_date_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), trade_date);
+  // @@protoc_insertion_point(field_set_allocated:pb.CTPTradeField.trade_date)
 }
 
-// string symbol_name = 23;
-inline void CTPTradeReport::clear_symbol_name() {
-  symbol_name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+// string trade_time = 19;
+inline void CTPTradeField::clear_trade_time() {
+  trade_time_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline const ::std::string& CTPTradeReport::symbol_name() const {
-  // @@protoc_insertion_point(field_get:pb.CTPTradeReport.symbol_name)
-  return symbol_name_.GetNoArena();
+inline const ::std::string& CTPTradeField::trade_time() const {
+  // @@protoc_insertion_point(field_get:pb.CTPTradeField.trade_time)
+  return trade_time_.GetNoArena();
 }
-inline void CTPTradeReport::set_symbol_name(const ::std::string& value) {
+inline void CTPTradeField::set_trade_time(const ::std::string& value) {
   
-  symbol_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:pb.CTPTradeReport.symbol_name)
+  trade_time_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:pb.CTPTradeField.trade_time)
 }
 #if LANG_CXX11
-inline void CTPTradeReport::set_symbol_name(::std::string&& value) {
+inline void CTPTradeField::set_trade_time(::std::string&& value) {
   
-  symbol_name_.SetNoArena(
+  trade_time_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:pb.CTPTradeReport.symbol_name)
+  // @@protoc_insertion_point(field_set_rvalue:pb.CTPTradeField.trade_time)
 }
 #endif
-inline void CTPTradeReport::set_symbol_name(const char* value) {
+inline void CTPTradeField::set_trade_time(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
-  symbol_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:pb.CTPTradeReport.symbol_name)
+  trade_time_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:pb.CTPTradeField.trade_time)
 }
-inline void CTPTradeReport::set_symbol_name(const char* value, size_t size) {
+inline void CTPTradeField::set_trade_time(const char* value, size_t size) {
   
-  symbol_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+  trade_time_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:pb.CTPTradeReport.symbol_name)
+  // @@protoc_insertion_point(field_set_pointer:pb.CTPTradeField.trade_time)
 }
-inline ::std::string* CTPTradeReport::mutable_symbol_name() {
+inline ::std::string* CTPTradeField::mutable_trade_time() {
   
-  // @@protoc_insertion_point(field_mutable:pb.CTPTradeReport.symbol_name)
-  return symbol_name_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  // @@protoc_insertion_point(field_mutable:pb.CTPTradeField.trade_time)
+  return trade_time_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline ::std::string* CTPTradeReport::release_symbol_name() {
-  // @@protoc_insertion_point(field_release:pb.CTPTradeReport.symbol_name)
+inline ::std::string* CTPTradeField::release_trade_time() {
+  // @@protoc_insertion_point(field_release:pb.CTPTradeField.trade_time)
   
-  return symbol_name_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return trade_time_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline void CTPTradeReport::set_allocated_symbol_name(::std::string* symbol_name) {
-  if (symbol_name != nullptr) {
+inline void CTPTradeField::set_allocated_trade_time(::std::string* trade_time) {
+  if (trade_time != nullptr) {
     
   } else {
     
   }
-  symbol_name_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), symbol_name);
-  // @@protoc_insertion_point(field_set_allocated:pb.CTPTradeReport.symbol_name)
+  trade_time_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), trade_time);
+  // @@protoc_insertion_point(field_set_allocated:pb.CTPTradeField.trade_time)
 }
 
-// double price_tick = 24;
-inline void CTPTradeReport::clear_price_tick() {
-  price_tick_ = 0;
+// int32 trade_type = 20;
+inline void CTPTradeField::clear_trade_type() {
+  trade_type_ = 0;
 }
-inline double CTPTradeReport::price_tick() const {
-  // @@protoc_insertion_point(field_get:pb.CTPTradeReport.price_tick)
-  return price_tick_;
+inline ::google::protobuf::int32 CTPTradeField::trade_type() const {
+  // @@protoc_insertion_point(field_get:pb.CTPTradeField.trade_type)
+  return trade_type_;
 }
-inline void CTPTradeReport::set_price_tick(double value) {
+inline void CTPTradeField::set_trade_type(::google::protobuf::int32 value) {
   
-  price_tick_ = value;
-  // @@protoc_insertion_point(field_set:pb.CTPTradeReport.price_tick)
+  trade_type_ = value;
+  // @@protoc_insertion_point(field_set:pb.CTPTradeField.trade_type)
+}
+
+// int32 price_source = 21;
+inline void CTPTradeField::clear_price_source() {
+  price_source_ = 0;
+}
+inline ::google::protobuf::int32 CTPTradeField::price_source() const {
+  // @@protoc_insertion_point(field_get:pb.CTPTradeField.price_source)
+  return price_source_;
+}
+inline void CTPTradeField::set_price_source(::google::protobuf::int32 value) {
+  
+  price_source_ = value;
+  // @@protoc_insertion_point(field_set:pb.CTPTradeField.price_source)
+}
+
+// string trader_id = 22;
+inline void CTPTradeField::clear_trader_id() {
+  trader_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& CTPTradeField::trader_id() const {
+  // @@protoc_insertion_point(field_get:pb.CTPTradeField.trader_id)
+  return trader_id_.GetNoArena();
+}
+inline void CTPTradeField::set_trader_id(const ::std::string& value) {
+  
+  trader_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:pb.CTPTradeField.trader_id)
+}
+#if LANG_CXX11
+inline void CTPTradeField::set_trader_id(::std::string&& value) {
+  
+  trader_id_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:pb.CTPTradeField.trader_id)
+}
+#endif
+inline void CTPTradeField::set_trader_id(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  trader_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:pb.CTPTradeField.trader_id)
+}
+inline void CTPTradeField::set_trader_id(const char* value, size_t size) {
+  
+  trader_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:pb.CTPTradeField.trader_id)
+}
+inline ::std::string* CTPTradeField::mutable_trader_id() {
+  
+  // @@protoc_insertion_point(field_mutable:pb.CTPTradeField.trader_id)
+  return trader_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* CTPTradeField::release_trader_id() {
+  // @@protoc_insertion_point(field_release:pb.CTPTradeField.trader_id)
+  
+  return trader_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void CTPTradeField::set_allocated_trader_id(::std::string* trader_id) {
+  if (trader_id != nullptr) {
+    
+  } else {
+    
+  }
+  trader_id_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), trader_id);
+  // @@protoc_insertion_point(field_set_allocated:pb.CTPTradeField.trader_id)
+}
+
+// string order_local_id = 23;
+inline void CTPTradeField::clear_order_local_id() {
+  order_local_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& CTPTradeField::order_local_id() const {
+  // @@protoc_insertion_point(field_get:pb.CTPTradeField.order_local_id)
+  return order_local_id_.GetNoArena();
+}
+inline void CTPTradeField::set_order_local_id(const ::std::string& value) {
+  
+  order_local_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:pb.CTPTradeField.order_local_id)
+}
+#if LANG_CXX11
+inline void CTPTradeField::set_order_local_id(::std::string&& value) {
+  
+  order_local_id_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:pb.CTPTradeField.order_local_id)
+}
+#endif
+inline void CTPTradeField::set_order_local_id(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  order_local_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:pb.CTPTradeField.order_local_id)
+}
+inline void CTPTradeField::set_order_local_id(const char* value, size_t size) {
+  
+  order_local_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:pb.CTPTradeField.order_local_id)
+}
+inline ::std::string* CTPTradeField::mutable_order_local_id() {
+  
+  // @@protoc_insertion_point(field_mutable:pb.CTPTradeField.order_local_id)
+  return order_local_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* CTPTradeField::release_order_local_id() {
+  // @@protoc_insertion_point(field_release:pb.CTPTradeField.order_local_id)
+  
+  return order_local_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void CTPTradeField::set_allocated_order_local_id(::std::string* order_local_id) {
+  if (order_local_id != nullptr) {
+    
+  } else {
+    
+  }
+  order_local_id_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), order_local_id);
+  // @@protoc_insertion_point(field_set_allocated:pb.CTPTradeField.order_local_id)
+}
+
+// string clearing_part_id = 24;
+inline void CTPTradeField::clear_clearing_part_id() {
+  clearing_part_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& CTPTradeField::clearing_part_id() const {
+  // @@protoc_insertion_point(field_get:pb.CTPTradeField.clearing_part_id)
+  return clearing_part_id_.GetNoArena();
+}
+inline void CTPTradeField::set_clearing_part_id(const ::std::string& value) {
+  
+  clearing_part_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:pb.CTPTradeField.clearing_part_id)
+}
+#if LANG_CXX11
+inline void CTPTradeField::set_clearing_part_id(::std::string&& value) {
+  
+  clearing_part_id_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:pb.CTPTradeField.clearing_part_id)
+}
+#endif
+inline void CTPTradeField::set_clearing_part_id(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  clearing_part_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:pb.CTPTradeField.clearing_part_id)
+}
+inline void CTPTradeField::set_clearing_part_id(const char* value, size_t size) {
+  
+  clearing_part_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:pb.CTPTradeField.clearing_part_id)
+}
+inline ::std::string* CTPTradeField::mutable_clearing_part_id() {
+  
+  // @@protoc_insertion_point(field_mutable:pb.CTPTradeField.clearing_part_id)
+  return clearing_part_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* CTPTradeField::release_clearing_part_id() {
+  // @@protoc_insertion_point(field_release:pb.CTPTradeField.clearing_part_id)
+  
+  return clearing_part_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void CTPTradeField::set_allocated_clearing_part_id(::std::string* clearing_part_id) {
+  if (clearing_part_id != nullptr) {
+    
+  } else {
+    
+  }
+  clearing_part_id_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), clearing_part_id);
+  // @@protoc_insertion_point(field_set_allocated:pb.CTPTradeField.clearing_part_id)
+}
+
+// string business_unit = 25;
+inline void CTPTradeField::clear_business_unit() {
+  business_unit_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& CTPTradeField::business_unit() const {
+  // @@protoc_insertion_point(field_get:pb.CTPTradeField.business_unit)
+  return business_unit_.GetNoArena();
+}
+inline void CTPTradeField::set_business_unit(const ::std::string& value) {
+  
+  business_unit_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:pb.CTPTradeField.business_unit)
+}
+#if LANG_CXX11
+inline void CTPTradeField::set_business_unit(::std::string&& value) {
+  
+  business_unit_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:pb.CTPTradeField.business_unit)
+}
+#endif
+inline void CTPTradeField::set_business_unit(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  business_unit_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:pb.CTPTradeField.business_unit)
+}
+inline void CTPTradeField::set_business_unit(const char* value, size_t size) {
+  
+  business_unit_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:pb.CTPTradeField.business_unit)
+}
+inline ::std::string* CTPTradeField::mutable_business_unit() {
+  
+  // @@protoc_insertion_point(field_mutable:pb.CTPTradeField.business_unit)
+  return business_unit_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* CTPTradeField::release_business_unit() {
+  // @@protoc_insertion_point(field_release:pb.CTPTradeField.business_unit)
+  
+  return business_unit_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void CTPTradeField::set_allocated_business_unit(::std::string* business_unit) {
+  if (business_unit != nullptr) {
+    
+  } else {
+    
+  }
+  business_unit_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), business_unit);
+  // @@protoc_insertion_point(field_set_allocated:pb.CTPTradeField.business_unit)
+}
+
+// int32 sequence_no = 26;
+inline void CTPTradeField::clear_sequence_no() {
+  sequence_no_ = 0;
+}
+inline ::google::protobuf::int32 CTPTradeField::sequence_no() const {
+  // @@protoc_insertion_point(field_get:pb.CTPTradeField.sequence_no)
+  return sequence_no_;
+}
+inline void CTPTradeField::set_sequence_no(::google::protobuf::int32 value) {
+  
+  sequence_no_ = value;
+  // @@protoc_insertion_point(field_set:pb.CTPTradeField.sequence_no)
+}
+
+// int32 trading_day = 27;
+inline void CTPTradeField::clear_trading_day() {
+  trading_day_ = 0;
+}
+inline ::google::protobuf::int32 CTPTradeField::trading_day() const {
+  // @@protoc_insertion_point(field_get:pb.CTPTradeField.trading_day)
+  return trading_day_;
+}
+inline void CTPTradeField::set_trading_day(::google::protobuf::int32 value) {
+  
+  trading_day_ = value;
+  // @@protoc_insertion_point(field_set:pb.CTPTradeField.trading_day)
+}
+
+// int32 settlement_id = 28;
+inline void CTPTradeField::clear_settlement_id() {
+  settlement_id_ = 0;
+}
+inline ::google::protobuf::int32 CTPTradeField::settlement_id() const {
+  // @@protoc_insertion_point(field_get:pb.CTPTradeField.settlement_id)
+  return settlement_id_;
+}
+inline void CTPTradeField::set_settlement_id(::google::protobuf::int32 value) {
+  
+  settlement_id_ = value;
+  // @@protoc_insertion_point(field_set:pb.CTPTradeField.settlement_id)
+}
+
+// int32 broker_order_seq = 29;
+inline void CTPTradeField::clear_broker_order_seq() {
+  broker_order_seq_ = 0;
+}
+inline ::google::protobuf::int32 CTPTradeField::broker_order_seq() const {
+  // @@protoc_insertion_point(field_get:pb.CTPTradeField.broker_order_seq)
+  return broker_order_seq_;
+}
+inline void CTPTradeField::set_broker_order_seq(::google::protobuf::int32 value) {
+  
+  broker_order_seq_ = value;
+  // @@protoc_insertion_point(field_set:pb.CTPTradeField.broker_order_seq)
+}
+
+// int32 trade_source = 30;
+inline void CTPTradeField::clear_trade_source() {
+  trade_source_ = 0;
+}
+inline ::google::protobuf::int32 CTPTradeField::trade_source() const {
+  // @@protoc_insertion_point(field_get:pb.CTPTradeField.trade_source)
+  return trade_source_;
+}
+inline void CTPTradeField::set_trade_source(::google::protobuf::int32 value) {
+  
+  trade_source_ = value;
+  // @@protoc_insertion_point(field_set:pb.CTPTradeField.trade_source)
+}
+
+// string invest_unit_id = 31;
+inline void CTPTradeField::clear_invest_unit_id() {
+  invest_unit_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& CTPTradeField::invest_unit_id() const {
+  // @@protoc_insertion_point(field_get:pb.CTPTradeField.invest_unit_id)
+  return invest_unit_id_.GetNoArena();
+}
+inline void CTPTradeField::set_invest_unit_id(const ::std::string& value) {
+  
+  invest_unit_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:pb.CTPTradeField.invest_unit_id)
+}
+#if LANG_CXX11
+inline void CTPTradeField::set_invest_unit_id(::std::string&& value) {
+  
+  invest_unit_id_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:pb.CTPTradeField.invest_unit_id)
+}
+#endif
+inline void CTPTradeField::set_invest_unit_id(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  invest_unit_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:pb.CTPTradeField.invest_unit_id)
+}
+inline void CTPTradeField::set_invest_unit_id(const char* value, size_t size) {
+  
+  invest_unit_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:pb.CTPTradeField.invest_unit_id)
+}
+inline ::std::string* CTPTradeField::mutable_invest_unit_id() {
+  
+  // @@protoc_insertion_point(field_mutable:pb.CTPTradeField.invest_unit_id)
+  return invest_unit_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* CTPTradeField::release_invest_unit_id() {
+  // @@protoc_insertion_point(field_release:pb.CTPTradeField.invest_unit_id)
+  
+  return invest_unit_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void CTPTradeField::set_allocated_invest_unit_id(::std::string* invest_unit_id) {
+  if (invest_unit_id != nullptr) {
+    
+  } else {
+    
+  }
+  invest_unit_id_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), invest_unit_id);
+  // @@protoc_insertion_point(field_set_allocated:pb.CTPTradeField.invest_unit_id)
 }
 
 // -------------------------------------------------------------------
 
 // CTPTradeReportList
 
-// repeated .pb.CTPTradeReport list = 1;
+// repeated .pb.CTPTradeField list = 1;
 inline int CTPTradeReportList::list_size() const {
   return list_.size();
 }
 inline void CTPTradeReportList::clear_list() {
   list_.Clear();
 }
-inline ::pb::CTPTradeReport* CTPTradeReportList::mutable_list(int index) {
+inline ::pb::CTPTradeField* CTPTradeReportList::mutable_list(int index) {
   // @@protoc_insertion_point(field_mutable:pb.CTPTradeReportList.list)
   return list_.Mutable(index);
 }
-inline ::google::protobuf::RepeatedPtrField< ::pb::CTPTradeReport >*
+inline ::google::protobuf::RepeatedPtrField< ::pb::CTPTradeField >*
 CTPTradeReportList::mutable_list() {
   // @@protoc_insertion_point(field_mutable_list:pb.CTPTradeReportList.list)
   return &list_;
 }
-inline const ::pb::CTPTradeReport& CTPTradeReportList::list(int index) const {
+inline const ::pb::CTPTradeField& CTPTradeReportList::list(int index) const {
   // @@protoc_insertion_point(field_get:pb.CTPTradeReportList.list)
   return list_.Get(index);
 }
-inline ::pb::CTPTradeReport* CTPTradeReportList::add_list() {
+inline ::pb::CTPTradeField* CTPTradeReportList::add_list() {
   // @@protoc_insertion_point(field_add:pb.CTPTradeReportList.list)
   return list_.Add();
 }
-inline const ::google::protobuf::RepeatedPtrField< ::pb::CTPTradeReport >&
+inline const ::google::protobuf::RepeatedPtrField< ::pb::CTPTradeField >&
 CTPTradeReportList::list() const {
   // @@protoc_insertion_point(field_list:pb.CTPTradeReportList.list)
   return list_;
@@ -14129,61 +16358,61 @@ CTPTradingUnit::history_ctr_list() const {
   return history_ctr_list_;
 }
 
-// repeated .pb.CTPOrder history_order_list = 6;
+// repeated .pb.CTPOrderField history_order_list = 6;
 inline int CTPTradingUnit::history_order_list_size() const {
   return history_order_list_.size();
 }
 inline void CTPTradingUnit::clear_history_order_list() {
   history_order_list_.Clear();
 }
-inline ::pb::CTPOrder* CTPTradingUnit::mutable_history_order_list(int index) {
+inline ::pb::CTPOrderField* CTPTradingUnit::mutable_history_order_list(int index) {
   // @@protoc_insertion_point(field_mutable:pb.CTPTradingUnit.history_order_list)
   return history_order_list_.Mutable(index);
 }
-inline ::google::protobuf::RepeatedPtrField< ::pb::CTPOrder >*
+inline ::google::protobuf::RepeatedPtrField< ::pb::CTPOrderField >*
 CTPTradingUnit::mutable_history_order_list() {
   // @@protoc_insertion_point(field_mutable_list:pb.CTPTradingUnit.history_order_list)
   return &history_order_list_;
 }
-inline const ::pb::CTPOrder& CTPTradingUnit::history_order_list(int index) const {
+inline const ::pb::CTPOrderField& CTPTradingUnit::history_order_list(int index) const {
   // @@protoc_insertion_point(field_get:pb.CTPTradingUnit.history_order_list)
   return history_order_list_.Get(index);
 }
-inline ::pb::CTPOrder* CTPTradingUnit::add_history_order_list() {
+inline ::pb::CTPOrderField* CTPTradingUnit::add_history_order_list() {
   // @@protoc_insertion_point(field_add:pb.CTPTradingUnit.history_order_list)
   return history_order_list_.Add();
 }
-inline const ::google::protobuf::RepeatedPtrField< ::pb::CTPOrder >&
+inline const ::google::protobuf::RepeatedPtrField< ::pb::CTPOrderField >&
 CTPTradingUnit::history_order_list() const {
   // @@protoc_insertion_point(field_list:pb.CTPTradingUnit.history_order_list)
   return history_order_list_;
 }
 
-// repeated .pb.CTPTradeReport history_trade_list = 7;
+// repeated .pb.CTPTradeField history_trade_list = 7;
 inline int CTPTradingUnit::history_trade_list_size() const {
   return history_trade_list_.size();
 }
 inline void CTPTradingUnit::clear_history_trade_list() {
   history_trade_list_.Clear();
 }
-inline ::pb::CTPTradeReport* CTPTradingUnit::mutable_history_trade_list(int index) {
+inline ::pb::CTPTradeField* CTPTradingUnit::mutable_history_trade_list(int index) {
   // @@protoc_insertion_point(field_mutable:pb.CTPTradingUnit.history_trade_list)
   return history_trade_list_.Mutable(index);
 }
-inline ::google::protobuf::RepeatedPtrField< ::pb::CTPTradeReport >*
+inline ::google::protobuf::RepeatedPtrField< ::pb::CTPTradeField >*
 CTPTradingUnit::mutable_history_trade_list() {
   // @@protoc_insertion_point(field_mutable_list:pb.CTPTradingUnit.history_trade_list)
   return &history_trade_list_;
 }
-inline const ::pb::CTPTradeReport& CTPTradingUnit::history_trade_list(int index) const {
+inline const ::pb::CTPTradeField& CTPTradingUnit::history_trade_list(int index) const {
   // @@protoc_insertion_point(field_get:pb.CTPTradingUnit.history_trade_list)
   return history_trade_list_.Get(index);
 }
-inline ::pb::CTPTradeReport* CTPTradingUnit::add_history_trade_list() {
+inline ::pb::CTPTradeField* CTPTradingUnit::add_history_trade_list() {
   // @@protoc_insertion_point(field_add:pb.CTPTradingUnit.history_trade_list)
   return history_trade_list_.Add();
 }
-inline const ::google::protobuf::RepeatedPtrField< ::pb::CTPTradeReport >&
+inline const ::google::protobuf::RepeatedPtrField< ::pb::CTPTradeField >&
 CTPTradingUnit::history_trade_list() const {
   // @@protoc_insertion_point(field_list:pb.CTPTradingUnit.history_trade_list)
   return history_trade_list_;

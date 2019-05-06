@@ -18,6 +18,7 @@
 #include "binding/session.h"
 #include "binding/popup_queue.h"
 #include "pb/order.pb.h"
+#include <mutex>
 
 namespace pb
 {
@@ -32,12 +33,15 @@ public:
 	int64_t gospi_;
 	TradingRoute route_;
 	int request_id_;
+	std::mutex request_id_lock_;
 
 	void init();
 	void login(const TradingAccount &);
-	int insert_order(const Order&);
+	int insert_order(const Order &);
+	int cancel_order(const CancelOrderRequest &);
 
 private:
+	int incr_request_id();
 	void OnFrontConnected();
 	void OnFrontDisconnected();
 	void OnRspUserLogin(CThostFtdcRspUserLoginField *pRspUserLogin, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast);

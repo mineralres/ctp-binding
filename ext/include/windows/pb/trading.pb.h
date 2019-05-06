@@ -42,7 +42,7 @@ struct TableStruct_trading_2eproto {
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::google::protobuf::internal::AuxillaryParseTableField aux[]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
-  static const ::google::protobuf::internal::ParseTable schema[5]
+  static const ::google::protobuf::internal::ParseTable schema[8]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::google::protobuf::internal::FieldMetadata field_metadata[];
   static const ::google::protobuf::internal::SerializationTable serialization_table[];
@@ -53,12 +53,21 @@ namespace pb {
 class ReqDeleteTradingRoute;
 class ReqDeleteTradingRouteDefaultTypeInternal;
 extern ReqDeleteTradingRouteDefaultTypeInternal _ReqDeleteTradingRoute_default_instance_;
+class RspOrderInsert;
+class RspOrderInsertDefaultTypeInternal;
+extern RspOrderInsertDefaultTypeInternal _RspOrderInsert_default_instance_;
+class RspTradingAccountLogin;
+class RspTradingAccountLoginDefaultTypeInternal;
+extern RspTradingAccountLoginDefaultTypeInternal _RspTradingAccountLogin_default_instance_;
 class TradingAccount;
 class TradingAccountDefaultTypeInternal;
 extern TradingAccountDefaultTypeInternal _TradingAccount_default_instance_;
 class TradingAccountList;
 class TradingAccountListDefaultTypeInternal;
 extern TradingAccountListDefaultTypeInternal _TradingAccountList_default_instance_;
+class TradingAccountSummary;
+class TradingAccountSummaryDefaultTypeInternal;
+extern TradingAccountSummaryDefaultTypeInternal _TradingAccountSummary_default_instance_;
 class TradingRoute;
 class TradingRouteDefaultTypeInternal;
 extern TradingRouteDefaultTypeInternal _TradingRoute_default_instance_;
@@ -69,8 +78,11 @@ extern TradingRouteListDefaultTypeInternal _TradingRouteList_default_instance_;
 namespace google {
 namespace protobuf {
 template<> ::pb::ReqDeleteTradingRoute* Arena::CreateMaybeMessage<::pb::ReqDeleteTradingRoute>(Arena*);
+template<> ::pb::RspOrderInsert* Arena::CreateMaybeMessage<::pb::RspOrderInsert>(Arena*);
+template<> ::pb::RspTradingAccountLogin* Arena::CreateMaybeMessage<::pb::RspTradingAccountLogin>(Arena*);
 template<> ::pb::TradingAccount* Arena::CreateMaybeMessage<::pb::TradingAccount>(Arena*);
 template<> ::pb::TradingAccountList* Arena::CreateMaybeMessage<::pb::TradingAccountList>(Arena*);
+template<> ::pb::TradingAccountSummary* Arena::CreateMaybeMessage<::pb::TradingAccountSummary>(Arena*);
 template<> ::pb::TradingRoute* Arena::CreateMaybeMessage<::pb::TradingRoute>(Arena*);
 template<> ::pb::TradingRouteList* Arena::CreateMaybeMessage<::pb::TradingRouteList>(Arena*);
 }  // namespace protobuf
@@ -959,6 +971,1076 @@ class ReqDeleteTradingRoute :
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::int64 id_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_trading_2eproto;
+};
+// -------------------------------------------------------------------
+
+class TradingAccountSummary :
+    public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:pb.TradingAccountSummary) */ {
+ public:
+  TradingAccountSummary();
+  virtual ~TradingAccountSummary();
+
+  TradingAccountSummary(const TradingAccountSummary& from);
+
+  inline TradingAccountSummary& operator=(const TradingAccountSummary& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  TradingAccountSummary(TradingAccountSummary&& from) noexcept
+    : TradingAccountSummary() {
+    *this = ::std::move(from);
+  }
+
+  inline TradingAccountSummary& operator=(TradingAccountSummary&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return default_instance().GetDescriptor();
+  }
+  static const TradingAccountSummary& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const TradingAccountSummary* internal_default_instance() {
+    return reinterpret_cast<const TradingAccountSummary*>(
+               &_TradingAccountSummary_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    5;
+
+  void Swap(TradingAccountSummary* other);
+  friend void swap(TradingAccountSummary& a, TradingAccountSummary& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline TradingAccountSummary* New() const final {
+    return CreateMaybeMessage<TradingAccountSummary>(nullptr);
+  }
+
+  TradingAccountSummary* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<TradingAccountSummary>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const TradingAccountSummary& from);
+  void MergeFrom(const TradingAccountSummary& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  static const char* _InternalParse(const char* begin, const char* end, void* object, ::google::protobuf::internal::ParseContext* ctx);
+  ::google::protobuf::internal::ParseFunc _ParseFunc() const final { return _InternalParse; }
+  #else
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(TradingAccountSummary* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return nullptr;
+  }
+  inline void* MaybeArenaPtr() const {
+    return nullptr;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // string account = 1;
+  void clear_account();
+  static const int kAccountFieldNumber = 1;
+  const ::std::string& account() const;
+  void set_account(const ::std::string& value);
+  #if LANG_CXX11
+  void set_account(::std::string&& value);
+  #endif
+  void set_account(const char* value);
+  void set_account(const char* value, size_t size);
+  ::std::string* mutable_account();
+  ::std::string* release_account();
+  void set_allocated_account(::std::string* account);
+
+  // string user = 2;
+  void clear_user();
+  static const int kUserFieldNumber = 2;
+  const ::std::string& user() const;
+  void set_user(const ::std::string& value);
+  #if LANG_CXX11
+  void set_user(::std::string&& value);
+  #endif
+  void set_user(const char* value);
+  void set_user(const char* value, size_t size);
+  ::std::string* mutable_user();
+  ::std::string* release_user();
+  void set_allocated_user(::std::string* user);
+
+  // string currency = 3;
+  void clear_currency();
+  static const int kCurrencyFieldNumber = 3;
+  const ::std::string& currency() const;
+  void set_currency(const ::std::string& value);
+  #if LANG_CXX11
+  void set_currency(::std::string&& value);
+  #endif
+  void set_currency(const char* value);
+  void set_currency(const char* value, size_t size);
+  ::std::string* mutable_currency();
+  ::std::string* release_currency();
+  void set_allocated_currency(::std::string* currency);
+
+  // string account_name = 50;
+  void clear_account_name();
+  static const int kAccountNameFieldNumber = 50;
+  const ::std::string& account_name() const;
+  void set_account_name(const ::std::string& value);
+  #if LANG_CXX11
+  void set_account_name(::std::string&& value);
+  #endif
+  void set_account_name(const char* value);
+  void set_account_name(const char* value, size_t size);
+  ::std::string* mutable_account_name();
+  ::std::string* release_account_name();
+  void set_allocated_account_name(::std::string* account_name);
+
+  // string options_name = 54;
+  void clear_options_name();
+  static const int kOptionsNameFieldNumber = 54;
+  const ::std::string& options_name() const;
+  void set_options_name(const ::std::string& value);
+  #if LANG_CXX11
+  void set_options_name(::std::string&& value);
+  #endif
+  void set_options_name(const char* value);
+  void set_options_name(const char* value, size_t size);
+  ::std::string* mutable_options_name();
+  ::std::string* release_options_name();
+  void set_allocated_options_name(::std::string* options_name);
+
+  // string branch = 64;
+  void clear_branch();
+  static const int kBranchFieldNumber = 64;
+  const ::std::string& branch() const;
+  void set_branch(const ::std::string& value);
+  #if LANG_CXX11
+  void set_branch(::std::string&& value);
+  #endif
+  void set_branch(const char* value);
+  void set_branch(const char* value, size_t size);
+  ::std::string* mutable_branch();
+  ::std::string* release_branch();
+  void set_allocated_branch(::std::string* branch);
+
+  // string branch_name = 65;
+  void clear_branch_name();
+  static const int kBranchNameFieldNumber = 65;
+  const ::std::string& branch_name() const;
+  void set_branch_name(const ::std::string& value);
+  #if LANG_CXX11
+  void set_branch_name(::std::string&& value);
+  #endif
+  void set_branch_name(const char* value);
+  void set_branch_name(const char* value, size_t size);
+  ::std::string* mutable_branch_name();
+  ::std::string* release_branch_name();
+  void set_allocated_branch_name(::std::string* branch_name);
+
+  // double balance = 4;
+  void clear_balance();
+  static const int kBalanceFieldNumber = 4;
+  double balance() const;
+  void set_balance(double value);
+
+  // double commission = 5;
+  void clear_commission();
+  static const int kCommissionFieldNumber = 5;
+  double commission() const;
+  void set_commission(double value);
+
+  // double cur_margin = 6;
+  void clear_cur_margin();
+  static const int kCurMarginFieldNumber = 6;
+  double cur_margin() const;
+  void set_cur_margin(double value);
+
+  // double net_position_amount = 7;
+  void clear_net_position_amount();
+  static const int kNetPositionAmountFieldNumber = 7;
+  double net_position_amount() const;
+  void set_net_position_amount(double value);
+
+  // double pre_balance = 8;
+  void clear_pre_balance();
+  static const int kPreBalanceFieldNumber = 8;
+  double pre_balance() const;
+  void set_pre_balance(double value);
+
+  // double interest_in = 9;
+  void clear_interest_in();
+  static const int kInterestInFieldNumber = 9;
+  double interest_in() const;
+  void set_interest_in(double value);
+
+  // double deposit = 10;
+  void clear_deposit();
+  static const int kDepositFieldNumber = 10;
+  double deposit() const;
+  void set_deposit(double value);
+
+  // double withdraw = 11;
+  void clear_withdraw();
+  static const int kWithdrawFieldNumber = 11;
+  double withdraw() const;
+  void set_withdraw(double value);
+
+  // double frozen_margin = 12;
+  void clear_frozen_margin();
+  static const int kFrozenMarginFieldNumber = 12;
+  double frozen_margin() const;
+  void set_frozen_margin(double value);
+
+  // double frozen_commission = 13;
+  void clear_frozen_commission();
+  static const int kFrozenCommissionFieldNumber = 13;
+  double frozen_commission() const;
+  void set_frozen_commission(double value);
+
+  // double available = 14;
+  void clear_available();
+  static const int kAvailableFieldNumber = 14;
+  double available() const;
+  void set_available(double value);
+
+  // double close_profit = 15;
+  void clear_close_profit();
+  static const int kCloseProfitFieldNumber = 15;
+  double close_profit() const;
+  void set_close_profit(double value);
+
+  // double position_profit = 16;
+  void clear_position_profit();
+  static const int kPositionProfitFieldNumber = 16;
+  double position_profit() const;
+  void set_position_profit(double value);
+
+  // double pre_mortgate = 17;
+  void clear_pre_mortgate();
+  static const int kPreMortgateFieldNumber = 17;
+  double pre_mortgate() const;
+  void set_pre_mortgate(double value);
+
+  // double pre_credit = 18;
+  void clear_pre_credit();
+  static const int kPreCreditFieldNumber = 18;
+  double pre_credit() const;
+  void set_pre_credit(double value);
+
+  // double interest_base = 19;
+  void clear_interest_base();
+  static const int kInterestBaseFieldNumber = 19;
+  double interest_base() const;
+  void set_interest_base(double value);
+
+  // double withdraw_available = 20;
+  void clear_withdraw_available();
+  static const int kWithdrawAvailableFieldNumber = 20;
+  double withdraw_available() const;
+  void set_withdraw_available(double value);
+
+  // double reserve = 21;
+  void clear_reserve();
+  static const int kReserveFieldNumber = 21;
+  double reserve() const;
+  void set_reserve(double value);
+
+  // double credit = 23;
+  void clear_credit();
+  static const int kCreditFieldNumber = 23;
+  double credit() const;
+  void set_credit(double value);
+
+  // double mortgate = 24;
+  void clear_mortgate();
+  static const int kMortgateFieldNumber = 24;
+  double mortgate() const;
+  void set_mortgate(double value);
+
+  // double exchange_margin = 25;
+  void clear_exchange_margin();
+  static const int kExchangeMarginFieldNumber = 25;
+  double exchange_margin() const;
+  void set_exchange_margin(double value);
+
+  // double delivery_margin = 26;
+  void clear_delivery_margin();
+  static const int kDeliveryMarginFieldNumber = 26;
+  double delivery_margin() const;
+  void set_delivery_margin(double value);
+
+  // double exchange_delivery_margin = 27;
+  void clear_exchange_delivery_margin();
+  static const int kExchangeDeliveryMarginFieldNumber = 27;
+  double exchange_delivery_margin() const;
+  void set_exchange_delivery_margin(double value);
+
+  // double reserve_balance = 28;
+  void clear_reserve_balance();
+  static const int kReserveBalanceFieldNumber = 28;
+  double reserve_balance() const;
+  void set_reserve_balance(double value);
+
+  // double delivery_commission = 29;
+  void clear_delivery_commission();
+  static const int kDeliveryCommissionFieldNumber = 29;
+  double delivery_commission() const;
+  void set_delivery_commission(double value);
+
+  // double frozen_transfer_fee = 30;
+  void clear_frozen_transfer_fee();
+  static const int kFrozenTransferFeeFieldNumber = 30;
+  double frozen_transfer_fee() const;
+  void set_frozen_transfer_fee(double value);
+
+  // double frozen_stamp_tax = 31;
+  void clear_frozen_stamp_tax();
+  static const int kFrozenStampTaxFieldNumber = 31;
+  double frozen_stamp_tax() const;
+  void set_frozen_stamp_tax(double value);
+
+  // double transfer_fee = 32;
+  void clear_transfer_fee();
+  static const int kTransferFeeFieldNumber = 32;
+  double transfer_fee() const;
+  void set_transfer_fee(double value);
+
+  // double stamp_tax = 33;
+  void clear_stamp_tax();
+  static const int kStampTaxFieldNumber = 33;
+  double stamp_tax() const;
+  void set_stamp_tax(double value);
+
+  // double mtm_profit = 34;
+  void clear_mtm_profit();
+  static const int kMtmProfitFieldNumber = 34;
+  double mtm_profit() const;
+  void set_mtm_profit(double value);
+
+  // double mtm_balance = 35;
+  void clear_mtm_balance();
+  static const int kMtmBalanceFieldNumber = 35;
+  double mtm_balance() const;
+  void set_mtm_balance(double value);
+
+  // double stock_value = 36;
+  void clear_stock_value();
+  static const int kStockValueFieldNumber = 36;
+  double stock_value() const;
+  void set_stock_value(double value);
+
+  // double bond_repurchase_amount = 37;
+  void clear_bond_repurchase_amount();
+  static const int kBondRepurchaseAmountFieldNumber = 37;
+  double bond_repurchase_amount() const;
+  void set_bond_repurchase_amount(double value);
+
+  // double reverse_repurchase_amount = 38;
+  void clear_reverse_repurchase_amount();
+  static const int kReverseRepurchaseAmountFieldNumber = 38;
+  double reverse_repurchase_amount() const;
+  void set_reverse_repurchase_amount(double value);
+
+  // int32 trading_day = 22;
+  void clear_trading_day();
+  static const int kTradingDayFieldNumber = 22;
+  ::google::protobuf::int32 trading_day() const;
+  void set_trading_day(::google::protobuf::int32 value);
+
+  // bool activated = 55;
+  void clear_activated();
+  static const int kActivatedFieldNumber = 55;
+  bool activated() const;
+  void set_activated(bool value);
+
+  // double margin_trade_amount = 39;
+  void clear_margin_trade_amount();
+  static const int kMarginTradeAmountFieldNumber = 39;
+  double margin_trade_amount() const;
+  void set_margin_trade_amount(double value);
+
+  // double short_sell_amount = 40;
+  void clear_short_sell_amount();
+  static const int kShortSellAmountFieldNumber = 40;
+  double short_sell_amount() const;
+  void set_short_sell_amount(double value);
+
+  // double margin_trade_profit = 41;
+  void clear_margin_trade_profit();
+  static const int kMarginTradeProfitFieldNumber = 41;
+  double margin_trade_profit() const;
+  void set_margin_trade_profit(double value);
+
+  // double pre_prefered_balance = 42;
+  void clear_pre_prefered_balance();
+  static const int kPrePreferedBalanceFieldNumber = 42;
+  double pre_prefered_balance() const;
+  void set_pre_prefered_balance(double value);
+
+  // double frozen_close_commission = 43;
+  void clear_frozen_close_commission();
+  static const int kFrozenCloseCommissionFieldNumber = 43;
+  double frozen_close_commission() const;
+  void set_frozen_close_commission(double value);
+
+  // double common_balance = 44;
+  void clear_common_balance();
+  static const int kCommonBalanceFieldNumber = 44;
+  double common_balance() const;
+  void set_common_balance(double value);
+
+  // double prefered_balance = 45;
+  void clear_prefered_balance();
+  static const int kPreferedBalanceFieldNumber = 45;
+  double prefered_balance() const;
+  void set_prefered_balance(double value);
+
+  // double base_exchange_rate = 46;
+  void clear_base_exchange_rate();
+  static const int kBaseExchangeRateFieldNumber = 46;
+  double base_exchange_rate() const;
+  void set_base_exchange_rate(double value);
+
+  // double warning_level = 47;
+  void clear_warning_level();
+  static const int kWarningLevelFieldNumber = 47;
+  double warning_level() const;
+  void set_warning_level(double value);
+
+  // double force_close_level = 48;
+  void clear_force_close_level();
+  static const int kForceCloseLevelFieldNumber = 48;
+  double force_close_level() const;
+  void set_force_close_level(double value);
+
+  // double cleared_closed_profit = 49;
+  void clear_cleared_closed_profit();
+  static const int kClearedClosedProfitFieldNumber = 49;
+  double cleared_closed_profit() const;
+  void set_cleared_closed_profit(double value);
+
+  // double interest = 51;
+  void clear_interest();
+  static const int kInterestFieldNumber = 51;
+  double interest() const;
+  void set_interest(double value);
+
+  // double frozen_interest = 52;
+  void clear_frozen_interest();
+  static const int kFrozenInterestFieldNumber = 52;
+  double frozen_interest() const;
+  void set_frozen_interest(double value);
+
+  // int64 options_id = 53;
+  void clear_options_id();
+  static const int kOptionsIdFieldNumber = 53;
+  ::google::protobuf::int64 options_id() const;
+  void set_options_id(::google::protobuf::int64 value);
+
+  // double overnight_fee = 56;
+  void clear_overnight_fee();
+  static const int kOvernightFeeFieldNumber = 56;
+  double overnight_fee() const;
+  void set_overnight_fee(double value);
+
+  // double commission_l0 = 57;
+  void clear_commission_l0();
+  static const int kCommissionL0FieldNumber = 57;
+  double commission_l0() const;
+  void set_commission_l0(double value);
+
+  // double long_position_market_value = 58;
+  void clear_long_position_market_value();
+  static const int kLongPositionMarketValueFieldNumber = 58;
+  double long_position_market_value() const;
+  void set_long_position_market_value(double value);
+
+  // double short_position_market_value = 59;
+  void clear_short_position_market_value();
+  static const int kShortPositionMarketValueFieldNumber = 59;
+  double short_position_market_value() const;
+  void set_short_position_market_value(double value);
+
+  // double prefered_deposit = 60;
+  void clear_prefered_deposit();
+  static const int kPreferedDepositFieldNumber = 60;
+  double prefered_deposit() const;
+  void set_prefered_deposit(double value);
+
+  // double common_deposit = 61;
+  void clear_common_deposit();
+  static const int kCommonDepositFieldNumber = 61;
+  double common_deposit() const;
+  void set_common_deposit(double value);
+
+  // double prefered_withdraw = 62;
+  void clear_prefered_withdraw();
+  static const int kPreferedWithdrawFieldNumber = 62;
+  double prefered_withdraw() const;
+  void set_prefered_withdraw(double value);
+
+  // double common_withdraw = 63;
+  void clear_common_withdraw();
+  static const int kCommonWithdrawFieldNumber = 63;
+  double common_withdraw() const;
+  void set_common_withdraw(double value);
+
+  // @@protoc_insertion_point(class_scope:pb.TradingAccountSummary)
+ private:
+  class HasBitSetters;
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::ArenaStringPtr account_;
+  ::google::protobuf::internal::ArenaStringPtr user_;
+  ::google::protobuf::internal::ArenaStringPtr currency_;
+  ::google::protobuf::internal::ArenaStringPtr account_name_;
+  ::google::protobuf::internal::ArenaStringPtr options_name_;
+  ::google::protobuf::internal::ArenaStringPtr branch_;
+  ::google::protobuf::internal::ArenaStringPtr branch_name_;
+  double balance_;
+  double commission_;
+  double cur_margin_;
+  double net_position_amount_;
+  double pre_balance_;
+  double interest_in_;
+  double deposit_;
+  double withdraw_;
+  double frozen_margin_;
+  double frozen_commission_;
+  double available_;
+  double close_profit_;
+  double position_profit_;
+  double pre_mortgate_;
+  double pre_credit_;
+  double interest_base_;
+  double withdraw_available_;
+  double reserve_;
+  double credit_;
+  double mortgate_;
+  double exchange_margin_;
+  double delivery_margin_;
+  double exchange_delivery_margin_;
+  double reserve_balance_;
+  double delivery_commission_;
+  double frozen_transfer_fee_;
+  double frozen_stamp_tax_;
+  double transfer_fee_;
+  double stamp_tax_;
+  double mtm_profit_;
+  double mtm_balance_;
+  double stock_value_;
+  double bond_repurchase_amount_;
+  double reverse_repurchase_amount_;
+  ::google::protobuf::int32 trading_day_;
+  bool activated_;
+  double margin_trade_amount_;
+  double short_sell_amount_;
+  double margin_trade_profit_;
+  double pre_prefered_balance_;
+  double frozen_close_commission_;
+  double common_balance_;
+  double prefered_balance_;
+  double base_exchange_rate_;
+  double warning_level_;
+  double force_close_level_;
+  double cleared_closed_profit_;
+  double interest_;
+  double frozen_interest_;
+  ::google::protobuf::int64 options_id_;
+  double overnight_fee_;
+  double commission_l0_;
+  double long_position_market_value_;
+  double short_position_market_value_;
+  double prefered_deposit_;
+  double common_deposit_;
+  double prefered_withdraw_;
+  double common_withdraw_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_trading_2eproto;
+};
+// -------------------------------------------------------------------
+
+class RspTradingAccountLogin :
+    public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:pb.RspTradingAccountLogin) */ {
+ public:
+  RspTradingAccountLogin();
+  virtual ~RspTradingAccountLogin();
+
+  RspTradingAccountLogin(const RspTradingAccountLogin& from);
+
+  inline RspTradingAccountLogin& operator=(const RspTradingAccountLogin& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  RspTradingAccountLogin(RspTradingAccountLogin&& from) noexcept
+    : RspTradingAccountLogin() {
+    *this = ::std::move(from);
+  }
+
+  inline RspTradingAccountLogin& operator=(RspTradingAccountLogin&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return default_instance().GetDescriptor();
+  }
+  static const RspTradingAccountLogin& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const RspTradingAccountLogin* internal_default_instance() {
+    return reinterpret_cast<const RspTradingAccountLogin*>(
+               &_RspTradingAccountLogin_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    6;
+
+  void Swap(RspTradingAccountLogin* other);
+  friend void swap(RspTradingAccountLogin& a, RspTradingAccountLogin& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline RspTradingAccountLogin* New() const final {
+    return CreateMaybeMessage<RspTradingAccountLogin>(nullptr);
+  }
+
+  RspTradingAccountLogin* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<RspTradingAccountLogin>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const RspTradingAccountLogin& from);
+  void MergeFrom(const RspTradingAccountLogin& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  static const char* _InternalParse(const char* begin, const char* end, void* object, ::google::protobuf::internal::ParseContext* ctx);
+  ::google::protobuf::internal::ParseFunc _ParseFunc() const final { return _InternalParse; }
+  #else
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(RspTradingAccountLogin* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return nullptr;
+  }
+  inline void* MaybeArenaPtr() const {
+    return nullptr;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // bytes error_msg = 2;
+  void clear_error_msg();
+  static const int kErrorMsgFieldNumber = 2;
+  const ::std::string& error_msg() const;
+  void set_error_msg(const ::std::string& value);
+  #if LANG_CXX11
+  void set_error_msg(::std::string&& value);
+  #endif
+  void set_error_msg(const char* value);
+  void set_error_msg(const void* value, size_t size);
+  ::std::string* mutable_error_msg();
+  ::std::string* release_error_msg();
+  void set_allocated_error_msg(::std::string* error_msg);
+
+  // string login_time = 6;
+  void clear_login_time();
+  static const int kLoginTimeFieldNumber = 6;
+  const ::std::string& login_time() const;
+  void set_login_time(const ::std::string& value);
+  #if LANG_CXX11
+  void set_login_time(::std::string&& value);
+  #endif
+  void set_login_time(const char* value);
+  void set_login_time(const char* value, size_t size);
+  ::std::string* mutable_login_time();
+  ::std::string* release_login_time();
+  void set_allocated_login_time(::std::string* login_time);
+
+  // string broker_id = 7;
+  void clear_broker_id();
+  static const int kBrokerIdFieldNumber = 7;
+  const ::std::string& broker_id() const;
+  void set_broker_id(const ::std::string& value);
+  #if LANG_CXX11
+  void set_broker_id(::std::string&& value);
+  #endif
+  void set_broker_id(const char* value);
+  void set_broker_id(const char* value, size_t size);
+  ::std::string* mutable_broker_id();
+  ::std::string* release_broker_id();
+  void set_allocated_broker_id(::std::string* broker_id);
+
+  // string user_id = 8;
+  void clear_user_id();
+  static const int kUserIdFieldNumber = 8;
+  const ::std::string& user_id() const;
+  void set_user_id(const ::std::string& value);
+  #if LANG_CXX11
+  void set_user_id(::std::string&& value);
+  #endif
+  void set_user_id(const char* value);
+  void set_user_id(const char* value, size_t size);
+  ::std::string* mutable_user_id();
+  ::std::string* release_user_id();
+  void set_allocated_user_id(::std::string* user_id);
+
+  // string system_name = 9;
+  void clear_system_name();
+  static const int kSystemNameFieldNumber = 9;
+  const ::std::string& system_name() const;
+  void set_system_name(const ::std::string& value);
+  #if LANG_CXX11
+  void set_system_name(::std::string&& value);
+  #endif
+  void set_system_name(const char* value);
+  void set_system_name(const char* value, size_t size);
+  ::std::string* mutable_system_name();
+  ::std::string* release_system_name();
+  void set_allocated_system_name(::std::string* system_name);
+
+  // string max_order_ref = 12;
+  void clear_max_order_ref();
+  static const int kMaxOrderRefFieldNumber = 12;
+  const ::std::string& max_order_ref() const;
+  void set_max_order_ref(const ::std::string& value);
+  #if LANG_CXX11
+  void set_max_order_ref(::std::string&& value);
+  #endif
+  void set_max_order_ref(const char* value);
+  void set_max_order_ref(const char* value, size_t size);
+  ::std::string* mutable_max_order_ref();
+  ::std::string* release_max_order_ref();
+  void set_allocated_max_order_ref(::std::string* max_order_ref);
+
+  // string SHFE_time = 13;
+  void clear_shfe_time();
+  static const int kSHFETimeFieldNumber = 13;
+  const ::std::string& shfe_time() const;
+  void set_shfe_time(const ::std::string& value);
+  #if LANG_CXX11
+  void set_shfe_time(::std::string&& value);
+  #endif
+  void set_shfe_time(const char* value);
+  void set_shfe_time(const char* value, size_t size);
+  ::std::string* mutable_shfe_time();
+  ::std::string* release_shfe_time();
+  void set_allocated_shfe_time(::std::string* shfe_time);
+
+  // string DCE_time = 14;
+  void clear_dce_time();
+  static const int kDCETimeFieldNumber = 14;
+  const ::std::string& dce_time() const;
+  void set_dce_time(const ::std::string& value);
+  #if LANG_CXX11
+  void set_dce_time(::std::string&& value);
+  #endif
+  void set_dce_time(const char* value);
+  void set_dce_time(const char* value, size_t size);
+  ::std::string* mutable_dce_time();
+  ::std::string* release_dce_time();
+  void set_allocated_dce_time(::std::string* dce_time);
+
+  // string CZCE_time = 15;
+  void clear_czce_time();
+  static const int kCZCETimeFieldNumber = 15;
+  const ::std::string& czce_time() const;
+  void set_czce_time(const ::std::string& value);
+  #if LANG_CXX11
+  void set_czce_time(::std::string&& value);
+  #endif
+  void set_czce_time(const char* value);
+  void set_czce_time(const char* value, size_t size);
+  ::std::string* mutable_czce_time();
+  ::std::string* release_czce_time();
+  void set_allocated_czce_time(::std::string* czce_time);
+
+  // string FFEX_time = 16;
+  void clear_ffex_time();
+  static const int kFFEXTimeFieldNumber = 16;
+  const ::std::string& ffex_time() const;
+  void set_ffex_time(const ::std::string& value);
+  #if LANG_CXX11
+  void set_ffex_time(::std::string&& value);
+  #endif
+  void set_ffex_time(const char* value);
+  void set_ffex_time(const char* value, size_t size);
+  ::std::string* mutable_ffex_time();
+  ::std::string* release_ffex_time();
+  void set_allocated_ffex_time(::std::string* ffex_time);
+
+  // string INE_time = 17;
+  void clear_ine_time();
+  static const int kINETimeFieldNumber = 17;
+  const ::std::string& ine_time() const;
+  void set_ine_time(const ::std::string& value);
+  #if LANG_CXX11
+  void set_ine_time(::std::string&& value);
+  #endif
+  void set_ine_time(const char* value);
+  void set_ine_time(const char* value, size_t size);
+  ::std::string* mutable_ine_time();
+  ::std::string* release_ine_time();
+  void set_allocated_ine_time(::std::string* ine_time);
+
+  // int32 error_id = 1;
+  void clear_error_id();
+  static const int kErrorIdFieldNumber = 1;
+  ::google::protobuf::int32 error_id() const;
+  void set_error_id(::google::protobuf::int32 value);
+
+  // int32 request_id = 3;
+  void clear_request_id();
+  static const int kRequestIdFieldNumber = 3;
+  ::google::protobuf::int32 request_id() const;
+  void set_request_id(::google::protobuf::int32 value);
+
+  // bool is_last = 4;
+  void clear_is_last();
+  static const int kIsLastFieldNumber = 4;
+  bool is_last() const;
+  void set_is_last(bool value);
+
+  // int32 trading_day = 5;
+  void clear_trading_day();
+  static const int kTradingDayFieldNumber = 5;
+  ::google::protobuf::int32 trading_day() const;
+  void set_trading_day(::google::protobuf::int32 value);
+
+  // int32 front_id = 10;
+  void clear_front_id();
+  static const int kFrontIdFieldNumber = 10;
+  ::google::protobuf::int32 front_id() const;
+  void set_front_id(::google::protobuf::int32 value);
+
+  // int32 session_id = 11;
+  void clear_session_id();
+  static const int kSessionIdFieldNumber = 11;
+  ::google::protobuf::int32 session_id() const;
+  void set_session_id(::google::protobuf::int32 value);
+
+  // @@protoc_insertion_point(class_scope:pb.RspTradingAccountLogin)
+ private:
+  class HasBitSetters;
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::ArenaStringPtr error_msg_;
+  ::google::protobuf::internal::ArenaStringPtr login_time_;
+  ::google::protobuf::internal::ArenaStringPtr broker_id_;
+  ::google::protobuf::internal::ArenaStringPtr user_id_;
+  ::google::protobuf::internal::ArenaStringPtr system_name_;
+  ::google::protobuf::internal::ArenaStringPtr max_order_ref_;
+  ::google::protobuf::internal::ArenaStringPtr shfe_time_;
+  ::google::protobuf::internal::ArenaStringPtr dce_time_;
+  ::google::protobuf::internal::ArenaStringPtr czce_time_;
+  ::google::protobuf::internal::ArenaStringPtr ffex_time_;
+  ::google::protobuf::internal::ArenaStringPtr ine_time_;
+  ::google::protobuf::int32 error_id_;
+  ::google::protobuf::int32 request_id_;
+  bool is_last_;
+  ::google::protobuf::int32 trading_day_;
+  ::google::protobuf::int32 front_id_;
+  ::google::protobuf::int32 session_id_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_trading_2eproto;
+};
+// -------------------------------------------------------------------
+
+class RspOrderInsert :
+    public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:pb.RspOrderInsert) */ {
+ public:
+  RspOrderInsert();
+  virtual ~RspOrderInsert();
+
+  RspOrderInsert(const RspOrderInsert& from);
+
+  inline RspOrderInsert& operator=(const RspOrderInsert& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  RspOrderInsert(RspOrderInsert&& from) noexcept
+    : RspOrderInsert() {
+    *this = ::std::move(from);
+  }
+
+  inline RspOrderInsert& operator=(RspOrderInsert&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return default_instance().GetDescriptor();
+  }
+  static const RspOrderInsert& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const RspOrderInsert* internal_default_instance() {
+    return reinterpret_cast<const RspOrderInsert*>(
+               &_RspOrderInsert_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    7;
+
+  void Swap(RspOrderInsert* other);
+  friend void swap(RspOrderInsert& a, RspOrderInsert& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline RspOrderInsert* New() const final {
+    return CreateMaybeMessage<RspOrderInsert>(nullptr);
+  }
+
+  RspOrderInsert* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<RspOrderInsert>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const RspOrderInsert& from);
+  void MergeFrom(const RspOrderInsert& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  static const char* _InternalParse(const char* begin, const char* end, void* object, ::google::protobuf::internal::ParseContext* ctx);
+  ::google::protobuf::internal::ParseFunc _ParseFunc() const final { return _InternalParse; }
+  #else
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(RspOrderInsert* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return nullptr;
+  }
+  inline void* MaybeArenaPtr() const {
+    return nullptr;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // bytes error_msg = 2;
+  void clear_error_msg();
+  static const int kErrorMsgFieldNumber = 2;
+  const ::std::string& error_msg() const;
+  void set_error_msg(const ::std::string& value);
+  #if LANG_CXX11
+  void set_error_msg(::std::string&& value);
+  #endif
+  void set_error_msg(const char* value);
+  void set_error_msg(const void* value, size_t size);
+  ::std::string* mutable_error_msg();
+  ::std::string* release_error_msg();
+  void set_allocated_error_msg(::std::string* error_msg);
+
+  // string order_ref = 3;
+  void clear_order_ref();
+  static const int kOrderRefFieldNumber = 3;
+  const ::std::string& order_ref() const;
+  void set_order_ref(const ::std::string& value);
+  #if LANG_CXX11
+  void set_order_ref(::std::string&& value);
+  #endif
+  void set_order_ref(const char* value);
+  void set_order_ref(const char* value, size_t size);
+  ::std::string* mutable_order_ref();
+  ::std::string* release_order_ref();
+  void set_allocated_order_ref(::std::string* order_ref);
+
+  // int32 error_id = 1;
+  void clear_error_id();
+  static const int kErrorIdFieldNumber = 1;
+  ::google::protobuf::int32 error_id() const;
+  void set_error_id(::google::protobuf::int32 value);
+
+  // @@protoc_insertion_point(class_scope:pb.RspOrderInsert)
+ private:
+  class HasBitSetters;
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::ArenaStringPtr error_msg_;
+  ::google::protobuf::internal::ArenaStringPtr order_ref_;
+  ::google::protobuf::int32 error_id_;
   mutable ::google::protobuf::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_trading_2eproto;
 };
@@ -2064,9 +3146,1997 @@ inline void ReqDeleteTradingRoute::set_id(::google::protobuf::int64 value) {
   // @@protoc_insertion_point(field_set:pb.ReqDeleteTradingRoute.id)
 }
 
+// -------------------------------------------------------------------
+
+// TradingAccountSummary
+
+// string account = 1;
+inline void TradingAccountSummary::clear_account() {
+  account_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& TradingAccountSummary::account() const {
+  // @@protoc_insertion_point(field_get:pb.TradingAccountSummary.account)
+  return account_.GetNoArena();
+}
+inline void TradingAccountSummary::set_account(const ::std::string& value) {
+  
+  account_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:pb.TradingAccountSummary.account)
+}
+#if LANG_CXX11
+inline void TradingAccountSummary::set_account(::std::string&& value) {
+  
+  account_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:pb.TradingAccountSummary.account)
+}
+#endif
+inline void TradingAccountSummary::set_account(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  account_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:pb.TradingAccountSummary.account)
+}
+inline void TradingAccountSummary::set_account(const char* value, size_t size) {
+  
+  account_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:pb.TradingAccountSummary.account)
+}
+inline ::std::string* TradingAccountSummary::mutable_account() {
+  
+  // @@protoc_insertion_point(field_mutable:pb.TradingAccountSummary.account)
+  return account_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* TradingAccountSummary::release_account() {
+  // @@protoc_insertion_point(field_release:pb.TradingAccountSummary.account)
+  
+  return account_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void TradingAccountSummary::set_allocated_account(::std::string* account) {
+  if (account != nullptr) {
+    
+  } else {
+    
+  }
+  account_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), account);
+  // @@protoc_insertion_point(field_set_allocated:pb.TradingAccountSummary.account)
+}
+
+// string user = 2;
+inline void TradingAccountSummary::clear_user() {
+  user_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& TradingAccountSummary::user() const {
+  // @@protoc_insertion_point(field_get:pb.TradingAccountSummary.user)
+  return user_.GetNoArena();
+}
+inline void TradingAccountSummary::set_user(const ::std::string& value) {
+  
+  user_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:pb.TradingAccountSummary.user)
+}
+#if LANG_CXX11
+inline void TradingAccountSummary::set_user(::std::string&& value) {
+  
+  user_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:pb.TradingAccountSummary.user)
+}
+#endif
+inline void TradingAccountSummary::set_user(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  user_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:pb.TradingAccountSummary.user)
+}
+inline void TradingAccountSummary::set_user(const char* value, size_t size) {
+  
+  user_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:pb.TradingAccountSummary.user)
+}
+inline ::std::string* TradingAccountSummary::mutable_user() {
+  
+  // @@protoc_insertion_point(field_mutable:pb.TradingAccountSummary.user)
+  return user_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* TradingAccountSummary::release_user() {
+  // @@protoc_insertion_point(field_release:pb.TradingAccountSummary.user)
+  
+  return user_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void TradingAccountSummary::set_allocated_user(::std::string* user) {
+  if (user != nullptr) {
+    
+  } else {
+    
+  }
+  user_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), user);
+  // @@protoc_insertion_point(field_set_allocated:pb.TradingAccountSummary.user)
+}
+
+// string currency = 3;
+inline void TradingAccountSummary::clear_currency() {
+  currency_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& TradingAccountSummary::currency() const {
+  // @@protoc_insertion_point(field_get:pb.TradingAccountSummary.currency)
+  return currency_.GetNoArena();
+}
+inline void TradingAccountSummary::set_currency(const ::std::string& value) {
+  
+  currency_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:pb.TradingAccountSummary.currency)
+}
+#if LANG_CXX11
+inline void TradingAccountSummary::set_currency(::std::string&& value) {
+  
+  currency_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:pb.TradingAccountSummary.currency)
+}
+#endif
+inline void TradingAccountSummary::set_currency(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  currency_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:pb.TradingAccountSummary.currency)
+}
+inline void TradingAccountSummary::set_currency(const char* value, size_t size) {
+  
+  currency_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:pb.TradingAccountSummary.currency)
+}
+inline ::std::string* TradingAccountSummary::mutable_currency() {
+  
+  // @@protoc_insertion_point(field_mutable:pb.TradingAccountSummary.currency)
+  return currency_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* TradingAccountSummary::release_currency() {
+  // @@protoc_insertion_point(field_release:pb.TradingAccountSummary.currency)
+  
+  return currency_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void TradingAccountSummary::set_allocated_currency(::std::string* currency) {
+  if (currency != nullptr) {
+    
+  } else {
+    
+  }
+  currency_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), currency);
+  // @@protoc_insertion_point(field_set_allocated:pb.TradingAccountSummary.currency)
+}
+
+// double balance = 4;
+inline void TradingAccountSummary::clear_balance() {
+  balance_ = 0;
+}
+inline double TradingAccountSummary::balance() const {
+  // @@protoc_insertion_point(field_get:pb.TradingAccountSummary.balance)
+  return balance_;
+}
+inline void TradingAccountSummary::set_balance(double value) {
+  
+  balance_ = value;
+  // @@protoc_insertion_point(field_set:pb.TradingAccountSummary.balance)
+}
+
+// double commission = 5;
+inline void TradingAccountSummary::clear_commission() {
+  commission_ = 0;
+}
+inline double TradingAccountSummary::commission() const {
+  // @@protoc_insertion_point(field_get:pb.TradingAccountSummary.commission)
+  return commission_;
+}
+inline void TradingAccountSummary::set_commission(double value) {
+  
+  commission_ = value;
+  // @@protoc_insertion_point(field_set:pb.TradingAccountSummary.commission)
+}
+
+// double cur_margin = 6;
+inline void TradingAccountSummary::clear_cur_margin() {
+  cur_margin_ = 0;
+}
+inline double TradingAccountSummary::cur_margin() const {
+  // @@protoc_insertion_point(field_get:pb.TradingAccountSummary.cur_margin)
+  return cur_margin_;
+}
+inline void TradingAccountSummary::set_cur_margin(double value) {
+  
+  cur_margin_ = value;
+  // @@protoc_insertion_point(field_set:pb.TradingAccountSummary.cur_margin)
+}
+
+// double net_position_amount = 7;
+inline void TradingAccountSummary::clear_net_position_amount() {
+  net_position_amount_ = 0;
+}
+inline double TradingAccountSummary::net_position_amount() const {
+  // @@protoc_insertion_point(field_get:pb.TradingAccountSummary.net_position_amount)
+  return net_position_amount_;
+}
+inline void TradingAccountSummary::set_net_position_amount(double value) {
+  
+  net_position_amount_ = value;
+  // @@protoc_insertion_point(field_set:pb.TradingAccountSummary.net_position_amount)
+}
+
+// double pre_balance = 8;
+inline void TradingAccountSummary::clear_pre_balance() {
+  pre_balance_ = 0;
+}
+inline double TradingAccountSummary::pre_balance() const {
+  // @@protoc_insertion_point(field_get:pb.TradingAccountSummary.pre_balance)
+  return pre_balance_;
+}
+inline void TradingAccountSummary::set_pre_balance(double value) {
+  
+  pre_balance_ = value;
+  // @@protoc_insertion_point(field_set:pb.TradingAccountSummary.pre_balance)
+}
+
+// double interest_in = 9;
+inline void TradingAccountSummary::clear_interest_in() {
+  interest_in_ = 0;
+}
+inline double TradingAccountSummary::interest_in() const {
+  // @@protoc_insertion_point(field_get:pb.TradingAccountSummary.interest_in)
+  return interest_in_;
+}
+inline void TradingAccountSummary::set_interest_in(double value) {
+  
+  interest_in_ = value;
+  // @@protoc_insertion_point(field_set:pb.TradingAccountSummary.interest_in)
+}
+
+// double deposit = 10;
+inline void TradingAccountSummary::clear_deposit() {
+  deposit_ = 0;
+}
+inline double TradingAccountSummary::deposit() const {
+  // @@protoc_insertion_point(field_get:pb.TradingAccountSummary.deposit)
+  return deposit_;
+}
+inline void TradingAccountSummary::set_deposit(double value) {
+  
+  deposit_ = value;
+  // @@protoc_insertion_point(field_set:pb.TradingAccountSummary.deposit)
+}
+
+// double withdraw = 11;
+inline void TradingAccountSummary::clear_withdraw() {
+  withdraw_ = 0;
+}
+inline double TradingAccountSummary::withdraw() const {
+  // @@protoc_insertion_point(field_get:pb.TradingAccountSummary.withdraw)
+  return withdraw_;
+}
+inline void TradingAccountSummary::set_withdraw(double value) {
+  
+  withdraw_ = value;
+  // @@protoc_insertion_point(field_set:pb.TradingAccountSummary.withdraw)
+}
+
+// double frozen_margin = 12;
+inline void TradingAccountSummary::clear_frozen_margin() {
+  frozen_margin_ = 0;
+}
+inline double TradingAccountSummary::frozen_margin() const {
+  // @@protoc_insertion_point(field_get:pb.TradingAccountSummary.frozen_margin)
+  return frozen_margin_;
+}
+inline void TradingAccountSummary::set_frozen_margin(double value) {
+  
+  frozen_margin_ = value;
+  // @@protoc_insertion_point(field_set:pb.TradingAccountSummary.frozen_margin)
+}
+
+// double frozen_commission = 13;
+inline void TradingAccountSummary::clear_frozen_commission() {
+  frozen_commission_ = 0;
+}
+inline double TradingAccountSummary::frozen_commission() const {
+  // @@protoc_insertion_point(field_get:pb.TradingAccountSummary.frozen_commission)
+  return frozen_commission_;
+}
+inline void TradingAccountSummary::set_frozen_commission(double value) {
+  
+  frozen_commission_ = value;
+  // @@protoc_insertion_point(field_set:pb.TradingAccountSummary.frozen_commission)
+}
+
+// double available = 14;
+inline void TradingAccountSummary::clear_available() {
+  available_ = 0;
+}
+inline double TradingAccountSummary::available() const {
+  // @@protoc_insertion_point(field_get:pb.TradingAccountSummary.available)
+  return available_;
+}
+inline void TradingAccountSummary::set_available(double value) {
+  
+  available_ = value;
+  // @@protoc_insertion_point(field_set:pb.TradingAccountSummary.available)
+}
+
+// double close_profit = 15;
+inline void TradingAccountSummary::clear_close_profit() {
+  close_profit_ = 0;
+}
+inline double TradingAccountSummary::close_profit() const {
+  // @@protoc_insertion_point(field_get:pb.TradingAccountSummary.close_profit)
+  return close_profit_;
+}
+inline void TradingAccountSummary::set_close_profit(double value) {
+  
+  close_profit_ = value;
+  // @@protoc_insertion_point(field_set:pb.TradingAccountSummary.close_profit)
+}
+
+// double position_profit = 16;
+inline void TradingAccountSummary::clear_position_profit() {
+  position_profit_ = 0;
+}
+inline double TradingAccountSummary::position_profit() const {
+  // @@protoc_insertion_point(field_get:pb.TradingAccountSummary.position_profit)
+  return position_profit_;
+}
+inline void TradingAccountSummary::set_position_profit(double value) {
+  
+  position_profit_ = value;
+  // @@protoc_insertion_point(field_set:pb.TradingAccountSummary.position_profit)
+}
+
+// double pre_mortgate = 17;
+inline void TradingAccountSummary::clear_pre_mortgate() {
+  pre_mortgate_ = 0;
+}
+inline double TradingAccountSummary::pre_mortgate() const {
+  // @@protoc_insertion_point(field_get:pb.TradingAccountSummary.pre_mortgate)
+  return pre_mortgate_;
+}
+inline void TradingAccountSummary::set_pre_mortgate(double value) {
+  
+  pre_mortgate_ = value;
+  // @@protoc_insertion_point(field_set:pb.TradingAccountSummary.pre_mortgate)
+}
+
+// double pre_credit = 18;
+inline void TradingAccountSummary::clear_pre_credit() {
+  pre_credit_ = 0;
+}
+inline double TradingAccountSummary::pre_credit() const {
+  // @@protoc_insertion_point(field_get:pb.TradingAccountSummary.pre_credit)
+  return pre_credit_;
+}
+inline void TradingAccountSummary::set_pre_credit(double value) {
+  
+  pre_credit_ = value;
+  // @@protoc_insertion_point(field_set:pb.TradingAccountSummary.pre_credit)
+}
+
+// double interest_base = 19;
+inline void TradingAccountSummary::clear_interest_base() {
+  interest_base_ = 0;
+}
+inline double TradingAccountSummary::interest_base() const {
+  // @@protoc_insertion_point(field_get:pb.TradingAccountSummary.interest_base)
+  return interest_base_;
+}
+inline void TradingAccountSummary::set_interest_base(double value) {
+  
+  interest_base_ = value;
+  // @@protoc_insertion_point(field_set:pb.TradingAccountSummary.interest_base)
+}
+
+// double withdraw_available = 20;
+inline void TradingAccountSummary::clear_withdraw_available() {
+  withdraw_available_ = 0;
+}
+inline double TradingAccountSummary::withdraw_available() const {
+  // @@protoc_insertion_point(field_get:pb.TradingAccountSummary.withdraw_available)
+  return withdraw_available_;
+}
+inline void TradingAccountSummary::set_withdraw_available(double value) {
+  
+  withdraw_available_ = value;
+  // @@protoc_insertion_point(field_set:pb.TradingAccountSummary.withdraw_available)
+}
+
+// double reserve = 21;
+inline void TradingAccountSummary::clear_reserve() {
+  reserve_ = 0;
+}
+inline double TradingAccountSummary::reserve() const {
+  // @@protoc_insertion_point(field_get:pb.TradingAccountSummary.reserve)
+  return reserve_;
+}
+inline void TradingAccountSummary::set_reserve(double value) {
+  
+  reserve_ = value;
+  // @@protoc_insertion_point(field_set:pb.TradingAccountSummary.reserve)
+}
+
+// int32 trading_day = 22;
+inline void TradingAccountSummary::clear_trading_day() {
+  trading_day_ = 0;
+}
+inline ::google::protobuf::int32 TradingAccountSummary::trading_day() const {
+  // @@protoc_insertion_point(field_get:pb.TradingAccountSummary.trading_day)
+  return trading_day_;
+}
+inline void TradingAccountSummary::set_trading_day(::google::protobuf::int32 value) {
+  
+  trading_day_ = value;
+  // @@protoc_insertion_point(field_set:pb.TradingAccountSummary.trading_day)
+}
+
+// double credit = 23;
+inline void TradingAccountSummary::clear_credit() {
+  credit_ = 0;
+}
+inline double TradingAccountSummary::credit() const {
+  // @@protoc_insertion_point(field_get:pb.TradingAccountSummary.credit)
+  return credit_;
+}
+inline void TradingAccountSummary::set_credit(double value) {
+  
+  credit_ = value;
+  // @@protoc_insertion_point(field_set:pb.TradingAccountSummary.credit)
+}
+
+// double mortgate = 24;
+inline void TradingAccountSummary::clear_mortgate() {
+  mortgate_ = 0;
+}
+inline double TradingAccountSummary::mortgate() const {
+  // @@protoc_insertion_point(field_get:pb.TradingAccountSummary.mortgate)
+  return mortgate_;
+}
+inline void TradingAccountSummary::set_mortgate(double value) {
+  
+  mortgate_ = value;
+  // @@protoc_insertion_point(field_set:pb.TradingAccountSummary.mortgate)
+}
+
+// double exchange_margin = 25;
+inline void TradingAccountSummary::clear_exchange_margin() {
+  exchange_margin_ = 0;
+}
+inline double TradingAccountSummary::exchange_margin() const {
+  // @@protoc_insertion_point(field_get:pb.TradingAccountSummary.exchange_margin)
+  return exchange_margin_;
+}
+inline void TradingAccountSummary::set_exchange_margin(double value) {
+  
+  exchange_margin_ = value;
+  // @@protoc_insertion_point(field_set:pb.TradingAccountSummary.exchange_margin)
+}
+
+// double delivery_margin = 26;
+inline void TradingAccountSummary::clear_delivery_margin() {
+  delivery_margin_ = 0;
+}
+inline double TradingAccountSummary::delivery_margin() const {
+  // @@protoc_insertion_point(field_get:pb.TradingAccountSummary.delivery_margin)
+  return delivery_margin_;
+}
+inline void TradingAccountSummary::set_delivery_margin(double value) {
+  
+  delivery_margin_ = value;
+  // @@protoc_insertion_point(field_set:pb.TradingAccountSummary.delivery_margin)
+}
+
+// double exchange_delivery_margin = 27;
+inline void TradingAccountSummary::clear_exchange_delivery_margin() {
+  exchange_delivery_margin_ = 0;
+}
+inline double TradingAccountSummary::exchange_delivery_margin() const {
+  // @@protoc_insertion_point(field_get:pb.TradingAccountSummary.exchange_delivery_margin)
+  return exchange_delivery_margin_;
+}
+inline void TradingAccountSummary::set_exchange_delivery_margin(double value) {
+  
+  exchange_delivery_margin_ = value;
+  // @@protoc_insertion_point(field_set:pb.TradingAccountSummary.exchange_delivery_margin)
+}
+
+// double reserve_balance = 28;
+inline void TradingAccountSummary::clear_reserve_balance() {
+  reserve_balance_ = 0;
+}
+inline double TradingAccountSummary::reserve_balance() const {
+  // @@protoc_insertion_point(field_get:pb.TradingAccountSummary.reserve_balance)
+  return reserve_balance_;
+}
+inline void TradingAccountSummary::set_reserve_balance(double value) {
+  
+  reserve_balance_ = value;
+  // @@protoc_insertion_point(field_set:pb.TradingAccountSummary.reserve_balance)
+}
+
+// double delivery_commission = 29;
+inline void TradingAccountSummary::clear_delivery_commission() {
+  delivery_commission_ = 0;
+}
+inline double TradingAccountSummary::delivery_commission() const {
+  // @@protoc_insertion_point(field_get:pb.TradingAccountSummary.delivery_commission)
+  return delivery_commission_;
+}
+inline void TradingAccountSummary::set_delivery_commission(double value) {
+  
+  delivery_commission_ = value;
+  // @@protoc_insertion_point(field_set:pb.TradingAccountSummary.delivery_commission)
+}
+
+// double frozen_transfer_fee = 30;
+inline void TradingAccountSummary::clear_frozen_transfer_fee() {
+  frozen_transfer_fee_ = 0;
+}
+inline double TradingAccountSummary::frozen_transfer_fee() const {
+  // @@protoc_insertion_point(field_get:pb.TradingAccountSummary.frozen_transfer_fee)
+  return frozen_transfer_fee_;
+}
+inline void TradingAccountSummary::set_frozen_transfer_fee(double value) {
+  
+  frozen_transfer_fee_ = value;
+  // @@protoc_insertion_point(field_set:pb.TradingAccountSummary.frozen_transfer_fee)
+}
+
+// double frozen_stamp_tax = 31;
+inline void TradingAccountSummary::clear_frozen_stamp_tax() {
+  frozen_stamp_tax_ = 0;
+}
+inline double TradingAccountSummary::frozen_stamp_tax() const {
+  // @@protoc_insertion_point(field_get:pb.TradingAccountSummary.frozen_stamp_tax)
+  return frozen_stamp_tax_;
+}
+inline void TradingAccountSummary::set_frozen_stamp_tax(double value) {
+  
+  frozen_stamp_tax_ = value;
+  // @@protoc_insertion_point(field_set:pb.TradingAccountSummary.frozen_stamp_tax)
+}
+
+// double transfer_fee = 32;
+inline void TradingAccountSummary::clear_transfer_fee() {
+  transfer_fee_ = 0;
+}
+inline double TradingAccountSummary::transfer_fee() const {
+  // @@protoc_insertion_point(field_get:pb.TradingAccountSummary.transfer_fee)
+  return transfer_fee_;
+}
+inline void TradingAccountSummary::set_transfer_fee(double value) {
+  
+  transfer_fee_ = value;
+  // @@protoc_insertion_point(field_set:pb.TradingAccountSummary.transfer_fee)
+}
+
+// double stamp_tax = 33;
+inline void TradingAccountSummary::clear_stamp_tax() {
+  stamp_tax_ = 0;
+}
+inline double TradingAccountSummary::stamp_tax() const {
+  // @@protoc_insertion_point(field_get:pb.TradingAccountSummary.stamp_tax)
+  return stamp_tax_;
+}
+inline void TradingAccountSummary::set_stamp_tax(double value) {
+  
+  stamp_tax_ = value;
+  // @@protoc_insertion_point(field_set:pb.TradingAccountSummary.stamp_tax)
+}
+
+// double mtm_profit = 34;
+inline void TradingAccountSummary::clear_mtm_profit() {
+  mtm_profit_ = 0;
+}
+inline double TradingAccountSummary::mtm_profit() const {
+  // @@protoc_insertion_point(field_get:pb.TradingAccountSummary.mtm_profit)
+  return mtm_profit_;
+}
+inline void TradingAccountSummary::set_mtm_profit(double value) {
+  
+  mtm_profit_ = value;
+  // @@protoc_insertion_point(field_set:pb.TradingAccountSummary.mtm_profit)
+}
+
+// double mtm_balance = 35;
+inline void TradingAccountSummary::clear_mtm_balance() {
+  mtm_balance_ = 0;
+}
+inline double TradingAccountSummary::mtm_balance() const {
+  // @@protoc_insertion_point(field_get:pb.TradingAccountSummary.mtm_balance)
+  return mtm_balance_;
+}
+inline void TradingAccountSummary::set_mtm_balance(double value) {
+  
+  mtm_balance_ = value;
+  // @@protoc_insertion_point(field_set:pb.TradingAccountSummary.mtm_balance)
+}
+
+// double stock_value = 36;
+inline void TradingAccountSummary::clear_stock_value() {
+  stock_value_ = 0;
+}
+inline double TradingAccountSummary::stock_value() const {
+  // @@protoc_insertion_point(field_get:pb.TradingAccountSummary.stock_value)
+  return stock_value_;
+}
+inline void TradingAccountSummary::set_stock_value(double value) {
+  
+  stock_value_ = value;
+  // @@protoc_insertion_point(field_set:pb.TradingAccountSummary.stock_value)
+}
+
+// double bond_repurchase_amount = 37;
+inline void TradingAccountSummary::clear_bond_repurchase_amount() {
+  bond_repurchase_amount_ = 0;
+}
+inline double TradingAccountSummary::bond_repurchase_amount() const {
+  // @@protoc_insertion_point(field_get:pb.TradingAccountSummary.bond_repurchase_amount)
+  return bond_repurchase_amount_;
+}
+inline void TradingAccountSummary::set_bond_repurchase_amount(double value) {
+  
+  bond_repurchase_amount_ = value;
+  // @@protoc_insertion_point(field_set:pb.TradingAccountSummary.bond_repurchase_amount)
+}
+
+// double reverse_repurchase_amount = 38;
+inline void TradingAccountSummary::clear_reverse_repurchase_amount() {
+  reverse_repurchase_amount_ = 0;
+}
+inline double TradingAccountSummary::reverse_repurchase_amount() const {
+  // @@protoc_insertion_point(field_get:pb.TradingAccountSummary.reverse_repurchase_amount)
+  return reverse_repurchase_amount_;
+}
+inline void TradingAccountSummary::set_reverse_repurchase_amount(double value) {
+  
+  reverse_repurchase_amount_ = value;
+  // @@protoc_insertion_point(field_set:pb.TradingAccountSummary.reverse_repurchase_amount)
+}
+
+// double margin_trade_amount = 39;
+inline void TradingAccountSummary::clear_margin_trade_amount() {
+  margin_trade_amount_ = 0;
+}
+inline double TradingAccountSummary::margin_trade_amount() const {
+  // @@protoc_insertion_point(field_get:pb.TradingAccountSummary.margin_trade_amount)
+  return margin_trade_amount_;
+}
+inline void TradingAccountSummary::set_margin_trade_amount(double value) {
+  
+  margin_trade_amount_ = value;
+  // @@protoc_insertion_point(field_set:pb.TradingAccountSummary.margin_trade_amount)
+}
+
+// double short_sell_amount = 40;
+inline void TradingAccountSummary::clear_short_sell_amount() {
+  short_sell_amount_ = 0;
+}
+inline double TradingAccountSummary::short_sell_amount() const {
+  // @@protoc_insertion_point(field_get:pb.TradingAccountSummary.short_sell_amount)
+  return short_sell_amount_;
+}
+inline void TradingAccountSummary::set_short_sell_amount(double value) {
+  
+  short_sell_amount_ = value;
+  // @@protoc_insertion_point(field_set:pb.TradingAccountSummary.short_sell_amount)
+}
+
+// double margin_trade_profit = 41;
+inline void TradingAccountSummary::clear_margin_trade_profit() {
+  margin_trade_profit_ = 0;
+}
+inline double TradingAccountSummary::margin_trade_profit() const {
+  // @@protoc_insertion_point(field_get:pb.TradingAccountSummary.margin_trade_profit)
+  return margin_trade_profit_;
+}
+inline void TradingAccountSummary::set_margin_trade_profit(double value) {
+  
+  margin_trade_profit_ = value;
+  // @@protoc_insertion_point(field_set:pb.TradingAccountSummary.margin_trade_profit)
+}
+
+// double pre_prefered_balance = 42;
+inline void TradingAccountSummary::clear_pre_prefered_balance() {
+  pre_prefered_balance_ = 0;
+}
+inline double TradingAccountSummary::pre_prefered_balance() const {
+  // @@protoc_insertion_point(field_get:pb.TradingAccountSummary.pre_prefered_balance)
+  return pre_prefered_balance_;
+}
+inline void TradingAccountSummary::set_pre_prefered_balance(double value) {
+  
+  pre_prefered_balance_ = value;
+  // @@protoc_insertion_point(field_set:pb.TradingAccountSummary.pre_prefered_balance)
+}
+
+// double frozen_close_commission = 43;
+inline void TradingAccountSummary::clear_frozen_close_commission() {
+  frozen_close_commission_ = 0;
+}
+inline double TradingAccountSummary::frozen_close_commission() const {
+  // @@protoc_insertion_point(field_get:pb.TradingAccountSummary.frozen_close_commission)
+  return frozen_close_commission_;
+}
+inline void TradingAccountSummary::set_frozen_close_commission(double value) {
+  
+  frozen_close_commission_ = value;
+  // @@protoc_insertion_point(field_set:pb.TradingAccountSummary.frozen_close_commission)
+}
+
+// double common_balance = 44;
+inline void TradingAccountSummary::clear_common_balance() {
+  common_balance_ = 0;
+}
+inline double TradingAccountSummary::common_balance() const {
+  // @@protoc_insertion_point(field_get:pb.TradingAccountSummary.common_balance)
+  return common_balance_;
+}
+inline void TradingAccountSummary::set_common_balance(double value) {
+  
+  common_balance_ = value;
+  // @@protoc_insertion_point(field_set:pb.TradingAccountSummary.common_balance)
+}
+
+// double prefered_balance = 45;
+inline void TradingAccountSummary::clear_prefered_balance() {
+  prefered_balance_ = 0;
+}
+inline double TradingAccountSummary::prefered_balance() const {
+  // @@protoc_insertion_point(field_get:pb.TradingAccountSummary.prefered_balance)
+  return prefered_balance_;
+}
+inline void TradingAccountSummary::set_prefered_balance(double value) {
+  
+  prefered_balance_ = value;
+  // @@protoc_insertion_point(field_set:pb.TradingAccountSummary.prefered_balance)
+}
+
+// double base_exchange_rate = 46;
+inline void TradingAccountSummary::clear_base_exchange_rate() {
+  base_exchange_rate_ = 0;
+}
+inline double TradingAccountSummary::base_exchange_rate() const {
+  // @@protoc_insertion_point(field_get:pb.TradingAccountSummary.base_exchange_rate)
+  return base_exchange_rate_;
+}
+inline void TradingAccountSummary::set_base_exchange_rate(double value) {
+  
+  base_exchange_rate_ = value;
+  // @@protoc_insertion_point(field_set:pb.TradingAccountSummary.base_exchange_rate)
+}
+
+// double warning_level = 47;
+inline void TradingAccountSummary::clear_warning_level() {
+  warning_level_ = 0;
+}
+inline double TradingAccountSummary::warning_level() const {
+  // @@protoc_insertion_point(field_get:pb.TradingAccountSummary.warning_level)
+  return warning_level_;
+}
+inline void TradingAccountSummary::set_warning_level(double value) {
+  
+  warning_level_ = value;
+  // @@protoc_insertion_point(field_set:pb.TradingAccountSummary.warning_level)
+}
+
+// double force_close_level = 48;
+inline void TradingAccountSummary::clear_force_close_level() {
+  force_close_level_ = 0;
+}
+inline double TradingAccountSummary::force_close_level() const {
+  // @@protoc_insertion_point(field_get:pb.TradingAccountSummary.force_close_level)
+  return force_close_level_;
+}
+inline void TradingAccountSummary::set_force_close_level(double value) {
+  
+  force_close_level_ = value;
+  // @@protoc_insertion_point(field_set:pb.TradingAccountSummary.force_close_level)
+}
+
+// double cleared_closed_profit = 49;
+inline void TradingAccountSummary::clear_cleared_closed_profit() {
+  cleared_closed_profit_ = 0;
+}
+inline double TradingAccountSummary::cleared_closed_profit() const {
+  // @@protoc_insertion_point(field_get:pb.TradingAccountSummary.cleared_closed_profit)
+  return cleared_closed_profit_;
+}
+inline void TradingAccountSummary::set_cleared_closed_profit(double value) {
+  
+  cleared_closed_profit_ = value;
+  // @@protoc_insertion_point(field_set:pb.TradingAccountSummary.cleared_closed_profit)
+}
+
+// string account_name = 50;
+inline void TradingAccountSummary::clear_account_name() {
+  account_name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& TradingAccountSummary::account_name() const {
+  // @@protoc_insertion_point(field_get:pb.TradingAccountSummary.account_name)
+  return account_name_.GetNoArena();
+}
+inline void TradingAccountSummary::set_account_name(const ::std::string& value) {
+  
+  account_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:pb.TradingAccountSummary.account_name)
+}
+#if LANG_CXX11
+inline void TradingAccountSummary::set_account_name(::std::string&& value) {
+  
+  account_name_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:pb.TradingAccountSummary.account_name)
+}
+#endif
+inline void TradingAccountSummary::set_account_name(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  account_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:pb.TradingAccountSummary.account_name)
+}
+inline void TradingAccountSummary::set_account_name(const char* value, size_t size) {
+  
+  account_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:pb.TradingAccountSummary.account_name)
+}
+inline ::std::string* TradingAccountSummary::mutable_account_name() {
+  
+  // @@protoc_insertion_point(field_mutable:pb.TradingAccountSummary.account_name)
+  return account_name_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* TradingAccountSummary::release_account_name() {
+  // @@protoc_insertion_point(field_release:pb.TradingAccountSummary.account_name)
+  
+  return account_name_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void TradingAccountSummary::set_allocated_account_name(::std::string* account_name) {
+  if (account_name != nullptr) {
+    
+  } else {
+    
+  }
+  account_name_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), account_name);
+  // @@protoc_insertion_point(field_set_allocated:pb.TradingAccountSummary.account_name)
+}
+
+// double interest = 51;
+inline void TradingAccountSummary::clear_interest() {
+  interest_ = 0;
+}
+inline double TradingAccountSummary::interest() const {
+  // @@protoc_insertion_point(field_get:pb.TradingAccountSummary.interest)
+  return interest_;
+}
+inline void TradingAccountSummary::set_interest(double value) {
+  
+  interest_ = value;
+  // @@protoc_insertion_point(field_set:pb.TradingAccountSummary.interest)
+}
+
+// double frozen_interest = 52;
+inline void TradingAccountSummary::clear_frozen_interest() {
+  frozen_interest_ = 0;
+}
+inline double TradingAccountSummary::frozen_interest() const {
+  // @@protoc_insertion_point(field_get:pb.TradingAccountSummary.frozen_interest)
+  return frozen_interest_;
+}
+inline void TradingAccountSummary::set_frozen_interest(double value) {
+  
+  frozen_interest_ = value;
+  // @@protoc_insertion_point(field_set:pb.TradingAccountSummary.frozen_interest)
+}
+
+// int64 options_id = 53;
+inline void TradingAccountSummary::clear_options_id() {
+  options_id_ = PROTOBUF_LONGLONG(0);
+}
+inline ::google::protobuf::int64 TradingAccountSummary::options_id() const {
+  // @@protoc_insertion_point(field_get:pb.TradingAccountSummary.options_id)
+  return options_id_;
+}
+inline void TradingAccountSummary::set_options_id(::google::protobuf::int64 value) {
+  
+  options_id_ = value;
+  // @@protoc_insertion_point(field_set:pb.TradingAccountSummary.options_id)
+}
+
+// string options_name = 54;
+inline void TradingAccountSummary::clear_options_name() {
+  options_name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& TradingAccountSummary::options_name() const {
+  // @@protoc_insertion_point(field_get:pb.TradingAccountSummary.options_name)
+  return options_name_.GetNoArena();
+}
+inline void TradingAccountSummary::set_options_name(const ::std::string& value) {
+  
+  options_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:pb.TradingAccountSummary.options_name)
+}
+#if LANG_CXX11
+inline void TradingAccountSummary::set_options_name(::std::string&& value) {
+  
+  options_name_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:pb.TradingAccountSummary.options_name)
+}
+#endif
+inline void TradingAccountSummary::set_options_name(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  options_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:pb.TradingAccountSummary.options_name)
+}
+inline void TradingAccountSummary::set_options_name(const char* value, size_t size) {
+  
+  options_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:pb.TradingAccountSummary.options_name)
+}
+inline ::std::string* TradingAccountSummary::mutable_options_name() {
+  
+  // @@protoc_insertion_point(field_mutable:pb.TradingAccountSummary.options_name)
+  return options_name_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* TradingAccountSummary::release_options_name() {
+  // @@protoc_insertion_point(field_release:pb.TradingAccountSummary.options_name)
+  
+  return options_name_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void TradingAccountSummary::set_allocated_options_name(::std::string* options_name) {
+  if (options_name != nullptr) {
+    
+  } else {
+    
+  }
+  options_name_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), options_name);
+  // @@protoc_insertion_point(field_set_allocated:pb.TradingAccountSummary.options_name)
+}
+
+// bool activated = 55;
+inline void TradingAccountSummary::clear_activated() {
+  activated_ = false;
+}
+inline bool TradingAccountSummary::activated() const {
+  // @@protoc_insertion_point(field_get:pb.TradingAccountSummary.activated)
+  return activated_;
+}
+inline void TradingAccountSummary::set_activated(bool value) {
+  
+  activated_ = value;
+  // @@protoc_insertion_point(field_set:pb.TradingAccountSummary.activated)
+}
+
+// double overnight_fee = 56;
+inline void TradingAccountSummary::clear_overnight_fee() {
+  overnight_fee_ = 0;
+}
+inline double TradingAccountSummary::overnight_fee() const {
+  // @@protoc_insertion_point(field_get:pb.TradingAccountSummary.overnight_fee)
+  return overnight_fee_;
+}
+inline void TradingAccountSummary::set_overnight_fee(double value) {
+  
+  overnight_fee_ = value;
+  // @@protoc_insertion_point(field_set:pb.TradingAccountSummary.overnight_fee)
+}
+
+// double commission_l0 = 57;
+inline void TradingAccountSummary::clear_commission_l0() {
+  commission_l0_ = 0;
+}
+inline double TradingAccountSummary::commission_l0() const {
+  // @@protoc_insertion_point(field_get:pb.TradingAccountSummary.commission_l0)
+  return commission_l0_;
+}
+inline void TradingAccountSummary::set_commission_l0(double value) {
+  
+  commission_l0_ = value;
+  // @@protoc_insertion_point(field_set:pb.TradingAccountSummary.commission_l0)
+}
+
+// double long_position_market_value = 58;
+inline void TradingAccountSummary::clear_long_position_market_value() {
+  long_position_market_value_ = 0;
+}
+inline double TradingAccountSummary::long_position_market_value() const {
+  // @@protoc_insertion_point(field_get:pb.TradingAccountSummary.long_position_market_value)
+  return long_position_market_value_;
+}
+inline void TradingAccountSummary::set_long_position_market_value(double value) {
+  
+  long_position_market_value_ = value;
+  // @@protoc_insertion_point(field_set:pb.TradingAccountSummary.long_position_market_value)
+}
+
+// double short_position_market_value = 59;
+inline void TradingAccountSummary::clear_short_position_market_value() {
+  short_position_market_value_ = 0;
+}
+inline double TradingAccountSummary::short_position_market_value() const {
+  // @@protoc_insertion_point(field_get:pb.TradingAccountSummary.short_position_market_value)
+  return short_position_market_value_;
+}
+inline void TradingAccountSummary::set_short_position_market_value(double value) {
+  
+  short_position_market_value_ = value;
+  // @@protoc_insertion_point(field_set:pb.TradingAccountSummary.short_position_market_value)
+}
+
+// double prefered_deposit = 60;
+inline void TradingAccountSummary::clear_prefered_deposit() {
+  prefered_deposit_ = 0;
+}
+inline double TradingAccountSummary::prefered_deposit() const {
+  // @@protoc_insertion_point(field_get:pb.TradingAccountSummary.prefered_deposit)
+  return prefered_deposit_;
+}
+inline void TradingAccountSummary::set_prefered_deposit(double value) {
+  
+  prefered_deposit_ = value;
+  // @@protoc_insertion_point(field_set:pb.TradingAccountSummary.prefered_deposit)
+}
+
+// double common_deposit = 61;
+inline void TradingAccountSummary::clear_common_deposit() {
+  common_deposit_ = 0;
+}
+inline double TradingAccountSummary::common_deposit() const {
+  // @@protoc_insertion_point(field_get:pb.TradingAccountSummary.common_deposit)
+  return common_deposit_;
+}
+inline void TradingAccountSummary::set_common_deposit(double value) {
+  
+  common_deposit_ = value;
+  // @@protoc_insertion_point(field_set:pb.TradingAccountSummary.common_deposit)
+}
+
+// double prefered_withdraw = 62;
+inline void TradingAccountSummary::clear_prefered_withdraw() {
+  prefered_withdraw_ = 0;
+}
+inline double TradingAccountSummary::prefered_withdraw() const {
+  // @@protoc_insertion_point(field_get:pb.TradingAccountSummary.prefered_withdraw)
+  return prefered_withdraw_;
+}
+inline void TradingAccountSummary::set_prefered_withdraw(double value) {
+  
+  prefered_withdraw_ = value;
+  // @@protoc_insertion_point(field_set:pb.TradingAccountSummary.prefered_withdraw)
+}
+
+// double common_withdraw = 63;
+inline void TradingAccountSummary::clear_common_withdraw() {
+  common_withdraw_ = 0;
+}
+inline double TradingAccountSummary::common_withdraw() const {
+  // @@protoc_insertion_point(field_get:pb.TradingAccountSummary.common_withdraw)
+  return common_withdraw_;
+}
+inline void TradingAccountSummary::set_common_withdraw(double value) {
+  
+  common_withdraw_ = value;
+  // @@protoc_insertion_point(field_set:pb.TradingAccountSummary.common_withdraw)
+}
+
+// string branch = 64;
+inline void TradingAccountSummary::clear_branch() {
+  branch_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& TradingAccountSummary::branch() const {
+  // @@protoc_insertion_point(field_get:pb.TradingAccountSummary.branch)
+  return branch_.GetNoArena();
+}
+inline void TradingAccountSummary::set_branch(const ::std::string& value) {
+  
+  branch_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:pb.TradingAccountSummary.branch)
+}
+#if LANG_CXX11
+inline void TradingAccountSummary::set_branch(::std::string&& value) {
+  
+  branch_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:pb.TradingAccountSummary.branch)
+}
+#endif
+inline void TradingAccountSummary::set_branch(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  branch_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:pb.TradingAccountSummary.branch)
+}
+inline void TradingAccountSummary::set_branch(const char* value, size_t size) {
+  
+  branch_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:pb.TradingAccountSummary.branch)
+}
+inline ::std::string* TradingAccountSummary::mutable_branch() {
+  
+  // @@protoc_insertion_point(field_mutable:pb.TradingAccountSummary.branch)
+  return branch_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* TradingAccountSummary::release_branch() {
+  // @@protoc_insertion_point(field_release:pb.TradingAccountSummary.branch)
+  
+  return branch_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void TradingAccountSummary::set_allocated_branch(::std::string* branch) {
+  if (branch != nullptr) {
+    
+  } else {
+    
+  }
+  branch_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), branch);
+  // @@protoc_insertion_point(field_set_allocated:pb.TradingAccountSummary.branch)
+}
+
+// string branch_name = 65;
+inline void TradingAccountSummary::clear_branch_name() {
+  branch_name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& TradingAccountSummary::branch_name() const {
+  // @@protoc_insertion_point(field_get:pb.TradingAccountSummary.branch_name)
+  return branch_name_.GetNoArena();
+}
+inline void TradingAccountSummary::set_branch_name(const ::std::string& value) {
+  
+  branch_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:pb.TradingAccountSummary.branch_name)
+}
+#if LANG_CXX11
+inline void TradingAccountSummary::set_branch_name(::std::string&& value) {
+  
+  branch_name_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:pb.TradingAccountSummary.branch_name)
+}
+#endif
+inline void TradingAccountSummary::set_branch_name(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  branch_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:pb.TradingAccountSummary.branch_name)
+}
+inline void TradingAccountSummary::set_branch_name(const char* value, size_t size) {
+  
+  branch_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:pb.TradingAccountSummary.branch_name)
+}
+inline ::std::string* TradingAccountSummary::mutable_branch_name() {
+  
+  // @@protoc_insertion_point(field_mutable:pb.TradingAccountSummary.branch_name)
+  return branch_name_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* TradingAccountSummary::release_branch_name() {
+  // @@protoc_insertion_point(field_release:pb.TradingAccountSummary.branch_name)
+  
+  return branch_name_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void TradingAccountSummary::set_allocated_branch_name(::std::string* branch_name) {
+  if (branch_name != nullptr) {
+    
+  } else {
+    
+  }
+  branch_name_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), branch_name);
+  // @@protoc_insertion_point(field_set_allocated:pb.TradingAccountSummary.branch_name)
+}
+
+// -------------------------------------------------------------------
+
+// RspTradingAccountLogin
+
+// int32 error_id = 1;
+inline void RspTradingAccountLogin::clear_error_id() {
+  error_id_ = 0;
+}
+inline ::google::protobuf::int32 RspTradingAccountLogin::error_id() const {
+  // @@protoc_insertion_point(field_get:pb.RspTradingAccountLogin.error_id)
+  return error_id_;
+}
+inline void RspTradingAccountLogin::set_error_id(::google::protobuf::int32 value) {
+  
+  error_id_ = value;
+  // @@protoc_insertion_point(field_set:pb.RspTradingAccountLogin.error_id)
+}
+
+// bytes error_msg = 2;
+inline void RspTradingAccountLogin::clear_error_msg() {
+  error_msg_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& RspTradingAccountLogin::error_msg() const {
+  // @@protoc_insertion_point(field_get:pb.RspTradingAccountLogin.error_msg)
+  return error_msg_.GetNoArena();
+}
+inline void RspTradingAccountLogin::set_error_msg(const ::std::string& value) {
+  
+  error_msg_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:pb.RspTradingAccountLogin.error_msg)
+}
+#if LANG_CXX11
+inline void RspTradingAccountLogin::set_error_msg(::std::string&& value) {
+  
+  error_msg_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:pb.RspTradingAccountLogin.error_msg)
+}
+#endif
+inline void RspTradingAccountLogin::set_error_msg(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  error_msg_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:pb.RspTradingAccountLogin.error_msg)
+}
+inline void RspTradingAccountLogin::set_error_msg(const void* value, size_t size) {
+  
+  error_msg_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:pb.RspTradingAccountLogin.error_msg)
+}
+inline ::std::string* RspTradingAccountLogin::mutable_error_msg() {
+  
+  // @@protoc_insertion_point(field_mutable:pb.RspTradingAccountLogin.error_msg)
+  return error_msg_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* RspTradingAccountLogin::release_error_msg() {
+  // @@protoc_insertion_point(field_release:pb.RspTradingAccountLogin.error_msg)
+  
+  return error_msg_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void RspTradingAccountLogin::set_allocated_error_msg(::std::string* error_msg) {
+  if (error_msg != nullptr) {
+    
+  } else {
+    
+  }
+  error_msg_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), error_msg);
+  // @@protoc_insertion_point(field_set_allocated:pb.RspTradingAccountLogin.error_msg)
+}
+
+// int32 request_id = 3;
+inline void RspTradingAccountLogin::clear_request_id() {
+  request_id_ = 0;
+}
+inline ::google::protobuf::int32 RspTradingAccountLogin::request_id() const {
+  // @@protoc_insertion_point(field_get:pb.RspTradingAccountLogin.request_id)
+  return request_id_;
+}
+inline void RspTradingAccountLogin::set_request_id(::google::protobuf::int32 value) {
+  
+  request_id_ = value;
+  // @@protoc_insertion_point(field_set:pb.RspTradingAccountLogin.request_id)
+}
+
+// bool is_last = 4;
+inline void RspTradingAccountLogin::clear_is_last() {
+  is_last_ = false;
+}
+inline bool RspTradingAccountLogin::is_last() const {
+  // @@protoc_insertion_point(field_get:pb.RspTradingAccountLogin.is_last)
+  return is_last_;
+}
+inline void RspTradingAccountLogin::set_is_last(bool value) {
+  
+  is_last_ = value;
+  // @@protoc_insertion_point(field_set:pb.RspTradingAccountLogin.is_last)
+}
+
+// int32 trading_day = 5;
+inline void RspTradingAccountLogin::clear_trading_day() {
+  trading_day_ = 0;
+}
+inline ::google::protobuf::int32 RspTradingAccountLogin::trading_day() const {
+  // @@protoc_insertion_point(field_get:pb.RspTradingAccountLogin.trading_day)
+  return trading_day_;
+}
+inline void RspTradingAccountLogin::set_trading_day(::google::protobuf::int32 value) {
+  
+  trading_day_ = value;
+  // @@protoc_insertion_point(field_set:pb.RspTradingAccountLogin.trading_day)
+}
+
+// string login_time = 6;
+inline void RspTradingAccountLogin::clear_login_time() {
+  login_time_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& RspTradingAccountLogin::login_time() const {
+  // @@protoc_insertion_point(field_get:pb.RspTradingAccountLogin.login_time)
+  return login_time_.GetNoArena();
+}
+inline void RspTradingAccountLogin::set_login_time(const ::std::string& value) {
+  
+  login_time_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:pb.RspTradingAccountLogin.login_time)
+}
+#if LANG_CXX11
+inline void RspTradingAccountLogin::set_login_time(::std::string&& value) {
+  
+  login_time_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:pb.RspTradingAccountLogin.login_time)
+}
+#endif
+inline void RspTradingAccountLogin::set_login_time(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  login_time_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:pb.RspTradingAccountLogin.login_time)
+}
+inline void RspTradingAccountLogin::set_login_time(const char* value, size_t size) {
+  
+  login_time_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:pb.RspTradingAccountLogin.login_time)
+}
+inline ::std::string* RspTradingAccountLogin::mutable_login_time() {
+  
+  // @@protoc_insertion_point(field_mutable:pb.RspTradingAccountLogin.login_time)
+  return login_time_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* RspTradingAccountLogin::release_login_time() {
+  // @@protoc_insertion_point(field_release:pb.RspTradingAccountLogin.login_time)
+  
+  return login_time_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void RspTradingAccountLogin::set_allocated_login_time(::std::string* login_time) {
+  if (login_time != nullptr) {
+    
+  } else {
+    
+  }
+  login_time_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), login_time);
+  // @@protoc_insertion_point(field_set_allocated:pb.RspTradingAccountLogin.login_time)
+}
+
+// string broker_id = 7;
+inline void RspTradingAccountLogin::clear_broker_id() {
+  broker_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& RspTradingAccountLogin::broker_id() const {
+  // @@protoc_insertion_point(field_get:pb.RspTradingAccountLogin.broker_id)
+  return broker_id_.GetNoArena();
+}
+inline void RspTradingAccountLogin::set_broker_id(const ::std::string& value) {
+  
+  broker_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:pb.RspTradingAccountLogin.broker_id)
+}
+#if LANG_CXX11
+inline void RspTradingAccountLogin::set_broker_id(::std::string&& value) {
+  
+  broker_id_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:pb.RspTradingAccountLogin.broker_id)
+}
+#endif
+inline void RspTradingAccountLogin::set_broker_id(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  broker_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:pb.RspTradingAccountLogin.broker_id)
+}
+inline void RspTradingAccountLogin::set_broker_id(const char* value, size_t size) {
+  
+  broker_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:pb.RspTradingAccountLogin.broker_id)
+}
+inline ::std::string* RspTradingAccountLogin::mutable_broker_id() {
+  
+  // @@protoc_insertion_point(field_mutable:pb.RspTradingAccountLogin.broker_id)
+  return broker_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* RspTradingAccountLogin::release_broker_id() {
+  // @@protoc_insertion_point(field_release:pb.RspTradingAccountLogin.broker_id)
+  
+  return broker_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void RspTradingAccountLogin::set_allocated_broker_id(::std::string* broker_id) {
+  if (broker_id != nullptr) {
+    
+  } else {
+    
+  }
+  broker_id_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), broker_id);
+  // @@protoc_insertion_point(field_set_allocated:pb.RspTradingAccountLogin.broker_id)
+}
+
+// string user_id = 8;
+inline void RspTradingAccountLogin::clear_user_id() {
+  user_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& RspTradingAccountLogin::user_id() const {
+  // @@protoc_insertion_point(field_get:pb.RspTradingAccountLogin.user_id)
+  return user_id_.GetNoArena();
+}
+inline void RspTradingAccountLogin::set_user_id(const ::std::string& value) {
+  
+  user_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:pb.RspTradingAccountLogin.user_id)
+}
+#if LANG_CXX11
+inline void RspTradingAccountLogin::set_user_id(::std::string&& value) {
+  
+  user_id_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:pb.RspTradingAccountLogin.user_id)
+}
+#endif
+inline void RspTradingAccountLogin::set_user_id(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  user_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:pb.RspTradingAccountLogin.user_id)
+}
+inline void RspTradingAccountLogin::set_user_id(const char* value, size_t size) {
+  
+  user_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:pb.RspTradingAccountLogin.user_id)
+}
+inline ::std::string* RspTradingAccountLogin::mutable_user_id() {
+  
+  // @@protoc_insertion_point(field_mutable:pb.RspTradingAccountLogin.user_id)
+  return user_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* RspTradingAccountLogin::release_user_id() {
+  // @@protoc_insertion_point(field_release:pb.RspTradingAccountLogin.user_id)
+  
+  return user_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void RspTradingAccountLogin::set_allocated_user_id(::std::string* user_id) {
+  if (user_id != nullptr) {
+    
+  } else {
+    
+  }
+  user_id_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), user_id);
+  // @@protoc_insertion_point(field_set_allocated:pb.RspTradingAccountLogin.user_id)
+}
+
+// string system_name = 9;
+inline void RspTradingAccountLogin::clear_system_name() {
+  system_name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& RspTradingAccountLogin::system_name() const {
+  // @@protoc_insertion_point(field_get:pb.RspTradingAccountLogin.system_name)
+  return system_name_.GetNoArena();
+}
+inline void RspTradingAccountLogin::set_system_name(const ::std::string& value) {
+  
+  system_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:pb.RspTradingAccountLogin.system_name)
+}
+#if LANG_CXX11
+inline void RspTradingAccountLogin::set_system_name(::std::string&& value) {
+  
+  system_name_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:pb.RspTradingAccountLogin.system_name)
+}
+#endif
+inline void RspTradingAccountLogin::set_system_name(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  system_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:pb.RspTradingAccountLogin.system_name)
+}
+inline void RspTradingAccountLogin::set_system_name(const char* value, size_t size) {
+  
+  system_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:pb.RspTradingAccountLogin.system_name)
+}
+inline ::std::string* RspTradingAccountLogin::mutable_system_name() {
+  
+  // @@protoc_insertion_point(field_mutable:pb.RspTradingAccountLogin.system_name)
+  return system_name_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* RspTradingAccountLogin::release_system_name() {
+  // @@protoc_insertion_point(field_release:pb.RspTradingAccountLogin.system_name)
+  
+  return system_name_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void RspTradingAccountLogin::set_allocated_system_name(::std::string* system_name) {
+  if (system_name != nullptr) {
+    
+  } else {
+    
+  }
+  system_name_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), system_name);
+  // @@protoc_insertion_point(field_set_allocated:pb.RspTradingAccountLogin.system_name)
+}
+
+// int32 front_id = 10;
+inline void RspTradingAccountLogin::clear_front_id() {
+  front_id_ = 0;
+}
+inline ::google::protobuf::int32 RspTradingAccountLogin::front_id() const {
+  // @@protoc_insertion_point(field_get:pb.RspTradingAccountLogin.front_id)
+  return front_id_;
+}
+inline void RspTradingAccountLogin::set_front_id(::google::protobuf::int32 value) {
+  
+  front_id_ = value;
+  // @@protoc_insertion_point(field_set:pb.RspTradingAccountLogin.front_id)
+}
+
+// int32 session_id = 11;
+inline void RspTradingAccountLogin::clear_session_id() {
+  session_id_ = 0;
+}
+inline ::google::protobuf::int32 RspTradingAccountLogin::session_id() const {
+  // @@protoc_insertion_point(field_get:pb.RspTradingAccountLogin.session_id)
+  return session_id_;
+}
+inline void RspTradingAccountLogin::set_session_id(::google::protobuf::int32 value) {
+  
+  session_id_ = value;
+  // @@protoc_insertion_point(field_set:pb.RspTradingAccountLogin.session_id)
+}
+
+// string max_order_ref = 12;
+inline void RspTradingAccountLogin::clear_max_order_ref() {
+  max_order_ref_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& RspTradingAccountLogin::max_order_ref() const {
+  // @@protoc_insertion_point(field_get:pb.RspTradingAccountLogin.max_order_ref)
+  return max_order_ref_.GetNoArena();
+}
+inline void RspTradingAccountLogin::set_max_order_ref(const ::std::string& value) {
+  
+  max_order_ref_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:pb.RspTradingAccountLogin.max_order_ref)
+}
+#if LANG_CXX11
+inline void RspTradingAccountLogin::set_max_order_ref(::std::string&& value) {
+  
+  max_order_ref_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:pb.RspTradingAccountLogin.max_order_ref)
+}
+#endif
+inline void RspTradingAccountLogin::set_max_order_ref(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  max_order_ref_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:pb.RspTradingAccountLogin.max_order_ref)
+}
+inline void RspTradingAccountLogin::set_max_order_ref(const char* value, size_t size) {
+  
+  max_order_ref_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:pb.RspTradingAccountLogin.max_order_ref)
+}
+inline ::std::string* RspTradingAccountLogin::mutable_max_order_ref() {
+  
+  // @@protoc_insertion_point(field_mutable:pb.RspTradingAccountLogin.max_order_ref)
+  return max_order_ref_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* RspTradingAccountLogin::release_max_order_ref() {
+  // @@protoc_insertion_point(field_release:pb.RspTradingAccountLogin.max_order_ref)
+  
+  return max_order_ref_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void RspTradingAccountLogin::set_allocated_max_order_ref(::std::string* max_order_ref) {
+  if (max_order_ref != nullptr) {
+    
+  } else {
+    
+  }
+  max_order_ref_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), max_order_ref);
+  // @@protoc_insertion_point(field_set_allocated:pb.RspTradingAccountLogin.max_order_ref)
+}
+
+// string SHFE_time = 13;
+inline void RspTradingAccountLogin::clear_shfe_time() {
+  shfe_time_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& RspTradingAccountLogin::shfe_time() const {
+  // @@protoc_insertion_point(field_get:pb.RspTradingAccountLogin.SHFE_time)
+  return shfe_time_.GetNoArena();
+}
+inline void RspTradingAccountLogin::set_shfe_time(const ::std::string& value) {
+  
+  shfe_time_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:pb.RspTradingAccountLogin.SHFE_time)
+}
+#if LANG_CXX11
+inline void RspTradingAccountLogin::set_shfe_time(::std::string&& value) {
+  
+  shfe_time_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:pb.RspTradingAccountLogin.SHFE_time)
+}
+#endif
+inline void RspTradingAccountLogin::set_shfe_time(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  shfe_time_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:pb.RspTradingAccountLogin.SHFE_time)
+}
+inline void RspTradingAccountLogin::set_shfe_time(const char* value, size_t size) {
+  
+  shfe_time_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:pb.RspTradingAccountLogin.SHFE_time)
+}
+inline ::std::string* RspTradingAccountLogin::mutable_shfe_time() {
+  
+  // @@protoc_insertion_point(field_mutable:pb.RspTradingAccountLogin.SHFE_time)
+  return shfe_time_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* RspTradingAccountLogin::release_shfe_time() {
+  // @@protoc_insertion_point(field_release:pb.RspTradingAccountLogin.SHFE_time)
+  
+  return shfe_time_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void RspTradingAccountLogin::set_allocated_shfe_time(::std::string* shfe_time) {
+  if (shfe_time != nullptr) {
+    
+  } else {
+    
+  }
+  shfe_time_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), shfe_time);
+  // @@protoc_insertion_point(field_set_allocated:pb.RspTradingAccountLogin.SHFE_time)
+}
+
+// string DCE_time = 14;
+inline void RspTradingAccountLogin::clear_dce_time() {
+  dce_time_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& RspTradingAccountLogin::dce_time() const {
+  // @@protoc_insertion_point(field_get:pb.RspTradingAccountLogin.DCE_time)
+  return dce_time_.GetNoArena();
+}
+inline void RspTradingAccountLogin::set_dce_time(const ::std::string& value) {
+  
+  dce_time_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:pb.RspTradingAccountLogin.DCE_time)
+}
+#if LANG_CXX11
+inline void RspTradingAccountLogin::set_dce_time(::std::string&& value) {
+  
+  dce_time_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:pb.RspTradingAccountLogin.DCE_time)
+}
+#endif
+inline void RspTradingAccountLogin::set_dce_time(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  dce_time_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:pb.RspTradingAccountLogin.DCE_time)
+}
+inline void RspTradingAccountLogin::set_dce_time(const char* value, size_t size) {
+  
+  dce_time_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:pb.RspTradingAccountLogin.DCE_time)
+}
+inline ::std::string* RspTradingAccountLogin::mutable_dce_time() {
+  
+  // @@protoc_insertion_point(field_mutable:pb.RspTradingAccountLogin.DCE_time)
+  return dce_time_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* RspTradingAccountLogin::release_dce_time() {
+  // @@protoc_insertion_point(field_release:pb.RspTradingAccountLogin.DCE_time)
+  
+  return dce_time_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void RspTradingAccountLogin::set_allocated_dce_time(::std::string* dce_time) {
+  if (dce_time != nullptr) {
+    
+  } else {
+    
+  }
+  dce_time_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), dce_time);
+  // @@protoc_insertion_point(field_set_allocated:pb.RspTradingAccountLogin.DCE_time)
+}
+
+// string CZCE_time = 15;
+inline void RspTradingAccountLogin::clear_czce_time() {
+  czce_time_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& RspTradingAccountLogin::czce_time() const {
+  // @@protoc_insertion_point(field_get:pb.RspTradingAccountLogin.CZCE_time)
+  return czce_time_.GetNoArena();
+}
+inline void RspTradingAccountLogin::set_czce_time(const ::std::string& value) {
+  
+  czce_time_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:pb.RspTradingAccountLogin.CZCE_time)
+}
+#if LANG_CXX11
+inline void RspTradingAccountLogin::set_czce_time(::std::string&& value) {
+  
+  czce_time_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:pb.RspTradingAccountLogin.CZCE_time)
+}
+#endif
+inline void RspTradingAccountLogin::set_czce_time(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  czce_time_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:pb.RspTradingAccountLogin.CZCE_time)
+}
+inline void RspTradingAccountLogin::set_czce_time(const char* value, size_t size) {
+  
+  czce_time_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:pb.RspTradingAccountLogin.CZCE_time)
+}
+inline ::std::string* RspTradingAccountLogin::mutable_czce_time() {
+  
+  // @@protoc_insertion_point(field_mutable:pb.RspTradingAccountLogin.CZCE_time)
+  return czce_time_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* RspTradingAccountLogin::release_czce_time() {
+  // @@protoc_insertion_point(field_release:pb.RspTradingAccountLogin.CZCE_time)
+  
+  return czce_time_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void RspTradingAccountLogin::set_allocated_czce_time(::std::string* czce_time) {
+  if (czce_time != nullptr) {
+    
+  } else {
+    
+  }
+  czce_time_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), czce_time);
+  // @@protoc_insertion_point(field_set_allocated:pb.RspTradingAccountLogin.CZCE_time)
+}
+
+// string FFEX_time = 16;
+inline void RspTradingAccountLogin::clear_ffex_time() {
+  ffex_time_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& RspTradingAccountLogin::ffex_time() const {
+  // @@protoc_insertion_point(field_get:pb.RspTradingAccountLogin.FFEX_time)
+  return ffex_time_.GetNoArena();
+}
+inline void RspTradingAccountLogin::set_ffex_time(const ::std::string& value) {
+  
+  ffex_time_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:pb.RspTradingAccountLogin.FFEX_time)
+}
+#if LANG_CXX11
+inline void RspTradingAccountLogin::set_ffex_time(::std::string&& value) {
+  
+  ffex_time_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:pb.RspTradingAccountLogin.FFEX_time)
+}
+#endif
+inline void RspTradingAccountLogin::set_ffex_time(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  ffex_time_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:pb.RspTradingAccountLogin.FFEX_time)
+}
+inline void RspTradingAccountLogin::set_ffex_time(const char* value, size_t size) {
+  
+  ffex_time_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:pb.RspTradingAccountLogin.FFEX_time)
+}
+inline ::std::string* RspTradingAccountLogin::mutable_ffex_time() {
+  
+  // @@protoc_insertion_point(field_mutable:pb.RspTradingAccountLogin.FFEX_time)
+  return ffex_time_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* RspTradingAccountLogin::release_ffex_time() {
+  // @@protoc_insertion_point(field_release:pb.RspTradingAccountLogin.FFEX_time)
+  
+  return ffex_time_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void RspTradingAccountLogin::set_allocated_ffex_time(::std::string* ffex_time) {
+  if (ffex_time != nullptr) {
+    
+  } else {
+    
+  }
+  ffex_time_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ffex_time);
+  // @@protoc_insertion_point(field_set_allocated:pb.RspTradingAccountLogin.FFEX_time)
+}
+
+// string INE_time = 17;
+inline void RspTradingAccountLogin::clear_ine_time() {
+  ine_time_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& RspTradingAccountLogin::ine_time() const {
+  // @@protoc_insertion_point(field_get:pb.RspTradingAccountLogin.INE_time)
+  return ine_time_.GetNoArena();
+}
+inline void RspTradingAccountLogin::set_ine_time(const ::std::string& value) {
+  
+  ine_time_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:pb.RspTradingAccountLogin.INE_time)
+}
+#if LANG_CXX11
+inline void RspTradingAccountLogin::set_ine_time(::std::string&& value) {
+  
+  ine_time_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:pb.RspTradingAccountLogin.INE_time)
+}
+#endif
+inline void RspTradingAccountLogin::set_ine_time(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  ine_time_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:pb.RspTradingAccountLogin.INE_time)
+}
+inline void RspTradingAccountLogin::set_ine_time(const char* value, size_t size) {
+  
+  ine_time_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:pb.RspTradingAccountLogin.INE_time)
+}
+inline ::std::string* RspTradingAccountLogin::mutable_ine_time() {
+  
+  // @@protoc_insertion_point(field_mutable:pb.RspTradingAccountLogin.INE_time)
+  return ine_time_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* RspTradingAccountLogin::release_ine_time() {
+  // @@protoc_insertion_point(field_release:pb.RspTradingAccountLogin.INE_time)
+  
+  return ine_time_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void RspTradingAccountLogin::set_allocated_ine_time(::std::string* ine_time) {
+  if (ine_time != nullptr) {
+    
+  } else {
+    
+  }
+  ine_time_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ine_time);
+  // @@protoc_insertion_point(field_set_allocated:pb.RspTradingAccountLogin.INE_time)
+}
+
+// -------------------------------------------------------------------
+
+// RspOrderInsert
+
+// int32 error_id = 1;
+inline void RspOrderInsert::clear_error_id() {
+  error_id_ = 0;
+}
+inline ::google::protobuf::int32 RspOrderInsert::error_id() const {
+  // @@protoc_insertion_point(field_get:pb.RspOrderInsert.error_id)
+  return error_id_;
+}
+inline void RspOrderInsert::set_error_id(::google::protobuf::int32 value) {
+  
+  error_id_ = value;
+  // @@protoc_insertion_point(field_set:pb.RspOrderInsert.error_id)
+}
+
+// bytes error_msg = 2;
+inline void RspOrderInsert::clear_error_msg() {
+  error_msg_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& RspOrderInsert::error_msg() const {
+  // @@protoc_insertion_point(field_get:pb.RspOrderInsert.error_msg)
+  return error_msg_.GetNoArena();
+}
+inline void RspOrderInsert::set_error_msg(const ::std::string& value) {
+  
+  error_msg_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:pb.RspOrderInsert.error_msg)
+}
+#if LANG_CXX11
+inline void RspOrderInsert::set_error_msg(::std::string&& value) {
+  
+  error_msg_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:pb.RspOrderInsert.error_msg)
+}
+#endif
+inline void RspOrderInsert::set_error_msg(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  error_msg_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:pb.RspOrderInsert.error_msg)
+}
+inline void RspOrderInsert::set_error_msg(const void* value, size_t size) {
+  
+  error_msg_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:pb.RspOrderInsert.error_msg)
+}
+inline ::std::string* RspOrderInsert::mutable_error_msg() {
+  
+  // @@protoc_insertion_point(field_mutable:pb.RspOrderInsert.error_msg)
+  return error_msg_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* RspOrderInsert::release_error_msg() {
+  // @@protoc_insertion_point(field_release:pb.RspOrderInsert.error_msg)
+  
+  return error_msg_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void RspOrderInsert::set_allocated_error_msg(::std::string* error_msg) {
+  if (error_msg != nullptr) {
+    
+  } else {
+    
+  }
+  error_msg_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), error_msg);
+  // @@protoc_insertion_point(field_set_allocated:pb.RspOrderInsert.error_msg)
+}
+
+// string order_ref = 3;
+inline void RspOrderInsert::clear_order_ref() {
+  order_ref_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& RspOrderInsert::order_ref() const {
+  // @@protoc_insertion_point(field_get:pb.RspOrderInsert.order_ref)
+  return order_ref_.GetNoArena();
+}
+inline void RspOrderInsert::set_order_ref(const ::std::string& value) {
+  
+  order_ref_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:pb.RspOrderInsert.order_ref)
+}
+#if LANG_CXX11
+inline void RspOrderInsert::set_order_ref(::std::string&& value) {
+  
+  order_ref_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:pb.RspOrderInsert.order_ref)
+}
+#endif
+inline void RspOrderInsert::set_order_ref(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  order_ref_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:pb.RspOrderInsert.order_ref)
+}
+inline void RspOrderInsert::set_order_ref(const char* value, size_t size) {
+  
+  order_ref_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:pb.RspOrderInsert.order_ref)
+}
+inline ::std::string* RspOrderInsert::mutable_order_ref() {
+  
+  // @@protoc_insertion_point(field_mutable:pb.RspOrderInsert.order_ref)
+  return order_ref_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* RspOrderInsert::release_order_ref() {
+  // @@protoc_insertion_point(field_release:pb.RspOrderInsert.order_ref)
+  
+  return order_ref_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void RspOrderInsert::set_allocated_order_ref(::std::string* order_ref) {
+  if (order_ref != nullptr) {
+    
+  } else {
+    
+  }
+  order_ref_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), order_ref);
+  // @@protoc_insertion_point(field_set_allocated:pb.RspOrderInsert.order_ref)
+}
+
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------
