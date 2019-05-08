@@ -71,7 +71,7 @@ void ctpmd::subscribe(const SymbolList &l)
     {
         ppInstrumentID[i] = (char *)(l.list(i).code().data());
     }
-    std::cout << "SubscribeMarketData " << ppInstrumentID[0] << " " << l.list_size() << std::endl;
+    // std::cout << "SubscribeMarketData " << ppInstrumentID[0] << " " << l.list_size() << std::endl;
     api_->SubscribeMarketData(ppInstrumentID, l.list_size());
     delete ppInstrumentID;
 }
