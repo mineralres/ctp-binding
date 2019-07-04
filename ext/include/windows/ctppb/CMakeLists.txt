@@ -1,0 +1,16 @@
+AUX_SOURCE_DIRECTORY(. LIB_SRC)
+AUX_SOURCE_DIRECTORY(./google/api LIB_SRC_GOOGLE)
+include_directories(${PROJECT_SOURCE_DIR}/ext/include/windows/pb/)
+file (GLOB_RECURSE BASE_HEADER_FILES "${PROJECT_SOURCE_DIR}/pb/*.hpp")
+file (GLOB BASE_HEADER_FILES  ${BASE_HEADER_FILES} "${PROJECT_SOURCE_DIR}/pb/*.h")
+file (GLOB BASE_HEADER_FILES  ${BASE_HEADER_FILES} "./google/api")
+
+add_library(libctppbwin ${LIB_SRC} ${BASE_HEADER_FILES} ${LIB_SRC_GOOGLE})
+IF(UNIX)
+    ADD_DEFINITIONS("-fPIC")
+ENDIF()
+set_target_properties(libctppbwin PROPERTIES OUTPUT_NAME "pb")
+IF(UNIX)
+    target_link_libraries(libctppbwin)
+ENDIF()
+

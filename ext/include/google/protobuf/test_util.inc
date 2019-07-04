@@ -41,7 +41,6 @@
 #include <google/protobuf/stubs/common.h>
 #include <google/protobuf/descriptor.h>
 #include <google/protobuf/message.h>
-#include <google/protobuf/testing/googletest.h>
 #include <gtest/gtest.h>
 
 namespace google {
@@ -1545,7 +1544,7 @@ inline void TestUtil::ExpectAllExtensionsSet(
 
 inline void TestUtil::ExpectExtensionsClear(
     const UNITTEST::TestAllExtensions& message) {
-  string serialized;
+  std::string serialized;
   ASSERT_TRUE(message.SerializeToString(&serialized));
   EXPECT_EQ("", serialized);
   EXPECT_EQ(0, message.ByteSizeLong());
