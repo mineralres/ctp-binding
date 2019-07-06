@@ -19,5 +19,3 @@ test-driver
 *.gz
 *.bz2
 *.zip
-/*.cpp
-/*.hpp
