@@ -10531,913 +10531,6 @@ void copy(CThostFtdcQueryFreqField *dest, ctp::CThostFtdcQueryFreqField *src)
     dest->QueryFreq = src->queryfreq();
 }
 
-template <typename T>
-class handler;
-
-template <>
-class handler<CThostFtdcTraderApi> : public CThostFtdcTraderSpi
-{
-public:
-    virtual void send(ctp::CtpMessageType msgType, std::string *d1, std::string *d2, int nRequestID, bool bIsLast) = 0;
-    void OnFrontConnected()
-    {
-        send(ctp::TD_OnFrontConnected, 0, 0, 0, true);
-    };
-    void OnFrontDisconnected(int nReason)
-    {
-        send(ctp::TD_OnFrontDisconnected, 0, 0, 0, true);
-    };
-    void OnHeartBeatWarning(int nTimeLapse)
-    {
-        send(ctp::TD_OnHeartBeatWarning, 0, 0, 0, true);
-    };
-    void OnRspAuthenticate(CThostFtdcRspAuthenticateField *pRspAuthenticateField, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
-    {
-        ctp::CThostFtdcRspAuthenticateField p1;
-        copy(&p1, pRspAuthenticateField);
-        ctp::CThostFtdcRspInfoField p2;
-        copy(&p2, pRspInfo);
-        send(ctp::TD_OnRspAuthenticate, &p1.SerializePartialAsString(), &p2.SerializePartialAsString(), nRequestID, bIsLast);
-    };
-    void OnRspUserLogin(CThostFtdcRspUserLoginField *pRspUserLogin, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
-    {
-        ctp::CThostFtdcRspUserLoginField p1;
-        copy(&p1, pRspUserLogin);
-        ctp::CThostFtdcRspInfoField p2;
-        copy(&p2, pRspInfo);
-        send(ctp::TD_OnRspUserLogin, &p1.SerializePartialAsString(), &p2.SerializePartialAsString(), nRequestID, bIsLast);
-    };
-    void OnRspUserLogout(CThostFtdcUserLogoutField *pUserLogout, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
-    {
-        ctp::CThostFtdcUserLogoutField p1;
-        copy(&p1, pUserLogout);
-        ctp::CThostFtdcRspInfoField p2;
-        copy(&p2, pRspInfo);
-        send(ctp::TD_OnRspUserLogout, &p1.SerializePartialAsString(), &p2.SerializePartialAsString(), nRequestID, bIsLast);
-    };
-    void OnRspUserPasswordUpdate(CThostFtdcUserPasswordUpdateField *pUserPasswordUpdate, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
-    {
-        ctp::CThostFtdcUserPasswordUpdateField p1;
-        copy(&p1, pUserPasswordUpdate);
-        ctp::CThostFtdcRspInfoField p2;
-        copy(&p2, pRspInfo);
-        send(ctp::TD_OnRspUserPasswordUpdate, &p1.SerializePartialAsString(), &p2.SerializePartialAsString(), nRequestID, bIsLast);
-    };
-    void OnRspTradingAccountPasswordUpdate(CThostFtdcTradingAccountPasswordUpdateField *pTradingAccountPasswordUpdate, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
-    {
-        ctp::CThostFtdcTradingAccountPasswordUpdateField p1;
-        copy(&p1, pTradingAccountPasswordUpdate);
-        ctp::CThostFtdcRspInfoField p2;
-        copy(&p2, pRspInfo);
-        send(ctp::TD_OnRspTradingAccountPasswordUpdate, &p1.SerializePartialAsString(), &p2.SerializePartialAsString(), nRequestID, bIsLast);
-    };
-    void OnRspUserAuthMethod(CThostFtdcRspUserAuthMethodField *pRspUserAuthMethod, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
-    {
-        ctp::CThostFtdcRspUserAuthMethodField p1;
-        copy(&p1, pRspUserAuthMethod);
-        ctp::CThostFtdcRspInfoField p2;
-        copy(&p2, pRspInfo);
-        send(ctp::TD_OnRspUserAuthMethod, &p1.SerializePartialAsString(), &p2.SerializePartialAsString(), nRequestID, bIsLast);
-    };
-    void OnRspGenUserCaptcha(CThostFtdcRspGenUserCaptchaField *pRspGenUserCaptcha, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
-    {
-        ctp::CThostFtdcRspGenUserCaptchaField p1;
-        copy(&p1, pRspGenUserCaptcha);
-        ctp::CThostFtdcRspInfoField p2;
-        copy(&p2, pRspInfo);
-        send(ctp::TD_OnRspGenUserCaptcha, &p1.SerializePartialAsString(), &p2.SerializePartialAsString(), nRequestID, bIsLast);
-    };
-    void OnRspGenUserText(CThostFtdcRspGenUserTextField *pRspGenUserText, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
-    {
-        ctp::CThostFtdcRspGenUserTextField p1;
-        copy(&p1, pRspGenUserText);
-        ctp::CThostFtdcRspInfoField p2;
-        copy(&p2, pRspInfo);
-        send(ctp::TD_OnRspGenUserText, &p1.SerializePartialAsString(), &p2.SerializePartialAsString(), nRequestID, bIsLast);
-    };
-    void OnRspOrderInsert(CThostFtdcInputOrderField *pInputOrder, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
-    {
-        ctp::CThostFtdcInputOrderField p1;
-        copy(&p1, pInputOrder);
-        ctp::CThostFtdcRspInfoField p2;
-        copy(&p2, pRspInfo);
-        send(ctp::TD_OnRspOrderInsert, &p1.SerializePartialAsString(), &p2.SerializePartialAsString(), nRequestID, bIsLast);
-    };
-    void OnRspParkedOrderInsert(CThostFtdcParkedOrderField *pParkedOrder, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
-    {
-        ctp::CThostFtdcParkedOrderField p1;
-        copy(&p1, pParkedOrder);
-        ctp::CThostFtdcRspInfoField p2;
-        copy(&p2, pRspInfo);
-        send(ctp::TD_OnRspParkedOrderInsert, &p1.SerializePartialAsString(), &p2.SerializePartialAsString(), nRequestID, bIsLast);
-    };
-    void OnRspParkedOrderAction(CThostFtdcParkedOrderActionField *pParkedOrderAction, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
-    {
-        ctp::CThostFtdcParkedOrderActionField p1;
-        copy(&p1, pParkedOrderAction);
-        ctp::CThostFtdcRspInfoField p2;
-        copy(&p2, pRspInfo);
-        send(ctp::TD_OnRspParkedOrderAction, &p1.SerializePartialAsString(), &p2.SerializePartialAsString(), nRequestID, bIsLast);
-    };
-    void OnRspOrderAction(CThostFtdcInputOrderActionField *pInputOrderAction, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
-    {
-        ctp::CThostFtdcInputOrderActionField p1;
-        copy(&p1, pInputOrderAction);
-        ctp::CThostFtdcRspInfoField p2;
-        copy(&p2, pRspInfo);
-        send(ctp::TD_OnRspOrderAction, &p1.SerializePartialAsString(), &p2.SerializePartialAsString(), nRequestID, bIsLast);
-    };
-    void OnRspQueryMaxOrderVolume(CThostFtdcQueryMaxOrderVolumeField *pQueryMaxOrderVolume, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
-    {
-        ctp::CThostFtdcQueryMaxOrderVolumeField p1;
-        copy(&p1, pQueryMaxOrderVolume);
-        ctp::CThostFtdcRspInfoField p2;
-        copy(&p2, pRspInfo);
-        send(ctp::TD_OnRspQueryMaxOrderVolume, &p1.SerializePartialAsString(), &p2.SerializePartialAsString(), nRequestID, bIsLast);
-    };
-    void OnRspSettlementInfoConfirm(CThostFtdcSettlementInfoConfirmField *pSettlementInfoConfirm, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
-    {
-        ctp::CThostFtdcSettlementInfoConfirmField p1;
-        copy(&p1, pSettlementInfoConfirm);
-        ctp::CThostFtdcRspInfoField p2;
-        copy(&p2, pRspInfo);
-        send(ctp::TD_OnRspSettlementInfoConfirm, &p1.SerializePartialAsString(), &p2.SerializePartialAsString(), nRequestID, bIsLast);
-    };
-    void OnRspRemoveParkedOrder(CThostFtdcRemoveParkedOrderField *pRemoveParkedOrder, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
-    {
-        ctp::CThostFtdcRemoveParkedOrderField p1;
-        copy(&p1, pRemoveParkedOrder);
-        ctp::CThostFtdcRspInfoField p2;
-        copy(&p2, pRspInfo);
-        send(ctp::TD_OnRspRemoveParkedOrder, &p1.SerializePartialAsString(), &p2.SerializePartialAsString(), nRequestID, bIsLast);
-    };
-    void OnRspRemoveParkedOrderAction(CThostFtdcRemoveParkedOrderActionField *pRemoveParkedOrderAction, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
-    {
-        ctp::CThostFtdcRemoveParkedOrderActionField p1;
-        copy(&p1, pRemoveParkedOrderAction);
-        ctp::CThostFtdcRspInfoField p2;
-        copy(&p2, pRspInfo);
-        send(ctp::TD_OnRspRemoveParkedOrderAction, &p1.SerializePartialAsString(), &p2.SerializePartialAsString(), nRequestID, bIsLast);
-    };
-    void OnRspExecOrderInsert(CThostFtdcInputExecOrderField *pInputExecOrder, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
-    {
-        ctp::CThostFtdcInputExecOrderField p1;
-        copy(&p1, pInputExecOrder);
-        ctp::CThostFtdcRspInfoField p2;
-        copy(&p2, pRspInfo);
-        send(ctp::TD_OnRspExecOrderInsert, &p1.SerializePartialAsString(), &p2.SerializePartialAsString(), nRequestID, bIsLast);
-    };
-    void OnRspExecOrderAction(CThostFtdcInputExecOrderActionField *pInputExecOrderAction, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
-    {
-        ctp::CThostFtdcInputExecOrderActionField p1;
-        copy(&p1, pInputExecOrderAction);
-        ctp::CThostFtdcRspInfoField p2;
-        copy(&p2, pRspInfo);
-        send(ctp::TD_OnRspExecOrderAction, &p1.SerializePartialAsString(), &p2.SerializePartialAsString(), nRequestID, bIsLast);
-    };
-    void OnRspForQuoteInsert(CThostFtdcInputForQuoteField *pInputForQuote, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
-    {
-        ctp::CThostFtdcInputForQuoteField p1;
-        copy(&p1, pInputForQuote);
-        ctp::CThostFtdcRspInfoField p2;
-        copy(&p2, pRspInfo);
-        send(ctp::TD_OnRspForQuoteInsert, &p1.SerializePartialAsString(), &p2.SerializePartialAsString(), nRequestID, bIsLast);
-    };
-    void OnRspQuoteInsert(CThostFtdcInputQuoteField *pInputQuote, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
-    {
-        ctp::CThostFtdcInputQuoteField p1;
-        copy(&p1, pInputQuote);
-        ctp::CThostFtdcRspInfoField p2;
-        copy(&p2, pRspInfo);
-        send(ctp::TD_OnRspQuoteInsert, &p1.SerializePartialAsString(), &p2.SerializePartialAsString(), nRequestID, bIsLast);
-    };
-    void OnRspQuoteAction(CThostFtdcInputQuoteActionField *pInputQuoteAction, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
-    {
-        ctp::CThostFtdcInputQuoteActionField p1;
-        copy(&p1, pInputQuoteAction);
-        ctp::CThostFtdcRspInfoField p2;
-        copy(&p2, pRspInfo);
-        send(ctp::TD_OnRspQuoteAction, &p1.SerializePartialAsString(), &p2.SerializePartialAsString(), nRequestID, bIsLast);
-    };
-    void OnRspBatchOrderAction(CThostFtdcInputBatchOrderActionField *pInputBatchOrderAction, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
-    {
-        ctp::CThostFtdcInputBatchOrderActionField p1;
-        copy(&p1, pInputBatchOrderAction);
-        ctp::CThostFtdcRspInfoField p2;
-        copy(&p2, pRspInfo);
-        send(ctp::TD_OnRspBatchOrderAction, &p1.SerializePartialAsString(), &p2.SerializePartialAsString(), nRequestID, bIsLast);
-    };
-    void OnRspOptionSelfCloseInsert(CThostFtdcInputOptionSelfCloseField *pInputOptionSelfClose, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
-    {
-        ctp::CThostFtdcInputOptionSelfCloseField p1;
-        copy(&p1, pInputOptionSelfClose);
-        ctp::CThostFtdcRspInfoField p2;
-        copy(&p2, pRspInfo);
-        send(ctp::TD_OnRspOptionSelfCloseInsert, &p1.SerializePartialAsString(), &p2.SerializePartialAsString(), nRequestID, bIsLast);
-    };
-    void OnRspOptionSelfCloseAction(CThostFtdcInputOptionSelfCloseActionField *pInputOptionSelfCloseAction, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
-    {
-        ctp::CThostFtdcInputOptionSelfCloseActionField p1;
-        copy(&p1, pInputOptionSelfCloseAction);
-        ctp::CThostFtdcRspInfoField p2;
-        copy(&p2, pRspInfo);
-        send(ctp::TD_OnRspOptionSelfCloseAction, &p1.SerializePartialAsString(), &p2.SerializePartialAsString(), nRequestID, bIsLast);
-    };
-    void OnRspCombActionInsert(CThostFtdcInputCombActionField *pInputCombAction, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
-    {
-        ctp::CThostFtdcInputCombActionField p1;
-        copy(&p1, pInputCombAction);
-        ctp::CThostFtdcRspInfoField p2;
-        copy(&p2, pRspInfo);
-        send(ctp::TD_OnRspCombActionInsert, &p1.SerializePartialAsString(), &p2.SerializePartialAsString(), nRequestID, bIsLast);
-    };
-    void OnRspQryOrder(CThostFtdcOrderField *pOrder, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
-    {
-        ctp::CThostFtdcOrderField p1;
-        copy(&p1, pOrder);
-        ctp::CThostFtdcRspInfoField p2;
-        copy(&p2, pRspInfo);
-        send(ctp::TD_OnRspQryOrder, &p1.SerializePartialAsString(), &p2.SerializePartialAsString(), nRequestID, bIsLast);
-    };
-    void OnRspQryTrade(CThostFtdcTradeField *pTrade, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
-    {
-        ctp::CThostFtdcTradeField p1;
-        copy(&p1, pTrade);
-        ctp::CThostFtdcRspInfoField p2;
-        copy(&p2, pRspInfo);
-        send(ctp::TD_OnRspQryTrade, &p1.SerializePartialAsString(), &p2.SerializePartialAsString(), nRequestID, bIsLast);
-    };
-    void OnRspQryInvestorPosition(CThostFtdcInvestorPositionField *pInvestorPosition, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
-    {
-        ctp::CThostFtdcInvestorPositionField p1;
-        copy(&p1, pInvestorPosition);
-        ctp::CThostFtdcRspInfoField p2;
-        copy(&p2, pRspInfo);
-        send(ctp::TD_OnRspQryInvestorPosition, &p1.SerializePartialAsString(), &p2.SerializePartialAsString(), nRequestID, bIsLast);
-    };
-    void OnRspQryTradingAccount(CThostFtdcTradingAccountField *pTradingAccount, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
-    {
-        ctp::CThostFtdcTradingAccountField p1;
-        copy(&p1, pTradingAccount);
-        ctp::CThostFtdcRspInfoField p2;
-        copy(&p2, pRspInfo);
-        send(ctp::TD_OnRspQryTradingAccount, &p1.SerializePartialAsString(), &p2.SerializePartialAsString(), nRequestID, bIsLast);
-    };
-    void OnRspQryInvestor(CThostFtdcInvestorField *pInvestor, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
-    {
-        ctp::CThostFtdcInvestorField p1;
-        copy(&p1, pInvestor);
-        ctp::CThostFtdcRspInfoField p2;
-        copy(&p2, pRspInfo);
-        send(ctp::TD_OnRspQryInvestor, &p1.SerializePartialAsString(), &p2.SerializePartialAsString(), nRequestID, bIsLast);
-    };
-    void OnRspQryTradingCode(CThostFtdcTradingCodeField *pTradingCode, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
-    {
-        ctp::CThostFtdcTradingCodeField p1;
-        copy(&p1, pTradingCode);
-        ctp::CThostFtdcRspInfoField p2;
-        copy(&p2, pRspInfo);
-        send(ctp::TD_OnRspQryTradingCode, &p1.SerializePartialAsString(), &p2.SerializePartialAsString(), nRequestID, bIsLast);
-    };
-    void OnRspQryInstrumentMarginRate(CThostFtdcInstrumentMarginRateField *pInstrumentMarginRate, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
-    {
-        ctp::CThostFtdcInstrumentMarginRateField p1;
-        copy(&p1, pInstrumentMarginRate);
-        ctp::CThostFtdcRspInfoField p2;
-        copy(&p2, pRspInfo);
-        send(ctp::TD_OnRspQryInstrumentMarginRate, &p1.SerializePartialAsString(), &p2.SerializePartialAsString(), nRequestID, bIsLast);
-    };
-    void OnRspQryInstrumentCommissionRate(CThostFtdcInstrumentCommissionRateField *pInstrumentCommissionRate, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
-    {
-        ctp::CThostFtdcInstrumentCommissionRateField p1;
-        copy(&p1, pInstrumentCommissionRate);
-        ctp::CThostFtdcRspInfoField p2;
-        copy(&p2, pRspInfo);
-        send(ctp::TD_OnRspQryInstrumentCommissionRate, &p1.SerializePartialAsString(), &p2.SerializePartialAsString(), nRequestID, bIsLast);
-    };
-    void OnRspQryExchange(CThostFtdcExchangeField *pExchange, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
-    {
-        ctp::CThostFtdcExchangeField p1;
-        copy(&p1, pExchange);
-        ctp::CThostFtdcRspInfoField p2;
-        copy(&p2, pRspInfo);
-        send(ctp::TD_OnRspQryExchange, &p1.SerializePartialAsString(), &p2.SerializePartialAsString(), nRequestID, bIsLast);
-    };
-    void OnRspQryProduct(CThostFtdcProductField *pProduct, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
-    {
-        ctp::CThostFtdcProductField p1;
-        copy(&p1, pProduct);
-        ctp::CThostFtdcRspInfoField p2;
-        copy(&p2, pRspInfo);
-        send(ctp::TD_OnRspQryProduct, &p1.SerializePartialAsString(), &p2.SerializePartialAsString(), nRequestID, bIsLast);
-    };
-    void OnRspQryInstrument(CThostFtdcInstrumentField *pInstrument, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
-    {
-        ctp::CThostFtdcInstrumentField p1;
-        copy(&p1, pInstrument);
-        ctp::CThostFtdcRspInfoField p2;
-        copy(&p2, pRspInfo);
-        send(ctp::TD_OnRspQryInstrument, &p1.SerializePartialAsString(), &p2.SerializePartialAsString(), nRequestID, bIsLast);
-    };
-    void OnRspQryDepthMarketData(CThostFtdcDepthMarketDataField *pDepthMarketData, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
-    {
-        ctp::CThostFtdcDepthMarketDataField p1;
-        copy(&p1, pDepthMarketData);
-        ctp::CThostFtdcRspInfoField p2;
-        copy(&p2, pRspInfo);
-        send(ctp::TD_OnRspQryDepthMarketData, &p1.SerializePartialAsString(), &p2.SerializePartialAsString(), nRequestID, bIsLast);
-    };
-    void OnRspQrySettlementInfo(CThostFtdcSettlementInfoField *pSettlementInfo, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
-    {
-        ctp::CThostFtdcSettlementInfoField p1;
-        copy(&p1, pSettlementInfo);
-        ctp::CThostFtdcRspInfoField p2;
-        copy(&p2, pRspInfo);
-        send(ctp::TD_OnRspQrySettlementInfo, &p1.SerializePartialAsString(), &p2.SerializePartialAsString(), nRequestID, bIsLast);
-    };
-    void OnRspQryTransferBank(CThostFtdcTransferBankField *pTransferBank, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
-    {
-        ctp::CThostFtdcTransferBankField p1;
-        copy(&p1, pTransferBank);
-        ctp::CThostFtdcRspInfoField p2;
-        copy(&p2, pRspInfo);
-        send(ctp::TD_OnRspQryTransferBank, &p1.SerializePartialAsString(), &p2.SerializePartialAsString(), nRequestID, bIsLast);
-    };
-    void OnRspQryInvestorPositionDetail(CThostFtdcInvestorPositionDetailField *pInvestorPositionDetail, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
-    {
-        ctp::CThostFtdcInvestorPositionDetailField p1;
-        copy(&p1, pInvestorPositionDetail);
-        ctp::CThostFtdcRspInfoField p2;
-        copy(&p2, pRspInfo);
-        send(ctp::TD_OnRspQryInvestorPositionDetail, &p1.SerializePartialAsString(), &p2.SerializePartialAsString(), nRequestID, bIsLast);
-    };
-    void OnRspQryNotice(CThostFtdcNoticeField *pNotice, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
-    {
-        ctp::CThostFtdcNoticeField p1;
-        copy(&p1, pNotice);
-        ctp::CThostFtdcRspInfoField p2;
-        copy(&p2, pRspInfo);
-        send(ctp::TD_OnRspQryNotice, &p1.SerializePartialAsString(), &p2.SerializePartialAsString(), nRequestID, bIsLast);
-    };
-    void OnRspQrySettlementInfoConfirm(CThostFtdcSettlementInfoConfirmField *pSettlementInfoConfirm, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
-    {
-        ctp::CThostFtdcSettlementInfoConfirmField p1;
-        copy(&p1, pSettlementInfoConfirm);
-        ctp::CThostFtdcRspInfoField p2;
-        copy(&p2, pRspInfo);
-        send(ctp::TD_OnRspQrySettlementInfoConfirm, &p1.SerializePartialAsString(), &p2.SerializePartialAsString(), nRequestID, bIsLast);
-    };
-    void OnRspQryInvestorPositionCombineDetail(CThostFtdcInvestorPositionCombineDetailField *pInvestorPositionCombineDetail, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
-    {
-        ctp::CThostFtdcInvestorPositionCombineDetailField p1;
-        copy(&p1, pInvestorPositionCombineDetail);
-        ctp::CThostFtdcRspInfoField p2;
-        copy(&p2, pRspInfo);
-        send(ctp::TD_OnRspQryInvestorPositionCombineDetail, &p1.SerializePartialAsString(), &p2.SerializePartialAsString(), nRequestID, bIsLast);
-    };
-    void OnRspQryCFMMCTradingAccountKey(CThostFtdcCFMMCTradingAccountKeyField *pCFMMCTradingAccountKey, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
-    {
-        ctp::CThostFtdcCFMMCTradingAccountKeyField p1;
-        copy(&p1, pCFMMCTradingAccountKey);
-        ctp::CThostFtdcRspInfoField p2;
-        copy(&p2, pRspInfo);
-        send(ctp::TD_OnRspQryCFMMCTradingAccountKey, &p1.SerializePartialAsString(), &p2.SerializePartialAsString(), nRequestID, bIsLast);
-    };
-    void OnRspQryEWarrantOffset(CThostFtdcEWarrantOffsetField *pEWarrantOffset, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
-    {
-        ctp::CThostFtdcEWarrantOffsetField p1;
-        copy(&p1, pEWarrantOffset);
-        ctp::CThostFtdcRspInfoField p2;
-        copy(&p2, pRspInfo);
-        send(ctp::TD_OnRspQryEWarrantOffset, &p1.SerializePartialAsString(), &p2.SerializePartialAsString(), nRequestID, bIsLast);
-    };
-    void OnRspQryInvestorProductGroupMargin(CThostFtdcInvestorProductGroupMarginField *pInvestorProductGroupMargin, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
-    {
-        ctp::CThostFtdcInvestorProductGroupMarginField p1;
-        copy(&p1, pInvestorProductGroupMargin);
-        ctp::CThostFtdcRspInfoField p2;
-        copy(&p2, pRspInfo);
-        send(ctp::TD_OnRspQryInvestorProductGroupMargin, &p1.SerializePartialAsString(), &p2.SerializePartialAsString(), nRequestID, bIsLast);
-    };
-    void OnRspQryExchangeMarginRate(CThostFtdcExchangeMarginRateField *pExchangeMarginRate, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
-    {
-        ctp::CThostFtdcExchangeMarginRateField p1;
-        copy(&p1, pExchangeMarginRate);
-        ctp::CThostFtdcRspInfoField p2;
-        copy(&p2, pRspInfo);
-        send(ctp::TD_OnRspQryExchangeMarginRate, &p1.SerializePartialAsString(), &p2.SerializePartialAsString(), nRequestID, bIsLast);
-    };
-    void OnRspQryExchangeMarginRateAdjust(CThostFtdcExchangeMarginRateAdjustField *pExchangeMarginRateAdjust, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
-    {
-        ctp::CThostFtdcExchangeMarginRateAdjustField p1;
-        copy(&p1, pExchangeMarginRateAdjust);
-        ctp::CThostFtdcRspInfoField p2;
-        copy(&p2, pRspInfo);
-        send(ctp::TD_OnRspQryExchangeMarginRateAdjust, &p1.SerializePartialAsString(), &p2.SerializePartialAsString(), nRequestID, bIsLast);
-    };
-    void OnRspQryExchangeRate(CThostFtdcExchangeRateField *pExchangeRate, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
-    {
-        ctp::CThostFtdcExchangeRateField p1;
-        copy(&p1, pExchangeRate);
-        ctp::CThostFtdcRspInfoField p2;
-        copy(&p2, pRspInfo);
-        send(ctp::TD_OnRspQryExchangeRate, &p1.SerializePartialAsString(), &p2.SerializePartialAsString(), nRequestID, bIsLast);
-    };
-    void OnRspQrySecAgentACIDMap(CThostFtdcSecAgentACIDMapField *pSecAgentACIDMap, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
-    {
-        ctp::CThostFtdcSecAgentACIDMapField p1;
-        copy(&p1, pSecAgentACIDMap);
-        ctp::CThostFtdcRspInfoField p2;
-        copy(&p2, pRspInfo);
-        send(ctp::TD_OnRspQrySecAgentACIDMap, &p1.SerializePartialAsString(), &p2.SerializePartialAsString(), nRequestID, bIsLast);
-    };
-    void OnRspQryProductExchRate(CThostFtdcProductExchRateField *pProductExchRate, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
-    {
-        ctp::CThostFtdcProductExchRateField p1;
-        copy(&p1, pProductExchRate);
-        ctp::CThostFtdcRspInfoField p2;
-        copy(&p2, pRspInfo);
-        send(ctp::TD_OnRspQryProductExchRate, &p1.SerializePartialAsString(), &p2.SerializePartialAsString(), nRequestID, bIsLast);
-    };
-    void OnRspQryProductGroup(CThostFtdcProductGroupField *pProductGroup, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
-    {
-        ctp::CThostFtdcProductGroupField p1;
-        copy(&p1, pProductGroup);
-        ctp::CThostFtdcRspInfoField p2;
-        copy(&p2, pRspInfo);
-        send(ctp::TD_OnRspQryProductGroup, &p1.SerializePartialAsString(), &p2.SerializePartialAsString(), nRequestID, bIsLast);
-    };
-    void OnRspQryMMInstrumentCommissionRate(CThostFtdcMMInstrumentCommissionRateField *pMMInstrumentCommissionRate, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
-    {
-        ctp::CThostFtdcMMInstrumentCommissionRateField p1;
-        copy(&p1, pMMInstrumentCommissionRate);
-        ctp::CThostFtdcRspInfoField p2;
-        copy(&p2, pRspInfo);
-        send(ctp::TD_OnRspQryMMInstrumentCommissionRate, &p1.SerializePartialAsString(), &p2.SerializePartialAsString(), nRequestID, bIsLast);
-    };
-    void OnRspQryMMOptionInstrCommRate(CThostFtdcMMOptionInstrCommRateField *pMMOptionInstrCommRate, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
-    {
-        ctp::CThostFtdcMMOptionInstrCommRateField p1;
-        copy(&p1, pMMOptionInstrCommRate);
-        ctp::CThostFtdcRspInfoField p2;
-        copy(&p2, pRspInfo);
-        send(ctp::TD_OnRspQryMMOptionInstrCommRate, &p1.SerializePartialAsString(), &p2.SerializePartialAsString(), nRequestID, bIsLast);
-    };
-    void OnRspQryInstrumentOrderCommRate(CThostFtdcInstrumentOrderCommRateField *pInstrumentOrderCommRate, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
-    {
-        ctp::CThostFtdcInstrumentOrderCommRateField p1;
-        copy(&p1, pInstrumentOrderCommRate);
-        ctp::CThostFtdcRspInfoField p2;
-        copy(&p2, pRspInfo);
-        send(ctp::TD_OnRspQryInstrumentOrderCommRate, &p1.SerializePartialAsString(), &p2.SerializePartialAsString(), nRequestID, bIsLast);
-    };
-    void OnRspQrySecAgentTradingAccount(CThostFtdcTradingAccountField *pTradingAccount, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
-    {
-        ctp::CThostFtdcTradingAccountField p1;
-        copy(&p1, pTradingAccount);
-        ctp::CThostFtdcRspInfoField p2;
-        copy(&p2, pRspInfo);
-        send(ctp::TD_OnRspQrySecAgentTradingAccount, &p1.SerializePartialAsString(), &p2.SerializePartialAsString(), nRequestID, bIsLast);
-    };
-    void OnRspQrySecAgentCheckMode(CThostFtdcSecAgentCheckModeField *pSecAgentCheckMode, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
-    {
-        ctp::CThostFtdcSecAgentCheckModeField p1;
-        copy(&p1, pSecAgentCheckMode);
-        ctp::CThostFtdcRspInfoField p2;
-        copy(&p2, pRspInfo);
-        send(ctp::TD_OnRspQrySecAgentCheckMode, &p1.SerializePartialAsString(), &p2.SerializePartialAsString(), nRequestID, bIsLast);
-    };
-    void OnRspQrySecAgentTradeInfo(CThostFtdcSecAgentTradeInfoField *pSecAgentTradeInfo, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
-    {
-        ctp::CThostFtdcSecAgentTradeInfoField p1;
-        copy(&p1, pSecAgentTradeInfo);
-        ctp::CThostFtdcRspInfoField p2;
-        copy(&p2, pRspInfo);
-        send(ctp::TD_OnRspQrySecAgentTradeInfo, &p1.SerializePartialAsString(), &p2.SerializePartialAsString(), nRequestID, bIsLast);
-    };
-    void OnRspQryOptionInstrTradeCost(CThostFtdcOptionInstrTradeCostField *pOptionInstrTradeCost, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
-    {
-        ctp::CThostFtdcOptionInstrTradeCostField p1;
-        copy(&p1, pOptionInstrTradeCost);
-        ctp::CThostFtdcRspInfoField p2;
-        copy(&p2, pRspInfo);
-        send(ctp::TD_OnRspQryOptionInstrTradeCost, &p1.SerializePartialAsString(), &p2.SerializePartialAsString(), nRequestID, bIsLast);
-    };
-    void OnRspQryOptionInstrCommRate(CThostFtdcOptionInstrCommRateField *pOptionInstrCommRate, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
-    {
-        ctp::CThostFtdcOptionInstrCommRateField p1;
-        copy(&p1, pOptionInstrCommRate);
-        ctp::CThostFtdcRspInfoField p2;
-        copy(&p2, pRspInfo);
-        send(ctp::TD_OnRspQryOptionInstrCommRate, &p1.SerializePartialAsString(), &p2.SerializePartialAsString(), nRequestID, bIsLast);
-    };
-    void OnRspQryExecOrder(CThostFtdcExecOrderField *pExecOrder, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
-    {
-        ctp::CThostFtdcExecOrderField p1;
-        copy(&p1, pExecOrder);
-        ctp::CThostFtdcRspInfoField p2;
-        copy(&p2, pRspInfo);
-        send(ctp::TD_OnRspQryExecOrder, &p1.SerializePartialAsString(), &p2.SerializePartialAsString(), nRequestID, bIsLast);
-    };
-    void OnRspQryForQuote(CThostFtdcForQuoteField *pForQuote, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
-    {
-        ctp::CThostFtdcForQuoteField p1;
-        copy(&p1, pForQuote);
-        ctp::CThostFtdcRspInfoField p2;
-        copy(&p2, pRspInfo);
-        send(ctp::TD_OnRspQryForQuote, &p1.SerializePartialAsString(), &p2.SerializePartialAsString(), nRequestID, bIsLast);
-    };
-    void OnRspQryQuote(CThostFtdcQuoteField *pQuote, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
-    {
-        ctp::CThostFtdcQuoteField p1;
-        copy(&p1, pQuote);
-        ctp::CThostFtdcRspInfoField p2;
-        copy(&p2, pRspInfo);
-        send(ctp::TD_OnRspQryQuote, &p1.SerializePartialAsString(), &p2.SerializePartialAsString(), nRequestID, bIsLast);
-    };
-    void OnRspQryOptionSelfClose(CThostFtdcOptionSelfCloseField *pOptionSelfClose, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
-    {
-        ctp::CThostFtdcOptionSelfCloseField p1;
-        copy(&p1, pOptionSelfClose);
-        ctp::CThostFtdcRspInfoField p2;
-        copy(&p2, pRspInfo);
-        send(ctp::TD_OnRspQryOptionSelfClose, &p1.SerializePartialAsString(), &p2.SerializePartialAsString(), nRequestID, bIsLast);
-    };
-    void OnRspQryInvestUnit(CThostFtdcInvestUnitField *pInvestUnit, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
-    {
-        ctp::CThostFtdcInvestUnitField p1;
-        copy(&p1, pInvestUnit);
-        ctp::CThostFtdcRspInfoField p2;
-        copy(&p2, pRspInfo);
-        send(ctp::TD_OnRspQryInvestUnit, &p1.SerializePartialAsString(), &p2.SerializePartialAsString(), nRequestID, bIsLast);
-    };
-    void OnRspQryCombInstrumentGuard(CThostFtdcCombInstrumentGuardField *pCombInstrumentGuard, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
-    {
-        ctp::CThostFtdcCombInstrumentGuardField p1;
-        copy(&p1, pCombInstrumentGuard);
-        ctp::CThostFtdcRspInfoField p2;
-        copy(&p2, pRspInfo);
-        send(ctp::TD_OnRspQryCombInstrumentGuard, &p1.SerializePartialAsString(), &p2.SerializePartialAsString(), nRequestID, bIsLast);
-    };
-    void OnRspQryCombAction(CThostFtdcCombActionField *pCombAction, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
-    {
-        ctp::CThostFtdcCombActionField p1;
-        copy(&p1, pCombAction);
-        ctp::CThostFtdcRspInfoField p2;
-        copy(&p2, pRspInfo);
-        send(ctp::TD_OnRspQryCombAction, &p1.SerializePartialAsString(), &p2.SerializePartialAsString(), nRequestID, bIsLast);
-    };
-    void OnRspQryTransferSerial(CThostFtdcTransferSerialField *pTransferSerial, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
-    {
-        ctp::CThostFtdcTransferSerialField p1;
-        copy(&p1, pTransferSerial);
-        ctp::CThostFtdcRspInfoField p2;
-        copy(&p2, pRspInfo);
-        send(ctp::TD_OnRspQryTransferSerial, &p1.SerializePartialAsString(), &p2.SerializePartialAsString(), nRequestID, bIsLast);
-    };
-    void OnRspQryAccountregister(CThostFtdcAccountregisterField *pAccountregister, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
-    {
-        ctp::CThostFtdcAccountregisterField p1;
-        copy(&p1, pAccountregister);
-        ctp::CThostFtdcRspInfoField p2;
-        copy(&p2, pRspInfo);
-        send(ctp::TD_OnRspQryAccountregister, &p1.SerializePartialAsString(), &p2.SerializePartialAsString(), nRequestID, bIsLast);
-    };
-    void OnRspError(CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast){};
-    void OnRtnOrder(CThostFtdcOrderField *pOrder)
-    {
-        ctp::CThostFtdcOrderField p1;
-        copy(&p1, pOrder);
-        send(ctp::TD_OnRtnOrder, &p1.SerializePartialAsString(), 0, 0, true);
-    };
-    void OnRtnTrade(CThostFtdcTradeField *pTrade)
-    {
-        ctp::CThostFtdcTradeField p1;
-        copy(&p1, pTrade);
-        send(ctp::TD_OnRtnTrade, &p1.SerializePartialAsString(), 0, 0, true);
-    };
-    void OnErrRtnOrderInsert(CThostFtdcInputOrderField *pInputOrder, CThostFtdcRspInfoField *pRspInfo)
-    {
-        ctp::CThostFtdcInputOrderField p1;
-        copy(&p1, pInputOrder);
-        send(ctp::TD_OnErrRtnOrderInsert, &p1.SerializePartialAsString(), 0, 0, true);
-    };
-    void OnErrRtnOrderAction(CThostFtdcOrderActionField *pOrderAction, CThostFtdcRspInfoField *pRspInfo)
-    {
-        ctp::CThostFtdcOrderActionField p1;
-        copy(&p1, pOrderAction);
-        send(ctp::TD_OnErrRtnOrderAction, &p1.SerializePartialAsString(), 0, 0, true);
-    };
-    void OnRtnInstrumentStatus(CThostFtdcInstrumentStatusField *pInstrumentStatus)
-    {
-        ctp::CThostFtdcInstrumentStatusField p1;
-        copy(&p1, pInstrumentStatus);
-        send(ctp::TD_OnRtnInstrumentStatus, &p1.SerializePartialAsString(), 0, 0, true);
-    };
-    void OnRtnBulletin(CThostFtdcBulletinField *pBulletin)
-    {
-        ctp::CThostFtdcBulletinField p1;
-        copy(&p1, pBulletin);
-        send(ctp::TD_OnRtnBulletin, &p1.SerializePartialAsString(), 0, 0, true);
-    };
-    void OnRtnTradingNotice(CThostFtdcTradingNoticeInfoField *pTradingNoticeInfo)
-    {
-        ctp::CThostFtdcTradingNoticeInfoField p1;
-        copy(&p1, pTradingNoticeInfo);
-        send(ctp::TD_OnRtnTradingNotice, &p1.SerializePartialAsString(), 0, 0, true);
-    };
-    void OnRtnErrorConditionalOrder(CThostFtdcErrorConditionalOrderField *pErrorConditionalOrder)
-    {
-        ctp::CThostFtdcErrorConditionalOrderField p1;
-        copy(&p1, pErrorConditionalOrder);
-        send(ctp::TD_OnRtnErrorConditionalOrder, &p1.SerializePartialAsString(), 0, 0, true);
-    };
-    void OnRtnExecOrder(CThostFtdcExecOrderField *pExecOrder)
-    {
-        ctp::CThostFtdcExecOrderField p1;
-        copy(&p1, pExecOrder);
-        send(ctp::TD_OnRtnExecOrder, &p1.SerializePartialAsString(), 0, 0, true);
-    };
-    void OnErrRtnExecOrderInsert(CThostFtdcInputExecOrderField *pInputExecOrder, CThostFtdcRspInfoField *pRspInfo)
-    {
-        ctp::CThostFtdcInputExecOrderField p1;
-        copy(&p1, pInputExecOrder);
-        send(ctp::TD_OnErrRtnExecOrderInsert, &p1.SerializePartialAsString(), 0, 0, true);
-    };
-    void OnErrRtnExecOrderAction(CThostFtdcExecOrderActionField *pExecOrderAction, CThostFtdcRspInfoField *pRspInfo)
-    {
-        ctp::CThostFtdcExecOrderActionField p1;
-        copy(&p1, pExecOrderAction);
-        send(ctp::TD_OnErrRtnExecOrderAction, &p1.SerializePartialAsString(), 0, 0, true);
-    };
-    void OnErrRtnForQuoteInsert(CThostFtdcInputForQuoteField *pInputForQuote, CThostFtdcRspInfoField *pRspInfo)
-    {
-        ctp::CThostFtdcInputForQuoteField p1;
-        copy(&p1, pInputForQuote);
-        send(ctp::TD_OnErrRtnForQuoteInsert, &p1.SerializePartialAsString(), 0, 0, true);
-    };
-    void OnRtnQuote(CThostFtdcQuoteField *pQuote)
-    {
-        ctp::CThostFtdcQuoteField p1;
-        copy(&p1, pQuote);
-        send(ctp::TD_OnRtnQuote, &p1.SerializePartialAsString(), 0, 0, true);
-    };
-    void OnErrRtnQuoteInsert(CThostFtdcInputQuoteField *pInputQuote, CThostFtdcRspInfoField *pRspInfo)
-    {
-        ctp::CThostFtdcInputQuoteField p1;
-        copy(&p1, pInputQuote);
-        send(ctp::TD_OnErrRtnQuoteInsert, &p1.SerializePartialAsString(), 0, 0, true);
-    };
-    void OnErrRtnQuoteAction(CThostFtdcQuoteActionField *pQuoteAction, CThostFtdcRspInfoField *pRspInfo)
-    {
-        ctp::CThostFtdcQuoteActionField p1;
-        copy(&p1, pQuoteAction);
-        send(ctp::TD_OnErrRtnQuoteAction, &p1.SerializePartialAsString(), 0, 0, true);
-    };
-    void OnRtnForQuoteRsp(CThostFtdcForQuoteRspField *pForQuoteRsp)
-    {
-        ctp::CThostFtdcForQuoteRspField p1;
-        copy(&p1, pForQuoteRsp);
-        send(ctp::TD_OnRtnForQuoteRsp, &p1.SerializePartialAsString(), 0, 0, true);
-    };
-    void OnRtnCFMMCTradingAccountToken(CThostFtdcCFMMCTradingAccountTokenField *pCFMMCTradingAccountToken)
-    {
-        ctp::CThostFtdcCFMMCTradingAccountTokenField p1;
-        copy(&p1, pCFMMCTradingAccountToken);
-        send(ctp::TD_OnRtnCFMMCTradingAccountToken, &p1.SerializePartialAsString(), 0, 0, true);
-    };
-    void OnErrRtnBatchOrderAction(CThostFtdcBatchOrderActionField *pBatchOrderAction, CThostFtdcRspInfoField *pRspInfo)
-    {
-        ctp::CThostFtdcBatchOrderActionField p1;
-        copy(&p1, pBatchOrderAction);
-        send(ctp::TD_OnErrRtnBatchOrderAction, &p1.SerializePartialAsString(), 0, 0, true);
-    };
-    void OnRtnOptionSelfClose(CThostFtdcOptionSelfCloseField *pOptionSelfClose)
-    {
-        ctp::CThostFtdcOptionSelfCloseField p1;
-        copy(&p1, pOptionSelfClose);
-        send(ctp::TD_OnRtnOptionSelfClose, &p1.SerializePartialAsString(), 0, 0, true);
-    };
-    void OnErrRtnOptionSelfCloseInsert(CThostFtdcInputOptionSelfCloseField *pInputOptionSelfClose, CThostFtdcRspInfoField *pRspInfo)
-    {
-        ctp::CThostFtdcInputOptionSelfCloseField p1;
-        copy(&p1, pInputOptionSelfClose);
-        send(ctp::TD_OnErrRtnOptionSelfCloseInsert, &p1.SerializePartialAsString(), 0, 0, true);
-    };
-    void OnErrRtnOptionSelfCloseAction(CThostFtdcOptionSelfCloseActionField *pOptionSelfCloseAction, CThostFtdcRspInfoField *pRspInfo)
-    {
-        ctp::CThostFtdcOptionSelfCloseActionField p1;
-        copy(&p1, pOptionSelfCloseAction);
-        send(ctp::TD_OnErrRtnOptionSelfCloseAction, &p1.SerializePartialAsString(), 0, 0, true);
-    };
-    void OnRtnCombAction(CThostFtdcCombActionField *pCombAction)
-    {
-        ctp::CThostFtdcCombActionField p1;
-        copy(&p1, pCombAction);
-        send(ctp::TD_OnRtnCombAction, &p1.SerializePartialAsString(), 0, 0, true);
-    };
-    void OnErrRtnCombActionInsert(CThostFtdcInputCombActionField *pInputCombAction, CThostFtdcRspInfoField *pRspInfo)
-    {
-        ctp::CThostFtdcInputCombActionField p1;
-        copy(&p1, pInputCombAction);
-        send(ctp::TD_OnErrRtnCombActionInsert, &p1.SerializePartialAsString(), 0, 0, true);
-    };
-    void OnRspQryContractBank(CThostFtdcContractBankField *pContractBank, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
-    {
-        ctp::CThostFtdcContractBankField p1;
-        copy(&p1, pContractBank);
-        ctp::CThostFtdcRspInfoField p2;
-        copy(&p2, pRspInfo);
-        send(ctp::TD_OnRspQryContractBank, &p1.SerializePartialAsString(), &p2.SerializePartialAsString(), nRequestID, bIsLast);
-    };
-    void OnRspQryParkedOrder(CThostFtdcParkedOrderField *pParkedOrder, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
-    {
-        ctp::CThostFtdcParkedOrderField p1;
-        copy(&p1, pParkedOrder);
-        ctp::CThostFtdcRspInfoField p2;
-        copy(&p2, pRspInfo);
-        send(ctp::TD_OnRspQryParkedOrder, &p1.SerializePartialAsString(), &p2.SerializePartialAsString(), nRequestID, bIsLast);
-    };
-    void OnRspQryParkedOrderAction(CThostFtdcParkedOrderActionField *pParkedOrderAction, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
-    {
-        ctp::CThostFtdcParkedOrderActionField p1;
-        copy(&p1, pParkedOrderAction);
-        ctp::CThostFtdcRspInfoField p2;
-        copy(&p2, pRspInfo);
-        send(ctp::TD_OnRspQryParkedOrderAction, &p1.SerializePartialAsString(), &p2.SerializePartialAsString(), nRequestID, bIsLast);
-    };
-    void OnRspQryTradingNotice(CThostFtdcTradingNoticeField *pTradingNotice, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
-    {
-        ctp::CThostFtdcTradingNoticeField p1;
-        copy(&p1, pTradingNotice);
-        ctp::CThostFtdcRspInfoField p2;
-        copy(&p2, pRspInfo);
-        send(ctp::TD_OnRspQryTradingNotice, &p1.SerializePartialAsString(), &p2.SerializePartialAsString(), nRequestID, bIsLast);
-    };
-    void OnRspQryBrokerTradingParams(CThostFtdcBrokerTradingParamsField *pBrokerTradingParams, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
-    {
-        ctp::CThostFtdcBrokerTradingParamsField p1;
-        copy(&p1, pBrokerTradingParams);
-        ctp::CThostFtdcRspInfoField p2;
-        copy(&p2, pRspInfo);
-        send(ctp::TD_OnRspQryBrokerTradingParams, &p1.SerializePartialAsString(), &p2.SerializePartialAsString(), nRequestID, bIsLast);
-    };
-    void OnRspQryBrokerTradingAlgos(CThostFtdcBrokerTradingAlgosField *pBrokerTradingAlgos, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
-    {
-        ctp::CThostFtdcBrokerTradingAlgosField p1;
-        copy(&p1, pBrokerTradingAlgos);
-        ctp::CThostFtdcRspInfoField p2;
-        copy(&p2, pRspInfo);
-        send(ctp::TD_OnRspQryBrokerTradingAlgos, &p1.SerializePartialAsString(), &p2.SerializePartialAsString(), nRequestID, bIsLast);
-    };
-    void OnRspQueryCFMMCTradingAccountToken(CThostFtdcQueryCFMMCTradingAccountTokenField *pQueryCFMMCTradingAccountToken, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
-    {
-        ctp::CThostFtdcQueryCFMMCTradingAccountTokenField p1;
-        copy(&p1, pQueryCFMMCTradingAccountToken);
-        ctp::CThostFtdcRspInfoField p2;
-        copy(&p2, pRspInfo);
-        send(ctp::TD_OnRspQueryCFMMCTradingAccountToken, &p1.SerializePartialAsString(), &p2.SerializePartialAsString(), nRequestID, bIsLast);
-    };
-    void OnRtnFromBankToFutureByBank(CThostFtdcRspTransferField *pRspTransfer)
-    {
-        ctp::CThostFtdcRspTransferField p1;
-        copy(&p1, pRspTransfer);
-        send(ctp::TD_OnRtnFromBankToFutureByBank, &p1.SerializePartialAsString(), 0, 0, true);
-    };
-    void OnRtnFromFutureToBankByBank(CThostFtdcRspTransferField *pRspTransfer)
-    {
-        ctp::CThostFtdcRspTransferField p1;
-        copy(&p1, pRspTransfer);
-        send(ctp::TD_OnRtnFromFutureToBankByBank, &p1.SerializePartialAsString(), 0, 0, true);
-    };
-    void OnRtnRepealFromBankToFutureByBank(CThostFtdcRspRepealField *pRspRepeal)
-    {
-        ctp::CThostFtdcRspRepealField p1;
-        copy(&p1, pRspRepeal);
-        send(ctp::TD_OnRtnRepealFromBankToFutureByBank, &p1.SerializePartialAsString(), 0, 0, true);
-    };
-    void OnRtnRepealFromFutureToBankByBank(CThostFtdcRspRepealField *pRspRepeal)
-    {
-        ctp::CThostFtdcRspRepealField p1;
-        copy(&p1, pRspRepeal);
-        send(ctp::TD_OnRtnRepealFromFutureToBankByBank, &p1.SerializePartialAsString(), 0, 0, true);
-    };
-    void OnRtnFromBankToFutureByFuture(CThostFtdcRspTransferField *pRspTransfer)
-    {
-        ctp::CThostFtdcRspTransferField p1;
-        copy(&p1, pRspTransfer);
-        send(ctp::TD_OnRtnFromBankToFutureByFuture, &p1.SerializePartialAsString(), 0, 0, true);
-    };
-    void OnRtnFromFutureToBankByFuture(CThostFtdcRspTransferField *pRspTransfer)
-    {
-        ctp::CThostFtdcRspTransferField p1;
-        copy(&p1, pRspTransfer);
-        send(ctp::TD_OnRtnFromFutureToBankByFuture, &p1.SerializePartialAsString(), 0, 0, true);
-    };
-    void OnRtnRepealFromBankToFutureByFutureManual(CThostFtdcRspRepealField *pRspRepeal)
-    {
-        ctp::CThostFtdcRspRepealField p1;
-        copy(&p1, pRspRepeal);
-        send(ctp::TD_OnRtnRepealFromBankToFutureByFutureManual, &p1.SerializePartialAsString(), 0, 0, true);
-    };
-    void OnRtnRepealFromFutureToBankByFutureManual(CThostFtdcRspRepealField *pRspRepeal)
-    {
-        ctp::CThostFtdcRspRepealField p1;
-        copy(&p1, pRspRepeal);
-        send(ctp::TD_OnRtnRepealFromFutureToBankByFutureManual, &p1.SerializePartialAsString(), 0, 0, true);
-    };
-    void OnRtnQueryBankBalanceByFuture(CThostFtdcNotifyQueryAccountField *pNotifyQueryAccount)
-    {
-        ctp::CThostFtdcNotifyQueryAccountField p1;
-        copy(&p1, pNotifyQueryAccount);
-        send(ctp::TD_OnRtnQueryBankBalanceByFuture, &p1.SerializePartialAsString(), 0, 0, true);
-    };
-    void OnErrRtnBankToFutureByFuture(CThostFtdcReqTransferField *pReqTransfer, CThostFtdcRspInfoField *pRspInfo)
-    {
-        ctp::CThostFtdcReqTransferField p1;
-        copy(&p1, pReqTransfer);
-        send(ctp::TD_OnErrRtnBankToFutureByFuture, &p1.SerializePartialAsString(), 0, 0, true);
-    };
-    void OnErrRtnFutureToBankByFuture(CThostFtdcReqTransferField *pReqTransfer, CThostFtdcRspInfoField *pRspInfo)
-    {
-        ctp::CThostFtdcReqTransferField p1;
-        copy(&p1, pReqTransfer);
-        send(ctp::TD_OnErrRtnFutureToBankByFuture, &p1.SerializePartialAsString(), 0, 0, true);
-    };
-    void OnErrRtnRepealBankToFutureByFutureManual(CThostFtdcReqRepealField *pReqRepeal, CThostFtdcRspInfoField *pRspInfo)
-    {
-        ctp::CThostFtdcReqRepealField p1;
-        copy(&p1, pReqRepeal);
-        send(ctp::TD_OnErrRtnRepealBankToFutureByFutureManual, &p1.SerializePartialAsString(), 0, 0, true);
-    };
-    void OnErrRtnRepealFutureToBankByFutureManual(CThostFtdcReqRepealField *pReqRepeal, CThostFtdcRspInfoField *pRspInfo)
-    {
-        ctp::CThostFtdcReqRepealField p1;
-        copy(&p1, pReqRepeal);
-        send(ctp::TD_OnErrRtnRepealFutureToBankByFutureManual, &p1.SerializePartialAsString(), 0, 0, true);
-    };
-    void OnErrRtnQueryBankBalanceByFuture(CThostFtdcReqQueryAccountField *pReqQueryAccount, CThostFtdcRspInfoField *pRspInfo)
-    {
-        ctp::CThostFtdcReqQueryAccountField p1;
-        copy(&p1, pReqQueryAccount);
-        send(ctp::TD_OnErrRtnQueryBankBalanceByFuture, &p1.SerializePartialAsString(), 0, 0, true);
-    };
-    void OnRtnRepealFromBankToFutureByFuture(CThostFtdcRspRepealField *pRspRepeal)
-    {
-        ctp::CThostFtdcRspRepealField p1;
-        copy(&p1, pRspRepeal);
-        send(ctp::TD_OnRtnRepealFromBankToFutureByFuture, &p1.SerializePartialAsString(), 0, 0, true);
-    };
-    void OnRtnRepealFromFutureToBankByFuture(CThostFtdcRspRepealField *pRspRepeal)
-    {
-        ctp::CThostFtdcRspRepealField p1;
-        copy(&p1, pRspRepeal);
-        send(ctp::TD_OnRtnRepealFromFutureToBankByFuture, &p1.SerializePartialAsString(), 0, 0, true);
-    };
-    void OnRspFromBankToFutureByFuture(CThostFtdcReqTransferField *pReqTransfer, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
-    {
-        ctp::CThostFtdcReqTransferField p1;
-        copy(&p1, pReqTransfer);
-        ctp::CThostFtdcRspInfoField p2;
-        copy(&p2, pRspInfo);
-        send(ctp::TD_OnRspFromBankToFutureByFuture, &p1.SerializePartialAsString(), &p2.SerializePartialAsString(), nRequestID, bIsLast);
-    };
-    void OnRspFromFutureToBankByFuture(CThostFtdcReqTransferField *pReqTransfer, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
-    {
-        ctp::CThostFtdcReqTransferField p1;
-        copy(&p1, pReqTransfer);
-        ctp::CThostFtdcRspInfoField p2;
-        copy(&p2, pRspInfo);
-        send(ctp::TD_OnRspFromFutureToBankByFuture, &p1.SerializePartialAsString(), &p2.SerializePartialAsString(), nRequestID, bIsLast);
-    };
-    void OnRspQueryBankAccountMoneyByFuture(CThostFtdcReqQueryAccountField *pReqQueryAccount, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
-    {
-        ctp::CThostFtdcReqQueryAccountField p1;
-        copy(&p1, pReqQueryAccount);
-        ctp::CThostFtdcRspInfoField p2;
-        copy(&p2, pRspInfo);
-        send(ctp::TD_OnRspQueryBankAccountMoneyByFuture, &p1.SerializePartialAsString(), &p2.SerializePartialAsString(), nRequestID, bIsLast);
-    };
-    void OnRtnOpenAccountByBank(CThostFtdcOpenAccountField *pOpenAccount)
-    {
-        ctp::CThostFtdcOpenAccountField p1;
-        copy(&p1, pOpenAccount);
-        send(ctp::TD_OnRtnOpenAccountByBank, &p1.SerializePartialAsString(), 0, 0, true);
-    };
-    void OnRtnCancelAccountByBank(CThostFtdcCancelAccountField *pCancelAccount)
-    {
-        ctp::CThostFtdcCancelAccountField p1;
-        copy(&p1, pCancelAccount);
-        send(ctp::TD_OnRtnCancelAccountByBank, &p1.SerializePartialAsString(), 0, 0, true);
-    };
-    void OnRtnChangeAccountByBank(CThostFtdcChangeAccountField *pChangeAccount)
-    {
-        ctp::CThostFtdcChangeAccountField p1;
-        copy(&p1, pChangeAccount);
-        send(ctp::TD_OnRtnChangeAccountByBank, &p1.SerializePartialAsString(), 0, 0, true);
-    };
-};
-
 void onMessage(CThostFtdcTraderApi *api, uint32_t t, int requestID, const char *data, uint32_t len)
 {
     switch (t)
@@ -12363,87 +11456,6 @@ void onMessage(CThostFtdcTraderApi *api, uint32_t t, int requestID, const char *
     }
 }
 
-template <>
-class handler<CThostFtdcMdApi> : public CThostFtdcMdSpi
-{
-public:
-    virtual void send(ctp::CtpMessageType msgType, std::string *d1, std::string *d2, int nRequestID, bool bIsLast) = 0;
-    void OnFrontConnected()
-    {
-        send(ctp::MD_OnFrontConnected, 0, 0, 0, true);
-    };
-    void OnFrontDisconnected(int nReason)
-    {
-        send(ctp::MD_OnFrontDisconnected, 0, 0, 0, true);
-    };
-    void OnHeartBeatWarning(int nTimeLapse)
-    {
-        send(ctp::MD_OnHeartBeatWarning, 0, 0, 0, true);
-    };
-    void OnRspUserLogin(CThostFtdcRspUserLoginField *pRspUserLogin, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
-    {
-        ctp::CThostFtdcRspUserLoginField p1;
-        copy(&p1, pRspUserLogin);
-        ctp::CThostFtdcRspInfoField p2;
-        copy(&p2, pRspInfo);
-        send(ctp::MD_OnRspUserLogin, &p1.SerializePartialAsString(), &p2.SerializePartialAsString(), nRequestID, bIsLast);
-    };
-    void OnRspUserLogout(CThostFtdcUserLogoutField *pUserLogout, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
-    {
-        ctp::CThostFtdcUserLogoutField p1;
-        copy(&p1, pUserLogout);
-        ctp::CThostFtdcRspInfoField p2;
-        copy(&p2, pRspInfo);
-        send(ctp::MD_OnRspUserLogout, &p1.SerializePartialAsString(), &p2.SerializePartialAsString(), nRequestID, bIsLast);
-    };
-    void OnRspError(CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast){
-	};
-    void OnRspSubMarketData(CThostFtdcSpecificInstrumentField *pSpecificInstrument, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
-    {
-        ctp::CThostFtdcSpecificInstrumentField p1;
-        copy(&p1, pSpecificInstrument);
-        ctp::CThostFtdcRspInfoField p2;
-        copy(&p2, pRspInfo);
-        send(ctp::MD_OnRspSubMarketData, &p1.SerializePartialAsString(), &p2.SerializePartialAsString(), nRequestID, bIsLast);
-    };
-    void OnRspUnSubMarketData(CThostFtdcSpecificInstrumentField *pSpecificInstrument, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
-    {
-        ctp::CThostFtdcSpecificInstrumentField p1;
-        copy(&p1, pSpecificInstrument);
-        ctp::CThostFtdcRspInfoField p2;
-        copy(&p2, pRspInfo);
-        send(ctp::MD_OnRspUnSubMarketData, &p1.SerializePartialAsString(), &p2.SerializePartialAsString(), nRequestID, bIsLast);
-    };
-    void OnRspSubForQuoteRsp(CThostFtdcSpecificInstrumentField *pSpecificInstrument, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
-    {
-        ctp::CThostFtdcSpecificInstrumentField p1;
-        copy(&p1, pSpecificInstrument);
-        ctp::CThostFtdcRspInfoField p2;
-        copy(&p2, pRspInfo);
-        send(ctp::MD_OnRspSubForQuoteRsp, &p1.SerializePartialAsString(), &p2.SerializePartialAsString(), nRequestID, bIsLast);
-    };
-    void OnRspUnSubForQuoteRsp(CThostFtdcSpecificInstrumentField *pSpecificInstrument, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
-    {
-        ctp::CThostFtdcSpecificInstrumentField p1;
-        copy(&p1, pSpecificInstrument);
-        ctp::CThostFtdcRspInfoField p2;
-        copy(&p2, pRspInfo);
-        send(ctp::MD_OnRspUnSubForQuoteRsp, &p1.SerializePartialAsString(), &p2.SerializePartialAsString(), nRequestID, bIsLast);
-    };
-    void OnRtnDepthMarketData(CThostFtdcDepthMarketDataField *pDepthMarketData)
-    {
-        ctp::CThostFtdcDepthMarketDataField p1;
-        copy(&p1, pDepthMarketData);
-        send(ctp::MD_OnRtnDepthMarketData, &p1.SerializePartialAsString(), 0, 0, true);
-    };
-    void OnRtnForQuoteRsp(CThostFtdcForQuoteRspField *pForQuoteRsp)
-    {
-        ctp::CThostFtdcForQuoteRspField p1;
-        copy(&p1, pForQuoteRsp);
-        send(ctp::MD_OnRtnForQuoteRsp, &p1.SerializePartialAsString(), 0, 0, true);
-    };
-};
-
 void onMessage(CThostFtdcMdApi *api, uint32_t t, int requestID, const char *data, uint32_t len)
 {
     switch (t)
@@ -12462,6 +11474,7 @@ void onMessage(CThostFtdcMdApi *api, uint32_t t, int requestID, const char *data
         }
     }
     break;
+
     case ctp::MD_SubscribeMarketData:
     {
         ctp::CThostFtdcReqSubscribeMarketData src;
@@ -12551,3 +11564,1216 @@ void onMessage(CThostFtdcMdApi *api, uint32_t t, int requestID, const char *data
         std::cout << "unsurported message type " << t << std::endl;
     }
 }
+
+template <typename T>
+class handler;
+
+template <>
+class handler<CThostFtdcTraderApi> : public CThostFtdcTraderSpi
+{
+public:
+    virtual void send(ctp::CtpMessageType msgType, std::string *d1, std::string *d2, int nRequestID, bool bIsLast) = 0;
+    void OnFrontConnected()
+    {
+        send(ctp::TD_OnFrontConnected, 0, 0, 0, true);
+    };
+    void OnFrontDisconnected(int nReason)
+    {
+        send(ctp::TD_OnFrontDisconnected, 0, 0, 0, true);
+    };
+    void OnHeartBeatWarning(int nTimeLapse)
+    {
+        send(ctp::TD_OnHeartBeatWarning, 0, 0, 0, true);
+    };
+    void OnRspAuthenticate(CThostFtdcRspAuthenticateField *pRspAuthenticateField, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
+    {
+        ctp::CThostFtdcRspAuthenticateField p1;
+        copy(&p1, pRspAuthenticateField);
+        ctp::CThostFtdcRspInfoField p2;
+        copy(&p2, pRspInfo);
+        std::string d1 = p1.SerializePartialAsString();
+        std::string d2 = p2.SerializePartialAsString();
+        send(ctp::TD_OnRspAuthenticate, &d1, &d2, nRequestID, bIsLast);
+    };
+    void OnRspUserLogin(CThostFtdcRspUserLoginField *pRspUserLogin, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
+    {
+        ctp::CThostFtdcRspUserLoginField p1;
+        copy(&p1, pRspUserLogin);
+        ctp::CThostFtdcRspInfoField p2;
+        copy(&p2, pRspInfo);
+        std::string d1 = p1.SerializePartialAsString();
+        std::string d2 = p2.SerializePartialAsString();
+        send(ctp::TD_OnRspUserLogin, &d1, &d2, nRequestID, bIsLast);
+    };
+    void OnRspUserLogout(CThostFtdcUserLogoutField *pUserLogout, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
+    {
+        ctp::CThostFtdcUserLogoutField p1;
+        copy(&p1, pUserLogout);
+        ctp::CThostFtdcRspInfoField p2;
+        copy(&p2, pRspInfo);
+        std::string d1 = p1.SerializePartialAsString();
+        std::string d2 = p2.SerializePartialAsString();
+        send(ctp::TD_OnRspUserLogout, &d1, &d2, nRequestID, bIsLast);
+    };
+    void OnRspUserPasswordUpdate(CThostFtdcUserPasswordUpdateField *pUserPasswordUpdate, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
+    {
+        ctp::CThostFtdcUserPasswordUpdateField p1;
+        copy(&p1, pUserPasswordUpdate);
+        ctp::CThostFtdcRspInfoField p2;
+        copy(&p2, pRspInfo);
+        std::string d1 = p1.SerializePartialAsString();
+        std::string d2 = p2.SerializePartialAsString();
+        send(ctp::TD_OnRspUserPasswordUpdate, &d1, &d2, nRequestID, bIsLast);
+    };
+    void OnRspTradingAccountPasswordUpdate(CThostFtdcTradingAccountPasswordUpdateField *pTradingAccountPasswordUpdate, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
+    {
+        ctp::CThostFtdcTradingAccountPasswordUpdateField p1;
+        copy(&p1, pTradingAccountPasswordUpdate);
+        ctp::CThostFtdcRspInfoField p2;
+        copy(&p2, pRspInfo);
+        std::string d1 = p1.SerializePartialAsString();
+        std::string d2 = p2.SerializePartialAsString();
+        send(ctp::TD_OnRspTradingAccountPasswordUpdate, &d1, &d2, nRequestID, bIsLast);
+    };
+    void OnRspUserAuthMethod(CThostFtdcRspUserAuthMethodField *pRspUserAuthMethod, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
+    {
+        ctp::CThostFtdcRspUserAuthMethodField p1;
+        copy(&p1, pRspUserAuthMethod);
+        ctp::CThostFtdcRspInfoField p2;
+        copy(&p2, pRspInfo);
+        std::string d1 = p1.SerializePartialAsString();
+        std::string d2 = p2.SerializePartialAsString();
+        send(ctp::TD_OnRspUserAuthMethod, &d1, &d2, nRequestID, bIsLast);
+    };
+    void OnRspGenUserCaptcha(CThostFtdcRspGenUserCaptchaField *pRspGenUserCaptcha, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
+    {
+        ctp::CThostFtdcRspGenUserCaptchaField p1;
+        copy(&p1, pRspGenUserCaptcha);
+        ctp::CThostFtdcRspInfoField p2;
+        copy(&p2, pRspInfo);
+        std::string d1 = p1.SerializePartialAsString();
+        std::string d2 = p2.SerializePartialAsString();
+        send(ctp::TD_OnRspGenUserCaptcha, &d1, &d2, nRequestID, bIsLast);
+    };
+    void OnRspGenUserText(CThostFtdcRspGenUserTextField *pRspGenUserText, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
+    {
+        ctp::CThostFtdcRspGenUserTextField p1;
+        copy(&p1, pRspGenUserText);
+        ctp::CThostFtdcRspInfoField p2;
+        copy(&p2, pRspInfo);
+        std::string d1 = p1.SerializePartialAsString();
+        std::string d2 = p2.SerializePartialAsString();
+        send(ctp::TD_OnRspGenUserText, &d1, &d2, nRequestID, bIsLast);
+    };
+    void OnRspOrderInsert(CThostFtdcInputOrderField *pInputOrder, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
+    {
+        ctp::CThostFtdcInputOrderField p1;
+        copy(&p1, pInputOrder);
+        ctp::CThostFtdcRspInfoField p2;
+        copy(&p2, pRspInfo);
+        std::string d1 = p1.SerializePartialAsString();
+        std::string d2 = p2.SerializePartialAsString();
+        send(ctp::TD_OnRspOrderInsert, &d1, &d2, nRequestID, bIsLast);
+    };
+    void OnRspParkedOrderInsert(CThostFtdcParkedOrderField *pParkedOrder, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
+    {
+        ctp::CThostFtdcParkedOrderField p1;
+        copy(&p1, pParkedOrder);
+        ctp::CThostFtdcRspInfoField p2;
+        copy(&p2, pRspInfo);
+        std::string d1 = p1.SerializePartialAsString();
+        std::string d2 = p2.SerializePartialAsString();
+        send(ctp::TD_OnRspParkedOrderInsert, &d1, &d2, nRequestID, bIsLast);
+    };
+    void OnRspParkedOrderAction(CThostFtdcParkedOrderActionField *pParkedOrderAction, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
+    {
+        ctp::CThostFtdcParkedOrderActionField p1;
+        copy(&p1, pParkedOrderAction);
+        ctp::CThostFtdcRspInfoField p2;
+        copy(&p2, pRspInfo);
+        std::string d1 = p1.SerializePartialAsString();
+        std::string d2 = p2.SerializePartialAsString();
+        send(ctp::TD_OnRspParkedOrderAction, &d1, &d2, nRequestID, bIsLast);
+    };
+    void OnRspOrderAction(CThostFtdcInputOrderActionField *pInputOrderAction, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
+    {
+        ctp::CThostFtdcInputOrderActionField p1;
+        copy(&p1, pInputOrderAction);
+        ctp::CThostFtdcRspInfoField p2;
+        copy(&p2, pRspInfo);
+        std::string d1 = p1.SerializePartialAsString();
+        std::string d2 = p2.SerializePartialAsString();
+        send(ctp::TD_OnRspOrderAction, &d1, &d2, nRequestID, bIsLast);
+    };
+    void OnRspQueryMaxOrderVolume(CThostFtdcQueryMaxOrderVolumeField *pQueryMaxOrderVolume, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
+    {
+        ctp::CThostFtdcQueryMaxOrderVolumeField p1;
+        copy(&p1, pQueryMaxOrderVolume);
+        ctp::CThostFtdcRspInfoField p2;
+        copy(&p2, pRspInfo);
+        std::string d1 = p1.SerializePartialAsString();
+        std::string d2 = p2.SerializePartialAsString();
+        send(ctp::TD_OnRspQueryMaxOrderVolume, &d1, &d2, nRequestID, bIsLast);
+    };
+    void OnRspSettlementInfoConfirm(CThostFtdcSettlementInfoConfirmField *pSettlementInfoConfirm, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
+    {
+        ctp::CThostFtdcSettlementInfoConfirmField p1;
+        copy(&p1, pSettlementInfoConfirm);
+        ctp::CThostFtdcRspInfoField p2;
+        copy(&p2, pRspInfo);
+        std::string d1 = p1.SerializePartialAsString();
+        std::string d2 = p2.SerializePartialAsString();
+        send(ctp::TD_OnRspSettlementInfoConfirm, &d1, &d2, nRequestID, bIsLast);
+    };
+    void OnRspRemoveParkedOrder(CThostFtdcRemoveParkedOrderField *pRemoveParkedOrder, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
+    {
+        ctp::CThostFtdcRemoveParkedOrderField p1;
+        copy(&p1, pRemoveParkedOrder);
+        ctp::CThostFtdcRspInfoField p2;
+        copy(&p2, pRspInfo);
+        std::string d1 = p1.SerializePartialAsString();
+        std::string d2 = p2.SerializePartialAsString();
+        send(ctp::TD_OnRspRemoveParkedOrder, &d1, &d2, nRequestID, bIsLast);
+    };
+    void OnRspRemoveParkedOrderAction(CThostFtdcRemoveParkedOrderActionField *pRemoveParkedOrderAction, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
+    {
+        ctp::CThostFtdcRemoveParkedOrderActionField p1;
+        copy(&p1, pRemoveParkedOrderAction);
+        ctp::CThostFtdcRspInfoField p2;
+        copy(&p2, pRspInfo);
+        std::string d1 = p1.SerializePartialAsString();
+        std::string d2 = p2.SerializePartialAsString();
+        send(ctp::TD_OnRspRemoveParkedOrderAction, &d1, &d2, nRequestID, bIsLast);
+    };
+    void OnRspExecOrderInsert(CThostFtdcInputExecOrderField *pInputExecOrder, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
+    {
+        ctp::CThostFtdcInputExecOrderField p1;
+        copy(&p1, pInputExecOrder);
+        ctp::CThostFtdcRspInfoField p2;
+        copy(&p2, pRspInfo);
+        std::string d1 = p1.SerializePartialAsString();
+        std::string d2 = p2.SerializePartialAsString();
+        send(ctp::TD_OnRspExecOrderInsert, &d1, &d2, nRequestID, bIsLast);
+    };
+    void OnRspExecOrderAction(CThostFtdcInputExecOrderActionField *pInputExecOrderAction, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
+    {
+        ctp::CThostFtdcInputExecOrderActionField p1;
+        copy(&p1, pInputExecOrderAction);
+        ctp::CThostFtdcRspInfoField p2;
+        copy(&p2, pRspInfo);
+        std::string d1 = p1.SerializePartialAsString();
+        std::string d2 = p2.SerializePartialAsString();
+        send(ctp::TD_OnRspExecOrderAction, &d1, &d2, nRequestID, bIsLast);
+    };
+    void OnRspForQuoteInsert(CThostFtdcInputForQuoteField *pInputForQuote, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
+    {
+        ctp::CThostFtdcInputForQuoteField p1;
+        copy(&p1, pInputForQuote);
+        ctp::CThostFtdcRspInfoField p2;
+        copy(&p2, pRspInfo);
+        std::string d1 = p1.SerializePartialAsString();
+        std::string d2 = p2.SerializePartialAsString();
+        send(ctp::TD_OnRspForQuoteInsert, &d1, &d2, nRequestID, bIsLast);
+    };
+    void OnRspQuoteInsert(CThostFtdcInputQuoteField *pInputQuote, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
+    {
+        ctp::CThostFtdcInputQuoteField p1;
+        copy(&p1, pInputQuote);
+        ctp::CThostFtdcRspInfoField p2;
+        copy(&p2, pRspInfo);
+        std::string d1 = p1.SerializePartialAsString();
+        std::string d2 = p2.SerializePartialAsString();
+        send(ctp::TD_OnRspQuoteInsert, &d1, &d2, nRequestID, bIsLast);
+    };
+    void OnRspQuoteAction(CThostFtdcInputQuoteActionField *pInputQuoteAction, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
+    {
+        ctp::CThostFtdcInputQuoteActionField p1;
+        copy(&p1, pInputQuoteAction);
+        ctp::CThostFtdcRspInfoField p2;
+        copy(&p2, pRspInfo);
+        std::string d1 = p1.SerializePartialAsString();
+        std::string d2 = p2.SerializePartialAsString();
+        send(ctp::TD_OnRspQuoteAction, &d1, &d2, nRequestID, bIsLast);
+    };
+    void OnRspBatchOrderAction(CThostFtdcInputBatchOrderActionField *pInputBatchOrderAction, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
+    {
+        ctp::CThostFtdcInputBatchOrderActionField p1;
+        copy(&p1, pInputBatchOrderAction);
+        ctp::CThostFtdcRspInfoField p2;
+        copy(&p2, pRspInfo);
+        std::string d1 = p1.SerializePartialAsString();
+        std::string d2 = p2.SerializePartialAsString();
+        send(ctp::TD_OnRspBatchOrderAction, &d1, &d2, nRequestID, bIsLast);
+    };
+    void OnRspOptionSelfCloseInsert(CThostFtdcInputOptionSelfCloseField *pInputOptionSelfClose, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
+    {
+        ctp::CThostFtdcInputOptionSelfCloseField p1;
+        copy(&p1, pInputOptionSelfClose);
+        ctp::CThostFtdcRspInfoField p2;
+        copy(&p2, pRspInfo);
+        std::string d1 = p1.SerializePartialAsString();
+        std::string d2 = p2.SerializePartialAsString();
+        send(ctp::TD_OnRspOptionSelfCloseInsert, &d1, &d2, nRequestID, bIsLast);
+    };
+    void OnRspOptionSelfCloseAction(CThostFtdcInputOptionSelfCloseActionField *pInputOptionSelfCloseAction, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
+    {
+        ctp::CThostFtdcInputOptionSelfCloseActionField p1;
+        copy(&p1, pInputOptionSelfCloseAction);
+        ctp::CThostFtdcRspInfoField p2;
+        copy(&p2, pRspInfo);
+        std::string d1 = p1.SerializePartialAsString();
+        std::string d2 = p2.SerializePartialAsString();
+        send(ctp::TD_OnRspOptionSelfCloseAction, &d1, &d2, nRequestID, bIsLast);
+    };
+    void OnRspCombActionInsert(CThostFtdcInputCombActionField *pInputCombAction, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
+    {
+        ctp::CThostFtdcInputCombActionField p1;
+        copy(&p1, pInputCombAction);
+        ctp::CThostFtdcRspInfoField p2;
+        copy(&p2, pRspInfo);
+        std::string d1 = p1.SerializePartialAsString();
+        std::string d2 = p2.SerializePartialAsString();
+        send(ctp::TD_OnRspCombActionInsert, &d1, &d2, nRequestID, bIsLast);
+    };
+    void OnRspQryOrder(CThostFtdcOrderField *pOrder, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
+    {
+        ctp::CThostFtdcOrderField p1;
+        copy(&p1, pOrder);
+        ctp::CThostFtdcRspInfoField p2;
+        copy(&p2, pRspInfo);
+        std::string d1 = p1.SerializePartialAsString();
+        std::string d2 = p2.SerializePartialAsString();
+        send(ctp::TD_OnRspQryOrder, &d1, &d2, nRequestID, bIsLast);
+    };
+    void OnRspQryTrade(CThostFtdcTradeField *pTrade, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
+    {
+        ctp::CThostFtdcTradeField p1;
+        copy(&p1, pTrade);
+        ctp::CThostFtdcRspInfoField p2;
+        copy(&p2, pRspInfo);
+        std::string d1 = p1.SerializePartialAsString();
+        std::string d2 = p2.SerializePartialAsString();
+        send(ctp::TD_OnRspQryTrade, &d1, &d2, nRequestID, bIsLast);
+    };
+    void OnRspQryInvestorPosition(CThostFtdcInvestorPositionField *pInvestorPosition, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
+    {
+        ctp::CThostFtdcInvestorPositionField p1;
+        copy(&p1, pInvestorPosition);
+        ctp::CThostFtdcRspInfoField p2;
+        copy(&p2, pRspInfo);
+        std::string d1 = p1.SerializePartialAsString();
+        std::string d2 = p2.SerializePartialAsString();
+        send(ctp::TD_OnRspQryInvestorPosition, &d1, &d2, nRequestID, bIsLast);
+    };
+    void OnRspQryTradingAccount(CThostFtdcTradingAccountField *pTradingAccount, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
+    {
+        ctp::CThostFtdcTradingAccountField p1;
+        copy(&p1, pTradingAccount);
+        ctp::CThostFtdcRspInfoField p2;
+        copy(&p2, pRspInfo);
+        std::string d1 = p1.SerializePartialAsString();
+        std::string d2 = p2.SerializePartialAsString();
+        send(ctp::TD_OnRspQryTradingAccount, &d1, &d2, nRequestID, bIsLast);
+    };
+    void OnRspQryInvestor(CThostFtdcInvestorField *pInvestor, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
+    {
+        ctp::CThostFtdcInvestorField p1;
+        copy(&p1, pInvestor);
+        ctp::CThostFtdcRspInfoField p2;
+        copy(&p2, pRspInfo);
+        std::string d1 = p1.SerializePartialAsString();
+        std::string d2 = p2.SerializePartialAsString();
+        send(ctp::TD_OnRspQryInvestor, &d1, &d2, nRequestID, bIsLast);
+    };
+    void OnRspQryTradingCode(CThostFtdcTradingCodeField *pTradingCode, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
+    {
+        ctp::CThostFtdcTradingCodeField p1;
+        copy(&p1, pTradingCode);
+        ctp::CThostFtdcRspInfoField p2;
+        copy(&p2, pRspInfo);
+        std::string d1 = p1.SerializePartialAsString();
+        std::string d2 = p2.SerializePartialAsString();
+        send(ctp::TD_OnRspQryTradingCode, &d1, &d2, nRequestID, bIsLast);
+    };
+    void OnRspQryInstrumentMarginRate(CThostFtdcInstrumentMarginRateField *pInstrumentMarginRate, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
+    {
+        ctp::CThostFtdcInstrumentMarginRateField p1;
+        copy(&p1, pInstrumentMarginRate);
+        ctp::CThostFtdcRspInfoField p2;
+        copy(&p2, pRspInfo);
+        std::string d1 = p1.SerializePartialAsString();
+        std::string d2 = p2.SerializePartialAsString();
+        send(ctp::TD_OnRspQryInstrumentMarginRate, &d1, &d2, nRequestID, bIsLast);
+    };
+    void OnRspQryInstrumentCommissionRate(CThostFtdcInstrumentCommissionRateField *pInstrumentCommissionRate, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
+    {
+        ctp::CThostFtdcInstrumentCommissionRateField p1;
+        copy(&p1, pInstrumentCommissionRate);
+        ctp::CThostFtdcRspInfoField p2;
+        copy(&p2, pRspInfo);
+        std::string d1 = p1.SerializePartialAsString();
+        std::string d2 = p2.SerializePartialAsString();
+        send(ctp::TD_OnRspQryInstrumentCommissionRate, &d1, &d2, nRequestID, bIsLast);
+    };
+    void OnRspQryExchange(CThostFtdcExchangeField *pExchange, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
+    {
+        ctp::CThostFtdcExchangeField p1;
+        copy(&p1, pExchange);
+        ctp::CThostFtdcRspInfoField p2;
+        copy(&p2, pRspInfo);
+        std::string d1 = p1.SerializePartialAsString();
+        std::string d2 = p2.SerializePartialAsString();
+        send(ctp::TD_OnRspQryExchange, &d1, &d2, nRequestID, bIsLast);
+    };
+    void OnRspQryProduct(CThostFtdcProductField *pProduct, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
+    {
+        ctp::CThostFtdcProductField p1;
+        copy(&p1, pProduct);
+        ctp::CThostFtdcRspInfoField p2;
+        copy(&p2, pRspInfo);
+        std::string d1 = p1.SerializePartialAsString();
+        std::string d2 = p2.SerializePartialAsString();
+        send(ctp::TD_OnRspQryProduct, &d1, &d2, nRequestID, bIsLast);
+    };
+    void OnRspQryInstrument(CThostFtdcInstrumentField *pInstrument, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
+    {
+        ctp::CThostFtdcInstrumentField p1;
+        copy(&p1, pInstrument);
+        ctp::CThostFtdcRspInfoField p2;
+        copy(&p2, pRspInfo);
+        std::string d1 = p1.SerializePartialAsString();
+        std::string d2 = p2.SerializePartialAsString();
+        send(ctp::TD_OnRspQryInstrument, &d1, &d2, nRequestID, bIsLast);
+    };
+    void OnRspQryDepthMarketData(CThostFtdcDepthMarketDataField *pDepthMarketData, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
+    {
+        ctp::CThostFtdcDepthMarketDataField p1;
+        copy(&p1, pDepthMarketData);
+        ctp::CThostFtdcRspInfoField p2;
+        copy(&p2, pRspInfo);
+        std::string d1 = p1.SerializePartialAsString();
+        std::string d2 = p2.SerializePartialAsString();
+        send(ctp::TD_OnRspQryDepthMarketData, &d1, &d2, nRequestID, bIsLast);
+    };
+    void OnRspQrySettlementInfo(CThostFtdcSettlementInfoField *pSettlementInfo, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
+    {
+        ctp::CThostFtdcSettlementInfoField p1;
+        copy(&p1, pSettlementInfo);
+        ctp::CThostFtdcRspInfoField p2;
+        copy(&p2, pRspInfo);
+        std::string d1 = p1.SerializePartialAsString();
+        std::string d2 = p2.SerializePartialAsString();
+        send(ctp::TD_OnRspQrySettlementInfo, &d1, &d2, nRequestID, bIsLast);
+    };
+    void OnRspQryTransferBank(CThostFtdcTransferBankField *pTransferBank, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
+    {
+        ctp::CThostFtdcTransferBankField p1;
+        copy(&p1, pTransferBank);
+        ctp::CThostFtdcRspInfoField p2;
+        copy(&p2, pRspInfo);
+        std::string d1 = p1.SerializePartialAsString();
+        std::string d2 = p2.SerializePartialAsString();
+        send(ctp::TD_OnRspQryTransferBank, &d1, &d2, nRequestID, bIsLast);
+    };
+    void OnRspQryInvestorPositionDetail(CThostFtdcInvestorPositionDetailField *pInvestorPositionDetail, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
+    {
+        ctp::CThostFtdcInvestorPositionDetailField p1;
+        copy(&p1, pInvestorPositionDetail);
+        ctp::CThostFtdcRspInfoField p2;
+        copy(&p2, pRspInfo);
+        std::string d1 = p1.SerializePartialAsString();
+        std::string d2 = p2.SerializePartialAsString();
+        send(ctp::TD_OnRspQryInvestorPositionDetail, &d1, &d2, nRequestID, bIsLast);
+    };
+    void OnRspQryNotice(CThostFtdcNoticeField *pNotice, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
+    {
+        ctp::CThostFtdcNoticeField p1;
+        copy(&p1, pNotice);
+        ctp::CThostFtdcRspInfoField p2;
+        copy(&p2, pRspInfo);
+        std::string d1 = p1.SerializePartialAsString();
+        std::string d2 = p2.SerializePartialAsString();
+        send(ctp::TD_OnRspQryNotice, &d1, &d2, nRequestID, bIsLast);
+    };
+    void OnRspQrySettlementInfoConfirm(CThostFtdcSettlementInfoConfirmField *pSettlementInfoConfirm, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
+    {
+        ctp::CThostFtdcSettlementInfoConfirmField p1;
+        copy(&p1, pSettlementInfoConfirm);
+        ctp::CThostFtdcRspInfoField p2;
+        copy(&p2, pRspInfo);
+        std::string d1 = p1.SerializePartialAsString();
+        std::string d2 = p2.SerializePartialAsString();
+        send(ctp::TD_OnRspQrySettlementInfoConfirm, &d1, &d2, nRequestID, bIsLast);
+    };
+    void OnRspQryInvestorPositionCombineDetail(CThostFtdcInvestorPositionCombineDetailField *pInvestorPositionCombineDetail, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
+    {
+        ctp::CThostFtdcInvestorPositionCombineDetailField p1;
+        copy(&p1, pInvestorPositionCombineDetail);
+        ctp::CThostFtdcRspInfoField p2;
+        copy(&p2, pRspInfo);
+        std::string d1 = p1.SerializePartialAsString();
+        std::string d2 = p2.SerializePartialAsString();
+        send(ctp::TD_OnRspQryInvestorPositionCombineDetail, &d1, &d2, nRequestID, bIsLast);
+    };
+    void OnRspQryCFMMCTradingAccountKey(CThostFtdcCFMMCTradingAccountKeyField *pCFMMCTradingAccountKey, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
+    {
+        ctp::CThostFtdcCFMMCTradingAccountKeyField p1;
+        copy(&p1, pCFMMCTradingAccountKey);
+        ctp::CThostFtdcRspInfoField p2;
+        copy(&p2, pRspInfo);
+        std::string d1 = p1.SerializePartialAsString();
+        std::string d2 = p2.SerializePartialAsString();
+        send(ctp::TD_OnRspQryCFMMCTradingAccountKey, &d1, &d2, nRequestID, bIsLast);
+    };
+    void OnRspQryEWarrantOffset(CThostFtdcEWarrantOffsetField *pEWarrantOffset, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
+    {
+        ctp::CThostFtdcEWarrantOffsetField p1;
+        copy(&p1, pEWarrantOffset);
+        ctp::CThostFtdcRspInfoField p2;
+        copy(&p2, pRspInfo);
+        std::string d1 = p1.SerializePartialAsString();
+        std::string d2 = p2.SerializePartialAsString();
+        send(ctp::TD_OnRspQryEWarrantOffset, &d1, &d2, nRequestID, bIsLast);
+    };
+    void OnRspQryInvestorProductGroupMargin(CThostFtdcInvestorProductGroupMarginField *pInvestorProductGroupMargin, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
+    {
+        ctp::CThostFtdcInvestorProductGroupMarginField p1;
+        copy(&p1, pInvestorProductGroupMargin);
+        ctp::CThostFtdcRspInfoField p2;
+        copy(&p2, pRspInfo);
+        std::string d1 = p1.SerializePartialAsString();
+        std::string d2 = p2.SerializePartialAsString();
+        send(ctp::TD_OnRspQryInvestorProductGroupMargin, &d1, &d2, nRequestID, bIsLast);
+    };
+    void OnRspQryExchangeMarginRate(CThostFtdcExchangeMarginRateField *pExchangeMarginRate, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
+    {
+        ctp::CThostFtdcExchangeMarginRateField p1;
+        copy(&p1, pExchangeMarginRate);
+        ctp::CThostFtdcRspInfoField p2;
+        copy(&p2, pRspInfo);
+        std::string d1 = p1.SerializePartialAsString();
+        std::string d2 = p2.SerializePartialAsString();
+        send(ctp::TD_OnRspQryExchangeMarginRate, &d1, &d2, nRequestID, bIsLast);
+    };
+    void OnRspQryExchangeMarginRateAdjust(CThostFtdcExchangeMarginRateAdjustField *pExchangeMarginRateAdjust, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
+    {
+        ctp::CThostFtdcExchangeMarginRateAdjustField p1;
+        copy(&p1, pExchangeMarginRateAdjust);
+        ctp::CThostFtdcRspInfoField p2;
+        copy(&p2, pRspInfo);
+        std::string d1 = p1.SerializePartialAsString();
+        std::string d2 = p2.SerializePartialAsString();
+        send(ctp::TD_OnRspQryExchangeMarginRateAdjust, &d1, &d2, nRequestID, bIsLast);
+    };
+    void OnRspQryExchangeRate(CThostFtdcExchangeRateField *pExchangeRate, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
+    {
+        ctp::CThostFtdcExchangeRateField p1;
+        copy(&p1, pExchangeRate);
+        ctp::CThostFtdcRspInfoField p2;
+        copy(&p2, pRspInfo);
+        std::string d1 = p1.SerializePartialAsString();
+        std::string d2 = p2.SerializePartialAsString();
+        send(ctp::TD_OnRspQryExchangeRate, &d1, &d2, nRequestID, bIsLast);
+    };
+    void OnRspQrySecAgentACIDMap(CThostFtdcSecAgentACIDMapField *pSecAgentACIDMap, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
+    {
+        ctp::CThostFtdcSecAgentACIDMapField p1;
+        copy(&p1, pSecAgentACIDMap);
+        ctp::CThostFtdcRspInfoField p2;
+        copy(&p2, pRspInfo);
+        std::string d1 = p1.SerializePartialAsString();
+        std::string d2 = p2.SerializePartialAsString();
+        send(ctp::TD_OnRspQrySecAgentACIDMap, &d1, &d2, nRequestID, bIsLast);
+    };
+    void OnRspQryProductExchRate(CThostFtdcProductExchRateField *pProductExchRate, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
+    {
+        ctp::CThostFtdcProductExchRateField p1;
+        copy(&p1, pProductExchRate);
+        ctp::CThostFtdcRspInfoField p2;
+        copy(&p2, pRspInfo);
+        std::string d1 = p1.SerializePartialAsString();
+        std::string d2 = p2.SerializePartialAsString();
+        send(ctp::TD_OnRspQryProductExchRate, &d1, &d2, nRequestID, bIsLast);
+    };
+    void OnRspQryProductGroup(CThostFtdcProductGroupField *pProductGroup, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
+    {
+        ctp::CThostFtdcProductGroupField p1;
+        copy(&p1, pProductGroup);
+        ctp::CThostFtdcRspInfoField p2;
+        copy(&p2, pRspInfo);
+        std::string d1 = p1.SerializePartialAsString();
+        std::string d2 = p2.SerializePartialAsString();
+        send(ctp::TD_OnRspQryProductGroup, &d1, &d2, nRequestID, bIsLast);
+    };
+    void OnRspQryMMInstrumentCommissionRate(CThostFtdcMMInstrumentCommissionRateField *pMMInstrumentCommissionRate, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
+    {
+        ctp::CThostFtdcMMInstrumentCommissionRateField p1;
+        copy(&p1, pMMInstrumentCommissionRate);
+        ctp::CThostFtdcRspInfoField p2;
+        copy(&p2, pRspInfo);
+        std::string d1 = p1.SerializePartialAsString();
+        std::string d2 = p2.SerializePartialAsString();
+        send(ctp::TD_OnRspQryMMInstrumentCommissionRate, &d1, &d2, nRequestID, bIsLast);
+    };
+    void OnRspQryMMOptionInstrCommRate(CThostFtdcMMOptionInstrCommRateField *pMMOptionInstrCommRate, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
+    {
+        ctp::CThostFtdcMMOptionInstrCommRateField p1;
+        copy(&p1, pMMOptionInstrCommRate);
+        ctp::CThostFtdcRspInfoField p2;
+        copy(&p2, pRspInfo);
+        std::string d1 = p1.SerializePartialAsString();
+        std::string d2 = p2.SerializePartialAsString();
+        send(ctp::TD_OnRspQryMMOptionInstrCommRate, &d1, &d2, nRequestID, bIsLast);
+    };
+    void OnRspQryInstrumentOrderCommRate(CThostFtdcInstrumentOrderCommRateField *pInstrumentOrderCommRate, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
+    {
+        ctp::CThostFtdcInstrumentOrderCommRateField p1;
+        copy(&p1, pInstrumentOrderCommRate);
+        ctp::CThostFtdcRspInfoField p2;
+        copy(&p2, pRspInfo);
+        std::string d1 = p1.SerializePartialAsString();
+        std::string d2 = p2.SerializePartialAsString();
+        send(ctp::TD_OnRspQryInstrumentOrderCommRate, &d1, &d2, nRequestID, bIsLast);
+    };
+    void OnRspQrySecAgentTradingAccount(CThostFtdcTradingAccountField *pTradingAccount, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
+    {
+        ctp::CThostFtdcTradingAccountField p1;
+        copy(&p1, pTradingAccount);
+        ctp::CThostFtdcRspInfoField p2;
+        copy(&p2, pRspInfo);
+        std::string d1 = p1.SerializePartialAsString();
+        std::string d2 = p2.SerializePartialAsString();
+        send(ctp::TD_OnRspQrySecAgentTradingAccount, &d1, &d2, nRequestID, bIsLast);
+    };
+    void OnRspQrySecAgentCheckMode(CThostFtdcSecAgentCheckModeField *pSecAgentCheckMode, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
+    {
+        ctp::CThostFtdcSecAgentCheckModeField p1;
+        copy(&p1, pSecAgentCheckMode);
+        ctp::CThostFtdcRspInfoField p2;
+        copy(&p2, pRspInfo);
+        std::string d1 = p1.SerializePartialAsString();
+        std::string d2 = p2.SerializePartialAsString();
+        send(ctp::TD_OnRspQrySecAgentCheckMode, &d1, &d2, nRequestID, bIsLast);
+    };
+    void OnRspQrySecAgentTradeInfo(CThostFtdcSecAgentTradeInfoField *pSecAgentTradeInfo, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
+    {
+        ctp::CThostFtdcSecAgentTradeInfoField p1;
+        copy(&p1, pSecAgentTradeInfo);
+        ctp::CThostFtdcRspInfoField p2;
+        copy(&p2, pRspInfo);
+        std::string d1 = p1.SerializePartialAsString();
+        std::string d2 = p2.SerializePartialAsString();
+        send(ctp::TD_OnRspQrySecAgentTradeInfo, &d1, &d2, nRequestID, bIsLast);
+    };
+    void OnRspQryOptionInstrTradeCost(CThostFtdcOptionInstrTradeCostField *pOptionInstrTradeCost, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
+    {
+        ctp::CThostFtdcOptionInstrTradeCostField p1;
+        copy(&p1, pOptionInstrTradeCost);
+        ctp::CThostFtdcRspInfoField p2;
+        copy(&p2, pRspInfo);
+        std::string d1 = p1.SerializePartialAsString();
+        std::string d2 = p2.SerializePartialAsString();
+        send(ctp::TD_OnRspQryOptionInstrTradeCost, &d1, &d2, nRequestID, bIsLast);
+    };
+    void OnRspQryOptionInstrCommRate(CThostFtdcOptionInstrCommRateField *pOptionInstrCommRate, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
+    {
+        ctp::CThostFtdcOptionInstrCommRateField p1;
+        copy(&p1, pOptionInstrCommRate);
+        ctp::CThostFtdcRspInfoField p2;
+        copy(&p2, pRspInfo);
+        std::string d1 = p1.SerializePartialAsString();
+        std::string d2 = p2.SerializePartialAsString();
+        send(ctp::TD_OnRspQryOptionInstrCommRate, &d1, &d2, nRequestID, bIsLast);
+    };
+    void OnRspQryExecOrder(CThostFtdcExecOrderField *pExecOrder, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
+    {
+        ctp::CThostFtdcExecOrderField p1;
+        copy(&p1, pExecOrder);
+        ctp::CThostFtdcRspInfoField p2;
+        copy(&p2, pRspInfo);
+        std::string d1 = p1.SerializePartialAsString();
+        std::string d2 = p2.SerializePartialAsString();
+        send(ctp::TD_OnRspQryExecOrder, &d1, &d2, nRequestID, bIsLast);
+    };
+    void OnRspQryForQuote(CThostFtdcForQuoteField *pForQuote, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
+    {
+        ctp::CThostFtdcForQuoteField p1;
+        copy(&p1, pForQuote);
+        ctp::CThostFtdcRspInfoField p2;
+        copy(&p2, pRspInfo);
+        std::string d1 = p1.SerializePartialAsString();
+        std::string d2 = p2.SerializePartialAsString();
+        send(ctp::TD_OnRspQryForQuote, &d1, &d2, nRequestID, bIsLast);
+    };
+    void OnRspQryQuote(CThostFtdcQuoteField *pQuote, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
+    {
+        ctp::CThostFtdcQuoteField p1;
+        copy(&p1, pQuote);
+        ctp::CThostFtdcRspInfoField p2;
+        copy(&p2, pRspInfo);
+        std::string d1 = p1.SerializePartialAsString();
+        std::string d2 = p2.SerializePartialAsString();
+        send(ctp::TD_OnRspQryQuote, &d1, &d2, nRequestID, bIsLast);
+    };
+    void OnRspQryOptionSelfClose(CThostFtdcOptionSelfCloseField *pOptionSelfClose, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
+    {
+        ctp::CThostFtdcOptionSelfCloseField p1;
+        copy(&p1, pOptionSelfClose);
+        ctp::CThostFtdcRspInfoField p2;
+        copy(&p2, pRspInfo);
+        std::string d1 = p1.SerializePartialAsString();
+        std::string d2 = p2.SerializePartialAsString();
+        send(ctp::TD_OnRspQryOptionSelfClose, &d1, &d2, nRequestID, bIsLast);
+    };
+    void OnRspQryInvestUnit(CThostFtdcInvestUnitField *pInvestUnit, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
+    {
+        ctp::CThostFtdcInvestUnitField p1;
+        copy(&p1, pInvestUnit);
+        ctp::CThostFtdcRspInfoField p2;
+        copy(&p2, pRspInfo);
+        std::string d1 = p1.SerializePartialAsString();
+        std::string d2 = p2.SerializePartialAsString();
+        send(ctp::TD_OnRspQryInvestUnit, &d1, &d2, nRequestID, bIsLast);
+    };
+    void OnRspQryCombInstrumentGuard(CThostFtdcCombInstrumentGuardField *pCombInstrumentGuard, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
+    {
+        ctp::CThostFtdcCombInstrumentGuardField p1;
+        copy(&p1, pCombInstrumentGuard);
+        ctp::CThostFtdcRspInfoField p2;
+        copy(&p2, pRspInfo);
+        std::string d1 = p1.SerializePartialAsString();
+        std::string d2 = p2.SerializePartialAsString();
+        send(ctp::TD_OnRspQryCombInstrumentGuard, &d1, &d2, nRequestID, bIsLast);
+    };
+    void OnRspQryCombAction(CThostFtdcCombActionField *pCombAction, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
+    {
+        ctp::CThostFtdcCombActionField p1;
+        copy(&p1, pCombAction);
+        ctp::CThostFtdcRspInfoField p2;
+        copy(&p2, pRspInfo);
+        std::string d1 = p1.SerializePartialAsString();
+        std::string d2 = p2.SerializePartialAsString();
+        send(ctp::TD_OnRspQryCombAction, &d1, &d2, nRequestID, bIsLast);
+    };
+    void OnRspQryTransferSerial(CThostFtdcTransferSerialField *pTransferSerial, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
+    {
+        ctp::CThostFtdcTransferSerialField p1;
+        copy(&p1, pTransferSerial);
+        ctp::CThostFtdcRspInfoField p2;
+        copy(&p2, pRspInfo);
+        std::string d1 = p1.SerializePartialAsString();
+        std::string d2 = p2.SerializePartialAsString();
+        send(ctp::TD_OnRspQryTransferSerial, &d1, &d2, nRequestID, bIsLast);
+    };
+    void OnRspQryAccountregister(CThostFtdcAccountregisterField *pAccountregister, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
+    {
+        ctp::CThostFtdcAccountregisterField p1;
+        copy(&p1, pAccountregister);
+        ctp::CThostFtdcRspInfoField p2;
+        copy(&p2, pRspInfo);
+        std::string d1 = p1.SerializePartialAsString();
+        std::string d2 = p2.SerializePartialAsString();
+        send(ctp::TD_OnRspQryAccountregister, &d1, &d2, nRequestID, bIsLast);
+    };
+    void OnRspError(CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
+    {
+        ctp::CThostFtdcRspInfoField p1;
+        copy(&p1, pRspInfo);
+        std::string d = p1.SerializePartialAsString();
+        send(ctp::TD_OnRspError, &d, 0, nRequestID, bIsLast);
+    };
+    void OnRtnOrder(CThostFtdcOrderField *pOrder)
+    {
+        ctp::CThostFtdcOrderField p1;
+        copy(&p1, pOrder);
+        std::string d = p1.SerializePartialAsString();
+        send(ctp::TD_OnRtnOrder, &d, 0, 0, true);
+    };
+    void OnRtnTrade(CThostFtdcTradeField *pTrade)
+    {
+        ctp::CThostFtdcTradeField p1;
+        copy(&p1, pTrade);
+        std::string d = p1.SerializePartialAsString();
+        send(ctp::TD_OnRtnTrade, &d, 0, 0, true);
+    };
+    void OnErrRtnOrderInsert(CThostFtdcInputOrderField *pInputOrder, CThostFtdcRspInfoField *pRspInfo)
+    {
+        ctp::CThostFtdcInputOrderField p1;
+        copy(&p1, pInputOrder);
+        std::string d = p1.SerializePartialAsString();
+        send(ctp::TD_OnErrRtnOrderInsert, &d, 0, 0, true);
+    };
+    void OnErrRtnOrderAction(CThostFtdcOrderActionField *pOrderAction, CThostFtdcRspInfoField *pRspInfo)
+    {
+        ctp::CThostFtdcOrderActionField p1;
+        copy(&p1, pOrderAction);
+        std::string d = p1.SerializePartialAsString();
+        send(ctp::TD_OnErrRtnOrderAction, &d, 0, 0, true);
+    };
+    void OnRtnInstrumentStatus(CThostFtdcInstrumentStatusField *pInstrumentStatus)
+    {
+        ctp::CThostFtdcInstrumentStatusField p1;
+        copy(&p1, pInstrumentStatus);
+        std::string d = p1.SerializePartialAsString();
+        send(ctp::TD_OnRtnInstrumentStatus, &d, 0, 0, true);
+    };
+    void OnRtnBulletin(CThostFtdcBulletinField *pBulletin)
+    {
+        ctp::CThostFtdcBulletinField p1;
+        copy(&p1, pBulletin);
+        std::string d = p1.SerializePartialAsString();
+        send(ctp::TD_OnRtnBulletin, &d, 0, 0, true);
+    };
+    void OnRtnTradingNotice(CThostFtdcTradingNoticeInfoField *pTradingNoticeInfo)
+    {
+        ctp::CThostFtdcTradingNoticeInfoField p1;
+        copy(&p1, pTradingNoticeInfo);
+        std::string d = p1.SerializePartialAsString();
+        send(ctp::TD_OnRtnTradingNotice, &d, 0, 0, true);
+    };
+    void OnRtnErrorConditionalOrder(CThostFtdcErrorConditionalOrderField *pErrorConditionalOrder)
+    {
+        ctp::CThostFtdcErrorConditionalOrderField p1;
+        copy(&p1, pErrorConditionalOrder);
+        std::string d = p1.SerializePartialAsString();
+        send(ctp::TD_OnRtnErrorConditionalOrder, &d, 0, 0, true);
+    };
+    void OnRtnExecOrder(CThostFtdcExecOrderField *pExecOrder)
+    {
+        ctp::CThostFtdcExecOrderField p1;
+        copy(&p1, pExecOrder);
+        std::string d = p1.SerializePartialAsString();
+        send(ctp::TD_OnRtnExecOrder, &d, 0, 0, true);
+    };
+    void OnErrRtnExecOrderInsert(CThostFtdcInputExecOrderField *pInputExecOrder, CThostFtdcRspInfoField *pRspInfo)
+    {
+        ctp::CThostFtdcInputExecOrderField p1;
+        copy(&p1, pInputExecOrder);
+        std::string d = p1.SerializePartialAsString();
+        send(ctp::TD_OnErrRtnExecOrderInsert, &d, 0, 0, true);
+    };
+    void OnErrRtnExecOrderAction(CThostFtdcExecOrderActionField *pExecOrderAction, CThostFtdcRspInfoField *pRspInfo)
+    {
+        ctp::CThostFtdcExecOrderActionField p1;
+        copy(&p1, pExecOrderAction);
+        std::string d = p1.SerializePartialAsString();
+        send(ctp::TD_OnErrRtnExecOrderAction, &d, 0, 0, true);
+    };
+    void OnErrRtnForQuoteInsert(CThostFtdcInputForQuoteField *pInputForQuote, CThostFtdcRspInfoField *pRspInfo)
+    {
+        ctp::CThostFtdcInputForQuoteField p1;
+        copy(&p1, pInputForQuote);
+        std::string d = p1.SerializePartialAsString();
+        send(ctp::TD_OnErrRtnForQuoteInsert, &d, 0, 0, true);
+    };
+    void OnRtnQuote(CThostFtdcQuoteField *pQuote)
+    {
+        ctp::CThostFtdcQuoteField p1;
+        copy(&p1, pQuote);
+        std::string d = p1.SerializePartialAsString();
+        send(ctp::TD_OnRtnQuote, &d, 0, 0, true);
+    };
+    void OnErrRtnQuoteInsert(CThostFtdcInputQuoteField *pInputQuote, CThostFtdcRspInfoField *pRspInfo)
+    {
+        ctp::CThostFtdcInputQuoteField p1;
+        copy(&p1, pInputQuote);
+        std::string d = p1.SerializePartialAsString();
+        send(ctp::TD_OnErrRtnQuoteInsert, &d, 0, 0, true);
+    };
+    void OnErrRtnQuoteAction(CThostFtdcQuoteActionField *pQuoteAction, CThostFtdcRspInfoField *pRspInfo)
+    {
+        ctp::CThostFtdcQuoteActionField p1;
+        copy(&p1, pQuoteAction);
+        std::string d = p1.SerializePartialAsString();
+        send(ctp::TD_OnErrRtnQuoteAction, &d, 0, 0, true);
+    };
+    void OnRtnForQuoteRsp(CThostFtdcForQuoteRspField *pForQuoteRsp)
+    {
+        ctp::CThostFtdcForQuoteRspField p1;
+        copy(&p1, pForQuoteRsp);
+        std::string d = p1.SerializePartialAsString();
+        send(ctp::TD_OnRtnForQuoteRsp, &d, 0, 0, true);
+    };
+    void OnRtnCFMMCTradingAccountToken(CThostFtdcCFMMCTradingAccountTokenField *pCFMMCTradingAccountToken)
+    {
+        ctp::CThostFtdcCFMMCTradingAccountTokenField p1;
+        copy(&p1, pCFMMCTradingAccountToken);
+        std::string d = p1.SerializePartialAsString();
+        send(ctp::TD_OnRtnCFMMCTradingAccountToken, &d, 0, 0, true);
+    };
+    void OnErrRtnBatchOrderAction(CThostFtdcBatchOrderActionField *pBatchOrderAction, CThostFtdcRspInfoField *pRspInfo)
+    {
+        ctp::CThostFtdcBatchOrderActionField p1;
+        copy(&p1, pBatchOrderAction);
+        std::string d = p1.SerializePartialAsString();
+        send(ctp::TD_OnErrRtnBatchOrderAction, &d, 0, 0, true);
+    };
+    void OnRtnOptionSelfClose(CThostFtdcOptionSelfCloseField *pOptionSelfClose)
+    {
+        ctp::CThostFtdcOptionSelfCloseField p1;
+        copy(&p1, pOptionSelfClose);
+        std::string d = p1.SerializePartialAsString();
+        send(ctp::TD_OnRtnOptionSelfClose, &d, 0, 0, true);
+    };
+    void OnErrRtnOptionSelfCloseInsert(CThostFtdcInputOptionSelfCloseField *pInputOptionSelfClose, CThostFtdcRspInfoField *pRspInfo)
+    {
+        ctp::CThostFtdcInputOptionSelfCloseField p1;
+        copy(&p1, pInputOptionSelfClose);
+        std::string d = p1.SerializePartialAsString();
+        send(ctp::TD_OnErrRtnOptionSelfCloseInsert, &d, 0, 0, true);
+    };
+    void OnErrRtnOptionSelfCloseAction(CThostFtdcOptionSelfCloseActionField *pOptionSelfCloseAction, CThostFtdcRspInfoField *pRspInfo)
+    {
+        ctp::CThostFtdcOptionSelfCloseActionField p1;
+        copy(&p1, pOptionSelfCloseAction);
+        std::string d = p1.SerializePartialAsString();
+        send(ctp::TD_OnErrRtnOptionSelfCloseAction, &d, 0, 0, true);
+    };
+    void OnRtnCombAction(CThostFtdcCombActionField *pCombAction)
+    {
+        ctp::CThostFtdcCombActionField p1;
+        copy(&p1, pCombAction);
+        std::string d = p1.SerializePartialAsString();
+        send(ctp::TD_OnRtnCombAction, &d, 0, 0, true);
+    };
+    void OnErrRtnCombActionInsert(CThostFtdcInputCombActionField *pInputCombAction, CThostFtdcRspInfoField *pRspInfo)
+    {
+        ctp::CThostFtdcInputCombActionField p1;
+        copy(&p1, pInputCombAction);
+        std::string d = p1.SerializePartialAsString();
+        send(ctp::TD_OnErrRtnCombActionInsert, &d, 0, 0, true);
+    };
+    void OnRspQryContractBank(CThostFtdcContractBankField *pContractBank, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
+    {
+        ctp::CThostFtdcContractBankField p1;
+        copy(&p1, pContractBank);
+        ctp::CThostFtdcRspInfoField p2;
+        copy(&p2, pRspInfo);
+        std::string d1 = p1.SerializePartialAsString();
+        std::string d2 = p2.SerializePartialAsString();
+        send(ctp::TD_OnRspQryContractBank, &d1, &d2, nRequestID, bIsLast);
+    };
+    void OnRspQryParkedOrder(CThostFtdcParkedOrderField *pParkedOrder, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
+    {
+        ctp::CThostFtdcParkedOrderField p1;
+        copy(&p1, pParkedOrder);
+        ctp::CThostFtdcRspInfoField p2;
+        copy(&p2, pRspInfo);
+        std::string d1 = p1.SerializePartialAsString();
+        std::string d2 = p2.SerializePartialAsString();
+        send(ctp::TD_OnRspQryParkedOrder, &d1, &d2, nRequestID, bIsLast);
+    };
+    void OnRspQryParkedOrderAction(CThostFtdcParkedOrderActionField *pParkedOrderAction, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
+    {
+        ctp::CThostFtdcParkedOrderActionField p1;
+        copy(&p1, pParkedOrderAction);
+        ctp::CThostFtdcRspInfoField p2;
+        copy(&p2, pRspInfo);
+        std::string d1 = p1.SerializePartialAsString();
+        std::string d2 = p2.SerializePartialAsString();
+        send(ctp::TD_OnRspQryParkedOrderAction, &d1, &d2, nRequestID, bIsLast);
+    };
+    void OnRspQryTradingNotice(CThostFtdcTradingNoticeField *pTradingNotice, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
+    {
+        ctp::CThostFtdcTradingNoticeField p1;
+        copy(&p1, pTradingNotice);
+        ctp::CThostFtdcRspInfoField p2;
+        copy(&p2, pRspInfo);
+        std::string d1 = p1.SerializePartialAsString();
+        std::string d2 = p2.SerializePartialAsString();
+        send(ctp::TD_OnRspQryTradingNotice, &d1, &d2, nRequestID, bIsLast);
+    };
+    void OnRspQryBrokerTradingParams(CThostFtdcBrokerTradingParamsField *pBrokerTradingParams, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
+    {
+        ctp::CThostFtdcBrokerTradingParamsField p1;
+        copy(&p1, pBrokerTradingParams);
+        ctp::CThostFtdcRspInfoField p2;
+        copy(&p2, pRspInfo);
+        std::string d1 = p1.SerializePartialAsString();
+        std::string d2 = p2.SerializePartialAsString();
+        send(ctp::TD_OnRspQryBrokerTradingParams, &d1, &d2, nRequestID, bIsLast);
+    };
+    void OnRspQryBrokerTradingAlgos(CThostFtdcBrokerTradingAlgosField *pBrokerTradingAlgos, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
+    {
+        ctp::CThostFtdcBrokerTradingAlgosField p1;
+        copy(&p1, pBrokerTradingAlgos);
+        ctp::CThostFtdcRspInfoField p2;
+        copy(&p2, pRspInfo);
+        std::string d1 = p1.SerializePartialAsString();
+        std::string d2 = p2.SerializePartialAsString();
+        send(ctp::TD_OnRspQryBrokerTradingAlgos, &d1, &d2, nRequestID, bIsLast);
+    };
+    void OnRspQueryCFMMCTradingAccountToken(CThostFtdcQueryCFMMCTradingAccountTokenField *pQueryCFMMCTradingAccountToken, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
+    {
+        ctp::CThostFtdcQueryCFMMCTradingAccountTokenField p1;
+        copy(&p1, pQueryCFMMCTradingAccountToken);
+        ctp::CThostFtdcRspInfoField p2;
+        copy(&p2, pRspInfo);
+        std::string d1 = p1.SerializePartialAsString();
+        std::string d2 = p2.SerializePartialAsString();
+        send(ctp::TD_OnRspQueryCFMMCTradingAccountToken, &d1, &d2, nRequestID, bIsLast);
+    };
+    void OnRtnFromBankToFutureByBank(CThostFtdcRspTransferField *pRspTransfer)
+    {
+        ctp::CThostFtdcRspTransferField p1;
+        copy(&p1, pRspTransfer);
+        std::string d = p1.SerializePartialAsString();
+        send(ctp::TD_OnRtnFromBankToFutureByBank, &d, 0, 0, true);
+    };
+    void OnRtnFromFutureToBankByBank(CThostFtdcRspTransferField *pRspTransfer)
+    {
+        ctp::CThostFtdcRspTransferField p1;
+        copy(&p1, pRspTransfer);
+        std::string d = p1.SerializePartialAsString();
+        send(ctp::TD_OnRtnFromFutureToBankByBank, &d, 0, 0, true);
+    };
+    void OnRtnRepealFromBankToFutureByBank(CThostFtdcRspRepealField *pRspRepeal)
+    {
+        ctp::CThostFtdcRspRepealField p1;
+        copy(&p1, pRspRepeal);
+        std::string d = p1.SerializePartialAsString();
+        send(ctp::TD_OnRtnRepealFromBankToFutureByBank, &d, 0, 0, true);
+    };
+    void OnRtnRepealFromFutureToBankByBank(CThostFtdcRspRepealField *pRspRepeal)
+    {
+        ctp::CThostFtdcRspRepealField p1;
+        copy(&p1, pRspRepeal);
+        std::string d = p1.SerializePartialAsString();
+        send(ctp::TD_OnRtnRepealFromFutureToBankByBank, &d, 0, 0, true);
+    };
+    void OnRtnFromBankToFutureByFuture(CThostFtdcRspTransferField *pRspTransfer)
+    {
+        ctp::CThostFtdcRspTransferField p1;
+        copy(&p1, pRspTransfer);
+        std::string d = p1.SerializePartialAsString();
+        send(ctp::TD_OnRtnFromBankToFutureByFuture, &d, 0, 0, true);
+    };
+    void OnRtnFromFutureToBankByFuture(CThostFtdcRspTransferField *pRspTransfer)
+    {
+        ctp::CThostFtdcRspTransferField p1;
+        copy(&p1, pRspTransfer);
+        std::string d = p1.SerializePartialAsString();
+        send(ctp::TD_OnRtnFromFutureToBankByFuture, &d, 0, 0, true);
+    };
+    void OnRtnRepealFromBankToFutureByFutureManual(CThostFtdcRspRepealField *pRspRepeal)
+    {
+        ctp::CThostFtdcRspRepealField p1;
+        copy(&p1, pRspRepeal);
+        std::string d = p1.SerializePartialAsString();
+        send(ctp::TD_OnRtnRepealFromBankToFutureByFutureManual, &d, 0, 0, true);
+    };
+    void OnRtnRepealFromFutureToBankByFutureManual(CThostFtdcRspRepealField *pRspRepeal)
+    {
+        ctp::CThostFtdcRspRepealField p1;
+        copy(&p1, pRspRepeal);
+        std::string d = p1.SerializePartialAsString();
+        send(ctp::TD_OnRtnRepealFromFutureToBankByFutureManual, &d, 0, 0, true);
+    };
+    void OnRtnQueryBankBalanceByFuture(CThostFtdcNotifyQueryAccountField *pNotifyQueryAccount)
+    {
+        ctp::CThostFtdcNotifyQueryAccountField p1;
+        copy(&p1, pNotifyQueryAccount);
+        std::string d = p1.SerializePartialAsString();
+        send(ctp::TD_OnRtnQueryBankBalanceByFuture, &d, 0, 0, true);
+    };
+    void OnErrRtnBankToFutureByFuture(CThostFtdcReqTransferField *pReqTransfer, CThostFtdcRspInfoField *pRspInfo)
+    {
+        ctp::CThostFtdcReqTransferField p1;
+        copy(&p1, pReqTransfer);
+        std::string d = p1.SerializePartialAsString();
+        send(ctp::TD_OnErrRtnBankToFutureByFuture, &d, 0, 0, true);
+    };
+    void OnErrRtnFutureToBankByFuture(CThostFtdcReqTransferField *pReqTransfer, CThostFtdcRspInfoField *pRspInfo)
+    {
+        ctp::CThostFtdcReqTransferField p1;
+        copy(&p1, pReqTransfer);
+        std::string d = p1.SerializePartialAsString();
+        send(ctp::TD_OnErrRtnFutureToBankByFuture, &d, 0, 0, true);
+    };
+    void OnErrRtnRepealBankToFutureByFutureManual(CThostFtdcReqRepealField *pReqRepeal, CThostFtdcRspInfoField *pRspInfo)
+    {
+        ctp::CThostFtdcReqRepealField p1;
+        copy(&p1, pReqRepeal);
+        std::string d = p1.SerializePartialAsString();
+        send(ctp::TD_OnErrRtnRepealBankToFutureByFutureManual, &d, 0, 0, true);
+    };
+    void OnErrRtnRepealFutureToBankByFutureManual(CThostFtdcReqRepealField *pReqRepeal, CThostFtdcRspInfoField *pRspInfo)
+    {
+        ctp::CThostFtdcReqRepealField p1;
+        copy(&p1, pReqRepeal);
+        std::string d = p1.SerializePartialAsString();
+        send(ctp::TD_OnErrRtnRepealFutureToBankByFutureManual, &d, 0, 0, true);
+    };
+    void OnErrRtnQueryBankBalanceByFuture(CThostFtdcReqQueryAccountField *pReqQueryAccount, CThostFtdcRspInfoField *pRspInfo)
+    {
+        ctp::CThostFtdcReqQueryAccountField p1;
+        copy(&p1, pReqQueryAccount);
+        std::string d = p1.SerializePartialAsString();
+        send(ctp::TD_OnErrRtnQueryBankBalanceByFuture, &d, 0, 0, true);
+    };
+    void OnRtnRepealFromBankToFutureByFuture(CThostFtdcRspRepealField *pRspRepeal)
+    {
+        ctp::CThostFtdcRspRepealField p1;
+        copy(&p1, pRspRepeal);
+        std::string d = p1.SerializePartialAsString();
+        send(ctp::TD_OnRtnRepealFromBankToFutureByFuture, &d, 0, 0, true);
+    };
+    void OnRtnRepealFromFutureToBankByFuture(CThostFtdcRspRepealField *pRspRepeal)
+    {
+        ctp::CThostFtdcRspRepealField p1;
+        copy(&p1, pRspRepeal);
+        std::string d = p1.SerializePartialAsString();
+        send(ctp::TD_OnRtnRepealFromFutureToBankByFuture, &d, 0, 0, true);
+    };
+    void OnRspFromBankToFutureByFuture(CThostFtdcReqTransferField *pReqTransfer, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
+    {
+        ctp::CThostFtdcReqTransferField p1;
+        copy(&p1, pReqTransfer);
+        ctp::CThostFtdcRspInfoField p2;
+        copy(&p2, pRspInfo);
+        std::string d1 = p1.SerializePartialAsString();
+        std::string d2 = p2.SerializePartialAsString();
+        send(ctp::TD_OnRspFromBankToFutureByFuture, &d1, &d2, nRequestID, bIsLast);
+    };
+    void OnRspFromFutureToBankByFuture(CThostFtdcReqTransferField *pReqTransfer, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
+    {
+        ctp::CThostFtdcReqTransferField p1;
+        copy(&p1, pReqTransfer);
+        ctp::CThostFtdcRspInfoField p2;
+        copy(&p2, pRspInfo);
+        std::string d1 = p1.SerializePartialAsString();
+        std::string d2 = p2.SerializePartialAsString();
+        send(ctp::TD_OnRspFromFutureToBankByFuture, &d1, &d2, nRequestID, bIsLast);
+    };
+    void OnRspQueryBankAccountMoneyByFuture(CThostFtdcReqQueryAccountField *pReqQueryAccount, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
+    {
+        ctp::CThostFtdcReqQueryAccountField p1;
+        copy(&p1, pReqQueryAccount);
+        ctp::CThostFtdcRspInfoField p2;
+        copy(&p2, pRspInfo);
+        std::string d1 = p1.SerializePartialAsString();
+        std::string d2 = p2.SerializePartialAsString();
+        send(ctp::TD_OnRspQueryBankAccountMoneyByFuture, &d1, &d2, nRequestID, bIsLast);
+    };
+    void OnRtnOpenAccountByBank(CThostFtdcOpenAccountField *pOpenAccount)
+    {
+        ctp::CThostFtdcOpenAccountField p1;
+        copy(&p1, pOpenAccount);
+        std::string d = p1.SerializePartialAsString();
+        send(ctp::TD_OnRtnOpenAccountByBank, &d, 0, 0, true);
+    };
+    void OnRtnCancelAccountByBank(CThostFtdcCancelAccountField *pCancelAccount)
+    {
+        ctp::CThostFtdcCancelAccountField p1;
+        copy(&p1, pCancelAccount);
+        std::string d = p1.SerializePartialAsString();
+        send(ctp::TD_OnRtnCancelAccountByBank, &d, 0, 0, true);
+    };
+    void OnRtnChangeAccountByBank(CThostFtdcChangeAccountField *pChangeAccount)
+    {
+        ctp::CThostFtdcChangeAccountField p1;
+        copy(&p1, pChangeAccount);
+        std::string d = p1.SerializePartialAsString();
+        send(ctp::TD_OnRtnChangeAccountByBank, &d, 0, 0, true);
+    };
+};
+
+template <>
+class handler<CThostFtdcMdApi> : public CThostFtdcMdSpi
+{
+public:
+    virtual void send(ctp::CtpMessageType msgType, std::string *d1, std::string *d2, int nRequestID, bool bIsLast) = 0;
+    void OnFrontConnected()
+    {
+        send(ctp::MD_OnFrontConnected, 0, 0, 0, true);
+    };
+    void OnFrontDisconnected(int nReason)
+    {
+        send(ctp::MD_OnFrontDisconnected, 0, 0, 0, true);
+    };
+    void OnHeartBeatWarning(int nTimeLapse)
+    {
+        send(ctp::MD_OnHeartBeatWarning, 0, 0, 0, true);
+    };
+    void OnRspUserLogin(CThostFtdcRspUserLoginField *pRspUserLogin, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
+    {
+        ctp::CThostFtdcRspUserLoginField p1;
+        copy(&p1, pRspUserLogin);
+        ctp::CThostFtdcRspInfoField p2;
+        copy(&p2, pRspInfo);
+        std::string d1 = p1.SerializePartialAsString();
+        std::string d2 = p2.SerializePartialAsString();
+        send(ctp::MD_OnRspUserLogin, &d1, &d2, nRequestID, bIsLast);
+    };
+    void OnRspUserLogout(CThostFtdcUserLogoutField *pUserLogout, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
+    {
+        ctp::CThostFtdcUserLogoutField p1;
+        copy(&p1, pUserLogout);
+        ctp::CThostFtdcRspInfoField p2;
+        copy(&p2, pRspInfo);
+        std::string d1 = p1.SerializePartialAsString();
+        std::string d2 = p2.SerializePartialAsString();
+        send(ctp::MD_OnRspUserLogout, &d1, &d2, nRequestID, bIsLast);
+    };
+    void OnRspError(CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
+    {
+        ctp::CThostFtdcRspInfoField p1;
+        copy(&p1, pRspInfo);
+        std::string d = p1.SerializePartialAsString();
+        send(ctp::MD_OnRspError, &d, 0, nRequestID, bIsLast);
+    };
+    void OnRspSubMarketData(CThostFtdcSpecificInstrumentField *pSpecificInstrument, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
+    {
+        ctp::CThostFtdcSpecificInstrumentField p1;
+        copy(&p1, pSpecificInstrument);
+        ctp::CThostFtdcRspInfoField p2;
+        copy(&p2, pRspInfo);
+        std::string d1 = p1.SerializePartialAsString();
+        std::string d2 = p2.SerializePartialAsString();
+        send(ctp::MD_OnRspSubMarketData, &d1, &d2, nRequestID, bIsLast);
+    };
+    void OnRspUnSubMarketData(CThostFtdcSpecificInstrumentField *pSpecificInstrument, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
+    {
+        ctp::CThostFtdcSpecificInstrumentField p1;
+        copy(&p1, pSpecificInstrument);
+        ctp::CThostFtdcRspInfoField p2;
+        copy(&p2, pRspInfo);
+        std::string d1 = p1.SerializePartialAsString();
+        std::string d2 = p2.SerializePartialAsString();
+        send(ctp::MD_OnRspUnSubMarketData, &d1, &d2, nRequestID, bIsLast);
+    };
+    void OnRspSubForQuoteRsp(CThostFtdcSpecificInstrumentField *pSpecificInstrument, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
+    {
+        ctp::CThostFtdcSpecificInstrumentField p1;
+        copy(&p1, pSpecificInstrument);
+        ctp::CThostFtdcRspInfoField p2;
+        copy(&p2, pRspInfo);
+        std::string d1 = p1.SerializePartialAsString();
+        std::string d2 = p2.SerializePartialAsString();
+        send(ctp::MD_OnRspSubForQuoteRsp, &d1, &d2, nRequestID, bIsLast);
+    };
+    void OnRspUnSubForQuoteRsp(CThostFtdcSpecificInstrumentField *pSpecificInstrument, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
+    {
+        ctp::CThostFtdcSpecificInstrumentField p1;
+        copy(&p1, pSpecificInstrument);
+        ctp::CThostFtdcRspInfoField p2;
+        copy(&p2, pRspInfo);
+        std::string d1 = p1.SerializePartialAsString();
+        std::string d2 = p2.SerializePartialAsString();
+        send(ctp::MD_OnRspUnSubForQuoteRsp, &d1, &d2, nRequestID, bIsLast);
+    };
+    void OnRtnDepthMarketData(CThostFtdcDepthMarketDataField *pDepthMarketData)
+    {
+        ctp::CThostFtdcDepthMarketDataField p1;
+        copy(&p1, pDepthMarketData);
+        std::string d = p1.SerializePartialAsString();
+        send(ctp::MD_OnRtnDepthMarketData, &d, 0, 0, true);
+    };
+    void OnRtnForQuoteRsp(CThostFtdcForQuoteRspField *pForQuoteRsp)
+    {
+        ctp::CThostFtdcForQuoteRspField p1;
+        copy(&p1, pForQuoteRsp);
+        std::string d = p1.SerializePartialAsString();
+        send(ctp::MD_OnRtnForQuoteRsp, &d, 0, 0, true);
+    };
+};
