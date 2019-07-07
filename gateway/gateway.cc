@@ -13,7 +13,7 @@
 #include <memory>
 #include <utility>
 #include <queue>
-#include "asio/asio.hpp"
+#include "asio.hpp"
 #include "ThostFtdcTraderApi.h"
 #include "ThostFtdcMdApi.h"
 #include "ctppb/datastruct.pb.h"
@@ -69,7 +69,7 @@ public:
 private:
 	void do_read_header()
 	{
-		auto self(shared_from_this());
+		auto self(this->shared_from_this());
 		asio::async_read(socket_,
 						 asio::buffer((char *)(&header_), sizeof(header_)),
 						 [this, self](std::error_code ec, std::size_t /*length*/) {
@@ -86,7 +86,7 @@ private:
 		{
 			return;
 		}
-		auto self(shared_from_this());
+		auto self(this->shared_from_this());
 		asio::async_read(socket_,
 						 asio::buffer(data_, header_.body_length_),
 						 [this, self](std::error_code ec, std::size_t /*length*/) {
@@ -180,7 +180,7 @@ private:
 
 	void do_write()
 	{
-		auto self(shared_from_this());
+		auto self(this->shared_from_this());
 		std::lock_guard<std::mutex> lk(out_q_lock_);
 		if (out_q_.size() > 0)
 		{
@@ -252,6 +252,7 @@ private:
 
 int main(int argc, char *argv[])
 {
+        std::cout << "start" << std::endl;
 	try
 	{
 		if (argc != 3)
@@ -278,5 +279,6 @@ int main(int argc, char *argv[])
 		std::cerr << "Exception: " << e.what() << "\n";
 	}
 
+        std::cout << "exit" << std::endl;
 	return 0;
 }
