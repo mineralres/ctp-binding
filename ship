@@ -1,4 +1,0 @@
-rm ./ext/include/windows/pb/*.h
-rm ./ext/include/windows/pb/*.cc
-rm ./ext/include/windows/pb/cpp/google/* -r
-cp ../goshare/pkg/pb/cpp/* ./ext/include/windows/pb -r

@@ -10543,9 +10543,15 @@ void onMessage(CThostFtdcTraderApi *api, uint32_t t, int requestID, const char *
     case ctp::TD_RegisterFront:
     {
         ctp::CThostFtdcReqRegisterFrontField req;
-        if (req.ParseFromArray(data, len) && req.front().length() > 0)
+        if (req.ParseFromArray(data, len))
         {
-            api->RegisterFront((char *)req.front().data());
+            for (int i = 0; i < req.fronts_size(); i++)
+            {
+                if (req.fronts(i).length() > 0)
+                {
+                    api->RegisterFront((char *)req.fronts(i).data());
+                }
+            }
         }
     }
     break;
@@ -11468,13 +11474,18 @@ void onMessage(CThostFtdcMdApi *api, uint32_t t, int requestID, const char *data
     case ctp::MD_RegisterFront:
     {
         ctp::CThostFtdcReqRegisterFrontField req;
-        if (req.ParseFromArray(data, len) && req.front().length() > 0)
+        if (req.ParseFromArray(data, len))
         {
-            api->RegisterFront((char *)req.front().data());
+            for (int i = 0; i < req.fronts_size(); i++)
+            {
+                if (req.fronts(i).length() > 0)
+                {
+                    api->RegisterFront((char *)req.fronts(i).data());
+                }
+            }
         }
     }
     break;
-
     case ctp::MD_SubscribeMarketData:
     {
         ctp::CThostFtdcReqSubscribeMarketData src;

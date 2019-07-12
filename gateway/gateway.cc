@@ -16,7 +16,7 @@
 #include "asio.hpp"
 #include "ThostFtdcTraderApi.h"
 #include "ThostFtdcMdApi.h"
-#include "ctppb/datastruct.pb.h"
+#include "ctppb/ctp.pb.h"
 #include "gateway/helper.hpp"
 
 using asio::ip::tcp;
