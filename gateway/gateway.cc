@@ -8,6 +8,7 @@
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
 
+#include <ctime>
 #include <cstdlib>
 #include <iostream>
 #include <memory>
@@ -22,22 +23,28 @@
 using asio::ip::tcp;
 
 template <typename T>
-class create_api_helper {
-	static T* create_api() {
+class create_api_helper
+{
+	static T *create_api()
+	{
 	}
 };
 
 template <>
-class create_api_helper<CThostFtdcTraderApi> {
+class create_api_helper<CThostFtdcTraderApi>
+{
 public:
-	static CThostFtdcTraderApi* create() {
+	static CThostFtdcTraderApi *create()
+	{
 		return CThostFtdcTraderApi::CreateFtdcTraderApi();
 	}
 };
 template <>
-class create_api_helper<CThostFtdcMdApi> {
+class create_api_helper<CThostFtdcMdApi>
+{
 public:
-	static CThostFtdcMdApi* create() {
+	static CThostFtdcMdApi *create()
+	{
 		return CThostFtdcMdApi::CreateFtdcMdApi();
 	}
 };
@@ -95,11 +102,21 @@ private:
 								 auto err = parse_body();
 								 if (err == 0)
 								 {
-									 std::cout << "read body completed: "
+									 std::time_t result = std::time(nullptr);
+									 std::cout << "[" << std::asctime(std::localtime(&result)) << "]read body completed: "
 											   << " msg_type:" << header_.msg_type_
 											   << " requestid: " << header_.request_id_ << " isLast:" << header_.is_last_
 											   << " body_length:" << header_.body_length_ << std::endl;
-									 onMessage(api_, header_.msg_type_, header_.request_id_, p1_.data_, p1_.length_);
+									 switch (header_.msg_type_)
+									 {
+									 case ctp::HEARTBEAT:
+									 {
+										 send(ctp::HEARTBEAT, NULL, NULL, 0, true);
+									 }
+									 break;
+									 default:
+										 onMessage(api_, header_.msg_type_, header_.request_id_, p1_.data_, p1_.length_);
+									 }
 									 do_read_header();
 								 }
 								 else
@@ -252,7 +269,7 @@ private:
 
 int main(int argc, char *argv[])
 {
-        std::cout << "start" << std::endl;
+	std::cout << "start" << std::endl;
 	try
 	{
 		if (argc != 3)
@@ -261,13 +278,15 @@ int main(int argc, char *argv[])
 			return 1;
 		}
 
-		if (!strcmp(argv[2], "trade")) {
+		if (!strcmp(argv[2], "trade"))
+		{
 			asio::io_context io_context;
 			server<CThostFtdcTraderApi> s(io_context, std::atoi(argv[1]));
 			std::cout << "Running at " << argv[1] << std::endl;
 			io_context.run();
 		}
-		else if (!strcmp(argv[2], "md")) {
+		else if (!strcmp(argv[2], "md"))
+		{
 			asio::io_context io_context;
 			server<CThostFtdcMdApi> s(io_context, std::atoi(argv[1]));
 			std::cout << "Running at " << argv[1] << std::endl;
@@ -279,6 +298,6 @@ int main(int argc, char *argv[])
 		std::cerr << "Exception: " << e.what() << "\n";
 	}
 
-        std::cout << "exit" << std::endl;
+	std::cout << "exit" << std::endl;
 	return 0;
 }
