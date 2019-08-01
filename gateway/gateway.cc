@@ -86,7 +86,6 @@ private:
 		asio::async_read(socket_,
 						 asio::buffer((char *)(&header_), sizeof(header_)),
 						 [this, self](std::error_code ec, std::size_t /*length*/) {
-							 // std::cout << "read header completed " << ec << " body_length : " << header_.body_length_ << std::endl;
 							 if (!ec)
 							 {
 								 do_read_body();
@@ -109,7 +108,7 @@ private:
 								 if (err == 0)
 								 {
 									 std::time_t result = std::time(nullptr);
-									 spdlog::info("Read body completed, msg_type:{}, requestid:{}, body_length:{}, is_last:{}", header_.msg_type_,
+									 spdlog::info("OnMessage: msg_type:{}, requestid:{}, body_length:{}, is_last:{}", ctp::CtpMessageType_Name(header_.msg_type_),
 												  header_.request_id_, header_.body_length_, header_.is_last_);
 									 switch (header_.msg_type_)
 									 {
@@ -125,7 +124,7 @@ private:
 								 }
 								 else
 								 {
-									 spdlog::error("Parse body error {}" , err);
+									 spdlog::error("Parse body error {}", err);
 								 }
 							 }
 							 else
