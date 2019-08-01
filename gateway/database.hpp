@@ -16,6 +16,9 @@ namespace binding
 class database
 {
 public:
+    database() : session_count_(0)
+    {
+    }
     void incr_session_count()
     {
         session_count_++;
