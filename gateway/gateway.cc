@@ -9,6 +9,7 @@
 //
 
 #include <ctime>
+#include <atomic>
 #include <cstdlib>
 #include <iostream>
 #include <memory>
@@ -19,6 +20,7 @@
 #include "ThostFtdcMdApi.h"
 #include "ctppb/ctp.pb.h"
 #include "gateway/helper.hpp"
+#include "gateway/database.hpp"
 
 using asio::ip::tcp;
 
@@ -55,14 +57,16 @@ class session
 	  public handler<T>
 {
 public:
-	session(tcp::socket socket)
-		: socket_(std::move(socket))
+	session(tcp::socket socket, binding::database *db)
+		: socket_(std::move(socket)), db_(db)
 	{
+		db_->incr_session_count();
 		api_ = create_api_helper<T>::create();
 		api_->RegisterSpi(this);
 	}
 	~session()
 	{
+		db_->decr_session_count();
 		api_->RegisterSpi(NULL);
 		api_->Release();
 		std::cout << "session exited" << std::endl;
@@ -239,6 +243,7 @@ private:
 	std::mutex out_q_lock_;
 
 	T *api_;
+	binding::database *db_;
 };
 
 template <typename T>
@@ -258,13 +263,14 @@ private:
 			[this](std::error_code ec, tcp::socket socket) {
 				if (!ec)
 				{
-					std::make_shared<session<T>>(std::move(socket))->start();
+					std::make_shared<session<T>>(std::move(socket), &db_)->start();
 				}
 				do_accept();
 			});
 	}
 
 	tcp::acceptor acceptor_;
+	binding::database db_;
 };
 
 int main(int argc, char *argv[])
