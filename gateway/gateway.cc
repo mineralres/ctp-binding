@@ -21,6 +21,8 @@
 #include "ctppb/ctp.pb.h"
 #include "gateway/helper.hpp"
 #include "gateway/database.hpp"
+#include "spdlog/spdlog.h"
+#include "spdlog/sinks/basic_file_sink.h"
 
 using asio::ip::tcp;
 
@@ -69,7 +71,7 @@ public:
 		db_->decr_session_count();
 		api_->RegisterSpi(NULL);
 		api_->Release();
-		std::cout << "session exited" << std::endl;
+		spdlog::info("Session exited");
 	}
 
 	void start()
@@ -107,10 +109,8 @@ private:
 								 if (err == 0)
 								 {
 									 std::time_t result = std::time(nullptr);
-									 std::cout << "[" << std::asctime(std::localtime(&result)) << "]read body completed: "
-											   << " msg_type:" << header_.msg_type_
-											   << " requestid: " << header_.request_id_ << " isLast:" << header_.is_last_
-											   << " body_length:" << header_.body_length_ << std::endl;
+									 spdlog::info("Read body completed, msg_type:{}, requestid:{}, body_length:{}, is_last:{}", header_.msg_type_,
+												  header_.request_id_, header_.body_length_, header_.is_last_);
 									 switch (header_.msg_type_)
 									 {
 									 case ctp::HEARTBEAT:
@@ -125,12 +125,12 @@ private:
 								 }
 								 else
 								 {
-									 std::cout << "parse body error: " << err << std::endl;
+									 spdlog::error("Parse body error {}" , err);
 								 }
 							 }
 							 else
 							 {
-								 std::cout << "read body completed, err: " << ec << std::endl;
+								 spdlog::error("Read body completed err : {}", ec.message());
 							 }
 						 });
 	}
@@ -275,7 +275,7 @@ private:
 
 int main(int argc, char *argv[])
 {
-	std::cout << "start" << std::endl;
+	spdlog::info("Start!");
 	try
 	{
 		if (argc != 3)
@@ -288,22 +288,22 @@ int main(int argc, char *argv[])
 		{
 			asio::io_context io_context;
 			server<CThostFtdcTraderApi> s(io_context, std::atoi(argv[1]));
-			std::cout << "Running at " << argv[1] << std::endl;
+			spdlog::info("Running at {} ", argv[1]);
 			io_context.run();
 		}
 		else if (!strcmp(argv[2], "md"))
 		{
 			asio::io_context io_context;
 			server<CThostFtdcMdApi> s(io_context, std::atoi(argv[1]));
-			std::cout << "Running at " << argv[1] << std::endl;
+			spdlog::info("Running at {} ", argv[1]);
 			io_context.run();
 		}
 	}
 	catch (std::exception &e)
 	{
-		std::cerr << "Exception: " << e.what() << "\n";
+		spdlog::error("Exception: {}", e.what());
 	}
 
-	std::cout << "exit" << std::endl;
+	spdlog::info("Exit!");
 	return 0;
 }

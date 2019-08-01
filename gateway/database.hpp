@@ -10,6 +10,7 @@
 
 #include <atomic>
 #include <iostream>
+#include "spdlog/spdlog.h"
 
 namespace binding
 {
@@ -22,13 +23,13 @@ public:
     void incr_session_count()
     {
         session_count_++;
-        std::cout << "incr current session count: " << session_count_.load() << std::endl;
+        spdlog::info("INCR current session count: {}", session_count());
     }
 
     void decr_session_count()
     {
         session_count_--;
-        std::cout << "decr current session count: " << session_count_.load() << std::endl;
+        spdlog::info("DECR current session count: {}", session_count());
     }
 
     long session_count()
