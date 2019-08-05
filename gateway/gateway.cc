@@ -75,7 +75,7 @@ public:
 
 	void start()
 	{
-		this->wptr_ = shared_from_this();
+		this->wptr_ = this->shared_from_this();
 		do_read_header();
 	}
 
