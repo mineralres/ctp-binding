@@ -71,11 +71,11 @@ public:
 		db_->decr_session_count();
 		api_->RegisterSpi(NULL);
 		api_->Release();
-		spdlog::info("Session exited");
 	}
 
 	void start()
 	{
+		this->wptr_ = shared_from_this();
 		do_read_header();
 	}
 
@@ -89,6 +89,10 @@ private:
 							 if (!ec)
 							 {
 								 do_read_body();
+							 }
+							 else
+							 {
+								 spdlog::error("Read header error: {}", ec.message());
 							 }
 						 });
 	}
@@ -153,6 +157,12 @@ private:
 	}
 	void send(ctp::CtpMessageType msgType, std::string *d1, std::string *d2, int nRequestID, bool bIsLasst)
 	{
+		auto spt = wptr_.lock();
+		if (!spt)
+		{
+			spdlog::info("Session has expired, send has been canceled {}", msgType);
+			return;
+		}
 		std::string *pkt = new (std::string);
 		int body_size = 0;
 		if (d1)
@@ -243,6 +253,7 @@ private:
 
 	T *api_;
 	binding::database *db_;
+	std::weak_ptr<session<T>> wptr_;
 };
 
 template <typename T>
